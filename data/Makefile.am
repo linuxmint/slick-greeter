@@ -20,6 +20,7 @@ dist_pkgdata_DATA = \
 	shadow.png \
 	shutdown_highlight.png \
 	shutdown.png \
+	shutdown.svg \
 	suspend_highlight.png \
 	suspend.png \
 	switcher_corner.png \

@@ -69,12 +69,13 @@ public class MenuBar : Gtk.MenuBar
     public bool high_contrast { get; private set; default = false; }
     public Gtk.Window? keyboard_window { get; private set; default = null; }
     public Gtk.AccelGroup? accel_group { get; construct; }
+    public MainWindow? main_window { get; construct; default = null; }
 
     private static const int HEIGHT = 24;
 
-    public MenuBar (Background bg, Gtk.AccelGroup ag)
+    public MenuBar (Background bg, Gtk.AccelGroup ag, MainWindow mw)
     {
-        Object (background: bg, accel_group: ag);
+        Object (background: bg, accel_group: ag, main_window: mw);
     }
 
     public override bool draw (Cairo.Context c)
@@ -115,6 +116,7 @@ public class MenuBar : Gtk.MenuBar
     private Pid keyboard_pid = 0;
     private Pid reader_pid = 0;
     private Gtk.CheckMenuItem onscreen_keyboard_item;
+    private Gtk.Label clock_label;
 
     construct
     {
@@ -139,6 +141,21 @@ public class MenuBar : Gtk.MenuBar
             label.override_color (Gtk.StateFlags.INSENSITIVE, fg);
         }
 
+        var session_menu = make_session_indicator ();
+        append (session_menu);
+
+        clock_label = new Gtk.Label ("");
+        clock_label.show ();
+        var item = new Gtk.MenuItem ();
+        item.add (clock_label);
+        item.sensitive = false;
+        item.right_justified = true;
+        item.show ();
+        append (item);
+
+        update_clock ();
+        Timeout.add (1000, update_clock);
+
         /* Prevent dragging the window by the menubar */
         try
         {
@@ -154,6 +171,13 @@ public class MenuBar : Gtk.MenuBar
         setup_indicators ();
 
         SlickGreeter.singleton.starting_session.connect (cleanup);
+    }
+
+    private bool update_clock ()
+    {
+        var current_time = new DateTime.now_local ();
+        clock_label.set_label(current_time.format ("%H:%M"));
+        return true;
     }
 
     private void close_pid (ref Pid pid)
@@ -235,6 +259,63 @@ public class MenuBar : Gtk.MenuBar
         submenu.append (item);
         item.set_active (UGSettings.get_boolean (UGSettings.KEY_SCREEN_READER));
         return a11y_item;
+    }
+
+    private Gtk.MenuItem make_session_indicator ()
+    {
+        var item = new Gtk.MenuItem ();
+        var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 3);
+        hbox.show ();
+        item.add (hbox);
+        var image = new Gtk.Image.from_file (Path.build_filename (Config.PKGDATADIR, "shutdown.svg"));
+        image.show ();
+        hbox.add (image);
+        item.show ();
+        item.set_submenu (new Gtk.Menu () as Gtk.Widget);
+        unowned Gtk.Menu submenu = item.submenu;
+
+        if (LightDM.get_can_suspend ())
+        {
+            Gtk.MenuItem menu_item = new Gtk.MenuItem.with_label (_("Suspend"));
+            menu_item.show ();
+            submenu.append (menu_item);
+            menu_item.activate.connect (() =>
+            {
+                try
+                {
+                    LightDM.suspend ();
+                }
+                catch (Error e)
+                {
+                    warning ("Failed to suspend: %s", e.message);
+                }
+            });
+        }
+
+        if (LightDM.get_can_hibernate ())
+        {
+            Gtk.MenuItem menu_item = new Gtk.MenuItem.with_label (_("Hibernate"));
+            menu_item.show ();
+            submenu.append (menu_item);
+            menu_item.activate.connect (() =>
+            {
+                try
+                {
+                    LightDM.hibernate ();
+                }
+                catch (Error e)
+                {
+                    warning ("Failed to hibernate: %s", e.message);
+                }
+            });
+        }
+
+        Gtk.MenuItem menu_item = new Gtk.MenuItem.with_label (_("Quit..."));
+        menu_item.activate.connect (shutdown_cb);
+        menu_item.show ();
+        submenu.append (menu_item);
+
+        return item;
     }
 
     private Indicator.Object? load_indicator_file (string indicator_name)
@@ -365,6 +446,13 @@ public class MenuBar : Gtk.MenuBar
         });
 
         debug ("LANG=%s LANGUAGE=%s", Environment.get_variable ("LANG"), Environment.get_variable ("LANGUAGE"));
+    }
+
+    private void shutdown_cb (Gtk.MenuItem item)
+    {
+        if (main_window != null) {
+            main_window.show_shutdown_dialog (ShutdownDialogType.RESTART);
+        }
     }
 
     private void keyboard_toggled_cb (Gtk.CheckMenuItem item)

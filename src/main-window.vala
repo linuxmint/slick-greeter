@@ -96,7 +96,7 @@ public class MainWindow : Gtk.Window
         SlickGreeter.add_style_class (menualign);
         SlickGreeter.add_style_class (menubox);
 
-        menubar = new MenuBar (background, accel_group);
+        menubar = new MenuBar (background, accel_group, this);
         menubar.show ();
         menualign.add (menubar);
         SlickGreeter.add_style_class (menubar);
