@@ -15,7 +15,6 @@ src/menubar.c
 src/menu.c
 src/prompt-box.c
 src/session-list.c
-src/settings-daemon.c
 src/settings.c
 src/shutdown-dialog.c
 src/toggle-box.c

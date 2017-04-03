@@ -30,7 +30,6 @@ slick_greeter_SOURCES = \
 	session-list.vala \
 	remote-login-service.vala \
 	settings.vala \
-	settings-daemon.vala \
 	shutdown-dialog.vala \
 	toggle-box.vala \
 	slick-greeter.vala \

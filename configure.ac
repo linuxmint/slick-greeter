@@ -36,12 +36,6 @@ AC_DEFINE_UNQUOTED([INDICATOR_FILE_DIR], ["${prefix}/share/unity/indicators"], [
 INDICATORDIR=`$PKG_CONFIG --variable=indicatordir indicator3-0.4`
 AC_SUBST(INDICATORDIR)
 
-USD_BINARY=`$PKG_CONFIG --variable=binary unity-settings-daemon`
-if test -z "$USD_BINARY"; then
-    AC_MSG_ERROR([Could not find path to unity-settings-daemon binary])
-fi
-AC_DEFINE_UNQUOTED([USD_BINARY], ["$USD_BINARY"], [Path to g-s-d])
-
 dnl ###########################################################################
 dnl Internationalization
 dnl ###########################################################################

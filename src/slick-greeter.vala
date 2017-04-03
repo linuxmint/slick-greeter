@@ -35,8 +35,6 @@ public class SlickGreeter
 
     private Cairo.XlibSurface background_surface;
 
-    private SettingsDaemon settings_daemon;
-
     public bool orca_needs_kick;
     private MainWindow main_window;
 
@@ -74,15 +72,9 @@ public class SlickGreeter
         if (!connected && !test_mode)
             Posix.exit (Posix.EXIT_FAILURE);
 
-        if (!test_mode)
-        {
-            settings_daemon = new SettingsDaemon ();
-            settings_daemon.start ();
-        }
-
         var state_dir = Path.build_filename (Environment.get_user_cache_dir (), "slick-greeter");
         DirUtils.create_with_parents (state_dir, 0775);
-        
+
         var xdg_seat = GLib.Environment.get_variable("XDG_SEAT");
         var state_file_name = xdg_seat != null && xdg_seat != "seat0" ? xdg_seat + "-state" : "state";
 
@@ -119,20 +111,6 @@ public class SlickGreeter
             main_window.show_shutdown_dialog (dialog_type);
         });
         dbus_object.close_dialog.connect ((type) => { main_window.close_shutdown_dialog (); });
-        Bus.own_name (BusType.SESSION, "com.canonical.Unity", BusNameOwnerFlags.NONE,
-                      (c) =>
-                      {
-                          try
-                          {
-                              c.register_object ("/org/gnome/SessionManager/EndSessionDialog", dbus_object);
-                          }
-                          catch (Error e)
-                          {
-                              warning ("Failed to register /org/gnome/SessionManager/EndSessionDialog: %s", e.message);
-                          }
-                      },
-                      null,
-                      () => debug ("Failed to acquire name com.canonical.Unity"));
 
         start_fake_wm ();
         Gdk.threads_add_idle (ready_cb);
