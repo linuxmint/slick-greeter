@@ -2,7 +2,7 @@
 
 dnl Process this file with autoconf to produce a configure script.
 
-AC_INIT(unity-greeter, 16.04.2)
+AC_INIT(slick-greeter, 16.04.2)
 AC_CONFIG_MACRO_DIR(m4)
 AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz foreign])
 AM_PROG_CC_C_O
@@ -17,7 +17,7 @@ dnl ###########################################################################
 dnl Dependencies
 dnl ###########################################################################
 
-PKG_CHECK_MODULES(UNITY_GREETER, [
+PKG_CHECK_MODULES(SLICK_GREETER, [
     gtk+-3.0
     gdk-x11-3.0
     indicator3-0.4
@@ -47,7 +47,7 @@ dnl Internationalization
 dnl ###########################################################################
 
 IT_PROG_INTLTOOL(0.35.0)
-GETTEXT_PACKAGE=unity-greeter
+GETTEXT_PACKAGE=slick-greeter
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", Gettext package)
 AC_SUBST(GETTEXT_PACKAGE)
 

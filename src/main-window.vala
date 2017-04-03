@@ -48,7 +48,7 @@ public class MainWindow : Gtk.Window
         override_background_color (Gtk.StateFlags.NORMAL, bg_color);
         get_accessible ().set_name (_("Login Screen"));
         has_resize_grip = false;
-        UnityGreeter.add_style_class (this);
+        SlickGreeter.add_style_class (this);
 
         realize ();
         background = new Background (Gdk.cairo_create (get_window ()).get_target ());
@@ -57,7 +57,7 @@ public class MainWindow : Gtk.Window
         background.set_logo (UGSettings.get_string (UGSettings.KEY_LOGO), UGSettings.get_string (UGSettings.KEY_BACKGROUND_LOGO));
         background.show ();
         add (background);
-        UnityGreeter.add_style_class (background);
+        SlickGreeter.add_style_class (background);
 
         login_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         login_box.show ();
@@ -93,13 +93,13 @@ public class MainWindow : Gtk.Window
         menualign.show ();
         menubox.add (menualign);
         login_box.add (menubox);
-        UnityGreeter.add_style_class (menualign);
-        UnityGreeter.add_style_class (menubox);
+        SlickGreeter.add_style_class (menualign);
+        SlickGreeter.add_style_class (menubox);
 
         menubar = new MenuBar (background, accel_group);
         menubar.show ();
         menualign.add (menubar);
-        UnityGreeter.add_style_class (menubar);
+        SlickGreeter.add_style_class (menubar);
 
         hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         hbox.expand = true;
@@ -132,7 +132,7 @@ public class MainWindow : Gtk.Window
 
         add_user_list ();
 
-        if (UnityGreeter.singleton.test_mode)
+        if (SlickGreeter.singleton.test_mode)
         {
             /* Simulate an 800x600 monitor to the left of a 640x480 monitor */
             monitors = new List<Monitor> ();
@@ -274,7 +274,7 @@ public class MainWindow : Gtk.Window
         GreeterList greeter_list;
         greeter_list = new UserList (background, menubar);
         greeter_list.show ();
-        UnityGreeter.add_style_class (greeter_list);
+        SlickGreeter.add_style_class (greeter_list);
         push_list (greeter_list);
     }
 
@@ -347,14 +347,14 @@ public class MainWindow : Gtk.Window
             show_shutdown_dialog (ShutdownDialogType.SHUTDOWN);
             return true;
         case Gdk.Key.z:
-            if (UnityGreeter.singleton.test_mode && (event.state & Gdk.ModifierType.MOD1_MASK) != 0)
+            if (SlickGreeter.singleton.test_mode && (event.state & Gdk.ModifierType.MOD1_MASK) != 0)
             {
                 show_shutdown_dialog (ShutdownDialogType.SHUTDOWN);
                 return true;
             }
             break;
         case Gdk.Key.Z:
-            if (UnityGreeter.singleton.test_mode && (event.state & Gdk.ModifierType.MOD1_MASK) != 0)
+            if (SlickGreeter.singleton.test_mode && (event.state & Gdk.ModifierType.MOD1_MASK) != 0)
             {
                 show_shutdown_dialog (ShutdownDialogType.RESTART);
                 return true;

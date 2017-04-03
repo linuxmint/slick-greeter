@@ -565,7 +565,7 @@ private class DialogButton : Gtk.Button
             this.get_accessible ().set_name (l.get_text ());
         }
 
-        UnityGreeter.add_style_class (this);
+        SlickGreeter.add_style_class (this);
         try
         {
             // Remove the default GtkButton paddings and border

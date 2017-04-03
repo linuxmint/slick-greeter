@@ -153,7 +153,7 @@ public class MenuBar : Gtk.MenuBar
 
         setup_indicators ();
 
-        UnityGreeter.singleton.starting_session.connect (cleanup);
+        SlickGreeter.singleton.starting_session.connect (cleanup);
     }
 
     private void close_pid (ref Pid pid)
@@ -325,7 +325,7 @@ public class MenuBar : Gtk.MenuBar
         try
         {
             var conn = Bus.get_sync (BusType.SESSION);
-            greeter_set_env ("UNITY_GREETER_DBUS_NAME", conn.get_unique_name ());
+            greeter_set_env ("SLICK_GREETER_DBUS_NAME", conn.get_unique_name ());
         }
         catch (IOError e)
         {
@@ -474,7 +474,7 @@ public class MenuBar : Gtk.MenuBar
                 // this is not racy with orca startup, it is racy with whether
                 // orca will read the first character or not out loud.  Hence
                 // why we do both.  Ideally this would be fixed in orca itself.
-                UnityGreeter.singleton.orca_needs_kick = true;
+                SlickGreeter.singleton.orca_needs_kick = true;
                 Timeout.add_seconds (1, () => {
                     Signal.emit_by_name ((get_toplevel () as Gtk.Window).get_focus ().get_accessible (), "focus-event", true);
                     return false;

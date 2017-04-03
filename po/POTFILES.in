@@ -21,6 +21,6 @@ src/settings-daemon.vala
 src/settings.vala
 src/shutdown-dialog.vala
 src/toggle-box.vala
-src/unity-greeter.vala
+src/slick-greeter.vala
 src/user-list.vala
 src/user-prompt-box.vala

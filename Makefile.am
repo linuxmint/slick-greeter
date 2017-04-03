@@ -4,7 +4,7 @@ SUBDIRS = data po src tests
 
 EXTRA_DIST = \
 	autogen.sh \
-	unity-greeter.doap
+	slick-greeter.doap
 
 DISTCLEANFILES = \
 	Makefile.in \

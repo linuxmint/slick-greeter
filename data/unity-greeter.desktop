@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name=Unity Greeter
-Comment=Unity Greeter
-Exec=unity-greeter
-Type=Application
-X-Ubuntu-Gettext-Domain=unity-greeter

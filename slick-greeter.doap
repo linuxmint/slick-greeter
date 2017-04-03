@@ -4,10 +4,10 @@
          xmlns:gnome="http://api.gnome.org/doap-extensions#"
          xmlns="http://usefulinc.com/ns/doap#">
 
-  <name xml:lang="en">unity-greeter</name>
-  <shortdesc xml:lang="en">Unity Greeter</shortdesc>
-  <homepage rdf:resource="https://launchpad.net/unity-greeter" />
-  <bug-database rdf:resource="https://bugs.launchpad.net/unity-greeter" />
+  <name xml:lang="en">slick-greeter</name>
+  <shortdesc xml:lang="en">Slick Greeter</shortdesc>
+  <homepage rdf:resource="https://launchpad.net/slick-greeter" />
+  <bug-database rdf:resource="https://bugs.launchpad.net/slick-greeter" />
   <category rdf:resource="http://api.gnome.org/doap-extensions#desktop" />
 
   <maintainer>

@@ -1,11 +1,11 @@
-# English (United Kingdom) translation for unity-greeter
+# English (United Kingdom) translation for slick-greeter
 # Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
-# This file is distributed under the same license as the unity-greeter package.
+# This file is distributed under the same license as the slick-greeter package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: unity-greeter\n"
+"Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-03-22 05:42+0000\n"
 "PO-Revision-Date: 2013-08-07 09:51+0000\n"
@@ -113,22 +113,22 @@ msgid "%s (Default)"
 msgstr "%s (Default)"
 
 #. Help string for command line --version flag
-#: ../src/unity-greeter.vala:512
+#: ../src/slick-greeter.vala:512
 msgid "Show release version"
 msgstr "Show release version"
 
 #. Help string for command line --test-mode flag
-#: ../src/unity-greeter.vala:515
+#: ../src/slick-greeter.vala:515
 msgid "Run in test mode"
 msgstr "Run in test mode"
 
 #. Arguments and description for --help text
-#: ../src/unity-greeter.vala:521
-msgid "- Unity Greeter"
-msgstr "- Unity Greeter"
+#: ../src/slick-greeter.vala:521
+msgid "- Slick Greeter"
+msgstr "- Slick Greeter"
 
 #. Text printed out when an unknown command-line argument provided
-#: ../src/unity-greeter.vala:532
+#: ../src/slick-greeter.vala:532
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""

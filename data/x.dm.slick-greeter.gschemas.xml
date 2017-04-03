@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schemalist gettext-domain="unity-greeter">
-  <schema id="com.canonical.unity-greeter" path="/com/canonical/unity-greeter/">
+<schemalist gettext-domain="slick-greeter">
+  <schema id="x.dm.slick-greeter" path="/x/dm/slick-greeter/">
     <key name="background" type="s">
       <default>'/usr/share/backgrounds/warty-final-ubuntu.png'</default>
       <summary>Background file to use, either an image path or a color (e.g. #772953)</summary>
@@ -22,11 +22,11 @@
       <summary>Whether to show the hostname in the menubar</summary>
     </key>
     <key name="logo" type="s">
-      <default>'/usr/share/unity-greeter/logo.png'</default>
+      <default>'/usr/share/slick-greeter/logo.png'</default>
       <summary>Logo file to use</summary>
     </key>
     <key name="background-logo" type="s">
-      <default>'/usr/share/unity-greeter/cof.png'</default>
+      <default>'/usr/share/slick-greeter/cof.png'</default>
       <summary>Background logo file to use</summary>
     </key>
     <key name="theme-name" type="s">

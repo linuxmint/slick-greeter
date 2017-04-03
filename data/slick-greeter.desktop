@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Slick Greeter
+Comment=Slick Greeter
+Exec=slick-greeter
+Type=Application
+X-Ubuntu-Gettext-Domain=slick-greeter

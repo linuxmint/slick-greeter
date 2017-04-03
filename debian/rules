@@ -15,7 +15,7 @@ override_dh_auto_build:
 
 override_dh_auto_install:
 	dh_auto_install
-	cp logo.png debian/unity-greeter/usr/share/unity-greeter/logo.png
+	cp logo.png debian/slick-greeter/usr/share/slick-greeter/logo.png
 
 override_dh_auto_clean:
 	dh_auto_clean

@@ -692,7 +692,7 @@ public class Background : Gtk.Fixed
     {
         notify_property ("average-color");
 
-        if (!UnityGreeter.singleton.test_mode)
+        if (!SlickGreeter.singleton.test_mode)
         {
             var rgba = current.average_color.to_string ();
             var root = get_screen ().get_root_window ();

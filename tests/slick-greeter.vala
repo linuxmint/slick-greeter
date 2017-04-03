@@ -19,9 +19,9 @@
 
 public const int grid_size = 40;
 
-public class UnityGreeter
+public class SlickGreeter
 {
-    public static UnityGreeter singleton;
+    public static SlickGreeter singleton;
 
     public signal void show_message (string text, LightDM.MessageType type);
     public signal void show_prompt (string text, LightDM.PromptType type);

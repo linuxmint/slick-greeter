@@ -1,16 +1,16 @@
 # -*- Mode: Automake; indent-tabs-mode: t; tab-width: 4 -*-
 
-check_PROGRAMS = unity-greeter-test
+check_PROGRAMS = slick-greeter-test
 
-check: unity-greeter-test
-	UBUNTU_MENUPROXY=0 top_srcdir=$(top_srcdir) . xvfb-run -a ./unity-greeter-test
+check: slick-greeter-test
+	UBUNTU_MENUPROXY=0 top_srcdir=$(top_srcdir) . xvfb-run -a ./slick-greeter-test
 
-unity_greeter_test_SOURCES = \
+slick_greeter_test_SOURCES = \
 	test.vala \
 	test-list.vala \
 	test-main-window.vala \
 	menubar.vala \
-	unity-greeter.vala \
+	slick-greeter.vala \
 	../src/flat-button.vala \
 	../src/toggle-box.vala \
 	../src/user-list.vala \
@@ -39,17 +39,17 @@ unity_greeter_test_SOURCES = \
 	../src/shutdown-dialog.vala
 
 
-unity_greeter_test_CFLAGS = \
-	$(UNITY_GREETER_CFLAGS) \
+slick_greeter_test_CFLAGS = \
+	$(SLICK_GREETER_CFLAGS) \
 	-w \
 	-DGETTEXT_PACKAGE=\"$(GETTEXT_PACKAGE)\" \
 	-DLOCALEDIR=\""$(localedir)"\" \
 	-DVERSION=\"$(VERSION)\" \
-	-DCONFIG_FILE=\""$(sysconfdir)/lightdm/unity-greeter.conf"\" \
+	-DCONFIG_FILE=\""$(sysconfdir)/lightdm/slick-greeter.conf"\" \
 	-DPKGDATADIR=\""$(pkgdatadir)"\" \
 	-DINDICATORDIR=\""$(INDICATORDIR)"\"
 
-unity_greeter_test_VALAFLAGS = \
+slick_greeter_test_VALAFLAGS = \
 	--pkg posix \
 	--pkg gtk+-3.0 \
 	--pkg gdk-x11-3.0 \
@@ -61,12 +61,12 @@ unity_greeter_test_VALAFLAGS = \
 	--pkg pixman-1 \
 	--target-glib 2.32
 
-unity_greeter_test_LDADD = \
-	$(UNITY_GREETER_LIBS) \
+slick_greeter_test_LDADD = \
+	$(SLICK_GREETER_LIBS) \
 	-lm
 
 CLEANFILES = \
-	$(notdir $(unity_greeter_test_SOURCES:.vala=.c))
+	$(notdir $(slick_greeter_test_SOURCES:.vala=.c))
 
 DISTCLEANFILES = \
 	Makefile.in

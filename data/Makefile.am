@@ -1,7 +1,7 @@
 # -*- Mode: Automake; indent-tabs-mode: t; tab-width: 4 -*-
 
 xgreeterdir = $(datarootdir)/xgreeters
-dist_xgreeter_DATA = unity-greeter.desktop
+dist_xgreeter_DATA = slick-greeter.desktop
 
 dist_pkgdata_DATA = \
 	a11y.svg \
@@ -34,9 +34,9 @@ dist_pkgdata_DATA = \
 	unknown_badge.png
 
 @GSETTINGS_RULES@
-gsettings_SCHEMAS = com.canonical.unity-greeter.gschema.xml
+gsettings_SCHEMAS = x.dm.slick-greeter.gschema.xml
 
-dist_man1_MANS = unity-greeter.1
+dist_man1_MANS = slick-greeter.1
 
 EXTRA_DIST = \
 	$(gsettings_SCHEMAS)

@@ -19,7 +19,7 @@ src/settings-daemon.c
 src/settings.c
 src/shutdown-dialog.c
 src/toggle-box.c
-src/unity-greeter.c
+src/slick-greeter.c
 src/user-list.c
 src/user-prompt-box.c
 tests/greeter-list.c

@@ -418,7 +418,7 @@ public class PromptBox : FadableBox
     {
         w.set_data ("prompt-box-widget", this);
         if (add_style_class)
-            UnityGreeter.add_style_class (w);
+            SlickGreeter.add_style_class (w);
 
         last_row += 1;
         box_grid.attach (w, COL_ENTRIES_START, last_row, COL_ENTRIES_WIDTH, 1);

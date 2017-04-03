@@ -36,7 +36,7 @@ public class SessionPrompt : PromptBox
 
         box = new ToggleBox (default_session, session);
 
-        if (UnityGreeter.singleton.test_mode)
+        if (SlickGreeter.singleton.test_mode)
         {
             box.add_item ("gnome", "GNOME", SessionList.get_badge ("gnome"));
             box.add_item ("kde", "KDE", SessionList.get_badge ("kde"));

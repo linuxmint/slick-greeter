@@ -1,4 +1,4 @@
-Source: unity-greeter
+Source: slick-greeter
 Section: x11
 Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
@@ -21,13 +21,13 @@ Build-Depends: appmenu-gtk3,
                libpixman-1-dev,
                valac (>= 0.20.0),
                xvfb,
-Homepage: https://launchpad.net/unity-greeter
-# If you aren't a member of ~unity-greeter-team but need to upload packaging
-# changes, just go ahead.  ~unity-greeter-team will notice and sync up the code
+Homepage: https://launchpad.net/slick-greeter
+# If you aren't a member of ~slick-greeter-team but need to upload packaging
+# changes, just go ahead.  ~slick-greeter-team will notice and sync up the code
 # again.
-Vcs-Bzr: https://code.launchpad.net/~unity-greeter-team/unity-greeter/trunk
+Vcs-Bzr: https://code.launchpad.net/~slick-greeter-team/slick-greeter/trunk
 
-Package: unity-greeter
+Package: slick-greeter
 Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends},
@@ -46,5 +46,5 @@ Suggests: lightdm-remote-session-freerdp,
           remote-login-service,
 Provides: lightdm-greeter
 Breaks: edubuntu-artwork (<< 12.01.1~)
-Description: Unity Greeter
+Description: Slick Greeter
  The greeter for the Unity desktop.

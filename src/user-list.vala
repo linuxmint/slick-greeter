@@ -71,7 +71,7 @@ public class UserList : GreeterList
         {
             show_hidden_users_ = value;
 
-            if (UnityGreeter.singleton.test_mode)
+            if (SlickGreeter.singleton.test_mode)
             {
                 if (value)
                     add_user ("hidden", "Hidden User", null, false, false, null);
@@ -164,8 +164,8 @@ public class UserList : GreeterList
 
         connect_to_lightdm ();
 
-        if (!UnityGreeter.singleton.test_mode &&
-            UnityGreeter.singleton.show_remote_login_hint ())
+        if (!SlickGreeter.singleton.test_mode &&
+            SlickGreeter.singleton.show_remote_login_hint ())
             remote_login_service_watch = Bus.watch_name (BusType.SESSION,
                                             "com.canonical.RemoteLogin",
                                             BusNameWatcherFlags.AUTO_START,
@@ -388,7 +388,7 @@ public class UserList : GreeterList
         remote_login_service = null;
 
         /* provide a fallback manual login option */
-        if (UnityGreeter.singleton.hide_users_hint ()) {
+        if (SlickGreeter.singleton.hide_users_hint ()) {
             add_manual_entry();
             set_active_entry ("*other");
         }
@@ -444,7 +444,7 @@ public class UserList : GreeterList
             try
             {
                 var url = url_from_remote_loding_server_list_name (selected_entry.id);
-                if (UnityGreeter.singleton.test_mode)
+                if (SlickGreeter.singleton.test_mode)
                 {
                     if (password_field.text == "password")
                     {
@@ -526,7 +526,7 @@ public class UserList : GreeterList
         sensitive = false;
         will_clear = true;
         greeter_authenticating_user = selected_entry.id;
-        if (UnityGreeter.singleton.test_mode)
+        if (SlickGreeter.singleton.test_mode)
         {
             Gtk.Entry field = current_remote_fields.get ("password") as Gtk.Entry;
             test_is_authenticated = field.text == "password";
@@ -537,7 +537,7 @@ public class UserList : GreeterList
         }
         else
         {
-            UnityGreeter.singleton.authenticate_remote (get_lightdm_session (), null);
+            SlickGreeter.singleton.authenticate_remote (get_lightdm_session (), null);
             remote_login_service.set_last_used_server.begin (currently_browsing_server_url, url_from_remote_loding_server_list_name (selected_entry.id));
         }
     }
@@ -571,7 +571,7 @@ public class UserList : GreeterList
                 if (is_supported_remote_session (config_session))
                 {
                     greeter_authenticating_user = selected_entry.id;
-                    UnityGreeter.singleton.authenticate_remote (config_session, null);
+                    SlickGreeter.singleton.authenticate_remote (config_session, null);
                 }
             }
             dialog.destroy ();
@@ -630,7 +630,7 @@ public class UserList : GreeterList
 
     private void entry_selected_cb (string? username)
     {
-        UnityGreeter.singleton.set_state ("last-user", username);
+        SlickGreeter.singleton.set_state ("last-user", username);
         if (selected_entry is UserPromptBox)
             session = (selected_entry as UserPromptBox).session;
         else
@@ -767,7 +767,7 @@ public class UserList : GreeterList
                         string[] email_domains;
                         try
                         {
-                            if (UnityGreeter.singleton.test_mode)
+                            if (SlickGreeter.singleton.test_mode)
                                 email_domains = { "canonical.com", "ubuntu.org", "candy.com", "urban.net" };
                             else
                                 yield remote_login_service.get_cached_domains_for_server (url, out email_domains);
@@ -878,10 +878,10 @@ public class UserList : GreeterList
 
         foreach (var response in responses)
         {
-            if (UnityGreeter.singleton.test_mode)
+            if (SlickGreeter.singleton.test_mode)
                 test_respond (response);
             else
-                UnityGreeter.singleton.respond (response);
+                SlickGreeter.singleton.respond (response);
         }
     }
 
@@ -891,10 +891,10 @@ public class UserList : GreeterList
 
         unacknowledged_messages = false;
         var is_authenticated = false;
-        if (UnityGreeter.singleton.test_mode)
+        if (SlickGreeter.singleton.test_mode)
             is_authenticated = test_is_authenticated;
         else
-            is_authenticated = UnityGreeter.singleton.is_authenticated();
+            is_authenticated = SlickGreeter.singleton.is_authenticated();
 
         /* Finish authentication (again) or restart it */
         if (is_authenticated)
@@ -910,18 +910,18 @@ public class UserList : GreeterList
     {
         var session_chooser = new SessionList (background, menubar, session, default_session);
         session_chooser.session_clicked.connect (session_clicked_cb);
-        UnityGreeter.singleton.push_list (session_chooser);
+        SlickGreeter.singleton.push_list (session_chooser);
     }
 
     private void session_clicked_cb (string session)
     {
         this.session = session;
-        UnityGreeter.singleton.pop_list ();
+        SlickGreeter.singleton.pop_list ();
     }
 
     private bool should_show_session_badge ()
     {
-        if (UnityGreeter.singleton.test_mode)
+        if (SlickGreeter.singleton.test_mode)
             return get_selected_id () != "no-badge";
         else
             return LightDM.get_sessions ().length () > 1;
@@ -949,7 +949,7 @@ public class UserList : GreeterList
 
     private bool is_supported_remote_session (string session_internal_name)
     {
-        if (UnityGreeter.singleton.test_mode)
+        if (SlickGreeter.singleton.test_mode)
             return session_internal_name == "rdp";
 
         var found = false;
@@ -991,13 +991,13 @@ public class UserList : GreeterList
 
     private void fill_list ()
     {
-        if (UnityGreeter.singleton.test_mode)
+        if (SlickGreeter.singleton.test_mode)
             test_fill_list ();
         else
         {
-            default_session = UnityGreeter.singleton.default_session_hint ();
-            always_show_manual = UnityGreeter.singleton.show_manual_login_hint ();
-            if (!UnityGreeter.singleton.hide_users_hint ())
+            default_session = SlickGreeter.singleton.default_session_hint ();
+            always_show_manual = SlickGreeter.singleton.show_manual_login_hint ();
+            if (!SlickGreeter.singleton.hide_users_hint ())
             {
                 var users = LightDM.UserList.get_instance ();
                 users.user_added.connect (user_added_cb);
@@ -1007,7 +1007,7 @@ public class UserList : GreeterList
                     user_added_cb (user);
             }
 
-            if (UnityGreeter.singleton.has_guest_account_hint ())
+            if (SlickGreeter.singleton.has_guest_account_hint ())
             {
                 debug ("Adding guest account entry");
                 offer_guest = true;
@@ -1017,9 +1017,9 @@ public class UserList : GreeterList
             if (!have_entries ())
                 add_manual_entry ();
 
-            var last_user = UnityGreeter.singleton.get_state ("last-user");
-            if (UnityGreeter.singleton.select_user_hint () != null)
-                set_active_entry (UnityGreeter.singleton.select_user_hint ());
+            var last_user = SlickGreeter.singleton.get_state ("last-user");
+            if (SlickGreeter.singleton.select_user_hint () != null)
+                set_active_entry (SlickGreeter.singleton.select_user_hint ());
             else if (last_user != null)
                 set_active_entry (last_user);
         }
@@ -1089,24 +1089,24 @@ public class UserList : GreeterList
             {
                 Gtk.Entry field = current_remote_fields.get ("username") as Gtk.Entry;
                 var answer = field != null ? field.text : "";
-                UnityGreeter.singleton.respond (answer);
+                SlickGreeter.singleton.respond (answer);
             }
             else if (text == "password:")
             {
                 Gtk.Entry field = current_remote_fields.get ("password") as Gtk.Entry;
                 var answer = field != null ? field.text : "";
-                UnityGreeter.singleton.respond (answer);
+                SlickGreeter.singleton.respond (answer);
             }
             else if (text == "remote host:")
             {
                 var answer = url_from_remote_loding_server_list_name (selected_entry.id);
-                UnityGreeter.singleton.respond (answer);
+                SlickGreeter.singleton.respond (answer);
             }
             else if (text == "domain:")
             {
                 Gtk.Entry field = current_remote_fields.get ("domain") as Gtk.Entry;
                 var answer = field != null ? field.text : "";
-                UnityGreeter.singleton.respond (answer);
+                SlickGreeter.singleton.respond (answer);
             }
         }
         else
@@ -1179,7 +1179,7 @@ public class UserList : GreeterList
         {
         }
 
-        if (!UnityGreeter.singleton.hide_users_hint())
+        if (!SlickGreeter.singleton.hide_users_hint())
             while (add_test_entry ());
 
         /* add a manual entry if the list of entries is empty initially */
@@ -1190,12 +1190,12 @@ public class UserList : GreeterList
             n_test_entries++;
         }
 
-        offer_guest = UnityGreeter.singleton.has_guest_account_hint();
-        always_show_manual = UnityGreeter.singleton.show_manual_login_hint();
+        offer_guest = SlickGreeter.singleton.has_guest_account_hint();
+        always_show_manual = SlickGreeter.singleton.show_manual_login_hint();
 
         key_press_event.connect (test_key_press_cb);
 
-        if (UnityGreeter.singleton.show_remote_login_hint())
+        if (SlickGreeter.singleton.show_remote_login_hint())
             Timeout.add (1000, () =>
             {
                 RemoteServer[] test_server_list = {};
@@ -1217,7 +1217,7 @@ public class UserList : GreeterList
                 return false;
             });
 
-        var last_user = UnityGreeter.singleton.get_state ("last-user");
+        var last_user = SlickGreeter.singleton.get_state ("last-user");
         if (last_user != null)
             set_active_entry (last_user);
 
@@ -1605,19 +1605,19 @@ public class UserList : GreeterList
             authentication_complete_cb ();
             break;
         case "info-prompt":
-            show_message_cb ("Welcome to Unity Greeter", LightDM.MessageType.INFO);
+            show_message_cb ("Welcome to Slick Greeter", LightDM.MessageType.INFO);
             show_prompt_cb ("Password:", LightDM.PromptType.SECRET);
             break;
         case "long-info-prompt":
-            show_message_cb ("Welcome to Unity Greeter\n\nWe like to annoy you with long messages.\nLike this one\n\nThis is the last line of a multiple line message.", LightDM.MessageType.INFO);
+            show_message_cb ("Welcome to Slick Greeter\n\nWe like to annoy you with long messages.\nLike this one\n\nThis is the last line of a multiple line message.", LightDM.MessageType.INFO);
             show_prompt_cb ("Password:", LightDM.PromptType.SECRET);
             break;
         case "wide-info-prompt":
-            show_message_cb ("Welcome to Unity Greeter, the greeteriest greeter that ever did appear in these fine lands", LightDM.MessageType.INFO);
+            show_message_cb ("Welcome to Slick Greeter, the greeteriest greeter that ever did appear in these fine lands", LightDM.MessageType.INFO);
             show_prompt_cb ("Password:", LightDM.PromptType.SECRET);
             break;
         case "multi-info-prompt":
-            show_message_cb ("Welcome to Unity Greeter", LightDM.MessageType.INFO);
+            show_message_cb ("Welcome to Slick Greeter", LightDM.MessageType.INFO);
             show_message_cb ("This is an error", LightDM.MessageType.ERROR);
             show_message_cb ("You should have seen three messages", LightDM.MessageType.INFO);
             show_prompt_cb ("Password:", LightDM.PromptType.SECRET);

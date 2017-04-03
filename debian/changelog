@@ -1,18 +1,18 @@
-unity-greeter (16.04.2-0ubuntu1) xenial; urgency=medium
+slick-greeter (16.04.2-0ubuntu1) xenial; urgency=medium
 
   * New upstream release:
     - Limit prompt fields to 200 characters (LP: #1538615)
 
  -- Robert Ancell <robert.ancell@canonical.com>  Thu, 24 Mar 2016 14:03:38 +1300
 
-unity-greeter (16.04.1-0ubuntu1) xenial; urgency=medium
+slick-greeter (16.04.1-0ubuntu1) xenial; urgency=medium
 
   * New upstream release:
     - Fix background after login being scaled incorrectly (LP: #1557893)
 
  -- Robert Ancell <robert.ancell@canonical.com>  Fri, 18 Mar 2016 09:46:32 +1300
 
-unity-greeter (16.04.0-0ubuntu1) xenial; urgency=medium
+slick-greeter (16.04.0-0ubuntu1) xenial; urgency=medium
 
   * New upstream release:
     - Add an option to only show users in a list of specified groups
@@ -24,7 +24,7 @@ unity-greeter (16.04.0-0ubuntu1) xenial; urgency=medium
 
  -- Robert Ancell <robert.ancell@canonical.com>  Tue, 27 Oct 2015 11:48:39 +1300
 
-unity-greeter (15.10.1-0ubuntu1) wily; urgency=medium
+slick-greeter (15.10.1-0ubuntu1) wily; urgency=medium
 
   * New upstream release:
     - Use GNOME badge for gnome-wayland session
@@ -33,30 +33,30 @@ unity-greeter (15.10.1-0ubuntu1) wily; urgency=medium
 
  -- Robert Ancell <robert.ancell@canonical.com>  Thu, 06 Aug 2015 12:15:40 +1200
 
-unity-greeter (15.10.0-0ubuntu1) wily; urgency=medium
+slick-greeter (15.10.0-0ubuntu1) wily; urgency=medium
 
   * New upstream release:
     - Make source package using xzip
     - Don't distribute AUTHORS, INSTALL, README, ChangeLog  
   * debian/rules:
     - Update greeter logo for Wily Werewolf.
-  * debian/50-unity-greeter.conf:
+  * debian/50-slick-greeter.conf:
     - Use new [Seat:*] section instead of deprecated [SeatDefaults]
       (LP: #1456449)
 
  -- Robert Ancell <robert.ancell@canonical.com>  Wed, 20 May 2015 11:39:37 +1200
 
-unity-greeter (15.04.4-0ubuntu1) vivid; urgency=medium
+slick-greeter (15.04.4-0ubuntu1) vivid; urgency=medium
 
   * New upstream release:
-    - Update unity-greeter so it is possible to style buttons in greeter with
+    - Update slick-greeter so it is possible to style buttons in greeter with
       css (LP: #1423542)
   * debian/control:
     - Use standards version 3.9.6
 
  -- Robert Ancell <robert.ancell@canonical.com>  Tue, 14 Apr 2015 13:06:52 +1200
 
-unity-greeter (15.04.3-0ubuntu1) vivid; urgency=medium
+slick-greeter (15.04.3-0ubuntu1) vivid; urgency=medium
 
   * New upstream release:
     - Ensure non-selected prompt boxes don't overlap adjacent boxes. This fixes
@@ -67,7 +67,7 @@ unity-greeter (15.04.3-0ubuntu1) vivid; urgency=medium
 
  -- Robert Ancell <robert.ancell@canonical.com>  Thu, 29 Jan 2015 09:09:31 +1300
 
-unity-greeter (15.04.2-0ubuntu2) vivid; urgency=medium
+slick-greeter (15.04.2-0ubuntu2) vivid; urgency=medium
 
   [ Iain Lane ]
   * Set GSETTINGS_SCHEMA_DIR and install an icon theme.
@@ -77,7 +77,7 @@ unity-greeter (15.04.2-0ubuntu2) vivid; urgency=medium
 
  -- Dmitry Shachnev <mitya57@ubuntu.com>  Wed, 28 Jan 2015 13:48:58 +0300
 
-unity-greeter (15.04.2-0ubuntu1) vivid; urgency=medium
+slick-greeter (15.04.2-0ubuntu1) vivid; urgency=medium
 
   * Launch user upstart session with 'upstart' instead of 'init' which doesn't
     work with systemd (LP: #1398619)
@@ -86,14 +86,14 @@ unity-greeter (15.04.2-0ubuntu1) vivid; urgency=medium
 
  -- Robert Ancell <robert.ancell@canonical.com>  Mon, 08 Dec 2014 09:08:03 +1300
 
-unity-greeter (15.04.1-0ubuntu1) vivid; urgency=medium
+slick-greeter (15.04.1-0ubuntu1) vivid; urgency=medium
 
   * Fix session selector and other buttons not being clickable due to regression
     introduced in revision 1421.
 
  -- Robert Ancell <robert.ancell@canonical.com>  Tue, 02 Dec 2014 15:09:15 +1300
 
-unity-greeter (15.04.0-0ubuntu1) vivid; urgency=medium
+slick-greeter (15.04.0-0ubuntu1) vivid; urgency=medium
 
   * Update greeter logo for Vivid Vervet.
   * Update GNOME flashback icon names
@@ -102,7 +102,7 @@ unity-greeter (15.04.0-0ubuntu1) vivid; urgency=medium
 
  -- Robert Ancell <robert.ancell@canonical.com>  Fri, 28 Nov 2014 08:43:03 +1300
 
-unity-greeter (14.10.2-0ubuntu1) utopic; urgency=medium
+slick-greeter (14.10.2-0ubuntu1) utopic; urgency=medium
 
   * New upstream release:
     - Switch the screen reader keyboard shortcut to be the same as the default
@@ -110,14 +110,14 @@ unity-greeter (14.10.2-0ubuntu1) utopic; urgency=medium
 
  -- Robert Ancell <robert.ancell@canonical.com>  Fri, 22 Aug 2014 09:43:44 +1200
 
-unity-greeter (14.10.1-0ubuntu1) utopic; urgency=medium
+slick-greeter (14.10.1-0ubuntu1) utopic; urgency=medium
 
   * New upstream release:
-    - Bring unstable idle timer code from gnome-desktop into unity-greeter
+    - Bring unstable idle timer code from gnome-desktop into slick-greeter
 
  -- Robert Ancell <robert.ancell@canonical.com>  Thu, 31 Jul 2014 10:56:12 +1200
 
-unity-greeter (14.10.0-0ubuntu2) utopic; urgency=medium
+slick-greeter (14.10.0-0ubuntu2) utopic; urgency=medium
 
   * New upstream release:
     - Require user to acknowledge messages received after authentication is
@@ -125,13 +125,13 @@ unity-greeter (14.10.0-0ubuntu2) utopic; urgency=medium
 
  -- Robert Ancell <robert.ancell@canonical.com>  Wed, 30 Apr 2014 15:38:02 +1200
 
-unity-greeter (14.10.0-0ubuntu1) utopic; urgency=medium
+slick-greeter (14.10.0-0ubuntu1) utopic; urgency=medium
 
   * Update greeter logo for Utopic Unicorn.
 
  -- Dimitri John Ledkov <xnox@ubuntu.com>  Thu, 24 Apr 2014 00:23:42 +0100
 
-unity-greeter (14.04.9-0ubuntu1) trusty; urgency=medium
+slick-greeter (14.04.9-0ubuntu1) trusty; urgency=medium
 
   * New upstream release:
     - Correctly handle SIGTERM and quit cleanly. We were previously not stopping
@@ -143,7 +143,7 @@ unity-greeter (14.04.9-0ubuntu1) trusty; urgency=medium
 
  -- Robert Ancell <robert.ancell@canonical.com>  Tue, 08 Apr 2014 15:57:59 +1200
 
-unity-greeter (14.04.8-0ubuntu1) trusty; urgency=medium
+slick-greeter (14.04.8-0ubuntu1) trusty; urgency=medium
 
   * New upstream release:
     - Allow unity-settings-daemon to blank the screen by implementing the
@@ -151,14 +151,14 @@ unity-greeter (14.04.8-0ubuntu1) trusty; urgency=medium
 
  -- Robert Ancell <robert.ancell@canonical.com>  Tue, 08 Apr 2014 07:57:42 +1200
 
-unity-greeter (14.04.7-0ubuntu1) trusty; urgency=medium
+slick-greeter (14.04.7-0ubuntu1) trusty; urgency=medium
 
   * New upstream release:
-    - Own the com.canonical.UnityGreeter D-Bus name
+    - Own the com.canonical.SlickGreeter D-Bus name
 
  -- Robert Ancell <robert.ancell@canonical.com>  Wed, 02 Apr 2014 10:13:46 +1300
 
-unity-greeter (14.04.6-0ubuntu1) trusty; urgency=medium
+slick-greeter (14.04.6-0ubuntu1) trusty; urgency=medium
 
   * New upstream release:
     - Add option to hide certain users until alt+ctrl+shift is pressed.
@@ -167,7 +167,7 @@ unity-greeter (14.04.6-0ubuntu1) trusty; urgency=medium
 
  -- Robert Ancell <robert.ancell@canonical.com>  Thu, 27 Mar 2014 10:51:42 +1300
 
-unity-greeter (14.04.5-0ubuntu1) trusty; urgency=medium
+slick-greeter (14.04.5-0ubuntu1) trusty; urgency=medium
 
   * New upstream release:
     - Don't focus windows that set override-redirect. This was causing a
@@ -175,7 +175,7 @@ unity-greeter (14.04.5-0ubuntu1) trusty; urgency=medium
 
  -- Robert Ancell <robert.ancell@canonical.com>  Fri, 21 Mar 2014 14:52:22 +1300
 
-unity-greeter (14.04.4-0ubuntu1) trusty; urgency=medium
+slick-greeter (14.04.4-0ubuntu1) trusty; urgency=medium
 
   * New upstream release:
     - Add primary monitor support
@@ -183,14 +183,14 @@ unity-greeter (14.04.4-0ubuntu1) trusty; urgency=medium
 
  -- Robert Ancell <robert.ancell@canonical.com>  Thu, 13 Mar 2014 14:23:11 +1300
 
-unity-greeter (14.04.3-0ubuntu2) trusty; urgency=medium
+slick-greeter (14.04.3-0ubuntu2) trusty; urgency=medium
 
   * Add build-dependency on ttf-ubuntu-font-family for correct logo
     rendering.
 
  -- Dimitri John Ledkov <xnox@ubuntu.com>  Thu, 20 Feb 2014 10:32:48 +0000
 
-unity-greeter (14.04.3-0ubuntu1) trusty; urgency=medium
+slick-greeter (14.04.3-0ubuntu1) trusty; urgency=medium
 
   * New upstream release:
     - Generate version stamp on background (LP: #1269901)
@@ -200,14 +200,14 @@ unity-greeter (14.04.3-0ubuntu1) trusty; urgency=medium
 
  -- Robert Ancell <robert.ancell@canonical.com>  Thu, 20 Feb 2014 17:17:59 +1300
 
-unity-greeter (14.04.2-0ubuntu2) trusty; urgency=medium
+slick-greeter (14.04.2-0ubuntu2) trusty; urgency=medium
 
   * debian/control:
     - Move remote login packages from recommends to suggests
 
  -- Robert Ancell <robert.ancell@canonical.com>  Wed, 05 Feb 2014 12:34:10 +0000
 
-unity-greeter (14.04.2-0ubuntu1) trusty; urgency=medium
+slick-greeter (14.04.2-0ubuntu1) trusty; urgency=medium
 
   * New upstream release:
     - Handle a window being destroyed after we get the map event and try and
@@ -219,7 +219,7 @@ unity-greeter (14.04.2-0ubuntu1) trusty; urgency=medium
 
  -- Robert Ancell <robert.ancell@canonical.com>  Wed, 05 Feb 2014 10:01:12 +0000
 
-unity-greeter (14.04.1-0ubuntu2) trusty; urgency=low
+slick-greeter (14.04.1-0ubuntu2) trusty; urgency=low
 
   * debian/install:
   * debian/maintscript:
@@ -228,7 +228,7 @@ unity-greeter (14.04.1-0ubuntu2) trusty; urgency=low
 
  -- Robert Ancell <robert.ancell@canonical.com>  Thu, 05 Dec 2013 09:39:49 +1300
 
-unity-greeter (14.04.1-0ubuntu1) trusty; urgency=low
+slick-greeter (14.04.1-0ubuntu1) trusty; urgency=low
 
   [ Robert Ancell ]
   * New upstream release:
@@ -241,7 +241,7 @@ unity-greeter (14.04.1-0ubuntu1) trusty; urgency=low
 
  -- Robert Ancell <robert.ancell@canonical.com>  Thu, 14 Nov 2013 09:08:04 +1300
 
-unity-greeter (14.04.0-0ubuntu1) trusty; urgency=low
+slick-greeter (14.04.0-0ubuntu1) trusty; urgency=low
 
   * New upstream release:
     - Use Unity style shutdown dialogs (LP: #857577)
@@ -252,7 +252,7 @@ unity-greeter (14.04.0-0ubuntu1) trusty; urgency=low
 
  -- Robert Ancell <robert.ancell@canonical.com>  Mon, 11 Nov 2013 17:16:17 +1300
 
-unity-greeter (13.10.3-0ubuntu1) saucy; urgency=low
+slick-greeter (13.10.3-0ubuntu1) saucy; urgency=low
 
   [ William Hua ]
   * Replace old ug-keyboard indicator with indicator-keyboard (LP: #1226760,
@@ -267,7 +267,7 @@ unity-greeter (13.10.3-0ubuntu1) saucy; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Wed, 02 Oct 2013 15:55:02 -0400
 
-unity-greeter (13.10.2-0ubuntu1) saucy; urgency=low
+slick-greeter (13.10.2-0ubuntu1) saucy; urgency=low
 
   [ Didier Roche ]
   * Minor changes for daily release
@@ -279,38 +279,38 @@ unity-greeter (13.10.2-0ubuntu1) saucy; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Tue, 13 Aug 2013 20:22:13 -0400
 
-unity-greeter (13.10.1-0ubuntu2) saucy; urgency=low
+slick-greeter (13.10.1-0ubuntu2) saucy; urgency=low
 
-  * debian/50-unity-greeter.conf:
+  * debian/50-slick-greeter.conf:
   * debian/postinst:
   * debian/postrm:
-    - Use new lightdm.conf.d file to set unity-greeter as the default greeter.
+    - Use new lightdm.conf.d file to set slick-greeter as the default greeter.
       Deprecates lightdm-set-defaults method.
 
  -- Robert Ancell <robert.ancell@canonical.com>  Mon, 24 Jun 2013 10:40:00 +1200
 
-unity-greeter (13.10.1-0ubuntu1) saucy; urgency=low
+slick-greeter (13.10.1-0ubuntu1) saucy; urgency=low
 
   * Fix tests to ignore warnings from libraries and such.  Only care about
     actual test failures.  Fixes FTBFS on armhf.
 
  -- Michael Terry <mterry@ubuntu.com>  Thu, 20 Jun 2013 14:08:32 -0400
 
-unity-greeter (13.10.0-0ubuntu1) saucy; urgency=low
+slick-greeter (13.10.0-0ubuntu1) saucy; urgency=low
 
   * New upstream release:
     - updated logo for 13.10, thanks Xi Zhu!
 
  -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 17 Jun 2013 13:54:17 +0200
 
-unity-greeter (13.04.2-0ubuntu1) raring; urgency=low
+slick-greeter (13.04.2-0ubuntu1) raring; urgency=low
 
   * New upstream release.
     - Fix duplicate entries showing for multiple users on the same remote
       login service.
     - Add custom indicator support for system administrators (LP: #1155157)
   * debian/control:
-    - Switch Vcs-Bzr to point at Unity Greeter trunk, since we are inlining
+    - Switch Vcs-Bzr to point at Slick Greeter trunk, since we are inlining
       the packaging
     - Use debhelper 9
   * debian/rules:
@@ -322,7 +322,7 @@ unity-greeter (13.04.2-0ubuntu1) raring; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Fri, 15 Mar 2013 14:04:08 -0400
 
-unity-greeter (13.04.1-0ubuntu2) raring; urgency=low
+slick-greeter (13.04.1-0ubuntu2) raring; urgency=low
 
   * debian/patches/spawn-gsd-directly.patch:
     - Spawn gnome-settings-daemon directly, since it dropped DBus activation
@@ -330,14 +330,14 @@ unity-greeter (13.04.1-0ubuntu2) raring; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Thu, 31 Jan 2013 12:39:26 -0500
 
-unity-greeter (13.04.1-0ubuntu1) raring; urgency=low
+slick-greeter (13.04.1-0ubuntu1) raring; urgency=low
 
   * New upstream release
     - Updated logo for 13.04 (LP: #1083333)
 
  -- Michael Terry <mterry@ubuntu.com>  Tue, 22 Jan 2013 15:55:26 -0500
 
-unity-greeter (13.04.0-0ubuntu1) raring; urgency=low
+slick-greeter (13.04.0-0ubuntu1) raring; urgency=low
 
   * New upstream release
     - Support timed login
@@ -354,7 +354,7 @@ unity-greeter (13.04.0-0ubuntu1) raring; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Fri, 04 Jan 2013 10:37:29 -0500
 
-unity-greeter (12.10.4-0ubuntu5) quantal; urgency=low
+slick-greeter (12.10.4-0ubuntu5) quantal; urgency=low
 
   * debian/patches/fix-timed-autologin.patch:
     - Fix timed login by paying attention to the signal from lightdm.
@@ -364,7 +364,7 @@ unity-greeter (12.10.4-0ubuntu5) quantal; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Tue, 09 Oct 2012 10:32:05 -0400
 
-unity-greeter (12.10.4-0ubuntu4) quantal; urgency=low
+slick-greeter (12.10.4-0ubuntu4) quantal; urgency=low
 
   * debian/patches/close-orca.patch:
     - Make turning off the screen reader work again, now that the --quit
@@ -376,7 +376,7 @@ unity-greeter (12.10.4-0ubuntu4) quantal; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Sun, 07 Oct 2012 17:12:31 -0400
 
-unity-greeter (12.10.4-0ubuntu3) quantal; urgency=low
+slick-greeter (12.10.4-0ubuntu3) quantal; urgency=low
 
   * debian/patches/sigterm-onboard.patch:
     - Send SIGTERM not SIGKILL to onboard, to allow it to release keys
@@ -384,7 +384,7 @@ unity-greeter (12.10.4-0ubuntu3) quantal; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Wed, 03 Oct 2012 10:17:06 -0400
 
-unity-greeter (12.10.4-0ubuntu2) quantal; urgency=low
+slick-greeter (12.10.4-0ubuntu2) quantal; urgency=low
 
   * debian/patches/do-not-mention-citrix-support.patch:
     - We don't actually support Citrix out of the box, so don't mention it
@@ -392,7 +392,7 @@ unity-greeter (12.10.4-0ubuntu2) quantal; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Tue, 02 Oct 2012 13:22:50 -0400
 
-unity-greeter (12.10.4-0ubuntu1) quantal; urgency=low
+slick-greeter (12.10.4-0ubuntu1) quantal; urgency=low
 
   * New upstream bug fix release
     - Fix rendering of password entry's spinner (LP: #1059447)
@@ -410,7 +410,7 @@ unity-greeter (12.10.4-0ubuntu1) quantal; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Mon, 01 Oct 2012 12:33:16 -0400
 
-unity-greeter (12.10.3-0ubuntu3) quantal; urgency=low
+slick-greeter (12.10.3-0ubuntu3) quantal; urgency=low
 
   * debian/patches/trunk_session_chooser.patch:
     - backport from trunk: "Fix bug preventing user from clicking 
@@ -418,7 +418,7 @@ unity-greeter (12.10.3-0ubuntu3) quantal; urgency=low
 
  -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 01 Oct 2012 11:02:40 +0200
 
-unity-greeter (12.10.3-0ubuntu2) quantal; urgency=low
+slick-greeter (12.10.3-0ubuntu2) quantal; urgency=low
 
   * debian/patches/move-nm-applet.patch:
     - Start nm-applet after we set INDICATOR_GREETER_MODE so that it knows
@@ -426,7 +426,7 @@ unity-greeter (12.10.3-0ubuntu2) quantal; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Thu, 20 Sep 2012 15:37:07 -0400
 
-unity-greeter (12.10.3-0ubuntu1) quantal; urgency=low
+slick-greeter (12.10.3-0ubuntu1) quantal; urgency=low
 
   * New upstream release
     - Rearrange some UI bits (LP: #1049231, LP: #1049235, LP: #1049236,
@@ -439,7 +439,7 @@ unity-greeter (12.10.3-0ubuntu1) quantal; urgency=low
     - Center remote login help dialog
     - Use the xsettings plugin to apply icons-in-menus gsetting
       (LP: #927236)
-  * debian/unity-greeter.pkla:
+  * debian/slick-greeter.pkla:
     - Fix policykit file to not be order-dependent and spell out the
       NetworkManager permissions instead of using a wildcard.
       LP: #1048522
@@ -452,7 +452,7 @@ unity-greeter (12.10.3-0ubuntu1) quantal; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Mon, 17 Sep 2012 13:31:13 -0400
 
-unity-greeter (12.10.2-0ubuntu5) quantal; urgency=low
+slick-greeter (12.10.2-0ubuntu5) quantal; urgency=low
 
   * debian/patches/02_use_remote_login_hint.patch:
     - Use new greeter hint to control whether remote login is enabled,
@@ -462,28 +462,28 @@ unity-greeter (12.10.2-0ubuntu5) quantal; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Tue, 11 Sep 2012 14:27:08 -0400
 
-unity-greeter (12.10.2-0ubuntu4) quantal; urgency=low
+slick-greeter (12.10.2-0ubuntu4) quantal; urgency=low
 
   * Whoops, and Recommend remote-login-service and friends to pull
     them in for proper Remote Login support.
 
  -- Michael Terry <mterry@ubuntu.com>  Fri, 07 Sep 2012 11:45:24 -0400
 
-unity-greeter (12.10.2-0ubuntu3) quantal; urgency=low
+slick-greeter (12.10.2-0ubuntu3) quantal; urgency=low
 
   * Enable Remote Login support (LP: #1040221)
   * Add proper remote login help icon from trunk
 
  -- Michael Terry <mterry@ubuntu.com>  Fri, 07 Sep 2012 11:26:21 -0400
 
-unity-greeter (12.10.2-0ubuntu2) quantal; urgency=low
+slick-greeter (12.10.2-0ubuntu2) quantal; urgency=low
 
   * Enable Network Manager support (LP: #1042757)
   * debian/copyright: update Format and syntax
 
  -- Michael Terry <mterry@ubuntu.com>  Thu, 30 Aug 2012 16:10:27 -0400
 
-unity-greeter (12.10.2-0ubuntu1) quantal; urgency=low
+slick-greeter (12.10.2-0ubuntu1) quantal; urgency=low
 
   [ Robert Ancell ]
   * New upstream release:
@@ -497,7 +497,7 @@ unity-greeter (12.10.2-0ubuntu1) quantal; urgency=low
     - Finess UI (LP: #932162)
 
   [ Michael Terry ]
-  * debian/unity-greeter.pkla, debian/install:
+  * debian/slick-greeter.pkla, debian/install:
     - Install a policykit authentication file to disallow any mucking
       with NetworkManager in anticipation of adding NM to the greeter.
   * debian/control:
@@ -508,7 +508,7 @@ unity-greeter (12.10.2-0ubuntu1) quantal; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Mon, 20 Aug 2012 14:14:17 -0400
 
-unity-greeter (12.10.0-0ubuntu2) quantal; urgency=low
+slick-greeter (12.10.0-0ubuntu2) quantal; urgency=low
 
   * debian/patches/run_unity_support_test.patch:
     - removed, we only support unity-3d now and fallback with llvmpipe
@@ -516,7 +516,7 @@ unity-greeter (12.10.0-0ubuntu2) quantal; urgency=low
 
  -- Didier Roche <didrocks@ubuntu.com>  Wed, 15 Aug 2012 08:39:47 +0200
 
-unity-greeter (12.10.0-0ubuntu1) quantal; urgency=low
+slick-greeter (12.10.0-0ubuntu1) quantal; urgency=low
 
   * New upstream release:
     - Update version logo
@@ -531,7 +531,7 @@ unity-greeter (12.10.0-0ubuntu1) quantal; urgency=low
 
  -- Robert Ancell <robert.ancell@canonical.com>  Thu, 21 Jun 2012 16:38:32 +1200
 
-unity-greeter (0.2.8-0ubuntu2) quantal; urgency=low
+slick-greeter (0.2.8-0ubuntu2) quantal; urgency=low
 
   * debian/patches/recognize-kde-plasma.patch:
     - Recognize the "kde-plasma" session as "kde" so it gets a properly
@@ -546,7 +546,7 @@ unity-greeter (0.2.8-0ubuntu2) quantal; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Fri, 20 Apr 2012 14:51:06 -0400
 
-unity-greeter (0.2.8-0ubuntu1) precise-proposed; urgency=low
+slick-greeter (0.2.8-0ubuntu1) precise-proposed; urgency=low
 
   * New upstream release:
     - Add play-ready-sound option to control making a sound when the greeter
@@ -559,7 +559,7 @@ unity-greeter (0.2.8-0ubuntu1) precise-proposed; urgency=low
 
  -- Robert Ancell <robert.ancell@canonical.com>  Wed, 18 Apr 2012 17:21:34 +1000
 
-unity-greeter (0.2.7-0ubuntu2) precise; urgency=low
+slick-greeter (0.2.7-0ubuntu2) precise; urgency=low
 
   * debian/patches/ui-tweaks.patch:
     - Make some design-team-requested minor tweaks to login box layout.
@@ -568,22 +568,22 @@ unity-greeter (0.2.7-0ubuntu2) precise; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Fri, 06 Apr 2012 10:01:26 -0400
 
-unity-greeter (0.2.7-0ubuntu1) precise; urgency=low
+slick-greeter (0.2.7-0ubuntu1) precise; urgency=low
 
   * New upstream bug-fix release
     - "Pressing escape key on lightdm greeter restarts xserver"
       (LP: #962932)
-    - "unity-greeter crashed with SIGSEGV in background_loader_ready_cb"
+    - "slick-greeter crashed with SIGSEGV in background_loader_ready_cb"
       (LP: #946674)
     - "Onscreen Keyboard cannot be used to input password in
-      unity-greeter" (LP: #878184)
+      slick-greeter" (LP: #878184)
 
  -- Michael Terry <mterry@ubuntu.com>  Tue, 03 Apr 2012 15:50:50 -0400
 
-unity-greeter (0.2.6-0ubuntu1) precise; urgency=low
+slick-greeter (0.2.6-0ubuntu1) precise; urgency=low
 
   * New upstream bug-fix release
-    - Fix the corruption between unity-greeter and Unity loading
+    - Fix the corruption between slick-greeter and Unity loading
       (LP: #931967)
     - Fix crash when reloading background images (LP: #942227)
     - Fix displayed name of keyboard layout with some variants
@@ -593,16 +593,16 @@ unity-greeter (0.2.6-0ubuntu1) precise; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Thu, 22 Mar 2012 09:44:16 -0400
 
-unity-greeter (0.2.5-0ubuntu2) precise; urgency=low
+slick-greeter (0.2.5-0ubuntu2) precise; urgency=low
 
   * debian/patches/fix_login_corruption.patch:
     - Fix setting of root window background pixmap.  Fixes "corruption"
-      seen between unity-greeter and Unity start, which was actually just
+      seen between slick-greeter and Unity start, which was actually just
       random bits of VRAM in an uninitialised pixmap.  (LP: #931967)
 
  -- Christopher James Halse Rogers <raof@ubuntu.com>  Tue, 20 Mar 2012 18:51:43 +1100
 
-unity-greeter (0.2.5-0ubuntu1) precise; urgency=low
+slick-greeter (0.2.5-0ubuntu1) precise; urgency=low
 
   * New upstream release
     - Don't allow dragging the window by the top bar
@@ -621,14 +621,14 @@ unity-greeter (0.2.5-0ubuntu1) precise; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Thu, 15 Mar 2012 09:37:28 -0400
 
-unity-greeter (0.2.4-0ubuntu2) precise; urgency=low
+slick-greeter (0.2.4-0ubuntu2) precise; urgency=low
 
   * debian/patches/dont_dnd_greeter.patch: backport fix for the greeter
     responding to dnd, it has quite some duplicates (lp: #919398)
 
  -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 07 Mar 2012 11:36:25 +0100
 
-unity-greeter (0.2.4-0ubuntu1) precise; urgency=low
+slick-greeter (0.2.4-0ubuntu1) precise; urgency=low
 
   * New upstream release
     - Don't crash when all monitors are the same size
@@ -640,7 +640,7 @@ unity-greeter (0.2.4-0ubuntu1) precise; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Thu, 23 Feb 2012 10:02:11 -0500
 
-unity-greeter (0.2.3-0ubuntu4) precise; urgency=low
+slick-greeter (0.2.3-0ubuntu4) precise; urgency=low
 
   * debian/patches/do_not_crash_with_twinview.patch:
     - Don't crash when all monitors have the same size (as can happen with
@@ -648,7 +648,7 @@ unity-greeter (0.2.3-0ubuntu4) precise; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Fri, 17 Feb 2012 17:43:37 -0500
 
-unity-greeter (0.2.3-0ubuntu3) precise; urgency=low
+slick-greeter (0.2.3-0ubuntu3) precise; urgency=low
 
   * debian/control:
     - Build-depend on libcanberra-dev
@@ -656,14 +656,14 @@ unity-greeter (0.2.3-0ubuntu3) precise; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Thu, 16 Feb 2012 14:34:43 -0500
 
-unity-greeter (0.2.3-0ubuntu2) precise; urgency=low
+slick-greeter (0.2.3-0ubuntu2) precise; urgency=low
 
   * debian/control:
     - Build-depend on liblightdm-gobject-1-dev >= 1.1.3
 
  -- Robert Ancell <robert.ancell@canonical.com>  Thu, 16 Feb 2012 17:51:33 +1100
 
-unity-greeter (0.2.3-0ubuntu1) precise; urgency=low
+slick-greeter (0.2.3-0ubuntu1) precise; urgency=low
 
   * New upstream release:
     [ 0.2.2 ]
@@ -675,14 +675,14 @@ unity-greeter (0.2.3-0ubuntu1) precise; urgency=low
 
  -- Robert Ancell <robert.ancell@canonical.com>  Thu, 16 Feb 2012 17:35:24 +1100
 
-unity-greeter (0.2.1-0ubuntu1) precise; urgency=low
+slick-greeter (0.2.1-0ubuntu1) precise; urgency=low
 
   * New upstream release
     - Fix session menu button not showing for first user
     - Skip indicators that fail to load
     - Distribute translations correctly
     - Load indicators from location specified in pkg-config
-    - Use gsettings instead of /etc/lightdm/unity-greeter.conf
+    - Use gsettings instead of /etc/lightdm/slick-greeter.conf
     - Accept numpad arrow key presses
     - Instead of showing all layouts in the system in the keyboard indicator,
       only show the layouts a user has configured
@@ -697,7 +697,7 @@ unity-greeter (0.2.1-0ubuntu1) precise; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Mon, 13 Feb 2012 15:25:10 -0500
 
-unity-greeter (0.2.0-0ubuntu6) precise; urgency=low
+slick-greeter (0.2.0-0ubuntu6) precise; urgency=low
 
   * debian/patches/handle_missing_indicators.patch:
     - backported from trunk, handle missing indicators (lp: #921998)
@@ -711,7 +711,7 @@ unity-greeter (0.2.0-0ubuntu6) precise; urgency=low
 
  -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 31 Jan 2012 18:59:57 +0100
 
-unity-greeter (0.2.0-0ubuntu5) precise; urgency=low
+slick-greeter (0.2.0-0ubuntu5) precise; urgency=low
 
   * rebuild for libindicator7
   * debian/patches/no_hardcoded_paths.patch
@@ -719,7 +719,7 @@ unity-greeter (0.2.0-0ubuntu5) precise; urgency=low
 
  -- Ken VanDine <ken.vandine@canonical.com>  Wed, 25 Jan 2012 10:04:05 -0500
 
-unity-greeter (0.2.0-0ubuntu4) precise; urgency=low
+slick-greeter (0.2.0-0ubuntu4) precise; urgency=low
 
   * debian/patches/drop_keyboard_indicator.patch:
     - Back out the keyboard layout indicator for now, until we can properly
@@ -727,21 +727,21 @@ unity-greeter (0.2.0-0ubuntu4) precise; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Fri, 20 Jan 2012 07:05:31 -0500
 
-unity-greeter (0.2.0-0ubuntu3) precise; urgency=low
+slick-greeter (0.2.0-0ubuntu3) precise; urgency=low
 
   * Add versioned Breaks on edubuntu-artwork to allow edubuntu-artwork
-    to fix its unity-greeter.conf to match the new options.
+    to fix its slick-greeter.conf to match the new options.
 
  -- Stéphane Graber <stgraber@ubuntu.com>  Thu, 19 Jan 2012 14:07:30 -0500
 
-unity-greeter (0.2.0-0ubuntu2) precise; urgency=low
+slick-greeter (0.2.0-0ubuntu2) precise; urgency=low
 
   [ Aurélien Gâteau ]
   * Add dependency on gnome-settings-daemon (LP: #911826)
 
  -- Robert Ancell <robert.ancell@canonical.com>  Thu, 19 Jan 2012 15:22:04 +1100
 
-unity-greeter (0.2.0-0ubuntu1) precise; urgency=low
+slick-greeter (0.2.0-0ubuntu1) precise; urgency=low
 
   * New upstream release
     - Improve scrolling animation (LP: #844050)
@@ -765,7 +765,7 @@ unity-greeter (0.2.0-0ubuntu1) precise; urgency=low
 
  -- Robert Ancell <robert.ancell@canonical.com>  Thu, 19 Jan 2012 14:56:21 +1100
 
-unity-greeter (0.1.1-0ubuntu1) oneiric; urgency=low
+slick-greeter (0.1.1-0ubuntu1) oneiric; urgency=low
 
   * New upstream release:
     - Stop loading indicators in a thread - they don't seem thread safe
@@ -774,7 +774,7 @@ unity-greeter (0.1.1-0ubuntu1) oneiric; urgency=low
 
  -- Robert Ancell <robert.ancell@canonical.com>  Wed, 28 Sep 2011 15:34:50 +1000
 
-unity-greeter (0.1.0-0ubuntu1) oneiric; urgency=low
+slick-greeter (0.1.0-0ubuntu1) oneiric; urgency=low
 
   * New upstream release:
     - Fix greeter running in loop when greeter-hide-users=true (LP: #851477)
@@ -787,7 +787,7 @@ unity-greeter (0.1.0-0ubuntu1) oneiric; urgency=low
 
  -- Robert Ancell <robert.ancell@canonical.com>  Tue, 27 Sep 2011 14:19:02 +1000
 
-unity-greeter (0.0.9-0ubuntu1) oneiric; urgency=low
+slick-greeter (0.0.9-0ubuntu1) oneiric; urgency=low
 
   * New upstream release:
     - Set background color of window to "dark aubergine" so boot delays
@@ -802,7 +802,7 @@ unity-greeter (0.0.9-0ubuntu1) oneiric; urgency=low
 
  -- Robert Ancell <robert.ancell@canonical.com>  Thu, 22 Sep 2011 16:39:58 +1000
 
-unity-greeter (0.0.8-0ubuntu1) oneiric; urgency=low
+slick-greeter (0.0.8-0ubuntu1) oneiric; urgency=low
 
   * New upstream release:
     - Fix grid offset
@@ -812,7 +812,7 @@ unity-greeter (0.0.8-0ubuntu1) oneiric; urgency=low
 
  -- Robert Ancell <robert.ancell@canonical.com>  Thu, 15 Sep 2011 15:00:50 +1000
 
-unity-greeter (0.0.7-0ubuntu1) oneiric; urgency=low
+slick-greeter (0.0.7-0ubuntu1) oneiric; urgency=low
 
   * New upstream release: (LP: #843621)
     - Show caps-lock warning in password field
@@ -827,7 +827,7 @@ unity-greeter (0.0.7-0ubuntu1) oneiric; urgency=low
 
  -- Robert Ancell <robert.ancell@canonical.com>  Wed, 14 Sep 2011 16:30:31 +1000
 
-unity-greeter (0.0.6-0ubuntu1) UNRELEASED; urgency=low
+slick-greeter (0.0.6-0ubuntu1) UNRELEASED; urgency=low
 
   * New upstream release:
     - Fix password cursors not getting focus (LP: #810805)
@@ -853,7 +853,7 @@ unity-greeter (0.0.6-0ubuntu1) UNRELEASED; urgency=low
 
  -- Robert Ancell <robert.ancell@canonical.com>  Wed, 07 Sep 2011 17:02:43 +1000
 
-unity-greeter (0.0.5-0ubuntu4) oneiric; urgency=low
+slick-greeter (0.0.5-0ubuntu4) oneiric; urgency=low
 
   * debian/patches/run_unity_support_test.patch:
     - try to run unity_support_test for ubuntu for pre-caching the
@@ -862,14 +862,14 @@ unity-greeter (0.0.5-0ubuntu4) oneiric; urgency=low
 
  -- Didier Roche <didrocks@ubuntu.com>  Tue, 06 Sep 2011 17:24:37 +0200
 
-unity-greeter (0.0.5-0ubuntu3) oneiric; urgency=low
+slick-greeter (0.0.5-0ubuntu3) oneiric; urgency=low
 
   * debian/patches/customize-logo.patch:
     - Allow derivatives to customize logo again.  LP: #834701
 
  -- Michael Terry <mterry@ubuntu.com>  Fri, 26 Aug 2011 13:38:47 -0400
 
-unity-greeter (0.0.5-0ubuntu2) oneiric; urgency=low
+slick-greeter (0.0.5-0ubuntu2) oneiric; urgency=low
 
   * debian/patches/disable-fuse.patch:
     - Disable fuse daemon, which will crash if run because we also force
@@ -877,21 +877,21 @@ unity-greeter (0.0.5-0ubuntu2) oneiric; urgency=low
 
  -- Michael Terry <mterry@ubuntu.com>  Thu, 25 Aug 2011 15:28:31 -0400
 
-unity-greeter (0.0.5-0ubuntu1) oneiric; urgency=low
+slick-greeter (0.0.5-0ubuntu1) oneiric; urgency=low
 
   * New upstream release
     - tweaks to the greeter interface
 
  -- Robert Ancell <robert.ancell@canonical.com>  Thu, 25 Aug 2011 18:42:47 +1000
 
-unity-greeter (0.0.3-0ubuntu1) oneiric; urgency=low
+slick-greeter (0.0.3-0ubuntu1) oneiric; urgency=low
 
   * New upstream version
   * debian/patches/update_to_trunk.patch: dropped, it's in the new version
 
  -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 24 Aug 2011 10:45:15 +0200
 
-unity-greeter (0.0.2-0ubuntu4) oneiric; urgency=low
+slick-greeter (0.0.2-0ubuntu4) oneiric; urgency=low
 
   * debian/patches/update_to_trunk.patch: updated to current trunk
     - tweaks to the greeter interface
@@ -900,7 +900,7 @@ unity-greeter (0.0.2-0ubuntu4) oneiric; urgency=low
 
  -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 23 Aug 2011 15:58:57 +0200
 
-unity-greeter (0.0.2-0ubuntu3) oneiric; urgency=low
+slick-greeter (0.0.2-0ubuntu3) oneiric; urgency=low
 
   * debian/patches/update_to_trunk.patch:
     - backport the 3 commits which went to the vcs since the current version
@@ -908,15 +908,15 @@ unity-greeter (0.0.2-0ubuntu3) oneiric; urgency=low
 
  -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 19 Aug 2011 11:01:32 +0200
 
-unity-greeter (0.0.2-0ubuntu2) oneiric; urgency=low
+slick-greeter (0.0.2-0ubuntu2) oneiric; urgency=low
 
   * debian/postinst, debian/postrm:
-    - set the unity-greeter as the default one if none set. Remove it on
+    - set the slick-greeter as the default one if none set. Remove it on
       uninstall
 
  -- Didier Roche <didrocks@ubuntu.com>  Wed, 10 Aug 2011 02:22:19 +0200
 
-unity-greeter (0.0.2-0ubuntu1) oneiric; urgency=low
+slick-greeter (0.0.2-0ubuntu1) oneiric; urgency=low
 
   * New upstream release
   * debian/control:
@@ -926,7 +926,7 @@ unity-greeter (0.0.2-0ubuntu1) oneiric; urgency=low
 
  -- Robert Ancell <robert.ancell@canonical.com>  Tue, 26 Jul 2011 19:24:33 +1000
 
-unity-greeter (0.0.1-0ubuntu1) oneiric; urgency=low
+slick-greeter (0.0.1-0ubuntu1) oneiric; urgency=low
 
   * New upstream release
 

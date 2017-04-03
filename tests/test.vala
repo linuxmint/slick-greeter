@@ -486,11 +486,11 @@ public class Test
         GLib.assert (list.selected_entry.id == "*remote_login*http://rdpdefaultusername2.com*lwola");
         wait_for_scrolling_end (list);
 
-        UnityGreeter.singleton.session_started = false;
+        SlickGreeter.singleton.session_started = false;
         pwd = remote_login_entry_password_field (list);
         pwd.text = "password";
         list.selected_entry.respond ({});
-        GLib.assert (UnityGreeter.singleton.session_started);
+        GLib.assert (SlickGreeter.singleton.session_started);
 
         mw.hide ();
     }
@@ -516,7 +516,7 @@ public class Test
         GLib.assert (list.selected_entry.id == "*remote_login*http://rdpdefaultusername2.com*lwola");
         wait_for_scrolling_end (list);
 
-        UnityGreeter.singleton.session_started = false;
+        SlickGreeter.singleton.session_started = false;
         pwd = remote_login_entry_password_field (list);
         pwd.text = "delay";
         pwd.activate ();
@@ -650,14 +650,14 @@ public class Test
         username.text = "bar";
         pwd.text = "foobar";
 
-        UnityGreeter.singleton.show_prompt("remote login:", LightDM.PromptType.QUESTION);
-        GLib.assert (UnityGreeter.singleton.last_respond_response == username.text);
-        UnityGreeter.singleton.show_prompt("remote host:", LightDM.PromptType.QUESTION);
-        GLib.assert (UnityGreeter.singleton.last_respond_response == "http://coolrdpserver.com");
-        UnityGreeter.singleton.show_prompt("domain:", LightDM.PromptType.QUESTION);
-        GLib.assert (UnityGreeter.singleton.last_respond_response == domain.text);
-        UnityGreeter.singleton.show_prompt("password:", LightDM.PromptType.SECRET);
-        GLib.assert (UnityGreeter.singleton.last_respond_response == pwd.text);
+        SlickGreeter.singleton.show_prompt("remote login:", LightDM.PromptType.QUESTION);
+        GLib.assert (SlickGreeter.singleton.last_respond_response == username.text);
+        SlickGreeter.singleton.show_prompt("remote host:", LightDM.PromptType.QUESTION);
+        GLib.assert (SlickGreeter.singleton.last_respond_response == "http://coolrdpserver.com");
+        SlickGreeter.singleton.show_prompt("domain:", LightDM.PromptType.QUESTION);
+        GLib.assert (SlickGreeter.singleton.last_respond_response == domain.text);
+        SlickGreeter.singleton.show_prompt("password:", LightDM.PromptType.SECRET);
+        GLib.assert (SlickGreeter.singleton.last_respond_response == pwd.text);
 
         mw.hide ();
     }
@@ -690,15 +690,15 @@ public class Test
 
     public static void remote_login_only ()
     {
-        UnityGreeter.singleton.test_mode = true;
-        UnityGreeter.singleton.session_started = false;
+        SlickGreeter.singleton.test_mode = true;
+        SlickGreeter.singleton.session_started = false;
 
 	/* this configuration should result in the list containing only the remote login entry,
 	   without any fallback manual entry */
-        UnityGreeter.singleton._hide_users_hint = true;
-        UnityGreeter.singleton._show_remote_login_hint = true;
-        UnityGreeter.singleton._has_guest_account_hint = false;
-        UnityGreeter.singleton._show_manual_login_hint = false;
+        SlickGreeter.singleton._hide_users_hint = true;
+        SlickGreeter.singleton._show_remote_login_hint = true;
+        SlickGreeter.singleton._has_guest_account_hint = false;
+        SlickGreeter.singleton._show_manual_login_hint = false;
 
         MainWindow mw = setup ();
         TestList list = mw.stack.top () as TestList;
@@ -725,14 +725,14 @@ public class Test
 
    public static void manual_login_fallback ()
    {
-        UnityGreeter.singleton.test_mode = true;
-        UnityGreeter.singleton.session_started = false;
+        SlickGreeter.singleton.test_mode = true;
+        SlickGreeter.singleton.session_started = false;
 
 	/* this configuration should result in the list containing at least a manual entry */
-        UnityGreeter.singleton._hide_users_hint = true;
-        UnityGreeter.singleton._show_remote_login_hint = false;
-        UnityGreeter.singleton._has_guest_account_hint = false;
-        UnityGreeter.singleton._show_manual_login_hint = true;
+        SlickGreeter.singleton._hide_users_hint = true;
+        SlickGreeter.singleton._show_remote_login_hint = false;
+        SlickGreeter.singleton._has_guest_account_hint = false;
+        SlickGreeter.singleton._show_manual_login_hint = true;
 
         MainWindow mw = setup ();
         TestList list = mw.stack.top () as TestList;
@@ -749,7 +749,7 @@ public class Test
     {
         try
         {
-            var dir = GLib.DirUtils.make_tmp ("unity-greeter-test-XXXXXX");
+            var dir = GLib.DirUtils.make_tmp ("slick-greeter-test-XXXXXX");
 
             var schema_dir = Path.build_filename(dir, "share", "glib-2.0", "schemas");
             DirUtils.create_with_parents(schema_dir, 0700);
@@ -759,7 +759,7 @@ public class Test
             var top_srcdir = Environment.get_variable("top_srcdir");
             if (top_srcdir == null || top_srcdir == "")
                 top_srcdir = "..";
-            if (Posix.system("cp %s/data/com.canonical.unity-greeter.gschema.xml %s".printf(top_srcdir, schema_dir)) != 0)
+            if (Posix.system("cp %s/data/x.dm.slick-greeter.gschema.xml %s".printf(top_srcdir, schema_dir)) != 0)
                 error("Could not copy schema to %s", schema_dir);
 
             if (Posix.system("glib-compile-schemas %s".printf(schema_dir)) != 0)
@@ -779,8 +779,8 @@ public class Test
 
         setup_gsettings ();
 
-        UnityGreeter.singleton = new UnityGreeter();
-        UnityGreeter.singleton.test_mode = true;
+        SlickGreeter.singleton = new SlickGreeter();
+        SlickGreeter.singleton.test_mode = true;
 
         GLib.Test.add_func ("/Simple Navigation", simple_navigation);
         GLib.Test.add_func ("/Remote Login", remote_login);

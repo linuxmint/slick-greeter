@@ -1,5 +1,5 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Source: https://launchpad.net/unity-greeter
+Source: https://launchpad.net/slick-greeter
 
 Files: *
 Copyright: 2011-2013 Canonical Ltd

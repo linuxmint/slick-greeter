@@ -1,9 +1,9 @@
 # -*- Mode: Automake; indent-tabs-mode: t; tab-width: 4 -*-
 
-sbin_PROGRAMS = unity-greeter
+sbin_PROGRAMS = slick-greeter
 noinst_PROGRAMS = logo-generator
 
-unity_greeter_SOURCES = \
+slick_greeter_SOURCES = \
 	config.vapi \
 	fixes.vapi \
 	indicator.vapi \
@@ -33,14 +33,14 @@ unity_greeter_SOURCES = \
 	settings-daemon.vala \
 	shutdown-dialog.vala \
 	toggle-box.vala \
-	unity-greeter.vala \
+	slick-greeter.vala \
 	user-list.vala \
 	user-prompt-box.vala
 
 logo_generator_SOURCES = logo-generator.vala
 
-unity_greeter_CFLAGS = \
-	$(UNITY_GREETER_CFLAGS) \
+slick_greeter_CFLAGS = \
+	$(SLICK_GREETER_CFLAGS) \
 	-w \
 	-DGETTEXT_PACKAGE=\"$(GETTEXT_PACKAGE)\" \
 	-DLOCALEDIR=\""$(localedir)"\" \
@@ -48,9 +48,9 @@ unity_greeter_CFLAGS = \
 	-DPKGDATADIR=\""$(pkgdatadir)"\" \
 	-DINDICATORDIR=\""$(INDICATORDIR)"\"
 
-logo_generator_CFLAGS = $(unity_greeter_CFLAGS)
+logo_generator_CFLAGS = $(slick_greeter_CFLAGS)
 
-unity_greeter_VALAFLAGS = \
+slick_greeter_VALAFLAGS = \
 	--pkg posix \
 	--pkg gtk+-3.0 \
 	--pkg gdk-x11-3.0 \
@@ -62,15 +62,15 @@ unity_greeter_VALAFLAGS = \
 	--pkg pixman-1 \
 	--target-glib 2.32
 
-logo_generator_VALAFLAGS = $(unity_greeter_VALAFLAGS)
+logo_generator_VALAFLAGS = $(slick_greeter_VALAFLAGS)
 
-unity_greeter_LDADD = \
-	$(UNITY_GREETER_LIBS) \
+slick_greeter_LDADD = \
+	$(SLICK_GREETER_LIBS) \
 	-lm
 
-logo_generator_LDADD = $(unity_greeter_LDADD)
+logo_generator_LDADD = $(slick_greeter_LDADD)
 
-unity_greeter_vala.stamp: $(top_srcdir)/config.h
+slick_greeter_vala.stamp: $(top_srcdir)/config.h
 
 DISTCLEANFILES = \
 	Makefile.in
