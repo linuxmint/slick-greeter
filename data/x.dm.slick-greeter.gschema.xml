@@ -2,11 +2,11 @@
 <schemalist gettext-domain="slick-greeter">
   <schema id="x.dm.slick-greeter" path="/x/dm/slick-greeter/">
     <key name="background" type="s">
-      <default>'/usr/share/backgrounds/warty-final-ubuntu.png'</default>
+      <default>''</default>
       <summary>Background file to use, either an image path or a color (e.g. #772953)</summary>
     </key>
     <key name="background-color" type="s">
-      <default>'#2C001E'</default>
+      <default>'#000000'</default>
       <summary>Background color (e.g. #772953), set before wallpaper is seen</summary>
     </key>
     <key name="draw-user-backgrounds" type="b">
@@ -22,19 +22,19 @@
       <summary>Whether to show the hostname in the menubar</summary>
     </key>
     <key name="logo" type="s">
-      <default>'/usr/share/slick-greeter/logo.png'</default>
+      <default>''</default>
       <summary>Logo file to use</summary>
     </key>
     <key name="background-logo" type="s">
-      <default>'/usr/share/slick-greeter/cof.png'</default>
+      <default>''</default>
       <summary>Background logo file to use</summary>
     </key>
     <key name="theme-name" type="s">
-      <default>'Ambiance'</default>
+      <default>'Adwaita'</default>
       <summary>GTK+ theme to use</summary>
     </key>
     <key name="icon-theme-name" type="s">
-      <default>'ubuntu-mono-dark'</default>
+      <default>'gnome'</default>
       <summary>Icon theme to use</summary>
     </key>
     <key name="font-name" type="s">
@@ -82,9 +82,9 @@
       <default>false</default>
       <summary>Whether to enable the screen reader</summary>
     </key>
-    <key name="play-ready-sound" type="b">
-      <default>true</default>
-      <summary>Whether to play sound when greeter is ready</summary>
+    <key name="play-ready-sound" type="s">
+      <default>''</default>
+      <summary>A sound file to play when the greeter is ready</summary>
     </key>
     <key name="indicators" type="as">
       <default>['ug-accessibility', 'com.canonical.indicator.keyboard', 'com.canonical.indicator.session', 'com.canonical.indicator.datetime', 'com.canonical.indicator.power', 'com.canonical.indicator.sound', 'application']</default>

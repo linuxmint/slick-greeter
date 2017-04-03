@@ -1,4 +1,4 @@
-#!/usr/bin/make -f 
+#!/usr/bin/make -f
 
 LDFLAGS+=-Wl,--as-needed
 
@@ -7,16 +7,3 @@ LDFLAGS+=-Wl,--as-needed
 
 override_dh_autoreconf:
 	NOCONFIGURE=1 dh_autoreconf ./autogen.sh
-
-
-override_dh_auto_build:
-	dh_auto_build
-	./src/logo-generator --logo data/logo-bare.png --text '16.04 LTS' --output logo.png
-
-override_dh_auto_install:
-	dh_auto_install
-	cp logo.png debian/slick-greeter/usr/share/slick-greeter/logo.png
-
-override_dh_auto_clean:
-	dh_auto_clean
-	rm -f logo.png

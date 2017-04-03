@@ -8,7 +8,6 @@ dist_pkgdata_DATA = \
 	active.png \
 	arrow_left.png \
 	arrow_right.png \
-	cof.png \
 	dialog_close.png \
 	dialog_close_highlight.png \
 	dialog_close_press.png \
@@ -16,7 +15,6 @@ dist_pkgdata_DATA = \
 	hibernate_highlight.png \
 	hibernate.png \
 	kde_badge.png \
-	logo.png \
 	message.png \
 	recovery_console_badge.png \
 	remote_login_help.png \
