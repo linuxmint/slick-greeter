@@ -1,0 +1,407 @@
+Overview of changes in unity-greeter 16.04.2
+
+    - Limit prompt fields to 200 characters
+
+Overview of changes in unity-greeter 16.04.1
+
+    - Fix background after login being scaled incorrectly
+
+Overview of changes in unity-greeter 16.04.0
+
+    - Add an option to only show users in a list of specified groups
+    - Use non-deprecated Gdk.Cursor methods
+    - Remove obsolete CONFIG_FILE define
+
+Overview of changes in unity-greeter 15.10.1
+
+    - Use GNOME badge for gnome-wayland session
+
+Overview of changes in unity-greeter 15.10.0
+
+    - Make source package using xzip
+    - Don't distribute AUTHORS, INSTALL, README, ChangeLog
+
+Overview of changes in unity-greeter 15.04.4
+
+    - Update unity-greeter so it is possible to style buttons in greeter with
+      css.
+
+Overview of changes in unity-greeter 15.04.3
+
+    - Ensure non-selected prompt boxes don't overlap adjacent boxes. This fixes
+      a bug where you couldn't select username.
+    - Show KDE icon for Plasma 5 sessions.
+    - Set GSETTINGS_SCHEMA_DIR when running tests.
+    - Remove old code for drawing DashEntry that is no longer needed.
+
+Overview of changes in unity-greeter 15.04.2
+
+    - Launch user upstart session with 'upstart' instead of 'init' which doesn't
+      work with systemd
+
+Overview of changes in unity-greeter 15.04.1
+
+    - Fix session selector and other buttons not being clickable due to
+      regression introduced by deprecated API removal in 15.04.0
+
+Overview of changes in unity-greeter 15.04.0
+
+    - Update greeter logo for Vivid Vervet.
+    - Update GNOME flashback icon names
+    - Don't change shell background color in test mode
+    - Stop using deprecated API
+
+Overview of changes in unity-greeter 14.10.2
+
+    - Switch the screen reader keyboard shortcut to be the same as the default
+      shortcut used in the desktop session.
+
+Overview of changes in unity-greeter 14.10.1
+
+    - Bring unstable idle timer code from gnome-desktop into unity-greeter
+
+Overview of changes in unity-greeter 14.10.0
+
+    - Require user to acknowledge messages received after authentication is
+      complete, for example if their password is about to expire.
+
+Overview of changes in unity-greeter 14.04.9
+
+    - Correctly handle SIGTERM and quit cleanly. We were previously not stopping
+      the signal and so not cleaning up on exit. This left an upstart process
+      for each greeter remaining.      
+    - If a user has an invalid session, then use the system default session
+    - Correctly handle sessions not starting
+
+Overview of changes in unity-greeter 14.04.8
+
+    - Allow unity-settings-daemon to blank the screen by implementing the
+      gnome-screensaver and gnome-session d-bus interfaces.
+  
+Overview of changes in unity-greeter 14.04.7
+
+    - Own the com.canonical.UnityGreeter D-Bus name
+
+Overview of changes in unity-greeter 14.04.6
+
+    - Add option to hide certain users until alt+ctrl+shift is pressed.
+    - Show a warning when shutting down and users are logged in.
+    - Drop some fixes that are in Vala 0.22 now.
+
+Overview of changes in unity-greeter 14.04.5
+
+    - Don't focus windows that set override-redirect. This was causing a
+      gnome-screensaver window to get focus when it shouldn't.
+
+Overview of changes in unity-greeter 14.04.4
+
+    - Add primary monitor support
+    - Fix the greeter authenticating twice when it starts
+
+Overview of changes in unity-greeter 14.04.3
+
+    - Generate version stamp on background
+    - Add option to disable hostname in login screen
+    - Use unity-settings-daemon instead of gnome-settings-daemon
+    - Fix accessible name in shutdown dialog
+
+Overview of changes in unity-greeter 14.04.2
+
+    - Handle a window being destroyed after we get the map event and try and
+      focus it
+    - Add accessible description to back button
+    - Fix attempted removal of dead source
+    - Apply the same unity color corrections to the average color in shutdown
+      dialog
+
+Overview of changes in unity-greeter 14.04.1
+
+    - Complete unity style shutdown dialogs (chameleon colours, spacing,
+      blurring, click outside to close, fading, assets, keyboard focus)
+
+Overview of changes in unity-greeter 14.04.0
+
+    - Use Unity style shutdown dialogs
+    - Handle hardware power button in greeter
+    - Use an Upstart process to start indicator services
+    - Fix build with Vala 0.22
+    - Clean up compile warnings
+
+Overview of changes in unity-greeter 13.10.3
+
+    - Have sound indicator appear again, after the indicator file changed names
+    - Replace old hardcoded keyboard indicator with indicator-keyboard
+    - Remember last logged in user for each seat
+    - Show gnome badge for all gnome fallback/flashback sessions
+
+Overview of changes in unity-greeter 13.10.2
+
+    - Support new indicator services from /usr/share/unity/indicators
+    - Use the utf chars for ellipses
+    - Allow displaying only the remote login entry, without adding a fallback
+      manual login option, if the config files requests it
+    - Update code to work with valac 0.20
+
+Overview of changes in unity-greeter 13.10.1
+
+    - Fix test failure due to warnings from libraries
+
+Overview of changes in unity-greeter 13.10.0
+
+    - Update logo for 13.10
+
+Overview of changes in unity-greeter 13.04.2
+
+    - Spawn gnome-settings-daemon directly, not via DBus, as newer versions
+      dropped the DBus interface.
+    - Fix duplicate entries showing for multiple users on the same remote login
+      service.
+    - Allow administrators to specify which indicators to load via gsettings.
+    - Allow custom indicators to switch which user is selected via a session
+      DBus interface.
+
+Overview of changes in unity-greeter 13.04.1
+
+    - Update logo for 13.04
+
+Overview of changes in unity-greeter 13.04.0
+
+    - Support timed login
+    - Drop OK button in session chooser
+    - Various small layout changes
+    - Fix orca not closing when disabled
+    - Fix display corruption when logging in
+
+Overview of changes in unity-greeter 12.10.4
+
+    - Fix rendering of password entry's spinner
+    - Fix rendering of password entry's cursor after closing a dialog
+    - Fix slight pixel jump in names as they finish scrolling
+    - Fix not being able to click on first few sessions in session chooser
+    - Cleanly close onboard keyboard to prevent it crashing on login
+    - Use a lightdm hint for controlling whether remote login is enabled
+
+Overview of changes in unity-greeter 12.10.3
+
+    - Rearrange some UI bits
+    - After a remote login error, do not use cache when trying same user again
+    - When no users and no manual entry, force manual entry to appear
+    - When switching between monitors, re-adjust user names
+    - Center remote login help dialog
+    - Use the xsettings plugin to apply icons-in-menus gsetting
+
+Overview of changes in unity-greeter 12.10.2
+
+    * Require lightdm 1.3.3
+    * Disable prompts for remote servers we don't locally support
+    * Tell the network indicator to hide some unused UI
+
+Overview of changes in unity-greeter 12.10.1
+
+    * Show network indicator
+    * Add support for remote logins
+    * Show onboard keyboard on startup if enabled already
+    * Support multiple simultaneous prompts from PAM
+    * Fix tabbing through widgets sometimes taking too many tabs
+    * Set average background colour atom based on background
+    * Add a man page
+
+Overview of changes in unity-greeter 12.10.0
+
+    * Update version logo
+    * Don't write garbage data to state cache file
+    * Remove workaround for gnome session being Unity
+    * Make sure background alpha is never stuck at non-1.0 value, blocking login
+    * Update badge when default_session changes, just like we do when the
+      session changes
+
+Overview of changes in unity-greeter 0.2.8
+
+    * Add play-ready-sound option to control making a sound when the greeter
+      loads
+    * Add background-color option to set the background color before the
+      background is rendered
+    * some minor design fixups
+
+Overview of changes in unity-greeter 0.2.7
+
+    * Fix onscreen keyboard not working
+    * Fix crashes when manual login is enabled
+    * Show manual login when guest is only other user
+
+Overview of changes in unity-greeter 0.2.6
+
+    * Fix the corruption between unity-greeter and Unity loading
+    * Fix crash when reloading background images
+    * Fix displayed name of keyboard layout with some variants
+
+Overview of changes in unity-greeter 0.2.5
+
+    * Don't allow dragging the window by the top bar
+    * Fix keyboard navigation
+    * Fix prompt entry text not showing in some themes
+    * Fix Orca command line so it works with version 3.3.90+
+    * Show "Retry" instead of "Login" if a no-prompt login fails
+    * Show manual login option when no users available
+    * Show manual login option if hint is present
+    * Show PAM prompts, albeit not in a pretty fashion
+    * Allow pressing Escape to cancel a misbehaving login
+    * Tweaked animations
+    * Update logo to add "LTS"
+
+Overview of changes in unity-greeter 0.2.4
+
+    * Don't crash when all monitors are the same size
+    * Use OS icon instead of cog for session selector
+    * Show arrow on password entry to indicate will login
+    * Show session chooser dialog instead of a menu
+
+Overview of changes in unity-greeter 0.2.3
+
+    * Play system-ready sound on startup
+    * Fix placement of user-is-logged-in arrow
+
+Overview of changes in unity-greeter 0.2.2
+
+    * Support multi-monitor
+    * Add messaging indicator
+    * Add a11y shortcuts
+    * Remember a11y settings
+    * Launch at-spi so Orca works
+
+Overview of changes in unity-greeter 0.2.1
+
+    * Fix session menu button not showing for first user
+    * Skip indicators that fail to load
+    * Distribute translations correctly
+    * Load indicators from location specified in pkg-config
+    * Use gsettings instead of /etc/lightdm/unity-greeter.conf
+    * Accept numpad arrow key presses
+    * Instead of showing all layouts in the system in the keyboard indicator,
+      only show the layouts a user has configured
+    * Don't crash if gnome-settings-daemon's gsettings schema isn't as expected
+    * Disable gnome-settings-daemon's new gsdwacom plugin as well as its older
+      wacom plugin
+    * Use vala-0.16 instead of valac-0.14
+
+Overview of changes in unity-greeter 0.2.0
+
+    * Improve scrolling animation
+    * Select menubar when F10 is pressed
+    * Fix Orca not starting when enabling screen reader
+    * Add a keyboard indicator
+    * Always focus new windows
+    * Check version of Vala when compiling
+    * Update logo for 12.04
+    * Use default invisible character in password dialog
+    * Darken indicator bar
+    * User smaller grid size
+    * Put end-stops on user list scrolling
+    * Only fade out user labels that can't fit in completely
+    * Center dots
+    * Add translator comments
+    * Add option to disable dots
+    * Only redraw parts of the screen that have changed
+    * Don't run the greeter if can't connect to daemon and not in test mode
+
+Overview of changes in unity-greeter 0.1.1
+
+    * Stop loading indicators in a thread - they don't seem thread safe
+    * Fade usernames so it looks more like a carousel
+    * Darken indicator background so they are easier to read
+    * Fade out long messages
+    * Remove "Other" entry when using user list
+    * Don't run the greeter if can't connect to daemon and not in test mode
+
+Overview of changes in unity-greeter 0.1.0
+
+    * Fix greeter running in loop when greeter-hide-users=true
+    * Remember the last selected user between logins
+    * Select correct session when logging in manually
+    * Fix non-translation of password prompt
+    * Resize background when resizing window
+    * Move/resize window when monitors changed
+    * Disable xrandr gnome-settings-daemon plugin - always mirror the displays
+
+Overview of changes in unity-greeter 0.0.9
+
+    * Set background color of window to "dark aubergine" so boot delays
+      don't cause a white flash
+    * Kill onboard on exit to stop window showing up
+    * Don't give the onscreen keyboard focus, this makes it work
+    * Load indicators sequentially, they seem to crash loading in parallel
+    * Fix translations not being used
+    * Show authentication messages as well as prompts
+    * Disable the text entry after text has been entered
+    * Don't start authentication as each user is added to the user list
+
+Overview of changes in unity-greeter 0.0.8
+
+    * Fix grid offset
+    * Fix non-latin names being displayed incorrectly
+    * Change asynchronous indicator loader code, suspect it is causing a race
+      condition?
+
+Overview of changes in unity-greeter 0.0.7
+
+    * Show caps-lock warning in password field
+    * Use constant time animation
+    * Render background images in a background thread
+    * Load indicators in a thread
+    * Add timing to logs
+    * Add more logging messages
+    * Fade out long names
+    * Wait until background is loaded before showing the main window - stops
+      a white flash being seen on startup.
+
+Overview of changes in unity-greeter 0.0.6
+
+    * Fix password cursors not getting focus
+    * Make logo configurable again
+    * Disable FUSE
+    * Show if users are currently logged in
+    * Update user list when users are added/removed/modified
+    * Use select user hint to select the correct user
+    * Fix vertical grid alignment of user list
+    * Add accessibility menu with high contrast, screen reader and onscreen
+      keyboard
+    * Make use of hide users hint
+    * Change "Other..." entry to match username being entered
+    * Rename "Guest Account" to "Guest Session" to match desktop
+    * Don't give keyboard focus to session selector when clicking on it
+    * Stop hostname being selectable
+    * Hide the "Other..." entry when user list showing
+
+Overview of changes in unity-greeter 0.0.5
+
+    * Use Ubuntu regular font
+    * Increase grid size to match design
+    * Reduce width of login box
+    * Use correct Ubuntu logo
+
+Overview of changes in unity-greeter 0.0.4
+
+    * (Not released due to broken bzr tag)
+
+Overview of changes in unity-greeter 0.0.3
+
+    * Set icon theme
+    * Use power indicator
+    * Setup indicators to run in greeter mode
+    * Allow OS name and version to be configurable
+    * Run gnome-settings-daemon to get power management, a11y, xrandr etc
+    * Fix translations
+    * Get menubar with transparent background (finally)
+    * Update to latest design
+
+Overview of changes in unity-greeter 0.0.2
+
+    * Add copyright headers to .vala files
+    * Update to work with lightdm 0.9
+    * Add a config file and load Ambiance theme
+    * Fit to primary monitor
+    * Set root background
+
+Overview of changes in unity-greeter 0.0.1
+
+    * Initial release

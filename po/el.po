@@ -1,0 +1,241 @@
+# Greek translation for unity-greeter
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the unity-greeter package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: unity-greeter\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-03-22 05:42+0000\n"
+"PO-Revision-Date: 2013-10-09 16:12+0000\n"
+"Last-Translator: Michael Kotsarinis <mk73628@gmail.com>\n"
+"Language-Team: Greek <el@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2016-03-23 05:32+0000\n"
+"X-Generator: Launchpad (build 17958)\n"
+
+#: ../src/greeter-list.vala:300
+#, c-format
+msgid "Enter password for %s"
+msgstr "Πληκτρολογήστε κωδικό πρόσβασης για %s"
+
+#: ../src/greeter-list.vala:805 ../src/user-list.vala:701
+msgid "Password:"
+msgstr "Κωδικός:"
+
+#: ../src/greeter-list.vala:807 ../src/user-list.vala:695
+msgid "Username:"
+msgstr "Όνομα χρήστη:"
+
+#: ../src/greeter-list.vala:859
+msgid "Invalid password, please try again"
+msgstr "Λανθασμένος κωδικός, παρακαλώ δοκιμάστε ξανά"
+
+#: ../src/greeter-list.vala:870
+msgid "Failed to authenticate"
+msgstr "Αποτυχία ταυτοποίησης"
+
+#: ../src/greeter-list.vala:916
+msgid "Failed to start session"
+msgstr "Αποτυχία εκκίνησης της συνεδρίας"
+
+#: ../src/greeter-list.vala:931
+msgid "Logging in…"
+msgstr "Γίνεται σύνδεση..."
+
+#: ../src/main-window.vala:49
+msgid "Login Screen"
+msgstr "Οθόνη εισόδου"
+
+#: ../src/main-window.vala:116
+msgid "Back"
+msgstr "Πίσω"
+
+#: ../src/menubar.vala:220
+msgid "Onscreen keyboard"
+msgstr "Πληκτρολόγιο οθόνης"
+
+#: ../src/menubar.vala:225
+msgid "High Contrast"
+msgstr "Υψηλή αντίθεση"
+
+#: ../src/menubar.vala:231
+msgid "Screen Reader"
+msgstr "Εφαρμογή ανάγνωσης οθόνης"
+
+#: ../src/prompt-box.vala:212
+msgid "Session Options"
+msgstr "Επιλογές Συνεδρίας"
+
+#: ../src/session-list.vala:34
+msgid "Select desktop environment"
+msgstr "Επιλέξτε περιβάλλον εργασίας"
+
+#: ../src/shutdown-dialog.vala:101
+msgid "Goodbye. Would you like to…"
+msgstr "Αντίο. Θα θέλατε να..."
+
+#: ../src/shutdown-dialog.vala:105 ../src/shutdown-dialog.vala:207
+msgid "Shut Down"
+msgstr "Τερματισμός"
+
+#: ../src/shutdown-dialog.vala:112
+msgid "Are you sure you want to shut down the computer?"
+msgstr "Θέλετε σίγουρα να τερματίσετε τη λειτουργία του υπολογιστή;"
+
+#: ../src/shutdown-dialog.vala:137
+msgid ""
+"Other users are currently logged in to this computer, shutting down now will "
+"also close these other sessions."
+msgstr ""
+"Αυτή τη στιγμή είναι άλλοι χρήστες συνδεδεμένοι σε αυτόν τον υπολογιστή, αν "
+"τερματίσετε τώρα αυτό θα προκαλέσει επίσης κλείσιμο και αυτών των συνεδριών."
+
+#: ../src/shutdown-dialog.vala:155
+msgid "Suspend"
+msgstr "Αναστολή λειτουργίας"
+
+#: ../src/shutdown-dialog.vala:172
+msgid "Hibernate"
+msgstr "Αδρανοποίηση"
+
+#: ../src/shutdown-dialog.vala:190
+msgid "Restart"
+msgstr "Επανεκκίνηση"
+
+#. Translators: %s is a session name like KDE or Ubuntu
+#: ../src/toggle-box.vala:98
+#, c-format
+msgid "%s (Default)"
+msgstr "%s (Προεπιλογή)"
+
+#. Help string for command line --version flag
+#: ../src/unity-greeter.vala:512
+msgid "Show release version"
+msgstr "Εμφάνιση έκδοσης κυκλοφορίας"
+
+#. Help string for command line --test-mode flag
+#: ../src/unity-greeter.vala:515
+msgid "Run in test mode"
+msgstr "Εκτέλεση σε λειτουργία δοκιμής"
+
+#. Arguments and description for --help text
+#: ../src/unity-greeter.vala:521
+msgid "- Unity Greeter"
+msgstr "- Unity Greeter"
+
+#. Text printed out when an unknown command-line argument provided
+#: ../src/unity-greeter.vala:532
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr ""
+"Εκτελέστε «%s --help» για να δείτε μια πλήρη λίστα των διαθέσιμων επιλογών "
+"της γραμμής εντολών."
+
+#: ../src/user-list.vala:45
+msgid "Guest Session"
+msgstr "Συνεδρία επισκέπτη"
+
+#: ../src/user-list.vala:438
+msgid "Please enter a complete e-mail address"
+msgstr "Παρακαλώ εισάγετε μια πλήρη διεύθυνση e-mail"
+
+#: ../src/user-list.vala:518
+msgid "Incorrect e-mail address or password"
+msgstr "Λανθασμένo e-mail ή κωδικός πρόσβασης"
+
+#: ../src/user-list.vala:549
+msgid ""
+"If you have an account on an RDP or Citrix server, Remote Login lets you run "
+"applications from that server."
+msgstr ""
+"Αν διαθέτετε λογαριασμό σε RDP ή Citrix  διακομιστή, με την Απομακρυσμένη "
+"σύνδεση μπορείτε να εκτελείτε εφαρμογές από αυτόν τον εξυπηρετητή."
+
+#. For 12.10 we still don't support Citrix
+#: ../src/user-list.vala:551
+msgid ""
+"If you have an account on an RDP server, Remote Login lets you run "
+"applications from that server."
+msgstr ""
+"Αν έχετε λογαριασμό σε έναν εξυπηρετητή RDP, τότε η Απομακρυσμένη σύνδεση "
+"επιτρέπει να εκτελέσετε εφαρμογές από αυτόν τον εξυπηρετητή."
+
+#: ../src/user-list.vala:554
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: ../src/user-list.vala:555
+msgid "Set Up…"
+msgstr "Ρύθμιση..."
+
+#: ../src/user-list.vala:557
+msgid ""
+"You need an Ubuntu Remote Login account to use this service. Would you like "
+"to set up an account now?"
+msgstr ""
+"Χρειάζεστε ένα λογαριασμό Απομακρυσμένης σύνδεσης στο Ubuntu για να "
+"χρησιμοποιήσετε αυτή την υπηρεσία. Θέλετε να δημιουργήσετε λογαριασμό τώρα;"
+
+#: ../src/user-list.vala:561
+msgid "OK"
+msgstr "OK"
+
+#: ../src/user-list.vala:562
+msgid ""
+"You need an Ubuntu Remote Login account to use this service. Visit "
+"uccs.canonical.com to set up an account."
+msgstr ""
+"Χρειάζεστε ένα λογαριασμό Απομακρυσμένης σύνδεσης στο Ubuntu για να "
+"χρησιμοποιήσετε αυτή την υπηρεσία. Επισκεφτείτε τον ιστότοπο "
+"uccs.canonical.com για να δημιουργήσετε λογαριασμό."
+
+#: ../src/user-list.vala:679
+msgid "Server type not supported."
+msgstr "Αυτός ο τύπος διακομιστή δεν υποστηρίζεται."
+
+#: ../src/user-list.vala:720
+msgid "Domain:"
+msgstr "Τομέας:"
+
+#: ../src/user-list.vala:781
+msgid "Email address:"
+msgstr "Διεύθυνση ηλεκτρονικού ταχυδρομείου:"
+
+#. 'Log In' here is the button for logging in.
+#: ../src/user-list.vala:825
+msgid "Log In"
+msgstr "Σύνδεση"
+
+#: ../src/user-list.vala:826
+#, c-format
+msgid "Login as %s"
+msgstr "Σύνδεση ως %s"
+
+#: ../src/user-list.vala:830
+msgid "Retry"
+msgstr "Επανάληψη"
+
+#: ../src/user-list.vala:831
+#, c-format
+msgid "Retry as %s"
+msgstr "Επανάληψη ως %s."
+
+#: ../src/user-list.vala:869
+msgid "Login"
+msgstr "Σύνδεση"
+
+#~ msgid "_Back"
+#~ msgstr "_Πίσω"
+
+#~ msgid "Favorite Color (blue):"
+#~ msgstr "Αγαπημένο χρώμα (μπλε):"
+
+#~ msgid "Enter password"
+#~ msgstr "Πληκτρολογήστε κωδικό πρόσβασης"
+
+#~ msgid "Enter username"
+#~ msgstr "Πληκτρολογήστε όνομα χρήστη"

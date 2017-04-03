@@ -1,0 +1,236 @@
+# Bulgarian translation for unity-greeter
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the unity-greeter package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: unity-greeter\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-03-22 05:42+0000\n"
+"PO-Revision-Date: 2014-01-10 10:37+0000\n"
+"Last-Translator: Atanas Kovachki <Unknown>\n"
+"Language-Team: Bulgarian <bg@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2016-03-23 05:32+0000\n"
+"X-Generator: Launchpad (build 17958)\n"
+
+#: ../src/greeter-list.vala:300
+#, c-format
+msgid "Enter password for %s"
+msgstr "Въведете парола за %s"
+
+#: ../src/greeter-list.vala:805 ../src/user-list.vala:701
+msgid "Password:"
+msgstr "Парола:"
+
+#: ../src/greeter-list.vala:807 ../src/user-list.vala:695
+msgid "Username:"
+msgstr "Потребител:"
+
+#: ../src/greeter-list.vala:859
+msgid "Invalid password, please try again"
+msgstr "Грешна парола, моля опитайте отново"
+
+#: ../src/greeter-list.vala:870
+msgid "Failed to authenticate"
+msgstr "Неуспешно идентифициране"
+
+#: ../src/greeter-list.vala:916
+msgid "Failed to start session"
+msgstr "Неуспешно стартиране на сесията"
+
+#: ../src/greeter-list.vala:931
+msgid "Logging in…"
+msgstr "Влизане..."
+
+#: ../src/main-window.vala:49
+msgid "Login Screen"
+msgstr "Екран за вход"
+
+#: ../src/main-window.vala:116
+msgid "Back"
+msgstr "Назад"
+
+#: ../src/menubar.vala:220
+msgid "Onscreen keyboard"
+msgstr "Екранна клавиатура"
+
+#: ../src/menubar.vala:225
+msgid "High Contrast"
+msgstr "Висок контраст"
+
+#: ../src/menubar.vala:231
+msgid "Screen Reader"
+msgstr "Екранен четец"
+
+#: ../src/prompt-box.vala:212
+msgid "Session Options"
+msgstr "Параметри на сесията"
+
+#: ../src/session-list.vala:34
+msgid "Select desktop environment"
+msgstr "Изберете десктоп среда"
+
+#: ../src/shutdown-dialog.vala:101
+msgid "Goodbye. Would you like to…"
+msgstr "Довиждане. Бихте ли искали да.."
+
+#: ../src/shutdown-dialog.vala:105 ../src/shutdown-dialog.vala:207
+msgid "Shut Down"
+msgstr "Изключи"
+
+#: ../src/shutdown-dialog.vala:112
+msgid "Are you sure you want to shut down the computer?"
+msgstr "Действително ли искате да изключите компютъра?"
+
+#: ../src/shutdown-dialog.vala:137
+msgid ""
+"Other users are currently logged in to this computer, shutting down now will "
+"also close these other sessions."
+msgstr ""
+"В момента на този компютър са стартирани сесии и на други потребители, "
+"изключването ще доведе до завършването на всички сесии."
+
+#: ../src/shutdown-dialog.vala:155
+msgid "Suspend"
+msgstr "Суспендинирай"
+
+#: ../src/shutdown-dialog.vala:172
+msgid "Hibernate"
+msgstr "Хибернирай"
+
+#: ../src/shutdown-dialog.vala:190
+msgid "Restart"
+msgstr "Рестартирай"
+
+#. Translators: %s is a session name like KDE or Ubuntu
+#: ../src/toggle-box.vala:98
+#, c-format
+msgid "%s (Default)"
+msgstr "%s (стандартно)"
+
+#. Help string for command line --version flag
+#: ../src/unity-greeter.vala:512
+msgid "Show release version"
+msgstr "Покажи версията на изданието"
+
+#. Help string for command line --test-mode flag
+#: ../src/unity-greeter.vala:515
+msgid "Run in test mode"
+msgstr "Стартирай в тестов режим"
+
+#. Arguments and description for --help text
+#: ../src/unity-greeter.vala:521
+msgid "- Unity Greeter"
+msgstr "- Екран за поздрав на Юнити"
+
+#. Text printed out when an unknown command-line argument provided
+#: ../src/unity-greeter.vala:532
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr ""
+"Изпълнете «%s --help», за да видите списъка с всички опции на командния ред."
+
+#: ../src/user-list.vala:45
+msgid "Guest Session"
+msgstr "Сесия за гости"
+
+#: ../src/user-list.vala:438
+msgid "Please enter a complete e-mail address"
+msgstr "Моля, напишете пълен имейл адрес"
+
+#: ../src/user-list.vala:518
+msgid "Incorrect e-mail address or password"
+msgstr "Невалиден имейл адрес или парола"
+
+#: ../src/user-list.vala:549
+msgid ""
+"If you have an account on an RDP or Citrix server, Remote Login lets you run "
+"applications from that server."
+msgstr ""
+"Ако имате профил на RDP или Citrix сървър, отдалеченият достъп ще ви позволи "
+"да стартирате приложения от този сървър."
+
+#. For 12.10 we still don't support Citrix
+#: ../src/user-list.vala:551
+msgid ""
+"If you have an account on an RDP server, Remote Login lets you run "
+"applications from that server."
+msgstr ""
+"Ако имате профил на RDP сървър, отдалеченият достъп ще ви позволи да "
+"стартирате приложения от този сървър."
+
+#: ../src/user-list.vala:554
+msgid "Cancel"
+msgstr "Отмени"
+
+#: ../src/user-list.vala:555
+msgid "Set Up…"
+msgstr "Настройка..."
+
+#: ../src/user-list.vala:557
+msgid ""
+"You need an Ubuntu Remote Login account to use this service. Would you like "
+"to set up an account now?"
+msgstr ""
+"За да ползвате тази услуга, трябва да имате Убунту профил за отдалечен "
+"достъп. Искате ли сега да създаде профила?"
+
+#: ../src/user-list.vala:561
+msgid "OK"
+msgstr "Да"
+
+#: ../src/user-list.vala:562
+msgid ""
+"You need an Ubuntu Remote Login account to use this service. Visit "
+"uccs.canonical.com to set up an account."
+msgstr ""
+"За да ползвате тази услуга, трябва да имате Убунту профил за отдалечен "
+"достъп. За да настройте профила си, посетите сайта uccs.canonical.com"
+
+#: ../src/user-list.vala:679
+msgid "Server type not supported."
+msgstr "Този вид сървър не се поддържа."
+
+#: ../src/user-list.vala:720
+msgid "Domain:"
+msgstr "Домейн:"
+
+#: ../src/user-list.vala:781
+msgid "Email address:"
+msgstr "Имейл адрес:"
+
+#. 'Log In' here is the button for logging in.
+#: ../src/user-list.vala:825
+msgid "Log In"
+msgstr "Вход"
+
+#: ../src/user-list.vala:826
+#, c-format
+msgid "Login as %s"
+msgstr "Влез от името на %s"
+
+#: ../src/user-list.vala:830
+msgid "Retry"
+msgstr "Повторен опит"
+
+#: ../src/user-list.vala:831
+#, c-format
+msgid "Retry as %s"
+msgstr "Повторен опит като %s"
+
+#: ../src/user-list.vala:869
+msgid "Login"
+msgstr "Влез"
+
+#~ msgid "Logging in..."
+#~ msgstr "Влизане..."
+
+#~ msgid "_Back"
+#~ msgstr "_Назад"
+
+#~ msgid "Favorite Color (blue):"
+#~ msgstr "Любим цвят (син):"

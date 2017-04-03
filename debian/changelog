@@ -1,0 +1,933 @@
+unity-greeter (16.04.2-0ubuntu1) xenial; urgency=medium
+
+  * New upstream release:
+    - Limit prompt fields to 200 characters (LP: #1538615)
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 24 Mar 2016 14:03:38 +1300
+
+unity-greeter (16.04.1-0ubuntu1) xenial; urgency=medium
+
+  * New upstream release:
+    - Fix background after login being scaled incorrectly (LP: #1557893)
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Fri, 18 Mar 2016 09:46:32 +1300
+
+unity-greeter (16.04.0-0ubuntu1) xenial; urgency=medium
+
+  * New upstream release:
+    - Add an option to only show users in a list of specified groups
+      (LP: #1493335)
+    - Use non-deprecated Gdk.Cursor methods
+    - Remove obsolete CONFIG_FILE define 
+  * debian/rules:
+    - Update greeter logo for Xenial Xerus.
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Tue, 27 Oct 2015 11:48:39 +1300
+
+unity-greeter (15.10.1-0ubuntu1) wily; urgency=medium
+
+  * New upstream release:
+    - Use GNOME badge for gnome-wayland session
+  * debian/control:
+    - Depend on upstart instead of dummy package upstart-bin
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 06 Aug 2015 12:15:40 +1200
+
+unity-greeter (15.10.0-0ubuntu1) wily; urgency=medium
+
+  * New upstream release:
+    - Make source package using xzip
+    - Don't distribute AUTHORS, INSTALL, README, ChangeLog  
+  * debian/rules:
+    - Update greeter logo for Wily Werewolf.
+  * debian/50-unity-greeter.conf:
+    - Use new [Seat:*] section instead of deprecated [SeatDefaults]
+      (LP: #1456449)
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Wed, 20 May 2015 11:39:37 +1200
+
+unity-greeter (15.04.4-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release:
+    - Update unity-greeter so it is possible to style buttons in greeter with
+      css (LP: #1423542)
+  * debian/control:
+    - Use standards version 3.9.6
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Tue, 14 Apr 2015 13:06:52 +1200
+
+unity-greeter (15.04.3-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release:
+    - Ensure non-selected prompt boxes don't overlap adjacent boxes. This fixes
+      a bug where you couldn't select username. (LP: #1374778)
+    - Show KDE icon for Plasma 5 sessions.
+    - Set GSETTINGS_SCHEMA_DIR when running tests.
+    - Remove old code for drawing DashEntry that is no longer needed.
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 29 Jan 2015 09:09:31 +1300
+
+unity-greeter (15.04.2-0ubuntu2) vivid; urgency=medium
+
+  [ Iain Lane ]
+  * Set GSETTINGS_SCHEMA_DIR and install an icon theme.
+
+  [ Lars Uebernickel ]
+  * Remove old code for drawing DashEntry that is no longer needed.
+
+ -- Dmitry Shachnev <mitya57@ubuntu.com>  Wed, 28 Jan 2015 13:48:58 +0300
+
+unity-greeter (15.04.2-0ubuntu1) vivid; urgency=medium
+
+  * Launch user upstart session with 'upstart' instead of 'init' which doesn't
+    work with systemd (LP: #1398619)
+  * debian/control:
+    - Depend on upstart-bin
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Mon, 08 Dec 2014 09:08:03 +1300
+
+unity-greeter (15.04.1-0ubuntu1) vivid; urgency=medium
+
+  * Fix session selector and other buttons not being clickable due to regression
+    introduced in revision 1421.
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Tue, 02 Dec 2014 15:09:15 +1300
+
+unity-greeter (15.04.0-0ubuntu1) vivid; urgency=medium
+
+  * Update greeter logo for Vivid Vervet.
+  * Update GNOME flashback icon names
+  * Don't change shell background color in test mode
+  * Stop using deprecated API
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Fri, 28 Nov 2014 08:43:03 +1300
+
+unity-greeter (14.10.2-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release:
+    - Switch the screen reader keyboard shortcut to be the same as the default
+      shortcut used in the desktop session.
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Fri, 22 Aug 2014 09:43:44 +1200
+
+unity-greeter (14.10.1-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release:
+    - Bring unstable idle timer code from gnome-desktop into unity-greeter
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 31 Jul 2014 10:56:12 +1200
+
+unity-greeter (14.10.0-0ubuntu2) utopic; urgency=medium
+
+  * New upstream release:
+    - Require user to acknowledge messages received after authentication is
+      complete, for example if their password is about to expire. (LP: #1304866)
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Wed, 30 Apr 2014 15:38:02 +1200
+
+unity-greeter (14.10.0-0ubuntu1) utopic; urgency=medium
+
+  * Update greeter logo for Utopic Unicorn.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Thu, 24 Apr 2014 00:23:42 +0100
+
+unity-greeter (14.04.9-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release:
+    - Correctly handle SIGTERM and quit cleanly. We were previously not stopping
+      the signal and so not cleaning up on exit. This left an upstart process
+      for each greeter remaining.
+    - If a user has an invalid session, then use the system default session
+      (LP: #1303725)
+    - Correctly handle sessions not starting
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Tue, 08 Apr 2014 15:57:59 +1200
+
+unity-greeter (14.04.8-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release:
+    - Allow unity-settings-daemon to blank the screen by implementing the
+      gnome-screensaver and gnome-session d-bus interfaces. (LP: #1245474)
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Tue, 08 Apr 2014 07:57:42 +1200
+
+unity-greeter (14.04.7-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release:
+    - Own the com.canonical.UnityGreeter D-Bus name
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Wed, 02 Apr 2014 10:13:46 +1300
+
+unity-greeter (14.04.6-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release:
+    - Add option to hide certain users until alt+ctrl+shift is pressed.
+    - Show a warning when shutting down and users are logged in. (LP: #1281058)
+    - Drop some fixes that are in Vala 0.22 now.
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 27 Mar 2014 10:51:42 +1300
+
+unity-greeter (14.04.5-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release:
+    - Don't focus windows that set override-redirect. This was causing a
+      gnome-screensaver window to get focus when it shouldn't. (LP: #1255558) 
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Fri, 21 Mar 2014 14:52:22 +1300
+
+unity-greeter (14.04.4-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release:
+    - Add primary monitor support
+    - Fix the greeter authenticating twice when it starts
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 13 Mar 2014 14:23:11 +1300
+
+unity-greeter (14.04.3-0ubuntu2) trusty; urgency=medium
+
+  * Add build-dependency on ttf-ubuntu-font-family for correct logo
+    rendering.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Thu, 20 Feb 2014 10:32:48 +0000
+
+unity-greeter (14.04.3-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release:
+    - Generate version stamp on background (LP: #1269901)
+    - Add option to disable hostname in login screen (LP: #1208469)
+    - Use unity-settings-daemon instead of gnome-settings-daemon (LP: #1277487)
+    - Fix accessible name in shutdown dialog
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 20 Feb 2014 17:17:59 +1300
+
+unity-greeter (14.04.2-0ubuntu2) trusty; urgency=medium
+
+  * debian/control:
+    - Move remote login packages from recommends to suggests
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Wed, 05 Feb 2014 12:34:10 +0000
+
+unity-greeter (14.04.2-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release:
+    - Handle a window being destroyed after we get the map event and try and
+      focus it (LP: #1048131)
+    - Add accessible description to back button (LP: #1266366)
+    - Fix attempted removal of dead source
+    - Apply the same unity color corrections to the average color in shutdown
+      dialog
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Wed, 05 Feb 2014 10:01:12 +0000
+
+unity-greeter (14.04.1-0ubuntu2) trusty; urgency=low
+
+  * debian/install:
+  * debian/maintscript:
+    - Remove the lightdm configuration from /etc/ and use /usr/share instead
+      so dpkg doesn't leave it there on uninstall
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 05 Dec 2013 09:39:49 +1300
+
+unity-greeter (14.04.1-0ubuntu1) trusty; urgency=low
+
+  [ Robert Ancell ]
+  * New upstream release:
+    - Complete unity style shutdown dialogs (chameleon colours, spacing,
+      blurring, click outside to close, fading, assets, keyboard focus)
+
+  [ Marco Trevisan ]
+  * debian/control:
+    - build-depends on libpixman-1-dev
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 14 Nov 2013 09:08:04 +1300
+
+unity-greeter (14.04.0-0ubuntu1) trusty; urgency=low
+
+  * New upstream release:
+    - Use Unity style shutdown dialogs (LP: #857577)
+    - Handle hardware power button in greeter (LP: #903306)
+    - Use an Upstart process to start indicator services (LP: #1185565)
+    - Fix build with Vala 0.22
+    - Clean up compile warnings
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Mon, 11 Nov 2013 17:16:17 +1300
+
+unity-greeter (13.10.3-0ubuntu1) saucy; urgency=low
+
+  [ William Hua ]
+  * Replace old ug-keyboard indicator with indicator-keyboard (LP: #1226760,
+    LP #1233945).  FFe bug LP: #1228207
+
+  [ Alberts Muktupāvels ]
+  * Remember last logged in user for each seat (LP: #1201122)
+  * Show gnome badge for all gnome fallback/flashback sessions (LP: #1201122)
+
+  [ Michael Terry ]
+  * Have sound indicator appear again, after the indicator file changed names
+
+ -- Michael Terry <mterry@ubuntu.com>  Wed, 02 Oct 2013 15:55:02 -0400
+
+unity-greeter (13.10.2-0ubuntu1) saucy; urgency=low
+
+  [ Didier Roche ]
+  * Minor changes for daily release
+  * Automatic snapshot from revision 892 (bootstrap)
+
+  [ Michael Terry ]
+  * New upstream release
+  * Bump required valac to 0.20.0
+
+ -- Michael Terry <mterry@ubuntu.com>  Tue, 13 Aug 2013 20:22:13 -0400
+
+unity-greeter (13.10.1-0ubuntu2) saucy; urgency=low
+
+  * debian/50-unity-greeter.conf:
+  * debian/postinst:
+  * debian/postrm:
+    - Use new lightdm.conf.d file to set unity-greeter as the default greeter.
+      Deprecates lightdm-set-defaults method.
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Mon, 24 Jun 2013 10:40:00 +1200
+
+unity-greeter (13.10.1-0ubuntu1) saucy; urgency=low
+
+  * Fix tests to ignore warnings from libraries and such.  Only care about
+    actual test failures.  Fixes FTBFS on armhf.
+
+ -- Michael Terry <mterry@ubuntu.com>  Thu, 20 Jun 2013 14:08:32 -0400
+
+unity-greeter (13.10.0-0ubuntu1) saucy; urgency=low
+
+  * New upstream release:
+    - updated logo for 13.10, thanks Xi Zhu!
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 17 Jun 2013 13:54:17 +0200
+
+unity-greeter (13.04.2-0ubuntu1) raring; urgency=low
+
+  * New upstream release.
+    - Fix duplicate entries showing for multiple users on the same remote
+      login service.
+    - Add custom indicator support for system administrators (LP: #1155157)
+  * debian/control:
+    - Switch Vcs-Bzr to point at Unity Greeter trunk, since we are inlining
+      the packaging
+    - Use debhelper 9
+  * debian/rules:
+    - Use upstream ./autogen.sh for autoreconf
+  * debian/patches/do-not-read-password.patch,
+    debian/patches/move-nm-applet.patch,
+    debian/patches/spawn-gsd-directly.patch:
+    - Drop, included upstream
+
+ -- Michael Terry <mterry@ubuntu.com>  Fri, 15 Mar 2013 14:04:08 -0400
+
+unity-greeter (13.04.1-0ubuntu2) raring; urgency=low
+
+  * debian/patches/spawn-gsd-directly.patch:
+    - Spawn gnome-settings-daemon directly, since it dropped DBus activation
+      support in 3.6.  LP: #1110716
+
+ -- Michael Terry <mterry@ubuntu.com>  Thu, 31 Jan 2013 12:39:26 -0500
+
+unity-greeter (13.04.1-0ubuntu1) raring; urgency=low
+
+  * New upstream release
+    - Updated logo for 13.04 (LP: #1083333)
+
+ -- Michael Terry <mterry@ubuntu.com>  Tue, 22 Jan 2013 15:55:26 -0500
+
+unity-greeter (13.04.0-0ubuntu1) raring; urgency=low
+
+  * New upstream release
+    - Support timed login
+    - Drop OK button in session chooser (LP: #1049243)
+    - Various small layout changes (LP: #1049241, LP: #1049242,
+      LP: #1056945, LP: #1056949, LP: #1056987, LP: #1059484)
+    - Fix orca not closing when disabled
+    - Fix display corruption when logging in (LP: #931967)
+  * debian/patches/close-orca.patch,
+    debian/patches/fix-timed-autologin.patch,
+    debian/patches/do-not-mention-citrix-support.patch,
+    debian/patches/sigterm-onboard.patch:
+    - Dropped, included upstream
+
+ -- Michael Terry <mterry@ubuntu.com>  Fri, 04 Jan 2013 10:37:29 -0500
+
+unity-greeter (12.10.4-0ubuntu5) quantal; urgency=low
+
+  * debian/patches/fix-timed-autologin.patch:
+    - Fix timed login by paying attention to the signal from lightdm.
+      Patch from upstream trunk.  LP: #902852
+  * debian/control:
+    - Require lightdm 1.4.0 for their own fixes to timed autologin
+
+ -- Michael Terry <mterry@ubuntu.com>  Tue, 09 Oct 2012 10:32:05 -0400
+
+unity-greeter (12.10.4-0ubuntu4) quantal; urgency=low
+
+  * debian/patches/close-orca.patch:
+    - Make turning off the screen reader work again, now that the --quit
+      argument to orca was dropped.
+  * debian/patches/do-not-read-password.patch:
+    - Workaround an orca problem where it doesn't notice the currently
+      focused widget on startup.  With this fix, it will no longer read
+      your password as you type it.  LP: #944159
+
+ -- Michael Terry <mterry@ubuntu.com>  Sun, 07 Oct 2012 17:12:31 -0400
+
+unity-greeter (12.10.4-0ubuntu3) quantal; urgency=low
+
+  * debian/patches/sigterm-onboard.patch:
+    - Send SIGTERM not SIGKILL to onboard, to allow it to release keys
+      LP: #978430
+
+ -- Michael Terry <mterry@ubuntu.com>  Wed, 03 Oct 2012 10:17:06 -0400
+
+unity-greeter (12.10.4-0ubuntu2) quantal; urgency=low
+
+  * debian/patches/do-not-mention-citrix-support.patch:
+    - We don't actually support Citrix out of the box, so don't mention it
+      in the remote login help dialog.  LP: #1059663
+
+ -- Michael Terry <mterry@ubuntu.com>  Tue, 02 Oct 2012 13:22:50 -0400
+
+unity-greeter (12.10.4-0ubuntu1) quantal; urgency=low
+
+  * New upstream bug fix release
+    - Fix rendering of password entry's spinner (LP: #1059447)
+    - Fix rendering of password entry's cursor after closing a dialog
+      (LP: #1049261)
+    - Fix slight pixel jump in names as they finish scrolling (LP: #1056941)
+    - Fix not being able to click on first few sessions in session chooser
+      (LP: #1052453)
+    - Cleanly close onboard keyboard to prevent it crashing on login
+      (LP: #1055698)
+    - Use a lightdm hint for controlling whether remote login is enabled
+  * debian/patches/trunk_session_chooser.patch,
+    debian/patches/02_use_remote_login_hint.patch:
+    - Dropped, included upstream
+
+ -- Michael Terry <mterry@ubuntu.com>  Mon, 01 Oct 2012 12:33:16 -0400
+
+unity-greeter (12.10.3-0ubuntu3) quantal; urgency=low
+
+  * debian/patches/trunk_session_chooser.patch:
+    - backport from trunk: "Fix bug preventing user from clicking 
+      on first few sessions in session chooser (lp: #1052453)"
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 01 Oct 2012 11:02:40 +0200
+
+unity-greeter (12.10.3-0ubuntu2) quantal; urgency=low
+
+  * debian/patches/move-nm-applet.patch:
+    - Start nm-applet after we set INDICATOR_GREETER_MODE so that it knows
+      it's in the greeter and can adjust UI accordingly.
+
+ -- Michael Terry <mterry@ubuntu.com>  Thu, 20 Sep 2012 15:37:07 -0400
+
+unity-greeter (12.10.3-0ubuntu1) quantal; urgency=low
+
+  * New upstream release
+    - Rearrange some UI bits (LP: #1049231, LP: #1049235, LP: #1049236,
+      LP: #1049239)
+    - After a remote login error, do not use cache when trying same user
+      again
+    - When no users and no manual entry, force manual entry to appear
+      (LP: #1044251)
+    - When switching between monitors, re-adjust user names (LP: #1043604)
+    - Center remote login help dialog
+    - Use the xsettings plugin to apply icons-in-menus gsetting
+      (LP: #927236)
+  * debian/unity-greeter.pkla:
+    - Fix policykit file to not be order-dependent and spell out the
+      NetworkManager permissions instead of using a wildcard.
+      LP: #1048522
+  * debian/control:
+    - Add some Build-Depends for new test suite
+  * debian/patches/01_add_remote_login_help_icon.patch:
+    - Drop, remote login help icon is included upstream
+  * debian/patches/02_use_remote_login_hint.patch:
+    - Update to apply again
+
+ -- Michael Terry <mterry@ubuntu.com>  Mon, 17 Sep 2012 13:31:13 -0400
+
+unity-greeter (12.10.2-0ubuntu5) quantal; urgency=low
+
+  * debian/patches/02_use_remote_login_hint.patch:
+    - Use new greeter hint to control whether remote login is enabled,
+      rather than a gsettings key for the lightdm user.
+  * debian/control:
+    - Bump lightdm version to latest for above greeter hint
+
+ -- Michael Terry <mterry@ubuntu.com>  Tue, 11 Sep 2012 14:27:08 -0400
+
+unity-greeter (12.10.2-0ubuntu4) quantal; urgency=low
+
+  * Whoops, and Recommend remote-login-service and friends to pull
+    them in for proper Remote Login support.
+
+ -- Michael Terry <mterry@ubuntu.com>  Fri, 07 Sep 2012 11:45:24 -0400
+
+unity-greeter (12.10.2-0ubuntu3) quantal; urgency=low
+
+  * Enable Remote Login support (LP: #1040221)
+  * Add proper remote login help icon from trunk
+
+ -- Michael Terry <mterry@ubuntu.com>  Fri, 07 Sep 2012 11:26:21 -0400
+
+unity-greeter (12.10.2-0ubuntu2) quantal; urgency=low
+
+  * Enable Network Manager support (LP: #1042757)
+  * debian/copyright: update Format and syntax
+
+ -- Michael Terry <mterry@ubuntu.com>  Thu, 30 Aug 2012 16:10:27 -0400
+
+unity-greeter (12.10.2-0ubuntu1) quantal; urgency=low
+
+  [ Robert Ancell ]
+  * New upstream release:
+    - Show network indicator (bug 1042757, but currently disabled)
+    - Add support for remote logins (bug 1040221, but currently disabled)
+    - Show onboard keyboard on startup if enabled already (LP: #973922)
+    - Support multiple simultaneous prompts from PAM (LP: #1043593)
+    - Fix tabbing through widgets sometimes taking too many tabs
+    - Set average background colour atom based on background (LP: #1043572)
+    - Add a man page
+    - Finess UI (LP: #932162)
+
+  [ Michael Terry ]
+  * debian/unity-greeter.pkla, debian/install:
+    - Install a policykit authentication file to disallow any mucking
+      with NetworkManager in anticipation of adding NM to the greeter.
+  * debian/control:
+    - Require lightdm 1.3.3
+  * debian/patches/01_disable_remote_login.patch,
+  * debian/patches/02_disable_nm_applet.patch:
+    - Disable a couple features until their FFes are approved.
+
+ -- Michael Terry <mterry@ubuntu.com>  Mon, 20 Aug 2012 14:14:17 -0400
+
+unity-greeter (12.10.0-0ubuntu2) quantal; urgency=low
+
+  * debian/patches/run_unity_support_test.patch:
+    - removed, we only support unity-3d now and fallback with llvmpipe
+      if there is no GL acceleration (LP: #1035261)
+
+ -- Didier Roche <didrocks@ubuntu.com>  Wed, 15 Aug 2012 08:39:47 +0200
+
+unity-greeter (12.10.0-0ubuntu1) quantal; urgency=low
+
+  * New upstream release:
+    - Update version logo
+    - Don't write garbage data to state cache file
+    - Remove workaround for gnome session being Unity
+  * debian/control:
+    - Use standards version 3.9.3
+  * debian/patches/recognize-kde-plasma.patch:
+  * debian/patches/show-changed-default-badge.patch:
+  * debian/patches/fix-hung-logging-in.patch:
+    - Applied upstream
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 21 Jun 2012 16:38:32 +1200
+
+unity-greeter (0.2.8-0ubuntu2) quantal; urgency=low
+
+  * debian/patches/recognize-kde-plasma.patch:
+    - Recognize the "kde-plasma" session as "kde" so it gets a properly
+      branded icon in the greeter.  LP: #986339
+  * debian/patches/show-changed-default-badge.patch:
+    - When the default session is changed in lightdm.conf, don't still
+      show the Ubuntu badge.  LP: #978428
+  * debian/patches/fix-hung-logging-in.patch:
+    - Sometimes users will get stuck on a "Logging in..." screen.  This
+      fixes that by ensuring that we don't wait for a background to fade
+      in that never will.  LP: #986967
+
+ -- Michael Terry <mterry@ubuntu.com>  Fri, 20 Apr 2012 14:51:06 -0400
+
+unity-greeter (0.2.8-0ubuntu1) precise-proposed; urgency=low
+
+  * New upstream release:
+    - Add play-ready-sound option to control making a sound when the greeter
+      loads (LP: #949782)
+    - Add background-color option to set the background color before the
+      background is rendered (LP: #969059)
+    - some minor design fixups
+  * debian/patches/ui-tweaks.patch:
+    - Applied upstream
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Wed, 18 Apr 2012 17:21:34 +1000
+
+unity-greeter (0.2.7-0ubuntu2) precise; urgency=low
+
+  * debian/patches/ui-tweaks.patch:
+    - Make some design-team-requested minor tweaks to login box layout.
+      Moves username labels down a bit and makes password entry bigger.
+      Patch taken from upstream.  (UIFe, LP: #975153)
+
+ -- Michael Terry <mterry@ubuntu.com>  Fri, 06 Apr 2012 10:01:26 -0400
+
+unity-greeter (0.2.7-0ubuntu1) precise; urgency=low
+
+  * New upstream bug-fix release
+    - "Pressing escape key on lightdm greeter restarts xserver"
+      (LP: #962932)
+    - "unity-greeter crashed with SIGSEGV in background_loader_ready_cb"
+      (LP: #946674)
+    - "Onscreen Keyboard cannot be used to input password in
+      unity-greeter" (LP: #878184)
+
+ -- Michael Terry <mterry@ubuntu.com>  Tue, 03 Apr 2012 15:50:50 -0400
+
+unity-greeter (0.2.6-0ubuntu1) precise; urgency=low
+
+  * New upstream bug-fix release
+    - Fix the corruption between unity-greeter and Unity loading
+      (LP: #931967)
+    - Fix crash when reloading background images (LP: #942227)
+    - Fix displayed name of keyboard layout with some variants
+      (LP: #960538)
+  * debian/patches/fix_login_corruption.patch:
+    - Dropped, applied upstream
+
+ -- Michael Terry <mterry@ubuntu.com>  Thu, 22 Mar 2012 09:44:16 -0400
+
+unity-greeter (0.2.5-0ubuntu2) precise; urgency=low
+
+  * debian/patches/fix_login_corruption.patch:
+    - Fix setting of root window background pixmap.  Fixes "corruption"
+      seen between unity-greeter and Unity start, which was actually just
+      random bits of VRAM in an uninitialised pixmap.  (LP: #931967)
+
+ -- Christopher James Halse Rogers <raof@ubuntu.com>  Tue, 20 Mar 2012 18:51:43 +1100
+
+unity-greeter (0.2.5-0ubuntu1) precise; urgency=low
+
+  * New upstream release
+    - Don't allow dragging the window by the top bar
+    - Fix keyboard navigation (LP: #952198, LP: #940921)
+    - Fix prompt entry text not showing in some themes
+    - Fix Orca command line so it works with version 3.3.90+
+    - Show "Retry" instead of "Login" if a no-prompt login fails
+    - Show manual login option when no users available (LP: #952557)
+    - Show manual login option if hint is present (LP: #925125)
+    - Show PAM prompts, albeit not in a pretty fashion
+    - Allow pressing Escape to cancel a misbehaving login
+    - Tweaked animations
+    - Update logo to add "LTS" (LP: #943465)
+  * debian/patches/dont_dnd_greeter.patch:
+    - Dropped, included upstream
+
+ -- Michael Terry <mterry@ubuntu.com>  Thu, 15 Mar 2012 09:37:28 -0400
+
+unity-greeter (0.2.4-0ubuntu2) precise; urgency=low
+
+  * debian/patches/dont_dnd_greeter.patch: backport fix for the greeter
+    responding to dnd, it has quite some duplicates (lp: #919398)
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 07 Mar 2012 11:36:25 +0100
+
+unity-greeter (0.2.4-0ubuntu1) precise; urgency=low
+
+  * New upstream release
+    - Don't crash when all monitors are the same size
+    - Use OS icon instead of cog for session selector (LP: #932164)
+    - Show arrow on password entry to indicate will login
+    - Show session chooser dialog instead of a menu (LP: #932169)
+  * debian/patches/do_not_crash_with_twinview.patch:
+    - Dropped, included upstream
+
+ -- Michael Terry <mterry@ubuntu.com>  Thu, 23 Feb 2012 10:02:11 -0500
+
+unity-greeter (0.2.3-0ubuntu4) precise; urgency=low
+
+  * debian/patches/do_not_crash_with_twinview.patch:
+    - Don't crash when all monitors have the same size (as can happen with
+      TwinView)  LP: #934040
+
+ -- Michael Terry <mterry@ubuntu.com>  Fri, 17 Feb 2012 17:43:37 -0500
+
+unity-greeter (0.2.3-0ubuntu3) precise; urgency=low
+
+  * debian/control:
+    - Build-depend on libcanberra-dev
+    - Ran wrap-and-sort
+
+ -- Michael Terry <mterry@ubuntu.com>  Thu, 16 Feb 2012 14:34:43 -0500
+
+unity-greeter (0.2.3-0ubuntu2) precise; urgency=low
+
+  * debian/control:
+    - Build-depend on liblightdm-gobject-1-dev >= 1.1.3
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 16 Feb 2012 17:51:33 +1100
+
+unity-greeter (0.2.3-0ubuntu1) precise; urgency=low
+
+  * New upstream release:
+    [ 0.2.2 ]
+    - Support multi-monitor
+    - Add messaging indicator
+    [ 0.2.3 ] 
+    - Play system-ready sound on startup
+    - Fix placement of user-is-logged-in arrow
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 16 Feb 2012 17:35:24 +1100
+
+unity-greeter (0.2.1-0ubuntu1) precise; urgency=low
+
+  * New upstream release
+    - Fix session menu button not showing for first user
+    - Skip indicators that fail to load
+    - Distribute translations correctly
+    - Load indicators from location specified in pkg-config
+    - Use gsettings instead of /etc/lightdm/unity-greeter.conf
+    - Accept numpad arrow key presses
+    - Instead of showing all layouts in the system in the keyboard indicator,
+      only show the layouts a user has configured
+    - Don't crash if gnome-settings-daemon's gsettings schema isn't as expected
+    - Disable gnome-settings-daemon's new gsdwacom plugin as well as its older
+      wacom plugin
+    - Use vala-0.16 instead of valac-0.14
+  * debian/control:
+    - Bump valac build-depend to valac-0.16
+    - Bump liblightdm-gobject build-depend to one that has backported
+      keyboard layout query functions
+
+ -- Michael Terry <mterry@ubuntu.com>  Mon, 13 Feb 2012 15:25:10 -0500
+
+unity-greeter (0.2.0-0ubuntu6) precise; urgency=low
+
+  * debian/patches/handle_missing_indicators.patch:
+    - backported from trunk, handle missing indicators (lp: #921998)
+  * debian/patches/working_session_selector.patch:
+    - backported from trunk, make the session selector work (lp: #918657)
+  
+  [ Robert Ancell ]
+  * debian/control:
+    - Add recommends on indicator-session, indicator-datetime, indicator-power,
+      indicator-sound (LP: #921998)
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 31 Jan 2012 18:59:57 +0100
+
+unity-greeter (0.2.0-0ubuntu5) precise; urgency=low
+
+  * rebuild for libindicator7
+  * debian/patches/no_hardcoded_paths.patch
+    - don't hard code path to indicatordir
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Wed, 25 Jan 2012 10:04:05 -0500
+
+unity-greeter (0.2.0-0ubuntu4) precise; urgency=low
+
+  * debian/patches/drop_keyboard_indicator.patch:
+    - Back out the keyboard layout indicator for now, until we can properly
+      fix the bugs with detecting user layouts.  (LP: #915468)
+
+ -- Michael Terry <mterry@ubuntu.com>  Fri, 20 Jan 2012 07:05:31 -0500
+
+unity-greeter (0.2.0-0ubuntu3) precise; urgency=low
+
+  * Add versioned Breaks on edubuntu-artwork to allow edubuntu-artwork
+    to fix its unity-greeter.conf to match the new options.
+
+ -- Stéphane Graber <stgraber@ubuntu.com>  Thu, 19 Jan 2012 14:07:30 -0500
+
+unity-greeter (0.2.0-0ubuntu2) precise; urgency=low
+
+  [ Aurélien Gâteau ]
+  * Add dependency on gnome-settings-daemon (LP: #911826)
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 19 Jan 2012 15:22:04 +1100
+
+unity-greeter (0.2.0-0ubuntu1) precise; urgency=low
+
+  * New upstream release
+    - Improve scrolling animation (LP: #844050)
+    - Select menubar when F10 is pressed
+    - Fix Orca not starting when enabling screen reader (LP: #850554)
+    - Add a keyboard indicator (LP: #783827, LP: #834487)
+    - Always focus new windows
+    - Check version of Vala when compiling
+    - Update logo for 12.04 (LP: #892394)
+    - Use default invisible character in password dialog (LP: #834878)
+    - Darken indicator bar
+    - User smaller grid size
+    - Put end-stops on user list scrolling
+    - Only fade out user labels that can't fit in completely (LP: #883260)
+    - Center dots (LP: #872800)
+    - Add translator comments (LP: #855385)
+    - Add option to disable dots (LP: #883908)
+    - Only redraw parts of the screen that have changed
+    - Don't run the greeter if can't connect to daemon and not in test mode
+      (LP: #876754)
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 19 Jan 2012 14:56:21 +1100
+
+unity-greeter (0.1.1-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release:
+    - Stop loading indicators in a thread - they don't seem thread safe
+    - Fade usernames so it looks more like a carousel (LP: #860246)
+    - Darken indicator background so they are easier to read (LP: #860243)
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Wed, 28 Sep 2011 15:34:50 +1000
+
+unity-greeter (0.1.0-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release:
+    - Fix greeter running in loop when greeter-hide-users=true (LP: #851477)
+    - Remember the last selected user between logins (LP: #827898)
+    - Select correct session when logging in manually
+    - Fix non-translation of password prompt
+    - Resize background when resizing window
+    - Move/resize window when monitors changed
+    - Disable xrandr gnome-settings-daemon plugin - always mirror the displays  
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Tue, 27 Sep 2011 14:19:02 +1000
+
+unity-greeter (0.0.9-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release:
+    - Set background color of window to "dark aubergine" so boot delays
+      don't cause a white flash
+    - Kill onboard on exit to stop window showing up
+    - Don't give the onscreen keyboard focus, this makes it work (LP: #851565)
+    - Load indicators sequentially, they seem to crash loading in parallel
+    - Fix translations not being used (LP: #831026)
+    - Show authentication messages as well as prompts
+    - Disable the text entry after text has been entered
+    - Don't start authentication as each user is added to the user list
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 22 Sep 2011 16:39:58 +1000
+
+unity-greeter (0.0.8-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release:
+    - Fix grid offset
+    - Fix non-latin names being displayed incorrectly (LP: #840868)
+    - Change asynchronous indicator loader code, suspect it is causing a race
+      condition?
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 15 Sep 2011 15:00:50 +1000
+
+unity-greeter (0.0.7-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release: (LP: #843621)
+    - Show caps-lock warning in password field
+    - Use constant time animation
+    - Render background images in a background thread
+    - Load indicators in a thread
+    - Add timing to logs
+    - Add more logging messages
+    - Fade out long names (LP: #844047)
+    - Wait until background is loaded before showing the main window - stops
+      a white flash being seen on startup. (LP: #836479)
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Wed, 14 Sep 2011 16:30:31 +1000
+
+unity-greeter (0.0.6-0ubuntu1) UNRELEASED; urgency=low
+
+  * New upstream release:
+    - Fix password cursors not getting focus (LP: #810805)
+    - Make logo configurable again (LP: #834701)
+    - Disable FUSE
+    - Show if users are currently logged in (LP: #835312)
+    - Update user list when users are added/removed/modified
+    - Use select user hint to select the correct user (LP: #835311)
+    - Fix vertical grid alignment of user list
+    - Add accessibility menu with high contrast, screen reader and onscreen
+      keyboard (LP: #810697)
+    - Make use of hide users hint (LP: #836395)
+    - Change "Other..." entry to match username being entered
+    - Rename "Guest Account" to "Guest Session" to match desktop
+    - Don't give keyboard focus to session selector when clicking on it
+      (LP: #827749)
+    - Stop hostname being selectable (LP: #837149)
+    - Hide the "Other..." entry when user list showing
+    - Fix battery indicator (LP: #830175)
+  * debian/patches/customize-logo.patch:
+  * debian/patches/disable-fuse.patch:
+    - Applied upstream
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Wed, 07 Sep 2011 17:02:43 +1000
+
+unity-greeter (0.0.5-0ubuntu4) oneiric; urgency=low
+
+  * debian/patches/run_unity_support_test.patch:
+    - try to run unity_support_test for ubuntu for pre-caching the
+     result in /tmp for further call while the user is typing his
+     password (LP: #842656)
+
+ -- Didier Roche <didrocks@ubuntu.com>  Tue, 06 Sep 2011 17:24:37 +0200
+
+unity-greeter (0.0.5-0ubuntu3) oneiric; urgency=low
+
+  * debian/patches/customize-logo.patch:
+    - Allow derivatives to customize logo again.  LP: #834701
+
+ -- Michael Terry <mterry@ubuntu.com>  Fri, 26 Aug 2011 13:38:47 -0400
+
+unity-greeter (0.0.5-0ubuntu2) oneiric; urgency=low
+
+  * debian/patches/disable-fuse.patch:
+    - Disable fuse daemon, which will crash if run because we also force
+      the 'local' vfs backend.  LP: #832533
+
+ -- Michael Terry <mterry@ubuntu.com>  Thu, 25 Aug 2011 15:28:31 -0400
+
+unity-greeter (0.0.5-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release
+    - tweaks to the greeter interface
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 25 Aug 2011 18:42:47 +1000
+
+unity-greeter (0.0.3-0ubuntu1) oneiric; urgency=low
+
+  * New upstream version
+  * debian/patches/update_to_trunk.patch: dropped, it's in the new version
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 24 Aug 2011 10:45:15 +0200
+
+unity-greeter (0.0.2-0ubuntu4) oneiric; urgency=low
+
+  * debian/patches/update_to_trunk.patch: updated to current trunk
+    - tweaks to the greeter interface
+    - use gnome-settings-daemon with a limited of options
+    - doesn't start gvfs on the greeter
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 23 Aug 2011 15:58:57 +0200
+
+unity-greeter (0.0.2-0ubuntu3) oneiric; urgency=low
+
+  * debian/patches/update_to_trunk.patch:
+    - backport the 3 commits which went to the vcs since the current version
+    - Setup indicators to run in greeter mode (lp: #811853)
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 19 Aug 2011 11:01:32 +0200
+
+unity-greeter (0.0.2-0ubuntu2) oneiric; urgency=low
+
+  * debian/postinst, debian/postrm:
+    - set the unity-greeter as the default one if none set. Remove it on
+      uninstall
+
+ -- Didier Roche <didrocks@ubuntu.com>  Wed, 10 Aug 2011 02:22:19 +0200
+
+unity-greeter (0.0.2-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release
+  * debian/control:
+    - Use liblightdm-gobject-1
+  * debian/copyright:
+    - Update copyright format to latest
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Tue, 26 Jul 2011 19:24:33 +1000
+
+unity-greeter (0.0.1-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Wed, 13 Jul 2011 15:07:09 +1000

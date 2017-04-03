@@ -1,0 +1,240 @@
+# Turkish translation for unity-greeter
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the unity-greeter package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: unity-greeter\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-03-22 05:42+0000\n"
+"PO-Revision-Date: 2012-05-23 09:54+0000\n"
+"Last-Translator: Hasan Yılmaz <iletisim@hasanyilmaz.net>\n"
+"Language-Team: Turkish <tr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2016-03-23 05:32+0000\n"
+"X-Generator: Launchpad (build 17958)\n"
+
+#: ../src/greeter-list.vala:300
+#, c-format
+msgid "Enter password for %s"
+msgstr "%s için parola girin"
+
+#: ../src/greeter-list.vala:805 ../src/user-list.vala:701
+msgid "Password:"
+msgstr "Parola:"
+
+#: ../src/greeter-list.vala:807 ../src/user-list.vala:695
+msgid "Username:"
+msgstr "Kullanıcı Adı:"
+
+#: ../src/greeter-list.vala:859
+msgid "Invalid password, please try again"
+msgstr "Geçersiz parola, lütfen yeniden deneyin"
+
+#: ../src/greeter-list.vala:870
+msgid "Failed to authenticate"
+msgstr "Kimlik doğrulama başarısız"
+
+#: ../src/greeter-list.vala:916
+msgid "Failed to start session"
+msgstr "Oturum başlatılamadı"
+
+#: ../src/greeter-list.vala:931
+msgid "Logging in…"
+msgstr "Oturum açılıyor..."
+
+#: ../src/main-window.vala:49
+msgid "Login Screen"
+msgstr "Giriş Ekranı"
+
+#: ../src/main-window.vala:116
+msgid "Back"
+msgstr "Geri"
+
+#: ../src/menubar.vala:220
+msgid "Onscreen keyboard"
+msgstr "Ekran klavyesi"
+
+#: ../src/menubar.vala:225
+msgid "High Contrast"
+msgstr "Yüksek Karşıtlık"
+
+#: ../src/menubar.vala:231
+msgid "Screen Reader"
+msgstr "Ekran Okuyucu"
+
+#: ../src/prompt-box.vala:212
+msgid "Session Options"
+msgstr "Oturum Seçenekleri"
+
+#: ../src/session-list.vala:34
+msgid "Select desktop environment"
+msgstr "Masaüstü ortamını seçin"
+
+#: ../src/shutdown-dialog.vala:101
+msgid "Goodbye. Would you like to…"
+msgstr "Görüşmek Üzere. Eğer isterseniz..."
+
+#: ../src/shutdown-dialog.vala:105 ../src/shutdown-dialog.vala:207
+msgid "Shut Down"
+msgstr "Kapat"
+
+#: ../src/shutdown-dialog.vala:112
+msgid "Are you sure you want to shut down the computer?"
+msgstr "Bilgisayarı kapatmak istediğinize emin misiniz?"
+
+#: ../src/shutdown-dialog.vala:137
+msgid ""
+"Other users are currently logged in to this computer, shutting down now will "
+"also close these other sessions."
+msgstr ""
+"Şu anda bu bilgisayara bağlı diğer kullanıcılar var. Şimdi bilgisayarı "
+"kapatmak, diğer oturumları da kapatacaktır."
+
+#: ../src/shutdown-dialog.vala:155
+msgid "Suspend"
+msgstr "Askıya Al"
+
+#: ../src/shutdown-dialog.vala:172
+msgid "Hibernate"
+msgstr "Uykuya Al"
+
+#: ../src/shutdown-dialog.vala:190
+msgid "Restart"
+msgstr "Yeniden Başlat"
+
+#. Translators: %s is a session name like KDE or Ubuntu
+#: ../src/toggle-box.vala:98
+#, c-format
+msgid "%s (Default)"
+msgstr "%s (Öntanımlı)"
+
+#. Help string for command line --version flag
+#: ../src/unity-greeter.vala:512
+msgid "Show release version"
+msgstr "Dağıtımın sürümünü göster"
+
+#. Help string for command line --test-mode flag
+#: ../src/unity-greeter.vala:515
+msgid "Run in test mode"
+msgstr "Sınama kipinde çalıştır"
+
+#. Arguments and description for --help text
+#: ../src/unity-greeter.vala:521
+msgid "- Unity Greeter"
+msgstr "- Unity Karşılayıcısı"
+
+#. Text printed out when an unknown command-line argument provided
+#: ../src/unity-greeter.vala:532
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr ""
+"Kullanılabilir komut satırı seçeneklerinin tam listesini görmek için '%s --"
+"help' komutunu çalıştırın."
+
+#: ../src/user-list.vala:45
+msgid "Guest Session"
+msgstr "Konuk Oturumu"
+
+#: ../src/user-list.vala:438
+msgid "Please enter a complete e-mail address"
+msgstr "Lütfen tam bir e-posta adresi girin"
+
+#: ../src/user-list.vala:518
+msgid "Incorrect e-mail address or password"
+msgstr "E-posta ya da parola  yanlış"
+
+#: ../src/user-list.vala:549
+msgid ""
+"If you have an account on an RDP or Citrix server, Remote Login lets you run "
+"applications from that server."
+msgstr ""
+"Eğer bir RDP ya da Citrix sunucusu üzerinde bir hesabınız varsa, Uzaktan "
+"Giriş uygulamaları bu sunucudan çalıştırmanızı sağlar."
+
+#. For 12.10 we still don't support Citrix
+#: ../src/user-list.vala:551
+msgid ""
+"If you have an account on an RDP server, Remote Login lets you run "
+"applications from that server."
+msgstr ""
+"Eğer bir RDP sunucusunda bir hesabınız varsa, Uzaktan Erişim uygulamaları bu "
+"sunucudan çalıştırmanıza izin verir."
+
+#: ../src/user-list.vala:554
+msgid "Cancel"
+msgstr "Vazgeç"
+
+#: ../src/user-list.vala:555
+msgid "Set Up…"
+msgstr "Kurulum..."
+
+#: ../src/user-list.vala:557
+msgid ""
+"You need an Ubuntu Remote Login account to use this service. Would you like "
+"to set up an account now?"
+msgstr ""
+"Bu hizmeti kullanmak için Ubuntu Uzaktan Giriş hesabınız olması gerekir. "
+"Şimdi bir hesap kurmak ister miydiniz?"
+
+#: ../src/user-list.vala:561
+msgid "OK"
+msgstr "Tamam"
+
+#: ../src/user-list.vala:562
+msgid ""
+"You need an Ubuntu Remote Login account to use this service. Visit "
+"uccs.canonical.com to set up an account."
+msgstr ""
+"Bu hizmeti kullanmak için Ubuntu Uzaktan Giriş hesabınız olması gerekir. Bir "
+"hesap kurmak için uccs.canonical.com adresini ziyaret edin."
+
+#: ../src/user-list.vala:679
+msgid "Server type not supported."
+msgstr "Sunucu türü desteklenmiyor."
+
+#: ../src/user-list.vala:720
+msgid "Domain:"
+msgstr "Alan adı:"
+
+#: ../src/user-list.vala:781
+msgid "Email address:"
+msgstr "E-posta adresi:"
+
+#. 'Log In' here is the button for logging in.
+#: ../src/user-list.vala:825
+msgid "Log In"
+msgstr "Oturum aç"
+
+#: ../src/user-list.vala:826
+#, c-format
+msgid "Login as %s"
+msgstr "%s olarak oturum aç"
+
+#: ../src/user-list.vala:830
+msgid "Retry"
+msgstr "Yeniden dene"
+
+#: ../src/user-list.vala:831
+#, c-format
+msgid "Retry as %s"
+msgstr "%s olarak yeniden dene"
+
+#: ../src/user-list.vala:869
+msgid "Login"
+msgstr "Oturum aç"
+
+#~ msgid "Logging in..."
+#~ msgstr "Oturum açılıyor..."
+
+#~ msgid "_Back"
+#~ msgstr "_Geri"
+
+#~ msgid "Enter password"
+#~ msgstr "Parola girin"
+
+#~ msgid "Favorite Color (blue):"
+#~ msgstr "Tercih Edilen Renk (mavi):"

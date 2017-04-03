@@ -1,0 +1,233 @@
+# Burmese translation for unity-greeter
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the unity-greeter package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: unity-greeter\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-03-22 05:42+0000\n"
+"PO-Revision-Date: 2014-09-06 13:42+0000\n"
+"Last-Translator: Bone Pyae Sone <bone.burma@gmail.com>\n"
+"Language-Team: Burmese <my@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2016-03-23 05:32+0000\n"
+"X-Generator: Launchpad (build 17958)\n"
+
+#: ../src/greeter-list.vala:300
+#, c-format
+msgid "Enter password for %s"
+msgstr "%s အတွက် စကားဝှက် ဖြည့်စွက်ပေးပါ။"
+
+#: ../src/greeter-list.vala:805 ../src/user-list.vala:701
+msgid "Password:"
+msgstr "စကားဝှက်:"
+
+#: ../src/greeter-list.vala:807 ../src/user-list.vala:695
+msgid "Username:"
+msgstr "သုံးစွဲသူအမည်:"
+
+#: ../src/greeter-list.vala:859
+msgid "Invalid password, please try again"
+msgstr "စကားဝှက် မှားနေပါသည်။ ကျေးဇူးပြု၍ ထပ်မံကြိုးစားပါ။"
+
+#: ../src/greeter-list.vala:870
+msgid "Failed to authenticate"
+msgstr "ခွင့်ပြုချက် ရယူနိုင်ခြင်းမရှိပါ။"
+
+#: ../src/greeter-list.vala:916
+msgid "Failed to start session"
+msgstr ""
+
+#: ../src/greeter-list.vala:931
+msgid "Logging in…"
+msgstr ""
+
+#: ../src/main-window.vala:49
+msgid "Login Screen"
+msgstr "login ပြုလုပ်ရန် မျက်နှာစာ"
+
+#: ../src/main-window.vala:116
+msgid "Back"
+msgstr "နောက်သို့"
+
+#: ../src/menubar.vala:220
+msgid "Onscreen keyboard"
+msgstr "လက်ကွက်ဖော်ပြ ဖန်သားပြင်"
+
+#: ../src/menubar.vala:225
+msgid "High Contrast"
+msgstr "ပုံကြီးချဲ့ကြည့်ရန်"
+
+#: ../src/menubar.vala:231
+msgid "Screen Reader"
+msgstr "စကားလုံးပြ ဖန်သားပြင်"
+
+#: ../src/prompt-box.vala:212
+msgid "Session Options"
+msgstr "Session များ ရွေးချယ်ရန်"
+
+#: ../src/session-list.vala:34
+msgid "Select desktop environment"
+msgstr "desktop ပုံစံရွေးရန်"
+
+#: ../src/shutdown-dialog.vala:101
+msgid "Goodbye. Would you like to…"
+msgstr "Goodbye. သင်​...လိုပါသလား"
+
+#: ../src/shutdown-dialog.vala:105 ../src/shutdown-dialog.vala:207
+msgid "Shut Down"
+msgstr "လုံးဝ ပိတ်မည်"
+
+#: ../src/shutdown-dialog.vala:112
+msgid "Are you sure you want to shut down the computer?"
+msgstr "သင်​၏ကွန်​ပြူတာကိုစက်​ပိတ်​လိုသည်​မှာ​သေချာပါသလား"
+
+#: ../src/shutdown-dialog.vala:137
+msgid ""
+"Other users are currently logged in to this computer, shutting down now will "
+"also close these other sessions."
+msgstr ""
+"ဤကွန်​ပြူတာကိုအခြားသုံးစွဲသူများကလည်​းlog "
+"inဝင်​ထားပါသည်​။ယခုကွန်​ပြူတာကိုပိတ်​လျှင်​အခြားသူများ၏sessionများလည်​းပိတ်​မ"
+"ည်​ဖြစ်​ပါသည်​"
+
+#: ../src/shutdown-dialog.vala:155
+msgid "Suspend"
+msgstr "ဆိုင်းငံ့ထားမည်"
+
+#: ../src/shutdown-dialog.vala:172
+msgid "Hibernate"
+msgstr "လက်ရှိ အခြေအနေတိုင်းမှတ်သား၍ အပြီးထွက်မည်"
+
+#: ../src/shutdown-dialog.vala:190
+msgid "Restart"
+msgstr "အစမှ ပြန်ဖွင့်မည်"
+
+#. Translators: %s is a session name like KDE or Ubuntu
+#: ../src/toggle-box.vala:98
+#, c-format
+msgid "%s (Default)"
+msgstr "%s (မူလ)"
+
+#. Help string for command line --version flag
+#: ../src/unity-greeter.vala:512
+msgid "Show release version"
+msgstr "ထုတ်လုပ်သော ဗားရှင်းကို ပြပါ"
+
+#. Help string for command line --test-mode flag
+#: ../src/unity-greeter.vala:515
+msgid "Run in test mode"
+msgstr "စမ်းသပ်အခြေအနေဖြင့် အလုပ်လုပ်ပါ"
+
+#. Arguments and description for --help text
+#: ../src/unity-greeter.vala:521
+msgid "- Unity Greeter"
+msgstr "Unity Greeter"
+
+#. Text printed out when an unknown command-line argument provided
+#: ../src/unity-greeter.vala:532
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr "အမိန့်ပေး စာရင်း အပြည့်အစုံမြင်ရရန်  '%s--help' ဖြင့် ခိုင်းပါ"
+
+#: ../src/user-list.vala:45
+msgid "Guest Session"
+msgstr "ဧည့်သည်သုံး Session"
+
+#: ../src/user-list.vala:438
+msgid "Please enter a complete e-mail address"
+msgstr "ကျေးဇူးပြုပြီး ပြည့်စုံသော အီးမေးလိပ်စာကိုရိုက်ထည့်ပါ"
+
+#: ../src/user-list.vala:518
+msgid "Incorrect e-mail address or password"
+msgstr "အီးမေးလ်လိပ်စာ (သို့) စကားဝှက် မမှန်ကန်ပါ"
+
+#: ../src/user-list.vala:549
+msgid ""
+"If you have an account on an RDP or Citrix server, Remote Login lets you run "
+"applications from that server."
+msgstr ""
+"အကယ်၍ သင့်၌ RDP ဆာဗာ (သို့) Citrix ဆာဗာ များ၏ အကောင့် ရှိလျှင် "
+"၎င်းဆာဗာများမှ အပ္ပလီကေးရှင်းများကို အဝေးမှ အကောင့်ဖွင့်၍ "
+"အလုပ်လုပ်စေနိုင်သည်။"
+
+#. For 12.10 we still don't support Citrix
+#: ../src/user-list.vala:551
+msgid ""
+"If you have an account on an RDP server, Remote Login lets you run "
+"applications from that server."
+msgstr ""
+
+#: ../src/user-list.vala:554
+msgid "Cancel"
+msgstr "ပယ်ဖျက်မည်"
+
+#: ../src/user-list.vala:555
+msgid "Set Up…"
+msgstr "အကောင့် ဖွင့် ခြင်း  ...."
+
+#: ../src/user-list.vala:557
+msgid ""
+"You need an Ubuntu Remote Login account to use this service. Would you like "
+"to set up an account now?"
+msgstr ""
+"ဤဝန်ဆောင်မှုစနစ်အားအသုံးပြုရန် သင့်ထံ၌ Ubuntu အဝေးမှ စနစ်တွင်းဝင်၍ရသည့် "
+"အကောင့် ရှိရန် လိုအပ်သည်။ သင်သည် ယခု အကောင့်သစ် ဖွင့်လိုပါသလား ?"
+
+#: ../src/user-list.vala:561
+msgid "OK"
+msgstr "အိုကေ"
+
+#: ../src/user-list.vala:562
+msgid ""
+"You need an Ubuntu Remote Login account to use this service. Visit "
+"uccs.canonical.com to set up an account."
+msgstr ""
+"ဤဝန်ဆောင်မှုစနစ်အားအသုံးပြုရန် သင့်ထံ၌ Ubuntu အဝေးမှ စနစ်တွင်းဝင်၍ရသည့် "
+"အကောင့် ရှိရန် လိုအပ်သည်။ အကောင့်အသစ် ဖွင့်ရန် uccs.canonical.com သို့ "
+"သွားပါ။"
+
+#: ../src/user-list.vala:679
+msgid "Server type not supported."
+msgstr "ဆာဗာအမျိုးအစားကိုမထောက်ပံ့ပါ"
+
+#: ../src/user-list.vala:720
+msgid "Domain:"
+msgstr "ဒိုမိန်း -"
+
+#: ../src/user-list.vala:781
+msgid "Email address:"
+msgstr "အီးမေးလ်လိပ်စာ -"
+
+#. 'Log In' here is the button for logging in.
+#: ../src/user-list.vala:825
+msgid "Log In"
+msgstr "ဝင်ရန်"
+
+#: ../src/user-list.vala:826
+#, c-format
+msgid "Login as %s"
+msgstr "%s အနေဖြင့် စနစ်တွင်းသို့ ဝင်သည်။"
+
+#: ../src/user-list.vala:830
+msgid "Retry"
+msgstr "ထပ်ကြိုးစားပါ"
+
+#: ../src/user-list.vala:831
+#, c-format
+msgid "Retry as %s"
+msgstr "%s ကဲ့သို့ ပြန်ကြိုးစားမည်"
+
+#: ../src/user-list.vala:869
+msgid "Login"
+msgstr "ဝင်ရန်"
+
+#~ msgid "_Back"
+#~ msgstr "_Bနောက်သို့"
+
+#~ msgid "Favorite Color (blue):"
+#~ msgstr "အကြိုက်နှစ်သက်ဆုံးအရောင် (အပြာရောင်) −"

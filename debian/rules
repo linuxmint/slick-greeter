@@ -1,0 +1,22 @@
+#!/usr/bin/make -f 
+
+LDFLAGS+=-Wl,--as-needed
+
+%:
+	dh $@ --with autoreconf --fail-missing
+
+override_dh_autoreconf:
+	NOCONFIGURE=1 dh_autoreconf ./autogen.sh
+
+
+override_dh_auto_build:
+	dh_auto_build
+	./src/logo-generator --logo data/logo-bare.png --text '16.04 LTS' --output logo.png
+
+override_dh_auto_install:
+	dh_auto_install
+	cp logo.png debian/unity-greeter/usr/share/unity-greeter/logo.png
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -f logo.png

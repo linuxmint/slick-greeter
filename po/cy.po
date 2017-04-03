@@ -1,0 +1,229 @@
+# Welsh translation for unity-greeter
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the unity-greeter package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: unity-greeter\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-03-22 05:42+0000\n"
+"PO-Revision-Date: 2014-04-30 19:02+0000\n"
+"Last-Translator: Owen Llywelyn <owen.llywelyn@gmail.com>\n"
+"Language-Team: Welsh <cy@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2016-03-23 05:32+0000\n"
+"X-Generator: Launchpad (build 17958)\n"
+
+#: ../src/greeter-list.vala:300
+#, c-format
+msgid "Enter password for %s"
+msgstr "Rhowch y cyfrinair ar gyfer %s"
+
+#: ../src/greeter-list.vala:805 ../src/user-list.vala:701
+msgid "Password:"
+msgstr "Cyfinair:"
+
+#: ../src/greeter-list.vala:807 ../src/user-list.vala:695
+msgid "Username:"
+msgstr "Enw defnyddiwr:"
+
+#: ../src/greeter-list.vala:859
+msgid "Invalid password, please try again"
+msgstr "Cyfrinair anghywir, rhowch gynnig arall arni"
+
+#: ../src/greeter-list.vala:870
+msgid "Failed to authenticate"
+msgstr "Methwyd dilysu"
+
+#: ../src/greeter-list.vala:916
+msgid "Failed to start session"
+msgstr "Methwyd cychwyn sesiwn"
+
+#: ../src/greeter-list.vala:931
+msgid "Logging in…"
+msgstr "Wrthi'n mewngofnodi..."
+
+#: ../src/main-window.vala:49
+msgid "Login Screen"
+msgstr "Sgrîn Fewngofnodi"
+
+#: ../src/main-window.vala:116
+msgid "Back"
+msgstr "Yn ôl"
+
+#: ../src/menubar.vala:220
+msgid "Onscreen keyboard"
+msgstr "Bysellfwrdd sgrîn"
+
+#: ../src/menubar.vala:225
+msgid "High Contrast"
+msgstr "Cyferbyniad Uchel"
+
+#: ../src/menubar.vala:231
+msgid "Screen Reader"
+msgstr "Darllenydd Sgrin"
+
+#: ../src/prompt-box.vala:212
+msgid "Session Options"
+msgstr "Dewisiadau'r Sesiwn"
+
+#: ../src/session-list.vala:34
+msgid "Select desktop environment"
+msgstr "Dewis amgylchedd penbwrdd"
+
+#: ../src/shutdown-dialog.vala:101
+msgid "Goodbye. Would you like to…"
+msgstr "Hwyl fawr. Hoffech chi..."
+
+#: ../src/shutdown-dialog.vala:105 ../src/shutdown-dialog.vala:207
+msgid "Shut Down"
+msgstr "Diffodd"
+
+#: ../src/shutdown-dialog.vala:112
+msgid "Are you sure you want to shut down the computer?"
+msgstr "Ydych chi'n siŵr eich bod am ddiffodd y cyfrifiadur?"
+
+#: ../src/shutdown-dialog.vala:137
+msgid ""
+"Other users are currently logged in to this computer, shutting down now will "
+"also close these other sessions."
+msgstr ""
+"Mae defnyddwyr eraill wedi mewngofnodi i'r cyfrifiadur hwn, bydd diffodd yn "
+"cau'r sesiynau eraill hefyd."
+
+#: ../src/shutdown-dialog.vala:155
+msgid "Suspend"
+msgstr "Seibio"
+
+#: ../src/shutdown-dialog.vala:172
+msgid "Hibernate"
+msgstr "Cysgu"
+
+#: ../src/shutdown-dialog.vala:190
+msgid "Restart"
+msgstr "Ailgychwyn"
+
+#. Translators: %s is a session name like KDE or Ubuntu
+#: ../src/toggle-box.vala:98
+#, c-format
+msgid "%s (Default)"
+msgstr "%s (Rhagosodedig)"
+
+#. Help string for command line --version flag
+#: ../src/unity-greeter.vala:512
+msgid "Show release version"
+msgstr "Dangos fersiwn rhyddhau"
+
+#. Help string for command line --test-mode flag
+#: ../src/unity-greeter.vala:515
+msgid "Run in test mode"
+msgstr "Rhedeg ym modd prawf"
+
+#. Arguments and description for --help text
+#: ../src/unity-greeter.vala:521
+msgid "- Unity Greeter"
+msgstr "- Cyfarchwr Unity"
+
+#. Text printed out when an unknown command-line argument provided
+#: ../src/unity-greeter.vala:532
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr "Rhedwch '%s --help' i weld rhestr lawn o opsiynau llinell orchymyn."
+
+#: ../src/user-list.vala:45
+msgid "Guest Session"
+msgstr "Sesiwn Wadd"
+
+#: ../src/user-list.vala:438
+msgid "Please enter a complete e-mail address"
+msgstr "Rhowch gyfeiriad ebost llawn"
+
+#: ../src/user-list.vala:518
+msgid "Incorrect e-mail address or password"
+msgstr "Cyfeiriad ebost neu gyfrinair anghywir"
+
+#: ../src/user-list.vala:549
+msgid ""
+"If you have an account on an RDP or Citrix server, Remote Login lets you run "
+"applications from that server."
+msgstr ""
+"Os oes gennych gyfrif ar weinydd RDP neu Xitrix, mae Mewngofnodi Pell yn "
+"eich galluogi i redeg rhaglenni o'r gweinydd hwnnw."
+
+#. For 12.10 we still don't support Citrix
+#: ../src/user-list.vala:551
+msgid ""
+"If you have an account on an RDP server, Remote Login lets you run "
+"applications from that server."
+msgstr ""
+"Os oes gennych gyfrif ar weinydd RDP, mae Mewngofnodi Pell yn eich galluogi "
+"i redeg rhaglenni o'r gweinydd hwnnw."
+
+#: ../src/user-list.vala:554
+msgid "Cancel"
+msgstr "Diddymu"
+
+#: ../src/user-list.vala:555
+msgid "Set Up…"
+msgstr "Sefydlu..."
+
+#: ../src/user-list.vala:557
+msgid ""
+"You need an Ubuntu Remote Login account to use this service. Would you like "
+"to set up an account now?"
+msgstr ""
+"Rhaid cael cyfrif Mewngofnodi Pell Ubuntu i ddefnyddio'r wasanaeth hon. "
+"Hoffech greu un nawr?"
+
+#: ../src/user-list.vala:561
+msgid "OK"
+msgstr "Iawn"
+
+#: ../src/user-list.vala:562
+msgid ""
+"You need an Ubuntu Remote Login account to use this service. Visit "
+"uccs.canonical.com to set up an account."
+msgstr ""
+"Rhaid cael cyfrif Mewngofnodi Pell Ubuntu i ddefnyddio'r wasanaeth hon. "
+"Ymwelwch â uccs.canonical.com i greu cyfrif."
+
+#: ../src/user-list.vala:679
+msgid "Server type not supported."
+msgstr "Ni chefnogir y math yna o weinydd"
+
+#: ../src/user-list.vala:720
+msgid "Domain:"
+msgstr "Parth:"
+
+#: ../src/user-list.vala:781
+msgid "Email address:"
+msgstr "Cyfeiriad ebost:"
+
+#. 'Log In' here is the button for logging in.
+#: ../src/user-list.vala:825
+msgid "Log In"
+msgstr "Mewngofnodi"
+
+#: ../src/user-list.vala:826
+#, c-format
+msgid "Login as %s"
+msgstr "Mewngofnodi fel %s"
+
+#: ../src/user-list.vala:830
+msgid "Retry"
+msgstr "Ailgeisio"
+
+#: ../src/user-list.vala:831
+#, c-format
+msgid "Retry as %s"
+msgstr "Ceisio eto fel %s"
+
+#: ../src/user-list.vala:869
+msgid "Login"
+msgstr "Mewngofnodi"
+
+#~ msgid "_Back"
+#~ msgstr "Yn _ôl"

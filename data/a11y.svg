@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg7384" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="16" width="16" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <title id="title9167">Gnome Symbolic Icon Theme</title>
+ <metadata id="metadata90">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Gnome Symbolic Icon Theme</dc:title>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer11" transform="translate(-41.983 -381)">
+  <path id="path3850" style="fill:#dfdbd2" d="m49.983 381c-4.4183 0-8 3.5817-8 8s3.5817 8 8 8 8-3.5817 8-8-3.5817-8-8-8zm0 1.9432c1.1213 0 2.0301 0.9088 2.0301 2.0301s-0.9088 2.0301-2.0301 2.0301-2.0301-0.9088-2.0301-2.0301 0.9088-2.0301 2.0301-2.0301zm-4.7974 4.1202c3.2067-0.0458 6.4129-0.0154 9.6195 0.0113 0 0 0.43092-0.008 0.43092 0.42408v0.20861c0 0.23-0.236 0.29-0.236 0.29l-2.9852 0.57817v2.1109l1.3547 3.9064c0.1368 0.22572-0.15839 0.2902-0.15839 0.2902l-0.5265 0.005c-0.25317 0-0.34809-0.21303-0.34809-0.21303l-2.0718-3.5916c-0.22228-0.5041-0.23617-0.43981-0.44654 0.00077l-2.1689 3.5862c-0.07254 0.21764-0.3556 0.22239-0.3556 0.22239l-0.5703-0.009s-0.20848-0.006-0.16065-0.20918l1.3875-3.9888v-2.1109l-2.8919-0.5548c-0.23245-0.0787-0.32884-0.29434-0.32884-0.29434v-0.21764s-0.0097-0.44343 0.45567-0.44343z"/>
+ </g>
+</svg>
+<!-- Copied from Gnome Symbolic Icon Theme.  License is:
+
+This work is licenced under the Creative Commons Attribution-Share Alike 3.0
+United States License. To view a copy of this licence, visit
+http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative
+Commons, 171 Second Street, Suite 300, San Francisco, California 94105, USA.
+
+When attributing the artwork, using "GNOME Project" is enough.
+Please link to http://www.gnome.org where available.
+-->

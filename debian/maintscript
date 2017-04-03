@@ -1,0 +1,1 @@
+rm_conffile /etc/lightdm/lightdm.conf.d/50-unity-greeter.conf 14.04.1-0ubuntu1

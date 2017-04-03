@@ -1,0 +1,234 @@
+# Italian translation for unity-greeter
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the unity-greeter package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: unity-greeter\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-03-22 05:42+0000\n"
+"PO-Revision-Date: 2014-03-22 16:07+0000\n"
+"Last-Translator: Milo Casagrande <milo.casagrande@gmail.com>\n"
+"Language-Team: Italian <it@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2016-03-23 05:32+0000\n"
+"X-Generator: Launchpad (build 17958)\n"
+
+#: ../src/greeter-list.vala:300
+#, c-format
+msgid "Enter password for %s"
+msgstr "Inserire la password per %s"
+
+#: ../src/greeter-list.vala:805 ../src/user-list.vala:701
+msgid "Password:"
+msgstr "Password:"
+
+#: ../src/greeter-list.vala:807 ../src/user-list.vala:695
+msgid "Username:"
+msgstr "Nome utente:"
+
+#: ../src/greeter-list.vala:859
+msgid "Invalid password, please try again"
+msgstr "Password non valida, riprovare"
+
+#: ../src/greeter-list.vala:870
+msgid "Failed to authenticate"
+msgstr "Autenticazione non riuscita"
+
+#: ../src/greeter-list.vala:916
+msgid "Failed to start session"
+msgstr "Avvio della sessione non riuscito"
+
+#: ../src/greeter-list.vala:931
+msgid "Logging in…"
+msgstr "Accesso..."
+
+#: ../src/main-window.vala:49
+msgid "Login Screen"
+msgstr "Schermata di accesso"
+
+#: ../src/main-window.vala:116
+msgid "Back"
+msgstr "Indietro"
+
+#: ../src/menubar.vala:220
+msgid "Onscreen keyboard"
+msgstr "Tastiera a schermo"
+
+#: ../src/menubar.vala:225
+msgid "High Contrast"
+msgstr "Contrasto elevato"
+
+#: ../src/menubar.vala:231
+msgid "Screen Reader"
+msgstr "Lettore schermo"
+
+#: ../src/prompt-box.vala:212
+msgid "Session Options"
+msgstr "Opzioni sessione"
+
+#: ../src/session-list.vala:34
+msgid "Select desktop environment"
+msgstr "Seleziona l'ambiente grafico"
+
+#: ../src/shutdown-dialog.vala:101
+msgid "Goodbye. Would you like to…"
+msgstr "Arrivederci. Selezionare un'opzione..."
+
+#: ../src/shutdown-dialog.vala:105 ../src/shutdown-dialog.vala:207
+msgid "Shut Down"
+msgstr "Spegni"
+
+#: ../src/shutdown-dialog.vala:112
+msgid "Are you sure you want to shut down the computer?"
+msgstr "Spegnere il computer?"
+
+#: ../src/shutdown-dialog.vala:137
+msgid ""
+"Other users are currently logged in to this computer, shutting down now will "
+"also close these other sessions."
+msgstr ""
+"Altri utenti sono attualmente collegati al computer, spegnendo ora verranno "
+"chiuse anche le altre sessioni."
+
+#: ../src/shutdown-dialog.vala:155
+msgid "Suspend"
+msgstr "Sospendi"
+
+#: ../src/shutdown-dialog.vala:172
+msgid "Hibernate"
+msgstr "Iberna"
+
+#: ../src/shutdown-dialog.vala:190
+msgid "Restart"
+msgstr "Riavvia"
+
+#. Translators: %s is a session name like KDE or Ubuntu
+#: ../src/toggle-box.vala:98
+#, c-format
+msgid "%s (Default)"
+msgstr "%s (predefinito)"
+
+#. Help string for command line --version flag
+#: ../src/unity-greeter.vala:512
+msgid "Show release version"
+msgstr "Mostra la versione del rilascio"
+
+#. Help string for command line --test-mode flag
+#: ../src/unity-greeter.vala:515
+msgid "Run in test mode"
+msgstr "Esegui in modalità di test"
+
+#. Arguments and description for --help text
+#: ../src/unity-greeter.vala:521
+msgid "- Unity Greeter"
+msgstr "- Unity greeter"
+
+#. Text printed out when an unknown command-line argument provided
+#: ../src/unity-greeter.vala:532
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr ""
+"Eseguire \"%s --help\" per l'elenco completo delle opzioni disponibili a "
+"riga di comando."
+
+#: ../src/user-list.vala:45
+msgid "Guest Session"
+msgstr "Sessione ospite"
+
+#: ../src/user-list.vala:438
+msgid "Please enter a complete e-mail address"
+msgstr "Inserire l'indirizzo email completo"
+
+#: ../src/user-list.vala:518
+msgid "Incorrect e-mail address or password"
+msgstr "Password o indirizzo email non corretto"
+
+#: ../src/user-list.vala:549
+msgid ""
+"If you have an account on an RDP or Citrix server, Remote Login lets you run "
+"applications from that server."
+msgstr ""
+"Se si dispone di un account su un server RDP o Citrix, «Accesso remoto» "
+"consente di eseguire le applicazioni da quel server."
+
+#. For 12.10 we still don't support Citrix
+#: ../src/user-list.vala:551
+msgid ""
+"If you have an account on an RDP server, Remote Login lets you run "
+"applications from that server."
+msgstr ""
+"Se si dispone di un account su un server RDP, «Accesso remoto» consente di "
+"eseguire le applicazioni da quel server."
+
+#: ../src/user-list.vala:554
+msgid "Cancel"
+msgstr "Annulla"
+
+#: ../src/user-list.vala:555
+msgid "Set Up…"
+msgstr "Imposta..."
+
+#: ../src/user-list.vala:557
+msgid ""
+"You need an Ubuntu Remote Login account to use this service. Would you like "
+"to set up an account now?"
+msgstr ""
+"È necessario un account «Accesso remoto» di Ubuntu per utilizzare questo "
+"servizio. Creare un account ora?"
+
+#: ../src/user-list.vala:561
+msgid "OK"
+msgstr "OK"
+
+#: ../src/user-list.vala:562
+msgid ""
+"You need an Ubuntu Remote Login account to use this service. Visit "
+"uccs.canonical.com to set up an account."
+msgstr ""
+"È necessario un account «Accesso remoto» di Ubuntu per utilizzare questo "
+"servizio. Visitare uccs.canonical.com per crearne uno."
+
+#: ../src/user-list.vala:679
+msgid "Server type not supported."
+msgstr "Tipo di server non supportato."
+
+#: ../src/user-list.vala:720
+msgid "Domain:"
+msgstr "Dominio:"
+
+#: ../src/user-list.vala:781
+msgid "Email address:"
+msgstr "Indirizzo email:"
+
+#. 'Log In' here is the button for logging in.
+#: ../src/user-list.vala:825
+msgid "Log In"
+msgstr "Accedi"
+
+#: ../src/user-list.vala:826
+#, c-format
+msgid "Login as %s"
+msgstr "Accesso come %s"
+
+#: ../src/user-list.vala:830
+msgid "Retry"
+msgstr "Riprova"
+
+#: ../src/user-list.vala:831
+#, c-format
+msgid "Retry as %s"
+msgstr "Riprova come %s"
+
+#: ../src/user-list.vala:869
+msgid "Login"
+msgstr "Accedi"
+
+#~ msgid "_Back"
+#~ msgstr "_Indietro"
+
+#~ msgid "Favorite Color (blue):"
+#~ msgstr "Colore preferito (blu):"

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="unity-greeter">
+  <schema id="com.canonical.unity-greeter" path="/com/canonical/unity-greeter/">
+    <key name="background" type="s">
+      <default>'/usr/share/backgrounds/warty-final-ubuntu.png'</default>
+      <summary>Background file to use, either an image path or a color (e.g. #772953)</summary>
+    </key>
+    <key name="background-color" type="s">
+      <default>'#2C001E'</default>
+      <summary>Background color (e.g. #772953), set before wallpaper is seen</summary>
+    </key>
+    <key name="draw-user-backgrounds" type="b">
+      <default>true</default>
+      <summary>Whether to draw user backgrounds</summary>
+    </key>
+    <key name="draw-grid" type="b">
+      <default>true</default>
+      <summary>Whether to draw an overlay grid</summary>
+    </key>
+    <key name="show-hostname" type="b">
+      <default>true</default>
+      <summary>Whether to show the hostname in the menubar</summary>
+    </key>
+    <key name="logo" type="s">
+      <default>'/usr/share/unity-greeter/logo.png'</default>
+      <summary>Logo file to use</summary>
+    </key>
+    <key name="background-logo" type="s">
+      <default>'/usr/share/unity-greeter/cof.png'</default>
+      <summary>Background logo file to use</summary>
+    </key>
+    <key name="theme-name" type="s">
+      <default>'Ambiance'</default>
+      <summary>GTK+ theme to use</summary>
+    </key>
+    <key name="icon-theme-name" type="s">
+      <default>'ubuntu-mono-dark'</default>
+      <summary>Icon theme to use</summary>
+    </key>
+    <key name="font-name" type="s">
+      <default>'Ubuntu 11'</default>
+      <summary>Font to use</summary>
+    </key>
+    <key name="xft-antialias" type="b">
+      <default>true</default>
+      <summary>Whether to antialias Xft fonts</summary>
+    </key>
+    <key name="xft-dpi" type="d">
+      <default>96</default>
+      <summary>Resolution for Xft in dots per inch</summary>
+    </key>
+    <key name="xft-hintstyle" type="s">
+      <choices>
+        <choice value='hintnone'/>
+        <choice value='hintslight'/>
+        <choice value='hintmedium'/>
+        <choice value='hintfull'/>
+      </choices>
+      <default>'hintslight'</default>
+      <summary>What degree of hinting to use</summary>
+    </key>
+    <key name="xft-rgba" type="s">
+      <choices>
+        <choice value='none'/>
+        <choice value='rgb'/>
+        <choice value='bgr'/>
+        <choice value='vrgb'/>
+        <choice value='vbgr'/>
+      </choices>
+      <default>'rgb'</default>
+      <summary>Type of subpixel antialiasing</summary>
+    </key>
+    <key name="onscreen-keyboard" type="b">
+      <default>false</default>
+      <summary>Whether to enable the onscreen keyboard</summary>
+    </key>
+    <key name="high-contrast" type="b">
+      <default>false</default>
+      <summary>Whether to use a high contrast theme</summary>
+    </key>
+    <key name="screen-reader" type="b">
+      <default>false</default>
+      <summary>Whether to enable the screen reader</summary>
+    </key>
+    <key name="play-ready-sound" type="b">
+      <default>true</default>
+      <summary>Whether to play sound when greeter is ready</summary>
+    </key>
+    <key name="indicators" type="as">
+      <default>['ug-accessibility', 'com.canonical.indicator.keyboard', 'com.canonical.indicator.session', 'com.canonical.indicator.datetime', 'com.canonical.indicator.power', 'com.canonical.indicator.sound', 'application']</default>
+      <summary>Which indicators to load</summary>
+    </key>
+    <key name="hidden-users" type="as">
+      <default>[]</default>
+      <summary>List of usernames that are hidden until a special key combination is hit</summary>
+    </key>
+    <key name="group-filter" type="as">
+      <default>[]</default>
+      <summary>List of groups that users must be part of to be shown (empty list shows all users)</summary>
+    </key>
+    <key name="idle-timeout" type="i">
+      <default>300</default>
+      <summary>Number of seconds of inactivity before blanking the screen. Set to 0 to never timeout.</summary>
+    </key>
+  </schema>
+</schemalist>

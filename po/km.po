@@ -1,0 +1,246 @@
+# Khmer translation for unity-greeter
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the unity-greeter package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: unity-greeter\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-03-22 05:42+0000\n"
+"PO-Revision-Date: 2012-01-24 16:14+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Khmer <km@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2016-03-23 05:32+0000\n"
+"X-Generator: Launchpad (build 17958)\n"
+
+#: ../src/greeter-list.vala:300
+#, c-format
+msgid "Enter password for %s"
+msgstr "បញ្ចូល​ពាក្យ​សម្ងាត់​សម្រាប់ %s"
+
+#: ../src/greeter-list.vala:805 ../src/user-list.vala:701
+msgid "Password:"
+msgstr "ពាក្យ​សម្ងាត់ ៖"
+
+#: ../src/greeter-list.vala:807 ../src/user-list.vala:695
+msgid "Username:"
+msgstr "ឈ្មោះ​អ្នក​ប្រើ ៖"
+
+#: ../src/greeter-list.vala:859
+msgid "Invalid password, please try again"
+msgstr "ពាក្យ​សម្ងាត់​មិន​ត្រឹមត្រូវ សូម​ព្យាយាម​ម្ដង​ទៀត"
+
+#: ../src/greeter-list.vala:870
+msgid "Failed to authenticate"
+msgstr "បាន​បរាជ័យ​ក្នុង​ការ​ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ"
+
+#: ../src/greeter-list.vala:916
+msgid "Failed to start session"
+msgstr "បានបរាជ័យក្នុងការចាប់ផ្តើមសម័យ"
+
+#: ../src/greeter-list.vala:931
+msgid "Logging in…"
+msgstr "កំពុង​ចូល…"
+
+#: ../src/main-window.vala:49
+msgid "Login Screen"
+msgstr "អេក្រង់​​ចូល"
+
+#: ../src/main-window.vala:116
+msgid "Back"
+msgstr "ថយក្រោយ"
+
+#: ../src/menubar.vala:220
+msgid "Onscreen keyboard"
+msgstr "ក្ដារចុច​លើ​អេក្រង់"
+
+#: ../src/menubar.vala:225
+msgid "High Contrast"
+msgstr "កម្រិត​ពណ៌​ខ្ពស់"
+
+#: ../src/menubar.vala:231
+msgid "Screen Reader"
+msgstr "កម្មវិធី​អាន​អេក្រង់"
+
+#: ../src/prompt-box.vala:212
+msgid "Session Options"
+msgstr "ជម្រើស​សម័យ"
+
+#: ../src/session-list.vala:34
+msgid "Select desktop environment"
+msgstr "ជ្រើស​បរិស្ថាន​ផ្ទៃតុ"
+
+#: ../src/shutdown-dialog.vala:101
+msgid "Goodbye. Would you like to…"
+msgstr "លាហើយ។ តើ​អ្នក​ចង់…"
+
+#: ../src/shutdown-dialog.vala:105 ../src/shutdown-dialog.vala:207
+msgid "Shut Down"
+msgstr "បិទ"
+
+#: ../src/shutdown-dialog.vala:112
+msgid "Are you sure you want to shut down the computer?"
+msgstr "តើ​អ្នក​ពិត​ជា​ចង់​បិទ​កុំព្យូទ័រ?"
+
+#: ../src/shutdown-dialog.vala:137
+msgid ""
+"Other users are currently logged in to this computer, shutting down now will "
+"also close these other sessions."
+msgstr ""
+"នៅ​ពេល​នេះ មាន​អ្នក​ប្រើ​ដទៃ​បាន​ចូល​ប្រើ​កុំព្យូទ័រ​នេះ "
+"ដូច្នេះ​ការ​បិទ​កុំព្យូទ័រ​ឥឡូវ​នេះ​ក៏​នឹង​បិទ​សម័យ​ប្រើ​ប្រាស់​ផ្សេងៗ​ទៀត​ដែ"
+"រ។"
+
+#: ../src/shutdown-dialog.vala:155
+msgid "Suspend"
+msgstr "ផ្អាក"
+
+#: ../src/shutdown-dialog.vala:172
+msgid "Hibernate"
+msgstr "សម្ងំ"
+
+#: ../src/shutdown-dialog.vala:190
+msgid "Restart"
+msgstr "ចាប់ផ្ដើម​ឡើង​វិញ"
+
+#. Translators: %s is a session name like KDE or Ubuntu
+#: ../src/toggle-box.vala:98
+#, c-format
+msgid "%s (Default)"
+msgstr "%s (លំនាំដើម)"
+
+#. Help string for command line --version flag
+#: ../src/unity-greeter.vala:512
+msgid "Show release version"
+msgstr "បង្ហាញ​កំណែ​ចេញ​ផ្សាយ"
+
+#. Help string for command line --test-mode flag
+#: ../src/unity-greeter.vala:515
+msgid "Run in test mode"
+msgstr "ដំណើរការ​ក្នុង​របៀប​សាកល្បង"
+
+#. Arguments and description for --help text
+#: ../src/unity-greeter.vala:521
+msgid "- Unity Greeter"
+msgstr "- សារ​ស្វាគមន៍​របស់ Unity"
+
+#. Text printed out when an unknown command-line argument provided
+#: ../src/unity-greeter.vala:532
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr ""
+"ដំណើរការ '%s --help' ដើម្បី​មើល​បញ្ជី​ជម្រើស​បន្ទាត់​ពាក្យ​បញ្ជា​ពេញលេញ ។"
+
+#: ../src/user-list.vala:45
+msgid "Guest Session"
+msgstr "សម័យ​ភ្ញៀវ"
+
+#: ../src/user-list.vala:438
+msgid "Please enter a complete e-mail address"
+msgstr "សូម​បញ្ចូល​អាសយដ្ឋាន​អ៊ីមែល​របស់​អ្នក"
+
+#: ../src/user-list.vala:518
+msgid "Incorrect e-mail address or password"
+msgstr "ពាក្យ​សម្ងាត់ ឬ​​អាសយដ្ឋាន​អ៊ីមែល​​មិន​ត្រឹមត្រូវ"
+
+#: ../src/user-list.vala:549
+msgid ""
+"If you have an account on an RDP or Citrix server, Remote Login lets you run "
+"applications from that server."
+msgstr ""
+"ប្រសិនបើ​អ្នក​មាន​គណនី​នៅ​លើ RDP ឬ​ម៉ាស៊ីន​មេ Citrix  "
+"ចូល​ពី​ចម្ងាយ​​​អ្នក​អាច​ចូល​ដំណើរការ​កម្មវិធី​ពី​ម៉ាស៊ីន​មេ​នោះ​បាន។"
+
+#. For 12.10 we still don't support Citrix
+#: ../src/user-list.vala:551
+msgid ""
+"If you have an account on an RDP server, Remote Login lets you run "
+"applications from that server."
+msgstr ""
+"ប្រសិនបើ​អ្នក​មាន​គណនី​នៅ​លើ​ម៉ាស៊ីន​មេ RDP  "
+"ចូល​ពី​ចម្ងាយ​អ្នក​អាច​ចូល​ដំណើរការ​កម្មវិធី​ពី​ម៉ាស៊ីន​មេ​នោះ​បាន។"
+
+#: ../src/user-list.vala:554
+msgid "Cancel"
+msgstr "បោះបង់"
+
+#: ../src/user-list.vala:555
+msgid "Set Up…"
+msgstr "រៀបចំ…"
+
+#: ../src/user-list.vala:557
+msgid ""
+"You need an Ubuntu Remote Login account to use this service. Would you like "
+"to set up an account now?"
+msgstr ""
+"អ្នក​ត្រូវ​ចូល​គណនី​អ៊ូប៊ុនទូ​ពី​ចម្ងាយ​ដើម្បី​ប្រើ​​ម៉ាស៊ីន​មេ​នេះ។ "
+"តើ​អ្នក​ចង់​រៀបចំ​គណនី​ឥឡូវ​នេះ​ឬ?"
+
+#: ../src/user-list.vala:561
+msgid "OK"
+msgstr "យល់ព្រម"
+
+#: ../src/user-list.vala:562
+msgid ""
+"You need an Ubuntu Remote Login account to use this service. Visit "
+"uccs.canonical.com to set up an account."
+msgstr ""
+"អ្នក​ត្រូវ​ចូល​គណនី​អ៊ូប៊ុនទូ​ពី​ចម្ងាយ​ដើម្បី​ប្រើ​ម៉ាស៊ីន​មេ​​នេះ។ មើល "
+"uccs.canonical.com ដើម្បី​រៀបចំ​គណនី។"
+
+#: ../src/user-list.vala:679
+msgid "Server type not supported."
+msgstr "ប្រភេទ​ម៉ាស៊ីន​មេ​មិន​ត្រូវ​បាន​គាំទ្រ។"
+
+#: ../src/user-list.vala:720
+msgid "Domain:"
+msgstr "ដែន ៖"
+
+#: ../src/user-list.vala:781
+msgid "Email address:"
+msgstr "អាសយដ្ឋាន​អ៊ីមែល​ ៖"
+
+#. 'Log In' here is the button for logging in.
+#: ../src/user-list.vala:825
+msgid "Log In"
+msgstr "ចូល"
+
+#: ../src/user-list.vala:826
+#, c-format
+msgid "Login as %s"
+msgstr "ចូល​ជា %s"
+
+#: ../src/user-list.vala:830
+msgid "Retry"
+msgstr "ព្យាយាម​ម្ដង​ទៀត"
+
+#: ../src/user-list.vala:831
+#, c-format
+msgid "Retry as %s"
+msgstr "ព្យាយាម​ម្ដងទៀត​ជា %s"
+
+#: ../src/user-list.vala:869
+msgid "Login"
+msgstr "ចូល"
+
+#~ msgid "Other..."
+#~ msgstr "ផ្សេង​​ទៀត..."
+
+#~ msgid "Enter username"
+#~ msgstr "បញ្ចូល​ឈ្មោះ​អ្នក​ប្រើ"
+
+#~ msgid "Enter password"
+#~ msgstr "បញ្ចូល​ពាក្យ​សម្ងាត់"
+
+#~ msgid "Logging in..."
+#~ msgstr "កំពុង​ចូល​..."
+
+#~ msgid "_Back"
+#~ msgstr "ថយ​ក្រោយ"
+
+#~ msgid "Favorite Color (blue):"
+#~ msgstr "ពណ៌​សំណព្វ (ខៀវ)៖"

@@ -1,0 +1,230 @@
+# Malayalam translation for unity-greeter
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the unity-greeter package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: unity-greeter\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-03-22 05:42+0000\n"
+"PO-Revision-Date: 2012-01-24 16:14+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Malayalam <ml@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2016-03-23 05:32+0000\n"
+"X-Generator: Launchpad (build 17958)\n"
+
+#: ../src/greeter-list.vala:300
+#, c-format
+msgid "Enter password for %s"
+msgstr "%s-നുള്ള അടയാളവാക്കു് നല്‍കുക"
+
+#: ../src/greeter-list.vala:805 ../src/user-list.vala:701
+msgid "Password:"
+msgstr "അടയാളവാക്ക്:"
+
+#: ../src/greeter-list.vala:807 ../src/user-list.vala:695
+msgid "Username:"
+msgstr "നാമം:"
+
+#: ../src/greeter-list.vala:859
+msgid "Invalid password, please try again"
+msgstr "തെറ്റായ അടയാളവാക്ക്, ദയവായി വീണ്ടും ശ്രമിക്കുക"
+
+#: ../src/greeter-list.vala:870
+msgid "Failed to authenticate"
+msgstr "ആധികാരികത തെളിയിക്കുന്നതില്‍ പരാജയപ്പെട്ടു"
+
+#: ../src/greeter-list.vala:916
+msgid "Failed to start session"
+msgstr ""
+
+#: ../src/greeter-list.vala:931
+msgid "Logging in…"
+msgstr "പ്രവേശിക്കുന്നു"
+
+#: ../src/main-window.vala:49
+msgid "Login Screen"
+msgstr "പ്രവേശന ജാലകം"
+
+#: ../src/main-window.vala:116
+msgid "Back"
+msgstr "പിന്നോട്ട്"
+
+#: ../src/menubar.vala:220
+msgid "Onscreen keyboard"
+msgstr "സ്ക്രീനില്‍ ലഭ്യമാകുന്ന കീ-ബോര്‍ഡ്"
+
+#: ../src/menubar.vala:225
+msgid "High Contrast"
+msgstr "ഉയർന്ന തെളിച്ചം"
+
+#: ../src/menubar.vala:231
+msgid "Screen Reader"
+msgstr "യവനികാവായനോപാധി"
+
+#: ../src/prompt-box.vala:212
+msgid "Session Options"
+msgstr "വേളയിലെ ഉപാധികൾ"
+
+#: ../src/session-list.vala:34
+msgid "Select desktop environment"
+msgstr "ഡെസ്ക്ടോപ്പ് പരിസ്ഥിതി തിരഞ്ഞെടുക്കുക"
+
+#: ../src/shutdown-dialog.vala:101
+msgid "Goodbye. Would you like to…"
+msgstr "വീണ്ടും കാണാം. താങ്കള്‍ ഉദ്ദേശിക്കുന്നുണ്ടോ..."
+
+#: ../src/shutdown-dialog.vala:105 ../src/shutdown-dialog.vala:207
+msgid "Shut Down"
+msgstr "അടച്ചു പൂട്ടുക"
+
+#: ../src/shutdown-dialog.vala:112
+msgid "Are you sure you want to shut down the computer?"
+msgstr "താങ്കള്‍ ഈ കമ്പ്യൂട്ടര്‍ അടച്ചു പൂട്ടാന്‍ ഉദ്ദേശിക്കുന്നുണ്ടോ?"
+
+#: ../src/shutdown-dialog.vala:137
+msgid ""
+"Other users are currently logged in to this computer, shutting down now will "
+"also close these other sessions."
+msgstr ""
+
+#: ../src/shutdown-dialog.vala:155
+msgid "Suspend"
+msgstr "താത്കാലികനിദ്ര"
+
+#: ../src/shutdown-dialog.vala:172
+msgid "Hibernate"
+msgstr "ശിശിരനിദ്ര"
+
+#: ../src/shutdown-dialog.vala:190
+msgid "Restart"
+msgstr "പുനരാരംഭിക്കുക"
+
+#. Translators: %s is a session name like KDE or Ubuntu
+#: ../src/toggle-box.vala:98
+#, c-format
+msgid "%s (Default)"
+msgstr "%s (സ്വതേ)"
+
+#. Help string for command line --version flag
+#: ../src/unity-greeter.vala:512
+msgid "Show release version"
+msgstr "പതിപ്പുവിവരം പ്രദര്‍ശിപ്പിക്കുക"
+
+#. Help string for command line --test-mode flag
+#: ../src/unity-greeter.vala:515
+msgid "Run in test mode"
+msgstr "പരീക്ഷണരൂപേണ പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#. Arguments and description for --help text
+#: ../src/unity-greeter.vala:521
+msgid "- Unity Greeter"
+msgstr "- Unity സ്വാഗത ജാലകം"
+
+#. Text printed out when an unknown command-line argument provided
+#: ../src/unity-greeter.vala:532
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr "ലഭ്യമായ കമാന്‍ഡ് ലൈന്‍ ഉപാധികള്‍ക്കായി '%s --help' കാണുക."
+
+#: ../src/user-list.vala:45
+msgid "Guest Session"
+msgstr "'അതിഥി' വേള"
+
+#: ../src/user-list.vala:438
+msgid "Please enter a complete e-mail address"
+msgstr "പൂര്‍ണമായ ഇമെയില്‍  വിലാസം നല്‍കുക"
+
+#: ../src/user-list.vala:518
+msgid "Incorrect e-mail address or password"
+msgstr "ഇ-മെയില്‍ ഐടിയിലോ അടയാളവാക്കിലോ പിശകുണ്ട്"
+
+#: ../src/user-list.vala:549
+msgid ""
+"If you have an account on an RDP or Citrix server, Remote Login lets you run "
+"applications from that server."
+msgstr ""
+"നിങ്ങള്‍ക്ക് RDP-യിലോ Citrix server-ലോ അക്കൌണ്ട് ഉണ്ട് എങ്കില്‍, ആ "
+"സര്‍വ്വറില്‍ നിന്ന് തന്നെ റിമോട്ട് ലോഗിനിലൂടെ ആപ്ലിക്കേഷനുകള്‍ "
+"പ്രവര്‍ത്തിപ്പിക്കാനാകും"
+
+#. For 12.10 we still don't support Citrix
+#: ../src/user-list.vala:551
+msgid ""
+"If you have an account on an RDP server, Remote Login lets you run "
+"applications from that server."
+msgstr ""
+"നിങ്ങള്‍ക്ക് RDP-ഇല്‍ അക്കൌണ്ട് ഉണ്ട് എങ്കില്‍, ആ സര്‍വ്വറില്‍ നിന്ന് തന്നെ "
+"റിമോട്ട് ലോഗിനിലൂടെ ആപ്ലിക്കേഷനുകള്‍ പ്രവര്‍ത്തിപ്പിക്കാനാകും"
+
+#: ../src/user-list.vala:554
+msgid "Cancel"
+msgstr "റദ്ദാക്കുക"
+
+#: ../src/user-list.vala:555
+msgid "Set Up…"
+msgstr "തയ്യാറാക്കുക"
+
+#: ../src/user-list.vala:557
+msgid ""
+"You need an Ubuntu Remote Login account to use this service. Would you like "
+"to set up an account now?"
+msgstr ""
+"നിങ്ങള്ക്ക്  ഈ സര്‍വീസ്  ഉപയോഗിക്കണമെങ്കില്‍ ഉബുണ്ടു റിമോട്ട് ലോഗിന്‍ "
+"അക്കൗണ്ട്‌ അത്യാവശ്യമാണ് . നിങ്ങള്‍ ഒരു അക്കൗണ്ട്‌ തുടങ്ങാന്‍ "
+"താല്പര്യപ്പെടുന്നുണ്ടോ??"
+
+#: ../src/user-list.vala:561
+msgid "OK"
+msgstr "ശെരി"
+
+#: ../src/user-list.vala:562
+msgid ""
+"You need an Ubuntu Remote Login account to use this service. Visit "
+"uccs.canonical.com to set up an account."
+msgstr ""
+"നിങ്ങള്‍ക്ക് ഈ സേവനം ഉപയോഗിക്കാന്‍ 'ഉബുണ്ടു റിമോട്ട് ലോഗിന്‍' അക്കൌണ്ട് "
+"അത്യാവശ്യമാണ്. അക്കൌണ്ട് തുടങ്ങാന്‍ താല്‍പര്യമുണ്ടെങ്കില്‍ "
+"'uccs.canonical.com' സന്ദര്‍ശിക്കുക"
+
+#: ../src/user-list.vala:679
+msgid "Server type not supported."
+msgstr "ഈ തരം സര്‍വ്വര്‍ പിന്‍താങ്ങപ്പെടുന്നതല്ല"
+
+#: ../src/user-list.vala:720
+msgid "Domain:"
+msgstr "ഡൊമെയിന്‍:"
+
+#: ../src/user-list.vala:781
+msgid "Email address:"
+msgstr "ഇ-മെയില്‍ വിലാസം"
+
+#. 'Log In' here is the button for logging in.
+#: ../src/user-list.vala:825
+msgid "Log In"
+msgstr "പ്രവേശിക്കുക"
+
+#: ../src/user-list.vala:826
+#, c-format
+msgid "Login as %s"
+msgstr "%s- ആയി പ്രവേശിക്കുക"
+
+#: ../src/user-list.vala:830
+msgid "Retry"
+msgstr "വീണ്ടും ശ്രമിയ്ക്കുക"
+
+#: ../src/user-list.vala:831
+#, c-format
+msgid "Retry as %s"
+msgstr "%s ആയി വീണ്ടും ശ്രമിക്കുക"
+
+#: ../src/user-list.vala:869
+msgid "Login"
+msgstr "പ്രവേശിക്കുക"
+
+#~ msgid "Favorite Color (blue):"
+#~ msgstr "ഇഷ്ടപ്പെട്ട നിറം (നീല):"

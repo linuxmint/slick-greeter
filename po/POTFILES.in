@@ -1,0 +1,26 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+src/animate-timer.vala
+src/background.vala
+src/cached-image.vala
+src/dash-box.vala
+src/dash-button.vala
+src/dash-entry.vala
+src/fadable-box.vala
+src/fadable.vala
+src/fading-label.vala
+src/flat-button.vala
+src/greeter-list.vala
+src/list-stack.vala
+src/main-window.vala
+src/menubar.vala
+src/menu.vala
+src/prompt-box.vala
+src/session-list.vala
+src/settings-daemon.vala
+src/settings.vala
+src/shutdown-dialog.vala
+src/toggle-box.vala
+src/unity-greeter.vala
+src/user-list.vala
+src/user-prompt-box.vala

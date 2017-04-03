@@ -1,0 +1,222 @@
+# Chinese (Hong Kong) translation for unity-greeter
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the unity-greeter package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: unity-greeter\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-03-22 05:42+0000\n"
+"PO-Revision-Date: 2014-02-08 15:27+0000\n"
+"Last-Translator: Roy Chan <roy.chan@linux.org.hk>\n"
+"Language-Team: Chinese (Hong Kong) <zh_HK@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2016-03-23 05:32+0000\n"
+"X-Generator: Launchpad (build 17958)\n"
+
+#: ../src/greeter-list.vala:300
+#, c-format
+msgid "Enter password for %s"
+msgstr "為 %s 輸入密碼"
+
+#: ../src/greeter-list.vala:805 ../src/user-list.vala:701
+msgid "Password:"
+msgstr "密碼:"
+
+#: ../src/greeter-list.vala:807 ../src/user-list.vala:695
+msgid "Username:"
+msgstr "使用者名稱:"
+
+#: ../src/greeter-list.vala:859
+msgid "Invalid password, please try again"
+msgstr "密碼無效，請重試"
+
+#: ../src/greeter-list.vala:870
+msgid "Failed to authenticate"
+msgstr "身分核證失敗"
+
+#: ../src/greeter-list.vala:916
+msgid "Failed to start session"
+msgstr "無法啟動作業階段"
+
+#: ../src/greeter-list.vala:931
+msgid "Logging in…"
+msgstr "正在登入…"
+
+#: ../src/main-window.vala:49
+msgid "Login Screen"
+msgstr "登入畫面"
+
+#: ../src/main-window.vala:116
+msgid "Back"
+msgstr "返回"
+
+#: ../src/menubar.vala:220
+msgid "Onscreen keyboard"
+msgstr "螢幕鍵盤"
+
+#: ../src/menubar.vala:225
+msgid "High Contrast"
+msgstr "高對比"
+
+#: ../src/menubar.vala:231
+msgid "Screen Reader"
+msgstr "螢幕閱讀器"
+
+#: ../src/prompt-box.vala:212
+msgid "Session Options"
+msgstr "作業階段選項"
+
+#: ../src/session-list.vala:34
+msgid "Select desktop environment"
+msgstr "選取桌面環境"
+
+#: ../src/shutdown-dialog.vala:101
+msgid "Goodbye. Would you like to…"
+msgstr "再見，請問您想..."
+
+#: ../src/shutdown-dialog.vala:105 ../src/shutdown-dialog.vala:207
+msgid "Shut Down"
+msgstr "關機"
+
+#: ../src/shutdown-dialog.vala:112
+msgid "Are you sure you want to shut down the computer?"
+msgstr "您確定您想關閉電腦嗎？"
+
+#: ../src/shutdown-dialog.vala:137
+msgid ""
+"Other users are currently logged in to this computer, shutting down now will "
+"also close these other sessions."
+msgstr "其他用戶當前已登錄到這台電腦，現在關機也將關閉這些其餘的作業階段。"
+
+#: ../src/shutdown-dialog.vala:155
+msgid "Suspend"
+msgstr "暫停"
+
+#: ../src/shutdown-dialog.vala:172
+msgid "Hibernate"
+msgstr "休眠"
+
+#: ../src/shutdown-dialog.vala:190
+msgid "Restart"
+msgstr "重新啟動"
+
+#. Translators: %s is a session name like KDE or Ubuntu
+#: ../src/toggle-box.vala:98
+#, c-format
+msgid "%s (Default)"
+msgstr "%s (預設)"
+
+#. Help string for command line --version flag
+#: ../src/unity-greeter.vala:512
+msgid "Show release version"
+msgstr "顯示發行版本"
+
+#. Help string for command line --test-mode flag
+#: ../src/unity-greeter.vala:515
+msgid "Run in test mode"
+msgstr "以測試模式執行"
+
+#. Arguments and description for --help text
+#: ../src/unity-greeter.vala:521
+msgid "- Unity Greeter"
+msgstr "- Unity 歡迎程式"
+
+#. Text printed out when an unknown command-line argument provided
+#: ../src/unity-greeter.vala:532
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr "執行「%s --help」來查看所有命令列可用選項的完整清單。"
+
+#: ../src/user-list.vala:45
+msgid "Guest Session"
+msgstr "訪客作業階段"
+
+#: ../src/user-list.vala:438
+msgid "Please enter a complete e-mail address"
+msgstr "請輸入完整的電子郵件地址"
+
+#: ../src/user-list.vala:518
+msgid "Incorrect e-mail address or password"
+msgstr "電子郵件地址或密碼不正確"
+
+#: ../src/user-list.vala:549
+msgid ""
+"If you have an account on an RDP or Citrix server, Remote Login lets you run "
+"applications from that server."
+msgstr "若你有 RDP 或 Citrix 伺服器的帳號，「遠端登入」讓你可自該伺服器執行應用程式。"
+
+#. For 12.10 we still don't support Citrix
+#: ../src/user-list.vala:551
+msgid ""
+"If you have an account on an RDP server, Remote Login lets you run "
+"applications from that server."
+msgstr "若你有 RDP 伺服器的帳號，「遠端登入」可讓你自該伺服器執行應用程式。"
+
+#: ../src/user-list.vala:554
+msgid "Cancel"
+msgstr "取消"
+
+#: ../src/user-list.vala:555
+msgid "Set Up…"
+msgstr "設置..."
+
+#: ../src/user-list.vala:557
+msgid ""
+"You need an Ubuntu Remote Login account to use this service. Would you like "
+"to set up an account now?"
+msgstr "你要有 Ubuntu 遠端登入帳號才能使用此服務。想要馬上設置帳號嗎？"
+
+#: ../src/user-list.vala:561
+msgid "OK"
+msgstr "確定"
+
+#: ../src/user-list.vala:562
+msgid ""
+"You need an Ubuntu Remote Login account to use this service. Visit "
+"uccs.canonical.com to set up an account."
+msgstr "你要有 Ubuntu 遠端登入帳號才能使用此服務。請造訪 uccs.canonical.com 來設置帳號。"
+
+#: ../src/user-list.vala:679
+msgid "Server type not supported."
+msgstr "伺服器類型尚未支援。"
+
+#: ../src/user-list.vala:720
+msgid "Domain:"
+msgstr "網域："
+
+#: ../src/user-list.vala:781
+msgid "Email address:"
+msgstr "電子郵件地址："
+
+#. 'Log In' here is the button for logging in.
+#: ../src/user-list.vala:825
+msgid "Log In"
+msgstr "登入"
+
+#: ../src/user-list.vala:826
+#, c-format
+msgid "Login as %s"
+msgstr "以 %s 身份登入"
+
+#: ../src/user-list.vala:830
+msgid "Retry"
+msgstr "重試"
+
+#: ../src/user-list.vala:831
+#, c-format
+msgid "Retry as %s"
+msgstr "以 %s 身份重試"
+
+#: ../src/user-list.vala:869
+msgid "Login"
+msgstr "登入"
+
+#~ msgid "_Back"
+#~ msgstr "返回(_B)"
+
+#~ msgid "Favorite Color (blue):"
+#~ msgstr "喜好色彩 (藍)："
