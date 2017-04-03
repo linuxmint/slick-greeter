@@ -11,12 +11,9 @@ dist_pkgdata_DATA = \
 	dialog_close.png \
 	dialog_close_highlight.png \
 	dialog_close_press.png \
-	gnome_badge.png \
 	hibernate_highlight.png \
 	hibernate.png \
-	kde_badge.png \
 	message.png \
-	recovery_console_badge.png \
 	remote_login_help.png \
 	restart_highlight.png \
 	restart.png \
@@ -27,9 +24,7 @@ dist_pkgdata_DATA = \
 	suspend.png \
 	switcher_corner.png \
 	switcher_left.png \
-	switcher_top.png \
-	ubuntu_badge.png \
-	unknown_badge.png
+	switcher_top.png
 
 @GSETTINGS_RULES@
 gsettings_SCHEMAS = x.dm.slick-greeter.gschema.xml

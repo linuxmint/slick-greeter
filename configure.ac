@@ -52,6 +52,7 @@ dnl ###########################################################################
 AC_CONFIG_FILES([
 Makefile
 data/Makefile
+files/Makefile
 po/Makefile.in
 src/Makefile
 tests/Makefile

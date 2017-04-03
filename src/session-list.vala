@@ -40,7 +40,6 @@ public class SessionPrompt : PromptBox
         {
             box.add_item ("gnome", "GNOME", SessionList.get_badge ("gnome"));
             box.add_item ("kde", "KDE", SessionList.get_badge ("kde"));
-            box.add_item ("ubuntu", "Ubuntu", SessionList.get_badge ("ubuntu"));
         }
         else
         {
@@ -98,20 +97,20 @@ public class SessionList : GreeterList
         {
         case "ubuntu":
         case "ubuntu-2d":
-            return "ubuntu_badge.png";
+            return "ubuntu.png";
         case "gnome-classic":
         case "gnome-flashback-compiz":
         case "gnome-flashback-metacity":
         case "gnome-shell":
         case "gnome-wayland":
         case "gnome":
-            return "gnome_badge.png";
+            return "gnome.png";
         case "kde":
         case "kde-plasma":
         case "plasma":
-            return "kde_badge.png";
+            return "kde.png";
         case "xterm":
-            return "recovery_console_badge.png";
+            return "recovery_console.png";
         case "remote-login":
             return "remote_login_help.png";
         default:
@@ -126,14 +125,12 @@ public class SessionList : GreeterList
 
         if (name == null)
         {
-            /* Not a known name, but let's see if we have a custom badge before
-               giving up entirely and using the unknown badget. */
-            var maybe_name = "custom_%s_badge.png".printf (session);
-            var maybe_path = Path.build_filename (Config.PKGDATADIR, maybe_name, null);
-            if (FileUtils.test (maybe_path, FileTest.EXISTS))
-                name = maybe_name;
+            var filename = "%s.png".printf (session);
+            var path = Path.build_filename ("/usr/share/slick-greeter/badges/", filename, null);
+            if (FileUtils.test (path, FileTest.EXISTS))
+                name = filename;
             else
-                name = "unknown_badge.png";
+                name = "unknown.png";
         }
 
         if (badges == null)
@@ -144,7 +141,7 @@ public class SessionList : GreeterList
         {
             try
             {
-                pixbuf = new Gdk.Pixbuf.from_file (Path.build_filename (Config.PKGDATADIR, name, null));
+                pixbuf = new Gdk.Pixbuf.from_file (Path.build_filename ("/usr/share/slick-greeter/badges/", name, null));
                 badges.insert (name, pixbuf);
             }
             catch (Error e)
