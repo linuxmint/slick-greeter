@@ -87,7 +87,7 @@
       <summary>A sound file to play when the greeter is ready</summary>
     </key>
     <key name="indicators" type="as">
-      <default>['ug-accessibility', 'com.canonical.indicator.keyboard', 'com.canonical.indicator.session', 'com.canonical.indicator.datetime', 'com.canonical.indicator.power', 'com.canonical.indicator.sound', 'application']</default>
+      <default>['ug-accessibility', 'com.canonical.indicator.keyboard', 'com.canonical.indicator.power']</default>
       <summary>Which indicators to load</summary>
     </key>
     <key name="hidden-users" type="as">
