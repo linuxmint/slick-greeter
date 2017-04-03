@@ -111,7 +111,20 @@ public class SlickGreeter
             main_window.show_shutdown_dialog (dialog_type);
         });
         dbus_object.close_dialog.connect ((type) => { main_window.close_shutdown_dialog (); });
-
+        Bus.own_name (BusType.SESSION, "com.canonical.Unity", BusNameOwnerFlags.NONE,
+                      (c) =>
+                      {
+                          try
+                          {
+                              c.register_object ("/org/gnome/SessionManager/EndSessionDialog", dbus_object);
+                          }
+                          catch (Error e)
+                          {
+                              warning ("Failed to register /org/gnome/SessionManager/EndSessionDialog: %s", e.message);
+                          }
+                      },
+                      null,
+                      () => debug ("Failed to acquire name com.canonical.Unity"));
         start_fake_wm ();
         Gdk.threads_add_idle (ready_cb);
     }
