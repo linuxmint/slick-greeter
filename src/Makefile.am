@@ -6,7 +6,6 @@ noinst_PROGRAMS = logo-generator
 slick_greeter_SOURCES = \
 	config.vapi \
 	fixes.vapi \
-	indicator.vapi \
 	xsync.vapi \
 	animate-timer.vala \
 	background.vala \
@@ -44,8 +43,7 @@ slick_greeter_CFLAGS = \
 	-DGETTEXT_PACKAGE=\"$(GETTEXT_PACKAGE)\" \
 	-DLOCALEDIR=\""$(localedir)"\" \
 	-DVERSION=\"$(VERSION)\" \
-	-DPKGDATADIR=\""$(pkgdatadir)"\" \
-	-DINDICATORDIR=\""$(INDICATORDIR)"\"
+	-DPKGDATADIR=\""$(pkgdatadir)"\"
 
 logo_generator_CFLAGS = $(slick_greeter_CFLAGS)
 

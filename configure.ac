@@ -20,8 +20,6 @@ dnl ###########################################################################
 PKG_CHECK_MODULES(SLICK_GREETER, [
     gtk+-3.0
     gdk-x11-3.0
-    indicator3-0.4
-    libido3-0.1 >= 13.10.0
     liblightdm-gobject-1 >= 1.12.0
     freetype2
     cairo-ft
@@ -30,11 +28,6 @@ PKG_CHECK_MODULES(SLICK_GREETER, [
     x11
     xext
 ])
-
-AC_DEFINE_UNQUOTED([INDICATOR_FILE_DIR], ["${prefix}/share/unity/indicators"], [Indicator files are searched for in this directory])
-
-INDICATORDIR=`$PKG_CONFIG --variable=indicatordir indicator3-0.4`
-AC_SUBST(INDICATORDIR)
 
 dnl ###########################################################################
 dnl Internationalization

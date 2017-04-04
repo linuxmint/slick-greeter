@@ -4,7 +4,5 @@ namespace Config
   public const string GETTEXT_PACKAGE;
   public const string LOCALEDIR;
   public const string VERSION;
-  public const string INDICATOR_FILE_DIR;
   public const string PKGDATADIR;
-  public const string INDICATORDIR;
 }

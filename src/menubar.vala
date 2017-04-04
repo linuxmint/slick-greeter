@@ -74,51 +74,6 @@
     }
 }
 
-private class IndicatorMenuItem : Gtk.MenuItem
-{
-    public unowned Indicator.ObjectEntry entry;
-    private Gtk.Box hbox;
-
-    public IndicatorMenuItem (Indicator.ObjectEntry entry)
-    {
-        this.entry = entry;
-        this.hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 3);
-        this.add (this.hbox);
-        this.hbox.show ();
-
-        if (entry.label != null)
-        {
-            entry.label.show.connect (this.visibility_changed_cb);
-            entry.label.hide.connect (this.visibility_changed_cb);
-            hbox.pack_start (entry.label, false, false, 0);
-        }
-        if (entry.image != null)
-        {
-            entry.image.show.connect (visibility_changed_cb);
-            entry.image.hide.connect (visibility_changed_cb);
-            hbox.pack_start (entry.image, false, false, 0);
-        }
-        if (entry.accessible_desc != null)
-            get_accessible ().set_name (entry.accessible_desc);
-        if (entry.menu != null)
-            set_submenu (entry.menu as Gtk.Widget);
-
-        if (has_visible_child ())
-            show ();
-    }
-
-    public bool has_visible_child ()
-    {
-        return (entry.image != null && entry.image.get_visible ()) ||
-               (entry.label != null && entry.label.get_visible ());
-    }
-
-    public void visibility_changed_cb (Gtk.Widget widget)
-    {
-        visible = has_visible_child ();
-    }
-}
-
 public class MenuBar : Gtk.MenuBar
 {
     public Background? background { get; construct; default = null; }
@@ -167,7 +122,6 @@ public class MenuBar : Gtk.MenuBar
     }
 
     private string default_theme_name;
-    private List<Indicator.Object> indicator_objects;
     private Gtk.CheckMenuItem high_contrast_item;
     private Pid keyboard_pid = 0;
     private Pid reader_pid = 0;
@@ -181,7 +135,7 @@ public class MenuBar : Gtk.MenuBar
 
         pack_direction = Gtk.PackDirection.RTL;
 
-        var session_menu = make_session_indicator ();
+        var session_menu = make_session_item ();
         session_menu.right_justified = true;
         append (session_menu);
 
@@ -199,7 +153,7 @@ public class MenuBar : Gtk.MenuBar
         update_clock ();
         Timeout.add (1000, update_clock);
 
-        var keyboard_menu = make_keyboard_indicator ();
+        var keyboard_menu = make_keyboard_item ();
         append (keyboard_menu);
 
         try {
@@ -219,7 +173,7 @@ public class MenuBar : Gtk.MenuBar
             warning("Could not connect to Upower: %s", e.message);
         }
 
-        var a11y_item = make_a11y_indicator ();
+        var a11y_item = make_a11y_item ();
         append (a11y_item);
 
         if (UGSettings.get_boolean (UGSettings.KEY_SHOW_HOSTNAME))
@@ -248,8 +202,6 @@ public class MenuBar : Gtk.MenuBar
         {
             debug ("Internal error loading menubar style: %s", e.message);
         }
-
-        setup_indicators ();
 
         SlickGreeter.singleton.starting_session.connect (cleanup);
     }
@@ -313,34 +265,7 @@ public class MenuBar : Gtk.MenuBar
         nat = HEIGHT;
     }
 
-    private void greeter_set_env (string key, string val)
-    {
-        GLib.Environment.set_variable (key, val, true);
-
-        /* And also set it in the DBus activation environment so that any
-         * indicator services pick it up. */
-        try
-        {
-            var proxy = new GLib.DBusProxy.for_bus_sync (GLib.BusType.SESSION,
-                                                         GLib.DBusProxyFlags.NONE, null,
-                                                         "org.freedesktop.DBus",
-                                                         "/org/freedesktop/DBus",
-                                                         "org.freedesktop.DBus",
-                                                         null);
-
-            var builder = new GLib.VariantBuilder (GLib.VariantType.ARRAY);
-            builder.add ("{ss}", key, val);
-
-            proxy.call_sync ("UpdateActivationEnvironment", new GLib.Variant ("(a{ss})", builder), GLib.DBusCallFlags.NONE, -1, null);
-        }
-        catch (Error e)
-        {
-            warning ("Could not get set environment for indicators: %s", e.message);
-            return;
-        }
-    }
-
-    private Gtk.MenuItem make_a11y_indicator ()
+    private Gtk.MenuItem make_a11y_item ()
     {
         var a11y_item = new Gtk.MenuItem ();
         var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 3);
@@ -371,7 +296,7 @@ public class MenuBar : Gtk.MenuBar
         return a11y_item;
     }
 
-    private Gtk.MenuItem make_session_indicator ()
+    private Gtk.MenuItem make_session_item ()
     {
         var item = new Gtk.MenuItem ();
         var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 3);
@@ -428,7 +353,7 @@ public class MenuBar : Gtk.MenuBar
         return item;
     }
 
-    private Gtk.MenuItem make_keyboard_indicator ()
+    private Gtk.MenuItem make_keyboard_item ()
     {
         var item = new Gtk.MenuItem ();
         var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 3);
@@ -452,135 +377,6 @@ public class MenuBar : Gtk.MenuBar
         item.show ();
 
         return item;
-    }
-
-    private Indicator.Object? load_indicator_file (string indicator_name)
-    {
-        string dir = Config.INDICATOR_FILE_DIR;
-        string path;
-        Indicator.Object io;
-
-        /* To stay backwards compatible, use com.canonical.indicator as the default prefix */
-        if (indicator_name.index_of_char ('.') < 0)
-            path = @"$dir/com.canonical.indicator.$indicator_name";
-        else
-            path = @"$dir/$indicator_name";
-
-        try
-        {
-            io = new Indicator.Ng.for_profile (path, "desktop_greeter");
-        }
-        catch (FileError error)
-        {
-            /* the calling code handles file-not-found; don't warn here */
-            return null;
-        }
-        catch (Error error)
-        {
-            warning ("unable to load %s: %s", indicator_name, error.message);
-            return null;
-        }
-
-        return io;
-    }
-
-    private Indicator.Object? load_indicator_library (string indicator_name)
-    {
-        // Find file, if it exists
-        string[] names_to_try = {"lib" + indicator_name + ".so",
-                                 indicator_name + ".so",
-                                 indicator_name};
-        foreach (var filename in names_to_try)
-        {
-            var full_path = Path.build_filename (Config.INDICATORDIR, filename);
-            var io = new Indicator.Object.from_file (full_path);
-            if (io != null)
-                return io;
-        }
-
-        return null;
-    }
-
-    private void load_indicator (string indicator_name)
-    {
-        if (indicator_name == "ug-accessibility")
-        {
-
-        }
-        else
-        {
-            var io = load_indicator_file (indicator_name);
-
-            if (io == null)
-                io = load_indicator_library (indicator_name);
-
-            if (io != null)
-            {
-                indicator_objects.append (io);
-                io.entry_added.connect (indicator_added_cb);
-                io.entry_removed.connect (indicator_removed_cb);
-                foreach (var entry in io.get_entries ())
-                    indicator_added_cb (io, entry);
-            }
-        }
-    }
-
-    private void setup_indicators ()
-    {
-        /* Set indicators to run with reduced functionality */
-        greeter_set_env ("INDICATOR_GREETER_MODE", "1");
-
-        /* Don't allow virtual file systems? */
-        greeter_set_env ("GIO_USE_VFS", "local");
-        greeter_set_env ("GVFS_DISABLE_FUSE", "1");
-
-        /* Hint to have unity-settings-daemon run in greeter mode */
-        greeter_set_env ("RUNNING_UNDER_GDM", "1");
-
-        /* Let indicators know about our unique dbus name */
-        try
-        {
-            var conn = Bus.get_sync (BusType.SESSION);
-            greeter_set_env ("SLICK_GREETER_DBUS_NAME", conn.get_unique_name ());
-        }
-        catch (IOError e)
-        {
-            debug ("Could not set DBUS_NAME: %s", e.message);
-        }
-
-        debug ("LANG=%s LANGUAGE=%s", Environment.get_variable ("LANG"), Environment.get_variable ("LANGUAGE"));
-
-        var indicator_list = UGSettings.get_strv(UGSettings.KEY_INDICATORS);
-
-        var update_indicator_list = false;
-        for (var i = 0; i < indicator_list.length; i++)
-        {
-            if (indicator_list[i] == "ug-keyboard")
-            {
-                indicator_list[i] = "com.canonical.indicator.keyboard";
-                update_indicator_list = true;
-            }
-        }
-
-        if (update_indicator_list)
-            UGSettings.set_strv(UGSettings.KEY_INDICATORS, indicator_list);
-
-        foreach (var indicator in indicator_list)
-            load_indicator(indicator);
-
-        indicator_objects.sort((a, b) => {
-            int pos_a = a.get_position ();
-            int pos_b = b.get_position ();
-
-            if (pos_a < 0)
-                pos_a = 1000;
-            if (pos_b < 0)
-                pos_b = 1000;
-
-            return pos_a - pos_b;
-        });
-
-        debug ("LANG=%s LANGUAGE=%s", Environment.get_variable ("LANG"), Environment.get_variable ("LANGUAGE"));
     }
 
     private void shutdown_cb (Gtk.MenuItem item)
@@ -712,71 +508,4 @@ public class MenuBar : Gtk.MenuBar
             close_pid (ref reader_pid);
     }
 
-    private uint get_indicator_index (Indicator.Object object)
-    {
-        uint index = 0;
-
-        foreach (var io in indicator_objects)
-        {
-            if (io == object)
-                return index;
-            index++;
-        }
-
-        return index;
-    }
-
-    private Indicator.Object? get_indicator_object_from_entry (Indicator.ObjectEntry entry)
-    {
-        foreach (var io in indicator_objects)
-        {
-            foreach (var e in io.get_entries ())
-            {
-                if (e == entry)
-                    return io;
-            }
-        }
-
-        return null;
-    }
-
-    private void indicator_added_cb (Indicator.Object object, Indicator.ObjectEntry entry)
-    {
-        var index = get_indicator_index (object);
-        var pos = 0;
-        foreach (var child in get_children ())
-        {
-            if (!(child is IndicatorMenuItem))
-                break;
-
-            var menuitem = (IndicatorMenuItem) child;
-            var child_object = get_indicator_object_from_entry (menuitem.entry);
-            var child_index = get_indicator_index (child_object);
-            if (child_index > index)
-                break;
-            pos++;
-        }
-
-        debug ("Adding indicator object %p at position %d", entry, pos);
-
-        var menuitem = new IndicatorMenuItem (entry);
-        insert (menuitem, pos);
-    }
-
-    private void indicator_removed_cb (Indicator.Object object, Indicator.ObjectEntry entry)
-    {
-        debug ("Removing indicator object %p", entry);
-
-        foreach (var child in get_children ())
-        {
-            var menuitem = (IndicatorMenuItem) child;
-            if (menuitem.entry == entry)
-            {
-                remove (child);
-                return;
-            }
-        }
-
-        warning ("Indicator object %p not in menubar", entry);
-    }
 }

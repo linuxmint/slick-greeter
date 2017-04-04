@@ -86,10 +86,6 @@
       <default>''</default>
       <summary>A sound file to play when the greeter is ready</summary>
     </key>
-    <key name="indicators" type="as">
-      <default>['ug-accessibility', 'com.canonical.indicator.keyboard', 'com.canonical.indicator.power']</default>
-      <summary>Which indicators to load</summary>
-    </key>
     <key name="hidden-users" type="as">
       <default>[]</default>
       <summary>List of usernames that are hidden until a special key combination is hit</summary>
