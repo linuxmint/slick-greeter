@@ -124,9 +124,36 @@ public class MenuBar : Gtk.MenuBar
 
         pack_direction = Gtk.PackDirection.RTL;
 
+        var session_menu = make_session_indicator ();
+        session_menu.right_justified = true;
+        append (session_menu);
+
+        clock_label = new Gtk.Label ("");
+        clock_label.ensure_style ();
+        var fg = clock_label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
+        clock_label.override_color (Gtk.StateFlags.INSENSITIVE, fg);
+        clock_label.show ();
+        var item = new Gtk.MenuItem ();
+        item.add (clock_label);
+        item.sensitive = false;
+        item.show ();
+        append (item);
+
+        update_clock ();
+        Timeout.add (1000, update_clock);
+
+        var keyboard_menu = make_keyboard_indicator ();
+        append (keyboard_menu);
+
+        var a11y_item = make_a11y_indicator ();
+        append (a11y_item);
+
         if (UGSettings.get_boolean (UGSettings.KEY_SHOW_HOSTNAME))
         {
             var label = new Gtk.Label (Posix.utsname ().nodename);
+            label.ensure_style ();
+            fg = label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
+            label.override_color (Gtk.StateFlags.INSENSITIVE, fg);
             label.show ();
             var hostname_item = new Gtk.MenuItem ();
             hostname_item.add (label);
@@ -134,27 +161,7 @@ public class MenuBar : Gtk.MenuBar
             hostname_item.right_justified = true;
             hostname_item.show ();
             append (hostname_item);
-
-            /* Hack to get a label showing on the menubar */
-            label.ensure_style ();
-            var fg = label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
-            label.override_color (Gtk.StateFlags.INSENSITIVE, fg);
         }
-
-        var session_menu = make_session_indicator ();
-        append (session_menu);
-
-        clock_label = new Gtk.Label ("");
-        clock_label.show ();
-        var item = new Gtk.MenuItem ();
-        item.add (clock_label);
-        item.sensitive = false;
-        item.right_justified = true;
-        item.show ();
-        append (item);
-
-        update_clock ();
-        Timeout.add (1000, update_clock);
 
         /* Prevent dragging the window by the menubar */
         try
@@ -230,7 +237,7 @@ public class MenuBar : Gtk.MenuBar
         }
     }
 
-    private Gtk.Widget make_a11y_indicator ()
+    private Gtk.MenuItem make_a11y_indicator ()
     {
         var a11y_item = new Gtk.MenuItem ();
         var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 3);
@@ -318,6 +325,32 @@ public class MenuBar : Gtk.MenuBar
         return item;
     }
 
+    private Gtk.MenuItem make_keyboard_indicator ()
+    {
+        var item = new Gtk.MenuItem ();
+        var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 3);
+        hbox.show ();
+        item.add (hbox);
+        var image = new Gtk.Image.from_file (Path.build_filename (Config.PKGDATADIR, "keyboard.svg"));
+        image.show ();
+        hbox.add (image);
+        hbox.set_spacing (6);
+        var label = new Gtk.Label ("");
+        label.sensitive = false;
+        var current_layout = LightDM.get_layout ();
+        if (current_layout != null) {
+            label.set_label (current_layout.name);
+        }
+        label.ensure_style ();
+        var fg = label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
+        label.override_color (Gtk.StateFlags.INSENSITIVE, fg);
+        label.show ();
+        hbox.add (label);
+        item.show ();
+
+        return item;
+    }
+
     private Indicator.Object? load_indicator_file (string indicator_name)
     {
         string dir = Config.INDICATOR_FILE_DIR;
@@ -369,8 +402,7 @@ public class MenuBar : Gtk.MenuBar
     {
         if (indicator_name == "ug-accessibility")
         {
-            var a11y_item = make_a11y_indicator ();
-            insert (a11y_item, (int) get_children ().length () - 1);
+
         }
         else
         {

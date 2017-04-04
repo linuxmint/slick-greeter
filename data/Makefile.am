@@ -13,6 +13,7 @@ dist_pkgdata_DATA = \
 	dialog_close_press.png \
 	hibernate_highlight.png \
 	hibernate.png \
+	keyboard.svg \
 	message.png \
 	remote_login_help.png \
 	restart_highlight.png \
