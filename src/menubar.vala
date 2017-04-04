@@ -18,6 +18,62 @@
  *          Michael Terry <michael.terry@canonical.com>
  */
 
+ namespace UPower {
+
+    [DBus (name = "org.freedesktop.UPower")]
+    interface Daemon: Object
+    {
+        public abstract async void suspend() throws IOError;
+        public abstract async void hibernate() throws IOError;
+        public abstract bool suspend_allowed() throws IOError;
+        public abstract bool hibernate_allowed() throws IOError;
+        public abstract ObjectPath[] enumerate_devices() throws IOError;
+
+        public abstract string daemon_version { owned get; }
+        public abstract bool can_suspend { owned get; }
+        public abstract bool can_hibernate { owned get; }
+        public abstract bool on_battery { owned get; }
+        public abstract bool on_low_battery { owned get; }
+        public abstract bool lid_is_present { owned get; }
+        public abstract bool lid_is_closed { owned get; }
+
+        public signal void device_added(ObjectPath device);
+        public signal void device_removed(ObjectPath device);
+        public signal void device_changed(ObjectPath device);
+        public signal void changed();
+        public signal void sleeping();
+        public signal void resuming();
+    }
+
+    [DBus (name = "org.freedesktop.UPower.Device")]
+    interface Device: Object
+    {
+        /* bug here with type and vala get_type() defined two times */
+        public abstract uint Type { owned get; }
+        public abstract bool power_supply { owned get; }
+        public abstract bool online { owned get; }
+        public abstract bool is_present { owned get; }
+        public abstract uint state { owned get; }
+        public abstract bool is_rechargeable { owned get; }
+        public abstract double capacity { owned get; }
+        public abstract int64 time_to_empty { owned get; }
+        public abstract int64 time_to_full { owned get; }
+        public abstract double energy { owned get; }
+        public abstract double energy_empty { owned get; }
+        public abstract double energy_full { owned get; }
+        public abstract double energy_full_design { owned get; }
+        public abstract double energy_rate { owned get; }
+        public abstract double percentage { owned get; }
+        public abstract double voltage { owned get; }
+        public abstract uint technology { owned get; }
+        public abstract string vendor { owned get; }
+        public abstract string model { owned get; }
+        public abstract string serial { owned get; }
+
+        public signal void changed();
+    }
+}
+
 private class IndicatorMenuItem : Gtk.MenuItem
 {
     public unowned Indicator.ObjectEntry entry;
@@ -117,6 +173,7 @@ public class MenuBar : Gtk.MenuBar
     private Pid reader_pid = 0;
     private Gtk.CheckMenuItem onscreen_keyboard_item;
     private Gtk.Label clock_label;
+    private UPower.Daemon upowerd;
 
     construct
     {
@@ -144,6 +201,23 @@ public class MenuBar : Gtk.MenuBar
 
         var keyboard_menu = make_keyboard_indicator ();
         append (keyboard_menu);
+
+        try {
+            upowerd = Bus.get_proxy_sync(BusType.SYSTEM, "org.freedesktop.UPower", "/org/freedesktop/UPower");
+            // if (upowerd.on_battery == true) {
+                foreach (ObjectPath o in upowerd.enumerate_devices()) {
+                    on_power_device_added_async(o);
+                }
+                upowerd.device_added.connect(on_power_device_added);
+                // upowerd.device_removed.connect(on_power_device_removed);
+                // upowerd.device_changed.connect(on_power_device_changed);
+                // upowerd.changed.connect(on_changed);
+                // upowerd.sleeping.connect(on_sleeping);
+                // upowerd.resuming.connect(on_resuming);
+            // }
+        } catch (IOError e) {
+            warning("Could not connect to Upower: %s", e.message);
+        }
 
         var a11y_item = make_a11y_indicator ();
         append (a11y_item);
@@ -178,6 +252,35 @@ public class MenuBar : Gtk.MenuBar
         setup_indicators ();
 
         SlickGreeter.singleton.starting_session.connect (cleanup);
+    }
+
+    void on_power_device_added(ObjectPath device)
+    {
+        on_power_device_added_async.begin(device);
+    }
+
+    async void on_power_device_added_async(ObjectPath dev_path)
+    {
+        UPower.Device dev;
+
+        /* connect to the dbus device object */
+        try {
+            dev = Bus.get_proxy_sync(BusType.SYSTEM, "org.freedesktop.UPower", dev_path);
+        } catch (IOError io) {
+            warning("Could not connect to UPower/Device: %s", io.message);
+            return;
+        }
+
+        /* type of the power device */
+        uint type = dev.Type;
+        if(type == 1) { /* Line Power providing energy */
+        } else if(type == 2 && dev.is_present == true) { /* Battery */
+        } else if(type == 3) { /* UPS */
+        } else if(type == 5) { /* Mouse */
+        } else if(type == 6) { /* Keyboard */
+        } else if(type == 7) { /* PDA */
+        } else if(type == 8) { /* Phone */
+        }
     }
 
     private bool update_clock ()
