@@ -452,14 +452,16 @@ public class SlickGreeter
         try
         {
             string[] argv;
-
-            Shell.parse_argv ("/usr/lib/at-spi2-core/at-spi-bus-launcher --launch-immediately", out argv);
-            Process.spawn_async (null,
-                                 argv,
-                                 null,
-                                 SpawnFlags.SEARCH_PATH,
-                                 null,
-                                 out atspi_pid);
+            if (FileUtils.test ("/usr/lib/at-spi2-core/at-spi-bus-launcher", FileTest.EXISTS)) {
+                // Mint, Ubuntu
+                Shell.parse_argv ("/usr/lib/at-spi2-core/at-spi-bus-launcher --launch-immediately", out argv);
+                Process.spawn_async (null, argv, null, SpawnFlags.SEARCH_PATH, null, out atspi_pid);
+            }
+            else if (FileUtils.test ("/usr/libexec/at-spi-bus-launcher", FileTest.EXISTS)) {
+                // Fedora
+                Shell.parse_argv ("/usr/libexec/at-spi-bus-launcher --launch-immediately", out argv);
+                Process.spawn_async (null, argv, null, SpawnFlags.SEARCH_PATH, null, out atspi_pid);
+            }
         }
         catch (Error e)
         {
