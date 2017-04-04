@@ -223,14 +223,14 @@ class BackgroundLoader : Object
        gnome-desktop3 to expose this for our use instead of copying the
        code... */
 
-    static const int QUAD_MAX_LEVEL_OF_RECURSION = 16;
-    static const int QUAD_MIN_LEVEL_OF_RECURSION = 2;
-    static const int QUAD_CORNER_WEIGHT_NW       = 3;
-    static const int QUAD_CORNER_WEIGHT_NE       = 1;
-    static const int QUAD_CORNER_WEIGHT_SE       = 1;
-    static const int QUAD_CORNER_WEIGHT_SW       = 3;
-    static const int QUAD_CORNER_WEIGHT_CENTER   = 2;
-    static const int QUAD_CORNER_WEIGHT_TOTAL    = (QUAD_CORNER_WEIGHT_NW + QUAD_CORNER_WEIGHT_NE + QUAD_CORNER_WEIGHT_SE + QUAD_CORNER_WEIGHT_SW + QUAD_CORNER_WEIGHT_CENTER);
+    const int QUAD_MAX_LEVEL_OF_RECURSION = 16;
+    const int QUAD_MIN_LEVEL_OF_RECURSION = 2;
+    const int QUAD_CORNER_WEIGHT_NW       = 3;
+    const int QUAD_CORNER_WEIGHT_NE       = 1;
+    const int QUAD_CORNER_WEIGHT_SE       = 1;
+    const int QUAD_CORNER_WEIGHT_SW       = 3;
+    const int QUAD_CORNER_WEIGHT_CENTER   = 2;
+    const int QUAD_CORNER_WEIGHT_TOTAL    = (QUAD_CORNER_WEIGHT_NW + QUAD_CORNER_WEIGHT_NE + QUAD_CORNER_WEIGHT_SE + QUAD_CORNER_WEIGHT_SW + QUAD_CORNER_WEIGHT_CENTER);
 
     /* Pixbuf utilities */
     private Gdk.RGBA get_pixbuf_sample (uint8[]   pixels,

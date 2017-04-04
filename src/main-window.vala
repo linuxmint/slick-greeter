@@ -34,7 +34,7 @@ public class MainWindow : Gtk.Window
     public ListStack stack;
 
     // Menubar is smaller, but with shadow, we reserve more space
-    public static const int MENUBAR_HEIGHT = 32;
+    public const int MENUBAR_HEIGHT = 32;
 
     construct
     {
