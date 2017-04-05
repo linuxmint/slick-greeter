@@ -114,7 +114,7 @@ public class MainWindow : Gtk.Window
 
         back_button = new FlatButton ();
         back_button.get_accessible ().set_name (_("Back"));
-        back_button.focus_on_click = false;
+        Gtk.button_set_focus_on_click (back_button, false);
         var image = new Gtk.Image.from_file (Path.build_filename (Config.PKGDATADIR, "arrow_left.png", null));
         image.show ();
         back_button.set_size_request (grid_size - GreeterList.BORDER * 2, grid_size - GreeterList.BORDER * 2);

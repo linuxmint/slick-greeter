@@ -207,7 +207,7 @@ public class PromptBox : FadableBox
         option_button.valign = Gtk.Align.START;
         // Keep as much space on top as on the right
         option_button.margin_top = ActiveIndicator.WIDTH + box_grid.column_spacing;
-        option_button.focus_on_click = false;
+        Gtk.button_set_focus_on_click (option_button, false);
         option_button.relief = Gtk.ReliefStyle.NONE;
         option_button.get_accessible ().set_name (_("Session Options"));
         option_button.clicked.connect (option_button_clicked_cb);

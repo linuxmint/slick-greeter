@@ -32,6 +32,8 @@ namespace Gtk
         // Fixed in Vala 0.24
         public void to_hsv (double r, double g, double b, out double h, out double s, out double v);
     }
+
+    public void button_set_focus_on_click (Gtk.Button button, bool focus_on_click);
 }
 
 // Note, fixed in 1.10.0

@@ -548,7 +548,7 @@ private class DialogButton : Gtk.Button
         this.focused_filename = focused_filename;
         this.active_filename = active_filename;
         relief = Gtk.ReliefStyle.NONE;
-        focus_on_click = false;
+        Gtk.button_set_focus_on_click (this, false);
         i = new Gtk.Image.from_file (inactive_filename);
         i.visible = true;
         add (i);
