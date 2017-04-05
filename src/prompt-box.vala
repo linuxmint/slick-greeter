@@ -89,6 +89,9 @@ public class PromptBox : FadableBox
 
     construct
     {
+        // Hack to avoid gtk 3.20's new allocate logic, which messes us up.
+        resize_mode = Gtk.ResizeMode.QUEUE;
+
         set_start_row ();
         reset_last_row ();
         expand = true;
