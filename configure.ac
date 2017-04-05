@@ -4,7 +4,7 @@ dnl Process this file with autoconf to produce a configure script.
 
 AC_INIT(slick-greeter, 16.04.2)
 AC_CONFIG_MACRO_DIR(m4)
-AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz foreign])
+AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz foreign subdir-objects])
 AM_PROG_CC_C_O
 AM_PROG_VALAC([0.24.0])
 AM_CONFIG_HEADER(config.h)
