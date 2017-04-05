@@ -940,7 +940,21 @@ public abstract class GreeterList : FadableBox
 
     protected virtual string get_lightdm_session ()
     {
-        return "ubuntu";
+        var sessions = new List<string> ();
+        sessions.append ("cinnamon");
+        sessions.append ("mate");
+        sessions.append ("xfce");
+        sessions.append ("kde-plasma");
+        sessions.append ("kde");
+
+        foreach (string session in sessions) {
+            var path = Path.build_filename  ("/usr/share/xsessions/", session, null);
+            if (FileUtils.test (path, FileTest.EXISTS)) {
+                return session;
+            }
+        }
+
+        return "gnome";
     }
 
     /* Testing code below this */

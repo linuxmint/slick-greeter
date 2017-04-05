@@ -38,8 +38,11 @@ public class SessionPrompt : PromptBox
 
         if (SlickGreeter.singleton.test_mode)
         {
-            box.add_item ("gnome", "GNOME", SessionList.get_badge ("gnome"));
+            box.add_item ("cinnamon", "Cinnamon", SessionList.get_badge ("cinnamon"));
+            box.add_item ("mate", "MATE", SessionList.get_badge ("mate"));
+            box.add_item ("xfce", "Xfce", SessionList.get_badge ("xfce"));
             box.add_item ("kde", "KDE", SessionList.get_badge ("kde"));
+            box.add_item ("gnome", "GNOME", SessionList.get_badge ("gnome"));
         }
         else
         {
