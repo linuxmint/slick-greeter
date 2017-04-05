@@ -4,7 +4,7 @@ public class IdleMonitor
 {
     private unowned X.Display display;
     private HashTable<uint, IdleMonitorWatch> watches;
-    private HashTable<uint32, uint32> alarms;
+    private GenericSet<uint32> alarms;
     private int sync_event_base;
     private X.ID counter;
     private X.ID user_active_alarm;
@@ -13,7 +13,7 @@ public class IdleMonitor
     public IdleMonitor ()
     {
         watches = new HashTable<uint, IdleMonitorWatch> (null, null);
-        alarms = new HashTable<uint32, uint32> (null, null);
+        alarms = new GenericSet<uint32> (null, null);
         init_xsync ();
     }
 
