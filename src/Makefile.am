@@ -48,6 +48,7 @@ slick_greeter_CFLAGS = \
 logo_generator_CFLAGS = $(slick_greeter_CFLAGS)
 
 slick_greeter_VALAFLAGS = \
+	--debug \
 	--pkg posix \
 	--pkg gtk+-3.0 \
 	--pkg gdk-x11-3.0 \
