@@ -447,7 +447,6 @@ public class SlickGreeter
         Environment.set_variable ("GTK_MODULES", "atk-bridge", false);
 
         Pid atspi_pid = 0;
-        Pid upstart_pid = 0;
 
         try
         {
@@ -558,18 +557,6 @@ public class SlickGreeter
         Gtk.main ();
 
         debug ("Cleaning up");
-
-        if (upstart_pid != 0)
-        {
-            Posix.kill (upstart_pid, Posix.SIGTERM);
-            int status;
-            Posix.waitpid (upstart_pid, out status, 0);
-            if (Process.if_exited (status))
-                debug ("Upstart exited with return value %d", Process.exit_status (status));
-            else
-                debug ("Upstart terminated with signal %d", Process.term_sig (status));
-            upstart_pid = 0;
-        }
 
         if (atspi_pid != 0)
         {
