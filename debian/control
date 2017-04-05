@@ -26,7 +26,6 @@ Package: slick-greeter
 Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends},
-         upstart
 Recommends: lightdm
 Suggests: lightdm-remote-session-freerdp,
           lightdm-remote-session-uccsconfigure,
