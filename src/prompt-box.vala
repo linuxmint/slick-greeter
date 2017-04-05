@@ -58,18 +58,18 @@ public class PromptBox : FadableBox
     protected FadingLabel small_name_label;
     private CachedImage small_message_image;
 
-    protected static const int COL_ACTIVE        = 0;
-    protected static const int COL_CONTENT       = 1;
-    protected static const int COL_SPACER        = 2;
+    protected const int COL_ACTIVE        = 0;
+    protected const int COL_CONTENT       = 1;
+    protected const int COL_SPACER        = 2;
 
-    protected static const int ROW_NAME          = 0;
-    protected static const int COL_NAME_LABEL    = 0;
-    protected static const int COL_NAME_MESSAGE  = 1;
-    protected static const int COL_NAME_OPTIONS  = 2;
+    protected const int ROW_NAME          = 0;
+    protected const int COL_NAME_LABEL    = 0;
+    protected const int COL_NAME_MESSAGE  = 1;
+    protected const int COL_NAME_OPTIONS  = 2;
 
-    protected static const int COL_ENTRIES_START = 1;
-    protected static const int COL_ENTRIES_END   = 1;
-    protected static const int COL_ENTRIES_WIDTH = 1;
+    protected const int COL_ENTRIES_START = 1;
+    protected const int COL_ENTRIES_END   = 1;
+    protected const int COL_ENTRIES_WIDTH = 1;
 
     protected int start_row;
     protected int last_row;
@@ -619,8 +619,8 @@ public class PromptBox : FadableBox
 private class ActiveIndicator : Gtk.Image
 {
     public bool active { get; set; }
-    public static const int WIDTH = 8;
-    public static const int HEIGHT = 7;
+    public const int WIDTH = 8;
+    public const int HEIGHT = 7;
 
     construct
     {

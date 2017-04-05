@@ -102,9 +102,9 @@ public abstract class GreeterList : FadableBox
     }
     protected Mode mode = Mode.ENTRY;
 
-    public static const int BORDER = 4;
-    public static const int BOX_WIDTH = 8; /* in grid_size blocks */
-    public static const int DEFAULT_BOX_HEIGHT = 3; /* in grid_size blocks */
+    public const int BORDER = 4;
+    public const int BOX_WIDTH = 8; /* in grid_size blocks */
+    public const int DEFAULT_BOX_HEIGHT = 3; /* in grid_size blocks */
 
     private uint n_above = 4;
     private uint n_below = 4;

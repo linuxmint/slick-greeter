@@ -24,10 +24,10 @@ private class AnimateTimer : Object
     public delegate double EasingFunc (double x);
 
     /* The following are the same intervals that Unity uses */
-    public static const int INSTANT = 150; /* Good for animations that don't convey any information */
-    public static const int FAST =    250; /* Good for animations that convey duplicated information */
-    public static const int NORMAL =  500;
-    public static const int SLOW =   1000; /* Good for animations that convey information that is only presented in the animation */
+    public const int INSTANT = 150; /* Good for animations that don't convey any information */
+    public const int FAST =    250; /* Good for animations that convey duplicated information */
+    public const int NORMAL =  500;
+    public const int SLOW =   1000; /* Good for animations that convey information that is only presented in the animation */
 
     /* speed is in milliseconds */
     public unowned EasingFunc easing_func { get; private set; }
