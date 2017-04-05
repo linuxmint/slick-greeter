@@ -68,7 +68,6 @@ public class DashButton : FlatButton, Fadable
         {
             var style = new Gtk.CssProvider ();
             style.load_from_data ("* {padding: 6px 8px 6px 8px;
-                                      -GtkWidget-focus-line-width: 0px;
                                      }", -1);
             this.get_style_context ().add_provider (style, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
         }
