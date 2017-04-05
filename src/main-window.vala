@@ -150,6 +150,18 @@ public class MainWindow : Gtk.Window
             screen.monitors_changed.connect (monitors_changed_cb);
             monitors_changed_cb (screen);
         }
+
+        /* FIXME: Cancel authentication and shutdown dialog
+            (i.e. simulate what happens when pressing Escape)
+            This is a workaround rather than a proper fix.
+            Without it, the login box looks too small when the greeter starts
+            and its entry isn't visible.
+            The symptoms are similar to https://bugs.launchpad.net/ubuntu/+source/unity-greeter/+bug/1415168.
+            Pressing Escape or selecting a different user fixes the issue. */
+        if (login_box.sensitive)
+            stack.top ().cancel_authentication ();
+        if (shutdown_dialog != null)
+            shutdown_dialog.cancel ();
     }
 
     public void push_list (GreeterList widget)
