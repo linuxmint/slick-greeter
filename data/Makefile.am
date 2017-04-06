@@ -8,6 +8,10 @@ dist_pkgdata_DATA = \
 	active.png \
 	arrow_left.png \
 	arrow_right.png \
+	battery.svg \
+	battery_10.svg \
+	battery_25.svg \
+	battery_50.svg \
 	dialog_close.png \
 	dialog_close_highlight.png \
 	dialog_close_press.png \

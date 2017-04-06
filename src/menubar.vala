@@ -23,15 +23,15 @@
     [DBus (name = "org.freedesktop.UPower")]
     interface Daemon: Object
     {
-        public abstract async void suspend() throws IOError;
-        public abstract async void hibernate() throws IOError;
-        public abstract bool suspend_allowed() throws IOError;
-        public abstract bool hibernate_allowed() throws IOError;
+        // public abstract async void suspend() throws IOError;
+        // public abstract async void hibernate() throws IOError;
+        // public abstract bool suspend_allowed() throws IOError;
+        // public abstract bool hibernate_allowed() throws IOError;
         public abstract ObjectPath[] enumerate_devices() throws IOError;
 
         public abstract string daemon_version { owned get; }
-        public abstract bool can_suspend { owned get; }
-        public abstract bool can_hibernate { owned get; }
+        // public abstract bool can_suspend { owned get; }
+        // public abstract bool can_hibernate { owned get; }
         public abstract bool on_battery { owned get; }
         public abstract bool on_low_battery { owned get; }
         public abstract bool lid_is_present { owned get; }
@@ -128,6 +128,10 @@ public class MenuBar : Gtk.MenuBar
     private Gtk.CheckMenuItem onscreen_keyboard_item;
     private Gtk.Label clock_label;
     private UPower.Daemon upowerd;
+    private Gtk.MenuItem power_menu_item;
+    private Gtk.Label power_label;
+    private Gtk.Image power_icon;
+
 
     construct
     {
@@ -153,22 +157,38 @@ public class MenuBar : Gtk.MenuBar
         update_clock ();
         Timeout.add (1000, update_clock);
 
+        power_menu_item = new Gtk.MenuItem ();
+        var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 3);
+        hbox.show ();
+        item.add (hbox);
+        power_icon = new Gtk.Image.from_file (Path.build_filename (Config.PKGDATADIR, "battery.svg"));
+        power_icon.show ();
+        hbox.add (power_icon);
+        hbox.set_spacing (6);
+        power_label = new Gtk.Label ("");
+        power_label.sensitive = false;
+        power_label.ensure_style ();
+        fg = power_label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
+        power_label.override_color (Gtk.StateFlags.INSENSITIVE, fg);
+        power_label.show ();
+        hbox.add (power_label);
+        power_menu_item.add (hbox);
+        power_menu_item.hide ();
+        append (power_menu_item);
+
         var keyboard_menu = make_keyboard_item ();
         append (keyboard_menu);
 
         try {
             upowerd = Bus.get_proxy_sync(BusType.SYSTEM, "org.freedesktop.UPower", "/org/freedesktop/UPower");
-            // if (upowerd.on_battery == true) {
-                foreach (ObjectPath o in upowerd.enumerate_devices()) {
-                    on_power_device_added_async(o);
-                }
-                upowerd.device_added.connect(on_power_device_added);
-                // upowerd.device_removed.connect(on_power_device_removed);
-                // upowerd.device_changed.connect(on_power_device_changed);
-                // upowerd.changed.connect(on_changed);
-                // upowerd.sleeping.connect(on_sleeping);
-                // upowerd.resuming.connect(on_resuming);
-            // }
+            upowerd.device_added.connect(on_power_device_added);
+            upowerd.device_removed.connect(on_power_device_removed);
+            upowerd.device_changed.connect(on_power_device_changed);
+            upowerd.changed.connect(on_changed);
+            upowerd.sleeping.connect(on_sleeping);
+            upowerd.resuming.connect(on_resuming);
+            query_upower_daemon ();
+            Timeout.add (60000, query_upower_daemon);
         } catch (IOError e) {
             warning("Could not connect to Upower: %s", e.message);
         }
@@ -206,32 +226,104 @@ public class MenuBar : Gtk.MenuBar
         SlickGreeter.singleton.starting_session.connect (cleanup);
     }
 
-    void on_power_device_added(ObjectPath device)
+    void on_sleeping ()
     {
-        on_power_device_added_async.begin(device);
     }
 
-    async void on_power_device_added_async(ObjectPath dev_path)
+    void on_resuming ()
     {
-        UPower.Device dev;
+        query_upower_daemon ();
+    }
 
-        /* connect to the dbus device object */
+    void on_changed ()
+    {
+        query_upower_daemon ();
+    }
+
+    void on_power_device_added(ObjectPath device)
+    {
+        query_upower_device (device);
+    }
+
+    void on_power_device_changed(ObjectPath device)
+    {
+        query_upower_device (device);
+    }
+
+    private bool query_upower_daemon ()
+    {
         try {
-            dev = Bus.get_proxy_sync(BusType.SYSTEM, "org.freedesktop.UPower", dev_path);
-        } catch (IOError io) {
-            warning("Could not connect to UPower/Device: %s", io.message);
-            return;
+            if (upowerd.on_battery == true) {
+                foreach (ObjectPath o in upowerd.enumerate_devices()) {
+                    query_upower_device(o);
+                }
+            }
+            else {
+                power_menu_item.hide ();
+            }
         }
+        catch (Error e) {
+            warning ("Error while querying upower daemon: %s", e.message);
+        }
+        return true;
+    }
 
-        /* type of the power device */
-        uint type = dev.Type;
-        if(type == 1) { /* Line Power providing energy */
-        } else if(type == 2 && dev.is_present == true) { /* Battery */
-        } else if(type == 3) { /* UPS */
-        } else if(type == 5) { /* Mouse */
-        } else if(type == 6) { /* Keyboard */
-        } else if(type == 7) { /* PDA */
-        } else if(type == 8) { /* Phone */
+    async void query_upower_device(ObjectPath dev_path)
+    {
+        try {
+            UPower.Device dev;
+
+            /* connect to the dbus device object */
+            try {
+                dev = Bus.get_proxy_sync(BusType.SYSTEM, "org.freedesktop.UPower", dev_path);
+            } catch (IOError io) {
+                warning("Could not connect to UPower/Device: %s", io.message);
+                return;
+            }
+
+            /* type of the power device */
+            uint type = dev.Type;
+            if(type == 1) { /* Line Power providing energy */
+            } else if(type == 2 && dev.is_present == true) { /* Battery */
+                update_power (dev);
+            } else if(type == 3) { /* UPS */
+            } else if(type == 5) { /* Mouse */
+            } else if(type == 6) { /* Keyboard */
+            } else if(type == 7) { /* PDA */
+            } else if(type == 8) { /* Phone */
+            }
+        }
+        catch (Error e) {
+            warning ("Error while querying upower device: %s", e.message);
+        }
+    }
+
+    void on_power_device_removed(ObjectPath device)
+    {
+        query_upower_daemon ();
+    }
+
+    private void update_power (UPower.Device? device)
+    {
+        if (device == null) {
+            power_menu_item.hide ();
+        }
+        else {
+            char[] buffer = new char[double.DTOSTR_BUF_SIZE];
+            unowned string str = device.percentage.to_str (buffer);
+            power_label.set_label(str.concat("%"));
+            var icon = "battery.svg";
+            if (device.percentage <= 50.0) {
+                icon = "battery_50.svg";
+            }
+            if (device.percentage <= 25.0) {
+                icon = "battery_25.svg";
+            }
+            if (device.percentage <= 10.0) {
+                icon = "battery_10.svg";
+            }
+            power_icon.set_from_file (Path.build_filename (Config.PKGDATADIR, icon));
+            power_menu_item.show ();
         }
     }
 

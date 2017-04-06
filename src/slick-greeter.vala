@@ -159,7 +159,7 @@ public class SlickGreeter
         ctx.add_class ("lightdm");
     }
 
-    public static string get_default_session ()
+    public static string? get_default_session ()
     {
         var sessions = new List<string> ();
         sessions.append ("cinnamon");
