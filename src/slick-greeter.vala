@@ -159,6 +159,42 @@ public class SlickGreeter
         ctx.add_class ("lightdm");
     }
 
+    public static string get_default_session ()
+    {
+        var sessions = new List<string> ();
+        sessions.append ("cinnamon");
+        sessions.append ("mate");
+        sessions.append ("xfce");
+        sessions.append ("kde-plasma");
+        sessions.append ("kde");
+        sessions.append ("gnome");
+
+        foreach (string session in sessions) {
+            var path = Path.build_filename  ("/usr/share/xsessions/", session.concat(".desktop"), null);
+            if (FileUtils.test (path, FileTest.EXISTS)) {
+                return session;
+            }
+        }
+
+        warning ("Could not find a default session.");
+        return null;
+    }
+
+    public static string validate_session (string? session)
+    {
+        /* Make sure the given session actually exists. Return it if it does.
+        otherwise, return the default session. */
+        var path = Path.build_filename  ("/usr/share/xsessions/", session, null);
+        if (session != null && FileUtils.test (path, FileTest.EXISTS) ) {
+            return session;
+        }
+        else {
+            var default_session = SlickGreeter.get_default_session ();
+            debug ("Invalid session: '%s'. Using session '%s' instead.", session, default_session);
+            return default_session;
+        }
+    }
+
     public bool start_session (string? session, Background bg)
     {
         /* Explicitly set the right scale before closing window */
