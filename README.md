@@ -1,6 +1,10 @@
-# slick-greeter
+
 A cross-distro LightDM greeter based on unity-greeter
 
-# Todo
+# Configuration
 
-- Move the configuration to JSON or allow override via etc file (the greeter runs as "lightdm" so gsettings isn't convenient for configuration tools)
+- The default configuration is stored in dconf under the schema x.dm.slick-greeter.
+- Distributions should set their own defaults using a glib override.
+- Users can create and modify /etc/lightdm/slick-greeter.conf, settings in this files take priority and overwrite dconf settings.
+
+A configuration tool is available at https://github.com/linuxmint/lightdm-settings 
