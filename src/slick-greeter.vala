@@ -474,6 +474,9 @@ public class SlickGreeter
 
         debug ("Starting slick-greeter %s UID=%d LANG=%s", Config.VERSION, (int) Posix.getuid (), Environment.get_variable ("LANG"));
 
+        /* Override dconf settings with /etc settings */
+        UGSettings.apply_conf_settings ();
+
         /* Set the cursor to not be the crap default */
         debug ("Setting cursor");
         Gdk.get_default_root_window ().set_cursor (new Gdk.Cursor.for_display (Gdk.Display.get_default (), Gdk.CursorType.LEFT_PTR));

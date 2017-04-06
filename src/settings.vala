@@ -40,7 +40,7 @@ public class UGSettings
     public const string KEY_PLAY_READY_SOUND = "play-ready-sound";
     public const string KEY_HIDDEN_USERS = "hidden-users";
     public const string KEY_GROUP_FILTER = "group-filter";
-    public const string KEY_IDLE_TIMEOUT = "idle-timeout";    
+    public const string KEY_IDLE_TIMEOUT = "idle-timeout";
 
     public static bool get_boolean (string key)
     {
@@ -97,5 +97,106 @@ public class UGSettings
         return gsettings.set_strv (key, value);
     }
 
+    public static void apply_conf_settings ()
+    {
+        try {
+            var path = "/etc/lightdm/slick-greeter.conf";
+            if (FileUtils.test (path, FileTest.EXISTS))
+            {
+                var gsettings = new Settings (SCHEMA);
+                var keyfile = new KeyFile ();
+                keyfile.load_from_file (path, KeyFileFlags.NONE);
+
+                if (keyfile.has_group (GROUP_NAME)) {
+
+                    var string_keys = new List<string> ();
+                    string_keys.append (KEY_BACKGROUND);
+                    string_keys.append (KEY_BACKGROUND_COLOR);
+                    string_keys.append (KEY_LOGO);
+                    string_keys.append (KEY_BACKGROUND_LOGO);
+                    string_keys.append (KEY_THEME_NAME);
+                    string_keys.append (KEY_ICON_THEME_NAME);
+                    string_keys.append (KEY_FONT_NAME);
+                    string_keys.append (KEY_PLAY_READY_SOUND);
+                    string_keys.append (KEY_XFT_HINTSTYLE);
+                    string_keys.append (KEY_XFT_RGBA);
+
+                    var bool_keys = new List<string> ();
+                    bool_keys.append (KEY_DRAW_USER_BACKGROUNDS);
+                    bool_keys.append (KEY_DRAW_GRID);
+                    bool_keys.append (KEY_SHOW_HOSTNAME);
+                    bool_keys.append (KEY_XFT_ANTIALIAS);
+
+                    var int_keys = new List<string> ();
+                    int_keys.append (KEY_IDLE_TIMEOUT);
+                    int_keys.append (KEY_XFT_DPI);
+
+                    var strv_keys = new List<string> ();
+                    strv_keys.append (KEY_HIDDEN_USERS);
+                    strv_keys.append (KEY_GROUP_FILTER);
+
+                    foreach (string key in string_keys)
+                    {
+                        if (keyfile.has_key (GROUP_NAME, key)) {
+                            try {
+                                var value = keyfile.get_string (GROUP_NAME, key);
+                                debug ("Overriding dconf setting for %s with %s", key, value);
+                                gsettings.set_string (key, value);
+                            }
+                            catch (Error e) {
+                                warning ("Failed to apply %s from configuration file: %s", key, e.message);
+                            }
+                        }
+                    }
+
+                    foreach (string key in bool_keys)
+                    {
+                        if (keyfile.has_key (GROUP_NAME, key)) {
+                            try {
+                                var value = keyfile.get_boolean (GROUP_NAME, key);
+                                debug ("Overriding dconf setting for %s", key);
+                                gsettings.set_boolean (key, value);
+                            }
+                            catch (Error e) {
+                                warning ("Failed to apply %s from configuration file: %s", key, e.message);
+                            }
+                        }
+                    }
+
+                    foreach (string key in int_keys)
+                    {
+                        if (keyfile.has_key (GROUP_NAME, key)) {
+                            try {
+                                var value = keyfile.get_integer (GROUP_NAME, key);
+                                debug ("Overriding dconf setting for %s with %d", key, value);
+                                gsettings.set_int (key, value);
+                            }
+                            catch (Error e) {
+                                warning ("Failed to apply %s from configuration file: %s", key, e.message);
+                            }
+                        }
+                    }
+
+                    foreach (string key in strv_keys)
+                    {
+                        if (keyfile.has_key (GROUP_NAME, key)) {
+                            try {
+                                var value = keyfile.get_string_list (GROUP_NAME, key);
+                                debug ("Overriding dconf setting for %s", key);
+                                gsettings.set_strv (key, value);
+                            }
+                            catch (Error e) {
+                                warning ("Failed to apply %s from configuration file: %s", key, e.message);
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (Error e) {
+            warning ("Error in apply_conf_settings (): %s", e.message);
+        }
+    }
+
     private const string SCHEMA = "x.dm.slick-greeter";
+    private const string GROUP_NAME = "Greeter";
 }
