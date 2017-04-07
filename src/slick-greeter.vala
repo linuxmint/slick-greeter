@@ -203,10 +203,10 @@ public class SlickGreeter
         background_surface.set_device_scale (scale, scale);
 
         /* Paint our background onto the root window before we close our own window */
-        var c = new Cairo.Context (background_surface);
-        bg.draw_full (c, Background.DrawFlags.NONE);
-        c = null;
-        refresh_background (screen, background_surface);
+        // var c = new Cairo.Context (background_surface);
+        // bg.draw_full (c, Background.DrawFlags.NONE);
+        // c = null;
+        // refresh_background (screen, background_surface);
 
         if (test_mode)
         {
