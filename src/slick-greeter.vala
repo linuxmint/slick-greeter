@@ -482,6 +482,12 @@ public class SlickGreeter
         /* Set up the accessibility stack, in case the user needs it for screen reading etc. */
         Environment.set_variable ("GTK_MODULES", "atk-bridge", false);
 
+        /* Fix for https://bugs.launchpad.net/ubuntu/+source/unity-greeter/+bug/1024482
+           Slick-greeter sets the mouse cursor on the root window.
+           Without GKD_CORE_DEVICE_EVENTS set, the DE is unable to apply its own cursor theme and size.
+        */
+        GLib.Environment.set_variable ("GDK_CORE_DEVICE_EVENTS", "1", true);
+
         Pid atspi_pid = 0;
 
         try
