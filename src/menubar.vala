@@ -542,21 +542,14 @@ public class MenuBar : Gtk.MenuBar
 
     private void screen_reader_toggled_cb (Gtk.CheckMenuItem item)
     {
-        /* FIXME: The below would be sufficient if gnome-session were running
-         * to notice and run a screen reader in /etc/xdg/autostart...  But
-         * since we're not running gnome-session, we hardcode orca here.
-        /*var settings = new Settings ("org.gnome.desktop.a11y.applications");*/
-        /*settings.set_boolean ("screen-reader-enabled", item.active);*/
-
         UGSettings.set_boolean (UGSettings.KEY_SCREEN_READER, item.active);
 
-        /* Hardcoded orca: */
         if (item.active)
         {
             try
             {
                 string[] argv;
-                Shell.parse_argv ("orca --replace --no-setup --disable splash-window,", out argv);
+                Shell.parse_argv ("orca --replace", out argv);
                 Process.spawn_async (null,
                                      argv,
                                      null,
