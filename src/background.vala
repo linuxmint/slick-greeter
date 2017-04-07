@@ -424,7 +424,7 @@ public class Background : Gtk.Fixed
         this.target_surface = target_surface;
         timer = new AnimateTimer (AnimateTimer.ease_in_out, 700);
         timer.animate.connect (animate_cb);
-        
+
         resize_mode = Gtk.ResizeMode.QUEUE;
 
         loaders = new HashTable<string?, BackgroundLoader> (str_hash, str_equal);
@@ -441,16 +441,19 @@ public class Background : Gtk.Fixed
     private Cairo.Surface? load_image (string filename, out int width, out int height)
     {
         width = height = 0;
+
         try
         {
-            var image = new Gdk.Pixbuf.from_file (filename);
-            width = image.width;
-            height = image.height;
-            var surface = new Cairo.Surface.similar (target_surface, Cairo.Content.COLOR_ALPHA, image.width, image.height);
-            var c = new Cairo.Context (surface);
-            Gdk.cairo_set_source_pixbuf (c, image, 0, 0);
-            c.paint ();
-            return surface;
+            if (filename != "") {
+                var image = new Gdk.Pixbuf.from_file (filename);
+                width = image.width;
+                height = image.height;
+                var surface = new Cairo.Surface.similar (target_surface, Cairo.Content.COLOR_ALPHA, image.width, image.height);
+                var c = new Cairo.Context (surface);
+                Gdk.cairo_set_source_pixbuf (c, image, 0, 0);
+                c.paint ();
+                return surface;
+            }
         }
         catch (Error e)
         {

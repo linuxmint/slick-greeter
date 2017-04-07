@@ -190,7 +190,9 @@ public class SlickGreeter
         }
         else {
             var default_session = SlickGreeter.get_default_session ();
-            debug ("Invalid session: '%s'. Using session '%s' instead.", session, default_session);
+            if (session != null) {
+                debug ("Invalid session: '%s'. Using session '%s' instead.", session, default_session);
+            }
             return default_session;
         }
     }
@@ -418,21 +420,21 @@ public class SlickGreeter
         return surface;
     }
 
-    private static void refresh_background (Gdk.Screen screen, Cairo.XlibSurface surface)
-    {
-        Gdk.flush ();
+    // private static void refresh_background (Gdk.Screen screen, Cairo.XlibSurface surface)
+    // {
+    //     Gdk.flush ();
 
-        unowned X.Display display = (screen.get_display () as Gdk.X11.Display).get_xdisplay ();
+    //     unowned X.Display display = (screen.get_display () as Gdk.X11.Display).get_xdisplay ();
 
-        /* Ensure Cairo has actually finished its drawing */
-        surface.flush ();
-        /* Use this pixmap for the background */
-        X.SetWindowBackgroundPixmap (display,
-                                     (screen.get_root_window () as Gdk.X11.Window).get_xid (),
-                                     surface.get_drawable ());
+    //     // Ensure Cairo has actually finished its drawing
+    //     surface.flush ();
+    //     // Use this pixmap for the background
+    //     X.SetWindowBackgroundPixmap (display,
+    //                                  (screen.get_root_window () as Gdk.X11.Window).get_xid (),
+    //                                  surface.get_drawable ());
 
-        X.ClearWindow (display, (screen.get_root_window () as Gdk.X11.Window).get_xid ());
-    }
+    //     X.ClearWindow (display, (screen.get_root_window () as Gdk.X11.Window).get_xid ());
+    // }
 
     private static void log_cb (string? log_domain, LogLevelFlags log_level, string message)
     {
@@ -472,6 +474,7 @@ public class SlickGreeter
             Process.spawn_command_line_sync("/usr/bin/slick-greeter-check-hidpi", out output, null, null);
             output = output.strip();
             if (output == "2") {
+                debug ("Activating HiDPI (2x scale ratio)");
                 GLib.Environment.set_variable ("GDK_SCALE", "2", true);
             }
         }

@@ -144,7 +144,6 @@ public class MenuBar : Gtk.MenuBar
         append (session_menu);
 
         clock_label = new Gtk.Label ("");
-        clock_label.ensure_style ();
         var fg = clock_label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
         clock_label.override_color (Gtk.StateFlags.INSENSITIVE, fg);
         clock_label.show ();
@@ -160,14 +159,12 @@ public class MenuBar : Gtk.MenuBar
         power_menu_item = new Gtk.MenuItem ();
         var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 3);
         hbox.show ();
-        item.add (hbox);
         power_icon = new Gtk.Image.from_file (Path.build_filename (Config.PKGDATADIR, "battery.svg"));
         power_icon.show ();
         hbox.add (power_icon);
         hbox.set_spacing (6);
         power_label = new Gtk.Label ("");
         power_label.sensitive = false;
-        power_label.ensure_style ();
         fg = power_label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
         power_label.override_color (Gtk.StateFlags.INSENSITIVE, fg);
         power_label.show ();
@@ -199,7 +196,6 @@ public class MenuBar : Gtk.MenuBar
         if (UGSettings.get_boolean (UGSettings.KEY_SHOW_HOSTNAME))
         {
             var label = new Gtk.Label (Posix.utsname ().nodename);
-            label.ensure_style ();
             fg = label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
             label.override_color (Gtk.StateFlags.INSENSITIVE, fg);
             label.show ();
@@ -242,12 +238,12 @@ public class MenuBar : Gtk.MenuBar
 
     void on_power_device_added(ObjectPath device)
     {
-        query_upower_device (device);
+        query_upower_device.begin (device);
     }
 
     void on_power_device_changed(ObjectPath device)
     {
-        query_upower_device (device);
+        query_upower_device.begin (device);
     }
 
     private bool query_upower_daemon ()
@@ -255,7 +251,7 @@ public class MenuBar : Gtk.MenuBar
         try {
             if (upowerd.on_battery == true) {
                 foreach (ObjectPath o in upowerd.enumerate_devices()) {
-                    query_upower_device(o);
+                    query_upower_device.begin(o);
                 }
             }
             else {
@@ -270,31 +266,26 @@ public class MenuBar : Gtk.MenuBar
 
     async void query_upower_device(ObjectPath dev_path)
     {
+        UPower.Device dev;
+
+        /* connect to the dbus device object */
         try {
-            UPower.Device dev;
-
-            /* connect to the dbus device object */
-            try {
-                dev = Bus.get_proxy_sync(BusType.SYSTEM, "org.freedesktop.UPower", dev_path);
-            } catch (IOError io) {
-                warning("Could not connect to UPower/Device: %s", io.message);
-                return;
-            }
-
-            /* type of the power device */
-            uint type = dev.Type;
-            if(type == 1) { /* Line Power providing energy */
-            } else if(type == 2 && dev.is_present == true) { /* Battery */
-                update_power (dev);
-            } else if(type == 3) { /* UPS */
-            } else if(type == 5) { /* Mouse */
-            } else if(type == 6) { /* Keyboard */
-            } else if(type == 7) { /* PDA */
-            } else if(type == 8) { /* Phone */
-            }
+            dev = Bus.get_proxy_sync(BusType.SYSTEM, "org.freedesktop.UPower", dev_path);
+        } catch (IOError io) {
+            warning("Could not connect to UPower/Device: %s", io.message);
+            return;
         }
-        catch (Error e) {
-            warning ("Error while querying upower device: %s", e.message);
+
+        /* type of the power device */
+        uint type = dev.Type;
+        if(type == 1) { /* Line Power providing energy */
+        } else if(type == 2 && dev.is_present == true) { /* Battery */
+            update_power (dev);
+        } else if(type == 3) { /* UPS */
+        } else if(type == 5) { /* Mouse */
+        } else if(type == 6) { /* Keyboard */
+        } else if(type == 7) { /* PDA */
+        } else if(type == 8) { /* Phone */
         }
     }
 
@@ -461,7 +452,6 @@ public class MenuBar : Gtk.MenuBar
         if (current_layout != null) {
             label.set_label (current_layout.name);
         }
-        label.ensure_style ();
         var fg = label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
         label.override_color (Gtk.StateFlags.INSENSITIVE, fg);
         label.show ();
