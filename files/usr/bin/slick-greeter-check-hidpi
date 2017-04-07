@@ -7,6 +7,8 @@ import sys
 import os
 import syslog
 
+HIDPI_LIMIT = 192
+
 def get_window_scale():
     window_scale = 1
     try:
@@ -26,11 +28,17 @@ def get_window_scale():
             or (width_mm == 16 and height_mm == 10)):
             return 1
 
-        # Check resolution
-        if rect.width < 2000 or rect.height < 1200:
-            window_scale = 1
-        else:
-            window_scale = 2
+        if rect.height < 1500:
+            return 1
+
+        if width_mm > 0 and height_mm > 0:
+            witdh_inch = width_mm / 25.4
+            height_inch = height_mm / 25.4
+            dpi_x = rect.width * monitor_scale / witdh_inch
+            dpi_y = rect.height * monitor_scale / height_inch
+            if dpi_x > HIDPI_LIMIT and dpi_y > HIDPI_LIMIT:
+                window_scale = 2
+
     except Exception as detail:
         syslog.syslog("Error while detecting hidpi mode: %s" % detail)
 
