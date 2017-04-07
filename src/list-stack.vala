@@ -35,7 +35,8 @@ public class ListStack : Gtk.Fixed
         // Hack to avoid gtk 3.20's new allocate logic, which messes us up.
         resize_mode = Gtk.ResizeMode.QUEUE;
 
-        width = grid_size * GreeterList.BOX_WIDTH;
+        var scale = CairoUtils.get_hidpi_scale();
+        width = grid_size * GreeterList.BOX_WIDTH * scale;
     }
 
     public GreeterList? top ()

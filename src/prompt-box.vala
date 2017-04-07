@@ -71,6 +71,9 @@ public class PromptBox : FadableBox
     protected const int COL_ENTRIES_END   = 1;
     protected const int COL_ENTRIES_WIDTH = 1;
 
+    protected const int MSG_FONT_SIZE 	 = 10;
+    protected const int LAB_FONT_SIZE	 = 13;
+
     protected int start_row;
     protected int last_row;
 
@@ -87,6 +90,8 @@ public class PromptBox : FadableBox
         Object (id: id);
     }
 
+    private int scale;
+
     construct
     {
         // Hack to avoid gtk 3.20's new allocate logic, which messes us up.
@@ -96,6 +101,8 @@ public class PromptBox : FadableBox
         reset_last_row ();
         expand = true;
 
+        scale = CairoUtils.get_hidpi_scale();
+
         fixed = new Gtk.Fixed ();
         fixed.show ();
         add (fixed);
@@ -103,7 +110,7 @@ public class PromptBox : FadableBox
         box_grid = new Gtk.Grid ();
         box_grid.column_spacing = 4;
         box_grid.row_spacing = 3;
-        box_grid.margin_top = GreeterList.BORDER;
+        box_grid.margin_top = GreeterList.BORDER * scale;
         box_grid.margin_bottom = 6;
         box_grid.expand = true;
 
@@ -174,8 +181,11 @@ public class PromptBox : FadableBox
         name_grid.column_spacing = 4;
         name_grid.hexpand = true;
 
+        int font_size = LAB_FONT_SIZE * scale;
+        string font = "Ubuntu " + font_size.to_string();
+
         name_label = new FadingLabel ("");
-        name_label.override_font (Pango.FontDescription.from_string ("Ubuntu 13"));
+        name_label.override_font (Pango.FontDescription.from_string (font));
         name_label.override_color (Gtk.StateFlags.NORMAL, { 1.0f, 1.0f, 1.0f, 1.0f });
         name_label.valign = Gtk.Align.START;
         name_label.vexpand = true;
@@ -230,8 +240,11 @@ public class PromptBox : FadableBox
         var small_name_grid = new Gtk.Grid ();
         small_name_grid.column_spacing = 4;
 
+        var font_size = LAB_FONT_SIZE * scale;
+        var font = "Ubuntu " + font_size.to_string();
+
         small_name_label = new FadingLabel ("");
-        small_name_label.override_font (Pango.FontDescription.from_string ("Ubuntu 13"));
+        small_name_label.override_font (Pango.FontDescription.from_string (font));
         small_name_label.override_color (Gtk.StateFlags.NORMAL, { 1.0f, 1.0f, 1.0f, 1.0f });
         small_name_label.yalign = 0.5f;
         small_name_label.xalign = 0.0f;
@@ -276,8 +289,8 @@ public class PromptBox : FadableBox
     public override void get_preferred_height (out int min, out int nat)
     {
         base.get_preferred_height (out min, out nat);
-        min = round_to_grid (min + GreeterList.BORDER * 2) - GreeterList.BORDER * 2;
-        nat = round_to_grid (nat + GreeterList.BORDER * 2) - GreeterList.BORDER * 2;
+        min = round_to_grid (min + GreeterList.BORDER * scale * 2) - GreeterList.BORDER * scale * 2;
+        nat = round_to_grid (nat + GreeterList.BORDER * scale * 2) - GreeterList.BORDER * scale * 2;
 
         if (position <= -1 || position >= 1)
             min = nat = grid_size;
@@ -433,8 +446,10 @@ public class PromptBox : FadableBox
     public void add_message (string text, bool is_error)
     {
         var label = new FadingLabel (text);
+        var font_size = MSG_FONT_SIZE * scale;
+        var font = "Ubuntu " + font_size.to_string();
 
-        label.override_font (Pango.FontDescription.from_string ("Ubuntu 10"));
+        label.override_font (Pango.FontDescription.from_string (font));
 
         Gdk.RGBA color = { 1.0f, 1.0f, 1.0f, 1.0f };
         if (is_error)
@@ -512,7 +527,9 @@ public class PromptBox : FadableBox
 
         combo.get_style_context ().add_class ("lightdm-combo");
         combo.get_child ().get_style_context ().add_class ("lightdm-combo");
-        combo.get_child ().override_font (Pango.FontDescription.from_string (DashEntry.font));
+        var font_size = 14 * CairoUtils.get_hidpi_scale();
+        var font = "Ubuntu " + font_size.to_string();
+        combo.get_child ().override_font (Pango.FontDescription.from_string (font));
 
         attach_item (combo, false);
 
@@ -642,13 +659,13 @@ private class ActiveIndicator : Gtk.Image
 
     public override void get_preferred_width (out int min, out int nat)
     {
-        min = WIDTH;
+        min =  WIDTH * CairoUtils.get_hidpi_scale();
         nat = min;
     }
 
     public override void get_preferred_height (out int min, out int nat)
     {
-        min = HEIGHT;
+        min = HEIGHT * CairoUtils.get_hidpi_scale();
         nat = min;
     }
 
