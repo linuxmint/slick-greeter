@@ -465,6 +465,21 @@ public class SlickGreeter
         stderr.printf ("[%+.2fs] %s %s\n", log_timer.elapsed (), prefix, message);
     }
 
+    private static void set_hidpi ()
+    {
+        try {
+            string output;
+            Process.spawn_command_line_sync("/usr/bin/slick-greeter-check-hidpi", out output, null, null);
+            output = output.strip();
+            if (output == "2") {
+                GLib.Environment.set_variable ("GDK_SCALE", "2", true);
+            }
+        }
+        catch (Error e){
+            warning ("Error while setting HiDPI support: %s", e.message);
+        }
+    }
+
     public static int main (string[] args)
     {
         /* Protect memory from being paged to disk, as we deal with passwords */
@@ -487,6 +502,20 @@ public class SlickGreeter
            Without GKD_CORE_DEVICE_EVENTS set, the DE is unable to apply its own cursor theme and size.
         */
         GLib.Environment.set_variable ("GDK_CORE_DEVICE_EVENTS", "1", true);
+
+        log_timer = new Timer ();
+        Log.set_default_handler (log_cb);
+
+        /* Override dconf settings with /etc settings */
+        UGSettings.apply_conf_settings ();
+
+        if (UGSettings.get_boolean(UGSettings.KEY_ENABLE_HIDPI)) {
+            debug ("HiDPI support enabled");
+            set_hidpi ();
+        }
+        else {
+            debug ("HiDPI support disabled");
+        }
 
         Pid atspi_pid = 0;
 
@@ -511,13 +540,7 @@ public class SlickGreeter
 
         Gtk.init (ref args);
 
-        log_timer = new Timer ();
-        Log.set_default_handler (log_cb);
-
         debug ("Starting slick-greeter %s UID=%d LANG=%s", Config.VERSION, (int) Posix.getuid (), Environment.get_variable ("LANG"));
-
-        /* Override dconf settings with /etc settings */
-        UGSettings.apply_conf_settings ();
 
         /* Set the cursor to not be the crap default */
         debug ("Setting cursor");

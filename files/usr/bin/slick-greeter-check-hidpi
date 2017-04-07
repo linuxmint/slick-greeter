@@ -1,0 +1,43 @@
+#!/usr/bin/python3
+
+import gi
+gi.require_version('Gdk', '3.0')
+from gi.repository import Gdk
+import sys
+import os
+import syslog
+
+def get_window_scale():
+    window_scale = 1
+    try:
+        display = Gdk.Display.get_default()
+        screen = display.get_default_screen()
+        primary = screen.get_primary_monitor()
+
+        rect = screen.get_monitor_geometry(primary)
+        width_mm = screen.get_monitor_width_mm(primary)
+        height_mm = screen.get_monitor_height_mm(primary)
+        monitor_scale = screen.get_monitor_scale_factor(primary)
+
+        # Return 1 if the screen size isn't available (some TVs report their aspect ratio instead ... 16/9 or 16/10)
+        if ((width_mm == 160 and height_mm == 90) \
+            or (width_mm == 160 and height_mm == 100) \
+            or (width_mm == 16 and height_mm == 9) \
+            or (width_mm == 16 and height_mm == 10)):
+            return 1
+
+        # Check resolution
+        if rect.width < 2000 or rect.height < 1200:
+            window_scale = 1
+        else:
+            window_scale = 2
+    except Exception as detail:
+        syslog.syslog("Error while detecting hidpi mode: %s" % detail)
+
+    return window_scale
+
+if __name__ == '__main__':
+    window_scale = get_window_scale();
+    syslog.syslog("Window scale: %d" % window_scale)
+    print (window_scale)
+    sys.exit(0)
