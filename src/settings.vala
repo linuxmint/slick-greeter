@@ -121,13 +121,13 @@ public class UGSettings
                     string_keys.append (KEY_PLAY_READY_SOUND);
                     string_keys.append (KEY_XFT_HINTSTYLE);
                     string_keys.append (KEY_XFT_RGBA);
+                    string_keys.append (KEY_ENABLE_HIDPI);
 
                     var bool_keys = new List<string> ();
                     bool_keys.append (KEY_DRAW_USER_BACKGROUNDS);
                     bool_keys.append (KEY_DRAW_GRID);
                     bool_keys.append (KEY_SHOW_HOSTNAME);
                     bool_keys.append (KEY_XFT_ANTIALIAS);
-                    bool_keys.append (KEY_ENABLE_HIDPI);
 
                     var int_keys = new List<string> ();
                     int_keys.append (KEY_IDLE_TIMEOUT);

@@ -467,7 +467,7 @@ public class SlickGreeter
         stderr.printf ("[%+.2fs] %s %s\n", log_timer.elapsed (), prefix, message);
     }
 
-    private static void set_hidpi ()
+    private static void check_hidpi ()
     {
         try {
             string output;
@@ -512,12 +512,13 @@ public class SlickGreeter
         /* Override dconf settings with /etc settings */
         UGSettings.apply_conf_settings ();
 
-        if (UGSettings.get_boolean(UGSettings.KEY_ENABLE_HIDPI)) {
-            debug ("HiDPI support enabled");
-            set_hidpi ();
+        var hidpi = UGSettings.get_string (UGSettings.KEY_ENABLE_HIDPI);
+        debug ("HiDPI support: %s", hidpi);
+        if (hidpi == "auto") {
+            check_hidpi ();
         }
-        else {
-            debug ("HiDPI support disabled");
+        else if (hidpi == "on") {
+            GLib.Environment.set_variable ("GDK_SCALE", "2", true);
         }
 
         Pid atspi_pid = 0;

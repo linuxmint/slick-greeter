@@ -98,8 +98,13 @@
       <default>300</default>
       <summary>Number of seconds of inactivity before blanking the screen. Set to 0 to never timeout.</summary>
     </key>
-    <key name="enable-hidpi" type="b">
-      <default>true</default>
+    <key name="enable-hidpi" type="s">
+      <choices>
+        <choice value='on'/>
+        <choice value='off'/>
+        <choice value='auto'/>
+      </choices>
+      <default>'auto'</default>
       <summary>Whether to enable HiDPI support</summary>
     </key>
   </schema>
