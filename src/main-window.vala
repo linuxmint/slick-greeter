@@ -359,6 +359,19 @@ public class MainWindow : Gtk.Window
         case Gdk.Key.PowerOff:
             show_shutdown_dialog (ShutdownDialogType.SHUTDOWN);
             return true;
+        case Gdk.Key.Print:
+            debug ("Taking screenshot");
+            var root = Gdk.get_default_root_window ();
+            var screenshot = Gdk.pixbuf_get_from_window (root, 0, 0, root.get_width (), root.get_height ());
+            try
+            {
+                screenshot.save ("Screenshot.png", "png", null);
+            }
+            catch (Error e)
+            {
+                warning ("Failed to save screenshot: %s", e.message);
+            }
+            return true;
         case Gdk.Key.z:
             if (SlickGreeter.singleton.test_mode && (event.state & Gdk.ModifierType.MOD1_MASK) != 0)
             {
