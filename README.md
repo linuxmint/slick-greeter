@@ -1,5 +1,5 @@
 
-A cross-distro LightDM greeter based on unity-greeter
+A slick-looking LightDM greeter
 
 # Configuration
 
@@ -8,3 +8,16 @@ A cross-distro LightDM greeter based on unity-greeter
 - Users can create and modify /etc/lightdm/slick-greeter.conf, settings in this files take priority and overwrite dconf settings.
 
 A configuration tool is available at https://github.com/linuxmint/lightdm-settings
+
+# Features
+
+- Slick-Greeter is cross-distribution and should work pretty much anywhere.
+- All panel applets are embedded. No external indicators are launched or loaded by the greeter.
+- No settings daemon are launched or loaded by the greeter.
+- This greeter supports HiDPI.
+- Sessions are validated. If a default/chosen session isn't present on the system, the greeter scans for known sessions in /usr/share/xsessions and replaces the invalid session choice with a valid session.
+- You can take a screenshot by pressing PrintScrn. The screenshot is saved in /var/lib/lightdm/Screenshot.png.
+
+# Credit
+
+- Slick Greeter started as a fork of Unity Greeter 16.04.2, a greeter developed for Ubuntu by Canonical, which used indicators and unity-settings-daemon.
