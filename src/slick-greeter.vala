@@ -536,6 +536,7 @@ public class SlickGreeter
                 Shell.parse_argv ("/usr/libexec/at-spi-bus-launcher --launch-immediately", out argv);
                 Process.spawn_async (null, argv, null, SpawnFlags.SEARCH_PATH, null, out atspi_pid);
             }
+            debug ("Launched at-spi-bus-launcher. PID: %d", atspi_pid);
         }
         catch (Error e)
         {
