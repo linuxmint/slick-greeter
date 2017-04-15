@@ -15,11 +15,7 @@ Build-Depends: at-spi2-core,
                libpixman-1-dev,
                valac (>= 0.20.0),
                xvfb,
-Homepage: https://launchpad.net/slick-greeter
-# If you aren't a member of ~slick-greeter-team but need to upload packaging
-# changes, just go ahead.  ~slick-greeter-team will notice and sync up the code
-# again.
-Vcs-Bzr: https://code.launchpad.net/~slick-greeter-team/slick-greeter/trunk
+Homepage: https://github.com/linuxmint/slick-greeter
 
 Package: slick-greeter
 Architecture: any
