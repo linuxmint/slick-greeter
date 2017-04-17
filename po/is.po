@@ -125,7 +125,7 @@ msgstr "Keyra í prufuham"
 #. Arguments and description for --help text
 #: ../src/slick-greeter.vala:521
 msgid "- Slick Greeter"
-msgstr "- Unity Heilsari"
+msgstr "- Slick Heilsari"
 
 #. Text printed out when an unknown command-line argument provided
 #: ../src/slick-greeter.vala:532

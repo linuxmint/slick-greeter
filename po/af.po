@@ -125,7 +125,7 @@ msgstr "Hardloop in toetsmodus"
 #. Arguments and description for --help text
 #: ../src/slick-greeter.vala:521
 msgid "- Slick Greeter"
-msgstr "- Unity Groeter"
+msgstr "- Slick Groeter"
 
 #. Text printed out when an unknown command-line argument provided
 #: ../src/slick-greeter.vala:532

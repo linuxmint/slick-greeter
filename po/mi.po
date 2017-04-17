@@ -123,7 +123,7 @@ msgstr "Whakatere momo whakamātautau"
 #. Arguments and description for --help text
 #: ../src/slick-greeter.vala:521
 msgid "- Slick Greeter"
-msgstr "- Te Mihia Unity"
+msgstr "- Te Mihia Slick"
 
 #. Text printed out when an unknown command-line argument provided
 #: ../src/slick-greeter.vala:532
