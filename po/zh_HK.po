@@ -123,7 +123,7 @@ msgstr "以測試模式執行"
 #. Arguments and description for --help text
 #: ../src/slick-greeter.vala:521
 msgid "- Slick Greeter"
-msgstr "- Unity 歡迎程式"
+msgstr "- Slick 歡迎程式"
 
 #. Text printed out when an unknown command-line argument provided
 #: ../src/slick-greeter.vala:532

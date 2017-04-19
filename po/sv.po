@@ -125,7 +125,7 @@ msgstr "Kör i testläge"
 #. Arguments and description for --help text
 #: ../src/slick-greeter.vala:521
 msgid "- Slick Greeter"
-msgstr "- Unity-hälsare"
+msgstr "- Slick-hälsare"
 
 #. Text printed out when an unknown command-line argument provided
 #: ../src/slick-greeter.vala:532

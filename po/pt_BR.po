@@ -125,7 +125,7 @@ msgstr "Executar em modo de teste"
 #. Arguments and description for --help text
 #: ../src/slick-greeter.vala:521
 msgid "- Slick Greeter"
-msgstr "- Tela de boas-vindas do Unity"
+msgstr "- Tela de boas-vindas do Slick"
 
 #. Text printed out when an unknown command-line argument provided
 #: ../src/slick-greeter.vala:532

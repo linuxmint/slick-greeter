@@ -123,7 +123,7 @@ msgstr "Loc'hañ e mod-esseal"
 #. Arguments and description for --help text
 #: ../src/slick-greeter.vala:521
 msgid "- Slick Greeter"
-msgstr "- Degemerer Unity"
+msgstr "- Degemerer Slick"
 
 #. Text printed out when an unknown command-line argument provided
 #: ../src/slick-greeter.vala:532

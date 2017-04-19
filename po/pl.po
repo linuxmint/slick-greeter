@@ -125,7 +125,7 @@ msgstr "Uruchamia w trybie testowym"
 #. Arguments and description for --help text
 #: ../src/slick-greeter.vala:521
 msgid "- Slick Greeter"
-msgstr "- Ekran logowania Unity"
+msgstr "- Ekran logowania Slick"
 
 #. Text printed out when an unknown command-line argument provided
 #: ../src/slick-greeter.vala:532

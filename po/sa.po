@@ -123,7 +123,7 @@ msgstr "परीक्षणावस्थायां चाल्यता�
 #. Arguments and description for --help text
 #: ../src/slick-greeter.vala:521
 msgid "- Slick Greeter"
-msgstr "-Unity अभिनन्दकः"
+msgstr "-Slick अभिनन्दकः"
 
 #. Text printed out when an unknown command-line argument provided
 #: ../src/slick-greeter.vala:532

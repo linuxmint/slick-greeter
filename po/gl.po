@@ -125,7 +125,7 @@ msgstr "Executar en modo de proba."
 #. Arguments and description for --help text
 #: ../src/slick-greeter.vala:521
 msgid "- Slick Greeter"
-msgstr "- Benvida de Unity"
+msgstr "- Benvida de Slick"
 
 #. Text printed out when an unknown command-line argument provided
 #: ../src/slick-greeter.vala:532

@@ -123,7 +123,7 @@ msgstr "Lonchya y'n modh previ"
 #. Arguments and description for --help text
 #: ../src/slick-greeter.vala:521
 msgid "- Slick Greeter"
-msgstr "Dynargher Unity"
+msgstr "Dynargher Slick"
 
 #. Text printed out when an unknown command-line argument provided
 #: ../src/slick-greeter.vala:532
