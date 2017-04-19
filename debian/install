@@ -1,2 +1,1 @@
-debian/slick-greeter.pkla /var/lib/polkit-1/localauthority/10-vendor.d/
 debian/90-slick-greeter.conf /usr/share/lightdm/lightdm.conf.d/
