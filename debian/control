@@ -1,7 +1,7 @@
 Source: slick-greeter
 Section: x11
 Priority: optional
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Maintainer: Linux Mint <root@linuxmint.com>
 Standards-Version: 3.9.6
 Build-Depends: at-spi2-core,
                dbus-x11,
