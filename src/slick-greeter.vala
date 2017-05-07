@@ -184,7 +184,7 @@ public class SlickGreeter
     {
         /* Make sure the given session actually exists. Return it if it does.
         otherwise, return the default session. */
-        var path = Path.build_filename  ("/usr/share/xsessions/", session, null);
+        var path = Path.build_filename  ("/usr/share/xsessions/", session.concat(".desktop"), null);
         if (session != null && FileUtils.test (path, FileTest.EXISTS) ) {
             return session;
         }
