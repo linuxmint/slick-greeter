@@ -1,3 +1,16 @@
+slick-greeter (1.0.2) sonya; urgency=medium
+
+  [ gogogogi ]
+  * l10n: Update hr.po (#26)
+
+  [ gabrc52 ]
+  * Fix session validation (#28)
+
+  [ Clement Lefebvre ]
+  * Session validation: Refactor in case variable is null
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 12 May 2017 15:15:56 +0100
+
 slick-greeter (1.0.1) sonya; urgency=medium
 
   [ Clement Lefebvre ]
