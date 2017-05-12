@@ -184,17 +184,21 @@ public class SlickGreeter
     {
         /* Make sure the given session actually exists. Return it if it does.
         otherwise, return the default session. */
-        var path = Path.build_filename  ("/usr/share/xsessions/", session.concat(".desktop"), null);
-        if (session != null && FileUtils.test (path, FileTest.EXISTS) ) {
-            return session;
-        }
-        else {
-            var default_session = SlickGreeter.get_default_session ();
-            if (session != null) {
-                debug ("Invalid session: '%s'. Using session '%s' instead.", session, default_session);
+        if (session != null) {
+            var path = Path.build_filename  ("/usr/share/xsessions/", session.concat(".desktop"), null);
+            if (!FileUtils.test (path, FileTest.EXISTS) ) {
+                debug ("Invalid session: '%s'", session);
+                session = null;
             }
+        }
+
+        if (session == null) {
+            var default_session = SlickGreeter.get_default_session ();
+            debug ("Using default session: '%s'", default_session);
             return default_session;
         }
+
+        return session;
     }
 
     public bool start_session (string? session, Background bg)
