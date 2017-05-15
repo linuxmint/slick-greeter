@@ -156,8 +156,11 @@ public class DashBox : Gtk.Box
             }
             else
             {
-                min = grid_size * GreeterList.DEFAULT_BOX_HEIGHT - GreeterList.BORDER * 2;
-                nat = grid_size * GreeterList.DEFAULT_BOX_HEIGHT - GreeterList.BORDER * 2;
+                var scale = CairoUtils.get_hidpi_scale();
+                min = grid_size * GreeterList.DEFAULT_BOX_HEIGHT * scale - GreeterList.BORDER *
+					scale * 2;
+                nat = grid_size * GreeterList.DEFAULT_BOX_HEIGHT * scale - GreeterList.BORDER *
+					scale * 2;
             }
         }
         else
@@ -175,8 +178,9 @@ public class DashBox : Gtk.Box
 
     public override void get_preferred_width (out int min, out int nat)
     {
-        min = grid_size * GreeterList.BOX_WIDTH - GreeterList.BORDER * 2;
-        nat = grid_size * GreeterList.BOX_WIDTH - GreeterList.BORDER * 2;
+        var scale = CairoUtils.get_hidpi_scale();
+        min = grid_size * GreeterList.BOX_WIDTH * scale - GreeterList.BORDER * scale * 2;
+        nat = grid_size * GreeterList.BOX_WIDTH * scale - GreeterList.BORDER * scale * 2;
     }
 
     public override bool draw (Cairo.Context c)

@@ -94,6 +94,7 @@ public abstract class GreeterList : FadableBox
     private Gtk.Fixed fixed;
     public DashBox greeter_box;
     private int cached_box_height = -1;
+    private int scale;
 
     protected enum Mode
     {
@@ -120,7 +121,7 @@ public abstract class GreeterList : FadableBox
         {
             /* First, get grid row number as if menubar weren't there */
             var row = (MainWindow.MENUBAR_HEIGHT + get_allocated_height ()) / grid_size;
-            row = row - DEFAULT_BOX_HEIGHT; /* and no default dash box */
+            row = row - (DEFAULT_BOX_HEIGHT * scale); /* and no default dash box */
             row = row / 2; /* and in the middle */
             /* Now calculate y pixel spot keeping in mind menubar's allocation */
             return row * grid_size - MainWindow.MENUBAR_HEIGHT;
@@ -195,6 +196,8 @@ public abstract class GreeterList : FadableBox
         {
             debug ("Error getting session bus: %s", e.message);
         }
+
+        scale = CairoUtils.get_hidpi_scale();
     }
 
     private void on_bus_acquired (Object? obj, AsyncResult res)
@@ -221,8 +224,8 @@ public abstract class GreeterList : FadableBox
 
     public override void get_preferred_width (out int min, out int nat)
     {
-        min = BOX_WIDTH * grid_size;
-        nat = BOX_WIDTH * grid_size;
+        min = BOX_WIDTH * scale * grid_size;
+        nat = BOX_WIDTH * scale * grid_size;
     }
 
     public override void get_preferred_height (out int min, out int nat)
@@ -392,7 +395,8 @@ public abstract class GreeterList : FadableBox
     protected void add_entry (PromptBox entry)
     {
         entry.expand = true;
-        entry.set_size_request (grid_size * BOX_WIDTH - BORDER * 2, -1);
+
+        entry.set_size_request (grid_size * (BOX_WIDTH * scale) - (BORDER * scale) * 2, -1);
         add_with_class (entry);
 
         insert_entry (entry);
@@ -495,12 +499,12 @@ public abstract class GreeterList : FadableBox
 
     protected int get_greeter_box_x ()
     {
-        return box_x + BORDER;
+        return box_x + (BORDER * scale);
     }
 
     protected int get_greeter_box_y ()
     {
-        return box_y + BORDER;
+        return box_y + (BORDER * scale);
     }
 
     protected virtual int get_position_y (double position)
@@ -536,7 +540,7 @@ public abstract class GreeterList : FadableBox
         get_allocation (out allocation);
 
         var child_allocation = Gtk.Allocation ();
-        child_allocation.width = grid_size * BOX_WIDTH - BORDER * 2;
+        child_allocation.width = grid_size * (BOX_WIDTH * scale) - (BORDER * scale) * 2;
         entry.get_preferred_height_for_width (child_allocation.width, null, out child_allocation.height);
         child_allocation.x = allocation.x + get_greeter_box_x ();
         child_allocation.y = allocation.y + get_position_y (position);
@@ -737,7 +741,8 @@ public abstract class GreeterList : FadableBox
             c.save ();
             c.push_group ();
 
-            c.rectangle (get_greeter_box_x (), get_greeter_box_y () - n_above * grid_size, grid_size * BOX_WIDTH - BORDER * 2, grid_size * (n_above + n_below + get_greeter_box_height_grids ()));
+            c.rectangle (get_greeter_box_x (), get_greeter_box_y () - n_above * grid_size, grid_size
+				* (BOX_WIDTH * scale)- (BORDER * scale) * 2, grid_size * (n_above + n_below + get_greeter_box_height_grids ()));
             c.clip ();
 
             foreach (var child in fixed.get_children ())

@@ -126,6 +126,7 @@ public class MenuBar : Gtk.MenuBar
     private Pid keyboard_pid = 0;
     private Pid reader_pid = 0;
     private Gtk.CheckMenuItem onscreen_keyboard_item;
+    private int scale;
     private Gtk.Label clock_label;
     private UPower.Daemon upowerd;
     private Gtk.MenuItem power_menu_item;

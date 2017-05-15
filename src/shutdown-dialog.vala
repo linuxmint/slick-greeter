@@ -56,6 +56,7 @@ public class ShutdownDialog : Gtk.Fixed
 
     private AnimateTimer animation;
     private bool closing = false;
+    private int scale;
 
 
     public ShutdownDialog (ShutdownDialogType type, Background bg)
@@ -76,14 +77,16 @@ public class ShutdownDialog : Gtk.Fixed
         });
         add (monitor_events);
 
-        vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 10);
+        scale = CairoUtils.get_hidpi_scale();
+
+        vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 10 * scale);
         vbox.visible = true;
 
         vbox.margin = BORDER_INTERNAL_SIZE;
-        vbox.margin_top += 9;
-        vbox.margin_left += 20;
-        vbox.margin_right += 20;
-        vbox.margin_bottom += 2;
+        vbox.margin_top += 9 * scale ;
+        vbox.margin_left += 20 * scale;
+        vbox.margin_right += 20 * scale;
+        vbox.margin_bottom += 2 * scale;
 
         // This event box consumes the click events inside the vbox
         vbox_events = new Gtk.EventBox();
@@ -104,7 +107,9 @@ public class ShutdownDialog : Gtk.Fixed
         {
             var title_label = new Gtk.Label (_("Shut Down"));
             title_label.visible = true;
-            title_label.override_font (Pango.FontDescription.from_string ("Ubuntu Light 15"));
+            var font_size = 15 * scale;
+            var font = "Ubuntu Light " + font_size.to_string();
+            title_label.override_font (Pango.FontDescription.from_string (font));
             title_label.override_color (Gtk.StateFlags.NORMAL, { 1.0f, 1.0f, 1.0f, 1.0f });
             title_label.set_alignment (0.0f, 0.5f);
             vbox.pack_start (title_label, false, false, 0);
@@ -138,13 +143,15 @@ public class ShutdownDialog : Gtk.Fixed
 
         var label = new Gtk.Label (text);
         label.set_line_wrap (true);
-        label.override_font (Pango.FontDescription.from_string ("Ubuntu Light 12"));
+        var font_size = 12 * scale;
+        var font = "Ubuntu Light " + font_size.to_string();
+        label.override_font (Pango.FontDescription.from_string (font));
         label.override_color (Gtk.StateFlags.NORMAL, { 1.0f, 1.0f, 1.0f, 1.0f });
         label.set_alignment (0.0f, 0.5f);
         label.visible = true;
         vbox.pack_start (label, false, false, 0);
 
-        button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 20);
+        button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 20 * 2);
         button_box.visible = true;
         vbox.pack_start (button_box, false, false, 0);
 
@@ -541,6 +548,7 @@ private class DialogButton : Gtk.Button
     private string? active_filename;
     private Gtk.Image i;
     private Gtk.Label? l;
+    private int scale;
 
     public DialogButton (string inactive_filename, string focused_filename, string? active_filename, Gtk.Label? label = null)
     {
@@ -550,6 +558,11 @@ private class DialogButton : Gtk.Button
         relief = Gtk.ReliefStyle.NONE;
         Gtk.button_set_focus_on_click (this, false);
         i = new Gtk.Image.from_file (inactive_filename);
+        scale = CairoUtils.get_hidpi_scale();
+        int h = i.pixbuf.height;
+        int w = i.pixbuf.width;
+        var pixbuf = i.pixbuf.scale_simple(h * scale, w * scale, Gdk.InterpType.BILINEAR);
+        i.set_from_pixbuf(pixbuf);
         i.visible = true;
         add (i);
 
@@ -558,7 +571,9 @@ private class DialogButton : Gtk.Button
         if (l != null)
         {
             l.visible = true;
-            l.override_font (Pango.FontDescription.from_string ("Ubuntu Light 12"));
+            var font_size = 12 * scale;
+            var font = "Ubuntu Light " + font_size.to_string();
+            l.override_font (Pango.FontDescription.from_string (font));
             l.override_color (Gtk.StateFlags.NORMAL, { 1.0f, 1.0f, 1.0f, 0.0f });
             l.override_color (Gtk.StateFlags.FOCUSED, { 1.0f, 1.0f, 1.0f, 1.0f });
             l.override_color (Gtk.StateFlags.ACTIVE, { 1.0f, 1.0f, 1.0f, 1.0f });
@@ -605,13 +620,32 @@ private class DialogButton : Gtk.Button
             (new_flags & Gtk.StateFlags.FOCUSED) != 0)
         {
             if ((new_flags & Gtk.StateFlags.ACTIVE) != 0 && active_filename != null)
+            {
                 i.set_from_file (active_filename);
+
+                int h = i.pixbuf.height;
+                int w = i.pixbuf.width;
+                var pixbuf = i.pixbuf.scale_simple(h * scale, w * scale, Gdk.InterpType.BILINEAR);
+                i.set_from_pixbuf(pixbuf);
+            }
             else
+            {
                 i.set_from_file (focused_filename);
+
+                int h = i.pixbuf.height;
+                int w = i.pixbuf.width;
+                var pixbuf = i.pixbuf.scale_simple(h * scale, w * scale, Gdk.InterpType.BILINEAR);
+                i.set_from_pixbuf(pixbuf);
+            }
         }
         else
         {
             i.set_from_file (inactive_filename);
+
+            int h = i.pixbuf.height;
+            int w = i.pixbuf.width;
+            var pixbuf = i.pixbuf.scale_simple(h * scale, w * scale, Gdk.InterpType.BILINEAR);
+            i.set_from_pixbuf(pixbuf);
         }
 
         if (l != null)

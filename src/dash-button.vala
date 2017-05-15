@@ -29,7 +29,9 @@ public class DashButton : FlatButton, Fadable
         set
         {
             _text = value;
-            text_label.set_markup ("<span font=\"Ubuntu 13\">%s</span>".printf (value));
+            var font_size = 13 * CairoUtils.get_hidpi_scale();
+            var font = "<span font=\"Ubuntu %d\">%s</span>".printf (font_size, value);
+            text_label.set_markup (font.printf (value));
         }
     }
 

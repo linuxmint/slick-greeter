@@ -88,7 +88,10 @@ public class MainWindow : Gtk.Window
         {
             debug ("Internal error loading menubox style: %s", e.message);
         }
-        menubox.set_size_request (-1, MENUBAR_HEIGHT);
+
+        var scale = CairoUtils.get_hidpi_scale();
+
+        menubox.set_size_request (-1, MENUBAR_HEIGHT * scale);
         menubox.show ();
         menualign.show ();
         menubox.add (menualign);

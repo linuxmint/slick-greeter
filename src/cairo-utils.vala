@@ -18,8 +18,35 @@
  *          Mirco "MacSlow" Mueller <mirco.mueller@canonical.com>
  */
 
+public const int HIDPI_SCALE = 2;
+
 namespace CairoUtils
 {
+
+public bool check_hidpi_display ()
+{
+    var screen = Gdk.Screen.get_default();
+    var primary = screen.get_primary_monitor();
+	
+    Gdk.Rectangle area;
+    screen.get_monitor_geometry(primary, out area);
+
+    var diagonal = Math.sqrt (area.width * area.width + area.height * area.height);
+
+    var width_mm = screen.get_monitor_width_mm(primary);
+    var height_mm = screen.get_monitor_height_mm(primary);
+
+    var diagonal_mm = Math.sqrt (width_mm * width_mm + height_mm * height_mm);
+
+    var ppi = (int) (diagonal * 25.4 / diagonal_mm);
+
+    return (ppi >= 192) && (area.height >= 1200);
+}
+
+public int get_hidpi_scale ()
+{
+    return check_hidpi_display() ? HIDPI_SCALE : 1;
+}
 
 public void rounded_rectangle (Cairo.Context c, double x, double y,
                                double width, double height, double radius)
