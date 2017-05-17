@@ -1,3 +1,10 @@
+slick-greeter (1.0.3) sonya; urgency=medium
+
+  [ David Mohammed ]
+  * Packaging: Fix some issues (#29)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 17 May 2017 11:55:36 +0100
+
 slick-greeter (1.0.2) sonya; urgency=medium
 
   [ gogogogi ]
