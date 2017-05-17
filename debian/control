@@ -2,7 +2,7 @@ Source: slick-greeter
 Section: x11
 Priority: optional
 Maintainer: Linux Mint <root@linuxmint.com>
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 Build-Depends: at-spi2-core,
                dbus-x11,
                debhelper (>= 9),
@@ -14,7 +14,7 @@ Build-Depends: at-spi2-core,
                liblightdm-gobject-1-dev (>= 1.4.0),
                libpixman-1-dev,
                valac (>= 0.20.0),
-               xvfb,
+               xvfb
 Homepage: https://github.com/linuxmint/slick-greeter
 
 Package: slick-greeter
@@ -22,9 +22,30 @@ Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends},
          lightdm,
+         python3
 Suggests: lightdm-remote-session-freerdp,
           lightdm-remote-session-uccsconfigure,
           remote-login-service,
 Provides: lightdm-greeter
-Description: Slick Greeter
- The greeter for the Unity desktop.
+Description: Slick-looking LightDM greeter
+ Slick-Greeter is cross-distribution and should work pretty much
+ anywhere.
+ .
+ All panel applets are embedded. No external indicators are launched or
+ loaded by the greeter.
+ .
+ No settings daemon are launched or loaded by the greeter.
+ .
+ This greeter supports HiDPI.
+ .
+ Sessions are validated. If a default/chosen session isn't present on
+ the system, the greeter scans for known sessions in
+ /usr/share/xsessions and replaces the invalid session choice with a
+ valid session.
+ .
+ You can take a screenshot by pressing PrintScrn. The screenshot is
+ saved in /var/lib/lightdm/Screenshot.png.
+ .
+ Slick Greeter started as a fork of Unity Greeter 16.04.2, a greeter
+ developed for Ubuntu by Canonical, which used indicators and
+ unity-settings-daemon.

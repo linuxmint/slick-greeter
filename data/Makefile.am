@@ -35,7 +35,9 @@ dist_pkgdata_DATA = \
 @GSETTINGS_RULES@
 gsettings_SCHEMAS = x.dm.slick-greeter.gschema.xml
 
-dist_man1_MANS = slick-greeter.1
+dist_man1_MANS = \
+	slick-greeter.1 \
+	slick-greeter-check-hidpi.1
 
 EXTRA_DIST = \
 	$(gsettings_SCHEMAS)
