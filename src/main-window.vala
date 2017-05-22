@@ -50,12 +50,7 @@ public class MainWindow : Gtk.Window
         has_resize_grip = false;
         SlickGreeter.add_style_class (this);
 
-        realize ();
-        background = new Background (Gdk.cairo_create (get_window ()).get_target ());
-        background.draw_grid = UGSettings.get_boolean (UGSettings.KEY_DRAW_GRID);
-        background.default_background = UGSettings.get_string (UGSettings.KEY_BACKGROUND);
-        background.set_logo (UGSettings.get_string (UGSettings.KEY_LOGO), UGSettings.get_string (UGSettings.KEY_BACKGROUND_LOGO));
-        background.show ();
+        background = new Background ();
         add (background);
         SlickGreeter.add_style_class (background);
 
@@ -190,6 +185,12 @@ public class MainWindow : Gtk.Window
             hbox.margin_top = get_grid_offset (get_allocated_height ());
             hbox.margin_bottom = get_grid_offset (get_allocated_height ());
         }
+    }
+
+    public override void realize ()
+    {
+        base.realize ();
+        background.set_surface (Gdk.cairo_create (get_window ()).get_target ());
     }
 
     private void monitors_changed_cb (Gdk.Screen screen)

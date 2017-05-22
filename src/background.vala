@@ -419,15 +419,26 @@ public class Background : Gtk.Fixed
     private int background_logo_width;
     private int background_logo_height;
 
-    public Background (Cairo.Surface target_surface)
+    public Background ()
     {
-        this.target_surface = target_surface;
-        timer = new AnimateTimer (AnimateTimer.ease_in_out, 700);
-        timer.animate.connect (animate_cb);
+        target_surface = null;
+        timer = null;
 
         resize_mode = Gtk.ResizeMode.QUEUE;
+        draw_grid = UGSettings.get_boolean (UGSettings.KEY_DRAW_GRID);
+        set_logo (UGSettings.get_string (UGSettings.KEY_LOGO), UGSettings.get_string (UGSettings.KEY_BACKGROUND_LOGO));
 
         loaders = new HashTable<string?, BackgroundLoader> (str_hash, str_equal);
+
+        show ();
+    }
+
+    public void set_surface (Cairo.Surface target_surface)
+    {
+        this.target_surface = target_surface;
+
+        timer = new AnimateTimer (AnimateTimer.ease_in_out, 700);
+        timer.animate.connect (animate_cb);
 
         notify["current-background"].connect (() => { reload (); });
     }
@@ -483,7 +494,7 @@ public class Background : Gtk.Fixed
         base.size_allocate (allocation);
 
         /* Regenerate backgrounds */
-        if (resized)
+        if (timer != null && resized)
         {
             debug ("Regenerating backgrounds");
             loaders.remove_all ();
