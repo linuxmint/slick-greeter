@@ -149,9 +149,16 @@ public class DashEntry : Gtk.Entry, Fadable
         c.save ();
 
         /* Position text */
-        int x, y;
-        get_layout_offsets (out x, out y);
-        c.move_to (x, y);
+        int layout_width, layout_height;
+        Gdk.Rectangle rect;
+
+        var layout = create_pango_layout (constant_placeholder_text);
+        layout.set_font_description (Pango.FontDescription.from_string ("Ubuntu 13"));
+        layout.get_pixel_size (out layout_width, out layout_height);
+
+        get_text_area (out rect);
+
+        c.move_to (rect.x, rect.y + (rect.height / 2) - (layout_height / 2));
 
         /* Set foreground color */
         var fg = Gdk.RGBA ();
@@ -161,8 +168,6 @@ public class DashEntry : Gtk.Entry, Fadable
         c.set_source_rgba (fg.red, fg.green, fg.blue, fg.alpha);
 
         /* Draw text */
-        var layout = create_pango_layout (constant_placeholder_text);
-        layout.set_font_description (Pango.FontDescription.from_string ("Ubuntu 13"));
         Pango.cairo_show_layout (c, layout);
 
         c.restore ();
