@@ -100,6 +100,12 @@ public class SlickGreeter
         }
 
         main_window = new MainWindow ();
+        main_window.destroy.connect(() => { kill_fake_wm (); });
+        main_window.delete_event.connect(() =>
+        {
+            Gtk.main_quit();
+            return false;
+        });
 
         Bus.own_name (BusType.SESSION, "x.dm.SlickGreeter", BusNameOwnerFlags.NONE);
 
@@ -444,6 +450,12 @@ public class SlickGreeter
         var root = Gdk.get_default_root_window ();
         root.set_events (root.get_events () | Gdk.EventMask.SUBSTRUCTURE_MASK);
         root.add_filter (focus_upon_map);
+    }
+
+    private void kill_fake_wm ()
+    {
+        var root = Gdk.get_default_root_window ();
+        root.remove_filter (focus_upon_map);
     }
 
     private static Cairo.XlibSurface? create_root_surface (Gdk.Screen screen)
