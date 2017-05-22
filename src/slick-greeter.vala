@@ -58,7 +58,16 @@ public class SlickGreeter
         greeter = new LightDM.Greeter ();
         greeter.show_message.connect ((text, type) => { show_message (text, type); });
         greeter.show_prompt.connect ((text, type) => { show_prompt (text, type); });
-        greeter.autologin_timer_expired.connect (() => { greeter.authenticate_autologin (); });
+        greeter.autologin_timer_expired.connect (() => {
+            try
+            {
+                greeter.authenticate_autologin ();
+            }
+            catch (Error e)
+            {
+                warning ("Failed to autologin authenticate: %s", e.message);
+            }
+        });
         greeter.authentication_complete.connect (() => { authentication_complete (); });
         var connected = false;
         try
@@ -67,7 +76,7 @@ public class SlickGreeter
         }
         catch (Error e)
         {
-            warning ("Failed to connect to LightDM daemon");
+            warning ("Failed to connect to LightDM daemon: %s", e.message);
         }
         if (!connected && !test_mode)
             Posix.exit (Posix.EXIT_FAILURE);
@@ -282,27 +291,62 @@ public class SlickGreeter
 
     public void authenticate (string? userid = null)
     {
-        greeter.authenticate (userid);
+        try
+        {
+            greeter.authenticate (userid);
+        }
+        catch (Error e)
+        {
+            warning ("Failed to authenticate: %s", e.message);
+        }
     }
 
     public void authenticate_as_guest ()
     {
-        greeter.authenticate_as_guest ();
+        try
+        {
+            greeter.authenticate_as_guest ();
+        }
+        catch (Error e)
+        {
+            warning ("Failed to authenticate as guest: %s", e.message);
+        }
     }
 
-    public void authenticate_remote (string? session, string? userid)
+    public void authenticate_remote (string session, string? userid)
     {
-        SlickGreeter.singleton.greeter.authenticate_remote (session, userid);
+        try
+        {
+            SlickGreeter.singleton.greeter.authenticate_remote (session, userid);
+        }
+        catch (Error e)
+        {
+            warning ("Failed to remote authenticate: %s", e.message);
+        }
     }
 
     public void cancel_authentication ()
     {
-        greeter.cancel_authentication ();
+        try
+        {
+            greeter.cancel_authentication ();
+        }
+        catch (Error e)
+        {
+            warning ("Failed to cancel authentication: %s", e.message);
+        }
     }
 
     public void respond (string response)
     {
-        greeter.respond (response);
+        try
+        {
+            greeter.respond (response);
+        }
+        catch (Error e)
+        {
+            warning ("Failed to respond: %s", e.message);
+        }
     }
 
     public string authentication_user ()
