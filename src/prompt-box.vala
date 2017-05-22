@@ -263,26 +263,6 @@ public class PromptBox : FadableBox
         last_row = start_row;
     }
 
-    private int round_to_grid (int size)
-    {
-        var num_grids = size / grid_size;
-        var remainder = size % grid_size;
-        if (remainder > 0)
-            num_grids += 1;
-        num_grids = int.max (num_grids, 3);
-        return num_grids * grid_size;
-    }
-
-    public override void get_preferred_height (out int min, out int nat)
-    {
-        base.get_preferred_height (out min, out nat);
-        min = round_to_grid (min + GreeterList.BORDER * 2) - GreeterList.BORDER * 2;
-        nat = round_to_grid (nat + GreeterList.BORDER * 2) - GreeterList.BORDER * 2;
-
-        if (position <= -1 || position >= 1)
-            min = nat = grid_size;
-    }
-
     public void set_zone (Gtk.Widget zone)
     {
         this.zone = zone;
