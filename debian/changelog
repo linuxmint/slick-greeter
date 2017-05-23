@@ -1,3 +1,16 @@
+slick-greeter (1.0.4) sonya; urgency=medium
+
+  [ leigh123linux ]
+  * Handle errors from liblightdm (#32)
+
+  [ Michael Webster ]
+  * dash-entry.vala: Improve position of the hint text draw in the password entry box - it should be more centered now instead of in the upper left corner.
+  * prompt-box.vala: Remove custom allocation code - everything works correctly without it.  With it, entries are often under- or over- allocated, with the result being the active user's password entry sometimes does not have enough room to be visible.
+  * background: Don't realize() this immediately - only start the image gathering thread during initialization.  Wait for the main window to be realized before passing its cairo surface to the background object and drawing the background for the first time.
+  * slick-greeter.vala: disconnect the event filter when the main window is destroyed, otherwise we can continue to receive events on the filter when we no longer have a backing GdkWindow to act upon (causing a segfault.)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 23 May 2017 14:33:01 +0100
+
 slick-greeter (1.0.3) sonya; urgency=medium
 
   [ David Mohammed ]
