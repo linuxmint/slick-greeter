@@ -394,8 +394,79 @@ public class Background : Gtk.Fixed
         GRID,
     }
 
-    public string default_background { get; set; default = UGSettings.get_string (UGSettings.KEY_BACKGROUND_COLOR); }
-    public string? current_background { get; set; default = null; }
+    /* Fallback color - shown upon first startup, until an async background loader finishes,
+     * or until a user background or default background is loaded.
+     */
+    private bool draw_user_backgrounds = UGSettings.get_boolean (UGSettings.KEY_DRAW_USER_BACKGROUNDS);
+
+    private string _fallback_color = null;
+    public string fallback_color {
+        get {
+            if (_fallback_color == null)
+            {
+                var settings_color = UGSettings.get_string (UGSettings.KEY_BACKGROUND_COLOR);
+                var color = Gdk.RGBA ();
+
+                if (settings_color == "" || !color.parse (settings_color))
+                {
+                    settings_color = "#000000";
+                }
+
+                _fallback_color = settings_color;
+            }
+
+            return _fallback_color;
+        }
+    }
+
+    private string _system_background;
+    public string? system_background {
+        get {
+            if (_system_background == null)
+            {
+                var system_bg = UGSettings.get_string (UGSettings.KEY_BACKGROUND);
+
+                if (system_bg == "")
+                {
+                    system_bg = fallback_color;
+                }
+
+                _system_background = system_bg;
+            }
+
+            return _system_background;
+        }
+    }
+
+    /* Current background - whatever the background object is or should be showing right now.
+     * This could be a simple color or a file name - the BackgroundLoader takes care of deciding
+     * how to deal with it, we just ensure whatever we're sending is valid.
+     */
+
+    private string _current_background;
+    public string? current_background {
+        get { return _current_background; }
+
+        set {
+            if (value == null || value == "")
+            {
+                if (draw_user_backgrounds)
+                {
+                    _current_background = fallback_color;
+                } else {
+                    _current_background = system_background;
+                }
+            } else
+            {
+                _current_background = value;
+            }
+
+            reload ();
+        }
+
+        default = fallback_color;
+    }
+
     public bool draw_grid { get; set; default = true; }
     public double alpha { get; private set; default = 1.0; }
     public Gdk.RGBA average_color { get { return current.average_color; } }
@@ -426,8 +497,6 @@ public class Background : Gtk.Fixed
 
         resize_mode = Gtk.ResizeMode.QUEUE;
         draw_grid = UGSettings.get_boolean (UGSettings.KEY_DRAW_GRID);
-        set_logo (UGSettings.get_string (UGSettings.KEY_LOGO), UGSettings.get_string (UGSettings.KEY_BACKGROUND_LOGO));
-
         loaders = new HashTable<string?, BackgroundLoader> (str_hash, str_equal);
 
         show ();
@@ -438,9 +507,9 @@ public class Background : Gtk.Fixed
         this.target_surface = target_surface;
 
         timer = new AnimateTimer (AnimateTimer.ease_in_out, 700);
-        timer.animate.connect (animate_cb);
 
-        notify["current-background"].connect (() => { reload (); });
+        set_logo (UGSettings.get_string (UGSettings.KEY_LOGO), UGSettings.get_string (UGSettings.KEY_BACKGROUND_LOGO));
+        timer.animate.connect (animate_cb);
     }
 
     public void set_logo (string version_logo, string background_logo)
@@ -489,12 +558,17 @@ public class Background : Gtk.Fixed
 
     public override void size_allocate (Gtk.Allocation allocation)
     {
+        if (!get_realized ())
+        {
+            return;
+        }
+
         var resized = allocation.height != get_allocated_height () || allocation.width != get_allocated_width ();
 
         base.size_allocate (allocation);
 
         /* Regenerate backgrounds */
-        if (timer != null && resized)
+        if (resized)
         {
             debug ("Regenerating backgrounds");
             loaders.remove_all ();
@@ -629,7 +703,7 @@ public class Background : Gtk.Fixed
     private BackgroundLoader load_background (string? filename)
     {
         if (filename == null)
-            filename = default_background;
+            filename = fallback_color;
 
         var b = loaders.lookup (filename);
         if (b == null)

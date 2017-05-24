@@ -601,7 +601,9 @@ public class UserList : GreeterList
                 change_background_timeout = Idle.add (change_background_timeout_cb);
         }
         else
+        {
             change_background_timeout_cb ();
+        }
     }
 
     protected static int user_list_compare_entry (PromptBox a, PromptBox b)
