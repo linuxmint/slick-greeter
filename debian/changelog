@@ -1,3 +1,10 @@
+slick-greeter (1.0.5) sonya; urgency=medium
+
+  [ Michael Webster ]
+  * backgrounds: Fix determination of what to display as a background, broken as a result of d2a7122d731c0f19f502a9efba1feee651bcfa7c
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 25 May 2017 15:07:22 +0100
+
 slick-greeter (1.0.4) sonya; urgency=medium
 
   [ leigh123linux ]
