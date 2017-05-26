@@ -39,6 +39,16 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", Gettext package)
 AC_SUBST(GETTEXT_PACKAGE)
 
 dnl ###########################################################################
+dnl Check for GTK version - 3.20
+dnl ###########################################################################
+
+PKG_CHECK_MODULES(GTK_3_20_0, gtk+-3.0 >= 3.20.0 , gtk_check_pass=yes, gtk_check_pass=no)
+if test x$gtk_check_pass = xyes ; then
+  AM_VALAFLAGS="$AM_VALAFLAGS -D HAVE_GTK_3_20_0"
+  AC_SUBST([AM_VALAFLAGS])
+fi
+
+dnl ###########################################################################
 dnl Files to generate
 dnl ###########################################################################
 

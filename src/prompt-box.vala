@@ -263,6 +263,28 @@ public class PromptBox : FadableBox
         last_row = start_row;
     }
 
+#if HAVE_GTK_3_20_0
+    private int round_to_grid (int size)
+    {
+        var num_grids = size / grid_size;
+        var remainder = size % grid_size;
+        if (remainder > 0)
+            num_grids += 1;
+        num_grids = int.max (num_grids, 3);
+        return num_grids * grid_size;
+    }
+
+    public override void get_preferred_height (out int min, out int nat)
+    {
+        base.get_preferred_height (out min, out nat);
+        min = round_to_grid (min + GreeterList.BORDER * 2) - GreeterList.BORDER * 2;
+        nat = round_to_grid (nat + GreeterList.BORDER * 2) - GreeterList.BORDER * 2;
+
+        if (position <= -1 || position >= 1)
+            min = nat = grid_size;
+    }
+#endif
+
     public void set_zone (Gtk.Widget zone)
     {
         this.zone = zone;
@@ -319,7 +341,23 @@ public class PromptBox : FadableBox
     public void clear ()
     {
         prompt_visibility = PromptVisibility.HIDDEN;
-        foreach_prompt_widget ((w) => { w.destroy (); });
+
+        /* Hold a ref while removing the prompt widgets -
+         * if we just do w.destroy() we get this warning:
+         * CRITICAL: pango_layout_get_cursor_pos: assertion 'index >= 0 && index <= layout->length' failed
+         * by GtkWidget's screen-changed signal being called on
+         * widget when we destroy it.
+         */
+        foreach_prompt_widget ((w) => {
+#if HAVE_GTK_3_20_0
+            w.ref ();
+            w.get_parent().remove(w);
+            w.unref ();
+#else
+            w.destroy ();
+#endif
+        });
+
         reset_last_row ();
         has_errors = false;
     }
