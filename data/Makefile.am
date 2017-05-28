@@ -3,6 +3,9 @@
 xgreeterdir = $(datarootdir)/xgreeters
 dist_xgreeter_DATA = slick-greeter.desktop
 
+greeterconfdir = $(sysconfdir)/lightdm
+dist_greeterconf_DATA = slick-greeter.conf
+
 dist_pkgdata_DATA = \
 	a11y.svg \
 	active.png \
