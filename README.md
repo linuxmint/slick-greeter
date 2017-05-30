@@ -1,6 +1,8 @@
 
 A slick-looking LightDM greeter
 
+![Slick Greeter](https://www.linuxmint.com/tmp/blog/3254/thumb_slick.png)
+
 # Configuration
 
 - The default configuration is stored in dconf under the schema x.dm.slick-greeter.
