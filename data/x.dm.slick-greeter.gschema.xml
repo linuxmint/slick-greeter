@@ -3,7 +3,7 @@
   <schema id="x.dm.slick-greeter" path="/x/dm/slick-greeter/">
     <key name="background" type="s">
       <default>''</default>
-      <summary>Background file to use, either an image path or a color (e.g. #772953)</summary>
+      <summary>Background file to use</summary>
     </key>
     <key name="background-color" type="s">
       <default>'#000000'</default>

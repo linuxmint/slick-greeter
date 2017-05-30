@@ -450,12 +450,7 @@ public class Background : Gtk.Fixed
         set {
             if (value == null || value == "")
             {
-                if (draw_user_backgrounds)
-                {
-                    _current_background = fallback_color;
-                } else {
-                    _current_background = system_background;
-                }
+                _current_background = system_background;
             } else
             {
                 _current_background = value;
