@@ -94,47 +94,15 @@ public class SessionList : GreeterList
     protected override void add_manual_entry () {}
     public override void show_authenticated (bool successful = true) {}
 
-    private static string? get_badge_name (string session)
-    {
-        switch (session)
-        {
-        case "ubuntu":
-        case "ubuntu-2d":
-            return "ubuntu.png";
-        case "gnome-classic":
-        case "gnome-flashback-compiz":
-        case "gnome-flashback-metacity":
-        case "gnome-shell":
-        case "gnome-wayland":
-        case "gnome":
-            return "gnome.png";
-        case "kde":
-        case "kde-plasma":
-        case "plasma":
-            return "kde.png";
-        case "xterm":
-            return "recovery_console.png";
-        case "remote-login":
-            return "remote_login_help.png";
-        default:
-            return null;
-        }
-    }
-
     private static HashTable<string, Gdk.Pixbuf> badges; /* cache of badges */
     public static Gdk.Pixbuf? get_badge (string session)
     {
-        var name = get_badge_name (session);
+        var name = "unknown.png";
 
-        if (name == null)
-        {
-            var filename = "%s.png".printf (session);
-            var path = Path.build_filename ("/usr/share/slick-greeter/badges/", filename, null);
-            if (FileUtils.test (path, FileTest.EXISTS))
-                name = filename;
-            else
-                name = "unknown.png";
-        }
+        var filename = "%s.png".printf (session);
+        var path = Path.build_filename ("/usr/share/slick-greeter/badges/", filename, null);
+        if (FileUtils.test (path, FileTest.EXISTS))
+            name = filename;
 
         if (badges == null)
             badges = new HashTable<string, Gdk.Pixbuf> (str_hash, str_equal);
