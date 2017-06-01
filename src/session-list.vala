@@ -99,10 +99,20 @@ public class SessionList : GreeterList
     {
         var name = "unknown.png";
 
-        var filename = "%s.png".printf (session);
-        var path = Path.build_filename ("/usr/share/slick-greeter/badges/", filename, null);
-        if (FileUtils.test (path, FileTest.EXISTS))
-            name = filename;
+        var extensions = new List<string>();
+        extensions.append("svg");
+        extensions.append("png");
+
+        foreach (string extension in extensions)
+        {
+            var filename = "%s.%s".printf (session, extension);
+            var path = Path.build_filename ("/usr/share/slick-greeter/badges/", filename, null);
+            if (FileUtils.test (path, FileTest.EXISTS))
+            {
+                name = filename;
+                break;
+            }
+        }
 
         if (badges == null)
             badges = new HashTable<string, Gdk.Pixbuf> (str_hash, str_equal);
