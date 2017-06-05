@@ -103,6 +103,7 @@ public class PromptBox : FadableBox
         box_grid = new Gtk.Grid ();
         box_grid.column_spacing = 4;
         box_grid.row_spacing = 3;
+        box_grid.set_row_homogeneous (true);
         box_grid.margin_top = GreeterList.BORDER;
         box_grid.margin_bottom = 6;
         box_grid.expand = true;
