@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1"
-	 id="svg2" inkscape:version="0.91 r13725" sodipodi:docname="gnome.svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="22px"
-	 viewBox="0 0 22 22" enable-background="new 0 0 22 22" xml:space="preserve">
-<sodipodi:namedview  units="px" id="base" inkscape:window-maximized="1" inkscape:snap-bbox-edge-midpoints="true" inkscape:snap-bbox-midpoints="false" inkscape:bbox-nodes="true" inkscape:current-layer="layer1" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:document-units="px" inkscape:snap-global="false" inkscape:window-width="1920" inkscape:window-y="0" inkscape:window-x="0" inkscape:window-height="1020" inkscape:snap-bbox="true" bordercolor="#666666" inkscape:zoom="7.9195959" pagecolor="#373737" showgrid="true" inkscape:cy="34.380891" inkscape:cx="-54.891338" borderopacity="1.0">
-	<inkscape:grid  type="xygrid" id="grid4147"></inkscape:grid>
-</sodipodi:namedview>
+<svg version="1.1" id="svg2" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        width="22px" height="22px" viewBox="0 0 22 22" enable-background="new 0 0 22 22" xml:space="preserve">
 <g>
 	<path fill="#FFFFFF" d="M11.549,4.281c-0.061-0.011-0.122-0.015-0.184-0.012c-0.523,0.031-0.979,0.593-1.078,1.33
 		c-0.113,0.836,0.269,1.602,0.852,1.711C11.723,7.42,12.287,6.83,12.4,5.992C12.514,5.156,12.133,4.39,11.549,4.281z"/>
