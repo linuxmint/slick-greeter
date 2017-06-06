@@ -180,6 +180,7 @@ public class SlickGreeter
         sessions.append ("cinnamon");
         sessions.append ("mate");
         sessions.append ("xfce");
+        sessions.append ("plasma");
         sessions.append ("kde-plasma");
         sessions.append ("kde");
         sessions.append ("gnome");
