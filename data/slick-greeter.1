@@ -1,4 +1,4 @@
-.TH SLICK-GREETER 1 "April 6, 2017"
+.TH SLICK-GREETER 1 "June 2, 2017"
 .SH NAME
 slick-greeter \- distro agnostic LightDM greeter
 .SH SYNOPSIS
@@ -23,5 +23,77 @@ Run the greeter in a test mode inside the current X session.
 .TP
 .B \-?, \-\-help
 Show help options.
+.SH Configuration File-Format
+.TP
+.TP
+.B /etc/lightdm/slick-greeter.conf
+.TP
+Available configuration options are listed below.
+.TP
+.B background=
+Background file to use, either an image path or a color (e.g. #772953)
+.TP
+.B background-color=
+Background color (e.g. #772953), set before wallpaper is seen
+.TP
+.B draw-user-backgrounds=
+Whether to draw user backgrounds (true or false)
+.TP
+.B draw-grid=
+Whether to draw an overlay grid (true or false)
+.TP
+.B show-hostname=
+Whether to show the hostname in the menubar (true or false)
+.TP
+.B logo=
+Logo file to use
+.TP
+.B background-logo=
+Background logo file to use
+.TP
+.B theme-name=
+GTK+ theme to use
+.TP
+.B icon-theme-name=
+Icon theme to use
+.TP
+.B font-name=
+Font to use
+.TP
+.B xft-antialias=
+Whether to antialias Xft fonts (true or false)
+.TP
+.B xft-dpi=
+Resolution for Xft in dots per inch
+.TP
+.B xft-hintstyle=
+What degree of hinting to use (hintnone/hintslight/hintmedium/hintfull)
+.TP
+.B xft-rgba=
+Type of subpixel antialiasing (none/rgb/bgr/vrgb/vbgr)
+.TP
+.B onscreen-keyboard=
+Whether to enable the onscreen keyboard (true or false)
+.TP
+.B high-contrast=
+Whether to use a high contrast theme (true or false)
+.TP
+.B screen-reader=
+Whether to enable the screen reader (true or false)
+.TP
+.B play-ready-sound=
+A sound file to play when the greeter is ready
+.TP
+.B hidden-users=
+List of usernames that are hidden until a special key combination is hit
+.TP
+.B group-filter=
+List of groups that users must be part of to be shown (empty list shows all users)
+.TP
+.B idle-timeout=
+Number of seconds of inactivity before blanking the screen. Set to 0 to never timeout
+.TP
+.B enable-hidpi=
+Whether to enable HiDPI support (on/off/auto)
 .SH SEE ALSO
 .B lightdm
