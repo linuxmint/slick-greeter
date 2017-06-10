@@ -549,7 +549,7 @@ public class SlickGreeter
         /* Protect memory from being paged to disk, as we deal with passwords */
         Posix.mlockall (Posix.MCL_CURRENT | Posix.MCL_FUTURE);
 
-        /* Disable the stupid global menubar */
+        /* Disable global menubar */
         Environment.unset_variable ("UBUNTU_MENUPROXY");
 
         /* Initialize i18n */
