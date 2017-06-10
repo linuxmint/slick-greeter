@@ -544,6 +544,16 @@ public class SlickGreeter
         }
     }
 
+    private static void set_keyboard_layout ()
+    {
+        try {
+            Process.spawn_command_line_sync("/usr/bin/slick-greeter-set-keyboard-layout", null, null, null);
+        }
+        catch (Error e){
+            warning ("Error while setting the keyboard layout: %s", e.message);
+        }
+    }
+
     public static int main (string[] args)
     {
         /* Protect memory from being paged to disk, as we deal with passwords */
@@ -581,6 +591,9 @@ public class SlickGreeter
         else if (hidpi == "on") {
             GLib.Environment.set_variable ("GDK_SCALE", "2", true);
         }
+
+        /* Set the keyboard layout */
+        set_keyboard_layout ();
 
         Pid atspi_pid = 0;
 
