@@ -452,11 +452,11 @@ public class PromptBox : FadableBox
     {
         var label = new FadingLabel (text);
 
-        label.override_font (Pango.FontDescription.from_string ("Ubuntu 10"));
+        label.override_font (Pango.FontDescription.from_string ("Ubuntu Bold 10"));
 
         Gdk.RGBA color = { 1.0f, 1.0f, 1.0f, 1.0f };
         if (is_error)
-            color.parse ("#df382c");
+            color.parse ("#ffd64d");
         label.override_color (Gtk.StateFlags.NORMAL, color);
 
         label.xalign = 0.0f;
