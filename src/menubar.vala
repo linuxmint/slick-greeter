@@ -522,8 +522,8 @@ public class MenuBar : Gtk.MenuBar
             var monitor = screen.get_monitor_at_window (get_window ());
             Gdk.Rectangle geom;
             screen.get_monitor_geometry (monitor, out geom);
-            keyboard_window.move (geom.x, geom.y + geom.height - 200);
-            keyboard_window.resize (geom.width, 200);
+            keyboard_window.move (geom.x, geom.y + geom.height - 250);
+            keyboard_window.resize (geom.width, 250);
         }
 
         keyboard_window.visible = item.active;
