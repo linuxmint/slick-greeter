@@ -1,3 +1,30 @@
+slick-greeter (1.0.7) sonya; urgency=medium
+
+  [ Clement Lefebvre ]
+  * Badges: Don't hardcode any logic related to badge names
+  * Badges: Prefer SVG over PNG
+
+  [ JosephMcc ]
+  * badges: Convert some badges to svg (#39)
+
+  [ David Mohammed ]
+  * describe options in README and man page (#40)
+
+  [ Darryn Bourgeois ]
+  * badges: more svg converts (#41)
+
+  [ Clement Lefebvre ]
+  * Add plasma to the list of default sessions
+  * A11y: Fix HighContrast option
+  * Remove condescending comment in the code
+  * Explicitly set the keyboard layout
+
+  [ DaveBlack ]
+  * Increase onscreen keyboard height (#49)
+  * Make error text bold and yellow (#48)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 13 Jun 2017 11:31:35 +0100
+
 slick-greeter (1.0.6) sonya; urgency=medium
 
   [ Michael Webster ]
