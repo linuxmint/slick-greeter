@@ -193,6 +193,12 @@ public class MainWindow : Gtk.Window
         background.set_surface (Gdk.cairo_create (get_window ()).get_target ());
     }
 
+    public void before_session_start()
+    {
+        debug ("Killing orca and onboard");
+        menubar.cleanup();
+    }
+
     private void monitors_changed_cb (Gdk.Screen screen)
     {
         int primary = screen.get_primary_monitor ();
