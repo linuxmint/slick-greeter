@@ -518,10 +518,10 @@ public class MenuBar : Gtk.MenuBar
             keyboard_socket.add_id (id);
 
             /* Put keyboard at the bottom of the screen */
-            var screen = get_screen ();
-            var monitor = screen.get_monitor_at_window (get_window ());
+            var display = get_display ();
+            var monitor = display.get_monitor_at_window (get_window ());
             Gdk.Rectangle geom;
-            screen.get_monitor_geometry (monitor, out geom);
+            geom = monitor.get_geometry ();
             keyboard_window.move (geom.x, geom.y + geom.height - 250);
             keyboard_window.resize (geom.width, 250);
         }

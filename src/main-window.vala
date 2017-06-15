@@ -195,24 +195,30 @@ public class MainWindow : Gtk.Window
 
     private void monitors_changed_cb (Gdk.Screen screen)
     {
-        int primary = screen.get_primary_monitor ();
-        debug ("Screen is %dx%d pixels", screen.get_width (), screen.get_height ());
+        Gdk.Display display;
+        display = screen.get_display();
+
+        Gdk.Rectangle geometry;
+        Gdk.Monitor primary = display.get_primary_monitor();
+        geometry = primary.get_geometry();
+        debug ("Screen is %dx%d pixels", geometry.width, geometry.height);
+
         monitors = new List<Monitor> ();
         primary_monitor = null;
 
-        for (var i = 0; i < screen.get_n_monitors (); i++)
+        for (var i = 0; i < display.get_n_monitors (); i++)
         {
-            Gdk.Rectangle geometry;
-            screen.get_monitor_geometry (i, out geometry);
+            Gdk.Monitor monitor = display.get_monitor(i);
+            geometry = monitor.get_geometry ();
             debug ("Monitor %d is %dx%d pixels at %d,%d", i, geometry.width, geometry.height, geometry.x, geometry.y);
 
-            if (monitor_is_unique_position (screen, i))
+            if (monitor_is_unique_position (display, i))
             {
-                var monitor = new Monitor (geometry.x, geometry.y, geometry.width, geometry.height);
-                monitors.append (monitor);
+                var greeter_monitor = new Monitor (geometry.x, geometry.y, geometry.width, geometry.height);
+                monitors.append (greeter_monitor);
 
-                if (primary_monitor == null || i == primary)
-                    primary_monitor = monitor;
+                if (primary_monitor == null || primary == monitor)
+                    primary_monitor = greeter_monitor;
             }
         }
 
@@ -223,15 +229,19 @@ public class MainWindow : Gtk.Window
     }
 
     /* Check if a monitor has a unique position */
-    private bool monitor_is_unique_position (Gdk.Screen screen, int n)
+    private bool monitor_is_unique_position (Gdk.Display display, int n)
     {
         Gdk.Rectangle g0;
-        screen.get_monitor_geometry (n, out g0);
+        Gdk.Monitor mon0;
+        mon0 = display.get_monitor(n);
+        g0 = mon0.get_geometry ();
 
-        for (var i = n + 1; i < screen.get_n_monitors (); i++)
+        for (var i = n + 1; i < display.get_n_monitors (); i++)
         {
             Gdk.Rectangle g1;
-            screen.get_monitor_geometry (i, out g1);
+            Gdk.Monitor mon1;
+            mon1 = display.get_monitor(i);
+            g1 = mon1.get_geometry();
 
             if (g0.x == g1.x && g0.y == g1.y)
                 return false;

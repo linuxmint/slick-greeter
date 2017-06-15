@@ -220,8 +220,9 @@ public class SlickGreeter
     public bool start_session (string? session, Background bg)
     {
         /* Explicitly set the right scale before closing window */
-        var screen = Gdk.Screen.get_default ();
-        var scale = screen.get_monitor_scale_factor (screen.get_number ());
+        var display = Gdk.Display.get_default();
+        var monitor = display.get_primary_monitor();
+        var scale = monitor.get_scale_factor ();
         background_surface.set_device_scale (scale, scale);
 
         /* Paint our background onto the root window before we close our own window */
