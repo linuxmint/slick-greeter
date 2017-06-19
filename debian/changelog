@@ -1,3 +1,10 @@
+slick-greeter (1.0.8) sonya; urgency=medium
+
+  [ leigh123linux ]
+  * kill onboard and orca on session startup (#54)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 19 Jun 2017 16:52:39 +0200
+
 slick-greeter (1.0.7) sonya; urgency=medium
 
   [ Clement Lefebvre ]
