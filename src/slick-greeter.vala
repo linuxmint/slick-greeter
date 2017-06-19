@@ -229,6 +229,8 @@ public class SlickGreeter
         // bg.draw_full (c, Background.DrawFlags.NONE);
         // c = null;
         // refresh_background (screen, background_surface);
+        
+        main_window.before_session_start();
 
         if (test_mode)
         {
