@@ -200,5 +200,5 @@ public class UGSettings
     }
 
     private const string SCHEMA = "x.dm.slick-greeter";
-    private const string GROUP_NAME = "Greeter";
+    private const string GROUP_NAME = "greeter";
 }
