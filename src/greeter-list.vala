@@ -937,7 +937,7 @@ public abstract class GreeterList : FadableBox
         sensitive = false;
 
         selected_entry.clear ();
-        selected_entry.add_message (_("Logging in…"), false);
+        selected_entry.add_message (_("Logging in..."), false);
 
         redraw_greeter_box ();
     }

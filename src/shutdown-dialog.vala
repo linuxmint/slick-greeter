@@ -98,7 +98,7 @@ public class ShutdownDialog : Gtk.Fixed
 
         if (type == ShutdownDialogType.SHUTDOWN)
         {
-            text = _("Goodbye. Would you like to…");
+            text = _("Goodbye. Would you like to...");
         }
         else
         {
