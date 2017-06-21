@@ -53,4 +53,4 @@ Configuration file format for /etc/lightdm/slick-greeter.conf
     # group-filter=List of groups that users must be part of to be shown (empty list shows all users)
     # idle-timeout=Number of seconds of inactivity before blanking the screen. Set to 0 to never timeout
     # enable-hidpi=Whether to enable HiDPI support (on/off/auto)
-    [greeter]
+    [Greeter]
