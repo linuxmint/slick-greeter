@@ -195,7 +195,6 @@ public class SlickGreeter
         sessions.append ("openbox");
         sessions.append ("awesome");
         
-
         foreach (string session in sessions) {
             var path = Path.build_filename  ("/usr/share/xsessions/", session.concat(".desktop"), null);
             if (FileUtils.test (path, FileTest.EXISTS)) {
