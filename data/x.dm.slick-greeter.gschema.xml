@@ -107,5 +107,9 @@
       <default>'auto'</default>
       <summary>Whether to enable HiDPI support</summary>
     </key>
+    <key name="activate-numlock" type="b">
+      <default>false</default>
+      <summary>Whether to activate numlock. This features requires the installation of numlockx.</summary>
+    </key>
   </schema>
 </schemalist>

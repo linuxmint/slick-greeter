@@ -566,6 +566,16 @@ public class SlickGreeter
         }
     }
 
+    private static void activate_numlock ()
+    {
+        try {
+            Process.spawn_command_line_sync("/usr/bin/numlockx on", null, null, null);
+        }
+        catch (Error e){
+            warning ("Error while activating numlock: %s", e.message);
+        }
+    }
+
     public static int main (string[] args)
     {
         /* Protect memory from being paged to disk, as we deal with passwords */
@@ -606,6 +616,12 @@ public class SlickGreeter
 
         /* Set the keyboard layout */
         set_keyboard_layout ();
+
+        /* Set the numlock state */
+        if (UGSettings.get_boolean (UGSettings.KEY_ACTIVATE_NUMLOCK)) {
+            debug ("Activating numlock");
+            activate_numlock ();
+        }
 
         Pid atspi_pid = 0;
 

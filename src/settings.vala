@@ -42,6 +42,7 @@ public class UGSettings
     public const string KEY_GROUP_FILTER = "group-filter";
     public const string KEY_IDLE_TIMEOUT = "idle-timeout";
     public const string KEY_ENABLE_HIDPI = "enable-hidpi";
+    public const string KEY_ACTIVATE_NUMLOCK = "activate-numlock";
 
     public static bool get_boolean (string key)
     {
@@ -128,6 +129,7 @@ public class UGSettings
                     bool_keys.append (KEY_DRAW_GRID);
                     bool_keys.append (KEY_SHOW_HOSTNAME);
                     bool_keys.append (KEY_XFT_ANTIALIAS);
+                    bool_keys.append (KEY_ACTIVATE_NUMLOCK);
 
                     var int_keys = new List<string> ();
                     int_keys.append (KEY_IDLE_TIMEOUT);
