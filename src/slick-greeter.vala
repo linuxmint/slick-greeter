@@ -183,8 +183,18 @@ public class SlickGreeter
         sessions.append ("plasma");
         sessions.append ("kde-plasma");
         sessions.append ("kde");
+        sessions.append ("budgie-desktop");
         sessions.append ("gnome");
-
+        sessions.append ("LXDE");
+        sessions.append ("lxqt");
+        sessions.append ("pekwm");
+        sessions.append ("pantheon");
+        sessions.append ("i3");
+        sessions.append ("enlightenment");
+        sessions.append ("deepin");
+        sessions.append ("openbox");
+        sessions.append ("awesome");
+        
         foreach (string session in sessions) {
             var path = Path.build_filename  ("/usr/share/xsessions/", session.concat(".desktop"), null);
             if (FileUtils.test (path, FileTest.EXISTS)) {
