@@ -303,6 +303,7 @@ public class MenuBar : Gtk.MenuBar
             char[] buffer = new char[double.DTOSTR_BUF_SIZE];
             unowned string str = device.percentage.to_str (buffer);
             power_label.set_label(str.concat("%"));
+            power_menu_item.set_tooltip_text (_("Power: %s%").printf (str));
             var icon = "battery.svg";
             if (device.percentage <= 50.0) {
                 icon = "battery_50.svg";
@@ -322,6 +323,7 @@ public class MenuBar : Gtk.MenuBar
     {
         var current_time = new DateTime.now_local ();
         clock_label.set_label(current_time.format ("%H:%M"));
+        clock_label.set_tooltip_text (current_time.format ("%x"));
         return true;
     }
 
@@ -351,6 +353,7 @@ public class MenuBar : Gtk.MenuBar
     private Gtk.MenuItem make_a11y_item ()
     {
         var a11y_item = new Gtk.MenuItem ();
+        a11y_item.set_tooltip_text(_("Accessibility"));
         var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 3);
         hbox.show ();
         a11y_item.add (hbox);
@@ -382,6 +385,7 @@ public class MenuBar : Gtk.MenuBar
     private Gtk.MenuItem make_session_item ()
     {
         var item = new Gtk.MenuItem ();
+        item.set_tooltip_text(_("Quit..."));
         var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 3);
         hbox.show ();
         item.add (hbox);
@@ -451,6 +455,7 @@ public class MenuBar : Gtk.MenuBar
         var current_layout = LightDM.get_layout ();
         if (current_layout != null) {
             label.set_label (current_layout.name);
+            item.set_tooltip_text(_("Keyboard layout: %s").printf(current_layout.description));
         }
         var fg = label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
         label.override_color (Gtk.StateFlags.INSENSITIVE, fg);
