@@ -26,7 +26,7 @@ public class UGSettings
     public const string KEY_DRAW_GRID = "draw-grid";
     public const string KEY_SHOW_HOSTNAME = "show-hostname";
     public const string KEY_LOGO = "logo";
-    public const string KEY_BACKGROUND_LOGO = "background-logo";
+    public const string KEY_OTHER_MONITORS_LOGO = "other-monitors-logo";
     public const string KEY_THEME_NAME = "theme-name";
     public const string KEY_ICON_THEME_NAME = "icon-theme-name";
     public const string KEY_FONT_NAME = "font-name";
@@ -115,7 +115,7 @@ public class UGSettings
                     string_keys.append (KEY_BACKGROUND);
                     string_keys.append (KEY_BACKGROUND_COLOR);
                     string_keys.append (KEY_LOGO);
-                    string_keys.append (KEY_BACKGROUND_LOGO);
+                    string_keys.append (KEY_OTHER_MONITORS_LOGO);
                     string_keys.append (KEY_THEME_NAME);
                     string_keys.append (KEY_ICON_THEME_NAME);
                     string_keys.append (KEY_FONT_NAME);

@@ -481,9 +481,9 @@ public class Background : Gtk.Fixed
     private Cairo.Surface? version_logo_surface = null;
     private int version_logo_width;
     private int version_logo_height;
-    private Cairo.Surface? background_logo_surface = null;
-    private int background_logo_width;
-    private int background_logo_height;
+    private Cairo.Surface? other_monitors_logo_surface = null;
+    private int other_monitors_logo_width;
+    private int other_monitors_logo_height;
 
     public Background ()
     {
@@ -503,14 +503,14 @@ public class Background : Gtk.Fixed
 
         timer = new AnimateTimer (AnimateTimer.ease_in_out, 700);
 
-        set_logo (UGSettings.get_string (UGSettings.KEY_LOGO), UGSettings.get_string (UGSettings.KEY_BACKGROUND_LOGO));
+        set_logo (UGSettings.get_string (UGSettings.KEY_LOGO), UGSettings.get_string (UGSettings.KEY_OTHER_MONITORS_LOGO));
         timer.animate.connect (animate_cb);
     }
 
-    public void set_logo (string version_logo, string background_logo)
+    public void set_logo (string version_logo, string other_monitors_logo)
     {
         version_logo_surface = load_image (version_logo, out version_logo_width, out version_logo_height);
-        background_logo_surface = load_image (background_logo, out background_logo_width, out background_logo_height);
+        other_monitors_logo_surface = load_image (other_monitors_logo, out other_monitors_logo_width, out other_monitors_logo_height);
     }
 
     private Cairo.Surface? load_image (string filename, out int width, out int height)
@@ -645,13 +645,13 @@ public class Background : Gtk.Fixed
             c.paint_with_alpha (alpha);
             c.restore ();
 
-            if (monitor != active_monitor && background_logo_surface != null)
+            if (monitor != active_monitor && other_monitors_logo_surface != null)
             {
-                var width = background_logo_width;
-                var height = background_logo_height;
+                var width = other_monitors_logo_width;
+                var height = other_monitors_logo_height;
 
                 c.save ();
-                pattern = new Cairo.Pattern.for_surface (background_logo_surface);
+                pattern = new Cairo.Pattern.for_surface (other_monitors_logo_surface);
                 matrix = Cairo.Matrix.identity ();
                 var x = monitor.x + (monitor.width - width) / 2;
                 var y = monitor.y + (monitor.height - height) / 2;

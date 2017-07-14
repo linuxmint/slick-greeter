@@ -25,9 +25,9 @@
       <default>''</default>
       <summary>Logo file to use</summary>
     </key>
-    <key name="background-logo" type="s">
+    <key name="other-monitors-logo" type="s">
       <default>''</default>
-      <summary>Background logo file to use</summary>
+      <summary>Logo file to use for other monitors</summary>
     </key>
     <key name="theme-name" type="s">
       <default>'Adwaita'</default>

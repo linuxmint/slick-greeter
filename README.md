@@ -37,7 +37,7 @@ Configuration file format for /etc/lightdm/slick-greeter.conf
     # draw-grid=Whether to draw an overlay grid (true or false)
     # show-hostname=Whether to show the hostname in the menubar (true or false)
     # logo=Logo file to use
-    # background-logo=Background logo file to use
+    # other-monitors-logo=Logo file to use for other monitors
     # theme-name=GTK+ theme to use
     # icon-theme-name=Icon theme to use
     # font-name=Font to use
