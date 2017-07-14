@@ -552,7 +552,7 @@ public class UserList : GreeterList
         if (offer_guest)
         {
             dialog.add_button (_("Cancel"), 0);
-            var b = dialog.add_button (_("Set Up…"), 1);
+            var b = dialog.add_button (_("Set Up..."), 1);
             b.grab_focus ();
             dialog.text = _("You need an Ubuntu Remote Login account to use this service. Would you like to set up an account now?");
         }

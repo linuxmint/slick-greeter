@@ -1,0 +1,2 @@
+#!/bin/bash
+xgettext --language=Vala --keyword=_ --output=slick-greeter.pot src/*.vala
