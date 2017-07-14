@@ -45,7 +45,6 @@ public class UGSettings
     public const string KEY_PLAY_READY_SOUND = "play-ready-sound";
     public const string KEY_HIDDEN_USERS = "hidden-users";
     public const string KEY_GROUP_FILTER = "group-filter";
-    public const string KEY_IDLE_TIMEOUT = "idle-timeout";
     public const string KEY_ENABLE_HIDPI = "enable-hidpi";
     public const string KEY_ACTIVATE_NUMLOCK = "activate-numlock";
 
@@ -142,7 +141,6 @@ public class UGSettings
                     bool_keys.append (KEY_ACTIVATE_NUMLOCK);
 
                     var int_keys = new List<string> ();
-                    int_keys.append (KEY_IDLE_TIMEOUT);
                     int_keys.append (KEY_XFT_DPI);
 
                     var strv_keys = new List<string> ();

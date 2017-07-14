@@ -36,6 +36,11 @@ Configuration file format for /etc/lightdm/slick-greeter.conf
     # draw-user-backgrounds=Whether to draw user backgrounds (true or false)
     # draw-grid=Whether to draw an overlay grid (true or false)
     # show-hostname=Whether to show the hostname in the menubar (true or false)
+    # show-power=Whether to show the power indicator in the menubar (true or false)
+    # show-a11y=Whether to show the accessibility options in the menubar (true or false)
+    # show-keyboard=Whether to show the keyboard indicator in the menubar (true or false)
+    # show-clock=Whether to show the clock in the menubar (true or false)
+    # show-quit=Whether to show the quit menu in the menubar (true or false)
     # logo=Logo file to use
     # other-monitors-logo=Logo file to use for other monitors
     # theme-name=GTK+ theme to use
@@ -51,6 +56,5 @@ Configuration file format for /etc/lightdm/slick-greeter.conf
     # play-ready-sound=A sound file to play when the greeter is ready
     # hidden-users=List of usernames that are hidden until a special key combination is hit
     # group-filter=List of groups that users must be part of to be shown (empty list shows all users)
-    # idle-timeout=Number of seconds of inactivity before blanking the screen. Set to 0 to never timeout
     # enable-hidpi=Whether to enable HiDPI support (on/off/auto)
     [Greeter]
