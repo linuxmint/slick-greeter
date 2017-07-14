@@ -139,65 +139,80 @@ public class MenuBar : Gtk.MenuBar
 
         pack_direction = Gtk.PackDirection.RTL;
 
-        var session_menu = make_session_item ();
-        session_menu.right_justified = true;
-        append (session_menu);
-
-        clock_label = new Gtk.Label ("");
-        var fg = clock_label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
-        clock_label.override_color (Gtk.StateFlags.INSENSITIVE, fg);
-        clock_label.show ();
-        var item = new Gtk.MenuItem ();
-        item.add (clock_label);
-        item.sensitive = false;
-        item.show ();
-        append (item);
-
-        update_clock ();
-        Timeout.add (1000, update_clock);
-
-        power_menu_item = new Gtk.MenuItem ();
-        var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 3);
-        hbox.show ();
-        power_icon = new Gtk.Image.from_file (Path.build_filename (Config.PKGDATADIR, "battery.svg"));
-        power_icon.show ();
-        hbox.add (power_icon);
-        hbox.set_spacing (6);
-        power_label = new Gtk.Label ("");
-        power_label.sensitive = false;
-        fg = power_label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
-        power_label.override_color (Gtk.StateFlags.INSENSITIVE, fg);
-        power_label.show ();
-        hbox.add (power_label);
-        power_menu_item.add (hbox);
-        power_menu_item.hide ();
-        append (power_menu_item);
-
-        var keyboard_menu = make_keyboard_item ();
-        append (keyboard_menu);
-
-        try {
-            upowerd = Bus.get_proxy_sync(BusType.SYSTEM, "org.freedesktop.UPower", "/org/freedesktop/UPower");
-            upowerd.device_added.connect(on_power_device_added);
-            upowerd.device_removed.connect(on_power_device_removed);
-            upowerd.device_changed.connect(on_power_device_changed);
-            upowerd.changed.connect(on_changed);
-            upowerd.sleeping.connect(on_sleeping);
-            upowerd.resuming.connect(on_resuming);
-            query_upower_daemon ();
-            Timeout.add (60000, query_upower_daemon);
-        } catch (IOError e) {
-            warning("Could not connect to Upower: %s", e.message);
+        if (UGSettings.get_boolean (UGSettings.KEY_SHOW_QUIT))
+        {
+            var session_menu = make_session_item ();
+            append (session_menu);
         }
 
-        var a11y_item = make_a11y_item ();
-        append (a11y_item);
+        if (UGSettings.get_boolean (UGSettings.KEY_SHOW_CLOCK))
+        {
+            clock_label = new Gtk.Label ("");
+            var clock_fg = clock_label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
+            clock_label.override_color (Gtk.StateFlags.INSENSITIVE, clock_fg);
+            clock_label.show ();
+            var item = new Gtk.MenuItem ();
+            item.add (clock_label);
+            item.sensitive = false;
+            item.show ();
+            append (item);
+            update_clock ();
+            Timeout.add (1000, update_clock);
+        }
+
+        if (UGSettings.get_boolean (UGSettings.KEY_SHOW_POWER))
+        {
+            power_menu_item = new Gtk.MenuItem ();
+            var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 3);
+            hbox.show ();
+            power_icon = new Gtk.Image.from_file (Path.build_filename (Config.PKGDATADIR, "battery.svg"));
+            power_icon.show ();
+            hbox.add (power_icon);
+            hbox.set_spacing (6);
+            power_label = new Gtk.Label ("");
+            power_label.sensitive = false;
+            var power_fg = power_label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
+            power_label.override_color (Gtk.StateFlags.INSENSITIVE, power_fg);
+            power_label.show ();
+            hbox.add (power_label);
+            power_menu_item.add (hbox);
+            power_menu_item.hide ();
+            append (power_menu_item);
+
+            try
+            {
+                upowerd = Bus.get_proxy_sync(BusType.SYSTEM, "org.freedesktop.UPower", "/org/freedesktop/UPower");
+                upowerd.device_added.connect(on_power_device_added);
+                upowerd.device_removed.connect(on_power_device_removed);
+                upowerd.device_changed.connect(on_power_device_changed);
+                upowerd.changed.connect(on_changed);
+                upowerd.sleeping.connect(on_sleeping);
+                upowerd.resuming.connect(on_resuming);
+                query_upower_daemon ();
+                Timeout.add (60000, query_upower_daemon);
+            } catch (IOError e)
+            {
+                warning("Could not connect to Upower: %s", e.message);
+            }
+        }
+
+        if (UGSettings.get_boolean (UGSettings.KEY_SHOW_KEYBOARD))
+        {
+            var keyboard_menu = make_keyboard_item ();
+            append (keyboard_menu);
+        }
+
+        if (UGSettings.get_boolean (UGSettings.KEY_SHOW_A11Y))
+        {
+            var a11y_item = make_a11y_item ();
+            append (a11y_item);
+        }
 
         if (UGSettings.get_boolean (UGSettings.KEY_SHOW_HOSTNAME))
         {
             var label = new Gtk.Label (Posix.utsname ().nodename);
-            fg = label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
-            label.override_color (Gtk.StateFlags.INSENSITIVE, fg);
+            var hostname_fg = label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
+            label.override_color (Gtk.StateFlags.INSENSITIVE, hostname_fg);
             label.show ();
             var hostname_item = new Gtk.MenuItem ();
             hostname_item.add (label);
@@ -457,8 +472,8 @@ public class MenuBar : Gtk.MenuBar
             label.set_label (current_layout.name);
             item.set_tooltip_text(_("Keyboard layout: %s").printf(current_layout.description));
         }
-        var fg = label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
-        label.override_color (Gtk.StateFlags.INSENSITIVE, fg);
+        var keyboard_fg = label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
+        label.override_color (Gtk.StateFlags.INSENSITIVE, keyboard_fg);
         label.show ();
         hbox.add (label);
         item.show ();

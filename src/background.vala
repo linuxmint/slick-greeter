@@ -397,8 +397,6 @@ public class Background : Gtk.Fixed
     /* Fallback color - shown upon first startup, until an async background loader finishes,
      * or until a user background or default background is loaded.
      */
-    private bool draw_user_backgrounds = UGSettings.get_boolean (UGSettings.KEY_DRAW_USER_BACKGROUNDS);
-
     private string _fallback_color = null;
     public string fallback_color {
         get {

@@ -25,6 +25,11 @@ public class UGSettings
     public const string KEY_DRAW_USER_BACKGROUNDS = "draw-user-backgrounds";
     public const string KEY_DRAW_GRID = "draw-grid";
     public const string KEY_SHOW_HOSTNAME = "show-hostname";
+    public const string KEY_SHOW_POWER = "show-power";
+    public const string KEY_SHOW_A11Y = "show-a11y";
+    public const string KEY_SHOW_CLOCK = "show-clock";
+    public const string KEY_SHOW_KEYBOARD = "show-keyboard";
+    public const string KEY_SHOW_QUIT = "show-quit";
     public const string KEY_LOGO = "logo";
     public const string KEY_OTHER_MONITORS_LOGO = "other-monitors-logo";
     public const string KEY_THEME_NAME = "theme-name";
@@ -128,6 +133,11 @@ public class UGSettings
                     bool_keys.append (KEY_DRAW_USER_BACKGROUNDS);
                     bool_keys.append (KEY_DRAW_GRID);
                     bool_keys.append (KEY_SHOW_HOSTNAME);
+                    bool_keys.append (KEY_SHOW_POWER);
+                    bool_keys.append (KEY_SHOW_A11Y);
+                    bool_keys.append (KEY_SHOW_CLOCK);
+                    bool_keys.append (KEY_SHOW_KEYBOARD);
+                    bool_keys.append (KEY_SHOW_QUIT);
                     bool_keys.append (KEY_XFT_ANTIALIAS);
                     bool_keys.append (KEY_ACTIVATE_NUMLOCK);
 

@@ -21,6 +21,26 @@
       <default>true</default>
       <summary>Whether to show the hostname in the menubar</summary>
     </key>
+    <key name="show-keyboard" type="b">
+      <default>true</default>
+      <summary>Whether to show the keyboard indicator in the menubar</summary>
+    </key>
+    <key name="show-a11y" type="b">
+      <default>true</default>
+      <summary>Whether to show the accessibility menu in the menubar</summary>
+    </key>
+    <key name="show-power" type="b">
+      <default>true</default>
+      <summary>Whether to show the power indicator in the menubar</summary>
+    </key>
+    <key name="show-clock" type="b">
+      <default>true</default>
+      <summary>Whether to show the clock in the menubar</summary>
+    </key>
+    <key name="show-quit" type="b">
+      <default>true</default>
+      <summary>Whether to show the quit menu in the menubar</summary>
+    </key>
     <key name="logo" type="s">
       <default>''</default>
       <summary>Logo file to use</summary>
