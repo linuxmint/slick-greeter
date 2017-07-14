@@ -621,8 +621,7 @@ public class SlickGreeter
         OptionEntry[] options = { versionOption, testOption, nullOption };
 
         debug ("Loading command line options");
-        var c = new OptionContext (/* Arguments and description for --help text */
-                                   _("- Slick Greeter"));
+        var c = new OptionContext ("- Slick Greeter");
         c.add_main_entries (options, Config.GETTEXT_PACKAGE);
         c.add_group (Gtk.get_option_group (true));
         try

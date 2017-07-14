@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-20 21:33+0200\n"
+"POT-Creation-Date: 2017-07-14 16:49+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,32 +50,44 @@ msgstr ""
 msgid "Login Screen"
 msgstr ""
 
-#: src/main-window.vala:113
+#: src/main-window.vala:110
 msgid "Back"
 msgstr ""
 
-#: src/menubar.vala:362
+#: src/menubar.vala:322
+msgid "Power:"
+msgstr ""
+
+#: src/menubar.vala:372
+msgid "Accessibility"
+msgstr ""
+
+#: src/menubar.vala:381
 msgid "Onscreen keyboard"
 msgstr ""
 
-#: src/menubar.vala:367
+#: src/menubar.vala:386
 msgid "High Contrast"
 msgstr ""
 
-#: src/menubar.vala:373
+#: src/menubar.vala:392
 msgid "Screen Reader"
 msgstr ""
 
-#: src/menubar.vala:397 src/shutdown-dialog.vala:155
+#: src/menubar.vala:404 src/menubar.vala:451
+msgid "Quit..."
+msgstr ""
+
+#: src/menubar.vala:417 src/shutdown-dialog.vala:155
 msgid "Suspend"
 msgstr ""
 
-#: src/menubar.vala:415 src/shutdown-dialog.vala:172
+#: src/menubar.vala:435 src/shutdown-dialog.vala:172
 msgid "Hibernate"
 msgstr ""
 
-#: src/menubar.vala:431
-msgid "Quit..."
+#: src/menubar.vala:474
+msgid "Keyboard layout:"
 msgstr ""
 
 #: src/prompt-box.vala:215
@@ -108,19 +120,15 @@ msgstr ""
 msgid "Restart"
 msgstr ""
 
-#: src/slick-greeter.vala:634
+#: src/slick-greeter.vala:616
 msgid "Show release version"
 msgstr ""
 
-#: src/slick-greeter.vala:637
+#: src/slick-greeter.vala:619
 msgid "Run in test mode"
 msgstr ""
 
-#: src/slick-greeter.vala:643
-msgid "- Slick Greeter"
-msgstr ""
-
-#: src/slick-greeter.vala:654
+#: src/slick-greeter.vala:635
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""

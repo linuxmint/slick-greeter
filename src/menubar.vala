@@ -317,8 +317,9 @@ public class MenuBar : Gtk.MenuBar
         else {
             char[] buffer = new char[double.DTOSTR_BUF_SIZE];
             unowned string str = device.percentage.to_str (buffer);
-            power_label.set_label(str.concat("%"));
-            power_menu_item.set_tooltip_text (_("Power: %s%").printf (str));
+            var percentage_string = str.concat("%");
+            power_label.set_label(percentage_string);
+            power_menu_item.set_tooltip_text (_("Power:").concat(" ").concat(percentage_string));
             var icon = "battery.svg";
             if (device.percentage <= 50.0) {
                 icon = "battery_50.svg";
@@ -470,7 +471,7 @@ public class MenuBar : Gtk.MenuBar
         var current_layout = LightDM.get_layout ();
         if (current_layout != null) {
             label.set_label (current_layout.name);
-            item.set_tooltip_text(_("Keyboard layout: %s").printf(current_layout.description));
+            item.set_tooltip_text(_("Keyboard layout:").concat(" ").concat(current_layout.description));
         }
         var keyboard_fg = label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
         label.override_color (Gtk.StateFlags.INSENSITIVE, keyboard_fg);
