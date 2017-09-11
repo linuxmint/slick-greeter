@@ -185,6 +185,8 @@ public class SlickGreeter
         sessions.append ("deepin");
         sessions.append ("openbox");
         sessions.append ("awesome");
+        sessions.append ("gnome-xorg");
+        sessions.append ("ubuntu-xorg");
 
         foreach (string session in sessions) {
             var path = Path.build_filename  ("/usr/share/xsessions/", session.concat(".desktop"), null);
