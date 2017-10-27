@@ -1,3 +1,40 @@
+slick-greeter (1.0.9) sylvia; urgency=medium
+
+  [ Seth Barberee ]
+  * Fix typo in README.md (#56)
+
+  [ NikoKrause ]
+  * update German l10n (#58)
+
+  [ Michael Webster ]
+  * add an issue template
+
+  [ Clement Lefebvre ]
+  * Remove broken symlink
+
+  [ Stefano Capitani ]
+  * Session detection: Add support for more DE/WM  (#61)
+
+  [ Clement Lefebvre ]
+  * Add tooltips to applets
+  * Add support for numlockx
+  * Rename background-logo -> other-monitors-logo
+  * Other monitors logo: Use full opacity
+  * Make panel indicators optional
+  * Fix compilation warnings
+  * Remove idle_timeout
+
+  [ NikoKrause ]
+  * add makepot and .pot file (#57)
+
+  [ Clement Lefebvre ]
+  * l10n: Update POT file
+
+  [ David Mohammed ]
+  * add GNOME 3.26 xorg session and ubuntu xorg equivalent session (#73)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 27 Oct 2017 13:32:33 +0100
+
 slick-greeter (1.0.8) sonya; urgency=medium
 
   [ leigh123linux ]
