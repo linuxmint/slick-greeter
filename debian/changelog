@@ -1,3 +1,9 @@
+slick-greeter (1.1.0) sylvia; urgency=medium
+
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 03 Nov 2017 21:29:38 +0000
+
 slick-greeter (1.0.9) sylvia; urgency=medium
 
   [ Seth Barberee ]
