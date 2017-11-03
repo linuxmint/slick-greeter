@@ -7,226 +7,216 @@ msgid ""
 msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-03-22 05:42+0000\n"
-"PO-Revision-Date: 2012-01-24 16:14+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2017-07-14 16:49+0200\n"
+"PO-Revision-Date: 2017-07-17 05:08+0000\n"
+"Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-23 05:32+0000\n"
-"X-Generator: Launchpad (build 17958)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:46+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 
-#: ../src/greeter-list.vala:300
+#: src/greeter-list.vala:302
 #, c-format
 msgid "Enter password for %s"
 msgstr "%s의 암호를 입력하십시오"
 
-#: ../src/greeter-list.vala:805 ../src/user-list.vala:701
+#: src/greeter-list.vala:811 src/user-list.vala:703
 msgid "Password:"
 msgstr "암호:"
 
-#: ../src/greeter-list.vala:807 ../src/user-list.vala:695
+#: src/greeter-list.vala:813 src/user-list.vala:697
 msgid "Username:"
 msgstr "사용자 이름:"
 
-#: ../src/greeter-list.vala:859
+#: src/greeter-list.vala:868
 msgid "Invalid password, please try again"
 msgstr "암호가 올바르지 않습니다. 다시 입력해주십시오."
 
-#: ../src/greeter-list.vala:870
+#: src/greeter-list.vala:879
 msgid "Failed to authenticate"
-msgstr ""
+msgstr "인증이 되지 않았습니다"
 
-#: ../src/greeter-list.vala:916
+#: src/greeter-list.vala:925
 msgid "Failed to start session"
 msgstr "세션을 시작할 수 없습니다."
 
-#: ../src/greeter-list.vala:931
-msgid "Logging in…"
-msgstr "로그인 중..."
+#: src/greeter-list.vala:940
+msgid "Logging in..."
+msgstr "로그인..."
 
-#: ../src/main-window.vala:49
+#: src/main-window.vala:49
 msgid "Login Screen"
-msgstr ""
+msgstr "로그인 화면"
 
-#: ../src/main-window.vala:116
+#: src/main-window.vala:110
 msgid "Back"
 msgstr "뒤로"
 
-#: ../src/menubar.vala:220
-msgid "Onscreen keyboard"
-msgstr ""
+#: src/menubar.vala:322
+msgid "Power:"
+msgstr "전원:"
 
-#: ../src/menubar.vala:225
+#: src/menubar.vala:372
+msgid "Accessibility"
+msgstr "편리한 기능"
+
+#: src/menubar.vala:381
+msgid "Onscreen keyboard"
+msgstr "화상 키보드"
+
+#: src/menubar.vala:386
 msgid "High Contrast"
 msgstr "고대비"
 
-#: ../src/menubar.vala:231
+#: src/menubar.vala:392
 msgid "Screen Reader"
 msgstr "화면 읽기 프로그램"
 
-#: ../src/prompt-box.vala:212
-msgid "Session Options"
-msgstr ""
+#: src/menubar.vala:404 src/menubar.vala:451
+msgid "Quit..."
+msgstr "끝내기..."
 
-#: ../src/session-list.vala:34
+#: src/menubar.vala:417 src/shutdown-dialog.vala:155
+msgid "Suspend"
+msgstr "절전"
+
+#: src/menubar.vala:435 src/shutdown-dialog.vala:172
+msgid "Hibernate"
+msgstr "최대 절전"
+
+#: src/menubar.vala:474
+msgid "Keyboard layout:"
+msgstr "키보드 배치:"
+
+#: src/prompt-box.vala:215
+msgid "Session Options"
+msgstr "세션 옵션"
+
+#: src/session-list.vala:34
 msgid "Select desktop environment"
 msgstr "데스크톱 환경 선택"
 
-#: ../src/shutdown-dialog.vala:101
-msgid "Goodbye. Would you like to…"
-msgstr "안녕히 가세요. 수행할 작업은 무엇입니까...."
+#: src/shutdown-dialog.vala:101
+msgid "Goodbye. Would you like to..."
+msgstr "안녕히 가세요. 정말로 끄실 건가요..."
 
-#: ../src/shutdown-dialog.vala:105 ../src/shutdown-dialog.vala:207
+#: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
 msgstr "컴퓨터 끄기"
 
-#: ../src/shutdown-dialog.vala:112
+#: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
 msgstr "정말 컴퓨터를 끄시겠습니까?"
 
-#: ../src/shutdown-dialog.vala:137
+#: src/shutdown-dialog.vala:137
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr "현재 이 컴퓨터에 다른 사용자가 로그인했습니다. 지금 컴퓨터를 끄면 다른 사용자의 세션 역시 닫습니다."
 
-#: ../src/shutdown-dialog.vala:155
-msgid "Suspend"
-msgstr "절전"
-
-#: ../src/shutdown-dialog.vala:172
-msgid "Hibernate"
-msgstr "최대 절전"
-
-#: ../src/shutdown-dialog.vala:190
+#: src/shutdown-dialog.vala:190
 msgid "Restart"
 msgstr "다시 시작"
 
-#. Translators: %s is a session name like KDE or Ubuntu
-#: ../src/toggle-box.vala:98
-#, c-format
-msgid "%s (Default)"
-msgstr "%s (기본값)"
-
-#. Help string for command line --version flag
-#: ../src/slick-greeter.vala:512
+#: src/slick-greeter.vala:616
 msgid "Show release version"
 msgstr "릴리스 버전을 표시합니다"
 
-#. Help string for command line --test-mode flag
-#: ../src/slick-greeter.vala:515
+#: src/slick-greeter.vala:619
 msgid "Run in test mode"
-msgstr ""
+msgstr "테스트 모드로 실행"
 
-#. Arguments and description for --help text
-#: ../src/slick-greeter.vala:521
-msgid "- Slick Greeter"
-msgstr "- 유니티 로그인 프로그램"
-
-#. Text printed out when an unknown command-line argument provided
-#: ../src/slick-greeter.vala:532
+#: src/slick-greeter.vala:635
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "사용 가능한 모든 옵션의 목록을 보려면 '%s --help' 명령을 실행하십시오."
 
-#: ../src/user-list.vala:45
-msgid "Guest Session"
-msgstr ""
+#: src/toggle-box.vala:98
+#, c-format
+msgid "%s (Default)"
+msgstr "%s (기본값)"
 
-#: ../src/user-list.vala:438
+#: src/user-list.vala:45
+msgid "Guest Session"
+msgstr "손님 모드로 들어가기"
+
+#: src/user-list.vala:438
 msgid "Please enter a complete e-mail address"
 msgstr "전체 전자메일 주소를 입력해주십시오"
 
-#: ../src/user-list.vala:518
+#: src/user-list.vala:518
 msgid "Incorrect e-mail address or password"
 msgstr "전자메일 주소나 암호가 올바르지 않습니다"
 
-#: ../src/user-list.vala:549
+#: src/user-list.vala:549
 msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
 msgstr "RDP 또는 Citrix 서버에 계정이 있는 경우에는 원격 로그인을 통해 서버의 프로그램을 실행할 수 있습니다."
 
-#. For 12.10 we still don't support Citrix
-#: ../src/user-list.vala:551
+#: src/user-list.vala:551
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
 msgstr "RDP 서버에 계정이 있는 경우에는 원격 로그인을 통해 서버의 프로그램을 실행할 수 있습니다."
 
-#: ../src/user-list.vala:554
+#: src/user-list.vala:554
 msgid "Cancel"
 msgstr "취소"
 
-#: ../src/user-list.vala:555
-msgid "Set Up…"
-msgstr "설정…"
+#: src/user-list.vala:555
+msgid "Set Up..."
+msgstr "설정 하기..."
 
-#: ../src/user-list.vala:557
+#: src/user-list.vala:557
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
 msgstr "이 서비스를 이용하려면 우분투 원격 로그인 계정이 필요합니다. 지금 계정을 설정하시겠습니까?"
 
-#: ../src/user-list.vala:561
+#: src/user-list.vala:561
 msgid "OK"
 msgstr "확인"
 
-#: ../src/user-list.vala:562
+#: src/user-list.vala:562
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
 msgstr ""
 "이 서비스를 이용하려면 우분투 원격 로그인 계정이 필요합니다. uccs.canonical.com 페이지를 방문해 계정을 설정하십시오."
 
-#: ../src/user-list.vala:679
+#: src/user-list.vala:681
 msgid "Server type not supported."
 msgstr "서버 형식을 지원하지 않습니다."
 
-#: ../src/user-list.vala:720
+#: src/user-list.vala:722
 msgid "Domain:"
 msgstr "도메인:"
 
-#: ../src/user-list.vala:781
+#: src/user-list.vala:783
 msgid "Email address:"
 msgstr "전자메일 주소:"
 
-#. 'Log In' here is the button for logging in.
-#: ../src/user-list.vala:825
+#: src/user-list.vala:827
 msgid "Log In"
 msgstr "로그인"
 
-#: ../src/user-list.vala:826
+#: src/user-list.vala:828
 #, c-format
 msgid "Login as %s"
 msgstr "%s(으)로 로그인"
 
-#: ../src/user-list.vala:830
+#: src/user-list.vala:832
 msgid "Retry"
 msgstr "다시 시도"
 
-#: ../src/user-list.vala:831
+#: src/user-list.vala:833
 #, c-format
 msgid "Retry as %s"
 msgstr "%s(으)로 다시 시도"
 
-#: ../src/user-list.vala:869
+#: src/user-list.vala:871
 msgid "Login"
 msgstr "로그인"
-
-#~ msgid "_Back"
-#~ msgstr "뒤로(_B)"
-
-#~ msgid "Other..."
-#~ msgstr "기타..."
-
-#~ msgid "Enter password"
-#~ msgstr "암호를 입력하십시오"
-
-#~ msgid "Logging in..."
-#~ msgstr "로그인..."
-
-#~ msgid "Favorite Color (blue):"
-#~ msgstr "선호 색상 (파란색):"

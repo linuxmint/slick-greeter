@@ -7,143 +7,150 @@ msgid ""
 msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-03-22 05:42+0000\n"
-"PO-Revision-Date: 2012-05-31 12:37+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2017-07-14 16:49+0200\n"
+"PO-Revision-Date: 2017-07-14 15:01+0000\n"
+"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
 "Language-Team: Kannada <kn@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-23 05:32+0000\n"
-"X-Generator: Launchpad (build 17958)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:46+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 
-#: ../src/greeter-list.vala:300
+#: src/greeter-list.vala:302
 #, c-format
 msgid "Enter password for %s"
 msgstr "%s ಗಾಗಿ ಗುಪ್ತಪದವನ್ನು ನಮೂದಿಸಿ"
 
-#: ../src/greeter-list.vala:805 ../src/user-list.vala:701
+#: src/greeter-list.vala:811 src/user-list.vala:703
 msgid "Password:"
 msgstr "ಗುಪ್ತಪದ"
 
-#: ../src/greeter-list.vala:807 ../src/user-list.vala:695
+#: src/greeter-list.vala:813 src/user-list.vala:697
 msgid "Username:"
 msgstr "ಬಳಕೆನಾಮ"
 
-#: ../src/greeter-list.vala:859
+#: src/greeter-list.vala:868
 msgid "Invalid password, please try again"
 msgstr "ಅಸಿಂಧು ಗುಪ್ತಪದ, ದಯವಿಟ್ಟು ಮರುಪ್ರಯತ್ನಿಸಿ"
 
-#: ../src/greeter-list.vala:870
+#: src/greeter-list.vala:879
 msgid "Failed to authenticate"
 msgstr "ಧೃಡೀಕರಿಸಲು ವಿಫಲವಾಗಿದೆ"
 
-#: ../src/greeter-list.vala:916
+#: src/greeter-list.vala:925
 msgid "Failed to start session"
 msgstr ""
 
-#: ../src/greeter-list.vala:931
-msgid "Logging in…"
+#: src/greeter-list.vala:940
+msgid "Logging in..."
 msgstr "ಪ್ರವೇಶಿಸುತ್ತಿದೆ..."
 
-#: ../src/main-window.vala:49
+#: src/main-window.vala:49
 msgid "Login Screen"
 msgstr "ಪ್ರವೇಶ ತೆರೆ"
 
-#: ../src/main-window.vala:116
+#: src/main-window.vala:110
 msgid "Back"
 msgstr ""
 
-#: ../src/menubar.vala:220
+#: src/menubar.vala:322
+msgid "Power:"
+msgstr ""
+
+#: src/menubar.vala:372
+msgid "Accessibility"
+msgstr ""
+
+#: src/menubar.vala:381
 msgid "Onscreen keyboard"
 msgstr "ತೆರೆಯ ಕೀಲಿಮಣೆ"
 
-#: ../src/menubar.vala:225
+#: src/menubar.vala:386
 msgid "High Contrast"
 msgstr "ಹೆಚ್ಚಿನ ವೈದೃಶ್ಯ"
 
-#: ../src/menubar.vala:231
+#: src/menubar.vala:392
 msgid "Screen Reader"
 msgstr "ತೆರೆ ಓದುಗ"
 
-#: ../src/prompt-box.vala:212
+#: src/menubar.vala:404 src/menubar.vala:451
+msgid "Quit..."
+msgstr ""
+
+#: src/menubar.vala:417 src/shutdown-dialog.vala:155
+msgid "Suspend"
+msgstr ""
+
+#: src/menubar.vala:435 src/shutdown-dialog.vala:172
+msgid "Hibernate"
+msgstr ""
+
+#: src/menubar.vala:474
+msgid "Keyboard layout:"
+msgstr ""
+
+#: src/prompt-box.vala:215
 msgid "Session Options"
 msgstr "ಅಧಿವೇಶನದ ಆಯ್ಕೆಗಳು"
 
-#: ../src/session-list.vala:34
+#: src/session-list.vala:34
 msgid "Select desktop environment"
 msgstr "ಡೆಸ್ಕ್ಟಾಪ್ ಪರಿಸರವನ್ನು  ಆಯ್ಕೆ ಮಾಡಿ"
 
-#: ../src/shutdown-dialog.vala:101
-msgid "Goodbye. Would you like to…"
+#: src/shutdown-dialog.vala:101
+msgid "Goodbye. Would you like to..."
 msgstr ""
 
-#: ../src/shutdown-dialog.vala:105 ../src/shutdown-dialog.vala:207
+#: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
 msgstr ""
 
-#: ../src/shutdown-dialog.vala:112
+#: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
 msgstr ""
 
-#: ../src/shutdown-dialog.vala:137
+#: src/shutdown-dialog.vala:137
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
 
-#: ../src/shutdown-dialog.vala:155
-msgid "Suspend"
-msgstr ""
-
-#: ../src/shutdown-dialog.vala:172
-msgid "Hibernate"
-msgstr ""
-
-#: ../src/shutdown-dialog.vala:190
+#: src/shutdown-dialog.vala:190
 msgid "Restart"
 msgstr ""
 
-#. Translators: %s is a session name like KDE or Ubuntu
-#: ../src/toggle-box.vala:98
-#, c-format
-msgid "%s (Default)"
-msgstr "%s(ಪೂರ್ವನಿಯೋಜಿತ)"
-
-#. Help string for command line --version flag
-#: ../src/slick-greeter.vala:512
+#: src/slick-greeter.vala:616
 msgid "Show release version"
 msgstr "ಬಿಡುಗಡೆ ಆವೃತ್ತಿಯನ್ನು ತೋರಿಸು"
 
-#. Help string for command line --test-mode flag
-#: ../src/slick-greeter.vala:515
+#: src/slick-greeter.vala:619
 msgid "Run in test mode"
 msgstr "ಪರೀಕ್ಷಾ ಮಾರ್ಗದಲ್ಲಿ ಓಡಿಸು"
 
-#. Arguments and description for --help text
-#: ../src/slick-greeter.vala:521
-msgid "- Slick Greeter"
-msgstr "ಯುನಿಟಿ ಸ್ವಾಗತಕಾರ"
-
-#. Text printed out when an unknown command-line argument provided
-#: ../src/slick-greeter.vala:532
+#: src/slick-greeter.vala:635
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "ಲಭ್ಯವಿರುವ ಕಮ್ಯಾಂಡ್ ಲೈನ್ ಆಯ್ಕೆಗಳ ಪೂರ್ಣ ಪಟ್ಟಿ ನೋಡಲು '%s --help' ಓಡಿಸಿ"
 
-#: ../src/user-list.vala:45
+#: src/toggle-box.vala:98
+#, c-format
+msgid "%s (Default)"
+msgstr "%s(ಪೂರ್ವನಿಯೋಜಿತ)"
+
+#: src/user-list.vala:45
 msgid "Guest Session"
 msgstr "ಅತಿಥಿ ಅಧಿವೇಶನ"
 
-#: ../src/user-list.vala:438
+#: src/user-list.vala:438
 msgid "Please enter a complete e-mail address"
 msgstr "ದಯವಿಟ್ಟು ಪೂರ್ತಿ ವಿ-ಅಂಚೆ ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ"
 
-#: ../src/user-list.vala:518
+#: src/user-list.vala:518
 msgid "Incorrect e-mail address or password"
 msgstr "ಗುಪ್ತಪದ  ಅಥವಾ  ವಿ-ಅಂಚೆ ವಿಳಾಸದಲ್ಲಿ ತಪ್ಪಿದೆ"
 
-#: ../src/user-list.vala:549
+#: src/user-list.vala:549
 msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
@@ -151,8 +158,7 @@ msgstr ""
 "ನೀವು RDP  ಅಥವಾ Citrix ಸರ್ವರ್  ಖಾತೆ ಹೊಂದಿದ್ದಲ್ಲಿ ರಿಮೋಟ್ ಲಾಗಿನ್ ಇಂದ "
 "ಅಪ್ಪ್ಲಿಕೇಷನ್ನುಗಳನ್ನು  ಚಲಾಯಿಸಬಹುದು"
 
-#. For 12.10 we still don't support Citrix
-#: ../src/user-list.vala:551
+#: src/user-list.vala:551
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
@@ -160,15 +166,15 @@ msgstr ""
 "ನೀವು RDP   ಖಾತೆ ಹೊಂದಿದ್ದಲ್ಲಿ ರಿಮೋಟ್ ಲಾಗಿನ್ ಇಂದ ಅಪ್ಪ್ಲಿಕೇಷನ್ನುಗಳನ್ನು  "
 "ಚಲಾಯಿಸಬಹುದು"
 
-#: ../src/user-list.vala:554
+#: src/user-list.vala:554
 msgid "Cancel"
 msgstr "ರದ್ದುಗೊಳಿಸಿ"
 
-#: ../src/user-list.vala:555
-msgid "Set Up…"
-msgstr "ಸ್ಥಾಪಿಸು..."
+#: src/user-list.vala:555
+msgid "Set Up..."
+msgstr ""
 
-#: ../src/user-list.vala:557
+#: src/user-list.vala:557
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
@@ -176,11 +182,11 @@ msgstr ""
 "ಈ ಸೇವೆಯನ್ನು ಉಪಯೋಗಿಸಲು ನೀವು  ಉಬುಂಟು ರಿಮೋಟ್ ಲಾಗಿನ್ ಖಾತೆ ಹೊಂದಿರುವುದಿಲ್ಲ.ಖಾತೆ "
 "ತೆರೆಯಲು ಬಯಸುತ್ತೀರ ?"
 
-#: ../src/user-list.vala:561
+#: src/user-list.vala:561
 msgid "OK"
 msgstr "ಸರಿ"
 
-#: ../src/user-list.vala:562
+#: src/user-list.vala:562
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
@@ -188,52 +194,36 @@ msgstr ""
 "ಈ ಸೇವೆಯನ್ನು ಉಪಯೋಗಿಸಲು ನೀವು  ಉಬುಂಟು ರಿಮೋಟ್ ಲಾಗಿನ್ ಖಾತೆ ಹೊಂದಿರುವುದಿಲ್ಲ.ಖಾತೆ "
 "ತೆರೆಯಲು ಭೇಟಿಕೊಡಿ uccs.canonical.com"
 
-#: ../src/user-list.vala:679
+#: src/user-list.vala:681
 msgid "Server type not supported."
 msgstr "ಸರ್ವರ್ ಬಗೆ ಸಪೋರ್ಟ್ ಮಾಡುತ್ತಿಲ್ಲ"
 
-#: ../src/user-list.vala:720
+#: src/user-list.vala:722
 msgid "Domain:"
 msgstr "ಕ್ಷೇತ್ರ:"
 
-#: ../src/user-list.vala:781
+#: src/user-list.vala:783
 msgid "Email address:"
 msgstr "ವಿಅಂಚೆ ವಿಳಾಸ:"
 
-#. 'Log In' here is the button for logging in.
-#: ../src/user-list.vala:825
+#: src/user-list.vala:827
 msgid "Log In"
 msgstr "ಪ್ರವೇಶಿಸು"
 
-#: ../src/user-list.vala:826
+#: src/user-list.vala:828
 #, c-format
 msgid "Login as %s"
 msgstr "%s ರಂತೆ ಪ್ರವೇಶಿಸು"
 
-#: ../src/user-list.vala:830
+#: src/user-list.vala:832
 msgid "Retry"
 msgstr "ಮರುಪ್ರಯತ್ನಿಸು"
 
-#: ../src/user-list.vala:831
+#: src/user-list.vala:833
 #, c-format
 msgid "Retry as %s"
 msgstr "ಮತ್ತೊಮ್ಮೆ %s ಪ್ರಯತ್ನಿಸಿ"
 
-#: ../src/user-list.vala:869
+#: src/user-list.vala:871
 msgid "Login"
 msgstr "ಪ್ರವೇಶಿಸು"
-
-#~ msgid "_Back"
-#~ msgstr "ಹಿಂದಕ್ಕೆ (_B)"
-
-#~ msgid "Enter username"
-#~ msgstr "ಬಳಕೆದಾರರ ಹೆಸರು ಕೊಡಿ"
-
-#~ msgid "Enter password"
-#~ msgstr "ಗುಪ್ತಪದ ಕೊಡಿ"
-
-#~ msgid "Logging in..."
-#~ msgstr "ಪ್ರವೇಶಿಸುತ್ತಿದೆ..."
-
-#~ msgid "Favorite Color (blue):"
-#~ msgstr "ಮೆಚ್ಚಿನ ಬಣ್ಣ(ನೀಲಿ )"

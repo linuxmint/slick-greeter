@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-06-20 21:40+0200\n"
-"PO-Revision-Date: 2017-06-20 21:44+0200\n"
-"Last-Translator: Tobias Bannert <Unknown>\n"
+"POT-Creation-Date: 2017-07-14 16:49+0200\n"
+"PO-Revision-Date: 2017-07-15 14:23+0000\n"
+"Last-Translator: Tobias Bannert <tobannert@gmail.com>\n"
 "Language-Team: German <de@li.org>\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-23 05:32+0000\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:46+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
+"Language: de\n"
 
 #: src/greeter-list.vala:302
 #, c-format
@@ -44,40 +44,52 @@ msgid "Failed to start session"
 msgstr "Starten der Sitzung fehlgeschlagen"
 
 #: src/greeter-list.vala:940
-msgid "Logging in…"
-msgstr "Anmeldevorgang …"
+msgid "Logging in..."
+msgstr "Anmeldung läuft …"
 
 #: src/main-window.vala:49
 msgid "Login Screen"
 msgstr "Anmeldebildschirm"
 
-#: src/main-window.vala:113
+#: src/main-window.vala:110
 msgid "Back"
 msgstr "Zurück"
 
-#: src/menubar.vala:362
+#: src/menubar.vala:322
+msgid "Power:"
+msgstr "Leistung:"
+
+#: src/menubar.vala:372
+msgid "Accessibility"
+msgstr "Barrierefreiheit"
+
+#: src/menubar.vala:381
 msgid "Onscreen keyboard"
 msgstr "Bildschirmtastatur"
 
-#: src/menubar.vala:367
+#: src/menubar.vala:386
 msgid "High Contrast"
 msgstr "Starker Kontrast"
 
-#: src/menubar.vala:373
+#: src/menubar.vala:392
 msgid "Screen Reader"
 msgstr "Bildschirmleser"
 
-#: src/menubar.vala:397 src/shutdown-dialog.vala:155
+#: src/menubar.vala:404 src/menubar.vala:451
+msgid "Quit..."
+msgstr "Beenden …"
+
+#: src/menubar.vala:417 src/shutdown-dialog.vala:155
 msgid "Suspend"
 msgstr "Bereitschaft"
 
-#: src/menubar.vala:415 src/shutdown-dialog.vala:172
+#: src/menubar.vala:435 src/shutdown-dialog.vala:172
 msgid "Hibernate"
 msgstr "Ruhezustand"
 
-#: src/menubar.vala:431
-msgid "Quit..."
-msgstr "Beenden …"
+#: src/menubar.vala:474
+msgid "Keyboard layout:"
+msgstr "Tastaturbelegung:"
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
@@ -85,10 +97,10 @@ msgstr "Sitzungsoptionen"
 
 #: src/session-list.vala:34
 msgid "Select desktop environment"
-msgstr "Arbeitsumgebung wählen"
+msgstr "Arbeitsumgebung auswählen"
 
 #: src/shutdown-dialog.vala:101
-msgid "Goodbye. Would you like to…"
+msgid "Goodbye. Would you like to..."
 msgstr "Auf Wiedersehen. Würden Sie gerne …"
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
@@ -111,19 +123,15 @@ msgstr ""
 msgid "Restart"
 msgstr "Neustarten"
 
-#: src/slick-greeter.vala:634
+#: src/slick-greeter.vala:616
 msgid "Show release version"
 msgstr "Veröffentlichungsversion anzeigen"
 
-#: src/slick-greeter.vala:637
+#: src/slick-greeter.vala:619
 msgid "Run in test mode"
 msgstr "Im Testmodus starten"
 
-#: src/slick-greeter.vala:643
-msgid "- Slick Greeter"
-msgstr "- Slick Greeter"
-
-#: src/slick-greeter.vala:654
+#: src/slick-greeter.vala:635
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
@@ -133,7 +141,7 @@ msgstr ""
 #: src/toggle-box.vala:98
 #, c-format
 msgid "%s (Default)"
-msgstr "%s (Standard)"
+msgstr "%s (Vorgabe)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
@@ -168,7 +176,7 @@ msgid "Cancel"
 msgstr "Abbrechen"
 
 #: src/user-list.vala:555
-msgid "Set Up…"
+msgid "Set Up..."
 msgstr "Einrichten …"
 
 #: src/user-list.vala:557
@@ -185,10 +193,10 @@ msgstr "OK"
 
 #: src/user-list.vala:562
 msgid ""
-"You need an Ubuntu Remote Login account to use this service. Visit uccs."
-"canonical.com to set up an account."
+"You need an Ubuntu Remote Login account to use this service. Visit "
+"uccs.canonical.com to set up an account."
 msgstr ""
-"Sie benötigen ein Ubuntu Fernzugriffskonto, um diesen Dienst zu nutzen. "
+"Sie benötigen ein Ubuntu-Fernzugriffskonto, um diesen Dienst zu nutzen. "
 "Besuchen Sie uccs.canonical.com, um ein Konto einzurichten."
 
 #: src/user-list.vala:681
@@ -224,21 +232,3 @@ msgstr "Erneut versuchen als %s"
 #: src/user-list.vala:871
 msgid "Login"
 msgstr "Anmelden"
-
-#~ msgid "Logging in..."
-#~ msgstr "Anmeldung läuft …"
-
-#~ msgid "Enter username"
-#~ msgstr "Benutzernamen eingeben"
-
-#~ msgid "_Back"
-#~ msgstr "_Zurück"
-
-#~ msgid "Other..."
-#~ msgstr "Andere …"
-
-#~ msgid "Enter password"
-#~ msgstr "Kennwort eingeben"
-
-#~ msgid "Favorite Color (blue):"
-#~ msgstr "Lieblingsfarbe (Blau):"

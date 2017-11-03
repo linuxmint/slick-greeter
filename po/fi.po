@@ -7,86 +7,110 @@ msgid ""
 msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-03-22 05:42+0000\n"
-"PO-Revision-Date: 2014-01-31 14:03+0000\n"
-"Last-Translator: Jiri Grönroos <Unknown>\n"
+"POT-Creation-Date: 2017-07-14 16:49+0200\n"
+"PO-Revision-Date: 2017-07-14 15:09+0000\n"
+"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-23 05:32+0000\n"
-"X-Generator: Launchpad (build 17958)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:46+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 
-#: ../src/greeter-list.vala:300
+#: src/greeter-list.vala:302
 #, c-format
 msgid "Enter password for %s"
 msgstr "Syötä salasana käyttäjälle %s"
 
-#: ../src/greeter-list.vala:805 ../src/user-list.vala:701
+#: src/greeter-list.vala:811 src/user-list.vala:703
 msgid "Password:"
 msgstr "Salasana:"
 
-#: ../src/greeter-list.vala:807 ../src/user-list.vala:695
+#: src/greeter-list.vala:813 src/user-list.vala:697
 msgid "Username:"
 msgstr "Käyttäjänimi:"
 
-#: ../src/greeter-list.vala:859
+#: src/greeter-list.vala:868
 msgid "Invalid password, please try again"
 msgstr "Virheellinen salasana, yritä uudelleen"
 
-#: ../src/greeter-list.vala:870
+#: src/greeter-list.vala:879
 msgid "Failed to authenticate"
 msgstr "Tunnistautuminen epäonnistui"
 
-#: ../src/greeter-list.vala:916
+#: src/greeter-list.vala:925
 msgid "Failed to start session"
 msgstr "Istunnon käynnistäminen epäonnistui"
 
-#: ../src/greeter-list.vala:931
-msgid "Logging in…"
-msgstr "Kirjaudutaan sisään…"
+#: src/greeter-list.vala:940
+msgid "Logging in..."
+msgstr "Kirjaudutaan..."
 
-#: ../src/main-window.vala:49
+#: src/main-window.vala:49
 msgid "Login Screen"
 msgstr "Sisäänkirjautumisruutu"
 
-#: ../src/main-window.vala:116
+#: src/main-window.vala:110
 msgid "Back"
 msgstr "Takaisin"
 
-#: ../src/menubar.vala:220
+#: src/menubar.vala:322
+msgid "Power:"
+msgstr ""
+
+#: src/menubar.vala:372
+msgid "Accessibility"
+msgstr ""
+
+#: src/menubar.vala:381
 msgid "Onscreen keyboard"
 msgstr "Virtuaalinäppäimistö"
 
-#: ../src/menubar.vala:225
+#: src/menubar.vala:386
 msgid "High Contrast"
 msgstr "Suuri kontrasti"
 
-#: ../src/menubar.vala:231
+#: src/menubar.vala:392
 msgid "Screen Reader"
 msgstr "Näytönlukija"
 
-#: ../src/prompt-box.vala:212
+#: src/menubar.vala:404 src/menubar.vala:451
+msgid "Quit..."
+msgstr ""
+
+#: src/menubar.vala:417 src/shutdown-dialog.vala:155
+msgid "Suspend"
+msgstr "Valmiustila"
+
+#: src/menubar.vala:435 src/shutdown-dialog.vala:172
+msgid "Hibernate"
+msgstr "Lepotila"
+
+#: src/menubar.vala:474
+msgid "Keyboard layout:"
+msgstr ""
+
+#: src/prompt-box.vala:215
 msgid "Session Options"
 msgstr "Istunnon asetukset"
 
-#: ../src/session-list.vala:34
+#: src/session-list.vala:34
 msgid "Select desktop environment"
 msgstr "Valitse työpöytäympäristö"
 
-#: ../src/shutdown-dialog.vala:101
-msgid "Goodbye. Would you like to…"
-msgstr "Näkemiin. Haluaisitko..."
+#: src/shutdown-dialog.vala:101
+msgid "Goodbye. Would you like to..."
+msgstr ""
 
-#: ../src/shutdown-dialog.vala:105 ../src/shutdown-dialog.vala:207
+#: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
 msgstr "Sammuta"
 
-#: ../src/shutdown-dialog.vala:112
+#: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
 msgstr "Haluatko varmasti sammuttaa tietokoneen?"
 
-#: ../src/shutdown-dialog.vala:137
+#: src/shutdown-dialog.vala:137
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
@@ -94,58 +118,41 @@ msgstr ""
 "Tietokoneelle on kirjautunut myös muita käyttäjiä. Tietokoneen sammuttaminen "
 "sulkee myös toisten käyttäjien istunnot."
 
-#: ../src/shutdown-dialog.vala:155
-msgid "Suspend"
-msgstr "Valmiustila"
-
-#: ../src/shutdown-dialog.vala:172
-msgid "Hibernate"
-msgstr "Lepotila"
-
-#: ../src/shutdown-dialog.vala:190
+#: src/shutdown-dialog.vala:190
 msgid "Restart"
 msgstr "Käynnistä uudelleen"
 
-#. Translators: %s is a session name like KDE or Ubuntu
-#: ../src/toggle-box.vala:98
-#, c-format
-msgid "%s (Default)"
-msgstr "%s (oletus)"
-
-#. Help string for command line --version flag
-#: ../src/slick-greeter.vala:512
+#: src/slick-greeter.vala:616
 msgid "Show release version"
 msgstr "Näytä julkaisuversio"
 
-#. Help string for command line --test-mode flag
-#: ../src/slick-greeter.vala:515
+#: src/slick-greeter.vala:619
 msgid "Run in test mode"
 msgstr "Suorita testitilassa"
 
-#. Arguments and description for --help text
-#: ../src/slick-greeter.vala:521
-msgid "- Slick Greeter"
-msgstr "- Slick Greeter"
-
-#. Text printed out when an unknown command-line argument provided
-#: ../src/slick-greeter.vala:532
+#: src/slick-greeter.vala:635
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "Näet kaikki komentorivivalitsimet komennolla ”%s --help”"
 
-#: ../src/user-list.vala:45
+#: src/toggle-box.vala:98
+#, c-format
+msgid "%s (Default)"
+msgstr "%s (oletus)"
+
+#: src/user-list.vala:45
 msgid "Guest Session"
 msgstr "Vieras"
 
-#: ../src/user-list.vala:438
+#: src/user-list.vala:438
 msgid "Please enter a complete e-mail address"
 msgstr "Anna sähköpostiosoite kokonaisuudessaan"
 
-#: ../src/user-list.vala:518
+#: src/user-list.vala:518
 msgid "Incorrect e-mail address or password"
 msgstr "Virheellinen sähköpostiosoite tai salasana"
 
-#: ../src/user-list.vala:549
+#: src/user-list.vala:549
 msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
@@ -153,8 +160,7 @@ msgstr ""
 "Jos käytössäsi on tili RDP- tai Citrix-palvelimelle, etäkäyttö mahdollistaa "
 "sovellusten käytön kyseisiltä palvelimilta."
 
-#. For 12.10 we still don't support Citrix
-#: ../src/user-list.vala:551
+#: src/user-list.vala:551
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
@@ -162,15 +168,15 @@ msgstr ""
 "Jos sinulla on tili RDP-palvelimella, etäkirjautuminen mahdollistaa "
 "sovellusten käytön kyseiseltä palvelimelta."
 
-#: ../src/user-list.vala:554
+#: src/user-list.vala:554
 msgid "Cancel"
 msgstr "Peru"
 
-#: ../src/user-list.vala:555
-msgid "Set Up…"
-msgstr "Tee asetukset..."
+#: src/user-list.vala:555
+msgid "Set Up..."
+msgstr ""
 
-#: ../src/user-list.vala:557
+#: src/user-list.vala:557
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
@@ -178,11 +184,11 @@ msgstr ""
 "Tarvitset Ubuntu-etäkirjautumistilin käyttääksesi tätä palvelua. Haluatko "
 "luoda tilin nyt?"
 
-#: ../src/user-list.vala:561
+#: src/user-list.vala:561
 msgid "OK"
 msgstr "OK"
 
-#: ../src/user-list.vala:562
+#: src/user-list.vala:562
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
@@ -190,55 +196,36 @@ msgstr ""
 "Tarvitset Ubuntu-etäkirjautumistilin käyttääksesi tätä palvelua. Luo tili "
 "osoitteessa uccs.canonical.com."
 
-#: ../src/user-list.vala:679
+#: src/user-list.vala:681
 msgid "Server type not supported."
 msgstr "Palvelimen tyyppi ei ole tuettu."
 
-#: ../src/user-list.vala:720
+#: src/user-list.vala:722
 msgid "Domain:"
 msgstr "Toimialue:"
 
-#: ../src/user-list.vala:781
+#: src/user-list.vala:783
 msgid "Email address:"
 msgstr "Sähköpostiosoite:"
 
-#. 'Log In' here is the button for logging in.
-#: ../src/user-list.vala:825
+#: src/user-list.vala:827
 msgid "Log In"
 msgstr "Kirjaudu sisään"
 
-#: ../src/user-list.vala:826
+#: src/user-list.vala:828
 #, c-format
 msgid "Login as %s"
 msgstr "Kirjaudu käyttäjänä %s"
 
-#: ../src/user-list.vala:830
+#: src/user-list.vala:832
 msgid "Retry"
 msgstr "Yritä uudelleen"
 
-#: ../src/user-list.vala:831
+#: src/user-list.vala:833
 #, c-format
 msgid "Retry as %s"
 msgstr "Yritä uudelleen käyttäjänä %s"
 
-#: ../src/user-list.vala:869
+#: src/user-list.vala:871
 msgid "Login"
 msgstr "Kirjaudu"
-
-#~ msgid "Logging in..."
-#~ msgstr "Kirjaudutaan..."
-
-#~ msgid "Other..."
-#~ msgstr "Muu…"
-
-#~ msgid "Enter username"
-#~ msgstr "Anna käyttäjätunnus"
-
-#~ msgid "Enter password"
-#~ msgstr "Anna salasana"
-
-#~ msgid "_Back"
-#~ msgstr "_Takaisin"
-
-#~ msgid "Favorite Color (blue):"
-#~ msgstr "Suosikkiväri (sininen):"

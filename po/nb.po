@@ -7,86 +7,110 @@ msgid ""
 msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-03-22 05:42+0000\n"
-"PO-Revision-Date: 2014-05-08 12:01+0000\n"
-"Last-Translator: Åka Sikrom <Unknown>\n"
+"POT-Creation-Date: 2017-07-14 16:49+0200\n"
+"PO-Revision-Date: 2017-07-14 15:10+0000\n"
+"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-23 05:32+0000\n"
-"X-Generator: Launchpad (build 17958)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:46+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 
-#: ../src/greeter-list.vala:300
+#: src/greeter-list.vala:302
 #, c-format
 msgid "Enter password for %s"
 msgstr "Skriv inn passord for %s"
 
-#: ../src/greeter-list.vala:805 ../src/user-list.vala:701
+#: src/greeter-list.vala:811 src/user-list.vala:703
 msgid "Password:"
 msgstr "Passord:"
 
-#: ../src/greeter-list.vala:807 ../src/user-list.vala:695
+#: src/greeter-list.vala:813 src/user-list.vala:697
 msgid "Username:"
 msgstr "Brukernavn:"
 
-#: ../src/greeter-list.vala:859
+#: src/greeter-list.vala:868
 msgid "Invalid password, please try again"
 msgstr "Feil passord. Prøv igjen"
 
-#: ../src/greeter-list.vala:870
+#: src/greeter-list.vala:879
 msgid "Failed to authenticate"
 msgstr "Klarte ikke å autentisere"
 
-#: ../src/greeter-list.vala:916
+#: src/greeter-list.vala:925
 msgid "Failed to start session"
 msgstr "Klarte ikke å starte økt"
 
-#: ../src/greeter-list.vala:931
-msgid "Logging in…"
+#: src/greeter-list.vala:940
+msgid "Logging in..."
 msgstr "Logger inn …"
 
-#: ../src/main-window.vala:49
+#: src/main-window.vala:49
 msgid "Login Screen"
 msgstr "Innloggingsskjerm"
 
-#: ../src/main-window.vala:116
+#: src/main-window.vala:110
 msgid "Back"
 msgstr "Tilbake"
 
-#: ../src/menubar.vala:220
+#: src/menubar.vala:322
+msgid "Power:"
+msgstr ""
+
+#: src/menubar.vala:372
+msgid "Accessibility"
+msgstr ""
+
+#: src/menubar.vala:381
 msgid "Onscreen keyboard"
 msgstr "Skjermtastatur"
 
-#: ../src/menubar.vala:225
+#: src/menubar.vala:386
 msgid "High Contrast"
 msgstr "Høy kontrast"
 
-#: ../src/menubar.vala:231
+#: src/menubar.vala:392
 msgid "Screen Reader"
 msgstr "Skjermleser"
 
-#: ../src/prompt-box.vala:212
+#: src/menubar.vala:404 src/menubar.vala:451
+msgid "Quit..."
+msgstr ""
+
+#: src/menubar.vala:417 src/shutdown-dialog.vala:155
+msgid "Suspend"
+msgstr "Hvilemodus"
+
+#: src/menubar.vala:435 src/shutdown-dialog.vala:172
+msgid "Hibernate"
+msgstr "Dvalemodus"
+
+#: src/menubar.vala:474
+msgid "Keyboard layout:"
+msgstr ""
+
+#: src/prompt-box.vala:215
 msgid "Session Options"
 msgstr "Øktvalg"
 
-#: ../src/session-list.vala:34
+#: src/session-list.vala:34
 msgid "Select desktop environment"
 msgstr "Velg skrivebordsmiljø"
 
-#: ../src/shutdown-dialog.vala:101
-msgid "Goodbye. Would you like to…"
-msgstr "Ha det bra. Vil du …"
+#: src/shutdown-dialog.vala:101
+msgid "Goodbye. Would you like to..."
+msgstr ""
 
-#: ../src/shutdown-dialog.vala:105 ../src/shutdown-dialog.vala:207
+#: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
 msgstr "Slå av"
 
-#: ../src/shutdown-dialog.vala:112
+#: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
 msgstr "Er du sikker på at du vil slå av datamaskinen?"
 
-#: ../src/shutdown-dialog.vala:137
+#: src/shutdown-dialog.vala:137
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
@@ -94,59 +118,42 @@ msgstr ""
 "Andre brukere er logget inn på denne datamaskinen. Hvis du slår av nå, blir "
 "også disse brukerne logget ut."
 
-#: ../src/shutdown-dialog.vala:155
-msgid "Suspend"
-msgstr "Hvilemodus"
-
-#: ../src/shutdown-dialog.vala:172
-msgid "Hibernate"
-msgstr "Dvalemodus"
-
-#: ../src/shutdown-dialog.vala:190
+#: src/shutdown-dialog.vala:190
 msgid "Restart"
 msgstr "Start på nytt"
 
-#. Translators: %s is a session name like KDE or Ubuntu
-#: ../src/toggle-box.vala:98
-#, c-format
-msgid "%s (Default)"
-msgstr "%s (standard)"
-
-#. Help string for command line --version flag
-#: ../src/slick-greeter.vala:512
+#: src/slick-greeter.vala:616
 msgid "Show release version"
 msgstr "Vis utgivelsesversjon"
 
-#. Help string for command line --test-mode flag
-#: ../src/slick-greeter.vala:515
+#: src/slick-greeter.vala:619
 msgid "Run in test mode"
 msgstr "Kjør i testmodus"
 
-#. Arguments and description for --help text
-#: ../src/slick-greeter.vala:521
-msgid "- Slick Greeter"
-msgstr "- Slick velkomstskjerm"
-
-#. Text printed out when an unknown command-line argument provided
-#: ../src/slick-greeter.vala:532
+#: src/slick-greeter.vala:635
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
 "Kjør «%s --help» for å se en liste over tilgjengelige kommandolinjevalg."
 
-#: ../src/user-list.vala:45
+#: src/toggle-box.vala:98
+#, c-format
+msgid "%s (Default)"
+msgstr "%s (standard)"
+
+#: src/user-list.vala:45
 msgid "Guest Session"
 msgstr "Gjesteøkt"
 
-#: ../src/user-list.vala:438
+#: src/user-list.vala:438
 msgid "Please enter a complete e-mail address"
 msgstr "Skriv inn en fullstendig e-postadresse"
 
-#: ../src/user-list.vala:518
+#: src/user-list.vala:518
 msgid "Incorrect e-mail address or password"
 msgstr "Feil e-postadresse eller passord"
 
-#: ../src/user-list.vala:549
+#: src/user-list.vala:549
 msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
@@ -154,8 +161,7 @@ msgstr ""
 "Hvis du har en konto på en RDP- eller Citrix-tjener, kan du kjøre programmer "
 "fra denne med «Remote Login»."
 
-#. For 12.10 we still don't support Citrix
-#: ../src/user-list.vala:551
+#: src/user-list.vala:551
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
@@ -163,15 +169,15 @@ msgstr ""
 "Hvis du har en konto på en RDP-tjener, kan du kjøre programmer fra denne med "
 "«Remote Login»."
 
-#: ../src/user-list.vala:554
+#: src/user-list.vala:554
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: ../src/user-list.vala:555
-msgid "Set Up…"
-msgstr "Sett opp …"
+#: src/user-list.vala:555
+msgid "Set Up..."
+msgstr ""
 
-#: ../src/user-list.vala:557
+#: src/user-list.vala:557
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
@@ -179,11 +185,11 @@ msgstr ""
 "Du trenger en Ubuntu Remote Login-konto for å bruke denne tjenesten. Vil du "
 "lage en konto nå?"
 
-#: ../src/user-list.vala:561
+#: src/user-list.vala:561
 msgid "OK"
 msgstr "OK"
 
-#: ../src/user-list.vala:562
+#: src/user-list.vala:562
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
@@ -191,46 +197,36 @@ msgstr ""
 "Du trenger en Ubuntu Remote Login-konto for å bruke denne tjenesten. Besøk "
 "uccs.canonical.com for å lage en konto."
 
-#: ../src/user-list.vala:679
+#: src/user-list.vala:681
 msgid "Server type not supported."
 msgstr "Tjenertypen støttes ikke."
 
-#: ../src/user-list.vala:720
+#: src/user-list.vala:722
 msgid "Domain:"
 msgstr "Domene:"
 
-#: ../src/user-list.vala:781
+#: src/user-list.vala:783
 msgid "Email address:"
 msgstr "E-postadresse:"
 
-#. 'Log In' here is the button for logging in.
-#: ../src/user-list.vala:825
+#: src/user-list.vala:827
 msgid "Log In"
 msgstr "Logg inn"
 
-#: ../src/user-list.vala:826
+#: src/user-list.vala:828
 #, c-format
 msgid "Login as %s"
 msgstr "Logg inn som %s"
 
-#: ../src/user-list.vala:830
+#: src/user-list.vala:832
 msgid "Retry"
 msgstr "Prøv igjen"
 
-#: ../src/user-list.vala:831
+#: src/user-list.vala:833
 #, c-format
 msgid "Retry as %s"
 msgstr "Prøv igjen som %s"
 
-#: ../src/user-list.vala:869
+#: src/user-list.vala:871
 msgid "Login"
 msgstr "Innloggingsnavn"
-
-#~ msgid "_Back"
-#~ msgstr "_Tilbake"
-
-#~ msgid "Favorite Color (blue):"
-#~ msgstr "Favorittfarge (blå):"
-
-#~ msgid "Logging in..."
-#~ msgstr "Logger inn …"

@@ -7,86 +7,110 @@ msgid ""
 msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-03-22 05:42+0000\n"
-"PO-Revision-Date: 2012-06-12 16:14+0000\n"
-"Last-Translator: inashdeen <Unknown>\n"
+"POT-Creation-Date: 2017-07-14 16:49+0200\n"
+"PO-Revision-Date: 2017-07-14 15:04+0000\n"
+"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
 "Language-Team: Malay <ms@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-23 05:32+0000\n"
-"X-Generator: Launchpad (build 17958)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:46+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 
-#: ../src/greeter-list.vala:300
+#: src/greeter-list.vala:302
 #, c-format
 msgid "Enter password for %s"
 msgstr "Masukkan kata laluan untuk %s"
 
-#: ../src/greeter-list.vala:805 ../src/user-list.vala:701
+#: src/greeter-list.vala:811 src/user-list.vala:703
 msgid "Password:"
 msgstr "Kata Laluan:"
 
-#: ../src/greeter-list.vala:807 ../src/user-list.vala:695
+#: src/greeter-list.vala:813 src/user-list.vala:697
 msgid "Username:"
 msgstr "Nama Pengguna:"
 
-#: ../src/greeter-list.vala:859
+#: src/greeter-list.vala:868
 msgid "Invalid password, please try again"
 msgstr "Kata laluan tidak sah, sila cuba lagi"
 
-#: ../src/greeter-list.vala:870
+#: src/greeter-list.vala:879
 msgid "Failed to authenticate"
 msgstr "Gagal disahihkan"
 
-#: ../src/greeter-list.vala:916
+#: src/greeter-list.vala:925
 msgid "Failed to start session"
 msgstr "Gagal mulakan sesi"
 
-#: ../src/greeter-list.vala:931
-msgid "Logging in…"
+#: src/greeter-list.vala:940
+msgid "Logging in..."
 msgstr "Mendaftar masuk..."
 
-#: ../src/main-window.vala:49
+#: src/main-window.vala:49
 msgid "Login Screen"
 msgstr "Skrin Daftar Masuk"
 
-#: ../src/main-window.vala:116
+#: src/main-window.vala:110
 msgid "Back"
 msgstr "Undur"
 
-#: ../src/menubar.vala:220
+#: src/menubar.vala:322
+msgid "Power:"
+msgstr ""
+
+#: src/menubar.vala:372
+msgid "Accessibility"
+msgstr ""
+
+#: src/menubar.vala:381
 msgid "Onscreen keyboard"
 msgstr "Papan kekunci atas skrin"
 
-#: ../src/menubar.vala:225
+#: src/menubar.vala:386
 msgid "High Contrast"
 msgstr "Beza Jelas Tinggi"
 
-#: ../src/menubar.vala:231
+#: src/menubar.vala:392
 msgid "Screen Reader"
 msgstr "Pembaca Skrin"
 
-#: ../src/prompt-box.vala:212
+#: src/menubar.vala:404 src/menubar.vala:451
+msgid "Quit..."
+msgstr ""
+
+#: src/menubar.vala:417 src/shutdown-dialog.vala:155
+msgid "Suspend"
+msgstr "Tangguh"
+
+#: src/menubar.vala:435 src/shutdown-dialog.vala:172
+msgid "Hibernate"
+msgstr "Hibernasi"
+
+#: src/menubar.vala:474
+msgid "Keyboard layout:"
+msgstr ""
+
+#: src/prompt-box.vala:215
 msgid "Session Options"
 msgstr "Pilihan Sesi"
 
-#: ../src/session-list.vala:34
+#: src/session-list.vala:34
 msgid "Select desktop environment"
 msgstr "Pilih persekitaran desktop"
 
-#: ../src/shutdown-dialog.vala:101
-msgid "Goodbye. Would you like to…"
-msgstr "Selamat Tinggal. Apakah yang anda mahu..."
+#: src/shutdown-dialog.vala:101
+msgid "Goodbye. Would you like to..."
+msgstr ""
 
-#: ../src/shutdown-dialog.vala:105 ../src/shutdown-dialog.vala:207
+#: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
 msgstr "Matikan"
 
-#: ../src/shutdown-dialog.vala:112
+#: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
 msgstr "Anda pasti mahu matikan komputer?"
 
-#: ../src/shutdown-dialog.vala:137
+#: src/shutdown-dialog.vala:137
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
@@ -94,60 +118,43 @@ msgstr ""
 "Lain-lain pengguna yang kini mendaftar masuk ke komputer, menutup komputer "
 "sekarang akan juga menutup lain-lain sesi ini."
 
-#: ../src/shutdown-dialog.vala:155
-msgid "Suspend"
-msgstr "Tangguh"
-
-#: ../src/shutdown-dialog.vala:172
-msgid "Hibernate"
-msgstr "Hibernasi"
-
-#: ../src/shutdown-dialog.vala:190
+#: src/shutdown-dialog.vala:190
 msgid "Restart"
 msgstr "Mula Semula"
 
-#. Translators: %s is a session name like KDE or Ubuntu
-#: ../src/toggle-box.vala:98
-#, c-format
-msgid "%s (Default)"
-msgstr "%s (Lalai)"
-
-#. Help string for command line --version flag
-#: ../src/slick-greeter.vala:512
+#: src/slick-greeter.vala:616
 msgid "Show release version"
 msgstr "Papar versi keluaran"
 
-#. Help string for command line --test-mode flag
-#: ../src/slick-greeter.vala:515
+#: src/slick-greeter.vala:619
 msgid "Run in test mode"
 msgstr "Jalan dalam mod ujian"
 
-#. Arguments and description for --help text
-#: ../src/slick-greeter.vala:521
-msgid "- Slick Greeter"
-msgstr "- Aluan Slick"
-
-#. Text printed out when an unknown command-line argument provided
-#: ../src/slick-greeter.vala:532
+#: src/slick-greeter.vala:635
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
 "Jalankan '%s --help' untuk melihat senarai penuh pilihan baris perintah yang "
 "ada."
 
-#: ../src/user-list.vala:45
+#: src/toggle-box.vala:98
+#, c-format
+msgid "%s (Default)"
+msgstr "%s (Lalai)"
+
+#: src/user-list.vala:45
 msgid "Guest Session"
 msgstr "Sesi Tetamu"
 
-#: ../src/user-list.vala:438
+#: src/user-list.vala:438
 msgid "Please enter a complete e-mail address"
 msgstr "Sila masukkan alamat e-mel lengkap"
 
-#: ../src/user-list.vala:518
+#: src/user-list.vala:518
 msgid "Incorrect e-mail address or password"
 msgstr "Alamat e-mel atau kata laluan tidak betul"
 
-#: ../src/user-list.vala:549
+#: src/user-list.vala:549
 msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
@@ -155,8 +162,7 @@ msgstr ""
 "Jika anda mempunyai pelayan RDP atau Citrix, Daftar Masuk Jauh benarkan anda "
 "jalani aplikasi dari pelayan tersebut."
 
-#. For 12.10 we still don't support Citrix
-#: ../src/user-list.vala:551
+#: src/user-list.vala:551
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
@@ -164,15 +170,15 @@ msgstr ""
 "Jika anda mempunyai akaun pada pelayan RDP, Daftar Masuk Jauh membenarkan "
 "anda jalani aplikasi melalui pelayan tersebut."
 
-#: ../src/user-list.vala:554
+#: src/user-list.vala:554
 msgid "Cancel"
 msgstr "Batal"
 
-#: ../src/user-list.vala:555
-msgid "Set Up…"
-msgstr "Persediaan..."
+#: src/user-list.vala:555
+msgid "Set Up..."
+msgstr ""
 
-#: ../src/user-list.vala:557
+#: src/user-list.vala:557
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
@@ -180,11 +186,11 @@ msgstr ""
 "Anda perlu akaun Daftar Masuk Jauh untuk guna perkhidmatan ini. Anda hendak "
 "pasang akaun sekarang?"
 
-#: ../src/user-list.vala:561
+#: src/user-list.vala:561
 msgid "OK"
 msgstr "OK"
 
-#: ../src/user-list.vala:562
+#: src/user-list.vala:562
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
@@ -192,52 +198,36 @@ msgstr ""
 "Anda perlu akaun Daftar Masuk Jauh untuk guna perkhidmatan ini. Lawari "
 "uccs.canonical.com untuk pasang akaun."
 
-#: ../src/user-list.vala:679
+#: src/user-list.vala:681
 msgid "Server type not supported."
 msgstr "Jenis pelayan tidak disokong."
 
-#: ../src/user-list.vala:720
+#: src/user-list.vala:722
 msgid "Domain:"
 msgstr "Domain:"
 
-#: ../src/user-list.vala:781
+#: src/user-list.vala:783
 msgid "Email address:"
 msgstr "Alamat e-mel:"
 
-#. 'Log In' here is the button for logging in.
-#: ../src/user-list.vala:825
+#: src/user-list.vala:827
 msgid "Log In"
 msgstr "Daftar Masuk"
 
-#: ../src/user-list.vala:826
+#: src/user-list.vala:828
 #, c-format
 msgid "Login as %s"
 msgstr "Daftar masuk sebagai %s"
 
-#: ../src/user-list.vala:830
+#: src/user-list.vala:832
 msgid "Retry"
 msgstr "Cuba lagi"
 
-#: ../src/user-list.vala:831
+#: src/user-list.vala:833
 #, c-format
 msgid "Retry as %s"
 msgstr "Cuba sekali lagi sebagai %s"
 
-#: ../src/user-list.vala:869
+#: src/user-list.vala:871
 msgid "Login"
 msgstr "Daftar Masuk"
-
-#~ msgid "Logging in..."
-#~ msgstr "Mendaftar masuk..."
-
-#~ msgid "Enter username"
-#~ msgstr "Masukkan nama pengguna"
-
-#~ msgid "Enter password"
-#~ msgstr "Masukkan kata laluan"
-
-#~ msgid "_Back"
-#~ msgstr "_Undur"
-
-#~ msgid "Favorite Color (blue):"
-#~ msgstr "Warna Kegemaran (biru):"

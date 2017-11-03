@@ -7,86 +7,110 @@ msgid ""
 msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-03-22 05:42+0000\n"
-"PO-Revision-Date: 2012-11-05 02:27+0000\n"
-"Last-Translator: Gheyret T.Kenji <Unknown>\n"
+"POT-Creation-Date: 2017-07-14 16:49+0200\n"
+"PO-Revision-Date: 2017-07-14 15:04+0000\n"
+"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-23 05:32+0000\n"
-"X-Generator: Launchpad (build 17958)\n"
+"X-Launchpad-Export-Date: 2017-11-03 11:46+0000\n"
+"X-Generator: Launchpad (build 18493)\n"
 
-#: ../src/greeter-list.vala:300
+#: src/greeter-list.vala:302
 #, c-format
 msgid "Enter password for %s"
 msgstr "%s نىڭ ئىمنى كىرگۈزۈڭ"
 
-#: ../src/greeter-list.vala:805 ../src/user-list.vala:701
+#: src/greeter-list.vala:811 src/user-list.vala:703
 msgid "Password:"
 msgstr "ئىم:"
 
-#: ../src/greeter-list.vala:807 ../src/user-list.vala:695
+#: src/greeter-list.vala:813 src/user-list.vala:697
 msgid "Username:"
 msgstr "ئىشلەتكۈچى ئاتى:"
 
-#: ../src/greeter-list.vala:859
+#: src/greeter-list.vala:868
 msgid "Invalid password, please try again"
 msgstr "ئىم خاتا، قايتا سىناڭ"
 
-#: ../src/greeter-list.vala:870
+#: src/greeter-list.vala:879
 msgid "Failed to authenticate"
 msgstr "كىملىك دەلىللەش مەغلۇپ بولدى"
 
-#: ../src/greeter-list.vala:916
+#: src/greeter-list.vala:925
 msgid "Failed to start session"
 msgstr "ئەڭگىمەنى باشلاش مەغلۇپ بولدى"
 
-#: ../src/greeter-list.vala:931
-msgid "Logging in…"
+#: src/greeter-list.vala:940
+msgid "Logging in..."
 msgstr "كىرىۋاتىدۇ…"
 
-#: ../src/main-window.vala:49
+#: src/main-window.vala:49
 msgid "Login Screen"
 msgstr "كىرىش ئېكرانى"
 
-#: ../src/main-window.vala:116
+#: src/main-window.vala:110
 msgid "Back"
 msgstr "كەينى"
 
-#: ../src/menubar.vala:220
+#: src/menubar.vala:322
+msgid "Power:"
+msgstr ""
+
+#: src/menubar.vala:372
+msgid "Accessibility"
+msgstr ""
+
+#: src/menubar.vala:381
 msgid "Onscreen keyboard"
 msgstr "ئېكران ھەرپتاختىسى"
 
-#: ../src/menubar.vala:225
+#: src/menubar.vala:386
 msgid "High Contrast"
 msgstr "يۇقىرى ئاق-قارىلىق"
 
-#: ../src/menubar.vala:231
+#: src/menubar.vala:392
 msgid "Screen Reader"
 msgstr "ئېكران ئوقۇغۇچ"
 
-#: ../src/prompt-box.vala:212
+#: src/menubar.vala:404 src/menubar.vala:451
+msgid "Quit..."
+msgstr ""
+
+#: src/menubar.vala:417 src/shutdown-dialog.vala:155
+msgid "Suspend"
+msgstr "توڭلات"
+
+#: src/menubar.vala:435 src/shutdown-dialog.vala:172
+msgid "Hibernate"
+msgstr "ئۈچەككە كىر"
+
+#: src/menubar.vala:474
+msgid "Keyboard layout:"
+msgstr ""
+
+#: src/prompt-box.vala:215
 msgid "Session Options"
 msgstr "ئەڭگىمە تاللانمىسى"
 
-#: ../src/session-list.vala:34
+#: src/session-list.vala:34
 msgid "Select desktop environment"
 msgstr "ئۈستەلئۈستى مۇھىتىنى تاللاڭ"
 
-#: ../src/shutdown-dialog.vala:101
-msgid "Goodbye. Would you like to…"
-msgstr "سىز قانداق قىلماقچى..."
+#: src/shutdown-dialog.vala:101
+msgid "Goodbye. Would you like to..."
+msgstr ""
 
-#: ../src/shutdown-dialog.vala:105 ../src/shutdown-dialog.vala:207
+#: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
 msgstr "تاقا"
 
-#: ../src/shutdown-dialog.vala:112
+#: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
 msgstr "كومپيۇتېرنى ئۆچۈرەمسىز؟"
 
-#: ../src/shutdown-dialog.vala:137
+#: src/shutdown-dialog.vala:137
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
@@ -94,60 +118,43 @@ msgstr ""
 "باشقا ئىشلەتكۈچىلەرمۇ ھازىر كومپيۇتېرنى ئىشلىتىۋاتىدۇ. تاقالسا، ھەممىسى "
 "تاقىلىپ كېتىدۇ."
 
-#: ../src/shutdown-dialog.vala:155
-msgid "Suspend"
-msgstr "توڭلات"
-
-#: ../src/shutdown-dialog.vala:172
-msgid "Hibernate"
-msgstr "ئۈچەككە كىر"
-
-#: ../src/shutdown-dialog.vala:190
+#: src/shutdown-dialog.vala:190
 msgid "Restart"
 msgstr "قايتا قوزغات"
 
-#. Translators: %s is a session name like KDE or Ubuntu
-#: ../src/toggle-box.vala:98
-#, c-format
-msgid "%s (Default)"
-msgstr "%s (كۆڭۈلدىكى)"
-
-#. Help string for command line --version flag
-#: ../src/slick-greeter.vala:512
+#: src/slick-greeter.vala:616
 msgid "Show release version"
 msgstr "نەشرىنى كۆرسىتىدۇ"
 
-#. Help string for command line --test-mode flag
-#: ../src/slick-greeter.vala:515
+#: src/slick-greeter.vala:619
 msgid "Run in test mode"
 msgstr "سىناق ھالەتتە ئىجرا قىلىدۇ"
 
-#. Arguments and description for --help text
-#: ../src/slick-greeter.vala:521
-msgid "- Slick Greeter"
-msgstr "- Slick كۈتۈۋالغۇچىسى"
-
-#. Text printed out when an unknown command-line argument provided
-#: ../src/slick-greeter.vala:532
+#: src/slick-greeter.vala:635
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
 "«%s --help» كىرگۈزسىڭىز بۇيرۇق قۇرىدا ئىشلەتكىلى بولىدىغان بارلىق "
 "تاللانمىلارنى كۆرەلەيسىز."
 
-#: ../src/user-list.vala:45
+#: src/toggle-box.vala:98
+#, c-format
+msgid "%s (Default)"
+msgstr "%s (كۆڭۈلدىكى)"
+
+#: src/user-list.vala:45
 msgid "Guest Session"
 msgstr "مېھمان"
 
-#: ../src/user-list.vala:438
+#: src/user-list.vala:438
 msgid "Please enter a complete e-mail address"
 msgstr "ئېلخەت ئادرېسىنى كىرگۈزۈڭ"
 
-#: ../src/user-list.vala:518
+#: src/user-list.vala:518
 msgid "Incorrect e-mail address or password"
 msgstr "ئېلخەت ئادرېسى ياكى ئىم توغرا ئەمەس"
 
-#: ../src/user-list.vala:549
+#: src/user-list.vala:549
 msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
@@ -155,8 +162,7 @@ msgstr ""
 "ئەگەر سىزنىڭ RDP ياكى Citrix مۇلازىمېتىرىدا ھېساباتىڭىز بار بولسا، يىراقتىن "
 "كىرىش ئارقىلىق بۇ مۇلازىمېتىرلاردىكى پروگراممىلارنى ئىجرا قىلالايسىز."
 
-#. For 12.10 we still don't support Citrix
-#: ../src/user-list.vala:551
+#: src/user-list.vala:551
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
@@ -164,15 +170,15 @@ msgstr ""
 "سىزنىڭ RDP مۇلازىمېتىرىدا ھېساباتىڭىز بولسا، يىراقتىن كىرىش ئارقىلىق، شۇ "
 "مۇلازىمېتىر ئۈستىدىكى پروگراممىلارنى ئىجرا قىلالايسىز."
 
-#: ../src/user-list.vala:554
+#: src/user-list.vala:554
 msgid "Cancel"
 msgstr "ۋاز كەچ"
 
-#: ../src/user-list.vala:555
-msgid "Set Up…"
-msgstr "ھېساب قۇرۇش…"
+#: src/user-list.vala:555
+msgid "Set Up..."
+msgstr ""
 
-#: ../src/user-list.vala:557
+#: src/user-list.vala:557
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
@@ -180,11 +186,11 @@ msgstr ""
 "مەزكۇر مۇلازىمەتنى ئىشلىتىش ئۈچۈن چوقۇم ئۇبۇنتۇ يىراقتىن كىرىش ھېساباتى "
 "زۆرۈردۇر. ھازىرلا ھېساب قۇرامسىز؟"
 
-#: ../src/user-list.vala:561
+#: src/user-list.vala:561
 msgid "OK"
 msgstr "تامام"
 
-#: ../src/user-list.vala:562
+#: src/user-list.vala:562
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
@@ -192,46 +198,36 @@ msgstr ""
 "مەزكۇر مۇلازىمەتنى ئىشلىتىش ئۈچۈن چوقۇم ئۇبۇنتۇ يىراقتىن كىرىش ھېساباتى "
 "زۆرۈردۇر. ھېساب قۇرۇش ئۈچۈن uccs.canonical.com نى زىيارەت قىلىڭ."
 
-#: ../src/user-list.vala:679
+#: src/user-list.vala:681
 msgid "Server type not supported."
 msgstr "مۇلازىمېتىر تىپىنى ئىشلەتكىلى بولمايدۇ."
 
-#: ../src/user-list.vala:720
+#: src/user-list.vala:722
 msgid "Domain:"
 msgstr "دائىرە:"
 
-#: ../src/user-list.vala:781
+#: src/user-list.vala:783
 msgid "Email address:"
 msgstr "ئېلخەت مەنزىل:"
 
-#. 'Log In' here is the button for logging in.
-#: ../src/user-list.vala:825
+#: src/user-list.vala:827
 msgid "Log In"
 msgstr "كىر"
 
-#: ../src/user-list.vala:826
+#: src/user-list.vala:828
 #, c-format
 msgid "Login as %s"
 msgstr "%s سۈپىتىدە كىرىڭ"
 
-#: ../src/user-list.vala:830
+#: src/user-list.vala:832
 msgid "Retry"
 msgstr "قايتا سىنا"
 
-#: ../src/user-list.vala:831
+#: src/user-list.vala:833
 #, c-format
 msgid "Retry as %s"
 msgstr "قايتا سىنا (%s سۈپىتىدە)"
 
-#: ../src/user-list.vala:869
+#: src/user-list.vala:871
 msgid "Login"
 msgstr "كىر"
-
-#~ msgid "Logging in..."
-#~ msgstr "كىرىۋاتىدۇ…"
-
-#~ msgid "_Back"
-#~ msgstr "كەينىگە(_B)"
-
-#~ msgid "Favorite Color (blue):"
-#~ msgstr "ئامراق رەڭ (كۆك):"
