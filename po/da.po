@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2017-09-23 17:22+0000\n"
+"PO-Revision-Date: 2017-11-15 22:53+0000\n"
 "Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
 "Language-Team: Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-03 11:46+0000\n"
-"X-Generator: Launchpad (build 18493)\n"
+"X-Launchpad-Export-Date: 2017-11-23 10:46+0000\n"
+"X-Generator: Launchpad (build 18509)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
@@ -48,7 +48,7 @@ msgstr "Logger ind …"
 
 #: src/main-window.vala:49
 msgid "Login Screen"
-msgstr "Logind-skærm"
+msgstr "Loginskærm"
 
 #: src/main-window.vala:110
 msgid "Back"
@@ -80,11 +80,11 @@ msgstr "Afslut …"
 
 #: src/menubar.vala:417 src/shutdown-dialog.vala:155
 msgid "Suspend"
-msgstr "sætte i hviletilstand"
+msgstr "Hviletilstand"
 
 #: src/menubar.vala:435 src/shutdown-dialog.vala:172
 msgid "Hibernate"
-msgstr "sætte i dvaletilstand"
+msgstr "Dvaletilstand"
 
 #: src/menubar.vala:474
 msgid "Keyboard layout:"
@@ -104,19 +104,19 @@ msgstr "Farvel. Vil du  …"
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
-msgstr "slukke"
+msgstr "Sluk"
 
 #: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
-msgstr "Er du sikker på, du vil slukke computeren?"
+msgstr "Er du sikker på, at du vil slukke computeren?"
 
 #: src/shutdown-dialog.vala:137
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
-"Der er i øjeblikket andre brugere som er logget ind - slukkes maskinen, vil "
-"disse andre sessioner også blive lukket."
+"Der er i øjeblikket andre brugere som er logget ind på computeren - hvis den "
+"slukkes, vil de andre sessioner også blive lukket."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
@@ -148,7 +148,7 @@ msgstr "Gæstesession"
 
 #: src/user-list.vala:438
 msgid "Please enter a complete e-mail address"
-msgstr "Angiv venligst en fuldstændig e-mailadresse"
+msgstr "Indtast venligst en komplet e-mailadresse"
 
 #: src/user-list.vala:518
 msgid "Incorrect e-mail address or password"
@@ -159,15 +159,15 @@ msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"Hvis du har en konto på en RDP- eller Citrix-server, så lader fjernlogind "
-"dig køre programmer fra denne server."
+"Hvis du har en konto på en RDP- eller Citrix-server, så lader fjernlogin dig "
+"køre programmer fra denne server."
 
 #: src/user-list.vala:551
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"Hvis du har en konto på en RDP-server, vil fjernlogind lade dig køre "
+"Hvis du har en konto på en RDP-server, så lader fjernlogin dig køre "
 "programmer på denne server."
 
 #: src/user-list.vala:554
@@ -183,8 +183,8 @@ msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
 msgstr ""
-"Der kræves en konto til Ubuntu fjernlogind for at kunne anvende denne "
-"tjeneste. Vil du gerne opsætte en konto nu?"
+"Du skal have en konto til Ubuntu fjernlogin for at kunne bruge denne "
+"tjeneste. Vil du opsætte en konto nu?"
 
 #: src/user-list.vala:561
 msgid "OK"
@@ -195,12 +195,12 @@ msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
 msgstr ""
-"Der kræves en konto til Ubuntu fjernlogind for at kunne anvende denne "
+"Du skal have en konto til Ubuntu fjernlogin for at kunne bruge denne "
 "tjeneste. Besøg uccs.canonical.com for at opsætte en konto."
 
 #: src/user-list.vala:681
 msgid "Server type not supported."
-msgstr "Servertype understøttes ikke."
+msgstr "Servertypen understøttes ikke."
 
 #: src/user-list.vala:722
 msgid "Domain:"
@@ -226,7 +226,7 @@ msgstr "Prøv igen"
 #: src/user-list.vala:833
 #, c-format
 msgid "Retry as %s"
-msgstr "Forsøg igen som %s"
+msgstr "Prøv igen som %s"
 
 #: src/user-list.vala:871
 msgid "Login"

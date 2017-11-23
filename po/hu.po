@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2017-09-05 15:27+0000\n"
+"PO-Revision-Date: 2017-11-12 08:28+0000\n"
 "Last-Translator: KAMI <kami911@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-03 11:46+0000\n"
-"X-Generator: Launchpad (build 18493)\n"
+"X-Launchpad-Export-Date: 2017-11-23 10:46+0000\n"
+"X-Generator: Launchpad (build 18509)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
@@ -159,7 +159,7 @@ msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"A távoli bejelentkezéssel alkalmazásokat futtathat azon RDP vagy Citrix "
+"A távoli bejelentkezéssel alkalmazásokat futtathat azon az RDP vagy Citrix "
 "kiszolgálókon, amelyeken van fiókja."
 
 #: src/user-list.vala:551
