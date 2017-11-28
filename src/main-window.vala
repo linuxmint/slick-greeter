@@ -30,6 +30,8 @@ public class MainWindow : Gtk.Window
     private Gtk.Box hbox;
     private Gtk.Button back_button;
     private ShutdownDialog? shutdown_dialog = null;
+    private int window_size_x;
+    private int window_size_y;
 
     public ListStack stack;
 
@@ -126,6 +128,10 @@ public class MainWindow : Gtk.Window
 
         add_user_list ();
 
+        window_size_x = 0;
+        window_size_y = 0;
+        primary_monitor = null;
+
         if (SlickGreeter.singleton.test_mode)
         {
             /* Simulate an 800x600 monitor to the left of a 640x480 monitor */
@@ -199,7 +205,8 @@ public class MainWindow : Gtk.Window
     private void monitors_changed_cb (Gdk.Screen screen)
     {
         int primary = screen.get_primary_monitor ();
-        debug ("Screen is %dx%d pixels", screen.get_width (), screen.get_height ());
+        window_size_x = 0;
+        window_size_y = 0;
         monitors = new List<Monitor> ();
         primary_monitor = null;
 
@@ -208,6 +215,16 @@ public class MainWindow : Gtk.Window
             Gdk.Rectangle geometry;
             screen.get_monitor_geometry (i, out geometry);
             debug ("Monitor %d is %dx%d pixels at %d,%d", i, geometry.width, geometry.height, geometry.x, geometry.y);
+
+            if (window_size_x < geometry.x + geometry.width)
+            {
+                window_size_x = geometry.x + geometry.width;
+            }
+
+            if (window_size_y < geometry.y + geometry.height)
+            {
+                window_size_y = geometry.y + geometry.height;
+            }
 
             if (monitor_is_unique_position (screen, i))
             {
@@ -219,8 +236,10 @@ public class MainWindow : Gtk.Window
             }
         }
 
+        debug ("MainWindow is %dx%d pixels", window_size_x, window_size_y);
+
         background.set_monitors (monitors);
-        resize (screen.get_width (), screen.get_height ());
+        resize (window_size_x, window_size_y);
         move (0, 0);
         move_to_monitor (primary_monitor);
     }
