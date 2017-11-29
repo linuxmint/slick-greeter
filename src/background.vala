@@ -501,6 +501,7 @@ public class Background : Gtk.Fixed
 
         timer = new AnimateTimer (AnimateTimer.ease_in_out, 700);
 
+        load_background (null);
         set_logo (UGSettings.get_string (UGSettings.KEY_LOGO), UGSettings.get_string (UGSettings.KEY_OTHER_MONITORS_LOGO));
         timer.animate.connect (animate_cb);
     }
