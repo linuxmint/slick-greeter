@@ -377,7 +377,7 @@ public class MenuBar : Gtk.MenuBar
         image.show ();
         hbox.add (image);
         a11y_item.show ();
-        a11y_item.set_submenu (new Gtk.Menu () as Gtk.Widget);
+        a11y_item.set_submenu (new Gtk.Menu ());
         onscreen_keyboard_item = new Gtk.CheckMenuItem.with_label (_("Onscreen keyboard"));
         onscreen_keyboard_item.toggled.connect (keyboard_toggled_cb);
         onscreen_keyboard_item.show ();
@@ -409,7 +409,7 @@ public class MenuBar : Gtk.MenuBar
         image.show ();
         hbox.add (image);
         item.show ();
-        item.set_submenu (new Gtk.Menu () as Gtk.Widget);
+        item.set_submenu (new Gtk.Menu ());
         unowned Gtk.Menu submenu = item.submenu;
 
         if (LightDM.get_can_suspend ())
