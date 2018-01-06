@@ -31,6 +31,7 @@ Configuration file format for /etc/lightdm/slick-greeter.conf
     # LightDM GTK+ Configuration
     # Available configuration options listed below.
     #
+    # activate-numlock=Whether to activate numlock. This features requires the installation of numlockx. (true or false)
     # background=Background file to use, either an image path or a color (e.g. #772953)
     # background-color=Background color (e.g. #772953), set before wallpaper is seen
     # draw-user-backgrounds=Whether to draw user backgrounds (true or false)
