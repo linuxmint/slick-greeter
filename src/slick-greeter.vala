@@ -704,6 +704,17 @@ public class SlickGreeter
             atspi_pid = 0;
         }
 
+        var screen = Gdk.Screen.get_default ();
+        unowned X.Display xdisplay = (screen.get_display () as Gdk.X11.Display).get_xdisplay ();
+
+        var window = xdisplay.default_root_window();
+        var atom = xdisplay.intern_atom ("AT_SPI_BUS", true);
+
+        if (atom != X.None) {
+            xdisplay.delete_property (window, atom);
+            Gdk.flush();
+        }
+
         debug ("Exiting");
 
         return Posix.EXIT_SUCCESS;
