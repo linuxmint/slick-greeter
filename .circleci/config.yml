@@ -56,15 +56,9 @@ jobs:
         docker:
             - image: linuxmintd/mint19-amd64
 
-    "lmde3":
-        <<: *shared
-        docker:
-            - image: linuxmintd/lmde3-amd64
-
 workflows:
     version: 2
     build:
         jobs:
             - "mint18"
             - "mint19"
-            - "lmde3"
