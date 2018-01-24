@@ -127,5 +127,9 @@
       <default>false</default>
       <summary>Whether to activate numlock. This features requires the installation of numlockx.</summary>
     </key>
+    <key name="only-on-monitor" type="s">
+      <default>'auto'</default>
+      <summary>Monitor on which to show the GUI</summary>
+    </key>
   </schema>
 </schemalist>
