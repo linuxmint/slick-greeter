@@ -25,6 +25,8 @@ public class MainWindow : Gtk.Window
     private List<Monitor> monitors;
     private Monitor? primary_monitor;
     private Monitor active_monitor;
+    private string only_on_monitor;
+    private bool monitor_setting_ok;
     private Background background;
     private Gtk.Box login_box;
     private Gtk.Box hbox;
@@ -134,6 +136,9 @@ public class MainWindow : Gtk.Window
         primary_monitor = null;
         do_resize = false;
 
+        only_on_monitor = UGSettings.get_string(UGSettings.KEY_ONLY_ON_MONITOR);
+        monitor_setting_ok = only_on_monitor == "auto";
+
         if (SlickGreeter.singleton.test_mode)
         {
             /* Simulate an 800x600 monitor to the left of a 640x480 monitor */
@@ -242,9 +247,13 @@ public class MainWindow : Gtk.Window
             if (monitor_is_unique_position (display, i))
             {
                 var greeter_monitor = new Monitor (geometry.x, geometry.y, geometry.width, geometry.height);
+                var plug_name = monitor.get_model();
                 monitors.append (greeter_monitor);
 
-                if (primary_monitor == null || primary == monitor)
+                if (plug_name == only_on_monitor)
+                    monitor_setting_ok = true;
+
+                if (plug_name == only_on_monitor || primary_monitor == null || primary == monitor)
                     primary_monitor = greeter_monitor;
             }
         }
@@ -287,27 +296,30 @@ public class MainWindow : Gtk.Window
 
     public override bool motion_notify_event (Gdk.EventMotion event)
     {
-        var x = (int) (event.x + 0.5);
-        var y = (int) (event.y + 0.5);
-
-        /* Get motion event relative to this widget */
-        if (event.window != get_window ())
+        if (!monitor_setting_ok || only_on_monitor == "auto")
         {
-            int w_x, w_y;
-            get_window ().get_origin (out w_x, out w_y);
-            x -= w_x;
-            y -= w_y;
-            event.window.get_origin (out w_x, out w_y);
-            x += w_x;
-            y += w_y;
-        }
+            var x = (int) (event.x + 0.5);
+            var y = (int) (event.y + 0.5);
 
-        foreach (var m in monitors)
-        {
-            if (x >= m.x && x <= m.x + m.width && y >= m.y && y <= m.y + m.height)
+            /* Get motion event relative to this widget */
+            if (event.window != get_window ())
             {
-                move_to_monitor (m);
-                break;
+                int w_x, w_y;
+                get_window ().get_origin (out w_x, out w_y);
+                x -= w_x;
+                y -= w_y;
+                event.window.get_origin (out w_x, out w_y);
+                x += w_x;
+                y += w_y;
+            }
+
+            foreach (var m in monitors)
+            {
+                if (x >= m.x && x <= m.x + m.width && y >= m.y && y <= m.y + m.height)
+                {
+                    move_to_monitor (m);
+                    break;
+                }
             }
         }
 
