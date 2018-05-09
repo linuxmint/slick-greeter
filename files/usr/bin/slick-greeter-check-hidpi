@@ -28,7 +28,7 @@ def get_window_scale():
             or (width_mm == 16 and height_mm == 10)):
             return 1
 
-        if rect.height < 1500:
+        if rect.height * monitor_scale < 1500:
             return 1
 
         if width_mm > 0 and height_mm > 0:
