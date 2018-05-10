@@ -1,3 +1,35 @@
+slick-greeter (1.2.0) tara; urgency=medium
+
+  [ Vit Rozkovec ]
+  *  Add support for numlockx - updated README (#91)
+
+  [ Clement Lefebvre ]
+  * Add build notes for Debian in README
+
+  [ Michael Webster ]
+  * slick-greeter.vala: Clear the AT_SPI_BUS property on the root window on exit, so the user session components won't fail to connect.
+
+  [ Clement Lefebvre ]
+  * Add CI configuration
+  * CI: Don't build for LMDE3
+
+  [ Ikey Doherty ]
+  * greeter: Avoid expensive Python calls when it isn't needed (#93)
+
+  [ Leigh Scott ]
+  * Silence GTK 3.22 warnings relating to deprecation in Gdk.Screen. (#89)
+
+  [ Clement Lefebvre ]
+  * CI: Don't build for Mint 18
+
+  [ Cobinja ]
+  * Add option to show GUI on a specific monitor (#76)
+
+  [ Victor Kareh ]
+  * Fix HiDPI auto-detection (#102)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 10 May 2018 10:02:06 +0100
+
 slick-greeter (1.1.4) sylvia; urgency=medium
 
   [ Björn Esser ]
