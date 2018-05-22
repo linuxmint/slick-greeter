@@ -697,7 +697,25 @@ public class Background : Gtk.Fixed
     private BackgroundLoader load_background (string? filename)
     {
         if (filename == null)
+        {
             filename = fallback_color;
+        } else
+        {
+    	    try
+    	    {
+              var file = File.new_for_path(filename);
+              var fileInfo = file.query_info(FileAttribute.ACCESS_CAN_READ, FileQueryInfoFlags.NONE, null);
+              if (!fileInfo.get_attribute_boolean(FileAttribute.ACCESS_CAN_READ))
+              {
+                  debug ("Can't read background file %s, falling back to %s", filename, system_background);
+                  filename = system_background;
+              }
+    	    }
+          catch
+          {
+              filename = system_background;
+          }
+        }
 
         var b = loaders.lookup (filename);
         if (b == null)
