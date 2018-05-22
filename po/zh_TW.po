@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2017-07-14 15:09+0000\n"
-"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
+"PO-Revision-Date: 2018-02-26 16:09+0000\n"
+"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-23 10:46+0000\n"
-"X-Generator: Launchpad (build 18509)\n"
+"X-Launchpad-Export-Date: 2018-05-22 09:24+0000\n"
+"X-Generator: Launchpad (build 18658)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
@@ -56,11 +56,11 @@ msgstr "返回"
 
 #: src/menubar.vala:322
 msgid "Power:"
-msgstr ""
+msgstr "電源："
 
 #: src/menubar.vala:372
 msgid "Accessibility"
-msgstr ""
+msgstr "無障礙功能"
 
 #: src/menubar.vala:381
 msgid "Onscreen keyboard"
@@ -76,7 +76,7 @@ msgstr "螢幕閱讀器"
 
 #: src/menubar.vala:404 src/menubar.vala:451
 msgid "Quit..."
-msgstr ""
+msgstr "退出..."
 
 #: src/menubar.vala:417 src/shutdown-dialog.vala:155
 msgid "Suspend"
@@ -88,7 +88,7 @@ msgstr "休眠"
 
 #: src/menubar.vala:474
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "鍵盤配置："
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
@@ -100,7 +100,7 @@ msgstr "選取桌面環境"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr ""
+msgstr "再見。您是要…"
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
@@ -168,7 +168,7 @@ msgstr "取消"
 
 #: src/user-list.vala:555
 msgid "Set Up..."
-msgstr ""
+msgstr "設置..."
 
 #: src/user-list.vala:557
 msgid ""

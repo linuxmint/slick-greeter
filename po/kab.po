@@ -1,16 +1,16 @@
-# Tigrinya translation for slick-greeter
-# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
-# This file is distributed under the same license as the slick-greeter package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+# Kabyle translation for linuxmint
+# Copyright (c) 2018 Rosetta Contributors and Canonical Ltd 2018
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: slick-greeter\n"
+"Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2017-07-14 15:01+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Tigrinya <ti@li.org>\n"
+"PO-Revision-Date: 2018-02-14 17:08+0000\n"
+"Last-Translator: Slimane Amiri <Unknown>\n"
+"Language-Team: Kabyle <kab@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,27 +20,27 @@ msgstr ""
 #: src/greeter-list.vala:302
 #, c-format
 msgid "Enter password for %s"
-msgstr ""
+msgstr "Sekcem awal uffir i %s"
 
 #: src/greeter-list.vala:811 src/user-list.vala:703
 msgid "Password:"
-msgstr ""
+msgstr "Awal uffir:"
 
 #: src/greeter-list.vala:813 src/user-list.vala:697
 msgid "Username:"
-msgstr ""
+msgstr "Isem n useqdac:"
 
 #: src/greeter-list.vala:868
 msgid "Invalid password, please try again"
-msgstr ""
+msgstr "Yir awal uffir, ttxilek ɛṛeḍ tikelt nniḍen"
 
 #: src/greeter-list.vala:879
 msgid "Failed to authenticate"
-msgstr ""
+msgstr "Tucḍa deg usentem"
 
 #: src/greeter-list.vala:925
 msgid "Failed to start session"
-msgstr ""
+msgstr "Tuccḍa i beddu n tɣimit"
 
 #: src/greeter-list.vala:940
 msgid "Logging in..."
@@ -52,7 +52,7 @@ msgstr ""
 
 #: src/main-window.vala:110
 msgid "Back"
-msgstr ""
+msgstr "Ar deffir"
 
 #: src/menubar.vala:322
 msgid "Power:"

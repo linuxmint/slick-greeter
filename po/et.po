@@ -8,35 +8,35 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2017-07-14 14:57+0000\n"
-"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
+"PO-Revision-Date: 2018-02-25 08:14+0000\n"
+"Last-Translator: mahfiaz <mahfiaz@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-23 10:46+0000\n"
-"X-Generator: Launchpad (build 18509)\n"
+"X-Launchpad-Export-Date: 2018-05-22 09:24+0000\n"
+"X-Generator: Launchpad (build 18658)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
 msgid "Enter password for %s"
-msgstr ""
+msgstr "Sisesta %s parool"
 
 #: src/greeter-list.vala:811 src/user-list.vala:703
 msgid "Password:"
-msgstr ""
+msgstr "Parool:"
 
 #: src/greeter-list.vala:813 src/user-list.vala:697
 msgid "Username:"
-msgstr ""
+msgstr "Kasutajanimi:"
 
 #: src/greeter-list.vala:868
 msgid "Invalid password, please try again"
-msgstr ""
+msgstr "Vale salasõna, proovi uuesti!"
 
 #: src/greeter-list.vala:879
 msgid "Failed to authenticate"
-msgstr ""
+msgstr "Autentimine ebaõnnestus"
 
 #: src/greeter-list.vala:925
 msgid "Failed to start session"
@@ -44,11 +44,11 @@ msgstr "Sessiooni alustamine ebaõnnestus"
 
 #: src/greeter-list.vala:940
 msgid "Logging in..."
-msgstr ""
+msgstr "Sisselogimine..."
 
 #: src/main-window.vala:49
 msgid "Login Screen"
-msgstr ""
+msgstr "Sisselogimiskuva"
 
 #: src/main-window.vala:110
 msgid "Back"
@@ -56,27 +56,27 @@ msgstr "Tagasi"
 
 #: src/menubar.vala:322
 msgid "Power:"
-msgstr ""
+msgstr "Toide:"
 
 #: src/menubar.vala:372
 msgid "Accessibility"
-msgstr ""
+msgstr "Ligipääsetavus"
 
 #: src/menubar.vala:381
 msgid "Onscreen keyboard"
-msgstr ""
+msgstr "Ekraaniklaviatuur"
 
 #: src/menubar.vala:386
 msgid "High Contrast"
-msgstr ""
+msgstr "Suur kontrast"
 
 #: src/menubar.vala:392
 msgid "Screen Reader"
-msgstr ""
+msgstr "Ekraanilugeja"
 
 #: src/menubar.vala:404 src/menubar.vala:451
 msgid "Quit..."
-msgstr ""
+msgstr "Lõpeta..."
 
 #: src/menubar.vala:417 src/shutdown-dialog.vala:155
 msgid "Suspend"
@@ -88,11 +88,11 @@ msgstr "Talveuni"
 
 #: src/menubar.vala:474
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "Klaviatuuripaigutus:"
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
-msgstr ""
+msgstr "Sessiooni valikud"
 
 #: src/session-list.vala:34
 msgid "Select desktop environment"
@@ -100,7 +100,7 @@ msgstr "Vali töölauakeskkond"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr ""
+msgstr "Nägemiseni. Kas sa tahaksid..."
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
@@ -108,39 +108,41 @@ msgstr "Väljalülitamine"
 
 #: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
-msgstr ""
+msgstr "Kas tõesti soovid arvuti välja lülitada?"
 
 #: src/shutdown-dialog.vala:137
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
+"Teised kasutajad on praegu sisselogitud. Arvuti väljalülitamine sulgeb ka "
+"nende sessioonid."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
-msgstr "Taaskäivitamine"
+msgstr "Taaskäivita"
 
 #: src/slick-greeter.vala:616
 msgid "Show release version"
-msgstr ""
+msgstr "Näita väljalaske versiooni"
 
 #: src/slick-greeter.vala:619
 msgid "Run in test mode"
-msgstr ""
+msgstr "Käivitamine testrežiimis"
 
 #: src/slick-greeter.vala:635
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
-msgstr ""
+msgstr "Käivita '%s --help', et näha kõiki käsurea valikuid."
 
 #: src/toggle-box.vala:98
 #, c-format
 msgid "%s (Default)"
-msgstr "%s (Vaikimisi)"
+msgstr "%s (vaikimisi)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
-msgstr ""
+msgstr "Külalise sessioon"
 
 #: src/user-list.vala:438
 msgid "Please enter a complete e-mail address"
@@ -172,7 +174,7 @@ msgstr "Loobu"
 
 #: src/user-list.vala:555
 msgid "Set Up..."
-msgstr ""
+msgstr "Seadistus..."
 
 #: src/user-list.vala:557
 msgid ""
@@ -214,7 +216,7 @@ msgstr "Logi sisse"
 #: src/user-list.vala:828
 #, c-format
 msgid "Login as %s"
-msgstr ""
+msgstr "Logi sisse kasutajana %s"
 
 #: src/user-list.vala:832
 msgid "Retry"
@@ -227,4 +229,4 @@ msgstr "Proovi uuesti kui %s"
 
 #: src/user-list.vala:871
 msgid "Login"
-msgstr ""
+msgstr "Logi sisse"

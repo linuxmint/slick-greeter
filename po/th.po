@@ -8,31 +8,31 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2017-07-14 15:01+0000\n"
-"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
+"PO-Revision-Date: 2018-03-16 08:21+0000\n"
+"Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: Thai <th@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-23 10:46+0000\n"
-"X-Generator: Launchpad (build 18509)\n"
+"X-Launchpad-Export-Date: 2018-05-22 09:24+0000\n"
+"X-Generator: Launchpad (build 18658)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
 msgid "Enter password for %s"
-msgstr ""
+msgstr "ป้อนรหัสผ่านสำหรับ %s"
 
 #: src/greeter-list.vala:811 src/user-list.vala:703
 msgid "Password:"
-msgstr ""
+msgstr "รหัสผ่าน:"
 
 #: src/greeter-list.vala:813 src/user-list.vala:697
 msgid "Username:"
-msgstr ""
+msgstr "ชื่อผู้ใช้:"
 
 #: src/greeter-list.vala:868
 msgid "Invalid password, please try again"
-msgstr ""
+msgstr "รหัสผ่านไม่ถูกต้อง กรุณาลองใหม่อีกครั้ง"
 
 #: src/greeter-list.vala:879
 msgid "Failed to authenticate"
@@ -40,15 +40,15 @@ msgstr "ยืนยันตัวบุคคลไม่สำเร็จ"
 
 #: src/greeter-list.vala:925
 msgid "Failed to start session"
-msgstr ""
+msgstr "การเริ่มวาระล้มเหลว"
 
 #: src/greeter-list.vala:940
 msgid "Logging in..."
-msgstr ""
+msgstr "กำลังเข้าระบบ..."
 
 #: src/main-window.vala:49
 msgid "Login Screen"
-msgstr ""
+msgstr "หน้าจอเข้าระบบ"
 
 #: src/main-window.vala:110
 msgid "Back"
@@ -56,19 +56,19 @@ msgstr "ย้อนกลับ"
 
 #: src/menubar.vala:322
 msgid "Power:"
-msgstr ""
+msgstr "เปิด/ปิดเครื่อง:"
 
 #: src/menubar.vala:372
 msgid "Accessibility"
-msgstr ""
+msgstr "สิ่งอำนวยความสะดวก"
 
 #: src/menubar.vala:381
 msgid "Onscreen keyboard"
-msgstr ""
+msgstr "แป้นพิมพ์บนหน้าจอ"
 
 #: src/menubar.vala:386
 msgid "High Contrast"
-msgstr ""
+msgstr "สีตัดกัน"
 
 #: src/menubar.vala:392
 msgid "Screen Reader"
@@ -76,7 +76,7 @@ msgstr "การอ่านหน้าจอ"
 
 #: src/menubar.vala:404 src/menubar.vala:451
 msgid "Quit..."
-msgstr ""
+msgstr "ออก..."
 
 #: src/menubar.vala:417 src/shutdown-dialog.vala:155
 msgid "Suspend"
@@ -88,7 +88,7 @@ msgstr "จำศีลเครื่อง"
 
 #: src/menubar.vala:474
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "เค้าโครงแป้นพิมพ์:"
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
@@ -100,7 +100,7 @@ msgstr "เลือกสภาพแวดล้อมพื้นโต๊ะ
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr ""
+msgstr "ลาก่อน คุณต้องการ..."
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
@@ -127,7 +127,7 @@ msgstr "แสดงเลขรุ่น"
 
 #: src/slick-greeter.vala:619
 msgid "Run in test mode"
-msgstr ""
+msgstr "เรียกในโหมดทดสอบ"
 
 #: src/slick-greeter.vala:635
 #, c-format
@@ -141,7 +141,7 @@ msgstr "%s (ปริยาย)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
-msgstr ""
+msgstr "วาระผู้ใช้ชั่วคราว"
 
 #: src/user-list.vala:438
 msgid "Please enter a complete e-mail address"
@@ -169,39 +169,43 @@ msgstr ""
 
 #: src/user-list.vala:554
 msgid "Cancel"
-msgstr ""
+msgstr "ยกเลิก"
 
 #: src/user-list.vala:555
 msgid "Set Up..."
-msgstr ""
+msgstr "ตั้งค่า..."
 
 #: src/user-list.vala:557
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
 msgstr ""
+"คุณต้องใช้บัญชีผู้ใช้การเข้าระบบระยะไกลของ Ubuntu เพื่อใช้บริการนี้ "
+"คุณต้องการตั้งค่าบัญชีผู้ใช้ตอนนี้เลยไหม?"
 
 #: src/user-list.vala:561
 msgid "OK"
-msgstr ""
+msgstr "ตกลง"
 
 #: src/user-list.vala:562
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
 msgstr ""
+"คุณต้องใช้บัญชีผู้ใช้การเข้าระบบระยะไกล Ubuntu ในการใช้บริการนี้ เยี่ยมชม "
+"uccs.canonical.com เพื่อตั้งค่าบัญชีผู้ใช้"
 
 #: src/user-list.vala:681
 msgid "Server type not supported."
-msgstr ""
+msgstr "ไม่รองรับเซิร์ฟเวอร์ประเภทนี้"
 
 #: src/user-list.vala:722
 msgid "Domain:"
-msgstr ""
+msgstr "โดเมน:"
 
 #: src/user-list.vala:783
 msgid "Email address:"
-msgstr ""
+msgstr "ที่อยู่อีเมล:"
 
 #: src/user-list.vala:827
 msgid "Log In"
@@ -210,7 +214,7 @@ msgstr "เข้าระบบ"
 #: src/user-list.vala:828
 #, c-format
 msgid "Login as %s"
-msgstr ""
+msgstr "เข้าระบบในชื่อ %s"
 
 #: src/user-list.vala:832
 msgid "Retry"
@@ -219,8 +223,8 @@ msgstr "ลองอีกครั้ง"
 #: src/user-list.vala:833
 #, c-format
 msgid "Retry as %s"
-msgstr ""
+msgstr "ลองใหม่ในชื่อ %s"
 
 #: src/user-list.vala:871
 msgid "Login"
-msgstr ""
+msgstr "เข้าระบบ"

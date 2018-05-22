@@ -8,35 +8,35 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2017-07-14 15:04+0000\n"
-"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
+"PO-Revision-Date: 2018-05-01 07:07+0000\n"
+"Last-Translator: Dusan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-11-23 10:46+0000\n"
-"X-Generator: Launchpad (build 18509)\n"
+"X-Launchpad-Export-Date: 2018-05-22 09:24+0000\n"
+"X-Generator: Launchpad (build 18658)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
 msgid "Enter password for %s"
-msgstr ""
+msgstr "Zadajte heslo pre %s"
 
 #: src/greeter-list.vala:811 src/user-list.vala:703
 msgid "Password:"
-msgstr ""
+msgstr "Heslo:"
 
 #: src/greeter-list.vala:813 src/user-list.vala:697
 msgid "Username:"
-msgstr ""
+msgstr "Meno používateľa:"
 
 #: src/greeter-list.vala:868
 msgid "Invalid password, please try again"
-msgstr ""
+msgstr "Nesprávne heslo, skúste znovu prosím"
 
 #: src/greeter-list.vala:879
 msgid "Failed to authenticate"
-msgstr ""
+msgstr "Zlyhalo overenie totožnosti"
 
 #: src/greeter-list.vala:925
 msgid "Failed to start session"
@@ -44,11 +44,11 @@ msgstr "Zlyhalo spustenie relácie"
 
 #: src/greeter-list.vala:940
 msgid "Logging in..."
-msgstr ""
+msgstr "Prebieha prihlasovanie..."
 
 #: src/main-window.vala:49
 msgid "Login Screen"
-msgstr ""
+msgstr "Prihlasovacia Obrazovka"
 
 #: src/main-window.vala:110
 msgid "Back"
@@ -56,27 +56,27 @@ msgstr "Späť"
 
 #: src/menubar.vala:322
 msgid "Power:"
-msgstr ""
+msgstr "Stav batérie:"
 
 #: src/menubar.vala:372
 msgid "Accessibility"
-msgstr ""
+msgstr "Zjednodušenie ovládania"
 
 #: src/menubar.vala:381
 msgid "Onscreen keyboard"
-msgstr ""
+msgstr "Klávesnica na obrazovke"
 
 #: src/menubar.vala:386
 msgid "High Contrast"
-msgstr ""
+msgstr "Vysoký kontrast"
 
 #: src/menubar.vala:392
 msgid "Screen Reader"
-msgstr ""
+msgstr "Čítačka obrazovky"
 
 #: src/menubar.vala:404 src/menubar.vala:451
 msgid "Quit..."
-msgstr ""
+msgstr "Vypnúť..."
 
 #: src/menubar.vala:417 src/shutdown-dialog.vala:155
 msgid "Suspend"
@@ -88,11 +88,11 @@ msgstr "Hibernovať"
 
 #: src/menubar.vala:474
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "Rozloženie klávesnice:"
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
-msgstr ""
+msgstr "Voľby relácie"
 
 #: src/session-list.vala:34
 msgid "Select desktop environment"
@@ -100,7 +100,7 @@ msgstr "Vyberte pracovné prostredie"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr ""
+msgstr "Dovidenia. Chceli by ste..."
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
@@ -124,11 +124,11 @@ msgstr "Reštartovať"
 
 #: src/slick-greeter.vala:616
 msgid "Show release version"
-msgstr ""
+msgstr "Zobraziť verziu vydania"
 
 #: src/slick-greeter.vala:619
 msgid "Run in test mode"
-msgstr ""
+msgstr "Spustiť v skúšobnom režime"
 
 #: src/slick-greeter.vala:635
 #, c-format
@@ -142,7 +142,7 @@ msgstr "%s (Predvolené)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
-msgstr ""
+msgstr "Hosťovská relácia"
 
 #: src/user-list.vala:438
 msgid "Please enter a complete e-mail address"
@@ -174,7 +174,7 @@ msgstr "Zrušiť"
 
 #: src/user-list.vala:555
 msgid "Set Up..."
-msgstr ""
+msgstr "Nastavenie..."
 
 #: src/user-list.vala:557
 msgid ""
@@ -210,12 +210,12 @@ msgstr "Emailová adresa:"
 
 #: src/user-list.vala:827
 msgid "Log In"
-msgstr ""
+msgstr "Prihlásiť sa"
 
 #: src/user-list.vala:828
 #, c-format
 msgid "Login as %s"
-msgstr ""
+msgstr "Prihlásiť sa ako %s"
 
 #: src/user-list.vala:832
 msgid "Retry"
