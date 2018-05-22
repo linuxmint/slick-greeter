@@ -1,3 +1,13 @@
+slick-greeter (1.2.1) tara; urgency=medium
+
+  [ Cobinja ]
+  * Fix background if image file is not readable (#104)
+
+  [ Clement Lefebvre ]
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 22 May 2018 13:07:43 +0100
+
 slick-greeter (1.2.0) tara; urgency=medium
 
   [ Vit Rozkovec ]
