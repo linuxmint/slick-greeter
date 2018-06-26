@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2018-01-07 08:28+0000\n"
+"PO-Revision-Date: 2018-06-15 14:35+0000\n"
 "Last-Translator: Panwar <Unknown>\n"
 "Language-Team: Hindi <hi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-05-22 09:24+0000\n"
-"X-Generator: Launchpad (build 18658)\n"
+"X-Launchpad-Export-Date: 2018-06-26 10:17+0000\n"
+"X-Generator: Launchpad (build 18688)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
@@ -28,7 +28,7 @@ msgstr "कूटशब्द:"
 
 #: src/greeter-list.vala:813 src/user-list.vala:697
 msgid "Username:"
-msgstr "प्रयोक्ता नाम:"
+msgstr "उपयोक्ता का नाम :"
 
 #: src/greeter-list.vala:868
 msgid "Invalid password, please try again"
@@ -56,7 +56,7 @@ msgstr "वापस जाएँ"
 
 #: src/menubar.vala:322
 msgid "Power:"
-msgstr "पावर:"
+msgstr "पावर :"
 
 #: src/menubar.vala:372
 msgid "Accessibility"
@@ -80,7 +80,7 @@ msgstr "छोड़ें"
 
 #: src/menubar.vala:417 src/shutdown-dialog.vala:155
 msgid "Suspend"
-msgstr "विराम दें"
+msgstr "स्थगित करें"
 
 #: src/menubar.vala:435 src/shutdown-dialog.vala:172
 msgid "Hibernate"
@@ -158,7 +158,7 @@ msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"यदि आपका RDP या Citrix सर्वर पर अकाउंट है, तो सुदूर लॉगिन की मदद से आप उनसे "
+"यदि आपका RDP या Citrix सर्वर पर अकाउंट है, तो दूरस्थ लॉगिन की मदद से आप उनसे "
 "अनुप्रयोगों को चला सकते हैं।"
 
 #: src/user-list.vala:551
@@ -166,7 +166,7 @@ msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"यदि आपका RDP सर्वर पर अकाउंट है, तो सुदूर लॉगिन की मदद से आप उनसे "
+"यदि आपका RDP सर्वर पर अकाउंट है, तो दूरस्थ लॉगिन की मदद से आप उनसे "
 "अनुप्रयोगों को चला सकते हैं।"
 
 #: src/user-list.vala:554
@@ -182,7 +182,7 @@ msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
 msgstr ""
-"इस सेवा के उपयोग के लिए Ubuntu सुदूर लॉगिन अकाउंट की आवश्यकता है, क्या आप "
+"इस सेवा के उपयोग के लिए उबुंटू दूरस्थ लॉगिन अकाउंट की आवश्यकता है, क्या आप "
 "अभी अकाउंट बनाना चाहेंगे?"
 
 #: src/user-list.vala:561
@@ -194,7 +194,7 @@ msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
 msgstr ""
-"इस सेवा के उपयोग के लिए Ubuntu सुदूर लॉगिन अकाउंट की आवश्यकता है। "
+"इस सेवा के उपयोग के लिए उबुंटू दूरस्थ लॉगिन अकाउंट की आवश्यकता है। "
 "uccs.canonical.com पर जाकर अकाउंट बनाएँ।"
 
 #: src/user-list.vala:681
