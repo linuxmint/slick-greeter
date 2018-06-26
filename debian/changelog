@@ -1,3 +1,9 @@
+slick-greeter (1.2.2) tara; urgency=medium
+
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 26 Jun 2018 14:26:31 +0200
+
 slick-greeter (1.2.1) tara; urgency=medium
 
   [ Cobinja ]
