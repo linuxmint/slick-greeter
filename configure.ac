@@ -20,7 +20,7 @@ dnl ###########################################################################
 PKG_CHECK_MODULES(SLICK_GREETER, [
     gtk+-3.0
     gdk-x11-3.0
-    liblightdm-gobject-1 >= 1.12.0
+    liblightdm-gobject-1 >= 1.10.0
     freetype2
     cairo-ft
     libcanberra

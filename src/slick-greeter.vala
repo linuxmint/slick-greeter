@@ -63,7 +63,7 @@ public class SlickGreeter
         var connected = false;
         try
         {
-            connected = greeter.connect_to_daemon_sync ();
+            connected = greeter.connect_sync ();
         }
         catch (Error e)
         {
