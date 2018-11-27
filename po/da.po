@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2017-11-15 22:53+0000\n"
-"Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
+"PO-Revision-Date: 2018-10-03 19:44+0000\n"
+"Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-06-26 10:17+0000\n"
-"X-Generator: Launchpad (build 18688)\n"
+"X-Launchpad-Export-Date: 2018-11-27 17:53+0000\n"
+"X-Generator: Launchpad (build 18826)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
@@ -60,7 +60,7 @@ msgstr "Strøm:"
 
 #: src/menubar.vala:372
 msgid "Accessibility"
-msgstr "Hjælpefunktioner"
+msgstr "Tilgængelighed"
 
 #: src/menubar.vala:381
 msgid "Onscreen keyboard"
@@ -88,7 +88,7 @@ msgstr "Dvaletilstand"
 
 #: src/menubar.vala:474
 msgid "Keyboard layout:"
-msgstr "Tastaturopsætning"
+msgstr "Tastaturlayout:"
 
 #: src/prompt-box.vala:215
 msgid "Session Options"

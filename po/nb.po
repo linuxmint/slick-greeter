@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2017-07-14 15:10+0000\n"
-"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
+"PO-Revision-Date: 2018-08-27 12:34+0000\n"
+"Last-Translator: Thomas Olsen <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-06-26 10:17+0000\n"
-"X-Generator: Launchpad (build 18688)\n"
+"X-Launchpad-Export-Date: 2018-11-27 17:53+0000\n"
+"X-Generator: Launchpad (build 18826)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
@@ -76,7 +76,7 @@ msgstr "Skjermleser"
 
 #: src/menubar.vala:404 src/menubar.vala:451
 msgid "Quit..."
-msgstr ""
+msgstr "Avslutt..."
 
 #: src/menubar.vala:417 src/shutdown-dialog.vala:155
 msgid "Suspend"
@@ -100,7 +100,7 @@ msgstr "Velg skrivebordsmiljø"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr ""
+msgstr "Ha det. Vil du gjerne..."
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
@@ -175,7 +175,7 @@ msgstr "Avbryt"
 
 #: src/user-list.vala:555
 msgid "Set Up..."
-msgstr ""
+msgstr "Konfigurer..."
 
 #: src/user-list.vala:557
 msgid ""
