@@ -1,3 +1,13 @@
+slick-greeter (1.2.3) tessa; urgency=medium
+
+  [ Michael Webster ]
+  * background.vala: Fix build with vala 0.41.91 (no default value allowed when using custom getter.)
+
+  [ Clement Lefebvre ]
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 27 Nov 2018 19:31:12 +0000
+
 slick-greeter (1.2.2) tara; urgency=medium
 
   * l10n: Update translations
