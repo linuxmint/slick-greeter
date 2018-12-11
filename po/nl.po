@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2017-07-14 22:15+0000\n"
+"PO-Revision-Date: 2018-11-29 22:52+0000\n"
 "Last-Translator: Pjotr12345 <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-11-27 17:53+0000\n"
-"X-Generator: Launchpad (build 18826)\n"
+"X-Launchpad-Export-Date: 2018-12-11 12:02+0000\n"
+"X-Generator: Launchpad (build 18837)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
@@ -32,7 +32,7 @@ msgstr "Gebruikersnaam:"
 
 #: src/greeter-list.vala:868
 msgid "Invalid password, please try again"
-msgstr "Ongeldig wachtwoord, probeer opnieuw"
+msgstr "Ongeldig wachtwoord, probeer a.u.b. opnieuw"
 
 #: src/greeter-list.vala:879
 msgid "Failed to authenticate"
@@ -96,7 +96,7 @@ msgstr "Sessie-eigenschappen"
 
 #: src/session-list.vala:34
 msgid "Select desktop environment"
-msgstr "Bureaubladomgeving selecteren"
+msgstr "Werkomgeving kiezen"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
@@ -128,12 +128,13 @@ msgstr "Uitgaveversie tonen"
 
 #: src/slick-greeter.vala:619
 msgid "Run in test mode"
-msgstr "In testmodus uitvoeren"
+msgstr "In proefmodus uitvoeren"
 
 #: src/slick-greeter.vala:635
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
-msgstr "Voer ‘%s --help’ uit voor een lijst van alle opdrachtregelopties."
+msgstr ""
+"Voer ‘%s --help’ uit voor volledige een lijst met alle opdrachtregelopties."
 
 #: src/toggle-box.vala:98
 #, c-format
@@ -170,7 +171,7 @@ msgstr ""
 
 #: src/user-list.vala:554
 msgid "Cancel"
-msgstr "Annuleren"
+msgstr "Afbreken"
 
 #: src/user-list.vala:555
 msgid "Set Up..."
@@ -186,7 +187,7 @@ msgstr ""
 
 #: src/user-list.vala:561
 msgid "OK"
-msgstr "Ok"
+msgstr "OK"
 
 #: src/user-list.vala:562
 msgid ""

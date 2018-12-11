@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2017-07-14 14:57+0000\n"
-"Last-Translator: Michael Moroni <michaelmoroni@disroot.org>\n"
+"PO-Revision-Date: 2018-12-03 16:18+0000\n"
+"Last-Translator: Piet Coppens <Unknown>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-11-27 17:53+0000\n"
-"X-Generator: Launchpad (build 18826)\n"
+"X-Launchpad-Export-Date: 2018-12-11 12:02+0000\n"
+"X-Generator: Launchpad (build 18837)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
@@ -40,7 +40,7 @@ msgstr "Aŭtentigado fiaskis"
 
 #: src/greeter-list.vala:925
 msgid "Failed to start session"
-msgstr ""
+msgstr "Malsukcesis startigi seancon"
 
 #: src/greeter-list.vala:940
 msgid "Logging in..."
@@ -56,11 +56,11 @@ msgstr "Reen"
 
 #: src/menubar.vala:322
 msgid "Power:"
-msgstr ""
+msgstr "Kurento:"
 
 #: src/menubar.vala:372
 msgid "Accessibility"
-msgstr ""
+msgstr "Alirebleco"
 
 #: src/menubar.vala:381
 msgid "Onscreen keyboard"
@@ -76,19 +76,19 @@ msgstr "Ekranlegilo"
 
 #: src/menubar.vala:404 src/menubar.vala:451
 msgid "Quit..."
-msgstr ""
+msgstr "Eliri"
 
 #: src/menubar.vala:417 src/shutdown-dialog.vala:155
 msgid "Suspend"
-msgstr ""
+msgstr "Paŭzigi"
 
 #: src/menubar.vala:435 src/shutdown-dialog.vala:172
 msgid "Hibernate"
-msgstr ""
+msgstr "Pasivumigi"
 
 #: src/menubar.vala:474
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "Klavararanĝo:"
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
@@ -100,7 +100,7 @@ msgstr "Elektu labortablan ĉirkaŭaĵon"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr ""
+msgstr "Adiaŭ. Ĉu vi deziras..."
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
@@ -115,10 +115,12 @@ msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
+"Aliaj uzantoj estas ensalutintaj. Nun elŝalti la komputilon fermos ankaŭ la "
+"aliajn seancojn."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
-msgstr ""
+msgstr "Restartigi"
 
 #: src/slick-greeter.vala:616
 msgid "Show release version"
@@ -157,12 +159,16 @@ msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
+"Se vi havas konton ĉe RDP- aŭ Citrix-servilo, fora ensaluto permesos al vi "
+"malfermi aplikaĵojn de sur tiu servilo."
 
 #: src/user-list.vala:551
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
+"Se vi havas konton ĉe RDP-servilo, fora ensaluto permesos al vi malfermi "
+"aplikaĵojn de sur tiu servilo."
 
 #: src/user-list.vala:554
 msgid "Cancel"
@@ -170,7 +176,7 @@ msgstr "Nuligi"
 
 #: src/user-list.vala:555
 msgid "Set Up..."
-msgstr ""
+msgstr "Agordi..."
 
 #: src/user-list.vala:557
 msgid ""
