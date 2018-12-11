@@ -1,3 +1,9 @@
+slick-greeter (1.2.4) tessa; urgency=medium
+
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 11 Dec 2018 14:43:26 +0000
+
 slick-greeter (1.2.3) tessa; urgency=medium
 
   [ Michael Webster ]
