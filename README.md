@@ -24,10 +24,6 @@ A configuration tool is available at https://github.com/linuxmint/lightdm-settin
 
 - Slick Greeter started as a fork of Unity Greeter 16.04.2, a greeter developed for Ubuntu by Canonical, which used indicators and unity-settings-daemon.
 
-# Notes
-
-- Debian's lightdm packaging differs from Ubuntu's. To compile under Debian, build-deps have to be changed: liblightdm-gobject-1-dev needs to be removed, and liblightdm-gobject-dev and lightdm-vala have to be added.
-
 ----
 
 Configuration file format for /etc/lightdm/slick-greeter.conf
