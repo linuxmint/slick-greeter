@@ -204,8 +204,15 @@ class BackgroundLoader : Object
         if (logo != null)
         {
             bc.save ();
-            var y = (int) (image.height / grid_size - 2) * grid_size + grid_y_offset;
-            bc.translate (grid_x_offset, y);
+            var xpos = UGSettings.get_integer(UGSettings.KEY_LOGO_XPOS);
+            var ypos = UGSettings.get_integer(UGSettings.KEY_LOGO_YPOS);
+            if ( xpos == -1 || ypos == -1) {
+                // traditional behaviour if not set
+                var y = (int) (image.height / grid_size - 2) * grid_size + grid_y_offset;
+                bc.translate (grid_x_offset, y);
+            } else {
+                bc.translate (xpos, ypos);
+            }
             bc.set_source_surface (logo, 0, 0);
             bc.paint_with_alpha (1.0);
             bc.restore ();

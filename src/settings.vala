@@ -48,6 +48,11 @@ public class UGSettings
     public const string KEY_ENABLE_HIDPI = "enable-hidpi";
     public const string KEY_ACTIVATE_NUMLOCK = "activate-numlock";
     public const string KEY_ONLY_ON_MONITOR = "only-on-monitor";
+    public const string KEY_MAIN_ALIGN = "main-align";
+    public const string KEY_MAIN_XPOS = "main-xpos";
+    public const string KEY_MAIN_YPOS = "main-ypos";
+    public const string KEY_LOGO_XPOS = "logo-xpos";
+    public const string KEY_LOGO_YPOS = "logo-ypos";
 
     public static bool get_boolean (string key)
     {
@@ -144,6 +149,11 @@ public class UGSettings
 
             var int_keys = new List<string> ();
             int_keys.append (KEY_XFT_DPI);
+            int_keys.append (KEY_MAIN_ALIGN);
+            int_keys.append (KEY_MAIN_XPOS);
+            int_keys.append (KEY_MAIN_YPOS);
+            int_keys.append (KEY_LOGO_XPOS);
+            int_keys.append (KEY_LOGO_YPOS);
 
             var strv_keys = new List<string> ();
             strv_keys.append (KEY_HIDDEN_USERS);

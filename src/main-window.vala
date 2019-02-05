@@ -121,7 +121,9 @@ public class MainWindow : Gtk.Window
         back_button.clicked.connect (pop_list);
         align.add (back_button);
 
-        align = new Gtk.Alignment (0.0f, 0.5f, 0.0f, 1.0f);
+        // default value = 0 -> left
+        var main_align = 0.01f*UGSettings.get_integer(UGSettings.KEY_MAIN_ALIGN);
+        align = new Gtk.Alignment (main_align, 0.5f, 0.0f, 1.0f);
         align.show ();
         hbox.add (align);
 
@@ -155,6 +157,10 @@ public class MainWindow : Gtk.Window
             screen.monitors_changed.connect (monitors_changed_cb);
             monitors_changed_cb (screen);
         }
+
+        // set offset of main window with main-xpos / main-ypos
+        align.top_padding = UGSettings.get_integer(UGSettings.KEY_MAIN_XPOS);
+        align.left_padding = UGSettings.get_integer(UGSettings.KEY_MAIN_YPOS);
 
         /* Force a call on login_box.show()...
             This fixes the following issue:

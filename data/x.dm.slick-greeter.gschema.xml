@@ -131,5 +131,26 @@
       <default>'auto'</default>
       <summary>Monitor on which to show the GUI</summary>
     </key>
+    <key name="main-align" type="i">
+      <default>0</default>
+      <summary>Main window align; 0=left, 100=right</summary>
+    </key>
+    <key name="main-xpos" type="i">
+      <default>0</default>
+      <summary>Main window xpos</summary>
+    </key>
+    <key name="main-ypos" type="i">
+      <default>0</default>
+      <summary>Main window ypos</summary>
+    </key>
+
+    <key name="logo-xpos" type="i">
+      <default>-1</default>
+      <summary>Logo xpos</summary>
+    </key>
+    <key name="logo-ypos" type="i">
+      <default>-1</default>
+      <summary>Logo ypos</summary>
+    </key>
   </schema>
 </schemalist>

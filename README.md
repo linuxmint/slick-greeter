@@ -20,6 +20,14 @@ A configuration tool is available at https://github.com/linuxmint/lightdm-settin
 - Sessions are validated. If a default/chosen session isn't present on the system, the greeter scans for known sessions in /usr/share/xsessions and replaces the invalid session choice with a valid session.
 - You can take a screenshot by pressing PrintScrn. The screenshot is saved in /var/lib/lightdm/Screenshot.png.
 
+# Development
+
+- Requires `automake`, `autogen`, `gnome-common` and `vala` to setup a build
+- Build with `make`, binary lands in `src/slick-greeter`
+- Test with `src/slick-greeter --test-mode`, global slick-greeter.conf and x.dm.slick-greeter.gschema.xml are used
+- Deploy to system with `sudo mv src/slick-greeter /bin/slick-greeter`
+- If you change the global schema, recompile with `sudo glib-compile-schemas /usr/share/glib-2.0/schemas/`
+
 # Credit
 
 - Slick Greeter started as a fork of Unity Greeter 16.04.2, a greeter developed for Ubuntu by Canonical, which used indicators and unity-settings-daemon.
@@ -59,4 +67,9 @@ Configuration file format for /etc/lightdm/slick-greeter.conf
     # group-filter=List of groups that users must be part of to be shown (empty list shows all users)
     # enable-hidpi=Whether to enable HiDPI support (on/off/auto)
     # only-on-monitor=Sets the monitor on which to show the login window, -1 means "follow the mouse"
+    # main-align, alignment of loginbox; 0 = left = default; 50 = center; 100 = right
+    # main-xpos, x-offset (in px) of login-window, 0 = default
+    # main-ypos, y-offset (in px) of login-window, 0 = default
+    # logo-xpos, x-offset (in px) of logo, auto if logo-xpos + logo-ypos not set
+    # logo-ypos, y-offset (in px) of logo, auto if logo-xpos + logo-ypos not set
     [Greeter]
