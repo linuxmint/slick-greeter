@@ -544,8 +544,30 @@ public class SlickGreeter
 
     public static int main (string[] args)
     {
-        /* Protect memory from being paged to disk, as we deal with passwords */
-        Posix.mlockall (Posix.MCL_CURRENT | Posix.MCL_FUTURE);
+        /* Protect memory from being paged to disk, as we deal with passwords 
+
+           According to systemd-dev,
+
+           "mlockall() is generally a bad idea and certainly has no place in a graphical program. 
+           A program like this uses lots of memory and it is crucial that this memory can be paged 
+           out to relieve memory pressure."
+
+           With systemd version 239 the ulimit for RLIMIT_MEMLOCK was set to 16 MiB 
+           and therefore the mlockall call would fail. This is lucky becasue the subsequent mmap would not fail.
+
+           With systemd version 240 the RLIMIT_MEMLOCK is now set to 64 MiB 
+           and now the mlockall no longer fails. However, it not possible to mmap in all 
+           the memory and because that would still exceed the MEMLOCK limit.
+           "
+           See https://bugzilla.redhat.com/show_bug.cgi?id=1662857 &
+           https://github.com/CanonicalLtd/lightdm/issues/55    
+
+           RLIMIT_MEMLOCK = 64 MiB means, slick-greeter will most likely fail with 64 bit and
+           will always fail on 32 bit systems. 
+
+           Hence we better disable it. */
+
+        /*Posix.mlockall (Posix.MCL_CURRENT | Posix.MCL_FUTURE);*/
 
         /* Disable global menubar */
         Environment.unset_variable ("UBUNTU_MENUPROXY");
