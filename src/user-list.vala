@@ -854,6 +854,10 @@ public class UserList : GreeterList
         }
         e.background = background;
         e.is_active = is_active;
+        if ( session == null)
+        {
+            session = default_session;
+        }
         e.session = SlickGreeter.validate_session (session);
         e.label = label;
         e.set_show_message_icon (has_messages);
