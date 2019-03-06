@@ -72,7 +72,7 @@ public class ListStack : Gtk.Fixed
 
         return_if_fail (children != null);
 
-        unowned List<Gtk.Widget> prev = children.last ().prev;
+        unowned List<weak Gtk.Widget> prev = children.last ().prev;
         if (prev != null)
             (prev.data as GreeterList).greeter_box.pop ();
     }
