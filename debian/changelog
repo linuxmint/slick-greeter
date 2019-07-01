@@ -1,3 +1,19 @@
+slick-greeter (1.2.5) tina; urgency=medium
+
+  [ Clement Lefebvre ]
+  * Packaging: Fix Debian build (#122)
+
+  [ Leigh Scott ]
+  * remove mlockall (#127)
+
+  [ David Mohammed ]
+  * Fix FTBFS with vala 0.43 (#131)
+
+  [ mwileczka ]
+  * Fixed default session for manual user entry. (#129)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 01 Jul 2019 10:11:40 +0200
+
 slick-greeter (1.2.4) tessa; urgency=medium
 
   * l10n: Update translations
