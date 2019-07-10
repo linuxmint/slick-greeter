@@ -9,8 +9,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-12-11 12:02+0000\n"
-"X-Generator: Launchpad (build 18837)\n"
+"X-Launchpad-Export-Date: 2019-07-10 08:31+0000\n"
+"X-Generator: Launchpad (build 19007)\n"
 "Language: ar_EG\n"
 
 #: src/greeter-list.vala:302

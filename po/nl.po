@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2018-11-29 22:52+0000\n"
+"PO-Revision-Date: 2019-03-24 19:20+0000\n"
 "Last-Translator: Pjotr12345 <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-12-11 12:02+0000\n"
-"X-Generator: Launchpad (build 18837)\n"
+"X-Launchpad-Export-Date: 2019-07-10 08:31+0000\n"
+"X-Generator: Launchpad (build 19007)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
@@ -187,7 +187,7 @@ msgstr ""
 
 #: src/user-list.vala:561
 msgid "OK"
-msgstr "OK"
+msgstr "Oké"
 
 #: src/user-list.vala:562
 msgid ""
