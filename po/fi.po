@@ -8,14 +8,15 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2018-01-11 11:09+0000\n"
+"PO-Revision-Date: 2019-07-14 17:01+0000\n"
 "Last-Translator: Ari Ervasti <ari.ervasti87@gmail.com>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2019-07-10 08:31+0000\n"
-"X-Generator: Launchpad (build 19007)\n"
+"X-Launchpad-Export-Date: 2019-07-28 09:36+0000\n"
+"X-Generator: Launchpad (build 19010)\n"
+"Language: fi\n"
 
 #: src/greeter-list.vala:302
 #, c-format
@@ -133,7 +134,9 @@ msgstr "Suorita testitilassa"
 #: src/slick-greeter.vala:635
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
-msgstr "Näet kaikki komentorivivalitsimet komennolla ”%s --help”"
+msgstr ""
+"Suorita '%s --help' nähdäksesi täyden listan saatavilla olevista "
+"komentorivivalitsimista."
 
 #: src/toggle-box.vala:98
 #, c-format
