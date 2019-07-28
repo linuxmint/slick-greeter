@@ -1,3 +1,13 @@
+slick-greeter (1.2.7) tina; urgency=medium
+
+  [ David Mohammed ]
+  * Resolve lintian issues due to exe install locations (#136)
+
+  [ Clement Lefebvre ]
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun, 28 Jul 2019 15:13:18 +0200
+
 slick-greeter (1.2.6) tina; urgency=medium
 
   * l10n: Update translations
