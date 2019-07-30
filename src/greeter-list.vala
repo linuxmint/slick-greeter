@@ -164,7 +164,7 @@ public abstract class GreeterList : FadableBox
         }
     }
 
-    public GreeterList (Background bg, MenuBar mb)
+    protected GreeterList (Background bg, MenuBar mb)
     {
         Object (background: bg, menubar: mb);
     }
