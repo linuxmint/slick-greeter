@@ -1,3 +1,13 @@
+slick-greeter (1.2.8) tricia; urgency=medium
+
+  [ Leigh Scott ]
+  * Fix vala-0.45 compile error (#138)
+
+  [ Louis des Landes ]
+  * Add sway badge. (#139)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 22 Nov 2019 12:52:26 +0000
+
 slick-greeter (1.2.7) tina; urgency=medium
 
   [ David Mohammed ]
