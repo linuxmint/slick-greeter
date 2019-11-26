@@ -1,3 +1,9 @@
+slick-greeter (1.2.9) tricia; urgency=medium
+
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 26 Nov 2019 17:19:31 +0000
+
 slick-greeter (1.2.8) tricia; urgency=medium
 
   [ Leigh Scott ]
