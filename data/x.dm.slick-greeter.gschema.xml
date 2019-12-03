@@ -14,7 +14,7 @@
       <summary>Whether to draw user backgrounds</summary>
     </key>
     <key name="draw-grid" type="b">
-      <default>true</default>
+      <default>false</default>
       <summary>Whether to draw an overlay grid</summary>
     </key>
     <key name="show-hostname" type="b">
