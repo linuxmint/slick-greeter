@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2018-08-27 12:34+0000\n"
-"Last-Translator: Thomas Olsen <Unknown>\n"
+"PO-Revision-Date: 2019-12-08 09:46+0000\n"
+"Last-Translator: Erlend Østlie <erlendandreas12368@gmail.com>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2019-11-26 16:02+0000\n"
+"X-Launchpad-Export-Date: 2019-12-11 11:58+0000\n"
 "X-Generator: Launchpad (build c597c3229eb023b1e626162d5947141bf7befb13)\n"
 
 #: src/greeter-list.vala:302
@@ -60,7 +60,7 @@ msgstr ""
 
 #: src/menubar.vala:372
 msgid "Accessibility"
-msgstr ""
+msgstr "Tilgjengelighet"
 
 #: src/menubar.vala:381
 msgid "Onscreen keyboard"
