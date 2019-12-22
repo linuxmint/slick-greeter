@@ -27,7 +27,9 @@
         // public abstract async void hibernate() throws IOError;
         // public abstract bool suspend_allowed() throws IOError;
         // public abstract bool hibernate_allowed() throws IOError;
-        public abstract ObjectPath[] enumerate_devices() throws IOError;
+
+       // public abstract ObjectPath[] enumerate_devices() throws IOError;
+        public abstract ObjectPath[] enumerate_devices() throws GLib.DBusError, GLib.IOError;
 
         public abstract string daemon_version { owned get; }
         // public abstract bool can_suspend { owned get; }
