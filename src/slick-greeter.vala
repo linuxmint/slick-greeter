@@ -321,12 +321,6 @@ public class SlickGreeter
 		warning ("Unable to authenticate greeter for %s, %s", userid, e.message);
 	}
     }
-/*
-    public void authenticate (string? userid = null)
-    {
-        greeter.authenticate (userid);
-    }
-*/
 
     public void authenticate_as_guest ()
     {
