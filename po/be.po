@@ -8,27 +8,27 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2017-07-14 15:05+0000\n"
-"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
+"PO-Revision-Date: 2020-01-02 17:10+0000\n"
+"Last-Translator: Alexis Borovik <Unknown>\n"
 "Language-Team: Belarusian <be@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2019-12-11 11:58+0000\n"
-"X-Generator: Launchpad (build c597c3229eb023b1e626162d5947141bf7befb13)\n"
+"X-Launchpad-Export-Date: 2020-01-06 10:07+0000\n"
+"X-Generator: Launchpad (build bceb5ef013b87ef7aafe0755545ceb689ca7ac60)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
 msgid "Enter password for %s"
-msgstr ""
+msgstr "Увядзіце пароль карыстальніка %s"
 
 #: src/greeter-list.vala:811 src/user-list.vala:703
 msgid "Password:"
-msgstr ""
+msgstr "Пароль:"
 
 #: src/greeter-list.vala:813 src/user-list.vala:697
 msgid "Username:"
-msgstr ""
+msgstr "Карыстальнік:"
 
 #: src/greeter-list.vala:868
 msgid "Invalid password, please try again"
@@ -36,7 +36,7 @@ msgstr "Няслушны пароль. Паспрабуйце зноў!"
 
 #: src/greeter-list.vala:879
 msgid "Failed to authenticate"
-msgstr ""
+msgstr "Памылка аўтэнтыфікацыі"
 
 #: src/greeter-list.vala:925
 msgid "Failed to start session"
@@ -64,11 +64,11 @@ msgstr ""
 
 #: src/menubar.vala:381
 msgid "Onscreen keyboard"
-msgstr ""
+msgstr "Экранная клавіятура"
 
 #: src/menubar.vala:386
 msgid "High Contrast"
-msgstr ""
+msgstr "Высокая кантраснасць"
 
 #: src/menubar.vala:392
 msgid "Screen Reader"
@@ -88,7 +88,7 @@ msgstr "Гібернацыя"
 
 #: src/menubar.vala:474
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "Раскладка клавіятуры:"
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
@@ -128,7 +128,7 @@ msgstr "Паказаць версію выпуску"
 
 #: src/slick-greeter.vala:619
 msgid "Run in test mode"
-msgstr ""
+msgstr "Запусціць у тэставым рэжыме"
 
 #: src/slick-greeter.vala:635
 #, c-format
