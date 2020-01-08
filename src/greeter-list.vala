@@ -39,7 +39,7 @@ public class ListDBusInterface : Object
         });
     }
 
-    public string get_active_entry ()
+    public string get_active_entry () throws GLib.DBusError, GLib.IOError
     {
         string entry = "";
 
@@ -49,7 +49,7 @@ public class ListDBusInterface : Object
         return entry;
     }
 
-    public void set_active_entry (string entry_name)
+    public void set_active_entry (string entry_name) throws GLib.DBusError, GLib.IOError
     {
         list.set_active_entry (entry_name);
     }

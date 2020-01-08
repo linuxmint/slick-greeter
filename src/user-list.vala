@@ -199,7 +199,7 @@ public class UserList : GreeterList
             yield remote_login_service.get_servers (out server_list);
             set_remote_directory_servers (server_list);
         }
-        catch (IOError e)
+        catch (Error e)
         {
             debug ("Calling GetServers on com.canonical.RemoteLogin dbus service failed. Error: %s", e.message);
             remove_remote_servers ();
@@ -487,7 +487,7 @@ public class UserList : GreeterList
                 currently_browsing_server_url = url;
                 currently_browsing_server_email = email;
             }
-            catch (IOError e)
+            catch (Error e)
             {
                 debug ("Calling get_servers in com.canonical.RemoteLogin dbus service failed. Error: %s", e.message);
             }
@@ -774,7 +774,7 @@ public class UserList : GreeterList
                             else
                                 yield remote_login_service.get_cached_domains_for_server (url, out email_domains);
                         }
-                        catch (IOError e)
+                        catch (Error e)
                         {
                             email_domains.resize (0);
                             debug ("Calling get_cached_domains_for_server in com.canonical.RemoteLogin dbus service failed. Error: %s", e.message);
