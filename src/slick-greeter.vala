@@ -645,28 +645,6 @@ public class SlickGreeter
             activate_numlock ();
         }
 
-        Pid atspi_pid = 0;
-
-        try
-        {
-            string[] argv;
-            if (FileUtils.test ("/usr/lib/at-spi2-core/at-spi-bus-launcher", FileTest.EXISTS)) {
-                // Mint, Ubuntu
-                Shell.parse_argv ("/usr/lib/at-spi2-core/at-spi-bus-launcher --launch-immediately", out argv);
-                Process.spawn_async (null, argv, null, SpawnFlags.SEARCH_PATH, null, out atspi_pid);
-            }
-            else if (FileUtils.test ("/usr/libexec/at-spi-bus-launcher", FileTest.EXISTS)) {
-                // Fedora
-                Shell.parse_argv ("/usr/libexec/at-spi-bus-launcher --launch-immediately", out argv);
-                Process.spawn_async (null, argv, null, SpawnFlags.SEARCH_PATH, null, out atspi_pid);
-            }
-            debug ("Launched at-spi-bus-launcher. PID: %d", atspi_pid);
-        }
-        catch (Error e)
-        {
-            warning ("Error starting the at-spi registry: %s", e.message);
-        }
-
         Gtk.init (ref args);
 
         debug ("Starting slick-greeter %s UID=%d LANG=%s", Config.VERSION, (int) Posix.getuid (), Environment.get_variable ("LANG"));
@@ -753,18 +731,6 @@ public class SlickGreeter
         Gtk.main ();
 
         debug ("Cleaning up");
-
-        if (atspi_pid != 0)
-        {
-            Posix.kill (atspi_pid, Posix.SIGKILL);
-            int status;
-            Posix.waitpid (atspi_pid, out status, 0);
-            if (Process.if_exited (status))
-                debug ("AT-SPI exited with return value %d", Process.exit_status (status));
-            else
-                debug ("AT-SPI terminated with signal %d", Process.term_sig (status));
-            atspi_pid = 0;
-        }
 
         var screen = Gdk.Screen.get_default ();
         unowned X.Display xdisplay = (screen.get_display () as Gdk.X11.Display).get_xdisplay ();
