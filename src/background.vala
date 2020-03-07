@@ -517,11 +517,11 @@ public class Background : Gtk.Fixed
         resize_mode = Gtk.ResizeMode.QUEUE;
         loaders = new HashTable<string?, BackgroundLoader> (str_hash, str_equal);
         if (UGSettings.get_boolean (UGSettings.KEY_DRAW_GRID))
-            flags |= GRID;
+            flags |= DrawFlags.GRID;
 
         var mode = UGSettings.get_string (UGSettings.KEY_BACKGROUND_MODE);
         if (mode == "spanned")
-            flags |= SPAN;
+            flags |= DrawFlags.SPAN;
 
         show ();
     }
