@@ -29,7 +29,6 @@ class BackgroundLoader : Object
     public Gdk.RGBA average_color;
 
     private Cairo.Surface target_surface;
-    private bool draw_grid;
     private Thread<void*> thread;
     private Gdk.Pixbuf[] images;
     private bool finished;
@@ -37,7 +36,7 @@ class BackgroundLoader : Object
 
     public signal void loaded ();
 
-    public BackgroundLoader (Cairo.Surface target_surface, string filename, int[] widths, int[] heights, bool draw_grid)
+    public BackgroundLoader (Cairo.Surface target_surface, string filename, int[] widths, int[] heights)
     {
         this.target_surface = target_surface;
         this.filename = filename;
@@ -45,7 +44,6 @@ class BackgroundLoader : Object
         this.heights = heights;
         patterns = new Cairo.Pattern[widths.length];
         images = new Gdk.Pixbuf[widths.length];
-        this.draw_grid = draw_grid;
     }
 
     public bool load ()
@@ -388,11 +386,13 @@ public class Monitor
 
 public class Background : Gtk.Fixed
 {
+    [Flags]
     public enum DrawFlags
     {
         NONE,
         GRID,
     }
+    private DrawFlags flags = NONE;
 
     /* Fallback color - shown upon first startup, until an async background loader finishes,
      * or until a user background or default background is loaded.
@@ -486,7 +486,6 @@ public class Background : Gtk.Fixed
         }
     }
 
-    public bool draw_grid { get; set; default = true; }
     public double alpha { get; private set; default = 1.0; }
     public Gdk.RGBA average_color { get { return current.average_color; } }
 
@@ -515,8 +514,9 @@ public class Background : Gtk.Fixed
         timer = null;
 
         resize_mode = Gtk.ResizeMode.QUEUE;
-        draw_grid = UGSettings.get_boolean (UGSettings.KEY_DRAW_GRID);
         loaders = new HashTable<string?, BackgroundLoader> (str_hash, str_equal);
+        if (UGSettings.get_boolean (UGSettings.KEY_DRAW_GRID))
+            flags |= GRID;
 
         show ();
     }
@@ -607,9 +607,6 @@ public class Background : Gtk.Fixed
 
     public override bool draw (Cairo.Context c)
     {
-        var flags = DrawFlags.NONE;
-        if (draw_grid)
-            flags |= DrawFlags.GRID;
         draw_full (c, flags);
         return base.draw (c);
     }
@@ -655,7 +652,7 @@ public class Background : Gtk.Fixed
 
         c.restore ();
 
-        if ((flags & DrawFlags.GRID) != 0)
+        if (DrawFlags.GRID in flags)
             overlay_grid (c);
     }
 
@@ -770,7 +767,7 @@ public class Background : Gtk.Fixed
             widths.resize (n_sizes);
             heights.resize (n_sizes);
 
-            b = new BackgroundLoader (target_surface, filename, widths, heights, draw_grid);
+            b = new BackgroundLoader (target_surface, filename, widths, heights);
             b.logo = version_logo_surface;
             b.loaded.connect (() => { reload (); });
             b.load ();
