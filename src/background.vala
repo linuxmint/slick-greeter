@@ -393,7 +393,7 @@ public class Background : Gtk.Fixed
         GRID,
         SPAN,
     }
-    private DrawFlags flags = NONE;
+    private DrawFlags flags = DrawFlags.NONE;
 
     /* Fallback color - shown upon first startup, until an async background loader finishes,
      * or until a user background or default background is loaded.
