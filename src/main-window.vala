@@ -32,8 +32,6 @@ public class MainWindow : Gtk.Window
     private Gtk.Box hbox;
     private Gtk.Button back_button;
     private ShutdownDialog? shutdown_dialog = null;
-    private int window_size_x;
-    private int window_size_y;
     private bool do_resize;
 
     public ListStack stack;
@@ -131,8 +129,6 @@ public class MainWindow : Gtk.Window
 
         add_user_list ();
 
-        window_size_x = 0;
-        window_size_y = 0;
         primary_monitor = null;
         do_resize = false;
 
@@ -147,7 +143,7 @@ public class MainWindow : Gtk.Window
             monitors.append (new Monitor (800, 120, 640, 480));
             background.set_monitors (monitors);
             move_to_monitor (monitors.nth_data (0));
-            resize (800 + 640, 600);
+            resize (background.width, background.height);
         }
         else
         {
@@ -212,7 +208,7 @@ public class MainWindow : Gtk.Window
     /* Setup the size and position of the window */
     public void setup_window ()
     {
-        resize (window_size_x, window_size_y);
+        resize (background.width, background.height);
         move (0, 0);
         move_to_monitor (primary_monitor);
     }
@@ -223,8 +219,6 @@ public class MainWindow : Gtk.Window
         Gdk.Monitor primary = display.get_primary_monitor();
         Gdk.Rectangle geometry;
 
-        window_size_x = 0;
-        window_size_y = 0;
         monitors = new List<Monitor> ();
         primary_monitor = null;
 
@@ -233,16 +227,6 @@ public class MainWindow : Gtk.Window
             Gdk.Monitor monitor = display.get_monitor(i);
             geometry = monitor.get_geometry ();
             debug ("Monitor %d is %dx%d pixels at %d,%d", i, geometry.width, geometry.height, geometry.x, geometry.y);
-
-            if (window_size_x < geometry.x + geometry.width)
-            {
-                window_size_x = geometry.x + geometry.width;
-            }
-
-            if (window_size_y < geometry.y + geometry.height)
-            {
-                window_size_y = geometry.y + geometry.height;
-            }
 
             if (monitor_is_unique_position (display, i))
             {
@@ -258,7 +242,7 @@ public class MainWindow : Gtk.Window
             }
         }
 
-        debug ("MainWindow is %dx%d pixels", window_size_x, window_size_y);
+        debug ("MainWindow is %dx%d pixels", background.width, background.height);
 
         background.set_monitors (monitors);
 
