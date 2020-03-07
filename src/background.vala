@@ -464,6 +464,28 @@ public class Background : Gtk.Fixed
         }
     }
 
+    /* Width - total pixel width of the entire background canvas. This total width
+     * should account for the relative geometry of all attached monitors.
+     */
+
+    private int _width = 0;
+    public int width {
+        get {
+            return _width;
+        }
+    }
+
+    /* Height - total pixel height of the entire background canvas. This total height
+     * should account for the relative geometry of all attached monitors.
+     */
+
+    private int _height = 0;
+    public int height {
+        get {
+            return _height;
+        }
+    }
+
     public bool draw_grid { get; set; default = true; }
     public double alpha { get; private set; default = 1.0; }
     public Gdk.RGBA average_color { get { return current.average_color; } }
@@ -545,7 +567,15 @@ public class Background : Gtk.Fixed
     {
         this.monitors = new List<Monitor> ();
         foreach (var m in monitors)
+        {
+            if (_width < m.x + m.width)
+                _width = m.x + m.width;
+
+            if (_height < m.y + m.height)
+                _height = m.y + m.height;
+
             this.monitors.append (m);
+        }
         queue_draw ();
     }
 
