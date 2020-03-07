@@ -391,6 +391,7 @@ public class Background : Gtk.Fixed
     {
         NONE,
         GRID,
+        SPAN,
     }
     private DrawFlags flags = NONE;
 
@@ -517,6 +518,10 @@ public class Background : Gtk.Fixed
         loaders = new HashTable<string?, BackgroundLoader> (str_hash, str_equal);
         if (UGSettings.get_boolean (UGSettings.KEY_DRAW_GRID))
             flags |= GRID;
+
+        var mode = UGSettings.get_string (UGSettings.KEY_BACKGROUND_MODE);
+        if (mode == "spanned")
+            flags |= SPAN;
 
         show ();
     }
@@ -660,14 +665,22 @@ public class Background : Gtk.Fixed
     {
         foreach (var monitor in monitors)
         {
-            var pattern = background.get_pattern (monitor.width, monitor.height);
+            Cairo.Pattern? pattern;
+            var matrix = Cairo.Matrix.identity ();
+            if (DrawFlags.SPAN in flags)
+            {
+                pattern = background.get_pattern (_width, _height);
+            }
+            else
+            {
+                pattern = background.get_pattern (monitor.width, monitor.height);
+                matrix.translate (-monitor.x, -monitor.y);
+            }
+
             if (pattern == null)
                 continue;
 
             c.save ();
-            pattern = background.get_pattern (monitor.width, monitor.height);
-            var matrix = Cairo.Matrix.identity ();
-            matrix.translate (-monitor.x, -monitor.y);
             pattern.set_matrix (matrix);
             c.set_source (pattern);
             c.rectangle (monitor.x, monitor.y, monitor.width, monitor.height);
@@ -755,13 +768,22 @@ public class Background : Gtk.Fixed
             var widths = new int[monitors.length ()];
             var heights = new int[monitors.length ()];
             var n_sizes = 0;
-            foreach (var monitor in monitors)
+            if (DrawFlags.SPAN in flags)
             {
-                if (monitor_is_unique_size (monitor))
+                widths[n_sizes] = _width;
+                heights[n_sizes] = _height;
+                n_sizes++;
+            }
+            else
+            {
+                foreach (var monitor in monitors)
                 {
-                    widths[n_sizes] = monitor.width;
-                    heights[n_sizes] = monitor.height;
-                    n_sizes++;
+                    if (monitor_is_unique_size (monitor))
+                    {
+                        widths[n_sizes] = monitor.width;
+                        heights[n_sizes] = monitor.height;
+                        n_sizes++;
+                    }
                 }
             }
             widths.resize (n_sizes);

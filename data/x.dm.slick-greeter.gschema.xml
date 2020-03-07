@@ -9,6 +9,14 @@
       <default>'#000000'</default>
       <summary>Background color (e.g. #772953), set before wallpaper is seen</summary>
     </key>
+    <key name="background-mode" type="s">
+      <choices>
+        <choice value='scaled'/>
+        <choice value='spanned'/>
+      </choices>
+      <default>'scaled'</default>
+      <summary>Determines how the background image is rendered</summary>
+    </key>
     <key name="draw-user-backgrounds" type="b">
       <default>true</default>
       <summary>Whether to draw user backgrounds</summary>

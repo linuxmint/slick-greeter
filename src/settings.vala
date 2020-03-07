@@ -22,6 +22,7 @@ public class UGSettings
 {
     public const string KEY_BACKGROUND = "background";
     public const string KEY_BACKGROUND_COLOR = "background-color";
+    public const string KEY_BACKGROUND_MODE = "background-mode";
     public const string KEY_DRAW_USER_BACKGROUNDS = "draw-user-backgrounds";
     public const string KEY_DRAW_GRID = "draw-grid";
     public const string KEY_SHOW_HOSTNAME = "show-hostname";
@@ -119,6 +120,7 @@ public class UGSettings
             var string_keys = new List<string> ();
             string_keys.append (KEY_BACKGROUND);
             string_keys.append (KEY_BACKGROUND_COLOR);
+            string_keys.append (KEY_BACKGROUND_MODE);
             string_keys.append (KEY_LOGO);
             string_keys.append (KEY_OTHER_MONITORS_LOGO);
             string_keys.append (KEY_THEME_NAME);
