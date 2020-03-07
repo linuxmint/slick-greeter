@@ -928,7 +928,6 @@ public abstract class GreeterList : FadableBox
         }
 
         /* Set the background */
-        background.draw_grid = false;
         background.queue_draw ();
     }
 
