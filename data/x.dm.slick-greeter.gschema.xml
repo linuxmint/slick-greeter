@@ -11,10 +11,10 @@
     </key>
     <key name="background-mode" type="s">
       <choices>
-        <choice value='scaled'/>
+        <choice value='zoom'/>
         <choice value='spanned'/>
       </choices>
-      <default>'scaled'</default>
+      <default>'zoom'</default>
       <summary>Determines how the background image is rendered</summary>
     </key>
     <key name="draw-user-backgrounds" type="b">
