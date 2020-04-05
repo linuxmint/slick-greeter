@@ -24,11 +24,11 @@ msgstr "Picatz lo senhal per %s"
 
 #: src/greeter-list.vala:811 src/user-list.vala:703
 msgid "Password:"
-msgstr "Senhal :"
+msgstr "Senhal :"
 
 #: src/greeter-list.vala:813 src/user-list.vala:697
 msgid "Username:"
-msgstr "Nom d'utilizaire :"
+msgstr "Nom d'utilizaire :"
 
 #: src/greeter-list.vala:868
 msgid "Invalid password, please try again"
@@ -40,11 +40,11 @@ msgstr "Fracàs de l'autentificacion"
 
 #: src/greeter-list.vala:925
 msgid "Failed to start session"
-msgstr "La sesilha a pas pogut s'aviar"
+msgstr "Aviada fracassada de la session"
 
 #: src/greeter-list.vala:940
 msgid "Logging in..."
-msgstr ""
+msgstr "Connexion..."
 
 #: src/main-window.vala:49
 msgid "Login Screen"
@@ -52,7 +52,7 @@ msgstr "Fenèstra de connexion"
 
 #: src/main-window.vala:110
 msgid "Back"
-msgstr "En arrièr"
+msgstr "Tornar"
 
 #: src/menubar.vala:322
 msgid "Power:"
@@ -60,7 +60,7 @@ msgstr ""
 
 #: src/menubar.vala:372
 msgid "Accessibility"
-msgstr ""
+msgstr "Accessibilitat"
 
 #: src/menubar.vala:381
 msgid "Onscreen keyboard"
@@ -76,7 +76,7 @@ msgstr "Lector d'ecran"
 
 #: src/menubar.vala:404 src/menubar.vala:451
 msgid "Quit..."
-msgstr ""
+msgstr "Quitar..."
 
 #: src/menubar.vala:417 src/shutdown-dialog.vala:155
 msgid "Suspend"
@@ -88,11 +88,11 @@ msgstr "Ivernar"
 
 #: src/menubar.vala:474
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "Disposicion clavièr "
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
-msgstr "Opcions de la sesilha"
+msgstr "Opcions de la session"
 
 #: src/session-list.vala:34
 msgid "Select desktop environment"
@@ -100,7 +100,7 @@ msgstr "Seleccionar l'environament de burèu"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr ""
+msgstr "Al reveire. Volriatz..."
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
@@ -108,7 +108,7 @@ msgstr "Atudar"
 
 #: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
-msgstr "Sètz segur que volètz arrestar l'ordenador ?"
+msgstr "Volètz vertadièrament arrestar l'ordenador ?"
 
 #: src/shutdown-dialog.vala:137
 msgid ""
@@ -116,11 +116,11 @@ msgid ""
 "also close these other sessions."
 msgstr ""
 "D'autres utilizaires son actualament connectats a aqueste ordenador, atudar "
-"ara tamparà tanben las autras sesilhas."
+"ara tamparà tanben las autras sessions."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
-msgstr "Tornar amodar"
+msgstr "Reaviar"
 
 #: src/slick-greeter.vala:616
 msgid "Show release version"
@@ -144,7 +144,7 @@ msgstr "%s (Per defaut)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
-msgstr "Sesilha convidat"
+msgstr "Session convidat"
 
 #: src/user-list.vala:438
 msgid "Please enter a complete e-mail address"
