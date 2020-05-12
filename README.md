@@ -59,4 +59,5 @@ Configuration file format for /etc/lightdm/slick-greeter.conf
     # group-filter=List of groups that users must be part of to be shown (empty list shows all users)
     # enable-hidpi=Whether to enable HiDPI support (on/off/auto)
     # only-on-monitor=Sets the monitor on which to show the login window, -1 means "follow the mouse"
+    # stretch-background-across-monitors=Whether to stretch the background across multiple monitors (false by default)
     [Greeter]

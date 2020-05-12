@@ -519,8 +519,7 @@ public class Background : Gtk.Fixed
         if (UGSettings.get_boolean (UGSettings.KEY_DRAW_GRID))
             flags |= DrawFlags.GRID;
 
-        var mode = UGSettings.get_string (UGSettings.KEY_BACKGROUND_MODE);
-        if (mode == "spanned")
+        if (UGSettings.get_boolean (UGSettings.KEY_BACKGROUND_STRETCH))
             flags |= DrawFlags.SPAN;
 
         show ();

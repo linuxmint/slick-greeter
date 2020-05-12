@@ -9,13 +9,9 @@
       <default>'#000000'</default>
       <summary>Background color (e.g. #772953), set before wallpaper is seen</summary>
     </key>
-    <key name="background-mode" type="s">
-      <choices>
-        <choice value='zoom'/>
-        <choice value='spanned'/>
-      </choices>
-      <default>'zoom'</default>
-      <summary>Determines how the background image is rendered</summary>
+    <key name="stretch-background-across-monitors" type="b">
+      <default>false</default>
+      <summary>Whether to stretch the background across multiple monitors (or to replicate it on each monitor).</summary>
     </key>
     <key name="draw-user-backgrounds" type="b">
       <default>true</default>
