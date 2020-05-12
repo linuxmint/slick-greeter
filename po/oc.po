@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2017-07-14 15:00+0000\n"
-"Last-Translator: Cédric VALMARY (Tot en òc) <cvalmary@yahoo.fr>\n"
+"PO-Revision-Date: 2020-03-09 11:50+0000\n"
+"Last-Translator: Quentin PAGÈS <Unknown>\n"
 "Language-Team: Occitan (post 1500) <oc@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2020-01-06 10:07+0000\n"
-"X-Generator: Launchpad (build bceb5ef013b87ef7aafe0755545ceb689ca7ac60)\n"
+"X-Launchpad-Export-Date: 2020-05-11 11:03+0000\n"
+"X-Generator: Launchpad (build fbdff7602bd10fb883bf7e2ddcc7fd5a16f60398)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
@@ -24,11 +24,11 @@ msgstr "Picatz lo senhal per %s"
 
 #: src/greeter-list.vala:811 src/user-list.vala:703
 msgid "Password:"
-msgstr "Senhal :"
+msgstr "Senhal :"
 
 #: src/greeter-list.vala:813 src/user-list.vala:697
 msgid "Username:"
-msgstr "Nom d'utilizaire :"
+msgstr "Nom d'utilizaire :"
 
 #: src/greeter-list.vala:868
 msgid "Invalid password, please try again"
@@ -40,11 +40,11 @@ msgstr "Fracàs de l'autentificacion"
 
 #: src/greeter-list.vala:925
 msgid "Failed to start session"
-msgstr "Aviada fracassada de la session"
+msgstr "La sesilha a pas pogut s'aviar"
 
 #: src/greeter-list.vala:940
 msgid "Logging in..."
-msgstr "Connexion..."
+msgstr "Connexion en cors…"
 
 #: src/main-window.vala:49
 msgid "Login Screen"
@@ -52,7 +52,7 @@ msgstr "Fenèstra de connexion"
 
 #: src/main-window.vala:110
 msgid "Back"
-msgstr "Tornar"
+msgstr "En arrièr"
 
 #: src/menubar.vala:322
 msgid "Power:"
@@ -88,11 +88,11 @@ msgstr "Ivernar"
 
 #: src/menubar.vala:474
 msgid "Keyboard layout:"
-msgstr "Disposicion clavièr "
+msgstr "Disposicion del clavièr :"
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
-msgstr "Opcions de la session"
+msgstr "Opcions de la sesilha"
 
 #: src/session-list.vala:34
 msgid "Select desktop environment"
@@ -100,7 +100,7 @@ msgstr "Seleccionar l'environament de burèu"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr "Al reveire. Volriatz..."
+msgstr "Al reveire. Volètz..."
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
@@ -108,7 +108,7 @@ msgstr "Atudar"
 
 #: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
-msgstr "Volètz vertadièrament arrestar l'ordenador ?"
+msgstr "Sètz segur que volètz arrestar l'ordenador ?"
 
 #: src/shutdown-dialog.vala:137
 msgid ""
@@ -116,11 +116,11 @@ msgid ""
 "also close these other sessions."
 msgstr ""
 "D'autres utilizaires son actualament connectats a aqueste ordenador, atudar "
-"ara tamparà tanben las autras sessions."
+"ara tamparà tanben las autras sesilhas."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
-msgstr "Reaviar"
+msgstr "Tornar amodar"
 
 #: src/slick-greeter.vala:616
 msgid "Show release version"
@@ -144,7 +144,7 @@ msgstr "%s (Per defaut)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
-msgstr "Session convidat"
+msgstr "Sesilha convidat"
 
 #: src/user-list.vala:438
 msgid "Please enter a complete e-mail address"
@@ -176,7 +176,7 @@ msgstr "Abandonar"
 
 #: src/user-list.vala:555
 msgid "Set Up..."
-msgstr ""
+msgstr "Configurar..."
 
 #: src/user-list.vala:557
 msgid ""

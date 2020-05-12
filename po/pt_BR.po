@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2018-01-03 16:52+0000\n"
-"Last-Translator: Sitonir de Oliveira <sitonir@outlook.com>\n"
+"PO-Revision-Date: 2020-02-28 10:29+0000\n"
+"Last-Translator: Wellington Oliveira dos Santos <welblade@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2020-01-06 10:07+0000\n"
-"X-Generator: Launchpad (build bceb5ef013b87ef7aafe0755545ceb689ca7ac60)\n"
+"X-Launchpad-Export-Date: 2020-05-11 11:03+0000\n"
+"X-Generator: Launchpad (build fbdff7602bd10fb883bf7e2ddcc7fd5a16f60398)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
@@ -68,11 +68,11 @@ msgstr "Teclado Virtual"
 
 #: src/menubar.vala:386
 msgid "High Contrast"
-msgstr "Alto contraste"
+msgstr "Alto Contraste"
 
 #: src/menubar.vala:392
 msgid "Screen Reader"
-msgstr "Leitor de tela"
+msgstr "Leitor de Tela"
 
 #: src/menubar.vala:404 src/menubar.vala:451
 msgid "Quit..."
@@ -88,7 +88,7 @@ msgstr "Hibernar"
 
 #: src/menubar.vala:474
 msgid "Keyboard layout:"
-msgstr "Disposição do teclado:"
+msgstr "Leiaute do teclado:"
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
@@ -144,7 +144,7 @@ msgstr "%s (Padrão)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
-msgstr "Sessão convidado"
+msgstr "Sessão de convidado"
 
 #: src/user-list.vala:438
 msgid "Please enter a complete e-mail address"
@@ -221,7 +221,7 @@ msgstr "Iniciar sessão como %s"
 
 #: src/user-list.vala:832
 msgid "Retry"
-msgstr "Repetir"
+msgstr "Tentar novamente"
 
 #: src/user-list.vala:833
 #, c-format

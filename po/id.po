@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2019-09-06 10:19+0000\n"
-"Last-Translator: Abdul Munif Hanafi <amunifhanafi@gmail.com>\n"
+"PO-Revision-Date: 2020-02-27 03:54+0000\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2020-01-06 10:07+0000\n"
-"X-Generator: Launchpad (build bceb5ef013b87ef7aafe0755545ceb689ca7ac60)\n"
+"X-Launchpad-Export-Date: 2020-05-11 11:03+0000\n"
+"X-Generator: Launchpad (build fbdff7602bd10fb883bf7e2ddcc7fd5a16f60398)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
@@ -36,7 +36,7 @@ msgstr "Kata sandi salah, mohon coba lagi"
 
 #: src/greeter-list.vala:879
 msgid "Failed to authenticate"
-msgstr ""
+msgstr "Gagal mengotentikasi"
 
 #: src/greeter-list.vala:925
 msgid "Failed to start session"
@@ -88,7 +88,7 @@ msgstr "Hibernasi"
 
 #: src/menubar.vala:474
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "Tata letak papan ketik:"
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
@@ -128,12 +128,14 @@ msgstr "Tampilkan versi rilis"
 
 #: src/slick-greeter.vala:619
 msgid "Run in test mode"
-msgstr ""
+msgstr "Jalankan dalam mode uji"
 
 #: src/slick-greeter.vala:635
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
+"Jalankan '%s --help' untuk melihat daftar lengkap opsi baris perintah yang "
+"tersedia."
 
 #: src/toggle-box.vala:98
 #, c-format
@@ -174,7 +176,7 @@ msgstr "Batal"
 
 #: src/user-list.vala:555
 msgid "Set Up..."
-msgstr ""
+msgstr "Siapkan..."
 
 #: src/user-list.vala:557
 msgid ""
