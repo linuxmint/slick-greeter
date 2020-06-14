@@ -140,7 +140,7 @@ public class MainWindow : Gtk.Window
             /* Simulate an 800x600 monitor to the left of a 640x480 monitor */
             monitors = new List<Monitor> ();
             monitors.append (new Monitor (0, 0, 800, 600));
-            monitors.append (new Monitor (800, 120, 640, 480));
+            monitors.append (new Monitor (800, 600, 640, 480));
             background.set_monitors (monitors);
             move_to_monitor (monitors.nth_data (0));
             resize (background.width, background.height);
