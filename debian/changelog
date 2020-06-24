@@ -1,3 +1,9 @@
+slick-greeter (1.4.1) ulyana; urgency=medium
+
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 24 Jun 2020 12:36:25 +0100
+
 slick-greeter (1.4.0) ulyana; urgency=medium
 
   [ Isaac Carter ]
