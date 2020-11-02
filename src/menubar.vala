@@ -123,6 +123,7 @@ public class MenuBar : Gtk.MenuBar
     }
 
     private string default_theme_name;
+    private string clock_format;
     private Gtk.CheckMenuItem high_contrast_item;
     private Pid keyboard_pid = 0;
     private Pid reader_pid = 0;
@@ -157,6 +158,7 @@ public class MenuBar : Gtk.MenuBar
             item.sensitive = false;
             item.show ();
             append (item);
+            clock_format = UGSettings.get_string (UGSettings.KEY_CLOCK_FORMAT);
             update_clock ();
             Timeout.add (1000, update_clock);
         }
@@ -339,7 +341,7 @@ public class MenuBar : Gtk.MenuBar
     private bool update_clock ()
     {
         var current_time = new DateTime.now_local ();
-        clock_label.set_label(current_time.format ("%H:%M"));
+        clock_label.set_label(current_time.format (clock_format));
         clock_label.set_tooltip_text (current_time.format ("%x"));
         return true;
     }

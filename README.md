@@ -60,4 +60,5 @@ Configuration file format for /etc/lightdm/slick-greeter.conf
     # enable-hidpi=Whether to enable HiDPI support (on/off/auto)
     # only-on-monitor=Sets the monitor on which to show the login window, -1 means "follow the mouse"
     # stretch-background-across-monitors=Whether to stretch the background across multiple monitors (false by default)
+    # clock-format=What clock format to use (e.g., %H:%M or %l:%M %p)
     [Greeter]

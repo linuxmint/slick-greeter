@@ -49,6 +49,7 @@ public class UGSettings
     public const string KEY_ENABLE_HIDPI = "enable-hidpi";
     public const string KEY_ACTIVATE_NUMLOCK = "activate-numlock";
     public const string KEY_ONLY_ON_MONITOR = "only-on-monitor";
+    public const string KEY_CLOCK_FORMAT = "clock-format";
 
     public static bool get_boolean (string key)
     {
@@ -130,6 +131,7 @@ public class UGSettings
             string_keys.append (KEY_XFT_RGBA);
             string_keys.append (KEY_ENABLE_HIDPI);
             string_keys.append (KEY_ONLY_ON_MONITOR);
+            string_keys.append (KEY_CLOCK_FORMAT);
 
             var bool_keys = new List<string> ();
             bool_keys.append (KEY_DRAW_USER_BACKGROUNDS);
