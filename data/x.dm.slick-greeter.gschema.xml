@@ -135,5 +135,9 @@
       <default>'auto'</default>
       <summary>Monitor on which to show the GUI</summary>
     </key>
+    <key name="clock-format" type="s">
+      <default>'%H:%M'</default>
+      <summary>What clock format to use (e.g., %H:%M or %l:%M %p)</summary>
+    </key>
   </schema>
 </schemalist>
