@@ -1,3 +1,13 @@
+slick-greeter (1.5.0) ulyssa; urgency=medium
+
+  [ Clement Lefebvre ]
+  * CI: Update targets
+
+  [ ItsNotGoodName ]
+  * Add clock-format to config
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 30 Nov 2020 11:28:46 +0000
+
 slick-greeter (1.4.1) ulyana; urgency=medium
 
   * l10n: Update translations
