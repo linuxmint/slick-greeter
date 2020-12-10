@@ -8,35 +8,35 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2017-07-14 15:05+0000\n"
-"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
+"PO-Revision-Date: 2020-12-09 08:18+0000\n"
+"Last-Translator: Algent Albrahimi <algent@protonmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2020-06-24 10:12+0000\n"
-"X-Generator: Launchpad (build 1cbd0aa39df153c901321817f9b57cf3f232b507)\n"
+"X-Launchpad-Export-Date: 2020-12-10 10:31+0000\n"
+"X-Generator: Launchpad (build 4853cb86c14c5a9e513816c8a61121c639b30835)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
 msgid "Enter password for %s"
-msgstr ""
+msgstr "Vendosni fjalëkalimin për %s"
 
 #: src/greeter-list.vala:811 src/user-list.vala:703
 msgid "Password:"
-msgstr ""
+msgstr "Fjalëkalimi:"
 
 #: src/greeter-list.vala:813 src/user-list.vala:697
 msgid "Username:"
-msgstr ""
+msgstr "Emri i përdoruesit:"
 
 #: src/greeter-list.vala:868
 msgid "Invalid password, please try again"
-msgstr ""
+msgstr "Fjalëkalim i pavlefshëm, ju lutemi provoni përsëri"
 
 #: src/greeter-list.vala:879
 msgid "Failed to authenticate"
-msgstr ""
+msgstr "Dështoi në identifikim"
 
 #: src/greeter-list.vala:925
 msgid "Failed to start session"
@@ -44,11 +44,11 @@ msgstr "Dështova në nisjen e seksionit"
 
 #: src/greeter-list.vala:940
 msgid "Logging in..."
-msgstr ""
+msgstr "Duke hyrë..."
 
 #: src/main-window.vala:49
 msgid "Login Screen"
-msgstr ""
+msgstr "Ekrani në Hyrje"
 
 #: src/main-window.vala:110
 msgid "Back"
@@ -56,27 +56,27 @@ msgstr "Mbrapsht"
 
 #: src/menubar.vala:322
 msgid "Power:"
-msgstr ""
+msgstr "Energjia:"
 
 #: src/menubar.vala:372
 msgid "Accessibility"
-msgstr ""
+msgstr "Mundësitë e hyrjes"
 
 #: src/menubar.vala:381
 msgid "Onscreen keyboard"
-msgstr ""
+msgstr "Tastierë në ekran"
 
 #: src/menubar.vala:386
 msgid "High Contrast"
-msgstr ""
+msgstr "Kontrast i Lartë"
 
 #: src/menubar.vala:392
 msgid "Screen Reader"
-msgstr ""
+msgstr "Lexues Ekrani"
 
 #: src/menubar.vala:404 src/menubar.vala:451
 msgid "Quit..."
-msgstr ""
+msgstr "Lini..."
 
 #: src/menubar.vala:417 src/shutdown-dialog.vala:155
 msgid "Suspend"
@@ -88,11 +88,11 @@ msgstr "Hiberno"
 
 #: src/menubar.vala:474
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "Paraqitja e tastierës:"
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
-msgstr ""
+msgstr "Opsionet e Seancës"
 
 #: src/session-list.vala:34
 msgid "Select desktop environment"
@@ -100,7 +100,7 @@ msgstr "Zgjidh ambientin e desktopit"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr ""
+msgstr "Mirupafshim Do të dëshironit të ..."
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
@@ -120,20 +120,22 @@ msgstr ""
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
-msgstr "Rindiz"
+msgstr "Rifillo"
 
 #: src/slick-greeter.vala:616
 msgid "Show release version"
-msgstr ""
+msgstr "Shfaq versionin e lëshimit"
 
 #: src/slick-greeter.vala:619
 msgid "Run in test mode"
-msgstr ""
+msgstr "Ekzekutoni në modalitetin e provës"
 
 #: src/slick-greeter.vala:635
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
+"Ekzekuto '%s --help' për të parë një listë të plotë të opsioneve të "
+"komandave në dispozicion."
 
 #: src/toggle-box.vala:98
 #, c-format
@@ -142,7 +144,7 @@ msgstr "%s (E parazgjedhur)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
-msgstr ""
+msgstr "Seksioni Vizitor"
 
 #: src/user-list.vala:438
 msgid "Please enter a complete e-mail address"
@@ -174,7 +176,7 @@ msgstr "Anullo"
 
 #: src/user-list.vala:555
 msgid "Set Up..."
-msgstr ""
+msgstr "Konfiguro ..."
 
 #: src/user-list.vala:557
 msgid ""
@@ -210,12 +212,12 @@ msgstr "Adresa email:"
 
 #: src/user-list.vala:827
 msgid "Log In"
-msgstr ""
+msgstr "Hyr"
 
 #: src/user-list.vala:828
 #, c-format
 msgid "Login as %s"
-msgstr ""
+msgstr "Hyr si %s"
 
 #: src/user-list.vala:832
 msgid "Retry"
@@ -228,4 +230,4 @@ msgstr "Riprovoje si %s"
 
 #: src/user-list.vala:871
 msgid "Login"
-msgstr ""
+msgstr "Hyrje"

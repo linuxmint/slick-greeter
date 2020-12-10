@@ -8,39 +8,39 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2018-06-15 14:35+0000\n"
+"PO-Revision-Date: 2020-07-09 14:15+0000\n"
 "Last-Translator: Panwar <Unknown>\n"
 "Language-Team: Hindi <hi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2020-06-24 10:12+0000\n"
-"X-Generator: Launchpad (build 1cbd0aa39df153c901321817f9b57cf3f232b507)\n"
+"X-Launchpad-Export-Date: 2020-12-10 10:31+0000\n"
+"X-Generator: Launchpad (build 4853cb86c14c5a9e513816c8a61121c639b30835)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
 msgid "Enter password for %s"
-msgstr "%s के लिए कूटशब्द दर्ज करें"
+msgstr "%s हेतु कूटशब्द दर्ज करें"
 
 #: src/greeter-list.vala:811 src/user-list.vala:703
 msgid "Password:"
-msgstr "कूटशब्द:"
+msgstr "कूटशब्द :"
 
 #: src/greeter-list.vala:813 src/user-list.vala:697
 msgid "Username:"
-msgstr "उपयोक्ता का नाम :"
+msgstr "उपयोक्ता नाम :"
 
 #: src/greeter-list.vala:868
 msgid "Invalid password, please try again"
-msgstr "गलत कूटशब्द, कृपया पुनः प्रयास करें।"
+msgstr "अमान्य कूटशब्द, पुनः प्रयास करें"
 
 #: src/greeter-list.vala:879
 msgid "Failed to authenticate"
-msgstr "प्रमाणीकरण विफल रहा"
+msgstr "प्रमाणीकरण विफल"
 
 #: src/greeter-list.vala:925
 msgid "Failed to start session"
-msgstr "सत्र प्रारंभ करना विफल रहा"
+msgstr "सत्र आरंभ करना विफल"
 
 #: src/greeter-list.vala:940
 msgid "Logging in..."
@@ -52,11 +52,11 @@ msgstr "लॉगिन स्क्रीन"
 
 #: src/main-window.vala:110
 msgid "Back"
-msgstr "वापस जाएँ"
+msgstr "वापस"
 
 #: src/menubar.vala:322
 msgid "Power:"
-msgstr "पावर :"
+msgstr "ऊर्जा :"
 
 #: src/menubar.vala:372
 msgid "Accessibility"
@@ -76,7 +76,7 @@ msgstr "स्क्रीन वाचक"
 
 #: src/menubar.vala:404 src/menubar.vala:451
 msgid "Quit..."
-msgstr "छोड़ें"
+msgstr "बंद करें ..."
 
 #: src/menubar.vala:417 src/shutdown-dialog.vala:155
 msgid "Suspend"
@@ -88,7 +88,7 @@ msgstr "सुप्त करें"
 
 #: src/menubar.vala:474
 msgid "Keyboard layout:"
-msgstr "कुंजीपटल अभिन्यासः"
+msgstr "कुंजीपटल अभिन्यास :"
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
@@ -115,8 +115,8 @@ msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
-"अभी अन्य प्रयोक्ता इस कंप्यूटर में लॉग इन हैं, बंद करने के उपरांत उनके सत्र "
-"भी बंद हो जाएंगे।"
+"इस कंप्यूटर पर अभी अन्य उपयोक्ता लॉग इन हैं, बंद करने के उपरांत उनके सत्र भी "
+"बंद हो जाएँगे।"
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
@@ -124,17 +124,16 @@ msgstr "पुनः आरंभ करें"
 
 #: src/slick-greeter.vala:616
 msgid "Show release version"
-msgstr "रिलीज़ का संस्करण दिखाएँ"
+msgstr "संस्करण दिखाएँ"
 
 #: src/slick-greeter.vala:619
 msgid "Run in test mode"
-msgstr "परीक्षण मोड में चलाएँ"
+msgstr "जाँच मोड में चलाएँ"
 
 #: src/slick-greeter.vala:635
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
-msgstr ""
-"कमांड-लाइन में उपलब्ध विकल्पों की पूर्ण सूची के लिए '%s--help' चलाएँ।"
+msgstr "कमांड लाइन विकल्पों की पूर्ण सूची हेतु '%s--help' निष्पादित करें।"
 
 #: src/toggle-box.vala:98
 #, c-format
@@ -158,16 +157,16 @@ msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"यदि आपका RDP या Citrix सर्वर पर अकाउंट है, तो दूरस्थ लॉगिन की मदद से आप उनसे "
-"अनुप्रयोगों को चला सकते हैं।"
+"यदि RDP या Citrix सर्वर पर अकाउंट है, तो आप दूरस्थ लॉगिन द्वारा उस सर्वर से "
+"अनुप्रयोग उपयोग कर सकते हैं।"
 
 #: src/user-list.vala:551
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"यदि आपका RDP सर्वर पर अकाउंट है, तो दूरस्थ लॉगिन की मदद से आप उनसे "
-"अनुप्रयोगों को चला सकते हैं।"
+"यदि RDP सर्वर पर अकाउंट है, तो आप दूरस्थ लॉगिन द्वारा उस सर्वर से अनुप्रयोग "
+"उपयोग कर सकते हैं।"
 
 #: src/user-list.vala:554
 msgid "Cancel"
@@ -182,8 +181,8 @@ msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
 msgstr ""
-"इस सेवा के उपयोग के लिए उबुंटू दूरस्थ लॉगिन अकाउंट की आवश्यकता है, क्या आप "
-"अभी अकाउंट बनाना चाहेंगे?"
+"इस सेवा के उपयोग हेतु उबुंटू दूरस्थ लॉगिन अकाउंट आवश्यक है, क्या आप अभी "
+"अकाउंट बनाना चाहते हैं?"
 
 #: src/user-list.vala:561
 msgid "OK"
@@ -194,20 +193,20 @@ msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
 msgstr ""
-"इस सेवा के उपयोग के लिए उबुंटू दूरस्थ लॉगिन अकाउंट की आवश्यकता है। "
-"uccs.canonical.com पर जाकर अकाउंट बनाएँ।"
+"इस सेवा के उपयोग हेतु उबुंटू दूरस्थ लॉगिन अकाउंट आवश्यक है। अकाउंट बनाने "
+"हेतु uccs.canonical.com पर जाएँ।"
 
 #: src/user-list.vala:681
 msgid "Server type not supported."
-msgstr "सर्वर का प्रकार असमर्थित है।"
+msgstr "असमर्थित सर्वर प्रकार।"
 
 #: src/user-list.vala:722
 msgid "Domain:"
-msgstr "डोमेन:"
+msgstr "डोमेन :"
 
 #: src/user-list.vala:783
 msgid "Email address:"
-msgstr "ई-मेल पताः"
+msgstr "ई-मेल पता :"
 
 #: src/user-list.vala:827
 msgid "Log In"
