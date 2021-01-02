@@ -195,6 +195,7 @@ public class SlickGreeter
         sessions.append ("awesome");
         sessions.append ("gnome-xorg");
         sessions.append ("ubuntu-xorg");
+        sessions.append ("fynedesk");
 
         foreach (string session in sessions) {
             var path = Path.build_filename  ("/usr/share/xsessions/", session.concat(".desktop"), null);
