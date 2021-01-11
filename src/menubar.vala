@@ -27,7 +27,7 @@
         // public abstract async void hibernate() throws IOError;
         // public abstract bool suspend_allowed() throws IOError;
         // public abstract bool hibernate_allowed() throws IOError;
-       
+
         public abstract ObjectPath[] enumerate_devices() throws GLib.DBusError, GLib.IOError;
 
         public abstract string daemon_version { owned get; }
@@ -350,7 +350,7 @@ public class MenuBar : Gtk.MenuBar
     {
         if (pid > 0)
         {
-            Posix.kill (pid, Posix.SIGTERM);
+            Posix.kill (pid, Posix.Signal.TERM);
             int status;
             Posix.waitpid (pid, out status, 0);
             pid = 0;
