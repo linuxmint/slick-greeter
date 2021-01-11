@@ -81,8 +81,8 @@ public class ShutdownDialog : Gtk.Fixed
 
         vbox.margin = BORDER_INTERNAL_SIZE;
         vbox.margin_top += 9;
-        vbox.margin_left += 20;
-        vbox.margin_right += 20;
+        vbox.margin_start += 20;
+        vbox.margin_end += 20;
         vbox.margin_bottom += 2;
 
         // This event box consumes the click events inside the vbox
