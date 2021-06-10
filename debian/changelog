@@ -1,3 +1,14 @@
+slick-greeter (1.5.3) uma; urgency=medium
+
+  [ Joshua Peisach ]
+  * menubar: kill using Posix.Signal.TERM instead of Posix.SIGTERM
+  * shutdown-dialog: margin left/right -> margin_start_end
+
+  [ Clement Lefebvre ]
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 10 Jun 2021 11:19:14 +0100
+
 slick-greeter (1.5.2) ulyssa; urgency=medium
 
   [ Jacob ]
