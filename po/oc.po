@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2020-03-09 11:50+0000\n"
+"PO-Revision-Date: 2021-05-26 15:50+0000\n"
 "Last-Translator: Quentin PAGÈS <Unknown>\n"
 "Language-Team: Occitan (post 1500) <oc@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2021-01-02 14:17+0000\n"
-"X-Generator: Launchpad (build 34b3ffd45c9543b7f7aa5aa313925241e9e7ca3f)\n"
+"X-Launchpad-Export-Date: 2021-06-09 14:21+0000\n"
+"X-Generator: Launchpad (build b45bdbe3a00b6b668fa7f2069bd545c35c41f7f4)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
@@ -40,7 +40,7 @@ msgstr "Fracàs de l'autentificacion"
 
 #: src/greeter-list.vala:925
 msgid "Failed to start session"
-msgstr "La sesilha a pas pogut s'aviar"
+msgstr "La session a pas pogut s'aviar"
 
 #: src/greeter-list.vala:940
 msgid "Logging in..."
@@ -56,7 +56,7 @@ msgstr "En arrièr"
 
 #: src/menubar.vala:322
 msgid "Power:"
-msgstr ""
+msgstr "Poténcia :"
 
 #: src/menubar.vala:372
 msgid "Accessibility"
@@ -92,7 +92,7 @@ msgstr "Disposicion del clavièr :"
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
-msgstr "Opcions de la sesilha"
+msgstr "Opcions de la session"
 
 #: src/session-list.vala:34
 msgid "Select desktop environment"
@@ -116,7 +116,7 @@ msgid ""
 "also close these other sessions."
 msgstr ""
 "D'autres utilizaires son actualament connectats a aqueste ordenador, atudar "
-"ara tamparà tanben las autras sesilhas."
+"ara tamparà tanben las autras sessions."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
@@ -144,7 +144,7 @@ msgstr "%s (Per defaut)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
-msgstr "Sesilha convidat"
+msgstr "Session convidat"
 
 #: src/user-list.vala:438
 msgid "Please enter a complete e-mail address"

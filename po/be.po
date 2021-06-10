@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2020-01-02 17:10+0000\n"
-"Last-Translator: Alexis Borovik <Unknown>\n"
+"PO-Revision-Date: 2021-05-23 20:51+0000\n"
+"Last-Translator: Anton Hryb <Unknown>\n"
 "Language-Team: Belarusian <be@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2021-01-02 14:18+0000\n"
-"X-Generator: Launchpad (build 34b3ffd45c9543b7f7aa5aa313925241e9e7ca3f)\n"
+"X-Launchpad-Export-Date: 2021-06-09 14:21+0000\n"
+"X-Generator: Launchpad (build b45bdbe3a00b6b668fa7f2069bd545c35c41f7f4)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
 msgid "Enter password for %s"
-msgstr "Увядзіце пароль карыстальніка %s"
+msgstr "Увядзіце пароль для %s"
 
 #: src/greeter-list.vala:811 src/user-list.vala:703
 msgid "Password:"
@@ -32,7 +32,7 @@ msgstr "Карыстальнік:"
 
 #: src/greeter-list.vala:868
 msgid "Invalid password, please try again"
-msgstr "Няслушны пароль. Паспрабуйце зноў!"
+msgstr "Няправільны пароль, паспрабуйце яшчэ раз"
 
 #: src/greeter-list.vala:879
 msgid "Failed to authenticate"
@@ -40,11 +40,11 @@ msgstr "Памылка аўтэнтыфікацыі"
 
 #: src/greeter-list.vala:925
 msgid "Failed to start session"
-msgstr "Не атрымалася запусціць сэсію"
+msgstr "Не атрымалася запусціць сесію"
 
 #: src/greeter-list.vala:940
 msgid "Logging in..."
-msgstr "Уваходжанне..."
+msgstr "Ажыццяўляецца ўваход ..."
 
 #: src/main-window.vala:49
 msgid "Login Screen"
@@ -56,11 +56,11 @@ msgstr "Назад"
 
 #: src/menubar.vala:322
 msgid "Power:"
-msgstr ""
+msgstr "Сілкаванне:"
 
 #: src/menubar.vala:372
 msgid "Accessibility"
-msgstr ""
+msgstr "Спецыяльныя магчымасці"
 
 #: src/menubar.vala:381
 msgid "Onscreen keyboard"
@@ -72,11 +72,11 @@ msgstr "Высокая кантраснасць"
 
 #: src/menubar.vala:392
 msgid "Screen Reader"
-msgstr ""
+msgstr "Чытанне з экрана"
 
 #: src/menubar.vala:404 src/menubar.vala:451
 msgid "Quit..."
-msgstr ""
+msgstr "Выйсці..."
 
 #: src/menubar.vala:417 src/shutdown-dialog.vala:155
 msgid "Suspend"
@@ -96,11 +96,11 @@ msgstr "Параметры сеансу"
 
 #: src/session-list.vala:34
 msgid "Select desktop environment"
-msgstr "Абярыце працоўнае асяроддзе"
+msgstr "Выберыце працоўнае асяроддзе"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr ""
+msgstr "Да пабачэння. Можа жадаеце..."
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
@@ -108,15 +108,15 @@ msgstr "Выключыць"
 
 #: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
-msgstr "Ці ўпэўнены Вы, што жадаеце выключыць кампутар?"
+msgstr "Вы ўпэўнены, што жадаеце выключыць камп'ютар?"
 
 #: src/shutdown-dialog.vala:137
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
-"Іншыя карыстальнікі зараз ўвайшлі ў гэты кампутар, выключэнне закрые таксама "
-"і іх сеансы."
+"Іншыя карыстальнікі зараз ўвайшлі ў гэты камп'ютар, выключэнне закрые "
+"таксама і іх сесіі."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
@@ -134,7 +134,7 @@ msgstr "Запусціць у тэставым рэжыме"
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
-"Выканайце \"%s --help\", каб убачыць спіс усіх магчымых опцый загаднага "
+"Выканайце \"%s --help\", каб убачыць спіс усіх магчымых опцый каманднага "
 "радка."
 
 #: src/toggle-box.vala:98
@@ -148,27 +148,27 @@ msgstr "Гасцявая сесія"
 
 #: src/user-list.vala:438
 msgid "Please enter a complete e-mail address"
-msgstr "Калі ласка, пазначце поўны адрас электроннай пошты"
+msgstr "Увядзіце поўны адрас электроннай пошты"
 
 #: src/user-list.vala:518
 msgid "Incorrect e-mail address or password"
-msgstr "Няслушны адрас электроннай пошты ці пароль"
+msgstr "Няправільны адрас электроннай пошты ці пароль"
 
 #: src/user-list.vala:549
 msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"Калі вы маеце рахунка на сэрверы RDP ці Citrix, Remote Login дазволіць вам "
-"запускаць праграмы з гэтага сервера."
+"Калі вы маеце ўліковы запіс на серверы RDP ці Citrix, Remote Login дазволіць "
+"вам запускаць праграмы з гэтага сервера."
 
 #: src/user-list.vala:551
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"Калі вы маеце рахунка на сэрверы RDP, Remote Login дазволіць вам запускаць "
-"праграмы з гэтага сервера."
+"Калі вы маеце ўліковы запіс на серверы RDP, Remote Login дазволіць вам "
+"запускаць праграмы з гэтага сервера."
 
 #: src/user-list.vala:554
 msgid "Cancel"
@@ -176,15 +176,15 @@ msgstr "Скасаваць"
 
 #: src/user-list.vala:555
 msgid "Set Up..."
-msgstr ""
+msgstr "Усталяванне..."
 
 #: src/user-list.vala:557
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
 msgstr ""
-"Каб скарыстаць гэты сервіс, вам патрэбны рахунак Ubuntu Remote Login. Ці вы "
-"жадаеце наладзіць яго цяпер?"
+"Каб выкарыстоўваць гэты сервіс, вам патрэбны ўліковы запіс Ubuntu Remote "
+"Login. Ці жадаеце наладзіць яго цяпер?"
 
 #: src/user-list.vala:561
 msgid "OK"
@@ -195,16 +195,16 @@ msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
 msgstr ""
-"Каб скарыстаць гэты сервіс, вам патрэбны рахунак Ubuntu Remote Login. "
-"Наведайце сайт uccs.canonical.com, каб стварыць яго."
+"Каб выкарыстоўваць гэты сервіс, вам патрэбны ўліковы запіс Ubuntu Remote "
+"Login. Наведайце сайт uccs.canonical.com, каб стварыць яго."
 
 #: src/user-list.vala:681
 msgid "Server type not supported."
-msgstr "Гэты тып серверу не падтрымліваецца."
+msgstr "Тып сервера не падтрымліваецца."
 
 #: src/user-list.vala:722
 msgid "Domain:"
-msgstr "Дамэн:"
+msgstr "Дамен:"
 
 #: src/user-list.vala:783
 msgid "Email address:"
@@ -221,12 +221,12 @@ msgstr "Увайсці як %s"
 
 #: src/user-list.vala:832
 msgid "Retry"
-msgstr "Паспрабаваць ізноў"
+msgstr "Паспрабаваць зноў"
 
 #: src/user-list.vala:833
 #, c-format
 msgid "Retry as %s"
-msgstr "Паспрабаваць ізноў як %s"
+msgstr "Паспрабаваць зноў як %s"
 
 #: src/user-list.vala:871
 msgid "Login"
