@@ -8,23 +8,24 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2018-03-02 10:46+0000\n"
-"Last-Translator: Rhoslyn Prys <rprys@posteo.net>\n"
+"PO-Revision-Date: 2021-10-29 07:49+0000\n"
+"Last-Translator: Rhoslyn Prys <Unknown>\n"
 "Language-Team: Welsh <cy@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2021-06-25 10:42+0000\n"
-"X-Generator: Launchpad (build 40cc6dba4163ba9ca785b26ad91f43c87d70ba4d)\n"
+"X-Launchpad-Export-Date: 2021-12-06 15:06+0000\n"
+"X-Generator: Launchpad (build f92b6e0bb2624f8a9125e3f45b7621c6e230c5ff)\n"
+"Language: cy\n"
 
 #: src/greeter-list.vala:302
 #, c-format
 msgid "Enter password for %s"
-msgstr "Rhowch y cyfrinair ar gyfer %s"
+msgstr "Rhowch gyfrinair ar gyfer %s"
 
 #: src/greeter-list.vala:811 src/user-list.vala:703
 msgid "Password:"
-msgstr "Cyfinair:"
+msgstr "Cyfrinair:"
 
 #: src/greeter-list.vala:813 src/user-list.vala:697
 msgid "Username:"
@@ -36,11 +37,11 @@ msgstr "Cyfrinair anghywir, rhowch gynnig arall arni"
 
 #: src/greeter-list.vala:879
 msgid "Failed to authenticate"
-msgstr "Methwyd dilysu"
+msgstr "Methwyd a dilysu"
 
 #: src/greeter-list.vala:925
 msgid "Failed to start session"
-msgstr "Methwyd cychwyn sesiwn"
+msgstr "Methwyd a chychwyn sesiwn"
 
 #: src/greeter-list.vala:940
 msgid "Logging in..."
@@ -48,11 +49,11 @@ msgstr "Yn mewngofnodi..."
 
 #: src/main-window.vala:49
 msgid "Login Screen"
-msgstr "Sgrîn Fewngofnodi"
+msgstr "Sgrin Fewngofnodi"
 
 #: src/main-window.vala:110
 msgid "Back"
-msgstr "Yn ôl"
+msgstr "Nôl"
 
 #: src/menubar.vala:322
 msgid "Power:"
@@ -64,7 +65,7 @@ msgstr "Hygyrchedd"
 
 #: src/menubar.vala:381
 msgid "Onscreen keyboard"
-msgstr "Bysellfwrdd sgrîn"
+msgstr "Bysellfwrdd ar-sgrin"
 
 #: src/menubar.vala:386
 msgid "High Contrast"
@@ -80,7 +81,7 @@ msgstr "Gadael..."
 
 #: src/menubar.vala:417 src/shutdown-dialog.vala:155
 msgid "Suspend"
-msgstr "Seibio"
+msgstr "Oedi"
 
 #: src/menubar.vala:435 src/shutdown-dialog.vala:172
 msgid "Hibernate"
@@ -128,7 +129,7 @@ msgstr "Dangos fersiwn rhyddhau"
 
 #: src/slick-greeter.vala:619
 msgid "Run in test mode"
-msgstr "Rhedeg ym modd prawf"
+msgstr "Rhedeg yn y modd prawf"
 
 #: src/slick-greeter.vala:635
 #, c-format
@@ -142,22 +143,22 @@ msgstr "%s (Rhagosodedig)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
-msgstr "Sesiwn Wadd"
+msgstr "Sesiwn Gwestai"
 
 #: src/user-list.vala:438
 msgid "Please enter a complete e-mail address"
-msgstr "Rhowch gyfeiriad ebost llawn"
+msgstr "Rhowch gyfeiriad e-bost llawn"
 
 #: src/user-list.vala:518
 msgid "Incorrect e-mail address or password"
-msgstr "Cyfeiriad ebost neu gyfrinair anghywir"
+msgstr "Cyfeiriad e-bost neu gyfrinair anghywir"
 
 #: src/user-list.vala:549
 msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"Os oes gennych gyfrif ar weinydd RDP neu Xitrix, mae Mewngofnodi Pell yn "
+"Os oes gennych chi gyfrif ar weinydd RDP neu Citrix, mae Mewngofnodi Pell yn "
 "eich galluogi i redeg rhaglenni o'r gweinydd hwnnw."
 
 #: src/user-list.vala:551
@@ -165,8 +166,8 @@ msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"Os oes gennych gyfrif ar weinydd RDP, mae Mewngofnodi Pell yn eich galluogi "
-"i redeg rhaglenni o'r gweinydd hwnnw."
+"Os oes gennych chi gyfrif ar weinydd RDP, mae Mewngofnodi Pell yn eich "
+"galluogi i redeg rhaglenni o'r gweinydd hwnnw."
 
 #: src/user-list.vala:554
 msgid "Cancel"
@@ -181,8 +182,8 @@ msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
 msgstr ""
-"Rhaid cael cyfrif Mewngofnodi Pell Ubuntu i ddefnyddio'r wasanaeth hon. "
-"Hoffech greu un nawr?"
+"Rhaid cael cyfrif Mewngofnodi Pell Ubuntu i ddefnyddio'r gwasanaeth hwn. "
+"Hoffech chi greu un nawr?"
 
 #: src/user-list.vala:561
 msgid "OK"
@@ -193,12 +194,12 @@ msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
 msgstr ""
-"Rhaid cael cyfrif Mewngofnodi Pell Ubuntu i ddefnyddio'r wasanaeth hon. "
-"Ymwelwch â uccs.canonical.com i greu cyfrif."
+"Rhaid cael cyfrif Mewngofnodi Pell Ubuntu i ddefnyddio'r gwasanaeth hwn. "
+"Ewch i uccs.canonical.com i greu cyfrif."
 
 #: src/user-list.vala:681
 msgid "Server type not supported."
-msgstr "Ni chefnogir y math yna o weinydd"
+msgstr "Nid yw'r math yma o weinydd yn cael ei gefnogi"
 
 #: src/user-list.vala:722
 msgid "Domain:"
@@ -206,7 +207,7 @@ msgstr "Parth:"
 
 #: src/user-list.vala:783
 msgid "Email address:"
-msgstr "Cyfeiriad ebost:"
+msgstr "Cyfeiriad e-bost:"
 
 #: src/user-list.vala:827
 msgid "Log In"
@@ -219,12 +220,12 @@ msgstr "Mewngofnodi fel %s"
 
 #: src/user-list.vala:832
 msgid "Retry"
-msgstr "Ailgeisio"
+msgstr "Ceisiwch eto"
 
 #: src/user-list.vala:833
 #, c-format
 msgid "Retry as %s"
-msgstr "Ceisio eto fel %s"
+msgstr "Ceisiwch eto fel %s"
 
 #: src/user-list.vala:871
 msgid "Login"
