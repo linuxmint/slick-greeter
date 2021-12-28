@@ -115,9 +115,6 @@ msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
-"Copy text \t\r\n"
-"Other users are currently logged in to this computer, shutting down now will "
-"also close these other sessions."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
