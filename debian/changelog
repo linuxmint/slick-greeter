@@ -1,3 +1,9 @@
+slick-greeter (1.5.7) vanessa; urgency=medium
+
+  * Packaging: Depend on fonts-ubuntu
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 25 Apr 2022 19:31:20 +0100
+
 slick-greeter (1.5.6) una; urgency=medium
 
   [ Michael Webster ]
