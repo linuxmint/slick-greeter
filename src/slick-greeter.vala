@@ -399,6 +399,73 @@ public class SlickGreeter
         return greeter.has_guest_account_hint;
     }
 
+    public bool is_live_session (out string live_username, out string live_realname)
+    {
+        bool is_live = false;
+        live_username = null;
+        live_realname = null;
+
+        if (FileUtils.test ("/proc/cmdline", FileTest.EXISTS))
+        {
+            try {
+                bool success;
+                string contents = null;
+
+                success = FileUtils.get_contents ("/proc/cmdline", out contents, null);
+
+                if (contents.contains ("boot=casper"))
+                {
+                    is_live = true;
+
+                    if (FileUtils.get_contents ("/etc/casper.conf", out contents, null))
+                    {
+                        Regex regex = /(?:export USERNAME=")([_a-zA-Z0-9]+)(?:")/;
+
+                        MatchInfo info;
+                        if (regex.match (contents, 0, out info)) {
+                            live_username = info.fetch (1);
+                        }
+
+                        regex = /(?:export USERFULLNAME=")([ \-_a-zA-Z0-9]+)(?:")/;
+
+                        info = null;
+                        if (regex.match (contents, 0, out info)) {
+                            live_realname = info.fetch (1);
+                        }
+
+                    }
+                }
+                else
+                if (contents.contains ("boot=live"))
+                {
+                    is_live = true;
+
+                    contents = null;
+                    if (FileUtils.get_contents ("/etc/live/config.conf.d/live-setup.conf", out contents, null))
+                    {
+                        Regex regex = /(?:LIVE_USERNAME=")([_a-zA-Z0-9]+)(?:")/;
+
+                        MatchInfo info;
+                        if (regex.match (contents, 0, out info)) {
+                            live_username = info.fetch (1);
+                        }
+
+                        regex = /(?:LIVE_USER_FULLNAME=")([ \-_a-zA-Z0-9]+)(?:")/;
+
+                        info = null;
+                        if (regex.match (contents, 0, out info)) {
+                            live_realname = info.fetch (1);
+                        }
+
+                    }
+                }
+            } catch (FileError e) {
+            }
+        }
+
+        return is_live && !live_username.contains("lightdm");
+    }
+
     private Gdk.FilterReturn focus_upon_map (Gdk.XEvent gxevent, Gdk.Event event)
     {
         var xevent = (X.Event*)gxevent;

@@ -1019,6 +1019,17 @@ public class UserList : GreeterList
                 offer_guest = true;
             }
 
+            string username = null, realname = null;
+            if (SlickGreeter.singleton.is_live_session (out username, out realname))
+            {
+                debug ("Adding live user account: %s (%s)", username, realname);
+
+                add_user (username, realname, null, true, false, null);
+
+                // lightdm might add itself to the user list when we do this.
+                remove_entry ("lightdm");
+            }
+
             /* If we have no entries at all, we should show manual */
             if (!have_entries ())
                 add_manual_entry ();
