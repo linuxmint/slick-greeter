@@ -1,3 +1,13 @@
+slick-greeter (1.5.8) vanessa; urgency=medium
+
+  [ Michael Webster ]
+  * live session: Try to make sure no username entry is displayed in (#203)
+
+  [ Clement Lefebvre ]
+  * CI: Update targets
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 24 Jun 2022 10:17:08 +0200
+
 slick-greeter (1.5.7) vanessa; urgency=medium
 
   * Packaging: Depend on fonts-ubuntu
