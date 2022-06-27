@@ -8,103 +8,104 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2017-07-14 15:09+0000\n"
-"Last-Translator: Rustam Akbarov <ak_roostum@yahoo.com>\n"
+"PO-Revision-Date: 2022-04-13 12:37+0000\n"
+"Last-Translator: Umidjon Almasov <umidjon@almasov.uz>\n"
 "Language-Team: Uzbek <uz@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2021-12-31 12:25+0000\n"
-"X-Generator: Launchpad (build adb364d6a74a28e7b95d51cd30446ec16160de6c)\n"
+"X-Launchpad-Export-Date: 2022-06-26 11:28+0000\n"
+"X-Generator: Launchpad (build 51a2e4fa2e9b8e45f00904ad7f53546f45ac48a5)\n"
+"Language: uz\n"
 
 #: src/greeter-list.vala:302
 #, c-format
 msgid "Enter password for %s"
-msgstr ""
+msgstr "%s uchun parolni kiriting"
 
 #: src/greeter-list.vala:811 src/user-list.vala:703
 msgid "Password:"
-msgstr "Махфий сўз"
+msgstr "Parol:"
 
 #: src/greeter-list.vala:813 src/user-list.vala:697
 msgid "Username:"
-msgstr "Фойдаланувчи:"
+msgstr "Foydalanuvchi:"
 
 #: src/greeter-list.vala:868
 msgid "Invalid password, please try again"
-msgstr ""
+msgstr "Parol noto‘g‘ri, qayta urinib ko‘ring"
 
 #: src/greeter-list.vala:879
 msgid "Failed to authenticate"
-msgstr ""
+msgstr "Haqiqiylikni tekshirib bo‘lmadi"
 
 #: src/greeter-list.vala:925
 msgid "Failed to start session"
-msgstr "Сеансни ишга тушириб бўлмади"
+msgstr "Seansni ishga tushirib bo‘lmadi"
 
 #: src/greeter-list.vala:940
 msgid "Logging in..."
-msgstr ""
+msgstr "Tizimga kirmoqda..."
 
 #: src/main-window.vala:49
 msgid "Login Screen"
-msgstr ""
+msgstr "Kirish ekrani"
 
 #: src/main-window.vala:110
 msgid "Back"
-msgstr "Орқага"
+msgstr "Orqaga"
 
 #: src/menubar.vala:322
 msgid "Power:"
-msgstr ""
+msgstr "Quvvat:"
 
 #: src/menubar.vala:372
 msgid "Accessibility"
-msgstr ""
+msgstr "Foydalanish imkoniyati"
 
 #: src/menubar.vala:381
 msgid "Onscreen keyboard"
-msgstr ""
+msgstr "Ekrandagi klaviatura"
 
 #: src/menubar.vala:386
 msgid "High Contrast"
-msgstr ""
+msgstr "Yuqori kontrast"
 
 #: src/menubar.vala:392
 msgid "Screen Reader"
-msgstr ""
+msgstr "Ekran o‘quvchisi"
 
 #: src/menubar.vala:404 src/menubar.vala:451
 msgid "Quit..."
-msgstr ""
+msgstr "Chiqish..."
 
 #: src/menubar.vala:417 src/shutdown-dialog.vala:155
 msgid "Suspend"
-msgstr "Кутиш усули"
+msgstr "Vaqtincha toʻxtatish"
 
 #: src/menubar.vala:435 src/shutdown-dialog.vala:172
 msgid "Hibernate"
-msgstr "Уйқуга кетиш"
+msgstr "Uyquga ketish"
 
 #: src/menubar.vala:474
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "Klaviaturaning joylashuvi:"
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
-msgstr ""
+msgstr "Sessiya opsiyalari"
 
 #: src/session-list.vala:34
 msgid "Select desktop environment"
-msgstr "Иш столи муҳитини танланг"
+msgstr "Ish stoli muhitini tanlang"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr ""
+msgstr "Xayr. Istaysizmi..."
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
-msgstr "Ўчириш"
+msgstr "O‘chirish"
 
 #: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
@@ -115,34 +116,36 @@ msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
-"Kompyuterga boshqa foydalanuvchilar ham kirgan, hozir o'chirish ushbu boshqa "
+"Kompyuterga boshqa foydalanuvchilar ham kirgan, hozir o‘chirish ushbu boshqa "
 "sessiyalarni ham yakunlaydi."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
-msgstr "Ўчириб-ёқиш"
+msgstr "Qayta ishga tushirish"
 
 #: src/slick-greeter.vala:616
 msgid "Show release version"
-msgstr ""
+msgstr "Chiqarish versiyasini ko‘rsatish"
 
 #: src/slick-greeter.vala:619
 msgid "Run in test mode"
-msgstr ""
+msgstr "Sinov rejimida ishga tushirish"
 
 #: src/slick-greeter.vala:635
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
+"Mavjud buyruq qatori opsiyalarining toʻliq roʻyxatini koʻrish uchun “%s --"
+"help”ni ishga tushiring."
 
 #: src/toggle-box.vala:98
 #, c-format
 msgid "%s (Default)"
-msgstr "%s (odatiy)"
+msgstr "%s (standart)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
-msgstr ""
+msgstr "Mehmon sessiyasi"
 
 #: src/user-list.vala:438
 msgid "Please enter a complete e-mail address"
@@ -157,14 +160,16 @@ msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"Agarda RDP yoki Citrix serverlarida sizning qaydingiz mavjud bo‘lsa, Ubuntu "
-"Remote Login sizga ushbu serverdan ishga tushirib beradi"
+"Agar sizda RDP yoki Citrix serverida hisob qaydnomangiz bo‘lsa, masofaviy "
+"kirish ushbu serverdan ilovalarni ishga tushirish imkonini beradi."
 
 #: src/user-list.vala:551
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
+"Agar RDP serverida hisob qaydnomangiz bo‘lsa, Masofaviy kirish ushbu "
+"serverdan ilovalarni ishga tushirish imkonini beradi."
 
 #: src/user-list.vala:554
 msgid "Cancel"
@@ -172,13 +177,15 @@ msgstr "Bekor qilish"
 
 #: src/user-list.vala:555
 msgid "Set Up..."
-msgstr ""
+msgstr "Sozlash..."
 
 #: src/user-list.vala:557
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
 msgstr ""
+"Ushbu xizmatdan foydalanish uchun sizga Ubuntu Remote Login hisobi kerak. "
+"Hisobni hozir sozlamoqchimisiz?"
 
 #: src/user-list.vala:561
 msgid "OK"
@@ -189,10 +196,13 @@ msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
 msgstr ""
+"Ushbu xizmatdan foydalanish uchun sizga Ubuntu Remote Login hisobi kerak. "
+"Hisob qaydnomasini o‘rnatish uchun uccs.canonical.com saytiga tashrif "
+"buyuring."
 
 #: src/user-list.vala:681
 msgid "Server type not supported."
-msgstr "Сервер тури кўллаб-қувватланмайди."
+msgstr "Server turi ko‘llab-quvvatlanmaydi."
 
 #: src/user-list.vala:722
 msgid "Domain:"
@@ -200,26 +210,26 @@ msgstr "Domen:"
 
 #: src/user-list.vala:783
 msgid "Email address:"
-msgstr "Электрон почта манзили"
+msgstr "Elektron pochta manzili:"
 
 #: src/user-list.vala:827
 msgid "Log In"
-msgstr "Кириш"
+msgstr "Kirish"
 
 #: src/user-list.vala:828
 #, c-format
 msgid "Login as %s"
-msgstr ""
+msgstr "%s sifatida tizimga kirish"
 
 #: src/user-list.vala:832
 msgid "Retry"
-msgstr "Қайтадан уриниш"
+msgstr "Qaytadan urinish"
 
 #: src/user-list.vala:833
 #, c-format
 msgid "Retry as %s"
-msgstr "%s сифатида бошқатдан уриниб кўриш"
+msgstr "%s sifatida boshqatdan urinib ko‘rish"
 
 #: src/user-list.vala:871
 msgid "Login"
-msgstr ""
+msgstr "Tizimga kirish"
