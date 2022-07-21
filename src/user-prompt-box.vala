@@ -31,7 +31,7 @@ public class UserPromptBox : PromptBox
 
     protected Hdy.Avatar avatar;
 
-    public UserPromptBox (string name, LoadableIcon avatar_pic)/*, string avatar_path)*/
+    public UserPromptBox (string name, LoadableIcon avatar_pic)
     {
         Object (id: name);
 
