@@ -840,12 +840,12 @@ public class UserList : GreeterList
         redraw_greeter_box ();
     }
 
-    public void add_user (string name, string label, LightDM.User user = null, string? background = null, bool is_active = false, bool has_messages = false, string? session = null)
+    public void add_user (string name, string label, string? avatar = null, string? background = null, bool is_active = false, bool has_messages = false, string? session = null)
     {
         var e = find_entry (name) as UserPromptBox;
         if (e == null)
         {
-            e = new UserPromptBox (name, user);
+            e = new UserPromptBox (name, avatar);
             e.respond.connect (prompt_box_respond_cb);
             e.login.connect (prompt_box_login_cb);
             e.show_options.connect (prompt_box_show_options_cb);
@@ -1061,7 +1061,7 @@ public class UserList : GreeterList
         if (user.real_name == "")
             label = user.name;
 
-        add_user (user.name, label, user, user.background, user.logged_in, user.has_messages, user.session);
+        add_user (user.name, label, user.image, user.background, user.logged_in, user.has_messages, user.session);
     }
 
     private bool filter_group (string user_name)
