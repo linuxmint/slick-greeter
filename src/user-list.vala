@@ -845,7 +845,10 @@ public class UserList : GreeterList
         var e = find_entry (name) as UserPromptBox;
         if (e == null)
         {
-            e = new UserPromptBox (name, avatar);
+
+            FileIcon avatar_pic = new FileIcon (File.new_for_path (avatar));
+
+            e = new UserPromptBox (name, avatar_pic);
             e.respond.connect (prompt_box_respond_cb);
             e.login.connect (prompt_box_login_cb);
             e.show_options.connect (prompt_box_show_options_cb);

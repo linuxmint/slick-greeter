@@ -31,7 +31,7 @@ public class UserPromptBox : PromptBox
 
     protected Hdy.Avatar avatar;
 
-    public UserPromptBox (string name, string avatar_path)/*, string avatar_path)*/
+    public UserPromptBox (string name, LoadableIcon avatar_pic)/*, string avatar_path)*/
     {
         Object (id: name);
 
@@ -39,8 +39,8 @@ public class UserPromptBox : PromptBox
         //FIXME: Avatar is not respecting animation
         //TODO: Make avatar easily disabled from settings
         avatar = new Hdy.Avatar(42, name, true);
-        if(avatar_path!=null)
-            avatar.set_loadable_icon(new FileIcon (File.new_for_path (avatar_path)));
+        if(avatar_pic!=null)
+            avatar.set_loadable_icon(avatar_pic);
        // avatar.loadable_icon = new FileIcon (avatar_path);
         avatar.show();
         name_grid.attach(avatar, -1, 0, 1, 1);
