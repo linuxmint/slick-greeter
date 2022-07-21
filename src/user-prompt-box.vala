@@ -29,17 +29,19 @@ public class UserPromptBox : PromptBox
     /* True if should be marked as active */
     public bool is_active;
 
-    protected Gtk.Widget avatar;
+    protected Hdy.Avatar avatar;
 
-    public UserPromptBox (string name)
+    public UserPromptBox (string name, LightDM.User user)/*, string avatar_path)*/
     {
         Object (id: name);
 
         //FIXME: Avatar is overlaping clickable userbox space
         //FIXME: Avatar is not respecting animation
-        //TODO: Display user picture instead of first letter
         //TODO: Make avatar easily disabled from settings
         avatar = new Hdy.Avatar(42, name, true);
+        if(user!=null)
+            avatar.set_loadable_icon(new FileIcon (File.new_for_path (user.image)));
+       // avatar.loadable_icon = new FileIcon (avatar_path);
         avatar.show();
         name_grid.attach(avatar, -1, 0, 1, 1);
 
