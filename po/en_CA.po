@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2021-12-31 12:12+0000\n"
-"Last-Translator: Michael Webster <Unknown>\n"
+"PO-Revision-Date: 2022-07-12 09:51+0000\n"
+"Last-Translator: Dawid Wiktor <Unknown>\n"
 "Language-Team: English (Canada) <en_CA@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2022-06-26 11:28+0000\n"
-"X-Generator: Launchpad (build 51a2e4fa2e9b8e45f00904ad7f53546f45ac48a5)\n"
+"X-Launchpad-Export-Date: 2022-12-02 14:13+0000\n"
+"X-Generator: Launchpad (build 51cef3d08dff1e227b5ada709bd67280c567d4be)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
@@ -40,7 +40,7 @@ msgstr "Failed to authenticate"
 
 #: src/greeter-list.vala:925
 msgid "Failed to start session"
-msgstr ""
+msgstr "Failed to start session"
 
 #: src/greeter-list.vala:940
 msgid "Logging in..."
@@ -56,11 +56,11 @@ msgstr "Back"
 
 #: src/menubar.vala:322
 msgid "Power:"
-msgstr ""
+msgstr "Power:"
 
 #: src/menubar.vala:372
 msgid "Accessibility"
-msgstr ""
+msgstr "Accessibility"
 
 #: src/menubar.vala:381
 msgid "Onscreen keyboard"
@@ -76,7 +76,7 @@ msgstr "Screen Reader"
 
 #: src/menubar.vala:404 src/menubar.vala:451
 msgid "Quit..."
-msgstr ""
+msgstr "Quit..."
 
 #: src/menubar.vala:417 src/shutdown-dialog.vala:155
 msgid "Suspend"
@@ -88,7 +88,7 @@ msgstr "Hibernate"
 
 #: src/menubar.vala:474
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "Keyboard layout:"
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
@@ -100,7 +100,7 @@ msgstr "Select desktop environment"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr ""
+msgstr "Goodbye. Would you like to..."
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
@@ -175,7 +175,7 @@ msgstr "Cancel"
 
 #: src/user-list.vala:555
 msgid "Set Up..."
-msgstr ""
+msgstr "Set Up..."
 
 #: src/user-list.vala:557
 msgid ""

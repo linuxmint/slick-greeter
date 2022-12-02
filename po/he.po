@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2022-05-25 15:04+0000\n"
-"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
+"PO-Revision-Date: 2022-09-19 06:24+0000\n"
+"Last-Translator: Avi Markovitz <avi.markovitz@gmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2022-06-26 11:28+0000\n"
-"X-Generator: Launchpad (build 51a2e4fa2e9b8e45f00904ad7f53546f45ac48a5)\n"
+"X-Launchpad-Export-Date: 2022-12-02 14:13+0000\n"
+"X-Generator: Launchpad (build 51cef3d08dff1e227b5ada709bd67280c567d4be)\n"
 
 #: src/greeter-list.vala:302
 #, c-format
@@ -40,7 +40,7 @@ msgstr "אימות כשל"
 
 #: src/greeter-list.vala:925
 msgid "Failed to start session"
-msgstr "התחלת ההפעלה נכשלה"
+msgstr "אירע כשל בפתיחת שיח"
 
 #: src/greeter-list.vala:940
 msgid "Logging in..."
@@ -92,7 +92,7 @@ msgstr "פריסת מקלדת:"
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
-msgstr "אפשרויות הפעלה"
+msgstr "אפשרויות שיח"
 
 #: src/session-list.vala:34
 msgid "Select desktop environment"
@@ -115,7 +115,7 @@ msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
-"יש משתמשים אחרים שמחוברים למחשב, כיבוי המחשב יסגור גם את ההפעלות שלהם."
+"משתמשים אחרים מחוברים למחשבזה, כיבוי המחשב יביא גם לסגירת השיחות הללו."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
@@ -143,7 +143,7 @@ msgstr "%s (ברירת מחדל)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
-msgstr "הפעלת אורח"
+msgstr "שיח אורח"
 
 #: src/user-list.vala:438
 msgid "Please enter a complete e-mail address"
