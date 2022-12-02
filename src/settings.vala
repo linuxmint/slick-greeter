@@ -35,6 +35,8 @@ public class UGSettings
     public const string KEY_OTHER_MONITORS_LOGO = "other-monitors-logo";
     public const string KEY_THEME_NAME = "theme-name";
     public const string KEY_ICON_THEME_NAME = "icon-theme-name";
+    public const string KEY_CURSOR_THEME_NAME = "cursor-theme-name";
+    public const string KEY_CURSOR_THEME_SIZE = "cursor-theme-size";
     public const string KEY_FONT_NAME = "font-name";
     public const string KEY_XFT_ANTIALIAS = "xft-antialias";
     public const string KEY_XFT_DPI = "xft-dpi";
@@ -125,6 +127,7 @@ public class UGSettings
             string_keys.append (KEY_OTHER_MONITORS_LOGO);
             string_keys.append (KEY_THEME_NAME);
             string_keys.append (KEY_ICON_THEME_NAME);
+            string_keys.append (KEY_CURSOR_THEME_NAME);
             string_keys.append (KEY_FONT_NAME);
             string_keys.append (KEY_PLAY_READY_SOUND);
             string_keys.append (KEY_XFT_HINTSTYLE);
@@ -148,6 +151,7 @@ public class UGSettings
 
             var int_keys = new List<string> ();
             int_keys.append (KEY_XFT_DPI);
+            int_keys.append (KEY_CURSOR_THEME_SIZE);
 
             var strv_keys = new List<string> ();
             strv_keys.append (KEY_HIDDEN_USERS);

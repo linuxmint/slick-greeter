@@ -762,14 +762,29 @@ public class SlickGreeter
         debug ("Setting GTK+ settings");
         var settings = Gtk.Settings.get_default ();
         var value = UGSettings.get_string (UGSettings.KEY_THEME_NAME);
-        if (value != "")
+        if (value != ""){
+            debug ("Setting GTK theme: %s", value);
             settings.set ("gtk-theme-name", value, null);
+        }
         value = UGSettings.get_string (UGSettings.KEY_ICON_THEME_NAME);
-        if (value != "")
+        if (value != ""){
+            debug ("Setting icon theme: %s", value);
             settings.set ("gtk-icon-theme-name", value, null);
+        }
+        value = UGSettings.get_string (UGSettings.KEY_CURSOR_THEME_NAME);
+        if (value != "") {
+            debug ("Setting cursor theme: %s", value);
+            settings.set ("gtk-cursor-theme-name", value, null);
+        }
+        var int_value = UGSettings.get_integer (UGSettings.KEY_CURSOR_THEME_SIZE);
+        if (int_value != 0) {
+            debug ("Settings cursor theme size: %d", int_value);
+            settings.set ("gtk-cursor-theme-size", int_value, null);
+        }
         value = UGSettings.get_string (UGSettings.KEY_FONT_NAME);
-        if (value != "")
+        if (value != ""){
             settings.set ("gtk-font-name", value, null);
+        }
         var double_value = UGSettings.get_double (UGSettings.KEY_XFT_DPI);
         if (double_value != 0.0)
             settings.set ("gtk-xft-dpi", (int) (1024 * double_value), null);
