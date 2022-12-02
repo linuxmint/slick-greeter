@@ -66,8 +66,8 @@
       <summary>Cursor theme to use</summary>
     </key>
     <key name="cursor-theme-size" type="i">
-      <default>0</default>
-      <summary>Size to use for cursors - 0 is default size</summary>
+      <default>24</default>
+      <summary>Size to use for cursors</summary>
     </key>
     <key name="font-name" type="s">
       <default>'Ubuntu 11'</default>
