@@ -204,6 +204,13 @@ public class SlickGreeter
             }
         }
 
+        foreach (string session in sessions) {
+            var path = Path.build_filename  ("/usr/share/wayland-sessions/", session.concat(".desktop"), null);
+            if (FileUtils.test (path, FileTest.EXISTS)) {
+                return session;
+            }
+        }
+
         warning ("Could not find a default session.");
         return null;
     }
@@ -214,7 +221,8 @@ public class SlickGreeter
         otherwise, return the default session. */
         if (session != null) {
             var path = Path.build_filename  ("/usr/share/xsessions/", session.concat(".desktop"), null);
-            if (!FileUtils.test (path, FileTest.EXISTS) ) {
+            var waypath = Path.build_filename  ("/usr/share/wayland-sessions/", session.concat(".desktop"), null);
+            if (!FileUtils.test (path, FileTest.EXISTS) & !FileUtils.test (waypath, FileTest.EXISTS)) {
                 debug ("Invalid session: '%s'", session);
                 session = null;
             }
