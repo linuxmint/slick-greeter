@@ -318,8 +318,7 @@ public class MenuBar : Gtk.MenuBar
             power_menu_item.hide ();
         }
         else {
-            char[] buffer = new char[double.DTOSTR_BUF_SIZE];
-            unowned string str = device.percentage.to_str (buffer);
+            var str = Math.round(device.percentage).to_string();
             var percentage_string = str.concat("%");
             power_label.set_label(percentage_string);
             power_menu_item.set_tooltip_text (_("Power:").concat(" ").concat(percentage_string));
