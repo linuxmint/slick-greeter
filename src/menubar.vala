@@ -481,6 +481,65 @@ public class MenuBar : Gtk.MenuBar
         hbox.add (label);
         item.show ();
 
+        var system_menu = new Gtk.Menu(); // only contains the layouts found in /etc/default/keyboard
+        var all_menu = new Gtk.Menu(); // contains all LightDM supported layouts
+
+        // Find the list of keyboard layout defined system-wide
+        var default_layouts = new List<string> ();
+        var file = File.new_for_path ("/etc/default/keyboard");
+        if (file.query_exists ()) {
+            try {
+                var dis = new DataInputStream (file.read ());
+                string line;
+                while ((line = dis.read_line (null)) != null) {
+                    if ("XKBLAYOUT" in line) {
+                        var line_layouts = line.split("=")[1];
+                        line_layouts = line_layouts.replace("'", "");
+                        line_layouts = line_layouts.replace("\"", "");
+                        if ("," in line_layouts) {
+                            foreach (var element in line_layouts.split (",")) {
+                                element = element.strip();
+                                default_layouts.append (element);
+                            }
+                        }
+                        break;
+                    }
+                }
+            } catch (Error e) {
+                warning ("%s", e.message);
+            }
+        }
+
+        // Populate the menu with all the layouts
+        foreach (var layout in LightDM.get_layouts ()) {
+            Gtk.MenuItem menu_item = new Gtk.MenuItem.with_label (layout.name.concat(" - ").concat(layout.description));
+            menu_item.activate.connect (() =>
+            {
+                try {
+                    LightDM.set_layout (layout);
+                    label.set_label(layout.name);
+                    item.set_tooltip_text(_("Keyboard layout:").concat(" ").concat(layout.description));
+                }
+                catch (Error e)
+                {
+                    warning ("Failed to set layout: %s", e.message);
+                }
+            });
+            if (layout.name == current_layout.name || default_layouts.find_custom (layout.name, strcmp) != null) {
+                system_menu.append (menu_item);
+            }
+            else {
+                all_menu.append (menu_item);
+            }
+            menu_item.show ();
+        }
+
+        item.set_submenu (system_menu);
+        Gtk.MenuItem menu_item = new Gtk.MenuItem.with_label (_("More layouts..."));
+        system_menu.append (menu_item);
+        menu_item.set_submenu (all_menu);
+        menu_item.show ();
+
         return item;
     }
 
