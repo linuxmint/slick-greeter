@@ -14,6 +14,7 @@ Build-Depends: at-spi2-core,
                liblightdm-gobject-1-dev | liblightdm-gobject-dev,
                liblightdm-gobject-1-dev | lightdm-vala,
                libpixman-1-dev,
+               libxapp-dev,
                valac (>= 0.20.0),
                xvfb
 Homepage: https://github.com/linuxmint/slick-greeter
@@ -23,6 +24,7 @@ Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends},
          lightdm,
+         libxapp1,
          python3
 Suggests: lightdm-remote-session-freerdp,
           lightdm-remote-session-uccsconfigure,

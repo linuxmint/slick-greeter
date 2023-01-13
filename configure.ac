@@ -27,6 +27,7 @@ PKG_CHECK_MODULES(SLICK_GREETER, [
     pixman-1
     x11
     xext
+    xapp
 ])
 
 dnl ###########################################################################
