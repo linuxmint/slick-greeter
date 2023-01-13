@@ -515,15 +515,9 @@ public class MenuBar : Gtk.MenuBar
             Gtk.MenuItem menu_item = new Gtk.MenuItem.with_label (layout.name.concat(" - ").concat(layout.description));
             menu_item.activate.connect (() =>
             {
-                try {
-                    LightDM.set_layout (layout);
-                    label.set_label(layout.name);
-                    item.set_tooltip_text(_("Keyboard layout:").concat(" ").concat(layout.description));
-                }
-                catch (Error e)
-                {
-                    warning ("Failed to set layout: %s", e.message);
-                }
+                LightDM.set_layout (layout);
+                label.set_label(layout.name);
+                item.set_tooltip_text(_("Keyboard layout:").concat(" ").concat(layout.description));
             });
             if (layout.name == current_layout.name || default_layouts.find_custom (layout.name, strcmp) != null) {
                 system_menu.append (menu_item);
