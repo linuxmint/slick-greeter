@@ -291,12 +291,17 @@ public class PromptBox : FadableBox
         queue_draw ();
     }
 
-    public void set_options_image (Gdk.Pixbuf? image)
+    public void set_options_image (Gdk.Pixbuf? image, string? tooltip)
     {
         if (option_button == null)
             return;
 
         option_image.pixbuf = image;
+
+        if (tooltip == null)
+            option_image.set_tooltip_text("");
+        else
+            option_image.set_tooltip_text(tooltip);
 
         if (image == null)
             option_button.hide ();

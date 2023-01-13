@@ -159,7 +159,7 @@ public abstract class GreeterList : FadableBox
             /* When we swap out a scrolling entry, make sure to hide its
              * image button, else it will appear in the tab chain. */
             if (_scrolling_entry != null)
-                _scrolling_entry.set_options_image (null);
+                _scrolling_entry.set_options_image (null, null);
             _scrolling_entry = value;
         }
     }
