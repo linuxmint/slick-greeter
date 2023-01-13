@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-14 16:49+0200\n"
+"POT-Creation-Date: 2023-01-13 12:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,52 +42,56 @@ msgstr ""
 msgid "Failed to start session"
 msgstr ""
 
-#: src/greeter-list.vala:940
+#: src/greeter-list.vala:939
 msgid "Logging in..."
 msgstr ""
 
-#: src/main-window.vala:49
+#: src/main-window.vala:52
 msgid "Login Screen"
 msgstr ""
 
-#: src/main-window.vala:110
+#: src/main-window.vala:113
 msgid "Back"
 msgstr ""
 
-#: src/menubar.vala:322
+#: src/menubar.vala:324
 msgid "Power:"
 msgstr ""
 
-#: src/menubar.vala:372
+#: src/menubar.vala:374
 msgid "Accessibility"
 msgstr ""
 
-#: src/menubar.vala:381
+#: src/menubar.vala:383
 msgid "Onscreen keyboard"
 msgstr ""
 
-#: src/menubar.vala:386
+#: src/menubar.vala:388
 msgid "High Contrast"
 msgstr ""
 
-#: src/menubar.vala:392
+#: src/menubar.vala:394
 msgid "Screen Reader"
 msgstr ""
 
-#: src/menubar.vala:404 src/menubar.vala:451
+#: src/menubar.vala:406 src/menubar.vala:453
 msgid "Quit..."
 msgstr ""
 
-#: src/menubar.vala:417 src/shutdown-dialog.vala:155
+#: src/menubar.vala:419 src/shutdown-dialog.vala:155
 msgid "Suspend"
 msgstr ""
 
-#: src/menubar.vala:435 src/shutdown-dialog.vala:172
+#: src/menubar.vala:437 src/shutdown-dialog.vala:172
 msgid "Hibernate"
 msgstr ""
 
-#: src/menubar.vala:474
+#: src/menubar.vala:476 src/menubar.vala:521
 msgid "Keyboard layout:"
+msgstr ""
+
+#: src/menubar.vala:538
+msgid "More layouts..."
 msgstr ""
 
 #: src/prompt-box.vala:215
@@ -120,15 +124,15 @@ msgstr ""
 msgid "Restart"
 msgstr ""
 
-#: src/slick-greeter.vala:616
+#: src/slick-greeter.vala:736
 msgid "Show release version"
 msgstr ""
 
-#: src/slick-greeter.vala:619
+#: src/slick-greeter.vala:739
 msgid "Run in test mode"
 msgstr ""
 
-#: src/slick-greeter.vala:635
+#: src/slick-greeter.vala:755
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
@@ -216,6 +220,6 @@ msgstr ""
 msgid "Retry as %s"
 msgstr ""
 
-#: src/user-list.vala:871
+#: src/user-list.vala:875
 msgid "Login"
 msgstr ""
