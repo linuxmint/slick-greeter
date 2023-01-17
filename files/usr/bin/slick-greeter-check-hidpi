@@ -13,13 +13,11 @@ def get_window_scale():
     window_scale = 1
     try:
         display = Gdk.Display.get_default()
-        screen = display.get_default_screen()
-        primary = screen.get_primary_monitor()
-
-        rect = screen.get_monitor_geometry(primary)
-        width_mm = screen.get_monitor_width_mm(primary)
-        height_mm = screen.get_monitor_height_mm(primary)
-        monitor_scale = screen.get_monitor_scale_factor(primary)
+        monitor = display.get_primary_monitor()
+        rect = monitor.get_geometry()
+        width_mm = monitor.get_width_mm()
+        height_mm = monitor.get_height_mm()
+        monitor_scale = monitor.get_scale_factor()
 
         # Return 1 if the screen size isn't available (some TVs report their aspect ratio instead ... 16/9 or 16/10)
         if ((width_mm == 160 and height_mm == 90) \
