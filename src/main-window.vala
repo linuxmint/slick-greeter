@@ -394,16 +394,6 @@ public class MainWindow : Gtk.Window
             if (login_box.sensitive)
                 top.scroll (GreeterList.ScrollTarget.DOWN);
             return true;
-        case Gdk.Key.Left:
-        case Gdk.Key.KP_Left:
-            if (shutdown_dialog != null)
-                shutdown_dialog.focus_prev ();
-            return true;
-        case Gdk.Key.Right:
-        case Gdk.Key.KP_Right:
-            if (shutdown_dialog != null)
-                shutdown_dialog.focus_next ();
-            return true;
         case Gdk.Key.F10:
             if (login_box.sensitive)
                 menubar.select_first (false);
