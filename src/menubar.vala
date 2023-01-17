@@ -571,9 +571,17 @@ public class MenuBar : Gtk.MenuBar
             try
             {
                 string[] argv;
+                string cmd;
                 int onboard_stdout_fd;
-
-                Shell.parse_argv ("onboard --xid", out argv);
+                var layout = UGSettings.get_string (UGSettings.KEY_ONSCREEN_KEYBOARD_LAYOUT);
+                var file = File.new_for_path (layout);
+                if (file.query_exists ()) {
+                    cmd = "onboard --xid --layout='%s'".printf (layout);
+                }
+                else {
+                    cmd = "onboard --xid";
+                }
+                Shell.parse_argv (cmd, out argv);
                 Process.spawn_async_with_pipes (null,
                                                 argv,
                                                 null,

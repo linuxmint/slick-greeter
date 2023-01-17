@@ -147,5 +147,9 @@
       <default>'%H:%M'</default>
       <summary>What clock format to use (e.g., %H:%M or %l:%M %p)</summary>
     </key>
+    <key name="onscreen-keyboard-layout" type="s">
+      <default>'/usr/share/onboard/layouts/Small.onboard'</default>
+      <summary>Path of the onscreen keyboard layout</summary>
+    </key>
   </schema>
 </schemalist>
