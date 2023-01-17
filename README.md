@@ -55,7 +55,7 @@ Configuration file format for /etc/lightdm/slick-greeter.conf
     # high-contrast=Whether to use a high contrast theme (true or false)
     # screen-reader=Whether to enable the screen reader (true or false)
     # play-ready-sound=A sound file to play when the greeter is ready
-    # hidden-users=List of usernames that are hidden until a special key combination is hit
+    # hidden-users=List of usernames (separated by semicolons) that are hidden until Ctr+Alt+Shift is pressed
     # group-filter=List of groups that users must be part of to be shown (empty list shows all users)
     # enable-hidpi=Whether to enable HiDPI support (on/off/auto)
     # only-on-monitor=Sets the monitor on which to show the login window, -1 means "follow the mouse"
