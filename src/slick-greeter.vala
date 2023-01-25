@@ -642,6 +642,16 @@ public class SlickGreeter
         }
     }
 
+    private static void enable_tap_to_click ()
+    {
+        try {
+            Process.spawn_command_line_sync("/usr/bin/slick-greeter-enable-tap-to-click", null, null, null);
+        }
+        catch (Error e){
+            warning ("Error while enabling tap-to-click: %s", e.message);
+        }
+    }
+
     private static void activate_numlock ()
     {
         try {
@@ -720,6 +730,9 @@ public class SlickGreeter
             debug ("Activating numlock");
             activate_numlock ();
         }
+
+        /* Enable touchpad tap-to-click */
+        enable_tap_to_click ();
 
         Gtk.init (ref args);
 
