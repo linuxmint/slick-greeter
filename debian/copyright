@@ -14,19 +14,11 @@ Copyright: 2012-2015 Rosetta Contributors and Canonical Ltd 2012
  2017 Clement Lefebvre <root@linuxmint.com>
 License: GPL-3
 
-Files: /usr/share/slick-greeter/badges/*
+Files: files/usr/share/slick-greeter/badges/*
 Copyright: 2013 zombifier
 License: CC-BY-3.0
 
-Files: /usr/share/slick-greeter/badges/mwm.png
-Copyright: 2012 Canonical Ltd
-           2013 Graham Inggs <graham@nerve.org.za>
-License: GPL-3
-Comment: Created in GIMP using /usr/share/unity-greeter/unknown_badge.png,
- from Ubuntu's unity-greeter package, as a template. As per:
- https://lists.ubuntu.com/archives/ubuntu-devel/2012-February/034800.html
-
-Files: /usr/share/slick-greeter/badges/budgie-desktop.png
+Files: files/usr/share/slick-greeter/badges/budgie-desktop.svg
 Copyright: 2017 David Mohammed <fossfreedom@ubuntu.com>
 License: CC-BY-3.0
 
