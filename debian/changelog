@@ -1,3 +1,32 @@
+slick-greeter (1.8.0) victoria; urgency=medium
+
+  [ Clement Lefebvre ]
+  * power: Round battery power percentage
+  * keyboard: Add support for layout switching
+  * l10n: Update POT
+  * Fix unreachable catch clause
+  * orca: Fix wrong a11y text for username prompt
+  * sessions: Make the list scrollable
+  * badges: Add pademelon
+  * badges: Add lxqt
+  * keyboard: Update label when keymap changes
+  * sessions: Add a tooltip on the session badge
+  * sessions: Close dialog on Escape
+  * keyboard navigation: Don't prevent left/right movement in Gtk.Entry
+  * a11y: Make the onboard layout configurable
+  * entry: Support the ability to reveal the password
+  * slick-greeter-check-hidpi: Fix deprecations
+  * user-list: Allow hidden user visibility to be toggled
+  * Enable touchpad tap-to-click
+
+  [ Himadri Sekhar Basu ]
+  * Update debian compatibility and standards
+
+  [ Clement Lefebvre ]
+  * l10n: Update POT
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 01 Jun 2023 11:08:39 +0100
+
 slick-greeter (1.6.1) vera; urgency=medium
 
   [ Ivan Podogov ]
