@@ -7,92 +7,100 @@ msgid ""
 msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2021-05-23 20:51+0000\n"
+"POT-Creation-Date: 2023-06-01 11:07+0100\n"
+"PO-Revision-Date: 2023-06-02 16:39+0000\n"
 "Last-Translator: Anton Hryb <Unknown>\n"
 "Language-Team: Belarusian <be@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2022-12-02 14:13+0000\n"
-"X-Generator: Launchpad (build 51cef3d08dff1e227b5ada709bd67280c567d4be)\n"
+"X-Launchpad-Export-Date: 2023-06-08 10:22+0000\n"
+"X-Generator: Launchpad (build 620cd5280e3a973662e263ebf9346837ed657a46)\n"
 
-#: src/greeter-list.vala:302
+#: src/greeter-list.vala:303
 #, c-format
 msgid "Enter password for %s"
 msgstr "Увядзіце пароль для %s"
 
-#: src/greeter-list.vala:811 src/user-list.vala:703
+#: src/greeter-list.vala:305
+msgid "Enter your username"
+msgstr "Увядзіце ваша імя карыстальніка"
+
+#: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
 msgstr "Пароль:"
 
-#: src/greeter-list.vala:813 src/user-list.vala:697
+#: src/greeter-list.vala:817 src/user-list.vala:714
 msgid "Username:"
 msgstr "Карыстальнік:"
 
-#: src/greeter-list.vala:868
+#: src/greeter-list.vala:872
 msgid "Invalid password, please try again"
 msgstr "Няправільны пароль, паспрабуйце яшчэ раз"
 
-#: src/greeter-list.vala:879
+#: src/greeter-list.vala:883
 msgid "Failed to authenticate"
 msgstr "Памылка аўтэнтыфікацыі"
 
-#: src/greeter-list.vala:925
+#: src/greeter-list.vala:929
 msgid "Failed to start session"
 msgstr "Не атрымалася запусціць сесію"
 
-#: src/greeter-list.vala:940
+#: src/greeter-list.vala:943
 msgid "Logging in..."
 msgstr "Ажыццяўляецца ўваход ..."
 
-#: src/main-window.vala:49
+#: src/main-window.vala:52
 msgid "Login Screen"
 msgstr "Экран уваходу"
 
-#: src/main-window.vala:110
+#: src/main-window.vala:113
 msgid "Back"
 msgstr "Назад"
 
-#: src/menubar.vala:322
+#: src/menubar.vala:324
 msgid "Power:"
 msgstr "Сілкаванне:"
 
-#: src/menubar.vala:372
+#: src/menubar.vala:374
 msgid "Accessibility"
 msgstr "Спецыяльныя магчымасці"
 
-#: src/menubar.vala:381
+#: src/menubar.vala:383
 msgid "Onscreen keyboard"
 msgstr "Экранная клавіятура"
 
-#: src/menubar.vala:386
+#: src/menubar.vala:388
 msgid "High Contrast"
 msgstr "Высокая кантраснасць"
 
-#: src/menubar.vala:392
+#: src/menubar.vala:394
 msgid "Screen Reader"
 msgstr "Чытанне з экрана"
 
-#: src/menubar.vala:404 src/menubar.vala:451
+#: src/menubar.vala:406 src/menubar.vala:453
 msgid "Quit..."
 msgstr "Выйсці..."
 
-#: src/menubar.vala:417 src/shutdown-dialog.vala:155
+#: src/menubar.vala:419 src/shutdown-dialog.vala:155
 msgid "Suspend"
 msgstr "Прыпыніць"
 
-#: src/menubar.vala:435 src/shutdown-dialog.vala:172
+#: src/menubar.vala:437 src/shutdown-dialog.vala:172
 msgid "Hibernate"
 msgstr "Гібернацыя"
 
-#: src/menubar.vala:474
+#: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
 msgid "Keyboard layout:"
 msgstr "Раскладка клавіятуры:"
 
+#: src/menubar.vala:532
+msgid "More layouts..."
+msgstr "Больш раскладак..."
+
 #: src/prompt-box.vala:215
 msgid "Session Options"
-msgstr "Параметры сеансу"
+msgstr "Параметры сеанса"
 
 #: src/session-list.vala:34
 msgid "Select desktop environment"
@@ -122,22 +130,22 @@ msgstr ""
 msgid "Restart"
 msgstr "Перазапусціць"
 
-#: src/slick-greeter.vala:616
+#: src/slick-greeter.vala:749
 msgid "Show release version"
 msgstr "Паказаць версію выпуску"
 
-#: src/slick-greeter.vala:619
+#: src/slick-greeter.vala:752
 msgid "Run in test mode"
 msgstr "Запусціць у тэставым рэжыме"
 
-#: src/slick-greeter.vala:635
+#: src/slick-greeter.vala:768
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
 "Выканайце \"%s --help\", каб убачыць спіс усіх магчымых опцый каманднага "
 "радка."
 
-#: src/toggle-box.vala:98
+#: src/toggle-box.vala:109
 #, c-format
 msgid "%s (Default)"
 msgstr "%s (Стандартна)"
@@ -146,15 +154,15 @@ msgstr "%s (Стандартна)"
 msgid "Guest Session"
 msgstr "Гасцявая сесія"
 
-#: src/user-list.vala:438
+#: src/user-list.vala:455
 msgid "Please enter a complete e-mail address"
 msgstr "Увядзіце поўны адрас электроннай пошты"
 
-#: src/user-list.vala:518
+#: src/user-list.vala:535
 msgid "Incorrect e-mail address or password"
 msgstr "Няправільны адрас электроннай пошты ці пароль"
 
-#: src/user-list.vala:549
+#: src/user-list.vala:566
 msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
@@ -162,7 +170,7 @@ msgstr ""
 "Калі вы маеце ўліковы запіс на серверы RDP ці Citrix, Remote Login дазволіць "
 "вам запускаць праграмы з гэтага сервера."
 
-#: src/user-list.vala:551
+#: src/user-list.vala:568
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
@@ -170,15 +178,15 @@ msgstr ""
 "Калі вы маеце ўліковы запіс на серверы RDP, Remote Login дазволіць вам "
 "запускаць праграмы з гэтага сервера."
 
-#: src/user-list.vala:554
+#: src/user-list.vala:571
 msgid "Cancel"
 msgstr "Скасаваць"
 
-#: src/user-list.vala:555
+#: src/user-list.vala:572
 msgid "Set Up..."
 msgstr "Усталяванне..."
 
-#: src/user-list.vala:557
+#: src/user-list.vala:574
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
@@ -186,11 +194,11 @@ msgstr ""
 "Каб выкарыстоўваць гэты сервіс, вам патрэбны ўліковы запіс Ubuntu Remote "
 "Login. Ці жадаеце наладзіць яго цяпер?"
 
-#: src/user-list.vala:561
+#: src/user-list.vala:578
 msgid "OK"
 msgstr "Добра"
 
-#: src/user-list.vala:562
+#: src/user-list.vala:579
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
@@ -198,36 +206,36 @@ msgstr ""
 "Каб выкарыстоўваць гэты сервіс, вам патрэбны ўліковы запіс Ubuntu Remote "
 "Login. Наведайце сайт uccs.canonical.com, каб стварыць яго."
 
-#: src/user-list.vala:681
+#: src/user-list.vala:698
 msgid "Server type not supported."
 msgstr "Тып сервера не падтрымліваецца."
 
-#: src/user-list.vala:722
+#: src/user-list.vala:739
 msgid "Domain:"
 msgstr "Дамен:"
 
-#: src/user-list.vala:783
+#: src/user-list.vala:800
 msgid "Email address:"
 msgstr "Электронная пошта:"
 
-#: src/user-list.vala:827
+#: src/user-list.vala:844
 msgid "Log In"
 msgstr "Увайсці"
 
-#: src/user-list.vala:828
+#: src/user-list.vala:845
 #, c-format
 msgid "Login as %s"
 msgstr "Увайсці як %s"
 
-#: src/user-list.vala:832
+#: src/user-list.vala:849
 msgid "Retry"
 msgstr "Паспрабаваць зноў"
 
-#: src/user-list.vala:833
+#: src/user-list.vala:850
 #, c-format
 msgid "Retry as %s"
 msgstr "Паспрабаваць зноў як %s"
 
-#: src/user-list.vala:871
+#: src/user-list.vala:892
 msgid "Login"
 msgstr "Уваход"

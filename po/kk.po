@@ -7,88 +7,96 @@ msgid ""
 msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-07-14 16:49+0200\n"
+"POT-Creation-Date: 2023-06-01 11:07+0100\n"
 "PO-Revision-Date: 2018-07-18 15:55+0000\n"
 "Last-Translator: Murat Käribay <d2vsd1@mail.ru>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2022-12-02 14:13+0000\n"
-"X-Generator: Launchpad (build 51cef3d08dff1e227b5ada709bd67280c567d4be)\n"
+"X-Launchpad-Export-Date: 2023-06-08 10:22+0000\n"
+"X-Generator: Launchpad (build 620cd5280e3a973662e263ebf9346837ed657a46)\n"
 
-#: src/greeter-list.vala:302
+#: src/greeter-list.vala:303
 #, c-format
 msgid "Enter password for %s"
 msgstr "%s үшін құпия сөзді енгізіңіз"
 
-#: src/greeter-list.vala:811 src/user-list.vala:703
+#: src/greeter-list.vala:305
+msgid "Enter your username"
+msgstr ""
+
+#: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
 msgstr "Құпия сөз:"
 
-#: src/greeter-list.vala:813 src/user-list.vala:697
+#: src/greeter-list.vala:817 src/user-list.vala:714
 msgid "Username:"
 msgstr "Пайдаланушы аты:"
 
-#: src/greeter-list.vala:868
+#: src/greeter-list.vala:872
 msgid "Invalid password, please try again"
 msgstr "Құпия сөз дұрыс емес, қайта енгізіп көріңіз"
 
-#: src/greeter-list.vala:879
+#: src/greeter-list.vala:883
 msgid "Failed to authenticate"
 msgstr "Кіру сәтсіз аяқталды"
 
-#: src/greeter-list.vala:925
+#: src/greeter-list.vala:929
 msgid "Failed to start session"
 msgstr "Сеанс бастау болмады"
 
-#: src/greeter-list.vala:940
+#: src/greeter-list.vala:943
 msgid "Logging in..."
 msgstr "Жүйеге кіру..."
 
-#: src/main-window.vala:49
+#: src/main-window.vala:52
 msgid "Login Screen"
 msgstr "Жүйеге кіру экраны"
 
-#: src/main-window.vala:110
+#: src/main-window.vala:113
 msgid "Back"
 msgstr "Артқа"
 
-#: src/menubar.vala:322
+#: src/menubar.vala:324
 msgid "Power:"
 msgstr "Қуаты:"
 
-#: src/menubar.vala:372
+#: src/menubar.vala:374
 msgid "Accessibility"
 msgstr "Қол жетерлілігі"
 
-#: src/menubar.vala:381
+#: src/menubar.vala:383
 msgid "Onscreen keyboard"
 msgstr "Экранды пернетақта"
 
-#: src/menubar.vala:386
+#: src/menubar.vala:388
 msgid "High Contrast"
 msgstr "Жоғары контраст"
 
-#: src/menubar.vala:392
+#: src/menubar.vala:394
 msgid "Screen Reader"
 msgstr "Экраннан оқитын қолданба"
 
-#: src/menubar.vala:404 src/menubar.vala:451
+#: src/menubar.vala:406 src/menubar.vala:453
 msgid "Quit..."
 msgstr "Шығу..."
 
-#: src/menubar.vala:417 src/shutdown-dialog.vala:155
+#: src/menubar.vala:419 src/shutdown-dialog.vala:155
 msgid "Suspend"
 msgstr "Күту режиміне өту"
 
-#: src/menubar.vala:435 src/shutdown-dialog.vala:172
+#: src/menubar.vala:437 src/shutdown-dialog.vala:172
 msgid "Hibernate"
 msgstr "Ұйықтау режиміне өту"
 
-#: src/menubar.vala:474
+#: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
 msgid "Keyboard layout:"
 msgstr "Пернетақта жаймасы:"
+
+#: src/menubar.vala:532
+msgid "More layouts..."
+msgstr ""
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
@@ -122,21 +130,21 @@ msgstr ""
 msgid "Restart"
 msgstr "Компьютерді қайта жүктеу"
 
-#: src/slick-greeter.vala:616
+#: src/slick-greeter.vala:749
 msgid "Show release version"
 msgstr "Нұсқа ақпаратын көрсету"
 
-#: src/slick-greeter.vala:619
+#: src/slick-greeter.vala:752
 msgid "Run in test mode"
 msgstr "Тестілеу күйінде орындау"
 
-#: src/slick-greeter.vala:635
+#: src/slick-greeter.vala:768
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
 "Командалық жолдың барлық опцияларын қарау үшін '%s --help' енгізіңіз."
 
-#: src/toggle-box.vala:98
+#: src/toggle-box.vala:109
 #, c-format
 msgid "%s (Default)"
 msgstr "%s (Әдепкі)"
@@ -145,15 +153,15 @@ msgstr "%s (Әдепкі)"
 msgid "Guest Session"
 msgstr "Қонақ сессиясы"
 
-#: src/user-list.vala:438
+#: src/user-list.vala:455
 msgid "Please enter a complete e-mail address"
 msgstr "Толығымен электрондық поштаңыздың мекен-жайын енгізіңіз"
 
-#: src/user-list.vala:518
+#: src/user-list.vala:535
 msgid "Incorrect e-mail address or password"
 msgstr "Құпия сөзі немесе электрондық поштаңыздың мекен-жайы қате"
 
-#: src/user-list.vala:549
+#: src/user-list.vala:566
 msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
@@ -161,7 +169,7 @@ msgstr ""
 "Сізде RDP немесе Citrix серверінде тіркелгі бар болса, Ubuntu Remote Login "
 "сізге сол серверден бағдарламаны іске қосуын мүмкіндік береді."
 
-#: src/user-list.vala:551
+#: src/user-list.vala:568
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
@@ -169,15 +177,15 @@ msgstr ""
 "Сізде RDP серверінде тіркелгі бар болса, қашықтан кіру сізге сол сервердегі "
 "бағдарламаларды іске қосуына қол жеткізеді."
 
-#: src/user-list.vala:554
+#: src/user-list.vala:571
 msgid "Cancel"
 msgstr "Болдырмау"
 
-#: src/user-list.vala:555
+#: src/user-list.vala:572
 msgid "Set Up..."
 msgstr "Баптау"
 
-#: src/user-list.vala:557
+#: src/user-list.vala:574
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
@@ -185,11 +193,11 @@ msgstr ""
 "Бұл сервиспен қолдану үшін Ubuntu Remote Login-ның тіркелгісі қажет. Қазір "
 "тіркелгіні тіркеуіңіз келеді ме?"
 
-#: src/user-list.vala:561
+#: src/user-list.vala:578
 msgid "OK"
 msgstr "Жақсы(OK)"
 
-#: src/user-list.vala:562
+#: src/user-list.vala:579
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
@@ -197,36 +205,36 @@ msgstr ""
 "Бұл сервиспен қолдану үшін Ubuntu Remote Login-ның тіркелгісі қажет. "
 "Тіркелгіні орнату үшін, осы сайтқа кіріңіз uccs.canonical.com"
 
-#: src/user-list.vala:681
+#: src/user-list.vala:698
 msgid "Server type not supported."
 msgstr "Бұл сервердің түрі қолдауланбайды."
 
-#: src/user-list.vala:722
+#: src/user-list.vala:739
 msgid "Domain:"
 msgstr "Үйшік:"
 
-#: src/user-list.vala:783
+#: src/user-list.vala:800
 msgid "Email address:"
 msgstr "Эл. пошта мекен-жайы:"
 
-#: src/user-list.vala:827
+#: src/user-list.vala:844
 msgid "Log In"
 msgstr "Кіру"
 
-#: src/user-list.vala:828
+#: src/user-list.vala:845
 #, c-format
 msgid "Login as %s"
 msgstr "Жүйеге %s атынан кіру"
 
-#: src/user-list.vala:832
+#: src/user-list.vala:849
 msgid "Retry"
 msgstr "Қайталау"
 
-#: src/user-list.vala:833
+#: src/user-list.vala:850
 #, c-format
 msgid "Retry as %s"
 msgstr "%s ретінде қайталау"
 
-#: src/user-list.vala:871
+#: src/user-list.vala:892
 msgid "Login"
 msgstr "Кіру"

@@ -7,88 +7,96 @@ msgid ""
 msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-07-14 16:49+0200\n"
+"POT-Creation-Date: 2023-06-01 11:07+0100\n"
 "PO-Revision-Date: 2022-11-15 16:31+0000\n"
 "Last-Translator: ParaPsychic <Unknown>\n"
 "Language-Team: Malayalam <ml@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2022-12-02 14:13+0000\n"
-"X-Generator: Launchpad (build 51cef3d08dff1e227b5ada709bd67280c567d4be)\n"
+"X-Launchpad-Export-Date: 2023-06-08 10:22+0000\n"
+"X-Generator: Launchpad (build 620cd5280e3a973662e263ebf9346837ed657a46)\n"
 
-#: src/greeter-list.vala:302
+#: src/greeter-list.vala:303
 #, c-format
 msgid "Enter password for %s"
 msgstr "%s-നുള്ള രഹസ്യവാക്ക് നല്‍കുക"
 
-#: src/greeter-list.vala:811 src/user-list.vala:703
+#: src/greeter-list.vala:305
+msgid "Enter your username"
+msgstr ""
+
+#: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
 msgstr "രഹസ്യവാക്കു് :"
 
-#: src/greeter-list.vala:813 src/user-list.vala:697
+#: src/greeter-list.vala:817 src/user-list.vala:714
 msgid "Username:"
 msgstr "ഉപയോക്തൃനാമം :"
 
-#: src/greeter-list.vala:868
+#: src/greeter-list.vala:872
 msgid "Invalid password, please try again"
 msgstr "തെറ്റായ രഹസ്യവാക്ക്, ദയവായി വീണ്ടും ശ്രമിയ്ക്കുക"
 
-#: src/greeter-list.vala:879
+#: src/greeter-list.vala:883
 msgid "Failed to authenticate"
 msgstr "ആധികാരികത തെളിയിക്കുന്നതില്‍ പരാജയപ്പെട്ടു"
 
-#: src/greeter-list.vala:925
+#: src/greeter-list.vala:929
 msgid "Failed to start session"
 msgstr "സെഷൻ തുടങ്ങുന്നത് പരാജയപെട്ടു"
 
-#: src/greeter-list.vala:940
+#: src/greeter-list.vala:943
 msgid "Logging in..."
 msgstr "പ്രവേശിക്കുന്നു ..."
 
-#: src/main-window.vala:49
+#: src/main-window.vala:52
 msgid "Login Screen"
 msgstr "പ്രവേശന ജാലകം"
 
-#: src/main-window.vala:110
+#: src/main-window.vala:113
 msgid "Back"
 msgstr "പിന്നോട്ട്"
 
-#: src/menubar.vala:322
+#: src/menubar.vala:324
 msgid "Power:"
 msgstr "വിദ്യുത്ച്ഛക്തി"
 
-#: src/menubar.vala:372
+#: src/menubar.vala:374
 msgid "Accessibility"
 msgstr "ഉപയോഗലഭ്യത"
 
-#: src/menubar.vala:381
+#: src/menubar.vala:383
 msgid "Onscreen keyboard"
 msgstr "സ്ക്രീനില്‍ ലഭ്യമാകുന്ന കീ-ബോര്‍ഡ്"
 
-#: src/menubar.vala:386
+#: src/menubar.vala:388
 msgid "High Contrast"
 msgstr "ഉയർന്ന ദൃശ്യതീവ്രത"
 
-#: src/menubar.vala:392
+#: src/menubar.vala:394
 msgid "Screen Reader"
 msgstr "സ്ക്രീന്‍ വായനക്കാരന്‍"
 
-#: src/menubar.vala:404 src/menubar.vala:451
+#: src/menubar.vala:406 src/menubar.vala:453
 msgid "Quit..."
 msgstr "പുറത്തു് കടക്കുക..."
 
-#: src/menubar.vala:417 src/shutdown-dialog.vala:155
+#: src/menubar.vala:419 src/shutdown-dialog.vala:155
 msgid "Suspend"
 msgstr "താത്കാലികനിദ്ര"
 
-#: src/menubar.vala:435 src/shutdown-dialog.vala:172
+#: src/menubar.vala:437 src/shutdown-dialog.vala:172
 msgid "Hibernate"
 msgstr "ശിശിരനിദ്ര"
 
-#: src/menubar.vala:474
+#: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
 msgid "Keyboard layout:"
 msgstr "കീബോര്‍ഡ് മാതൃക :"
+
+#: src/menubar.vala:532
+msgid "More layouts..."
+msgstr ""
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
@@ -122,20 +130,20 @@ msgstr ""
 msgid "Restart"
 msgstr "പുനരാരംഭിക്കുക"
 
-#: src/slick-greeter.vala:616
+#: src/slick-greeter.vala:749
 msgid "Show release version"
 msgstr "പതിപ്പുവിവരം പ്രദര്‍ശിപ്പിക്കുക"
 
-#: src/slick-greeter.vala:619
+#: src/slick-greeter.vala:752
 msgid "Run in test mode"
 msgstr "പരീക്ഷണരൂപേണ പ്രവര്‍ത്തിപ്പിക്കുക"
 
-#: src/slick-greeter.vala:635
+#: src/slick-greeter.vala:768
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "ലഭ്യമായ കമാന്‍ഡ് ലൈന്‍ ഉപാധികള്‍ക്കായി '%s --help' കാണുക."
 
-#: src/toggle-box.vala:98
+#: src/toggle-box.vala:109
 #, c-format
 msgid "%s (Default)"
 msgstr "%s (സ്വതേ)"
@@ -144,15 +152,15 @@ msgstr "%s (സ്വതേ)"
 msgid "Guest Session"
 msgstr "'അതിഥി' വേള"
 
-#: src/user-list.vala:438
+#: src/user-list.vala:455
 msgid "Please enter a complete e-mail address"
 msgstr "പൂര്‍ണമായ ഇമെയില്‍  വിലാസം നല്‍കുക"
 
-#: src/user-list.vala:518
+#: src/user-list.vala:535
 msgid "Incorrect e-mail address or password"
 msgstr "ഇ-മെയില്‍ ഐടിയിലോ അടയാളവാക്കിലോ പിശകുണ്ട്"
 
-#: src/user-list.vala:549
+#: src/user-list.vala:566
 msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
@@ -160,7 +168,7 @@ msgstr ""
 "താങ്കൾക് ഒരു RDP അഥവാ Citrix സെർവറിൽ അക്കൗണ്ട് ഉണ്ടെങ്കിൽ, ആ സര്‍വ്വറില്‍ "
 "നിന്ന് തന്നെ റിമോട്ട് ലോഗിനിലൂടെ ആപ്ലിക്കേഷനുകള്‍ പ്രവര്‍ത്തിപ്പിക്കാനാകും"
 
-#: src/user-list.vala:551
+#: src/user-list.vala:568
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
@@ -168,15 +176,15 @@ msgstr ""
 "താങ്കൾക് ഒരു RDP സെർവറിൽ അക്കൗണ്ട് ഉണ്ടെങ്കിൽ, ആ സര്‍വ്വറില്‍ നിന്ന് തന്നെ "
 "റിമോട്ട് ലോഗിനിലൂടെ ആപ്ലിക്കേഷനുകള്‍ പ്രവര്‍ത്തിപ്പിക്കാനാകും"
 
-#: src/user-list.vala:554
+#: src/user-list.vala:571
 msgid "Cancel"
 msgstr "റദ്ദാക്കുക"
 
-#: src/user-list.vala:555
+#: src/user-list.vala:572
 msgid "Set Up..."
 msgstr "സജ്ജീകരിക്കുക"
 
-#: src/user-list.vala:557
+#: src/user-list.vala:574
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
@@ -184,11 +192,11 @@ msgstr ""
 "നിങ്ങള്ക്ക്  ഈ സര്‍വീസ്  ഉപയോഗിക്കണമെങ്കില്‍ ഉബുണ്ടു റിമോട്ട് ലോഗിന്‍ "
 "അക്കൗണ്ട്‌ അത്യാവശ്യമാണ്. നിങ്ങൾക് ഒരു അക്കൗണ്ട് തുടങ്ങാൻ താല്പര്യമുണ്ടോ?"
 
-#: src/user-list.vala:561
+#: src/user-list.vala:578
 msgid "OK"
 msgstr "ശരി"
 
-#: src/user-list.vala:562
+#: src/user-list.vala:579
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
@@ -197,36 +205,36 @@ msgstr ""
 "അത്യാവശ്യമാണ്. അക്കൌണ്ട് തുടങ്ങാന്‍ താല്‍പര്യമുണ്ടെങ്കില്‍ "
 "'uccs.canonical.com' സന്ദര്‍ശിക്കുക"
 
-#: src/user-list.vala:681
+#: src/user-list.vala:698
 msgid "Server type not supported."
 msgstr "ഈ തരം സര്‍വ്വര്‍ പിന്‍താങ്ങപ്പെടുന്നതല്ല"
 
-#: src/user-list.vala:722
+#: src/user-list.vala:739
 msgid "Domain:"
 msgstr "ഡൊമെയിന്‍:"
 
-#: src/user-list.vala:783
+#: src/user-list.vala:800
 msgid "Email address:"
 msgstr "ഇ-മെയില്‍ വിലാസം"
 
-#: src/user-list.vala:827
+#: src/user-list.vala:844
 msgid "Log In"
 msgstr "പ്രവേശിക്കുക"
 
-#: src/user-list.vala:828
+#: src/user-list.vala:845
 #, c-format
 msgid "Login as %s"
 msgstr "%s- ആയി പ്രവേശിക്കുക"
 
-#: src/user-list.vala:832
+#: src/user-list.vala:849
 msgid "Retry"
 msgstr "വീണ്ടും ശ്രമിയ്ക്കുക"
 
-#: src/user-list.vala:833
+#: src/user-list.vala:850
 #, c-format
 msgid "Retry as %s"
 msgstr "%s ആയി വീണ്ടും ശ്രമിക്കുക"
 
-#: src/user-list.vala:871
+#: src/user-list.vala:892
 msgid "Login"
 msgstr "പ്രവേശിക്കുക"

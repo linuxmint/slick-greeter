@@ -7,87 +7,95 @@ msgid ""
 msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-07-14 16:49+0200\n"
+"POT-Creation-Date: 2023-06-01 11:07+0100\n"
 "PO-Revision-Date: 2017-07-14 15:01+0000\n"
 "Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
 "Language-Team: Khmer <km@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2022-12-02 14:13+0000\n"
-"X-Generator: Launchpad (build 51cef3d08dff1e227b5ada709bd67280c567d4be)\n"
+"X-Launchpad-Export-Date: 2023-06-08 10:22+0000\n"
+"X-Generator: Launchpad (build 620cd5280e3a973662e263ebf9346837ed657a46)\n"
 
-#: src/greeter-list.vala:302
+#: src/greeter-list.vala:303
 #, c-format
 msgid "Enter password for %s"
 msgstr "បញ្ចូល​ពាក្យ​សម្ងាត់​សម្រាប់ %s"
 
-#: src/greeter-list.vala:811 src/user-list.vala:703
+#: src/greeter-list.vala:305
+msgid "Enter your username"
+msgstr ""
+
+#: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
 msgstr "ពាក្យ​សម្ងាត់ ៖"
 
-#: src/greeter-list.vala:813 src/user-list.vala:697
+#: src/greeter-list.vala:817 src/user-list.vala:714
 msgid "Username:"
 msgstr "ឈ្មោះ​អ្នក​ប្រើ ៖"
 
-#: src/greeter-list.vala:868
+#: src/greeter-list.vala:872
 msgid "Invalid password, please try again"
 msgstr "ពាក្យ​សម្ងាត់​មិន​ត្រឹមត្រូវ សូម​ព្យាយាម​ម្ដង​ទៀត"
 
-#: src/greeter-list.vala:879
+#: src/greeter-list.vala:883
 msgid "Failed to authenticate"
 msgstr "បាន​បរាជ័យ​ក្នុង​ការ​ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ"
 
-#: src/greeter-list.vala:925
+#: src/greeter-list.vala:929
 msgid "Failed to start session"
 msgstr "បានបរាជ័យក្នុងការចាប់ផ្តើមសម័យ"
 
-#: src/greeter-list.vala:940
+#: src/greeter-list.vala:943
 msgid "Logging in..."
 msgstr "កំពុង​ចូល​..."
 
-#: src/main-window.vala:49
+#: src/main-window.vala:52
 msgid "Login Screen"
 msgstr "អេក្រង់​​ចូល"
 
-#: src/main-window.vala:110
+#: src/main-window.vala:113
 msgid "Back"
 msgstr "ថយក្រោយ"
 
-#: src/menubar.vala:322
+#: src/menubar.vala:324
 msgid "Power:"
 msgstr ""
 
-#: src/menubar.vala:372
+#: src/menubar.vala:374
 msgid "Accessibility"
 msgstr ""
 
-#: src/menubar.vala:381
+#: src/menubar.vala:383
 msgid "Onscreen keyboard"
 msgstr "ក្ដារចុច​លើ​អេក្រង់"
 
-#: src/menubar.vala:386
+#: src/menubar.vala:388
 msgid "High Contrast"
 msgstr "កម្រិត​ពណ៌​ខ្ពស់"
 
-#: src/menubar.vala:392
+#: src/menubar.vala:394
 msgid "Screen Reader"
 msgstr "កម្មវិធី​អាន​អេក្រង់"
 
-#: src/menubar.vala:404 src/menubar.vala:451
+#: src/menubar.vala:406 src/menubar.vala:453
 msgid "Quit..."
 msgstr ""
 
-#: src/menubar.vala:417 src/shutdown-dialog.vala:155
+#: src/menubar.vala:419 src/shutdown-dialog.vala:155
 msgid "Suspend"
 msgstr "ផ្អាក"
 
-#: src/menubar.vala:435 src/shutdown-dialog.vala:172
+#: src/menubar.vala:437 src/shutdown-dialog.vala:172
 msgid "Hibernate"
 msgstr "សម្ងំ"
 
-#: src/menubar.vala:474
+#: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
 msgid "Keyboard layout:"
+msgstr ""
+
+#: src/menubar.vala:532
+msgid "More layouts..."
 msgstr ""
 
 #: src/prompt-box.vala:215
@@ -123,21 +131,21 @@ msgstr ""
 msgid "Restart"
 msgstr "ចាប់ផ្ដើម​ឡើង​វិញ"
 
-#: src/slick-greeter.vala:616
+#: src/slick-greeter.vala:749
 msgid "Show release version"
 msgstr "បង្ហាញ​កំណែ​ចេញ​ផ្សាយ"
 
-#: src/slick-greeter.vala:619
+#: src/slick-greeter.vala:752
 msgid "Run in test mode"
 msgstr "ដំណើរការ​ក្នុង​របៀប​សាកល្បង"
 
-#: src/slick-greeter.vala:635
+#: src/slick-greeter.vala:768
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
 "ដំណើរការ '%s --help' ដើម្បី​មើល​បញ្ជី​ជម្រើស​បន្ទាត់​ពាក្យ​បញ្ជា​ពេញលេញ ។"
 
-#: src/toggle-box.vala:98
+#: src/toggle-box.vala:109
 #, c-format
 msgid "%s (Default)"
 msgstr "%s (លំនាំដើម)"
@@ -146,15 +154,15 @@ msgstr "%s (លំនាំដើម)"
 msgid "Guest Session"
 msgstr "សម័យ​ភ្ញៀវ"
 
-#: src/user-list.vala:438
+#: src/user-list.vala:455
 msgid "Please enter a complete e-mail address"
 msgstr "សូម​បញ្ចូល​អាសយដ្ឋាន​អ៊ីមែល​របស់​អ្នក"
 
-#: src/user-list.vala:518
+#: src/user-list.vala:535
 msgid "Incorrect e-mail address or password"
 msgstr "ពាក្យ​សម្ងាត់ ឬ​​អាសយដ្ឋាន​អ៊ីមែល​​មិន​ត្រឹមត្រូវ"
 
-#: src/user-list.vala:549
+#: src/user-list.vala:566
 msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
@@ -162,7 +170,7 @@ msgstr ""
 "ប្រសិនបើ​អ្នក​មាន​គណនី​នៅ​លើ RDP ឬ​ម៉ាស៊ីន​មេ Citrix  "
 "ចូល​ពី​ចម្ងាយ​​​អ្នក​អាច​ចូល​ដំណើរការ​កម្មវិធី​ពី​ម៉ាស៊ីន​មេ​នោះ​បាន។"
 
-#: src/user-list.vala:551
+#: src/user-list.vala:568
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
@@ -170,15 +178,15 @@ msgstr ""
 "ប្រសិនបើ​អ្នក​មាន​គណនី​នៅ​លើ​ម៉ាស៊ីន​មេ RDP  "
 "ចូល​ពី​ចម្ងាយ​អ្នក​អាច​ចូល​ដំណើរការ​កម្មវិធី​ពី​ម៉ាស៊ីន​មេ​នោះ​បាន។"
 
-#: src/user-list.vala:554
+#: src/user-list.vala:571
 msgid "Cancel"
 msgstr "បោះបង់"
 
-#: src/user-list.vala:555
+#: src/user-list.vala:572
 msgid "Set Up..."
 msgstr ""
 
-#: src/user-list.vala:557
+#: src/user-list.vala:574
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
@@ -186,11 +194,11 @@ msgstr ""
 "អ្នក​ត្រូវ​ចូល​គណនី​អ៊ូប៊ុនទូ​ពី​ចម្ងាយ​ដើម្បី​ប្រើ​​ម៉ាស៊ីន​មេ​នេះ។ "
 "តើ​អ្នក​ចង់​រៀបចំ​គណនី​ឥឡូវ​នេះ​ឬ?"
 
-#: src/user-list.vala:561
+#: src/user-list.vala:578
 msgid "OK"
 msgstr "យល់ព្រម"
 
-#: src/user-list.vala:562
+#: src/user-list.vala:579
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
@@ -198,36 +206,36 @@ msgstr ""
 "អ្នក​ត្រូវ​ចូល​គណនី​អ៊ូប៊ុនទូ​ពី​ចម្ងាយ​ដើម្បី​ប្រើ​ម៉ាស៊ីន​មេ​​នេះ។ មើល "
 "uccs.canonical.com ដើម្បី​រៀបចំ​គណនី។"
 
-#: src/user-list.vala:681
+#: src/user-list.vala:698
 msgid "Server type not supported."
 msgstr "ប្រភេទ​ម៉ាស៊ីន​មេ​មិន​ត្រូវ​បាន​គាំទ្រ។"
 
-#: src/user-list.vala:722
+#: src/user-list.vala:739
 msgid "Domain:"
 msgstr "ដែន ៖"
 
-#: src/user-list.vala:783
+#: src/user-list.vala:800
 msgid "Email address:"
 msgstr "អាសយដ្ឋាន​អ៊ីមែល​ ៖"
 
-#: src/user-list.vala:827
+#: src/user-list.vala:844
 msgid "Log In"
 msgstr "ចូល"
 
-#: src/user-list.vala:828
+#: src/user-list.vala:845
 #, c-format
 msgid "Login as %s"
 msgstr "ចូល​ជា %s"
 
-#: src/user-list.vala:832
+#: src/user-list.vala:849
 msgid "Retry"
 msgstr "ព្យាយាម​ម្ដង​ទៀត"
 
-#: src/user-list.vala:833
+#: src/user-list.vala:850
 #, c-format
 msgid "Retry as %s"
 msgstr "ព្យាយាម​ម្ដងទៀត​ជា %s"
 
-#: src/user-list.vala:871
+#: src/user-list.vala:892
 msgid "Login"
 msgstr "ចូល"

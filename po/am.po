@@ -7,88 +7,96 @@ msgid ""
 msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-07-14 16:49+0200\n"
-"PO-Revision-Date: 2017-07-17 15:19+0000\n"
+"POT-Creation-Date: 2023-06-01 11:07+0100\n"
+"PO-Revision-Date: 2023-01-14 16:52+0000\n"
 "Last-Translator: samson <Unknown>\n"
 "Language-Team: Amharic <am@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2022-12-02 14:13+0000\n"
-"X-Generator: Launchpad (build 51cef3d08dff1e227b5ada709bd67280c567d4be)\n"
+"X-Launchpad-Export-Date: 2023-06-08 10:22+0000\n"
+"X-Generator: Launchpad (build 620cd5280e3a973662e263ebf9346837ed657a46)\n"
 
-#: src/greeter-list.vala:302
+#: src/greeter-list.vala:303
 #, c-format
 msgid "Enter password for %s"
 msgstr "የመግቢያ ቃል ያስገቡ ለ %s"
 
-#: src/greeter-list.vala:811 src/user-list.vala:703
+#: src/greeter-list.vala:305
+msgid "Enter your username"
+msgstr ""
+
+#: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
 msgstr "የ መግቢያ ቃል:"
 
-#: src/greeter-list.vala:813 src/user-list.vala:697
+#: src/greeter-list.vala:817 src/user-list.vala:714
 msgid "Username:"
 msgstr "የ ተጠቃሚ ስም:"
 
-#: src/greeter-list.vala:868
+#: src/greeter-list.vala:872
 msgid "Invalid password, please try again"
 msgstr "እባክዎን እንደገና ይሞክሩ ዋጋ የሌለው የ መግቢያ ቃል"
 
-#: src/greeter-list.vala:879
+#: src/greeter-list.vala:883
 msgid "Failed to authenticate"
 msgstr "ማረጋገጥ አልተቻለም"
 
-#: src/greeter-list.vala:925
+#: src/greeter-list.vala:929
 msgid "Failed to start session"
 msgstr "ክፍለ ጊዜውን ማስጀመር አልተቻለም"
 
-#: src/greeter-list.vala:940
+#: src/greeter-list.vala:943
 msgid "Logging in..."
 msgstr "በ መግባት ላይ..."
 
-#: src/main-window.vala:49
+#: src/main-window.vala:52
 msgid "Login Screen"
 msgstr "የ መግቢያ መመልከቻ"
 
-#: src/main-window.vala:110
+#: src/main-window.vala:113
 msgid "Back"
 msgstr "ወደ ኋላ"
 
-#: src/menubar.vala:322
+#: src/menubar.vala:324
 msgid "Power:"
 msgstr "ሐይል:"
 
-#: src/menubar.vala:372
+#: src/menubar.vala:374
 msgid "Accessibility"
 msgstr "በ ቀላሉ የሚደረስበት"
 
-#: src/menubar.vala:381
+#: src/menubar.vala:383
 msgid "Onscreen keyboard"
 msgstr "የፊደል ገበታ በመመልከቻው ላይ"
 
-#: src/menubar.vala:386
+#: src/menubar.vala:388
 msgid "High Contrast"
 msgstr "ከፍተኛ ንፅፅር"
 
-#: src/menubar.vala:392
+#: src/menubar.vala:394
 msgid "Screen Reader"
 msgstr "ስክሪን አንባቢ"
 
-#: src/menubar.vala:404 src/menubar.vala:451
+#: src/menubar.vala:406 src/menubar.vala:453
 msgid "Quit..."
 msgstr "ማጥፊያ..."
 
-#: src/menubar.vala:417 src/shutdown-dialog.vala:155
+#: src/menubar.vala:419 src/shutdown-dialog.vala:155
 msgid "Suspend"
 msgstr "ማገጃ"
 
-#: src/menubar.vala:435 src/shutdown-dialog.vala:172
+#: src/menubar.vala:437 src/shutdown-dialog.vala:172
 msgid "Hibernate"
 msgstr "ማስተኛ"
 
-#: src/menubar.vala:474
+#: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
 msgid "Keyboard layout:"
 msgstr "የ ፊደል ገበታ አቀራረብ"
+
+#: src/menubar.vala:532
+msgid "More layouts..."
+msgstr "ተጨማሪ እቅዶች..."
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
@@ -120,20 +128,20 @@ msgstr "ሌሎች ተጠቃሚዎች በዚህ ኮምፒዩተር ላይ ገብ�
 msgid "Restart"
 msgstr "እንደገና ማስጀመሪያ"
 
-#: src/slick-greeter.vala:616
+#: src/slick-greeter.vala:749
 msgid "Show release version"
 msgstr "የተለቀቀውን እትም ማሳያ"
 
-#: src/slick-greeter.vala:619
+#: src/slick-greeter.vala:752
 msgid "Run in test mode"
 msgstr "በሙከራ ዘዴ ማስኬጃ"
 
-#: src/slick-greeter.vala:635
+#: src/slick-greeter.vala:768
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "ያስኪዱ '%s --እርዳታ'  ዝግጁ የሆኑ የትእዛዝ መስመሮችን ለማየት"
 
-#: src/toggle-box.vala:98
+#: src/toggle-box.vala:109
 #, c-format
 msgid "%s (Default)"
 msgstr "%s (ነባር)"
@@ -142,47 +150,47 @@ msgstr "%s (ነባር)"
 msgid "Guest Session"
 msgstr "የእንግዳ ክፍለጊዜ"
 
-#: src/user-list.vala:438
+#: src/user-list.vala:455
 msgid "Please enter a complete e-mail address"
 msgstr "እባክዎን ሙሉ የኢ-ሜይል አድራሻዎን ያስገቡ"
 
-#: src/user-list.vala:518
+#: src/user-list.vala:535
 msgid "Incorrect e-mail address or password"
 msgstr "የተሳሳተ የኢ-ሜይል አድራሻ ወይንም የመግቢያ ቃል"
 
-#: src/user-list.vala:549
+#: src/user-list.vala:566
 msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
 "መግለጫ ካለዎት በ an RDP ወይንም Citrix ሰርቨር በርቀት መግቢያ ከ ሰርቨሩ ላይ መተግበሪያዎች ማስኬድ ያስችሎታል"
 
-#: src/user-list.vala:551
+#: src/user-list.vala:568
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
 msgstr "መግለጫ ካለዎት በ an RDP ሰርቨር በርቀት መግቢያ ከ ሰርቨሩ ላይ መተግበሪያዎች ማስኬድ ያስችሎታል"
 
-#: src/user-list.vala:554
+#: src/user-list.vala:571
 msgid "Cancel"
 msgstr "መሰረዣ"
 
-#: src/user-list.vala:555
+#: src/user-list.vala:572
 msgid "Set Up..."
 msgstr "ማሰናጃ..."
 
-#: src/user-list.vala:557
+#: src/user-list.vala:574
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
 msgstr ""
 "እርስዎ ይህን ግልጋሎት ለመጠቀም የ ኡቡንቱ በርቀት መግቢያ መግለጫ ያስፈልጎታል: መግለጫ አሁን ማሰናዳት ይፈልጋሉ?"
 
-#: src/user-list.vala:561
+#: src/user-list.vala:578
 msgid "OK"
 msgstr "እሺ"
 
-#: src/user-list.vala:562
+#: src/user-list.vala:579
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
@@ -190,36 +198,36 @@ msgstr ""
 "እርስዎ ይህን ግልጋሎት ለመጠቀም የ ኡቡንቱ በርቀት መግቢያ መግለጫ ያስፈልጎታል: ይጎብኙ uccs.canonical.com "
 "መግለጫ ማሰናጃ"
 
-#: src/user-list.vala:681
+#: src/user-list.vala:698
 msgid "Server type not supported."
 msgstr "የሰርቨሩ አይነት የተደገፈ አይደለም"
 
-#: src/user-list.vala:722
+#: src/user-list.vala:739
 msgid "Domain:"
 msgstr "ግዛት :"
 
-#: src/user-list.vala:783
+#: src/user-list.vala:800
 msgid "Email address:"
 msgstr "የኢሜይል አድራሻ :"
 
-#: src/user-list.vala:827
+#: src/user-list.vala:844
 msgid "Log In"
 msgstr "መግቢያ"
 
-#: src/user-list.vala:828
+#: src/user-list.vala:845
 #, c-format
 msgid "Login as %s"
 msgstr "መግቢያ እንደ %s"
 
-#: src/user-list.vala:832
+#: src/user-list.vala:849
 msgid "Retry"
 msgstr "እንደገና መሞከሪያ"
 
-#: src/user-list.vala:833
+#: src/user-list.vala:850
 #, c-format
 msgid "Retry as %s"
 msgstr "እንደገና መሞከሪያ እንደ %s"
 
-#: src/user-list.vala:871
+#: src/user-list.vala:892
 msgid "Login"
 msgstr "መግቢያ"

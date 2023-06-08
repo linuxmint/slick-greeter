@@ -7,87 +7,95 @@ msgid ""
 msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-07-14 16:49+0200\n"
+"POT-Creation-Date: 2023-06-01 11:07+0100\n"
 "PO-Revision-Date: 2017-07-14 15:05+0000\n"
 "Last-Translator: Bone Pyae Sone <bone.burma@gmail.com>\n"
 "Language-Team: Burmese <my@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2022-12-02 14:13+0000\n"
-"X-Generator: Launchpad (build 51cef3d08dff1e227b5ada709bd67280c567d4be)\n"
+"X-Launchpad-Export-Date: 2023-06-08 10:22+0000\n"
+"X-Generator: Launchpad (build 620cd5280e3a973662e263ebf9346837ed657a46)\n"
 
-#: src/greeter-list.vala:302
+#: src/greeter-list.vala:303
 #, c-format
 msgid "Enter password for %s"
 msgstr "%s အတွက် စကားဝှက် ဖြည့်စွက်ပေးပါ။"
 
-#: src/greeter-list.vala:811 src/user-list.vala:703
+#: src/greeter-list.vala:305
+msgid "Enter your username"
+msgstr ""
+
+#: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
 msgstr "စကားဝှက်:"
 
-#: src/greeter-list.vala:813 src/user-list.vala:697
+#: src/greeter-list.vala:817 src/user-list.vala:714
 msgid "Username:"
 msgstr "သုံးစွဲသူအမည်:"
 
-#: src/greeter-list.vala:868
+#: src/greeter-list.vala:872
 msgid "Invalid password, please try again"
 msgstr "စကားဝှက် မှားနေပါသည်။ ကျေးဇူးပြု၍ ထပ်မံကြိုးစားပါ။"
 
-#: src/greeter-list.vala:879
+#: src/greeter-list.vala:883
 msgid "Failed to authenticate"
 msgstr "ခွင့်ပြုချက် ရယူနိုင်ခြင်းမရှိပါ။"
 
-#: src/greeter-list.vala:925
+#: src/greeter-list.vala:929
 msgid "Failed to start session"
 msgstr ""
 
-#: src/greeter-list.vala:940
+#: src/greeter-list.vala:943
 msgid "Logging in..."
 msgstr ""
 
-#: src/main-window.vala:49
+#: src/main-window.vala:52
 msgid "Login Screen"
 msgstr "login ပြုလုပ်ရန် မျက်နှာစာ"
 
-#: src/main-window.vala:110
+#: src/main-window.vala:113
 msgid "Back"
 msgstr "နောက်သို့"
 
-#: src/menubar.vala:322
+#: src/menubar.vala:324
 msgid "Power:"
 msgstr ""
 
-#: src/menubar.vala:372
+#: src/menubar.vala:374
 msgid "Accessibility"
 msgstr ""
 
-#: src/menubar.vala:381
+#: src/menubar.vala:383
 msgid "Onscreen keyboard"
 msgstr "လက်ကွက်ဖော်ပြ ဖန်သားပြင်"
 
-#: src/menubar.vala:386
+#: src/menubar.vala:388
 msgid "High Contrast"
 msgstr "ပုံကြီးချဲ့ကြည့်ရန်"
 
-#: src/menubar.vala:392
+#: src/menubar.vala:394
 msgid "Screen Reader"
 msgstr "စကားလုံးပြ ဖန်သားပြင်"
 
-#: src/menubar.vala:404 src/menubar.vala:451
+#: src/menubar.vala:406 src/menubar.vala:453
 msgid "Quit..."
 msgstr ""
 
-#: src/menubar.vala:417 src/shutdown-dialog.vala:155
+#: src/menubar.vala:419 src/shutdown-dialog.vala:155
 msgid "Suspend"
 msgstr "ဆိုင်းငံ့ထားမည်"
 
-#: src/menubar.vala:435 src/shutdown-dialog.vala:172
+#: src/menubar.vala:437 src/shutdown-dialog.vala:172
 msgid "Hibernate"
 msgstr "လက်ရှိ အခြေအနေတိုင်းမှတ်သား၍ အပြီးထွက်မည်"
 
-#: src/menubar.vala:474
+#: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
 msgid "Keyboard layout:"
+msgstr ""
+
+#: src/menubar.vala:532
+msgid "More layouts..."
 msgstr ""
 
 #: src/prompt-box.vala:215
@@ -123,20 +131,20 @@ msgstr ""
 msgid "Restart"
 msgstr "အစမှ ပြန်ဖွင့်မည်"
 
-#: src/slick-greeter.vala:616
+#: src/slick-greeter.vala:749
 msgid "Show release version"
 msgstr "ထုတ်လုပ်သော ဗားရှင်းကို ပြပါ"
 
-#: src/slick-greeter.vala:619
+#: src/slick-greeter.vala:752
 msgid "Run in test mode"
 msgstr "စမ်းသပ်အခြေအနေဖြင့် အလုပ်လုပ်ပါ"
 
-#: src/slick-greeter.vala:635
+#: src/slick-greeter.vala:768
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "အမိန့်ပေး စာရင်း အပြည့်အစုံမြင်ရရန်  '%s--help' ဖြင့် ခိုင်းပါ"
 
-#: src/toggle-box.vala:98
+#: src/toggle-box.vala:109
 #, c-format
 msgid "%s (Default)"
 msgstr "%s (မူလ)"
@@ -145,15 +153,15 @@ msgstr "%s (မူလ)"
 msgid "Guest Session"
 msgstr "ဧည့်သည်သုံး Session"
 
-#: src/user-list.vala:438
+#: src/user-list.vala:455
 msgid "Please enter a complete e-mail address"
 msgstr "ကျေးဇူးပြုပြီး ပြည့်စုံသော အီးမေးလိပ်စာကိုရိုက်ထည့်ပါ"
 
-#: src/user-list.vala:518
+#: src/user-list.vala:535
 msgid "Incorrect e-mail address or password"
 msgstr "အီးမေးလ်လိပ်စာ (သို့) စကားဝှက် မမှန်ကန်ပါ"
 
-#: src/user-list.vala:549
+#: src/user-list.vala:566
 msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
@@ -162,21 +170,21 @@ msgstr ""
 "၎င်းဆာဗာများမှ အပ္ပလီကေးရှင်းများကို အဝေးမှ အကောင့်ဖွင့်၍ "
 "အလုပ်လုပ်စေနိုင်သည်။"
 
-#: src/user-list.vala:551
+#: src/user-list.vala:568
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
 
-#: src/user-list.vala:554
+#: src/user-list.vala:571
 msgid "Cancel"
 msgstr "ပယ်ဖျက်မည်"
 
-#: src/user-list.vala:555
+#: src/user-list.vala:572
 msgid "Set Up..."
 msgstr ""
 
-#: src/user-list.vala:557
+#: src/user-list.vala:574
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
@@ -184,11 +192,11 @@ msgstr ""
 "ဤဝန်ဆောင်မှုစနစ်အားအသုံးပြုရန် သင့်ထံ၌ Ubuntu အဝေးမှ စနစ်တွင်းဝင်၍ရသည့် "
 "အကောင့် ရှိရန် လိုအပ်သည်။ သင်သည် ယခု အကောင့်သစ် ဖွင့်လိုပါသလား ?"
 
-#: src/user-list.vala:561
+#: src/user-list.vala:578
 msgid "OK"
 msgstr "အိုကေ"
 
-#: src/user-list.vala:562
+#: src/user-list.vala:579
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
@@ -197,36 +205,36 @@ msgstr ""
 "အကောင့် ရှိရန် လိုအပ်သည်။ အကောင့်အသစ် ဖွင့်ရန် uccs.canonical.com သို့ "
 "သွားပါ။"
 
-#: src/user-list.vala:681
+#: src/user-list.vala:698
 msgid "Server type not supported."
 msgstr "ဆာဗာအမျိုးအစားကိုမထောက်ပံ့ပါ"
 
-#: src/user-list.vala:722
+#: src/user-list.vala:739
 msgid "Domain:"
 msgstr "ဒိုမိန်း -"
 
-#: src/user-list.vala:783
+#: src/user-list.vala:800
 msgid "Email address:"
 msgstr "အီးမေးလ်လိပ်စာ -"
 
-#: src/user-list.vala:827
+#: src/user-list.vala:844
 msgid "Log In"
 msgstr "ဝင်ရန်"
 
-#: src/user-list.vala:828
+#: src/user-list.vala:845
 #, c-format
 msgid "Login as %s"
 msgstr "%s အနေဖြင့် စနစ်တွင်းသို့ ဝင်သည်။"
 
-#: src/user-list.vala:832
+#: src/user-list.vala:849
 msgid "Retry"
 msgstr "ထပ်ကြိုးစားပါ"
 
-#: src/user-list.vala:833
+#: src/user-list.vala:850
 #, c-format
 msgid "Retry as %s"
 msgstr "%s ကဲ့သို့ ပြန်ကြိုးစားမည်"
 
-#: src/user-list.vala:871
+#: src/user-list.vala:892
 msgid "Login"
 msgstr "ဝင်ရန်"
