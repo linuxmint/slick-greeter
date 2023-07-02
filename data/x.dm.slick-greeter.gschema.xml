@@ -151,5 +151,14 @@
       <default>'/usr/share/onboard/layouts/Small.onboard'</default>
       <summary>Path of the onscreen keyboard layout</summary>
     </key>
+    <key name="content-align" type="s">
+      <choices>
+        <choice value='left'/>
+        <choice value='center'/>
+        <choice value='right'/>
+      </choices>
+      <default>'left'</default>
+      <summary>Alignment of the main content</summary>
+    </key>
   </schema>
 </schemalist>

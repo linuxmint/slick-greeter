@@ -30,6 +30,7 @@ public class MainWindow : Gtk.Window
     private Background background;
     private Gtk.Box login_box;
     private Gtk.Box hbox;
+    private Gtk.Box content_box;
     private Gtk.Button back_button;
     private ShutdownDialog? shutdown_dialog = null;
     private bool do_resize;
@@ -96,12 +97,40 @@ public class MainWindow : Gtk.Window
         menualign.add (menubar);
         SlickGreeter.add_style_class (menubar);
 
+        content_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        content_box.expand = true;
+        content_box.show ();
+        login_box.add (content_box);
+
+        var content_align = UGSettings.get_string(UGSettings.KEY_CONTENT_ALIGN);
+        var x_align = 0.5f;
+
+        if (content_align == "left")
+        {
+            x_align = 0.0f;
+        }
+        else if (content_align == "right")
+        {
+            x_align = 1.0f;
+        }
+
+        var align = new Gtk.Alignment (x_align, 0.0f, 0.0f, 1.0f);
+
+        if (content_align == "center")
+        {
+            // offset for back button
+            align.margin_right = grid_size;
+        }
+
+        align.show ();
+        content_box.add (align);
+
         hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         hbox.expand = true;
         hbox.show ();
-        login_box.add (hbox);
+        align.add (hbox);
 
-        var align = new Gtk.Alignment (0.5f, 0.5f, 0.0f, 0.0f);
+        align = new Gtk.Alignment (0.5f, 0.5f, 0.0f, 0.0f);
         // Hack to avoid gtk 3.20's new allocate logic, which messes us up.
         align.resize_mode = Gtk.ResizeMode.QUEUE;
         align.set_size_request (grid_size, -1);
@@ -184,12 +213,13 @@ public class MainWindow : Gtk.Window
     {
         base.size_allocate (allocation);
 
-        if (hbox != null)
+        if (content_box != null)
         {
-            hbox.margin_left = get_grid_offset (get_allocated_width ()) + grid_size;
-            hbox.margin_right = get_grid_offset (get_allocated_width ());
-            hbox.margin_top = get_grid_offset (get_allocated_height ());
-            hbox.margin_bottom = get_grid_offset (get_allocated_height ());
+            var content_align = UGSettings.get_string(UGSettings.KEY_CONTENT_ALIGN);
+            content_box.margin_left = get_grid_offset (get_allocated_width ()) + (content_align == "left" ? grid_size : 0);
+            content_box.margin_right = get_grid_offset (get_allocated_width ()) + (content_align == "right" ? grid_size : 0);
+            content_box.margin_top = get_grid_offset (get_allocated_height ());
+            content_box.margin_bottom = get_grid_offset (get_allocated_height ());
         }
     }
 

@@ -53,6 +53,7 @@ public class UGSettings
     public const string KEY_ONLY_ON_MONITOR = "only-on-monitor";
     public const string KEY_CLOCK_FORMAT = "clock-format";
     public const string KEY_ONSCREEN_KEYBOARD_LAYOUT = "onscreen-keyboard-layout";
+    public const string KEY_CONTENT_ALIGN = "content-align";
 
     public static bool get_boolean (string key)
     {
@@ -137,6 +138,7 @@ public class UGSettings
             string_keys.append (KEY_ONLY_ON_MONITOR);
             string_keys.append (KEY_CLOCK_FORMAT);
             string_keys.append (KEY_ONSCREEN_KEYBOARD_LAYOUT);
+            string_keys.append (KEY_CONTENT_ALIGN);
 
             var bool_keys = new List<string> ();
             bool_keys.append (KEY_DRAW_USER_BACKGROUNDS);
