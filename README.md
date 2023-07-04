@@ -28,6 +28,7 @@ A configuration tool is available at https://github.com/linuxmint/lightdm-settin
 
 Configuration file format for /etc/lightdm/slick-greeter.conf
 
+    [Greeter]
     # LightDM GTK+ Configuration
     # Available configuration options listed below.
     #
@@ -61,4 +62,4 @@ Configuration file format for /etc/lightdm/slick-greeter.conf
     # only-on-monitor=Sets the monitor on which to show the login window, -1 means "follow the mouse"
     # stretch-background-across-monitors=Whether to stretch the background across multiple monitors (false by default)
     # clock-format=What clock format to use (e.g., %H:%M or %l:%M %p)
-    [Greeter]
+    
