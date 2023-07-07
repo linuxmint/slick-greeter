@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2023-06-01 11:07+0100\n"
-"PO-Revision-Date: 2023-03-19 17:40+0000\n"
-"Last-Translator: Mr.Ravi <Unknown>\n"
+"PO-Revision-Date: 2023-06-11 12:30+0000\n"
+"Last-Translator: parham <Unknown>\n"
 "Language-Team: Persian <fa@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2023-06-08 10:22+0000\n"
-"X-Generator: Launchpad (build 620cd5280e3a973662e263ebf9346837ed657a46)\n"
+"X-Launchpad-Export-Date: 2023-07-07 12:57+0000\n"
+"X-Generator: Launchpad (build 2ac9e3bf4ab511504f8fc651371e24a6a047ba12)\n"
 
 #: src/greeter-list.vala:303
 #, c-format
@@ -24,11 +24,11 @@ msgstr "گذرواژه را برای %s وارد کنید"
 
 #: src/greeter-list.vala:305
 msgid "Enter your username"
-msgstr ""
+msgstr "نام کاربری خود را وارد کنید"
 
 #: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
-msgstr "گذرواژه:"
+msgstr "رمز عبور:"
 
 #: src/greeter-list.vala:817 src/user-list.vala:714
 msgid "Username:"
@@ -40,15 +40,15 @@ msgstr "گذرواژهٔ نامعتبر، لطفاً دوباره تلاش کن�
 
 #: src/greeter-list.vala:883
 msgid "Failed to authenticate"
-msgstr "شکست در تأیید کردن"
+msgstr "احراز هویت ناموفق"
 
 #: src/greeter-list.vala:929
 msgid "Failed to start session"
-msgstr "شروع نشست شکست خورد"
+msgstr "شروع ناموفق"
 
 #: src/greeter-list.vala:943
 msgid "Logging in..."
-msgstr "در حال وارد شدن…"
+msgstr "در حال ورود به سیستم"
 
 #: src/main-window.vala:52
 msgid "Login Screen"
@@ -64,7 +64,7 @@ msgstr "انرژی"
 
 #: src/menubar.vala:374
 msgid "Accessibility"
-msgstr "دسترسی‌پذیری"
+msgstr "دسترسی"
 
 #: src/menubar.vala:383
 msgid "Onscreen keyboard"
@@ -72,7 +72,7 @@ msgstr "صفحه‌کلید روی صفحه"
 
 #: src/menubar.vala:388
 msgid "High Contrast"
-msgstr "سایه روشن زیاد"
+msgstr "کنتراست بالا"
 
 #: src/menubar.vala:394
 msgid "Screen Reader"
@@ -84,11 +84,11 @@ msgstr "خروج ..."
 
 #: src/menubar.vala:419 src/shutdown-dialog.vala:155
 msgid "Suspend"
-msgstr "معلّق کنید"
+msgstr "تعلیق"
 
 #: src/menubar.vala:437 src/shutdown-dialog.vala:172
 msgid "Hibernate"
-msgstr "به خواب زمستانی ببرید"
+msgstr "تعلیق کامل"
 
 #: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
 msgid "Keyboard layout:"
@@ -112,7 +112,7 @@ msgstr "بدرود. آیا مایل هستید..."
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
-msgstr "خاموش کنید"
+msgstr "خاموش"
 
 #: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
@@ -123,16 +123,16 @@ msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
-"کاربران دیگری هم‌اکنون روی این رایانه وارد شده‌اند. خاموش کردن رایانه، "
-"نشست‌های آنان را نیز خواهد بست."
+"کاربران دیگری هم‌اکنون روی این رایانه می باشند. خاموش کردن رایانه، نشست‌های "
+"دیگر را نیز پایان می دهد."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
-msgstr "مجدّداً آغاز کنید"
+msgstr "شروع مجدد"
 
 #: src/slick-greeter.vala:749
 msgid "Show release version"
-msgstr "نمایش نگارش انتشار"
+msgstr "نمایش نسخه انتشار"
 
 #: src/slick-greeter.vala:752
 msgid "Run in test mode"
@@ -141,8 +141,7 @@ msgstr "اجرا در حالت آزمایشی"
 #: src/slick-greeter.vala:768
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
-msgstr ""
-"برای دیدن لیست کامل انتخاب‌های خط فرمان موجود «%s --help» را اجرا کنید."
+msgstr "برای نمایش تمام گزینه‌های خط فرمان «%s --help» را اجرا کنید."
 
 #: src/toggle-box.vala:109
 #, c-format
@@ -155,43 +154,43 @@ msgstr "نشست میهمان"
 
 #: src/user-list.vala:455
 msgid "Please enter a complete e-mail address"
-msgstr "لطفاً یک نشانی ای‌میل کامل وارد نمایید"
+msgstr "لطفاً ایمیل کامل وارد نمایید"
 
 #: src/user-list.vala:535
 msgid "Incorrect e-mail address or password"
-msgstr "نشانی رایانامه یا گذرواژهٔ نادرست"
+msgstr "گذرواژه یا ایمیل نادرست می باشد"
 
 #: src/user-list.vala:566
 msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"اگر حساب کاربری‌ای روی یک کارساز RDP یا Citrix دارید، ورود از راه دور به شما "
-"اجازه می‌دهد برنامه‌های کاربردی را از آن کارساز اجرا کنید."
+"اگر حساب کاربری‌ ای روی یک سرور RDP یا Citrix دارید، ورود از راه دور به شما "
+"اجازه اجرا کردن برنامه های آن سرور را می دهد."
 
 #: src/user-list.vala:568
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"اگر حساب کاربری‌ای روی یک کارساز RDP دارید، ورود از راه دور به شما اجازه "
-"می‌دهد برنامه‌های کاربردی را از آن کارساز اجرا کنید."
+"اگر حساب کاربری‌ ای روی یک سرور RDP دارید، ورود از راه دور به شما اجازه اجرا "
+"کردن برنامه های آن سرور را می دهد."
 
 #: src/user-list.vala:571
 msgid "Cancel"
-msgstr "لغو"
+msgstr "انصراف"
 
 #: src/user-list.vala:572
 msgid "Set Up..."
-msgstr "برپا کردن..."
+msgstr "راه اندازی..."
 
 #: src/user-list.vala:574
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
 msgstr ""
-"برای استفاده از این خدمت به یک جساب کاربری ورود از راه دور اوبونتو نیاز "
-"دارید. آیا می‌خواهید الآن یک حساب کاربری برپا کنید؟"
+"برای استفاده از این سرویس به یک حساب کاربری ورود از راه دور اوبونتو نیاز "
+"دارید. آیا می‌خواهید یک حساب کاربری راه اندازی؟"
 
 #: src/user-list.vala:578
 msgid "OK"
@@ -202,8 +201,8 @@ msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
 msgstr ""
-"برای استفاده از این خدمت به یک جساب کاربری ورود از راه دور اوبونتو نیاز "
-"دارید. برای برپایی یک حساب کاربری از uccs.canonical.com دیدن کنید."
+"برای استفاده از این سرویس به یک حساب کاربری ورود از راه دور اوبونتو نیاز "
+"دارید. برای راه اندازی یک حساب کاربری به سایت uccs.canonical.com مراجعه کنید."
 
 #: src/user-list.vala:698
 msgid "Server type not supported."
@@ -215,11 +214,11 @@ msgstr "دامنه:"
 
 #: src/user-list.vala:800
 msgid "Email address:"
-msgstr "نشانی ای‌میل:"
+msgstr "آدرس ایمیل:"
 
 #: src/user-list.vala:844
 msgid "Log In"
-msgstr "ورود به سیستم"
+msgstr "ورود"
 
 #: src/user-list.vala:845
 #, c-format
@@ -233,7 +232,7 @@ msgstr "تلاش مجدد"
 #: src/user-list.vala:850
 #, c-format
 msgid "Retry as %s"
-msgstr "تلاش محدّد به عنوان %s"
+msgstr "تلاش مجدد به عنوان %s"
 
 #: src/user-list.vala:892
 msgid "Login"
