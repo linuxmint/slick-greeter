@@ -2,7 +2,7 @@
 
 dnl Process this file with autoconf to produce a configure script.
 
-AC_INIT(slick-greeter, 1.8.1)
+AC_INIT(slick-greeter, 1.8.2)
 AC_CONFIG_MACRO_DIR(m4)
 AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz foreign subdir-objects])
 AM_PROG_CC_C_O
