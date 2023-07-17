@@ -37,7 +37,8 @@ gsettings_SCHEMAS = x.dm.slick-greeter.gschema.xml
 
 dist_man1_MANS = \
 	slick-greeter-set-keyboard-layout.1 \
-	slick-greeter-check-hidpi.1
+	slick-greeter-check-hidpi.1 \
+	slick-greeter-enable-tap-to-click.1
 
 dist_man8_MANS = \
 	slick-greeter.8
