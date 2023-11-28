@@ -1,3 +1,19 @@
+slick-greeter (2.0.0) virginia; urgency=medium
+
+  [ Sam Lane ]
+  * Add man page for enable-tap-to-click (#224)
+
+  [ Michael Webster ]
+  * Add cinnamon-wayland badge
+
+  [ Eugenio Depalo ]
+  * Add a setting to configure the user list alignment (#222)
+
+  [ Clement Lefebvre ]
+  * Change cinnamon-wayland logo
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 28 Nov 2023 17:02:06 +0000
+
 slick-greeter (1.8.2) victoria; urgency=medium
 
   [ Shreyas A S ]
