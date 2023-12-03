@@ -8,14 +8,15 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2023-06-01 11:07+0100\n"
-"PO-Revision-Date: 2023-06-11 12:30+0000\n"
+"PO-Revision-Date: 2023-09-27 13:24+0000\n"
 "Last-Translator: parham <Unknown>\n"
 "Language-Team: Persian <fa@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2023-07-07 12:57+0000\n"
-"X-Generator: Launchpad (build 2ac9e3bf4ab511504f8fc651371e24a6a047ba12)\n"
+"X-Launchpad-Export-Date: 2023-12-03 13:34+0000\n"
+"X-Generator: Launchpad (build 886068b1e1d10de444fbd53b0c7d3f6d4fb3e658)\n"
+"Language: fa\n"
 
 #: src/greeter-list.vala:303
 #, c-format
@@ -28,7 +29,7 @@ msgstr "نام کاربری خود را وارد کنید"
 
 #: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
-msgstr "رمز عبور:"
+msgstr "گذرواژه:"
 
 #: src/greeter-list.vala:817 src/user-list.vala:714
 msgid "Username:"
@@ -40,19 +41,19 @@ msgstr "گذرواژهٔ نامعتبر، لطفاً دوباره تلاش کن�
 
 #: src/greeter-list.vala:883
 msgid "Failed to authenticate"
-msgstr "احراز هویت ناموفق"
+msgstr "احراز هویت شکست خورد"
 
 #: src/greeter-list.vala:929
 msgid "Failed to start session"
-msgstr "شروع ناموفق"
+msgstr "شروع نشست شکست خورد"
 
 #: src/greeter-list.vala:943
 msgid "Logging in..."
-msgstr "در حال ورود به سیستم"
+msgstr "درحال ورود به‌سیستم..."
 
 #: src/main-window.vala:52
 msgid "Login Screen"
-msgstr "صفحهٔ ورود"
+msgstr "صفحه ورود به‌سیستم"
 
 #: src/main-window.vala:113
 msgid "Back"
@@ -60,7 +61,7 @@ msgstr "بازگشت"
 
 #: src/menubar.vala:324
 msgid "Power:"
-msgstr "انرژی"
+msgstr "انرژی:"
 
 #: src/menubar.vala:374
 msgid "Accessibility"
@@ -108,11 +109,11 @@ msgstr "انتخاب محیط میزکار"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr "بدرود. آیا مایل هستید..."
+msgstr "بدرود. آیا مایل هستید به..."
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
-msgstr "خاموش"
+msgstr "خاموش کردن"
 
 #: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
@@ -123,12 +124,12 @@ msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
-"کاربران دیگری هم‌اکنون روی این رایانه می باشند. خاموش کردن رایانه، نشست‌های "
-"دیگر را نیز پایان می دهد."
+"کاربران دیگری هم‌اکنون در این رایانه وارد سیستم هستند. خاموش کردن رایانه، "
+"نشست‌های دیگر را نیز پایان می دهد."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
-msgstr "شروع مجدد"
+msgstr "راه‌اندازی مجدد"
 
 #: src/slick-greeter.vala:749
 msgid "Show release version"
@@ -154,11 +155,11 @@ msgstr "نشست میهمان"
 
 #: src/user-list.vala:455
 msgid "Please enter a complete e-mail address"
-msgstr "لطفاً ایمیل کامل وارد نمایید"
+msgstr "لطفاً یک ایمیل کامل وارد نمایید"
 
 #: src/user-list.vala:535
 msgid "Incorrect e-mail address or password"
-msgstr "گذرواژه یا ایمیل نادرست می باشد"
+msgstr "گذرواژه یا آدرس-ایمیل نادرست"
 
 #: src/user-list.vala:566
 msgid ""
@@ -189,8 +190,8 @@ msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
 msgstr ""
-"برای استفاده از این سرویس به یک حساب کاربری ورود از راه دور اوبونتو نیاز "
-"دارید. آیا می‌خواهید یک حساب کاربری راه اندازی؟"
+"برای استفاده از این سرویس به یک حسابِ ورود از راه دورِ Ubuntu نیاز دارید. "
+"آیا می‌خواهید الان یک حساب کاربری برپا کنید؟"
 
 #: src/user-list.vala:578
 msgid "OK"
@@ -201,12 +202,12 @@ msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
 msgstr ""
-"برای استفاده از این سرویس به یک حساب کاربری ورود از راه دور اوبونتو نیاز "
-"دارید. برای راه اندازی یک حساب کاربری به سایت uccs.canonical.com مراجعه کنید."
+"برای استفاده از این سرویس به یک حسابِ ورود از راه دورِ Ubuntu نیاز دارید. "
+"برای برپایی یک حساب به سایت uccs.canonical.com مراجعه کنید."
 
 #: src/user-list.vala:698
 msgid "Server type not supported."
-msgstr "نوع سرویس‌دهنده پشتیبانی نمی‌شود."
+msgstr "نوع سِرور پشتیبانی نشده."
 
 #: src/user-list.vala:739
 msgid "Domain:"
@@ -218,12 +219,12 @@ msgstr "آدرس ایمیل:"
 
 #: src/user-list.vala:844
 msgid "Log In"
-msgstr "ورود"
+msgstr "ورود به‌سیستم"
 
 #: src/user-list.vala:845
 #, c-format
 msgid "Login as %s"
-msgstr "ورود به عنوان %s"
+msgstr "ورود به‌سیستم با‌عنوان %s"
 
 #: src/user-list.vala:849
 msgid "Retry"
@@ -232,8 +233,8 @@ msgstr "تلاش مجدد"
 #: src/user-list.vala:850
 #, c-format
 msgid "Retry as %s"
-msgstr "تلاش مجدد به عنوان %s"
+msgstr "تلاش مجدد باعنوان %s"
 
 #: src/user-list.vala:892
 msgid "Login"
-msgstr "ورود"
+msgstr "ورود به سیستم"

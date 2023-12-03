@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2023-06-01 11:07+0100\n"
-"PO-Revision-Date: 2023-01-13 23:50+0000\n"
+"PO-Revision-Date: 2023-11-18 08:20+0000\n"
 "Last-Translator: Quentin PAGÈS <Unknown>\n"
 "Language-Team: Occitan (post 1500) <oc@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2023-07-07 12:57+0000\n"
-"X-Generator: Launchpad (build 2ac9e3bf4ab511504f8fc651371e24a6a047ba12)\n"
+"X-Launchpad-Export-Date: 2023-12-03 13:34+0000\n"
+"X-Generator: Launchpad (build 886068b1e1d10de444fbd53b0c7d3f6d4fb3e658)\n"
 
 #: src/greeter-list.vala:303
 #, c-format
@@ -24,7 +24,7 @@ msgstr "Picatz lo senhal per %s"
 
 #: src/greeter-list.vala:305
 msgid "Enter your username"
-msgstr ""
+msgstr "Picatz vòstre nom d’utilizaire"
 
 #: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
@@ -80,7 +80,7 @@ msgstr "Lector d'ecran"
 
 #: src/menubar.vala:406 src/menubar.vala:453
 msgid "Quit..."
-msgstr "Quitar..."
+msgstr "Quitar…"
 
 #: src/menubar.vala:419 src/shutdown-dialog.vala:155
 msgid "Suspend"
@@ -96,7 +96,7 @@ msgstr "Disposicion del clavièr :"
 
 #: src/menubar.vala:532
 msgid "More layouts..."
-msgstr "Mai d’agençaments..."
+msgstr "Mai d’agençaments…"
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
@@ -108,7 +108,7 @@ msgstr "Seleccionar l'environament de burèu"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr "Al reveire. Volètz..."
+msgstr "Al reveire. Volètz…"
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
@@ -184,7 +184,7 @@ msgstr "Abandonar"
 
 #: src/user-list.vala:572
 msgid "Set Up..."
-msgstr "Configurar..."
+msgstr "Configurar…"
 
 #: src/user-list.vala:574
 msgid ""
