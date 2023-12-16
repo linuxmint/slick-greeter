@@ -21,7 +21,7 @@ public class CachedImage : Gtk.Image
 {
     private static HashTable<Gdk.Pixbuf, Cairo.Surface> surface_table;
 
-    public static Cairo.Surface? get_cached_surface (Cairo.Context c, Gdk.Pixbuf pixbuf)
+    public static Cairo.Surface? get_cached_surface (Gdk.Pixbuf pixbuf)
     {
         if (surface_table == null)
             surface_table = new HashTable<Gdk.Pixbuf, Cairo.Surface> (direct_hash, direct_equal);
@@ -29,31 +29,32 @@ public class CachedImage : Gtk.Image
         var surface = surface_table.lookup (pixbuf);
         if (surface == null)
         {
-            surface = new Cairo.Surface.similar (c.get_target (), Cairo.Content.COLOR_ALPHA, pixbuf.width, pixbuf.height);
-            var new_c = new Cairo.Context (surface);
-            Gdk.cairo_set_source_pixbuf (new_c, pixbuf, 0, 0);
-            new_c.paint ();
+            surface = Gdk.cairo_surface_create_from_pixbuf (pixbuf, _scale_factor, null);
             surface_table.insert (pixbuf, surface);
         }
         return surface;
     }
 
-    public CachedImage (Gdk.Pixbuf? pixbuf)
-    {
-        Object (pixbuf: pixbuf);
-    }
-
-    public override bool draw (Cairo.Context c)
+    private void update_image(Gdk.Pixbuf? pixbuf)
     {
         if (pixbuf != null)
         {
-            var cached_surface = get_cached_surface (c, pixbuf);
-            if (cached_surface != null)
-            {
-                c.set_source_surface (cached_surface, 0, 0);
-                c.paint ();
-            }
+            surface = get_cached_surface (pixbuf);
         }
-        return false;
+        else
+        {
+            surface = null;
+            pixbuf = null;
+        }
+    }
+
+    public CachedImage (Gdk.Pixbuf? pixbuf)
+    {
+        update_image (pixbuf);
+    }
+
+    public void set_pixbuf(Gdk.Pixbuf? pixbuf)
+    {
+        update_image (pixbuf);
     }
 }
