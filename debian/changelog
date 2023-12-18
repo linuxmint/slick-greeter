@@ -1,3 +1,11 @@
+slick-greeter (2.0.2) virginia; urgency=medium
+
+  [ Michael Webster ]
+  * greeter-list.vala: Make the user and session box wider.
+  * Fix hidpi rendering of session badges, message indicator.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 18 Dec 2023 11:09:55 +0000
+
 slick-greeter (2.0.1) virginia; urgency=medium
 
   * l10n: Update translations
