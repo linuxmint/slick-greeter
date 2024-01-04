@@ -8,14 +8,15 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2023-06-01 11:07+0100\n"
-"PO-Revision-Date: 2017-07-14 15:04+0000\n"
-"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
+"PO-Revision-Date: 2023-12-26 17:09+0000\n"
+"Last-Translator: Marcin Lis <Unknown>\n"
 "Language-Team: Silesian <szl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2023-12-03 13:34+0000\n"
-"X-Generator: Launchpad (build 886068b1e1d10de444fbd53b0c7d3f6d4fb3e658)\n"
+"X-Launchpad-Export-Date: 2024-01-04 14:58+0000\n"
+"X-Generator: Launchpad (build e1eeab5b20e19239bd7d5f36676f7a52988db88b)\n"
+"Language: szl\n"
 
 #: src/greeter-list.vala:303
 #, c-format
@@ -24,7 +25,7 @@ msgstr "Wkludźcie hasło dlŏ %s"
 
 #: src/greeter-list.vala:305
 msgid "Enter your username"
-msgstr ""
+msgstr "Wkludźcie miano ôd używŏcza"
 
 #: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
@@ -32,7 +33,7 @@ msgstr "Hasło:"
 
 #: src/greeter-list.vala:817 src/user-list.vala:714
 msgid "Username:"
-msgstr "Używŏcz:"
+msgstr "Miano ôd używŏcza:"
 
 #: src/greeter-list.vala:872
 msgid "Invalid password, please try again"
@@ -40,35 +41,35 @@ msgstr "Złe hasło. Sprōbujcie, proszã, jeszcze rŏz"
 
 #: src/greeter-list.vala:883
 msgid "Failed to authenticate"
-msgstr "Uwierzytelniyniy niy zdarziło sie"
+msgstr "Uwierzytelniynie niy podarziło sie"
 
 #: src/greeter-list.vala:929
 msgid "Failed to start session"
-msgstr ""
+msgstr "Niy szło sztartnōnć sesyje"
 
 #: src/greeter-list.vala:943
 msgid "Logging in..."
-msgstr "Logowaniy..."
+msgstr "Logowanie..."
 
 #: src/main-window.vala:52
 msgid "Login Screen"
-msgstr "Ôbrŏz logowaniŏ"
+msgstr "Ekran logowaniŏ"
 
 #: src/main-window.vala:113
 msgid "Back"
-msgstr ""
+msgstr "Nazŏd"
 
 #: src/menubar.vala:324
 msgid "Power:"
-msgstr ""
+msgstr "Bateryjŏ:"
 
 #: src/menubar.vala:374
 msgid "Accessibility"
-msgstr ""
+msgstr "Dostympność"
 
 #: src/menubar.vala:383
 msgid "Onscreen keyboard"
-msgstr "Tastatura na ôbrŏzie"
+msgstr "Tastatura na ekranie"
 
 #: src/menubar.vala:388
 msgid "High Contrast"
@@ -76,27 +77,27 @@ msgstr "Wysoki kōntrast"
 
 #: src/menubar.vala:394
 msgid "Screen Reader"
-msgstr "Czytŏcz ôbrŏzu"
+msgstr "Czytŏcz ekranowy"
 
 #: src/menubar.vala:406 src/menubar.vala:453
 msgid "Quit..."
-msgstr ""
+msgstr "Zakōńcz..."
 
 #: src/menubar.vala:419 src/shutdown-dialog.vala:155
 msgid "Suspend"
-msgstr ""
+msgstr "Strzim"
 
 #: src/menubar.vala:437 src/shutdown-dialog.vala:172
 msgid "Hibernate"
-msgstr ""
+msgstr "Hibernacyjŏ"
 
 #: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "Ukłŏd tastatury:"
 
 #: src/menubar.vala:532
 msgid "More layouts..."
-msgstr ""
+msgstr "Wiyncyj układōw..."
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
@@ -104,33 +105,35 @@ msgstr "Ôpcyje sesyje"
 
 #: src/session-list.vala:34
 msgid "Select desktop environment"
-msgstr ""
+msgstr "Ôbiyrzcie strzodowisko graficzne"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr ""
+msgstr "Adje. Chcielibyście..."
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
-msgstr ""
+msgstr "Wyłōncz"
 
 #: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
-msgstr ""
+msgstr "Na zicher chcecie wyłōnczyć kōmputer?"
 
 #: src/shutdown-dialog.vala:137
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
+"Na kōmputrze durch sōm zalogowani inksi używŏcze, wyłōnczynie zawrze jejich "
+"sesyje."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
-msgstr ""
+msgstr "Sztartnij zaś"
 
 #: src/slick-greeter.vala:749
 msgid "Show release version"
-msgstr "Pokazowaniy wersyje"
+msgstr "Pokŏż informacyje ô wersyji"
 
 #: src/slick-greeter.vala:752
 msgid "Run in test mode"
@@ -140,12 +143,12 @@ msgstr "Włōncz w testowym trybie"
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
-"Wkludźcie '%s --help' coby ôbejrzeć cŏlkõ listã ôpcyji linije byfeli."
+"Wkludźcie '%s --help' coby ôbejrzeć cołkõ listã ôpcyji ôd linije kōmynd."
 
 #: src/toggle-box.vala:109
 #, c-format
 msgid "%s (Default)"
-msgstr ""
+msgstr "%s (Dōmyślny)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
@@ -153,11 +156,11 @@ msgstr "Sesyjŏ gościa"
 
 #: src/user-list.vala:455
 msgid "Please enter a complete e-mail address"
-msgstr ""
+msgstr "Wkludźcie, proszã, pełnõ adresã e-mail"
 
 #: src/user-list.vala:535
 msgid "Incorrect e-mail address or password"
-msgstr ""
+msgstr "Felernŏ adresa e-mail abo hasło"
 
 #: src/user-list.vala:566
 msgid ""
@@ -173,11 +176,11 @@ msgstr ""
 
 #: src/user-list.vala:571
 msgid "Cancel"
-msgstr ""
+msgstr "Pociep"
 
 #: src/user-list.vala:572
 msgid "Set Up..."
-msgstr ""
+msgstr "Nasztaluj..."
 
 #: src/user-list.vala:574
 msgid ""
@@ -187,7 +190,7 @@ msgstr ""
 
 #: src/user-list.vala:578
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: src/user-list.vala:579
 msgid ""
@@ -197,34 +200,34 @@ msgstr ""
 
 #: src/user-list.vala:698
 msgid "Server type not supported."
-msgstr ""
+msgstr "Zorta serwera niyspiyranŏ."
 
 #: src/user-list.vala:739
 msgid "Domain:"
-msgstr ""
+msgstr "Dōmyna:"
 
 #: src/user-list.vala:800
 msgid "Email address:"
-msgstr ""
+msgstr "Adresa e-mail:"
 
 #: src/user-list.vala:844
 msgid "Log In"
-msgstr "Wchōd"
+msgstr "Zaloguj"
 
 #: src/user-list.vala:845
 #, c-format
 msgid "Login as %s"
-msgstr "Logowaniy jako %s"
+msgstr "Logowanie jako %s"
 
 #: src/user-list.vala:849
 msgid "Retry"
-msgstr "Jeszcze rŏz"
+msgstr "Sprōbuj zaś"
 
 #: src/user-list.vala:850
 #, c-format
 msgid "Retry as %s"
-msgstr ""
+msgstr "Sprōbuj zaś jako %s"
 
 #: src/user-list.vala:892
 msgid "Login"
-msgstr "Login"
+msgstr "Logowanie"
