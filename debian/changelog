@@ -1,3 +1,9 @@
+slick-greeter (2.0.3) virginia; urgency=medium
+
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 04 Jan 2024 16:49:17 +0000
+
 slick-greeter (2.0.2) virginia; urgency=medium
 
   [ Michael Webster ]
