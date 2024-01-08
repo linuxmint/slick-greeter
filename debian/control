@@ -6,7 +6,6 @@ Standards-Version: 4.6.1
 Build-Depends: debhelper-compat (= 12),
                at-spi2-core,
                dbus-x11,
-               gnome-common,
                fonts-ubuntu,
                libcanberra-dev,
                libgtk-3-dev,
