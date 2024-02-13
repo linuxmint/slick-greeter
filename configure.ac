@@ -2,12 +2,12 @@
 
 dnl Process this file with autoconf to produce a configure script.
 
-AC_INIT(slick-greeter, 2.0.3)
+AC_INIT([slick-greeter],[2.0.3])
 AC_CONFIG_MACRO_DIR(m4)
 AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz foreign subdir-objects])
 AM_PROG_CC_C_O
 AM_PROG_VALAC([0.24.0])
-AM_CONFIG_HEADER(config.h)
+AC_CONFIG_HEADERS(config.h)
 AM_MAINTAINER_MODE
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES(yes)])
 
