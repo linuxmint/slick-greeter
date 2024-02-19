@@ -151,6 +151,7 @@ public class UGSettings
             bool_keys.append (KEY_SHOW_KEYBOARD);
             bool_keys.append (KEY_SHOW_QUIT);
             bool_keys.append (KEY_XFT_ANTIALIAS);
+            bool_keys.append (KEY_ONSCREEN_KEYBOARD);
             bool_keys.append (KEY_ACTIVATE_NUMLOCK);
 
             var int_keys = new List<string> ();
