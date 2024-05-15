@@ -2,12 +2,11 @@ project(
     'slick-greeter',
     'vala', 'c',
     version: '2.0.3',
-    meson_version: '>= 0.57.0'
+    meson_version: '>= 0.49.0'
 )
 
 cc = meson.get_compiler('c')
 
-gnome = import('gnome')
 i18n = import('i18n')
 
 gettext_package = meson.project_name()
@@ -49,4 +48,4 @@ subdir('files')
 subdir('po')
 subdir('src')
 
-gnome.post_install(glib_compile_schemas: true)
+meson.add_install_script('meson/meson-postinstall.sh')
