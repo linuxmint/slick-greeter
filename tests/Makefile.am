@@ -22,7 +22,6 @@ slick_greeter_test_SOURCES = \
 	../src/fixes.vapi \
 	../src/cairo-utils.vala \
 	../src/animate-timer.vala \
-	../src/indicator.vapi \
 	../src/fadable.vala \
 	../src/fadable-box.vala \
 	../src/dash-box.vala \
