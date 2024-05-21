@@ -611,7 +611,7 @@ public class SlickGreeter
         stderr.printf ("[%+.2fs] %s %s\n", log_timer.elapsed (), prefix, message);
     }
 
-    private static void check_hidpi ()
+    private static bool check_hidpi ()
     {
         try {
             string output;
@@ -620,11 +620,13 @@ public class SlickGreeter
             if (output == "2") {
                 debug ("Activating HiDPI (2x scale ratio)");
                 GLib.Environment.set_variable ("GDK_SCALE", "2", true);
+                return true;
             }
         }
         catch (Error e){
             warning ("Error while setting HiDPI support: %s", e.message);
         }
+        return false;
     }
 
     private static void set_keyboard_layout ()
@@ -714,12 +716,15 @@ public class SlickGreeter
         UGSettings.apply_conf_settings ();
 
         var hidpi = UGSettings.get_string (UGSettings.KEY_ENABLE_HIDPI);
+        var cursor_scale = 1;
         debug ("HiDPI support: %s", hidpi);
         if (hidpi == "auto") {
-            check_hidpi ();
+            if (check_hidpi ())
+                cursor_scale = 2;
         }
         else if (hidpi == "on") {
             GLib.Environment.set_variable ("GDK_SCALE", "2", true);
+            cursor_scale = 2;
         }
 
         /* Set the keyboard layout */
@@ -799,8 +804,8 @@ public class SlickGreeter
         }
         var int_value = UGSettings.get_integer (UGSettings.KEY_CURSOR_THEME_SIZE);
         if (int_value != 0) {
-            debug ("Settings cursor theme size: %d", int_value);
-            settings.set ("gtk-cursor-theme-size", int_value, null);
+            debug ("Settings cursor theme size: %d", int_value * cursor_scale);
+            settings.set ("gtk-cursor-theme-size", int_value * cursor_scale, null);
         }
         value = UGSettings.get_string (UGSettings.KEY_FONT_NAME);
         if (value != ""){
