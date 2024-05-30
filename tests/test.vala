@@ -109,7 +109,7 @@ public class Test
         }
     }
 
-    private static void inject_key (Gtk.Widget w, int keyval)
+    private static void inject_key (Gtk.Widget w, uint keyval)
     {
         // Make sure everything is flushed
         process_events ();

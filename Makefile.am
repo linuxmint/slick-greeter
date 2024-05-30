@@ -1,6 +1,6 @@
 # -*- Mode: Automake; indent-tabs-mode: t; tab-width: 4 -*-
 
-SUBDIRS = data files po src tests
+SUBDIRS = data files po src
 
 EXTRA_DIST = \
 	autogen.sh \

@@ -1,0 +1,6 @@
+debian/.debhelper/
+debian/slick-greeter/
+debian/*.log
+debian/*.substvars
+debian/debhelper-build-stamp
+debian/files

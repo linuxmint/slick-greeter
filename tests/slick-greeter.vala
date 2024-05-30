@@ -126,4 +126,19 @@ public class SlickGreeter
         var ctx = widget.get_style_context ();
         ctx.add_class ("lightdm");
     }
+
+    public bool is_live_session (out string live_username, out string live_realname)
+    {
+        return false;
+    }
+
+    public static string validate_session (string? session)
+    {
+        return session;
+    }
+
+    public static string? get_default_session ()
+    {
+        return "cinnamon";
+    }
 }
