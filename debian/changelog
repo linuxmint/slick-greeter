@@ -1,3 +1,9 @@
+slick-greeter (2.0.5) wilma; urgency=medium
+
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 18 Jun 2024 20:53:25 +0100
+
 slick-greeter (2.0.4) wilma; urgency=medium
 
   [ Jakko3 ]
