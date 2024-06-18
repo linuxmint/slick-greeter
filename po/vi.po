@@ -8,79 +8,79 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2023-06-01 11:07+0100\n"
-"PO-Revision-Date: 2017-07-14 15:05+0000\n"
-"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
+"PO-Revision-Date: 2024-04-02 14:29+0000\n"
+"Last-Translator: thieninox <Unknown>\n"
 "Language-Team: Vietnamese <vi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2024-01-04 14:58+0000\n"
-"X-Generator: Launchpad (build e1eeab5b20e19239bd7d5f36676f7a52988db88b)\n"
+"X-Launchpad-Export-Date: 2024-06-18 17:56+0000\n"
+"X-Generator: Launchpad (build bbfa2351d9d6a9ddfe262109428f7bf5516e65d1)\n"
 
 #: src/greeter-list.vala:303
 #, c-format
 msgid "Enter password for %s"
-msgstr ""
+msgstr "Nhập mật khẩu cho %s"
 
 #: src/greeter-list.vala:305
 msgid "Enter your username"
-msgstr ""
+msgstr "Nhập tên người dùng của bạn"
 
 #: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
-msgstr ""
+msgstr "Mật khẩu:"
 
 #: src/greeter-list.vala:817 src/user-list.vala:714
 msgid "Username:"
-msgstr ""
+msgstr "Tên người dùng:"
 
 #: src/greeter-list.vala:872
 msgid "Invalid password, please try again"
-msgstr ""
+msgstr "Mật khẩu không đúng, vui lòng thử lại"
 
 #: src/greeter-list.vala:883
 msgid "Failed to authenticate"
-msgstr ""
+msgstr "Không thể xác thực"
 
 #: src/greeter-list.vala:929
 msgid "Failed to start session"
-msgstr ""
+msgstr "Không thể bắt đầu phiên"
 
 #: src/greeter-list.vala:943
 msgid "Logging in..."
-msgstr ""
+msgstr "Đang đăng nhập…"
 
 #: src/main-window.vala:52
 msgid "Login Screen"
-msgstr ""
+msgstr "Màn hình đăng nhập"
 
 #: src/main-window.vala:113
 msgid "Back"
-msgstr ""
+msgstr "Quay lại"
 
 #: src/menubar.vala:324
 msgid "Power:"
-msgstr ""
+msgstr "Nguồn điện:"
 
 #: src/menubar.vala:374
 msgid "Accessibility"
-msgstr ""
+msgstr "Khả năng truy cập"
 
 #: src/menubar.vala:383
 msgid "Onscreen keyboard"
-msgstr ""
+msgstr "Bàn phím ảo"
 
 #: src/menubar.vala:388
 msgid "High Contrast"
-msgstr ""
+msgstr "Độ tương phản cao"
 
 #: src/menubar.vala:394
 msgid "Screen Reader"
-msgstr ""
+msgstr "Trình đọc màn hình"
 
 #: src/menubar.vala:406 src/menubar.vala:453
 msgid "Quit..."
-msgstr ""
+msgstr "Thoát..."
 
 #: src/menubar.vala:419 src/shutdown-dialog.vala:155
 msgid "Suspend"
@@ -92,23 +92,23 @@ msgstr "Ngủ đông"
 
 #: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "Bố cục bàn phím:"
 
 #: src/menubar.vala:532
 msgid "More layouts..."
-msgstr ""
+msgstr "Thêm bố cục..."
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
-msgstr ""
+msgstr "Tuỳ chọn phiên làm việc"
 
 #: src/session-list.vala:34
 msgid "Select desktop environment"
-msgstr "Chọn môi trường làm việc chính"
+msgstr "Chọn môi trường máy tính chính"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr ""
+msgstr "Tạm biệt. Bạn có muốn..."
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
@@ -123,6 +123,8 @@ msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
+"Những người dùng khác hiện đang đăng nhập vào máy tính này, việc tắt bây giờ "
+"cũng sẽ đóng các phiên khác này."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
@@ -130,16 +132,17 @@ msgstr "Khởi động lại"
 
 #: src/slick-greeter.vala:749
 msgid "Show release version"
-msgstr ""
+msgstr "Hiển thị phiên bản phát hành"
 
 #: src/slick-greeter.vala:752
 msgid "Run in test mode"
-msgstr ""
+msgstr "Chạy ở chế độ thử nghiệm"
 
 #: src/slick-greeter.vala:768
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
+"Chạy lệnh '%s --help' để xem danh sách đầy đủ các tùy chọn dòng lệnh có sẵn."
 
 #: src/toggle-box.vala:109
 #, c-format
@@ -148,7 +151,7 @@ msgstr "%s (Mặc định)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
-msgstr ""
+msgstr "Phiên làm việc cho khách"
 
 #: src/user-list.vala:455
 msgid "Please enter a complete e-mail address"
@@ -180,7 +183,7 @@ msgstr "Hủy"
 
 #: src/user-list.vala:572
 msgid "Set Up..."
-msgstr ""
+msgstr "Cài đặt..."
 
 #: src/user-list.vala:574
 msgid ""
@@ -221,7 +224,7 @@ msgstr "Đăng nhập"
 #: src/user-list.vala:845
 #, c-format
 msgid "Login as %s"
-msgstr ""
+msgstr "Đăng nhập bằng %s"
 
 #: src/user-list.vala:849
 msgid "Retry"
@@ -234,4 +237,4 @@ msgstr "Thử lại theo như %s"
 
 #: src/user-list.vala:892
 msgid "Login"
-msgstr ""
+msgstr "Đăng nhập"
