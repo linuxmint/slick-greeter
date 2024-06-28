@@ -823,6 +823,7 @@ public abstract class GreeterList : FadableBox
 
         /* Limit the number of characters in case a cat is sitting on the keyboard... */
         entry.max_length = MAX_FIELD_SIZE;
+        queue_resize ();
     }
 
     protected virtual void authentication_complete_cb ()
