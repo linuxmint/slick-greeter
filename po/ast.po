@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2023-06-01 11:07+0100\n"
-"PO-Revision-Date: 2017-07-14 15:09+0000\n"
-"Last-Translator: Xuacu Saturio <xuacusk8@gmail.com>\n"
+"PO-Revision-Date: 2024-07-19 09:47+0000\n"
+"Last-Translator: Havi <Unknown>\n"
 "Language-Team: Asturian <ast@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2024-06-18 17:56+0000\n"
+"X-Launchpad-Export-Date: 2024-07-21 09:02+0000\n"
 "X-Generator: Launchpad (build bbfa2351d9d6a9ddfe262109428f7bf5516e65d1)\n"
 
 #: src/greeter-list.vala:303
@@ -24,7 +24,7 @@ msgstr "Introduz la contraseña pa %s"
 
 #: src/greeter-list.vala:305
 msgid "Enter your username"
-msgstr ""
+msgstr "Introduz un nome d'usuariu"
 
 #: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
@@ -60,11 +60,11 @@ msgstr "Atrás"
 
 #: src/menubar.vala:324
 msgid "Power:"
-msgstr ""
+msgstr "Enerxía:"
 
 #: src/menubar.vala:374
 msgid "Accessibility"
-msgstr ""
+msgstr "Accesibilidá"
 
 #: src/menubar.vala:383
 msgid "Onscreen keyboard"
@@ -80,7 +80,7 @@ msgstr "Llector de pantalla"
 
 #: src/menubar.vala:406 src/menubar.vala:453
 msgid "Quit..."
-msgstr ""
+msgstr "Colar..."
 
 #: src/menubar.vala:419 src/shutdown-dialog.vala:155
 msgid "Suspend"
@@ -92,11 +92,11 @@ msgstr "Ivernar"
 
 #: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "Disposición de tecláu:"
 
 #: src/menubar.vala:532
 msgid "More layouts..."
-msgstr ""
+msgstr "Más diseños..."
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
@@ -108,7 +108,7 @@ msgstr "Esbillar entornu d'escritoriu"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr ""
+msgstr "Alón. ¿qué quies...?"
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
@@ -142,6 +142,8 @@ msgstr "Executar en mou de prueba"
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
+"Executa '%s --help' pa ver una llista completa de les opciones disponibles "
+"na llinia de comandos."
 
 #: src/toggle-box.vala:109
 #, c-format
@@ -182,7 +184,7 @@ msgstr "Encaboxar"
 
 #: src/user-list.vala:572
 msgid "Set Up..."
-msgstr ""
+msgstr "Configurar"
 
 #: src/user-list.vala:574
 msgid ""
