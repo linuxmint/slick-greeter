@@ -1,3 +1,16 @@
+slick-greeter (2.0.7) xia; urgency=medium
+
+  [ Turretkeeper ]
+  * Add lomiri badge. (#248)
+
+  [ wojnilowicz ]
+  * Add Plasma X11 badge (#249)
+
+  [ Lenar Shakirov ]
+  * Resize HEIGHT of greeter listbox on pam message (#243)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 25 Nov 2024 11:21:55 +0000
+
 slick-greeter (2.0.6) wilma; urgency=medium
 
   * l10n: Update translations
