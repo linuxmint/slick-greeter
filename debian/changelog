@@ -1,3 +1,13 @@
+slick-greeter (2.0.8) xia; urgency=medium
+
+  [ Bobby Rong ]
+  * Add xfce-wayland badge (#250)
+
+  [ Clement Lefebvre ]
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 05 Dec 2024 10:51:28 +0000
+
 slick-greeter (2.0.7) xia; urgency=medium
 
   [ Turretkeeper ]
