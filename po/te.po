@@ -8,222 +8,234 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2023-06-01 11:07+0100\n"
-"PO-Revision-Date: 2017-07-14 15:01+0000\n"
-"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
+"PO-Revision-Date: 2024-09-28 17:37+0000\n"
+"Last-Translator: B.Laxmi koundinya <Unknown>\n"
 "Language-Team: Telugu <te@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2024-07-21 09:02+0000\n"
-"X-Generator: Launchpad (build bbfa2351d9d6a9ddfe262109428f7bf5516e65d1)\n"
+"X-Launchpad-Export-Date: 2024-12-05 10:18+0000\n"
+"X-Generator: Launchpad (build 1519c6efe8e9bd78e6c5ebf2eb5bcb040b95ad32)\n"
 
 #: src/greeter-list.vala:303
 #, c-format
 msgid "Enter password for %s"
-msgstr ""
+msgstr "%s కోసం పాస్‌వర్డ్‌ను నమోదు చేయండి"
 
 #: src/greeter-list.vala:305
 msgid "Enter your username"
-msgstr ""
+msgstr "మీ వినియోగదారు పేరును నమోదు చేయండి"
 
 #: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
-msgstr ""
+msgstr "పాస్వర్డ్:"
 
 #: src/greeter-list.vala:817 src/user-list.vala:714
 msgid "Username:"
-msgstr ""
+msgstr "వినియోగదారు పేరు:"
 
 #: src/greeter-list.vala:872
 msgid "Invalid password, please try again"
-msgstr ""
+msgstr "చెల్లని పాస్‌వర్డ్, దయచేసి మళ్లీ ప్రయత్నించండి"
 
 #: src/greeter-list.vala:883
 msgid "Failed to authenticate"
-msgstr ""
+msgstr "ప్రమాణీకరించడంలో విఫలమైంది"
 
 #: src/greeter-list.vala:929
 msgid "Failed to start session"
-msgstr ""
+msgstr "సెషన్‌ను ప్రారంభించడంలో విఫలమైంది"
 
 #: src/greeter-list.vala:943
 msgid "Logging in..."
-msgstr ""
+msgstr "లాగిన్ అవుతోంది..."
 
 #: src/main-window.vala:52
 msgid "Login Screen"
-msgstr ""
+msgstr "లాగిన్ స్క్రీన్"
 
 #: src/main-window.vala:113
 msgid "Back"
-msgstr ""
+msgstr "వెనుకకు"
 
 #: src/menubar.vala:324
 msgid "Power:"
-msgstr ""
+msgstr "శక్తి:"
 
 #: src/menubar.vala:374
 msgid "Accessibility"
-msgstr ""
+msgstr "యాక్సెసిబిలిటీ"
 
 #: src/menubar.vala:383
 msgid "Onscreen keyboard"
-msgstr ""
+msgstr "ఆన్‌స్క్రీన్ కీబోర్డ్"
 
 #: src/menubar.vala:388
 msgid "High Contrast"
-msgstr ""
+msgstr "అధిక కాంట్రాస్ట్"
 
 #: src/menubar.vala:394
 msgid "Screen Reader"
-msgstr ""
+msgstr "స్క్రీన్ రీడర్"
 
 #: src/menubar.vala:406 src/menubar.vala:453
 msgid "Quit..."
-msgstr ""
+msgstr "నిష్క్రమించు..."
 
 #: src/menubar.vala:419 src/shutdown-dialog.vala:155
 msgid "Suspend"
-msgstr ""
+msgstr "సస్పెండ్ చేయండి"
 
 #: src/menubar.vala:437 src/shutdown-dialog.vala:172
 msgid "Hibernate"
-msgstr ""
+msgstr "హైబర్నేట్"
 
 #: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "కీబోర్డ్ లేఅవుట్:"
 
 #: src/menubar.vala:532
 msgid "More layouts..."
-msgstr ""
+msgstr "మరిన్ని లేఔట్‌లు..."
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
-msgstr ""
+msgstr "సెషన్ ఎంపికలు"
 
 #: src/session-list.vala:34
 msgid "Select desktop environment"
-msgstr ""
+msgstr "డెస్క్‌టాప్ పర్యావరణాన్ని ఎంచుకోండి"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr ""
+msgstr "వీడ్కోలు. మీరు చేయాలనుకుంటున్నారా.."
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
-msgstr ""
+msgstr "షట్ డౌన్"
 
 #: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
-msgstr ""
+msgstr "మీరు ఖచ్చితంగా కంప్యూటర్‌ను షట్ డౌన్ చేయాలనుకుంటున్నారా?"
 
 #: src/shutdown-dialog.vala:137
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
+"ఇతర వినియోగదారులు ప్రస్తుతం ఈ కంప్యూటర్‌కు లాగిన్ చేసారు, ఇప్పుడు షట్ డౌన్ "
+"చేయడం వలన ఈ ఇతర సెషన్‌లు కూడా మూసివేయబడతాయి."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
-msgstr ""
+msgstr "పునఃప్రారంభించండి"
 
 #: src/slick-greeter.vala:749
 msgid "Show release version"
-msgstr ""
+msgstr "విడుదల సంస్కరణను చూపు"
 
 #: src/slick-greeter.vala:752
 msgid "Run in test mode"
-msgstr ""
+msgstr "పరీక్ష మోడ్‌లో అమలు చేయండి"
 
 #: src/slick-greeter.vala:768
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
+"అందుబాటులో ఉన్న కమాండ్ లైన్ ఎంపికల పూర్తి జాబితాను చూడటానికి '%s --help'ని "
+"అమలు చేయండి."
 
 #: src/toggle-box.vala:109
 #, c-format
 msgid "%s (Default)"
-msgstr ""
+msgstr "%s (డిఫాల్ట్)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
-msgstr ""
+msgstr "అతిథి సెషన్"
 
 #: src/user-list.vala:455
 msgid "Please enter a complete e-mail address"
-msgstr ""
+msgstr "దయచేసి పూర్తి ఇమెయిల్ చిరునామాను నమోదు చేయండి"
 
 #: src/user-list.vala:535
 msgid "Incorrect e-mail address or password"
-msgstr ""
+msgstr "ఇ-మెయిల్ చిరునామా లేదా పాస్‌వర్డ్ తప్పు"
 
 #: src/user-list.vala:566
 msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
+"మీకు RDP లేదా Citrix సర్వర్‌లో ఖాతా ఉంటే, రిమోట్ లాగిన్ ఆ సర్వర్ నుండి "
+"అప్లికేషన్‌లను అమలు చేయడానికి మిమ్మల్ని అనుమతిస్తుంది."
 
 #: src/user-list.vala:568
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
+"మీకు RDP సర్వర్‌లో ఖాతా ఉంటే, రిమోట్ లాగిన్ ఆ సర్వర్ నుండి అప్లికేషన్‌లను "
+"అమలు చేయడానికి మిమ్మల్ని అనుమతిస్తుంది."
 
 #: src/user-list.vala:571
 msgid "Cancel"
-msgstr ""
+msgstr "రద్దు చేయి"
 
 #: src/user-list.vala:572
 msgid "Set Up..."
-msgstr ""
+msgstr "సెటప్ చేయండి..."
 
 #: src/user-list.vala:574
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
 msgstr ""
+"ఈ సేవను ఉపయోగించడానికి మీకు ఉబుంటు రిమోట్ లాగిన్ ఖాతా అవసరం. మీరు ఇప్పుడు "
+"ఖాతాను సెటప్ చేయాలనుకుంటున్నారా?"
 
 #: src/user-list.vala:578
 msgid "OK"
-msgstr ""
+msgstr "సరే"
 
 #: src/user-list.vala:579
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
 msgstr ""
+"ఈ సేవను ఉపయోగించడానికి మీకు ఉబుంటు రిమోట్ లాగిన్ ఖాతా అవసరం. ఖాతాను సెటప్ "
+"చేయడానికి uccs.canonical.comని సందర్శించండి."
 
 #: src/user-list.vala:698
 msgid "Server type not supported."
-msgstr ""
+msgstr "సర్వర్ రకానికి మద్దతు లేదు."
 
 #: src/user-list.vala:739
 msgid "Domain:"
-msgstr ""
+msgstr "డొమైన్:"
 
 #: src/user-list.vala:800
 msgid "Email address:"
-msgstr ""
+msgstr "ఇమెయిల్ చిరునామా:"
 
 #: src/user-list.vala:844
 msgid "Log In"
-msgstr "ప్రవేశించండి"
+msgstr "లాగిన్ చేయండి"
 
 #: src/user-list.vala:845
 #, c-format
 msgid "Login as %s"
-msgstr ""
+msgstr "%s వలె లాగిన్ చేయండి"
 
 #: src/user-list.vala:849
 msgid "Retry"
-msgstr "మరలా ప్రయత్నించు"
+msgstr "మళ్లీ ప్రయత్నించండి"
 
 #: src/user-list.vala:850
 #, c-format
 msgid "Retry as %s"
-msgstr ""
+msgstr "%s వలె మళ్లీ ప్రయత్నించండి"
 
 #: src/user-list.vala:892
 msgid "Login"
-msgstr ""
+msgstr "లాగిన్ చేయండి"

@@ -8,23 +8,23 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2023-06-01 11:07+0100\n"
-"PO-Revision-Date: 2023-06-01 10:17+0000\n"
+"PO-Revision-Date: 2024-11-28 22:28+0000\n"
 "Last-Translator: Marek Adamski <Unknown>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2024-07-21 09:02+0000\n"
-"X-Generator: Launchpad (build bbfa2351d9d6a9ddfe262109428f7bf5516e65d1)\n"
+"X-Launchpad-Export-Date: 2024-12-05 10:18+0000\n"
+"X-Generator: Launchpad (build 1519c6efe8e9bd78e6c5ebf2eb5bcb040b95ad32)\n"
 
 #: src/greeter-list.vala:303
 #, c-format
 msgid "Enter password for %s"
-msgstr "Proszę wprowadzić hasło użytkownika %s"
+msgstr "Wpisz hasło użytkownika %s"
 
 #: src/greeter-list.vala:305
 msgid "Enter your username"
-msgstr "Wprowadź nazwę użytkownika"
+msgstr "Wpisz nazwę użytkownika"
 
 #: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
@@ -36,7 +36,7 @@ msgstr "Nazwa użytkownika:"
 
 #: src/greeter-list.vala:872
 msgid "Invalid password, please try again"
-msgstr "Nieprawidłowe hasło. Proszę spróbować ponownie."
+msgstr "Nieprawidłowe hasło. Spróbuj ponownie."
 
 #: src/greeter-list.vala:883
 msgid "Failed to authenticate"
@@ -88,7 +88,7 @@ msgstr "Uśpij"
 
 #: src/menubar.vala:437 src/shutdown-dialog.vala:172
 msgid "Hibernate"
-msgstr "Hibernacja"
+msgstr "Zahibernuj"
 
 #: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
 msgid "Keyboard layout:"
@@ -104,7 +104,7 @@ msgstr "Opcje sesji"
 
 #: src/session-list.vala:34
 msgid "Select desktop environment"
-msgstr "Proszę wybrać środowisko graficzne"
+msgstr "Wybierz środowisko graficzne"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
@@ -123,7 +123,7 @@ msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
-"Do tego komputera są zalogowani inni użytkownicy.  Wyłączenie systemu "
+"Na tym komputerze są zalogowani inni użytkownicy.  Wyłączenie systemu "
 "spowoduje zakończenie ich sesji."
 
 #: src/shutdown-dialog.vala:190
@@ -150,11 +150,11 @@ msgstr "%s (Domyślne)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
-msgstr "Gość"
+msgstr "Sesja gościa"
 
 #: src/user-list.vala:455
 msgid "Please enter a complete e-mail address"
-msgstr "Proszę wprowadzić pełny adres e-mail"
+msgstr "Wpisz pełny adres e-mail"
 
 #: src/user-list.vala:535
 msgid "Incorrect e-mail address or password"
