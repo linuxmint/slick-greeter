@@ -1,3 +1,13 @@
+slick-greeter (2.0.9) xia; urgency=medium
+
+  [ tumashu ]
+  * slick-greeter.vala: Let get_default_session support icewm and jwm. (#252)
+
+  [ Clement Lefebvre ]
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 06 Jan 2025 14:13:00 +0000
+
 slick-greeter (2.0.8) xia; urgency=medium
 
   [ Bobby Rong ]
