@@ -113,7 +113,7 @@ public class UGSettings
     public static void apply_conf_settings ()
     {
         try {
-            var path = "/etc/lightdm/slick-greeter.conf";
+            var path = "/etc/lightdm/lightdm.conf.d/slick-greeter.conf";
             var gsettings = new Settings (SCHEMA);
             var keyfile = new KeyFile ();
 
