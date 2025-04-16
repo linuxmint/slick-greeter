@@ -59,7 +59,6 @@ slick_greeter_VALAFLAGS = \
 	--pkg libcanberra \
 	--pkg gio-2.0 \
 	--pkg pixman-1 \
-	--pkg xapp \
 	--target-glib 2.32
 
 logo_generator_VALAFLAGS = $(slick_greeter_VALAFLAGS)

@@ -534,14 +534,13 @@ public class MenuBar : Gtk.MenuBar
         menu_item.set_submenu (all_menu);
         menu_item.show ();
 
-
-        var xapp_controller = new XApp.KbdLayoutController();
         var display = get_display ();
         var keymap = Gdk.Keymap.get_for_display (display);
         keymap.state_changed.connect (() =>
         {
-            label.set_label(xapp_controller.get_current_short_group_label());
-            item.set_tooltip_text(_("Keyboard layout:").concat(" ").concat(xapp_controller.get_current_name()));
+            var new_layout = LightDM.get_layout();
+            label.set_label(new_layout.name);
+            item.set_tooltip_text(_("Keyboard layout:").concat(" ").concat(new_layout.description));
         });
 
         return item;

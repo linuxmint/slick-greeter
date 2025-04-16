@@ -47,7 +47,6 @@ dependencies = [
     pixman_dep,
     posix_dep,
     x11_dep,
-    xapp_dep,
     xext_dep,
 ]
 
