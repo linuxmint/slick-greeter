@@ -24,7 +24,6 @@ m_dep = cc.find_library('m')
 pixman_dep = dependency('pixman-1')
 posix_dep = meson.get_compiler('vala').find_library('posix')
 x11_dep = dependency('x11')
-xapp_dep = dependency('xapp')
 xext_dep = cc.find_library('Xext')
 
 config_data = configuration_data()
