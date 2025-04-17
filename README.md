@@ -7,7 +7,7 @@ A slick-looking LightDM greeter
 
 - The default configuration is stored in dconf under the schema x.dm.slick-greeter.
 - Distributions should set their own defaults using a glib override.
-- Users can create and modify /etc/lightdm/slick-greeter.conf, settings in this files take priority and overwrite dconf settings.
+- Users can create and modify /etc/lightdm/lightdm.conf.d/slick-greeter.conf, settings in this files take priority and overwrite dconf settings.
 
 A configuration tool is available at https://github.com/linuxmint/lightdm-settings
 
@@ -26,7 +26,7 @@ A configuration tool is available at https://github.com/linuxmint/lightdm-settin
 
 ----
 
-Configuration file format for /etc/lightdm/slick-greeter.conf
+Configuration file format for /etc/lightdm/lightdm.conf.d/slick-greeter.conf
 
     [Greeter]
     # LightDM GTK+ Configuration
