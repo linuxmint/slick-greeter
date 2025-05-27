@@ -189,6 +189,7 @@ public class SlickGreeter
         sessions.append ("pekwm");
         sessions.append ("pantheon");
         sessions.append ("i3");
+        sessions.append ("sway");
         sessions.append ("enlightenment");
         sessions.append ("deepin");
         sessions.append ("openbox");
