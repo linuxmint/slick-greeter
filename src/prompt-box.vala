@@ -51,21 +51,24 @@ public class PromptBox : FadableBox
     protected FlatButton option_button;
     private CachedImage option_image;
     private CachedImage message_image;
+    private UserAvatar avatar_image;
 
     /* Condensed widgets */
     protected Gtk.Widget small_box_widget;
     private ActiveIndicator small_active_indicator;
     protected FadingLabel small_name_label;
     private CachedImage small_message_image;
+    private UserAvatar small_avatar_image;
 
     protected const int COL_ACTIVE        = 0;
     protected const int COL_CONTENT       = 1;
     protected const int COL_SPACER        = 2;
 
     protected const int ROW_NAME          = 0;
-    protected const int COL_NAME_LABEL    = 0;
-    protected const int COL_NAME_MESSAGE  = 1;
-    protected const int COL_NAME_OPTIONS  = 2;
+    protected const int COL_AVATAR        = 0;
+    protected const int COL_NAME_LABEL    = 1;
+    protected const int COL_NAME_MESSAGE  = 2;
+    protected const int COL_NAME_OPTIONS  = 3;
 
     protected const int COL_ENTRIES_START = 1;
     protected const int COL_ENTRIES_END   = 1;
@@ -104,14 +107,22 @@ public class PromptBox : FadableBox
         box_grid.column_spacing = 4;
         box_grid.row_spacing = 3;
         box_grid.margin_top = GreeterList.BORDER;
-        box_grid.margin_bottom = 6;
+        box_grid.margin_bottom = 4;
         box_grid.expand = true;
 
         /** Grid layout:
           0 1     2      3 4
-          > Name  M      S <
-            Message.......
-            Entry.........
+          > [A]   M      S <
+            Name........
+            Message.....
+            Entry.......
+            
+          Where:
+          > = Active indicator
+          [A] = Avatar
+          M = Message icon
+          S = Session options
+          < = Spacing indicator
          */
 
         active_indicator = new ActiveIndicator ();
@@ -166,6 +177,27 @@ public class PromptBox : FadableBox
 
         fixed.add (small_box_widget);
         fixed.add (box_grid);
+
+        // Connect the notify::position signal to handle visibility
+        notify["position"].connect(update_visibility);
+    }
+
+    private void update_visibility()
+    {
+        // If we are in the main zone (position close to 0)
+        if (position >= -0.1 && position <= 0.1) {
+            box_grid.opacity = 1.0;
+            small_box_widget.opacity = 0.0;
+            box_grid.visible = true;
+            small_box_widget.visible = false;
+        }
+        // If we are outside the main zone
+        else {
+            box_grid.opacity = 0.0;
+            small_box_widget.opacity = 1.0;
+            box_grid.visible = false;
+            small_box_widget.visible = true;
+        }
     }
 
     protected virtual Gtk.Grid create_name_grid ()
@@ -174,20 +206,29 @@ public class PromptBox : FadableBox
         name_grid.column_spacing = 4;
         name_grid.hexpand = true;
 
+        avatar_image = new UserAvatar();
+        avatar_image.valign = Gtk.Align.START;
+        avatar_image.halign = Gtk.Align.START;
+        avatar_image.margin_top = ActiveIndicator.WIDTH + box_grid.column_spacing - 2;
+        avatar_image.show();
+        name_grid.attach (avatar_image, COL_AVATAR, ROW_NAME, 1, 1);
+
         name_label = new FadingLabel ("");
         name_label.override_font (Pango.FontDescription.from_string ("Ubuntu 13"));
         name_label.override_color (Gtk.StateFlags.NORMAL, { 1.0f, 1.0f, 1.0f, 1.0f });
+        name_label.halign = Gtk.Align.START;
         name_label.valign = Gtk.Align.START;
-        name_label.vexpand = true;
-        name_label.yalign = 0.5f;
-        name_label.xalign = 0.0f;
+        name_label.vexpand = false;
         name_label.margin_left = 2;
+        name_label.margin_top = 4;
         name_label.set_size_request (-1, grid_size);
         name_label.show ();
         name_grid.attach (name_label, COL_NAME_LABEL, ROW_NAME, 1, 1);
 
         message_image = new CachedImage (null);
         message_image.set_from_icon_name("mail-unread", Gtk.IconSize.BUTTON);
+        message_image.valign = Gtk.Align.CENTER;
+        message_image.halign = Gtk.Align.CENTER;
 
         var align = new Gtk.Alignment (0.5f, 0.5f, 0.0f, 0.0f);
         align.valign = Gtk.Align.START;
@@ -199,10 +240,11 @@ public class PromptBox : FadableBox
         option_button = new FlatButton ();
         option_button.get_style_context ().add_class ("option-button");
         option_button.hexpand = true;
+        option_button.vexpand = true;
         option_button.halign = Gtk.Align.END;
         option_button.valign = Gtk.Align.START;
         // Keep as much space on top as on the right
-        option_button.margin_top = ActiveIndicator.WIDTH + box_grid.column_spacing;
+        option_button.margin_top = ActiveIndicator.WIDTH + box_grid.column_spacing - 2;
         Gtk.button_set_focus_on_click (option_button, false);
         option_button.relief = Gtk.ReliefStyle.NONE;
         option_button.get_accessible ().set_name (_("Session Options"));
@@ -223,9 +265,16 @@ public class PromptBox : FadableBox
         var small_name_grid = new Gtk.Grid ();
         small_name_grid.column_spacing = 4;
 
+        small_avatar_image = new UserAvatar();
+        small_avatar_image.is_small = true;
+        small_avatar_image.valign = Gtk.Align.CENTER;
+        small_avatar_image.show();
+        small_name_grid.attach (small_avatar_image, 0, 0, 1, 1);
+
         small_name_label = new FadingLabel ("");
         small_name_label.override_font (Pango.FontDescription.from_string ("Ubuntu 13"));
         small_name_label.override_color (Gtk.StateFlags.NORMAL, { 1.0f, 1.0f, 1.0f, 1.0f });
+        small_name_label.valign = Gtk.Align.CENTER;
         small_name_label.yalign = 0.5f;
         small_name_label.xalign = 0.0f;
         small_name_label.margin_left = 2;
@@ -643,6 +692,8 @@ public class PromptBox : FadableBox
         small_box_widget.get_preferred_height (null, out small_height);
         allocation.height = small_height;
         small_box_widget.size_allocate (allocation);
+
+        update_visibility();
     }
 
     public override void draw_full_alpha (Cairo.Context c)
@@ -672,6 +723,14 @@ public class PromptBox : FadableBox
         c.clip ();
         fixed.propagate_draw (small_box_widget, c);
         c.restore ();
+    }
+
+    public void set_avatar_path(string? path)
+    {
+        if (avatar_image != null)
+            avatar_image.avatar_path = path;
+        if (small_avatar_image != null)
+            small_avatar_image.avatar_path = path;
     }
 }
 
