@@ -18,6 +18,8 @@
  *          Michael Terry <michael.terry@canonical.com>
  */
 
+using GLib;
+
 public class UserPromptBox : PromptBox
 {
     /* Background for this user */
@@ -29,8 +31,51 @@ public class UserPromptBox : PromptBox
     /* True if should be marked as active */
     public bool is_active;
 
+    private string _username;
+    public string username 
+    {
+        get { return _username; }
+        set 
+        {
+            _username = value;
+            update_avatar();
+        }
+    }
+
     public UserPromptBox (string name)
     {
         Object (id: name);
+        username = name;
+    }
+
+    private void update_avatar()
+    {
+        string? avatar_path = null;
+
+        // Get avatar through LightDM
+        var users = LightDM.UserList.get_instance();
+        foreach (var user in users.users) {
+            if (user.name == username) {
+                avatar_path = user.image;
+                break;
+            }
+        }
+
+        // If no avatar is found via LightDM, try default paths
+        if (avatar_path == null || !FileUtils.test(avatar_path, FileTest.EXISTS)) {
+            string[] possible_paths = {
+                "/var/lib/AccountsService/icons/" + username,
+                "/usr/share/cinnamon/faces/user-generic.png"
+            };
+
+            foreach (string path in possible_paths) {
+                if (FileUtils.test(path, FileTest.EXISTS)) {
+                    avatar_path = path;
+                    break;
+                }
+            }
+        }
+
+        set_avatar_path(avatar_path);
     }
 }
