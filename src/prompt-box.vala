@@ -127,7 +127,7 @@ public class PromptBox : FadableBox
 
         active_indicator = new ActiveIndicator ();
         active_indicator.valign = Gtk.Align.START;
-        active_indicator.margin_top = (grid_size - ActiveIndicator.HEIGHT) / 2;
+        active_indicator.margin_top = ((grid_size - ActiveIndicator.HEIGHT) / 2) + ActiveIndicator.MARGIN;
         active_indicator.show ();
         box_grid.attach (active_indicator, COL_ACTIVE, last_row, 1, 1);
 
@@ -209,7 +209,7 @@ public class PromptBox : FadableBox
         avatar_image = new UserAvatar();
         avatar_image.valign = Gtk.Align.START;
         avatar_image.halign = Gtk.Align.START;
-        avatar_image.margin_top = ActiveIndicator.WIDTH + box_grid.column_spacing - 2;
+        avatar_image.margin_top = (ActiveIndicator.WIDTH + box_grid.column_spacing) - ActiveIndicator.MARGIN;
         avatar_image.show();
         name_grid.attach (avatar_image, COL_AVATAR, ROW_NAME, 1, 1);
 
@@ -244,7 +244,7 @@ public class PromptBox : FadableBox
         option_button.halign = Gtk.Align.END;
         option_button.valign = Gtk.Align.START;
         // Keep as much space on top as on the right
-        option_button.margin_top = ActiveIndicator.WIDTH + box_grid.column_spacing - 2;
+        option_button.margin_top = (ActiveIndicator.WIDTH + box_grid.column_spacing) - ActiveIndicator.MARGIN;
         Gtk.button_set_focus_on_click (option_button, false);
         option_button.relief = Gtk.ReliefStyle.NONE;
         option_button.get_accessible ().set_name (_("Session Options"));
@@ -739,6 +739,7 @@ private class ActiveIndicator : Gtk.Image
     public bool active { get; set; }
     public const int WIDTH = 8;
     public const int HEIGHT = 7;
+    public const int MARGIN = 4;
 
     construct
     {
