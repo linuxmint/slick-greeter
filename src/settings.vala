@@ -54,6 +54,7 @@ public class UGSettings
     public const string KEY_CLOCK_FORMAT = "clock-format";
     public const string KEY_ONSCREEN_KEYBOARD_LAYOUT = "onscreen-keyboard-layout";
     public const string KEY_CONTENT_ALIGN = "content-align";
+    public const string KEY_ENABLE_BLUR = "enable-blur";
 
     public static bool get_boolean (string key)
     {
@@ -152,6 +153,7 @@ public class UGSettings
             bool_keys.append (KEY_SHOW_QUIT);
             bool_keys.append (KEY_XFT_ANTIALIAS);
             bool_keys.append (KEY_ACTIVATE_NUMLOCK);
+            bool_keys.append (KEY_ENABLE_BLUR);
 
             var int_keys = new List<string> ();
             int_keys.append (KEY_XFT_DPI);
