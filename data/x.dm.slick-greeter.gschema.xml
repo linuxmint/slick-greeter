@@ -161,7 +161,7 @@
       <summary>Alignment of the main content</summary>
     </key>
     <key name="enable-blur" type="b">
-      <default>true</default>
+      <default>false</default>
       <summary>Whether to enable the blur effect on the background</summary>
     </key>
   </schema>
