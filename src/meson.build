@@ -27,6 +27,7 @@ slick_greeter_sources = files(
     'shutdown-dialog.vala',
     'toggle-box.vala',
     'slick-greeter.vala',
+    'user-avatar.vala',
     'user-list.vala',
     'user-prompt-box.vala',
 )

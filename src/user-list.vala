@@ -1079,6 +1079,13 @@ public class UserList : GreeterList
             label = user.name;
 
         add_user (user.name, label, user.background, user.logged_in, user.has_messages, user.session);
+
+        // Update avatar
+        var e = find_entry (user.name) as UserPromptBox;
+        if (e != null)
+        {
+            e.username = user.name;
+        }
     }
 
     private bool filter_group (string user_name)
