@@ -1,3 +1,20 @@
+slick-greeter (2.2.0) zara; urgency=medium
+
+  [ Michael Webster ]
+  * Remove unused autotools files.
+  * menubar.vala: Use LightDM api for showing the current keyboard layout.
+
+  [ eyJhb ]
+  * session detection: add support for sway (#261)
+
+  [ Hilyxx ]
+  * Add user's avatar (#263)
+
+  [ Clement Lefebvre ]
+  * Darken dashbox and panel
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 30 Jul 2025 11:44:27 +0200
+
 slick-greeter (2.0.9) xia; urgency=medium
 
   [ tumashu ]
