@@ -103,7 +103,7 @@ public class MenuBar : Gtk.MenuBar
         }
 
         c.set_source_rgb (0.1, 0.1, 0.1);
-        c.paint_with_alpha (0.4);
+        c.paint_with_alpha (0.8);
 
         foreach (var child in get_children ())
         {
