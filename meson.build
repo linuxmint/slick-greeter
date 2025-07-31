@@ -1,4 +1,4 @@
-project('slick-greeter', 'vala', 'c', version : '2.2.0', meson_version : '>= 0.49.0')
+project('slick-greeter', 'vala', 'c', version : '2.2.1', meson_version : '>= 0.49.0')
 
 cc = meson.get_compiler('c')
 
