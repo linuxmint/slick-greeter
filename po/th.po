@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2023-06-01 11:07+0100\n"
-"PO-Revision-Date: 2018-03-16 08:21+0000\n"
+"PO-Revision-Date: 2025-02-08 18:42+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: Thai <th@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2025-01-06 11:59+0000\n"
-"X-Generator: Launchpad (build 6394e03793719e8d73f5a60b5439440e693c92f1)\n"
+"X-Launchpad-Export-Date: 2025-07-31 09:23+0000\n"
+"X-Generator: Launchpad (build 647c49fc7f614412c17a151d8ba4fadd90c06a00)\n"
 
 #: src/greeter-list.vala:303
 #, c-format
@@ -24,7 +24,7 @@ msgstr "ป้อนรหัสผ่านสำหรับ %s"
 
 #: src/greeter-list.vala:305
 msgid "Enter your username"
-msgstr ""
+msgstr "ป้อนชื่อผู้ใช้ของคุณ"
 
 #: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
@@ -96,7 +96,7 @@ msgstr "เค้าโครงแป้นพิมพ์:"
 
 #: src/menubar.vala:532
 msgid "More layouts..."
-msgstr ""
+msgstr "เค้าโครงเพิ่มเติม..."
 
 #: src/prompt-box.vala:215
 msgid "Session Options"

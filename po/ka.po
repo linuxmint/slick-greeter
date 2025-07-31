@@ -8,222 +8,235 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2023-06-01 11:07+0100\n"
-"PO-Revision-Date: 2017-07-14 15:07+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2025-06-15 12:30+0000\n"
+"Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <ka@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2025-01-06 11:59+0000\n"
-"X-Generator: Launchpad (build 6394e03793719e8d73f5a60b5439440e693c92f1)\n"
+"X-Launchpad-Export-Date: 2025-07-31 09:23+0000\n"
+"X-Generator: Launchpad (build 647c49fc7f614412c17a151d8ba4fadd90c06a00)\n"
+"Language: ka\n"
 
 #: src/greeter-list.vala:303
 #, c-format
 msgid "Enter password for %s"
-msgstr ""
+msgstr "შეიყვანეთ პაროლი %s-სთვის"
 
 #: src/greeter-list.vala:305
 msgid "Enter your username"
-msgstr ""
+msgstr "შეიყვანეთ თქვენი მომხმარებლის სახელი"
 
 #: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
-msgstr ""
+msgstr "პაროლი:"
 
 #: src/greeter-list.vala:817 src/user-list.vala:714
 msgid "Username:"
-msgstr ""
+msgstr "მომხმარებელი:"
 
 #: src/greeter-list.vala:872
 msgid "Invalid password, please try again"
-msgstr ""
+msgstr "არასწორი პაროლი. თავიდან სცადეთ"
 
 #: src/greeter-list.vala:883
 msgid "Failed to authenticate"
-msgstr ""
+msgstr "ავთენტიკაციის შეცდომა"
 
 #: src/greeter-list.vala:929
 msgid "Failed to start session"
-msgstr ""
+msgstr "სესიის გაშვება ჩავარდა"
 
 #: src/greeter-list.vala:943
 msgid "Logging in..."
-msgstr ""
+msgstr "შესვლა..."
 
 #: src/main-window.vala:52
 msgid "Login Screen"
-msgstr ""
+msgstr "შესვლის ეკრანი"
 
 #: src/main-window.vala:113
 msgid "Back"
-msgstr ""
+msgstr "უკან"
 
 #: src/menubar.vala:324
 msgid "Power:"
-msgstr ""
+msgstr "სიმძლავრე:"
 
 #: src/menubar.vala:374
 msgid "Accessibility"
-msgstr ""
+msgstr "წვდომადობა"
 
 #: src/menubar.vala:383
 msgid "Onscreen keyboard"
-msgstr ""
+msgstr "კლავიატურის ეკრანზე"
 
 #: src/menubar.vala:388
 msgid "High Contrast"
-msgstr ""
+msgstr "მაღალი კონტრასტი"
 
 #: src/menubar.vala:394
 msgid "Screen Reader"
-msgstr ""
+msgstr "ეკრანის მკითხველი"
 
 #: src/menubar.vala:406 src/menubar.vala:453
 msgid "Quit..."
-msgstr ""
+msgstr "გასვლა..."
 
 #: src/menubar.vala:419 src/shutdown-dialog.vala:155
 msgid "Suspend"
-msgstr ""
+msgstr "ძილი"
 
 #: src/menubar.vala:437 src/shutdown-dialog.vala:172
 msgid "Hibernate"
-msgstr ""
+msgstr "პროგრამული ძილი"
 
 #: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "კლავიატურის განლაგება:"
 
 #: src/menubar.vala:532
 msgid "More layouts..."
-msgstr ""
+msgstr "მეტი განლაგება..."
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
-msgstr ""
+msgstr "სესიის მორგება"
 
 #: src/session-list.vala:34
 msgid "Select desktop environment"
-msgstr ""
+msgstr "არჩიეთ სამუშაო მაგიდა"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr ""
+msgstr "ნახვამდის. ხომ არ გნებავთ..."
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
-msgstr ""
+msgstr "გამორთვა"
 
 #: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
-msgstr ""
+msgstr "მართლა გნებავთ, გამორთოთ კომპიუტერი?"
 
 #: src/shutdown-dialog.vala:137
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
+"ამ კომპიუტერზე სხვა მომხმარებლებიც არიან შემოსული. კომპიუტერის გამორთვა მათი "
+"სესიების დახურვასაც გამოიწვევს."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
-msgstr ""
+msgstr "თავიდან გაშვება"
 
 #: src/slick-greeter.vala:749
 msgid "Show release version"
-msgstr ""
+msgstr "ვერსიის ჩვენება"
 
 #: src/slick-greeter.vala:752
 msgid "Run in test mode"
-msgstr ""
+msgstr "სატესტო რეჟიმში გაშვება"
 
 #: src/slick-greeter.vala:768
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
+"ბრძანების სტრიქონში ხელმისაწვდომი პარამეტრების სიის სანახავად გაუშვით '%s --"
+"help'."
 
 #: src/toggle-box.vala:109
 #, c-format
 msgid "%s (Default)"
-msgstr ""
+msgstr "%s (ნაგულისხმევი)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
-msgstr ""
+msgstr "სტუმრის სესია"
 
 #: src/user-list.vala:455
 msgid "Please enter a complete e-mail address"
-msgstr ""
+msgstr "შეიყვანეთ სრული ელფოსტის მისამართი"
 
 #: src/user-list.vala:535
 msgid "Incorrect e-mail address or password"
-msgstr ""
+msgstr "არასწორი ელფოსტის მისამართი ან პაროლი"
 
 #: src/user-list.vala:566
 msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
+"თუ თქვენ გაქვთ RDP-ის ან Citrix Server-ის ანგარიში, Remote Login საშუალებას "
+"გაძლევთ, აპლიკაციები გაუშვათ იმ სერვერიდან."
 
 #: src/user-list.vala:568
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
+"თუ თქვენ გაქვთ RDP Server-ის ანგარიში, Remote Login საშუალებას გაძლევთ, "
+"აპლიკაციები გაუშვათ იმ სერვერიდან."
 
 #: src/user-list.vala:571
 msgid "Cancel"
-msgstr ""
+msgstr "გაუქმება"
 
 #: src/user-list.vala:572
 msgid "Set Up..."
-msgstr ""
+msgstr "მორგება..."
 
 #: src/user-list.vala:574
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
 msgstr ""
+"ამ სერვისის გამოსაყენებლად Ubuntu Remote Login-ის ანგარიშია საჭირო. გნებავთ, "
+"მოირგოთ ანგარიში?"
 
 #: src/user-list.vala:578
 msgid "OK"
-msgstr ""
+msgstr "დიახ"
 
 #: src/user-list.vala:579
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
 msgstr ""
+"ამ სერვისის გამოსაყენებლად Ubuntu Remote Login-ის ანგარიშია საჭირო. "
+"ანგარიშის მოსარგებად ეწვიეთ ვებგვერდს uccs.canonical.com."
 
 #: src/user-list.vala:698
 msgid "Server type not supported."
-msgstr ""
+msgstr "სერვერის ტიპი მხარდაჭერილი არაა."
 
 #: src/user-list.vala:739
 msgid "Domain:"
-msgstr ""
+msgstr "დომენი:"
 
 #: src/user-list.vala:800
 msgid "Email address:"
-msgstr ""
+msgstr "ელფოსტის მისამართი:"
 
 #: src/user-list.vala:844
 msgid "Log In"
-msgstr ""
+msgstr "შესვლა"
 
 #: src/user-list.vala:845
 #, c-format
 msgid "Login as %s"
-msgstr ""
+msgstr "შესვლა, როგორც %s"
 
 #: src/user-list.vala:849
 msgid "Retry"
-msgstr ""
+msgstr "თავიდან ცდა"
 
 #: src/user-list.vala:850
 #, c-format
 msgid "Retry as %s"
-msgstr ""
+msgstr "თავიდან ცდა, როგორც %s"
 
 #: src/user-list.vala:892
 msgid "Login"
-msgstr ""
+msgstr "შესვლა"
