@@ -192,20 +192,11 @@ class BackgroundLoader : Object
         var grid_y_offset = get_grid_offset (image.height);
 
         /* Create background */
-        var surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, image.width, image.height);
+        var surface = new Cairo.Surface.similar (target_surface, Cairo.Content.COLOR, image.width, image.height);
         var bc = new Cairo.Context (surface);
         Gdk.cairo_set_source_pixbuf (bc, image, 0, 0);
+
         bc.paint ();
-
-        /* Apply blur effect if enabled */
-        if (UGSettings.get_boolean (UGSettings.KEY_ENABLE_BLUR))
-        {
-            CairoUtils.ExponentialBlur.surface (surface, 30);
-        }
-
-        /* Add dark overlay to improve visibility with lighter background */
-        bc.set_source_rgba(0, 0, 0, 0.25);  // Black with 25% opacity
-        bc.paint();
 
         /* Draw logo */
         if (logo != null)
