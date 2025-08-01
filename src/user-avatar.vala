@@ -2,7 +2,6 @@ public class UserAvatar : CachedImage
 {
     public const int AVATAR_SIZE = 32;
     public const int AVATAR_MARGIN = 6;
-    public const double SMALL_AVATAR_OPACITY = 0.8;
 
     private string? _avatar_path;
     public string? avatar_path 
@@ -74,13 +73,9 @@ public class UserAvatar : CachedImage
                 );
                 cr.clip();
                 
-                // Draw the image with opacity if small
+                // Draw the image
                 Gdk.cairo_set_source_pixbuf(cr, pixbuf, 0, 0);
-                if (is_small) {
-                    cr.paint_with_alpha(SMALL_AVATAR_OPACITY);
-                } else {
-                    cr.paint();
-                }
+                cr.paint();
                 
                 // Convert surface to pixbuf and set it
                 var final_pixbuf = Gdk.pixbuf_get_from_surface(

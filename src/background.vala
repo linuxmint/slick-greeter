@@ -588,6 +588,23 @@ public class Background : Gtk.Fixed
         active_monitor = monitor;
     }
 
+    public void connect_to_dashbox_transitions (DashBox dashbox)
+    {
+        if (dashbox != null)
+        {
+            dashbox.transition_complete.connect (synchronized_redraw);
+        }
+    }
+
+    private void synchronized_redraw ()
+    {
+        // Synchronize redraws with DashBox transitions
+        Timeout.add (10, () => {
+            queue_draw ();
+            return false;
+        });
+    }
+
     public override void size_allocate (Gtk.Allocation allocation)
     {
         if (!get_realized ())
