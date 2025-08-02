@@ -48,7 +48,7 @@ public class DashButton : FlatButton, Fadable
         this.text = text;
 
         /* Add chevron */
-        var path = Path.build_filename (Config.PKGDATADIR, "arrow_right.png", null);
+        var path = Path.build_filename (Config.PKGDATADIR, "arrow_right.svg", null);
         try
         {
             var pixbuf = new Gdk.Pixbuf.from_file (path);

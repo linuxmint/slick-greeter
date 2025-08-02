@@ -33,6 +33,7 @@ public class SessionPrompt : PromptBox
     {
         label = _("Select desktop environment");
         name_label.vexpand = false;
+        hide_avatar();
 
         box = new ToggleBox (default_session, session);
 

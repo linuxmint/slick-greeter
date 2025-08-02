@@ -92,18 +92,50 @@ public class MenuBar : Gtk.MenuBar
 
     public override bool draw (Cairo.Context c)
     {
-        if (background != null)
+        var width = get_allocated_width ();
+        var height = get_allocated_height ();
+        
+        // Check if we need to recreate the blurred surface
+        if (bg_surface == null || bg_surface.get_width () != width || bg_surface.get_height () != height)
         {
-            int x, y;
-            background.translate_coordinates (this, 0, 0, out x, out y);
-            c.save ();
-            c.translate (x, y);
-            background.draw_full (c, Background.DrawFlags.NONE);
-            c.restore ();
+            if (width > 0 && height > 0)
+            {
+                try
+                {
+                    bg_surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, width, height);
+                    var bg_cr = new Cairo.Context (bg_surface);
+                    
+                    // Draw background in temporary surface
+            if (background != null)
+            {
+                int x, y;
+                background.translate_coordinates (this, 0, 0, out x, out y);
+                        bg_cr.save ();
+                        bg_cr.translate (x, y);
+                        background.draw_full (bg_cr, Background.DrawFlags.NONE);
+                        bg_cr.restore ();
+                    }
+                    
+                    // Apply blur effect
+                    CairoUtils.ExponentialBlur.surface (bg_surface, BLUR_RADIUS);
+                }
+                catch (Error e)
+                {
+                    warning ("Failed to create background surface: %s", e.message);
+                    bg_surface = null;
+                }
+            }
+        }
+
+        // Draw blurred background
+        if (bg_surface != null)
+        {
+            c.set_source_surface (bg_surface, 0, 0);
+            c.paint ();
         }
 
         c.set_source_rgb (0.1, 0.1, 0.1);
-        c.paint_with_alpha (0.8);
+        c.paint_with_alpha (0.55);
 
         foreach (var child in get_children ())
         {
@@ -111,6 +143,12 @@ public class MenuBar : Gtk.MenuBar
         }
 
         return false;
+    }
+
+    private void rebuild_background ()
+    {
+        bg_surface = null;
+        queue_draw ();
     }
 
     /* Due to LP #973922 the keyboard has to be loaded after the main window
@@ -134,12 +172,22 @@ public class MenuBar : Gtk.MenuBar
     private Gtk.Label power_label;
     private Gtk.Image power_icon;
 
+    private Cairo.ImageSurface? bg_surface = null;
+    private const int BLUR_RADIUS = 8;
+
 
     construct
     {
         Gtk.Settings.get_default ().get ("gtk-theme-name", out default_theme_name);
 
         pack_direction = Gtk.PackDirection.RTL;
+
+        // Connect background change signals to rebuild blur effect
+        if (background != null)
+        {
+            background.notify["alpha"].connect (rebuild_background);
+            background.notify["average-color"].connect (rebuild_background);
+        }
 
         if (UGSettings.get_boolean (UGSettings.KEY_SHOW_QUIT))
         {
@@ -360,12 +408,27 @@ public class MenuBar : Gtk.MenuBar
     {
         close_pid (ref keyboard_pid);
         close_pid (ref reader_pid);
+        
+        // Clean up blurred surface
+        if (bg_surface != null)
+        {
+            bg_surface.finish ();
+            bg_surface = null;
+        }
     }
 
     public override void get_preferred_height (out int min, out int nat)
     {
         min = HEIGHT;
         nat = HEIGHT;
+    }
+
+    public override void size_allocate (Gtk.Allocation allocation)
+    {
+        base.size_allocate (allocation);
+        
+        // Force reconstruction of blur effect
+        rebuild_background ();
     }
 
     private Gtk.MenuItem make_a11y_item ()
@@ -675,5 +738,4 @@ public class MenuBar : Gtk.MenuBar
         else
             close_pid (ref reader_pid);
     }
-
 }

@@ -141,7 +141,7 @@ public class MainWindow : Gtk.Window
         back_button = new FlatButton ();
         back_button.get_accessible ().set_name (_("Back"));
         Gtk.button_set_focus_on_click (back_button, false);
-        var image = new Gtk.Image.from_file (Path.build_filename (Config.PKGDATADIR, "arrow_left.png", null));
+        var image = new Gtk.Image.from_file (Path.build_filename (Config.PKGDATADIR, "arrow_left.svg", null));
         image.show ();
         back_button.set_size_request (grid_size - GreeterList.BORDER * 2, grid_size - GreeterList.BORDER * 2);
         back_button.add (image);
@@ -360,6 +360,10 @@ public class MainWindow : Gtk.Window
         greeter_list = new UserList (background, menubar);
         greeter_list.show ();
         SlickGreeter.add_style_class (greeter_list);
+        
+        // Connect Background to DashBox transitions for synchronized redraws
+        background.connect_to_dashbox_transitions (greeter_list.greeter_box);
+        
         push_list (greeter_list);
     }
 

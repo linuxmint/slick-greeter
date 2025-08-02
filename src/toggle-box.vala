@@ -110,7 +110,7 @@ public class ToggleBox : Gtk.Box
         }
 
         var label = new Gtk.Label (null);
-        label.set_markup ("<span font=\"Ubuntu 13\">%s</span>".printf (name));
+        label.set_markup ("<span font=\"Ubuntu 12.5\">%s</span>".printf (name));
         label.halign = Gtk.Align.START;
         hbox.pack_start (label, true, true, 0);
 
@@ -122,7 +122,7 @@ public class ToggleBox : Gtk.Box
         {
             /* Tighten padding on buttons to not be so large */
             var style = new Gtk.CssProvider ();
-            style.load_from_data ("* {padding: 8px;}", -1);
+            style.load_from_data ("* {padding: 8px 3px;}", -1);
             item.get_style_context ().add_provider (style, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
         }
         catch (Error e)

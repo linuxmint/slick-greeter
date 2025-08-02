@@ -152,7 +152,7 @@ public class ShutdownDialog : Gtk.Fixed
         {
             if (LightDM.get_can_suspend ())
             {
-                var button = add_button (_("Suspend"), Path.build_filename (Config.PKGDATADIR, "suspend.png"), Path.build_filename (Config.PKGDATADIR, "suspend_highlight.png"));
+                var button = add_button (_("Suspend"), Path.build_filename (Config.PKGDATADIR, "suspend.svg"), Path.build_filename (Config.PKGDATADIR, "suspend_highlight.svg"));
                 button.clicked.connect (() =>
                 {
                     try
@@ -169,7 +169,7 @@ public class ShutdownDialog : Gtk.Fixed
 
             if (LightDM.get_can_hibernate ())
             {
-                var button = add_button (_("Hibernate"), Path.build_filename (Config.PKGDATADIR, "hibernate.png"), Path.build_filename (Config.PKGDATADIR, "hibernate_highlight.png"));
+                var button = add_button (_("Hibernate"), Path.build_filename (Config.PKGDATADIR, "hibernate.svg"), Path.build_filename (Config.PKGDATADIR, "hibernate_highlight.svg"));
                 button.clicked.connect (() =>
                 {
                     try
@@ -187,7 +187,7 @@ public class ShutdownDialog : Gtk.Fixed
 
         if (LightDM.get_can_restart ())
         {
-            var button = add_button (_("Restart"), Path.build_filename (Config.PKGDATADIR, "restart.png"), Path.build_filename (Config.PKGDATADIR, "restart_highlight.png"));
+            var button = add_button (_("Restart"), Path.build_filename (Config.PKGDATADIR, "restart.svg"), Path.build_filename (Config.PKGDATADIR, "restart_highlight.svg"));
             button.clicked.connect (() =>
             {
                 try
@@ -204,7 +204,7 @@ public class ShutdownDialog : Gtk.Fixed
 
         if (LightDM.get_can_shutdown ())
         {
-            var button = add_button (_("Shut Down"), Path.build_filename (Config.PKGDATADIR, "shutdown.png"), Path.build_filename (Config.PKGDATADIR, "shutdown_highlight.png"));
+            var button = add_button (_("Shut Down"), Path.build_filename (Config.PKGDATADIR, "shutdown_dialog.svg"), Path.build_filename (Config.PKGDATADIR, "shutdown_highlight.svg"));
             button.clicked.connect (() =>
             {
                 try
@@ -222,7 +222,7 @@ public class ShutdownDialog : Gtk.Fixed
                 show.connect(() => { button.grab_focus (); });
         }
 
-        close_button = new DialogButton (Path.build_filename (Config.PKGDATADIR, "dialog_close.png"), Path.build_filename (Config.PKGDATADIR, "dialog_close_highlight.png"), Path.build_filename (Config.PKGDATADIR, "dialog_close_press.png"));
+        close_button = new DialogButton (Path.build_filename (Config.PKGDATADIR, "dialog_close.svg"), Path.build_filename (Config.PKGDATADIR, "dialog_close_highlight.svg"), Path.build_filename (Config.PKGDATADIR, "dialog_close_press.svg"));
         close_button.can_focus = false;
         close_button.clicked.connect (() => { close (); });
         close_button.visible = true;

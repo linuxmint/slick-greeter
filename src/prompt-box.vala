@@ -732,6 +732,11 @@ public class PromptBox : FadableBox
         if (small_avatar_image != null)
             small_avatar_image.avatar_path = path;
     }
+
+    public void hide_avatar ()
+    {
+        avatar_image.hide ();
+    }
 }
 
 private class ActiveIndicator : Gtk.Image
