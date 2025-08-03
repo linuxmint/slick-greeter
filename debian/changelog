@@ -1,3 +1,13 @@
+slick-greeter (2.2.2) zara; urgency=medium
+
+  [ Hilyxx ]
+  * slick-greeter:  Add blur effect and fix bugs (#268)
+
+  [ Clement Lefebvre ]
+  * avatar: Remove Cinnamon fallback
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun, 03 Aug 2025 13:13:41 +0200
+
 slick-greeter (2.2.1) zara; urgency=medium
 
   * l10n: Update translations
