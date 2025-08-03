@@ -64,9 +64,7 @@ public class UserPromptBox : PromptBox
         // If no avatar is found via LightDM, try default paths
         if (avatar_path == null || !FileUtils.test(avatar_path, FileTest.EXISTS)) {
             string[] possible_paths = {
-                "/var/lib/AccountsService/icons/" + username,
-                "/usr/share/cinnamon/faces/user-generic.png"
-            };
+                "/var/lib/AccountsService/icons/" + username            };
 
             foreach (string path in possible_paths) {
                 if (FileUtils.test(path, FileTest.EXISTS)) {
