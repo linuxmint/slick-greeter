@@ -594,10 +594,10 @@ public class PromptBox : FadableBox
     public void show_toggle_visibility_icon (Gtk.Entry entry)
     {
         if (entry.get_visibility ()) {
-            entry.set_icon_from_icon_name(Gtk.EntryIconPosition.PRIMARY, "view-conceal-symbolic");
+            entry.set_icon_from_icon_name(Gtk.EntryIconPosition.PRIMARY, "xapp-view-conceal-symbolic");
         }
         else {
-            entry.set_icon_from_icon_name(Gtk.EntryIconPosition.PRIMARY, "view-reveal-symbolic");
+            entry.set_icon_from_icon_name(Gtk.EntryIconPosition.PRIMARY, "xapp-view-reveal-symbolic");
         }
     }
 
