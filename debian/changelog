@@ -1,3 +1,14 @@
+slick-greeter (2.2.3) zena; urgency=medium
+
+  [ Clement Lefebvre ]
+  * Switch to XApp symbolic icons
+  * Switch to xapp-symbolic-icons (XSI)
+
+  [ Himadri Sekhar Basu ]
+  * Rearrange build-depends (#272)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 19 Nov 2025 16:10:10 +0000
+
 slick-greeter (2.2.2) zara; urgency=medium
 
   [ Hilyxx ]
