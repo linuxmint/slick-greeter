@@ -60,7 +60,7 @@ public class DashEntry : Gtk.Entry, Fadable
 
         if (arrow_pixbuf == null)
         {
-            var filename = Path.build_filename (Config.PKGDATADIR, "arrow_right.png");
+            var filename = Path.build_filename (Config.PKGDATADIR, "arrow_right.svg");
             try
             {
                 arrow_pixbuf = new Gdk.Pixbuf.from_file (filename);
