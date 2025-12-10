@@ -1,3 +1,10 @@
+slick-greeter (2.2.4) zena; urgency=medium
+
+  [ Pablo Rodriguez ]
+  * Use filename `arrow_right.svg` (#274)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 10 Dec 2025 14:49:49 +0000
+
 slick-greeter (2.2.3) zena; urgency=medium
 
   [ Clement Lefebvre ]
