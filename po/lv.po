@@ -8,51 +8,51 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2023-06-01 11:07+0100\n"
-"PO-Revision-Date: 2017-07-14 15:05+0000\n"
-"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
+"PO-Revision-Date: 2025-09-08 18:40+0000\n"
+"Last-Translator: Klavs Petersons <Unknown>\n"
 "Language-Team: Latvian <lv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2025-07-31 09:23+0000\n"
-"X-Generator: Launchpad (build 647c49fc7f614412c17a151d8ba4fadd90c06a00)\n"
+"X-Launchpad-Export-Date: 2025-12-12 13:31+0000\n"
+"X-Generator: Launchpad (build 379e22b8475e3402088a4cdb4a6e7936a4d28414)\n"
 
 #: src/greeter-list.vala:303
 #, c-format
 msgid "Enter password for %s"
-msgstr ""
+msgstr "Ievadiet %s paroli"
 
 #: src/greeter-list.vala:305
 msgid "Enter your username"
-msgstr ""
+msgstr "Ievadiet savu lietotājvārdu"
 
 #: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
-msgstr ""
+msgstr "Parole:"
 
 #: src/greeter-list.vala:817 src/user-list.vala:714
 msgid "Username:"
-msgstr ""
+msgstr "Lietotājvārds:"
 
 #: src/greeter-list.vala:872
 msgid "Invalid password, please try again"
-msgstr ""
+msgstr "Nederīga parole. Lūdzu, mēģiniet vēlreiz"
 
 #: src/greeter-list.vala:883
 msgid "Failed to authenticate"
-msgstr ""
+msgstr "Neizdevās autentificēt"
 
 #: src/greeter-list.vala:929
 msgid "Failed to start session"
-msgstr "Neizdevās startēt sesiju"
+msgstr "Neizdevās sākt sesiju"
 
 #: src/greeter-list.vala:943
 msgid "Logging in..."
-msgstr "Ierakstās..."
+msgstr "Notiek pieteikšanās..."
 
 #: src/main-window.vala:52
 msgid "Login Screen"
-msgstr "Ierakstīšanās ekrāns"
+msgstr "Pieteikšanās ekrāns"
 
 #: src/main-window.vala:113
 msgid "Back"
@@ -60,31 +60,31 @@ msgstr "Atpakaļ"
 
 #: src/menubar.vala:324
 msgid "Power:"
-msgstr ""
+msgstr "Pakāpe:"
 
 #: src/menubar.vala:374
 msgid "Accessibility"
-msgstr ""
+msgstr "Pieejamība"
 
 #: src/menubar.vala:383
 msgid "Onscreen keyboard"
-msgstr ""
+msgstr "Ekrāna tastatūra"
 
 #: src/menubar.vala:388
 msgid "High Contrast"
-msgstr ""
+msgstr "Augsts kontrasts"
 
 #: src/menubar.vala:394
 msgid "Screen Reader"
-msgstr ""
+msgstr "Ekrāna lasītājs"
 
 #: src/menubar.vala:406 src/menubar.vala:453
 msgid "Quit..."
-msgstr ""
+msgstr "Iziet..."
 
 #: src/menubar.vala:419 src/shutdown-dialog.vala:155
 msgid "Suspend"
-msgstr "Iesnaudināt"
+msgstr "Aizturēt"
 
 #: src/menubar.vala:437 src/shutdown-dialog.vala:172
 msgid "Hibernate"
@@ -92,11 +92,11 @@ msgstr "Iemidzināt"
 
 #: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "Tastatūras izkārtojums:"
 
 #: src/menubar.vala:532
 msgid "More layouts..."
-msgstr ""
+msgstr "Citi izkārtojumi..."
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
@@ -104,27 +104,27 @@ msgstr "Sesijas opcijas"
 
 #: src/session-list.vala:34
 msgid "Select desktop environment"
-msgstr "Izvēlieties darbvirsmas vidi"
+msgstr "Atlasiet darbvirsmas vidi"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr ""
+msgstr "Ardievu. Vai vēlaties..."
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
-msgstr "Beigt darbu"
+msgstr "Izslēgt"
 
 #: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
-msgstr "Vai esat drošs ka vēlaties izslēgt datoru?"
+msgstr "Vai tiešām vēlaties izslēgt datoru?"
 
 #: src/shutdown-dialog.vala:137
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
-"Pašlaik šajā datorā ir ierakstījušies citi lietotāji. Datora izslēgšana "
-"aizvērs arī šo lietotāju sesijas."
+"Citi lietotāji pašlaik ir pieteikušies šajā datorā; izslēdzot tūlīt, tiks "
+"aizvērtas arī šīs citas sesijas."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
@@ -132,11 +132,11 @@ msgstr "Pārstartēt"
 
 #: src/slick-greeter.vala:749
 msgid "Show release version"
-msgstr ""
+msgstr "Rādīt laidiena versiju"
 
 #: src/slick-greeter.vala:752
 msgid "Run in test mode"
-msgstr ""
+msgstr "Palaist testa režīmā"
 
 #: src/slick-greeter.vala:768
 #, c-format
@@ -152,11 +152,11 @@ msgstr "%s (noklusējuma)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
-msgstr ""
+msgstr "Viesu sesija"
 
 #: src/user-list.vala:455
 msgid "Please enter a complete e-mail address"
-msgstr "Lūdzu, ierakstiet pilnu e-pasta adresi"
+msgstr "Lūdzu, ievadiet pilnu e-pasta adresi"
 
 #: src/user-list.vala:535
 msgid "Incorrect e-mail address or password"
@@ -167,16 +167,16 @@ msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"Ja jums ir konts uz RDP vai Citrix servera, attālinātā pieteikšanās ļauj "
-"jums palaist lietotnes no tā servera."
+"Ja jums ir konts RDP vai Citrix serverī, attālā pieteikšanās ļauj palaist "
+"lietojumprogrammas no šī servera."
 
 #: src/user-list.vala:568
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"Ja jums ir konts uz RDP servera, attālinātā pieteikšanās ļauj jums palaist "
-"lietotnes no tā servera."
+"Ja jums ir konts RDP serverī, attālā pieteikšanās ļauj palaist "
+"lietojumprogrammas no šī servera."
 
 #: src/user-list.vala:571
 msgid "Cancel"
@@ -184,31 +184,31 @@ msgstr "Atcelt"
 
 #: src/user-list.vala:572
 msgid "Set Up..."
-msgstr ""
+msgstr "Iestatīt..."
 
 #: src/user-list.vala:574
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
 msgstr ""
-"Lai lietotu šo servisu, jāiestata Ubuntu attālinātais konts. Vai vēlaties "
-"iestatīt kontu tagad?"
+"Lai izmantotu šo pakalpojumu, ir nepieciešams Ubuntu attālās pieteikšanās "
+"konts. Vai vēlaties iestatīt kontu tūlīt?"
 
 #: src/user-list.vala:578
 msgid "OK"
-msgstr "Labi"
+msgstr "LABI"
 
 #: src/user-list.vala:579
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
 msgstr ""
-"Lai lietotu šo servisu, jāiestata Ubuntu attālinātais konts. Dodieties uz "
-"uccs.canonical.com, lai iestatītu kontu."
+"Lai izmantotu šo pakalpojumu, ir nepieciešams Ubuntu attālās pieteikšanās "
+"konts. Apmeklējiet vietni uccs.canonical.com, lai iestatītu kontu."
 
 #: src/user-list.vala:698
 msgid "Server type not supported."
-msgstr "Servera tips nav atbalstīts."
+msgstr "Servera tips netiek atbalstīts."
 
 #: src/user-list.vala:739
 msgid "Domain:"
@@ -220,7 +220,7 @@ msgstr "E-pasta adrese:"
 
 #: src/user-list.vala:844
 msgid "Log In"
-msgstr "Ierakstīties"
+msgstr "Pieslēgties"
 
 #: src/user-list.vala:845
 #, c-format
@@ -238,4 +238,4 @@ msgstr "Mēģināt atkal kā %s"
 
 #: src/user-list.vala:892
 msgid "Login"
-msgstr "Ierakstīties"
+msgstr "Pieteikties"

@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2023-06-01 11:07+0100\n"
-"PO-Revision-Date: 2023-12-06 19:01+0000\n"
+"PO-Revision-Date: 2025-11-06 20:15+0000\n"
 "Last-Translator: Piet Coppens <Unknown>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2025-07-31 09:23+0000\n"
-"X-Generator: Launchpad (build 647c49fc7f614412c17a151d8ba4fadd90c06a00)\n"
+"X-Launchpad-Export-Date: 2025-12-12 13:31+0000\n"
+"X-Generator: Launchpad (build 379e22b8475e3402088a4cdb4a6e7936a4d28414)\n"
 
 #: src/greeter-list.vala:303
 #, c-format
@@ -32,11 +32,11 @@ msgstr "Pasvorto:"
 
 #: src/greeter-list.vala:817 src/user-list.vala:714
 msgid "Username:"
-msgstr "Uzantonomo"
+msgstr "Uzantonomo:"
 
 #: src/greeter-list.vala:872
 msgid "Invalid password, please try again"
-msgstr "Nevalida pasvorto. Bonvole provu denove"
+msgstr "Nevalida pasvorto. Bonvolu provi denove."
 
 #: src/greeter-list.vala:883
 msgid "Failed to authenticate"
@@ -136,7 +136,7 @@ msgstr "Montri version de la eldono"
 
 #: src/slick-greeter.vala:752
 msgid "Run in test mode"
-msgstr "Ruliĝi laŭ testa reĝimo."
+msgstr "Ruliĝi laŭ testa reĝimo"
 
 #: src/slick-greeter.vala:768
 #, c-format

@@ -8,222 +8,232 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2023-06-01 11:07+0100\n"
-"PO-Revision-Date: 2017-07-14 14:59+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2025-10-14 13:10+0000\n"
+"Last-Translator: boneni <Unknown>\n"
 "Language-Team: Lao <lo@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2025-07-31 09:23+0000\n"
-"X-Generator: Launchpad (build 647c49fc7f614412c17a151d8ba4fadd90c06a00)\n"
+"X-Launchpad-Export-Date: 2025-12-12 13:31+0000\n"
+"X-Generator: Launchpad (build 379e22b8475e3402088a4cdb4a6e7936a4d28414)\n"
 
 #: src/greeter-list.vala:303
 #, c-format
 msgid "Enter password for %s"
-msgstr ""
+msgstr "ໃສ່ລະຫັດຜ່ານສຳລັບ %s"
 
 #: src/greeter-list.vala:305
 msgid "Enter your username"
-msgstr ""
+msgstr "ໃສ່ຊື່ຜູ້ໃຊ້ຂອງທ່ານ"
 
 #: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
-msgstr ""
+msgstr "ລະຫັດຜ່ານ:"
 
 #: src/greeter-list.vala:817 src/user-list.vala:714
 msgid "Username:"
-msgstr ""
+msgstr "ຊື່ຜູ້ໃຊ້:"
 
 #: src/greeter-list.vala:872
 msgid "Invalid password, please try again"
-msgstr ""
+msgstr "ລະຫັດຜ່ານບໍ່ຖືກຕ້ອງ, ກະລຸນາລອງໃໝ່ອີກຄັ້ງ"
 
 #: src/greeter-list.vala:883
 msgid "Failed to authenticate"
-msgstr ""
+msgstr "ການຢືນຢັນຕົວຕົນລົ້ມເຫຼວ"
 
 #: src/greeter-list.vala:929
 msgid "Failed to start session"
-msgstr ""
+msgstr "ການເລີ່ມເຊດຊັນລົ້ມເຫຼວ"
 
 #: src/greeter-list.vala:943
 msgid "Logging in..."
-msgstr ""
+msgstr "ກຳລັງເຂົ້າສູ່ລະບົບ..."
 
 #: src/main-window.vala:52
 msgid "Login Screen"
-msgstr ""
+msgstr "ໜ້າຈໍເຂົ້າສູ່ລະບົບ"
 
 #: src/main-window.vala:113
 msgid "Back"
-msgstr ""
+msgstr "ກັບຄືນ"
 
 #: src/menubar.vala:324
 msgid "Power:"
-msgstr ""
+msgstr "ພະລັງງານ:"
 
 #: src/menubar.vala:374
 msgid "Accessibility"
-msgstr ""
+msgstr "ການຊ່ວຍເຫຼືອການເຂົ້າເຖິງ"
 
 #: src/menubar.vala:383
 msgid "Onscreen keyboard"
-msgstr ""
+msgstr "ແປ້ນພິມເທິງໜ້າຈໍ"
 
 #: src/menubar.vala:388
 msgid "High Contrast"
-msgstr ""
+msgstr "ຄວາມຄົມຊັດສູງ"
 
 #: src/menubar.vala:394
 msgid "Screen Reader"
-msgstr ""
+msgstr "ໂຕອ່ານໜ້າຈໍ"
 
 #: src/menubar.vala:406 src/menubar.vala:453
 msgid "Quit..."
-msgstr ""
+msgstr "ອອກ..."
 
 #: src/menubar.vala:419 src/shutdown-dialog.vala:155
 msgid "Suspend"
-msgstr ""
+msgstr "ພັກເຄື່ອງ"
 
 #: src/menubar.vala:437 src/shutdown-dialog.vala:172
 msgid "Hibernate"
-msgstr ""
+msgstr "ຈຳສິນ"
 
 #: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "ຮູບແບບແປ້ນພິມ:"
 
 #: src/menubar.vala:532
 msgid "More layouts..."
-msgstr ""
+msgstr "ຮູບແບບເພີ່ມເຕີມ..."
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
-msgstr ""
+msgstr "ຕົວເລືອກເຊດຊັນ"
 
 #: src/session-list.vala:34
 msgid "Select desktop environment"
-msgstr ""
+msgstr "ເລືອກສະພາບແວດລ້ອມເດັສທັອບ"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr ""
+msgstr "ລາກ່ອນ. ທ່ານຕ້ອງການທີ່ຈະ..."
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
-msgstr ""
+msgstr "ປິດເຄື່ອງ"
 
 #: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
-msgstr ""
+msgstr "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການປິດຄອມພິວເຕີ?"
 
 #: src/shutdown-dialog.vala:137
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
+"ມີຜູ້ໃຊ້ອື່ນກຳລັງເຂົ້າສູ່ລະບົບໃນຄອມພິວເຕີໜ່ວຍນີ້, "
+"ການປິດເຄື່ອງຕອນນີ້ຈະເປັນການປິດເຊດຊັນຂອງຜູ້ໃຊ້ອື່ນນຳ."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
-msgstr ""
+msgstr "ເລີ່ມໃໝ່"
 
 #: src/slick-greeter.vala:749
 msgid "Show release version"
-msgstr ""
+msgstr "ສະແດງລຸ້ນທີ່ປ່ອຍອອກມາ"
 
 #: src/slick-greeter.vala:752
 msgid "Run in test mode"
-msgstr ""
+msgstr "ແລ່ນໃນໂໝດທົດສອບ"
 
 #: src/slick-greeter.vala:768
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
-msgstr ""
+msgstr "ແລ່ນ '%s --help' ເພື່ອເບິ່ງລາຍການຄຳສັ່ງທັງໝົດທີ່ມີໃຫ້."
 
 #: src/toggle-box.vala:109
 #, c-format
 msgid "%s (Default)"
-msgstr ""
+msgstr "%s (ຄ່າເລີ່ມຕົ້ນ)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
-msgstr ""
+msgstr "ເຊດຊັນແຂກ"
 
 #: src/user-list.vala:455
 msgid "Please enter a complete e-mail address"
-msgstr ""
+msgstr "ກະລຸນາໃສ່ທີ່ຢູ່ອີເມວໃຫ້ຄົບຖ້ວນ"
 
 #: src/user-list.vala:535
 msgid "Incorrect e-mail address or password"
-msgstr ""
+msgstr "ທີ່ຢູ່ອີເມວ ຫຼື ລະຫັດຜ່ານບໍ່ຖືກຕ້ອງ"
 
 #: src/user-list.vala:566
 msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
+"ຖ້າທ່ານມີບັນຊີໃນເຊີບເວີ RDP ຫຼື Citrix, "
+"ການເຂົ້າສູ່ລະບົບທາງໄກຈະຊ່ວຍໃຫ້ທ່ານສາມາດແລ່ນແອັບພລິເຄຊັນຈາກເຊີບເວີນັ້ນໄດ້."
 
 #: src/user-list.vala:568
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
+"ຖ້າທ່ານມີບັນຊີໃນເຊີບເວີ RDP, "
+"ການເຂົ້າສູ່ລະບົບທາງໄກຈະຊ່ວຍໃຫ້ທ່ານສາມາດແລ່ນແອັບພລິເຄຊັນຈາກເຊີບເວີນັ້ນໄດ້."
 
 #: src/user-list.vala:571
 msgid "Cancel"
-msgstr ""
+msgstr "ຍົກເລີກ"
 
 #: src/user-list.vala:572
 msgid "Set Up..."
-msgstr ""
+msgstr "ຕັ້ງຄ່າ..."
 
 #: src/user-list.vala:574
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
 msgstr ""
+"ທ່ານຈຳເປັນຕ້ອງມີບັນຊີ Ubuntu Remote Login ເພື່ອໃຊ້ບໍລິການນີ້. "
+"ທ່ານຕ້ອງການຕັ້ງຄ່າບັນຊີຕອນນີ້ບໍ່?"
 
 #: src/user-list.vala:578
 msgid "OK"
-msgstr ""
+msgstr "ຕົກລົງ"
 
 #: src/user-list.vala:579
 msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
 msgstr ""
+"ທ່ານຈຳເປັນຕ້ອງມີບັນຊີ Ubuntu Remote Login ເພື່ອໃຊ້ບໍລິການນີ້. ເຂົ້າໄປທີ່ "
+"uccs.canonical.com ເພື່ອຕັ້ງຄ່າບັນຊີ."
 
 #: src/user-list.vala:698
 msgid "Server type not supported."
-msgstr ""
+msgstr "ປະເພດຂອງເຊີບເວີບໍ່ຮອງຮັບ."
 
 #: src/user-list.vala:739
 msgid "Domain:"
-msgstr ""
+msgstr "ໂດເມນ:"
 
 #: src/user-list.vala:800
 msgid "Email address:"
-msgstr ""
+msgstr "ທີ່ຢູ່ອີເມວ:"
 
 #: src/user-list.vala:844
 msgid "Log In"
-msgstr ""
+msgstr "ເຂົ້າສູ່ລະບົບ"
 
 #: src/user-list.vala:845
 #, c-format
 msgid "Login as %s"
-msgstr ""
+msgstr "ເຂົ້າສູ່ລະບົບໃນນາມ %s"
 
 #: src/user-list.vala:849
 msgid "Retry"
-msgstr ""
+msgstr "ລອງໃໝ່"
 
 #: src/user-list.vala:850
 #, c-format
 msgid "Retry as %s"
-msgstr ""
+msgstr "ລອງໃໝ່ໃນນາມ %s"
 
 #: src/user-list.vala:892
 msgid "Login"
-msgstr ""
+msgstr "ເຂົ້າສູ່ລະບົບ"

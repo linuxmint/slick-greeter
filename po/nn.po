@@ -8,99 +8,99 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2023-06-01 11:07+0100\n"
-"PO-Revision-Date: 2017-07-14 15:01+0000\n"
-"Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
+"PO-Revision-Date: 2025-08-27 20:50+0000\n"
+"Last-Translator: Simen Ryland Førde <Unknown>\n"
 "Language-Team: Norwegian Nynorsk <nn@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2025-07-31 09:23+0000\n"
-"X-Generator: Launchpad (build 647c49fc7f614412c17a151d8ba4fadd90c06a00)\n"
+"X-Launchpad-Export-Date: 2025-12-12 13:31+0000\n"
+"X-Generator: Launchpad (build 379e22b8475e3402088a4cdb4a6e7936a4d28414)\n"
 
 #: src/greeter-list.vala:303
 #, c-format
 msgid "Enter password for %s"
-msgstr ""
+msgstr "Oppgje passord for %s"
 
 #: src/greeter-list.vala:305
 msgid "Enter your username"
-msgstr ""
+msgstr "Skriv inn brukarnamnet ditt"
 
 #: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
-msgstr ""
+msgstr "Passord:"
 
 #: src/greeter-list.vala:817 src/user-list.vala:714
 msgid "Username:"
-msgstr ""
+msgstr "Brukarnamn:"
 
 #: src/greeter-list.vala:872
 msgid "Invalid password, please try again"
-msgstr ""
+msgstr "Feil passord, prøv på nytt"
 
 #: src/greeter-list.vala:883
 msgid "Failed to authenticate"
-msgstr ""
+msgstr "Autentisering mislukkast"
 
 #: src/greeter-list.vala:929
 msgid "Failed to start session"
-msgstr ""
+msgstr "Klarte ikkje å starte økta"
 
 #: src/greeter-list.vala:943
 msgid "Logging in..."
-msgstr ""
+msgstr "Loggar inn..."
 
 #: src/main-window.vala:52
 msgid "Login Screen"
-msgstr ""
+msgstr "Innloggingsskjerm"
 
 #: src/main-window.vala:113
 msgid "Back"
-msgstr ""
+msgstr "Tilbake"
 
 #: src/menubar.vala:324
 msgid "Power:"
-msgstr ""
+msgstr "Effekt:"
 
 #: src/menubar.vala:374
 msgid "Accessibility"
-msgstr ""
+msgstr "Tilgjengelegheit"
 
 #: src/menubar.vala:383
 msgid "Onscreen keyboard"
-msgstr ""
+msgstr "Skjermtastatur"
 
 #: src/menubar.vala:388
 msgid "High Contrast"
-msgstr ""
+msgstr "Høg kontrast"
 
 #: src/menubar.vala:394
 msgid "Screen Reader"
-msgstr ""
+msgstr "Skjermlesar"
 
 #: src/menubar.vala:406 src/menubar.vala:453
 msgid "Quit..."
-msgstr ""
+msgstr "Avslutt..."
 
 #: src/menubar.vala:419 src/shutdown-dialog.vala:155
 msgid "Suspend"
-msgstr ""
+msgstr "Kvilemodus"
 
 #: src/menubar.vala:437 src/shutdown-dialog.vala:172
 msgid "Hibernate"
-msgstr ""
+msgstr "Dvalemodus"
 
 #: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "Tastaturoppsett:"
 
 #: src/menubar.vala:532
 msgid "More layouts..."
-msgstr ""
+msgstr "Fleire oppsett..."
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
-msgstr ""
+msgstr "Øktval"
 
 #: src/session-list.vala:34
 msgid "Select desktop environment"
@@ -108,38 +108,42 @@ msgstr "Vel skrivebordsmiljø"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr ""
+msgstr "Farvel. Vil du..."
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
-msgstr ""
+msgstr "Slå av"
 
 #: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
-msgstr ""
+msgstr "Er du sikker på at du vil slå av datamaskina?"
 
 #: src/shutdown-dialog.vala:137
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
+"Andre brukarar er logga inn på denne datamaskina. Hvis du slår av no, vert "
+"også desse brukarane logga ut."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
-msgstr ""
+msgstr "Omstart"
 
 #: src/slick-greeter.vala:749
 msgid "Show release version"
-msgstr ""
+msgstr "Vis utgåveversjon"
 
 #: src/slick-greeter.vala:752
 msgid "Run in test mode"
-msgstr ""
+msgstr "Køyr i testmodus"
 
 #: src/slick-greeter.vala:768
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
+"Køyr '%s --help' for å sjå ei fullstendig liste over tilgjengelege "
+"kommandoval."
 
 #: src/toggle-box.vala:109
 #, c-format
@@ -148,7 +152,7 @@ msgstr "%s (Standard)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
-msgstr ""
+msgstr "Gjesteøkt"
 
 #: src/user-list.vala:455
 msgid "Please enter a complete e-mail address"
@@ -180,7 +184,7 @@ msgstr "Avbryt"
 
 #: src/user-list.vala:572
 msgid "Set Up..."
-msgstr ""
+msgstr "Konfigurer..."
 
 #: src/user-list.vala:574
 msgid ""
@@ -221,7 +225,7 @@ msgstr "Logg inn"
 #: src/user-list.vala:845
 #, c-format
 msgid "Login as %s"
-msgstr ""
+msgstr "Logg inn som %s"
 
 #: src/user-list.vala:849
 msgid "Retry"
@@ -234,4 +238,4 @@ msgstr "Prøv på nytt som %s"
 
 #: src/user-list.vala:892
 msgid "Login"
-msgstr ""
+msgstr "Innlogging"
