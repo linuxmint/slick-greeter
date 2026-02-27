@@ -6,117 +6,99 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: slick-greeter\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-27 10:00-0600\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2023-06-01 11:07+0100\n"
 "PO-Revision-Date: 2020-07-31 16:57+0000\n"
 "Last-Translator: Clement Lefebvre <root@linuxmint.com>\n"
 "Language-Team: Bengali <bn@li.org>\n"
-"Language: bn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2026-01-08 15:42+0000\n"
 "X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
 
-#: src/banner-dialog.vala:81
-msgid "System Notice"
-msgstr "সিস্টেম বিজ্ঞপ্তি"
-
-#: src/banner-dialog.vala:90
-msgid "You must read and accept the following policy before logging in:"
-msgstr "লগ ইন করার আগে আপনাকে অবশ্যই নিম্নলিখিত নীতিগুলি পড়তে হবে এবং গ্রহণ করতে হবে:"
-
-#: src/banner-dialog.vala:142
-msgid "I Accept"
-msgstr "আমি স্বীকার করি"
-
-#. Translators: shown when the banner file cannot be read
-#: src/banner-dialog.vala:175
-msgid "(Could not read the login banner file.)"
-msgstr "(লগইন ব্যানার ফাইল পড়া যায়নি.)"
-
-#: src/greeter-list.vala:307
+#: src/greeter-list.vala:303
 #, c-format
 msgid "Enter password for %s"
 msgstr "%s এর পাসওয়ার্ড দিন"
 
-#: src/greeter-list.vala:309
+#: src/greeter-list.vala:305
 msgid "Enter your username"
 msgstr ""
 
-#: src/greeter-list.vala:819 src/user-list.vala:720
+#: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
 msgstr "পাসওয়ার্ড:"
 
-#: src/greeter-list.vala:821 src/user-list.vala:714
+#: src/greeter-list.vala:817 src/user-list.vala:714
 msgid "Username:"
 msgstr "ব্যবহারকারীর নাম :"
 
-#: src/greeter-list.vala:877
+#: src/greeter-list.vala:872
 msgid "Invalid password, please try again"
 msgstr "ভুল পাসওয়ার্ড, আবার চেষ্টা করুন"
 
-#: src/greeter-list.vala:888
+#: src/greeter-list.vala:883
 msgid "Failed to authenticate"
 msgstr "পরিচয় নিশ্চিতকরণে ব্যর্থ"
 
-#: src/greeter-list.vala:934
+#: src/greeter-list.vala:929
 msgid "Failed to start session"
 msgstr "সেশন চালু করতে ব্যর্থ"
 
-#: src/greeter-list.vala:948
+#: src/greeter-list.vala:943
 msgid "Logging in..."
 msgstr "লগইন করা হচ্ছে..."
 
-#: src/main-window.vala:54
+#: src/main-window.vala:52
 msgid "Login Screen"
 msgstr "লগিন্‌ স্ক্রীন"
 
-#: src/main-window.vala:143
+#: src/main-window.vala:113
 msgid "Back"
 msgstr "পিছনে যান"
 
-#: src/menubar.vala:372
+#: src/menubar.vala:324
 msgid "Power:"
 msgstr "পাওয়ার"
 
-#: src/menubar.vala:437
+#: src/menubar.vala:374
 msgid "Accessibility"
 msgstr "স্বাচ্ছন্দ্যকরণ"
 
-#: src/menubar.vala:446
+#: src/menubar.vala:383
 msgid "Onscreen keyboard"
 msgstr "পর্দার কীবোর্ড"
 
-#: src/menubar.vala:451
+#: src/menubar.vala:388
 msgid "High Contrast"
 msgstr "উচ্চ কনট্রাস্ট"
 
-#: src/menubar.vala:457
+#: src/menubar.vala:394
 msgid "Screen Reader"
 msgstr "স্ক্রিন রিডার"
 
-#: src/menubar.vala:469 src/menubar.vala:516
+#: src/menubar.vala:406 src/menubar.vala:453
 msgid "Quit..."
 msgstr "প্রস্থান..."
 
-#: src/menubar.vala:482 src/shutdown-dialog.vala:155
+#: src/menubar.vala:419 src/shutdown-dialog.vala:155
 msgid "Suspend"
 msgstr "স্থগিত করুন"
 
-#: src/menubar.vala:500 src/shutdown-dialog.vala:172
+#: src/menubar.vala:437 src/shutdown-dialog.vala:172
 msgid "Hibernate"
 msgstr "হাইবারনেট"
 
-#: src/menubar.vala:539 src/menubar.vala:583 src/menubar.vala:606
+#: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
 msgid "Keyboard layout:"
 msgstr "কীবোর্ড লেআউট"
 
-#: src/menubar.vala:595
+#: src/menubar.vala:532
 msgid "More layouts..."
 msgstr ""
 
-#: src/prompt-box.vala:250
+#: src/prompt-box.vala:215
 msgid "Session Options"
 msgstr "সেশনের অভিমত"
 
@@ -137,36 +119,34 @@ msgid "Are you sure you want to shut down the computer?"
 msgstr "আপনি কি কম্পিউটারটি বন্ধ করতে চান?"
 
 #: src/shutdown-dialog.vala:137
-#, c-format
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
-"অন্যান্য ব্যবহারকারীরা বর্তমানে এই কম্পিউটারে লগ ইন করেছেন, এখন বন্ধ করে দিলে এই "
-"অন্যান্য সেশনগুলিও বন্ধ হয়ে যাবে।"
+"অন্যান্য ব্যবহারকারীরা বর্তমানে এই কম্পিউটারে লগ ইন করেছেন, এখন বন্ধ করে "
+"দিলে এই অন্যান্য সেশনগুলিও বন্ধ হয়ে যাবে।"
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
 msgstr "পুনরায় চালু করুন"
 
-#. Translators: %s is a session name like KDE or Ubuntu
+#: src/slick-greeter.vala:749
+msgid "Show release version"
+msgstr "রিলিজ সংস্করণ প্রদর্শন"
+
+#: src/slick-greeter.vala:752
+msgid "Run in test mode"
+msgstr "পরীক্ষা মোডে চালান"
+
+#: src/slick-greeter.vala:768
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr "বিদ্যমান কমান্ড লাইন অপশনের পুরো তালিকা দেখতে '%s --help' চালান।"
+
 #: src/toggle-box.vala:109
 #, c-format
 msgid "%s (Default)"
 msgstr "%s (মৌল)"
-
-#: src/slick-greeter.vala:770
-msgid "Show release version"
-msgstr "রিলিজ সংস্করণ প্রদর্শন"
-
-#: src/slick-greeter.vala:773
-msgid "Run in test mode"
-msgstr "পরীক্ষা মোডে চালান"
-
-#: src/slick-greeter.vala:789
-#, c-format
-msgid "Run '%s --help' to see a full list of available command line options."
-msgstr "বিদ্যমান কমান্ড লাইন অপশনের পুরো তালিকা দেখতে '%s --help' চালান।"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
@@ -185,16 +165,16 @@ msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"যদি আপনার RDP অথবা Citrix server এ কোন একাউন্ট থাকে, তাহলে আপনি রিমোট লগিন এর "
-"মাধ্যমে সেই সার্ভার থেকে আপনার এপ্লিকেশন গুলো ব্যাবহার করতে পারবেন।"
+"যদি আপনার RDP অথবা Citrix server এ কোন একাউন্ট থাকে, তাহলে আপনি রিমোট লগিন "
+"এর মাধ্যমে সেই সার্ভার থেকে আপনার এপ্লিকেশন গুলো ব্যাবহার করতে পারবেন।"
 
 #: src/user-list.vala:568
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"যদি আপনার RDP server এ কোন একাউন্ট থাকে, তাহলে আপনি রিমোট লগিন এর মাধ্যমে সেই "
-"সার্ভার থেকে আপনার এপ্লিকেশন গুলো ব্যাবহার করতে পারবেন।"
+"যদি আপনার RDP server এ কোন একাউন্ট থাকে, তাহলে আপনি রিমোট লগিন এর মাধ্যমে "
+"সেই সার্ভার থেকে আপনার এপ্লিকেশন গুলো ব্যাবহার করতে পারবেন।"
 
 #: src/user-list.vala:571
 msgid "Cancel"
@@ -209,8 +189,8 @@ msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
 msgstr ""
-"এই সার্ভিসটি ব্যাবহার করতে আপনার উবুন্টু রিমোট লগিন একাউন্ট থাকতে হবে। আপনি কি "
-"এখনই একটি একাউন্ট সেট আপ করতে চান?"
+"এই সার্ভিসটি ব্যাবহার করতে আপনার উবুন্টু রিমোট লগিন একাউন্ট থাকতে হবে। আপনি "
+"কি এখনই একটি একাউন্ট সেট আপ করতে চান?"
 
 #: src/user-list.vala:578
 msgid "OK"
@@ -218,11 +198,11 @@ msgstr "ঠিক আছে"
 
 #: src/user-list.vala:579
 msgid ""
-"You need an Ubuntu Remote Login account to use this service. Visit uccs."
-"canonical.com to set up an account."
+"You need an Ubuntu Remote Login account to use this service. Visit "
+"uccs.canonical.com to set up an account."
 msgstr ""
-"এই সার্ভিসটি ব্যাবহার করতে আপনার উবুন্টু রিমোট লগিন একাউন্ট থাকতে হবে। একাউন্ট সেট "
-"আপ করতে uccs.canonical.com এ ভিজিট করুন ।"
+"এই সার্ভিসটি ব্যাবহার করতে আপনার উবুন্টু রিমোট লগিন একাউন্ট থাকতে হবে। "
+"একাউন্ট সেট আপ করতে uccs.canonical.com এ ভিজিট করুন ।"
 
 #: src/user-list.vala:698
 msgid "Server type not supported."
