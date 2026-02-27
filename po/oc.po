@@ -6,99 +6,117 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: slick-greeter\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2023-06-01 11:07+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-27 10:00-0600\n"
 "PO-Revision-Date: 2024-09-22 11:38+0000\n"
 "Last-Translator: Quentin PAGÈS <Unknown>\n"
 "Language-Team: Occitan (post 1500) <oc@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2026-01-08 15:42+0000\n"
 "X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
 
-#: src/greeter-list.vala:303
+#: src/banner-dialog.vala:81
+msgid "System Notice"
+msgstr "Avís del sistèma"
+
+#: src/banner-dialog.vala:90
+msgid "You must read and accept the following policy before logging in:"
+msgstr "Vos cal legir e acceptar la politica seguenta abans de vos connectar :"
+
+#: src/banner-dialog.vala:142
+msgid "I Accept"
+msgstr "Accepti"
+
+#. Translators: shown when the banner file cannot be read
+#: src/banner-dialog.vala:175
+msgid "(Could not read the login banner file.)"
+msgstr "(Impossible de legir lo fichièr de pancarta de connexion.)"
+
+#: src/greeter-list.vala:307
 #, c-format
 msgid "Enter password for %s"
 msgstr "Picatz lo senhal per %s"
 
-#: src/greeter-list.vala:305
+#: src/greeter-list.vala:309
 msgid "Enter your username"
 msgstr "Picatz vòstre nom d’utilizaire"
 
-#: src/greeter-list.vala:815 src/user-list.vala:720
+#: src/greeter-list.vala:819 src/user-list.vala:720
 msgid "Password:"
 msgstr "Senhal :"
 
-#: src/greeter-list.vala:817 src/user-list.vala:714
+#: src/greeter-list.vala:821 src/user-list.vala:714
 msgid "Username:"
 msgstr "Nom d'utilizaire :"
 
-#: src/greeter-list.vala:872
+#: src/greeter-list.vala:877
 msgid "Invalid password, please try again"
 msgstr "Senhal invalid, ensajatz tornarmai"
 
-#: src/greeter-list.vala:883
+#: src/greeter-list.vala:888
 msgid "Failed to authenticate"
 msgstr "Fracàs de l'autentificacion"
 
-#: src/greeter-list.vala:929
+#: src/greeter-list.vala:934
 msgid "Failed to start session"
 msgstr "La session a pas pogut s'aviar"
 
-#: src/greeter-list.vala:943
+#: src/greeter-list.vala:948
 msgid "Logging in..."
 msgstr "Connexion en cors…"
 
-#: src/main-window.vala:52
+#: src/main-window.vala:54
 msgid "Login Screen"
 msgstr "Ecran de connexion"
 
-#: src/main-window.vala:113
+#: src/main-window.vala:143
 msgid "Back"
 msgstr "En arrièr"
 
-#: src/menubar.vala:324
+#: src/menubar.vala:372
 msgid "Power:"
 msgstr "Poténcia :"
 
-#: src/menubar.vala:374
+#: src/menubar.vala:437
 msgid "Accessibility"
 msgstr "Accessibilitat"
 
-#: src/menubar.vala:383
+#: src/menubar.vala:446
 msgid "Onscreen keyboard"
 msgstr "Clavièr virtual"
 
-#: src/menubar.vala:388
+#: src/menubar.vala:451
 msgid "High Contrast"
 msgstr "Contraste elevat"
 
-#: src/menubar.vala:394
+#: src/menubar.vala:457
 msgid "Screen Reader"
 msgstr "Lector d'ecran"
 
-#: src/menubar.vala:406 src/menubar.vala:453
+#: src/menubar.vala:469 src/menubar.vala:516
 msgid "Quit..."
 msgstr "Quitar…"
 
-#: src/menubar.vala:419 src/shutdown-dialog.vala:155
+#: src/menubar.vala:482 src/shutdown-dialog.vala:155
 msgid "Suspend"
 msgstr "Metre en velha"
 
-#: src/menubar.vala:437 src/shutdown-dialog.vala:172
+#: src/menubar.vala:500 src/shutdown-dialog.vala:172
 msgid "Hibernate"
 msgstr "Ivernar"
 
-#: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
+#: src/menubar.vala:539 src/menubar.vala:583 src/menubar.vala:606
 msgid "Keyboard layout:"
 msgstr "Disposicion del clavièr :"
 
-#: src/menubar.vala:532
+#: src/menubar.vala:595
 msgid "More layouts..."
 msgstr "Mai d’agençaments…"
 
-#: src/prompt-box.vala:215
+#: src/prompt-box.vala:250
 msgid "Session Options"
 msgstr "Opcions de la session"
 
@@ -119,6 +137,7 @@ msgid "Are you sure you want to shut down the computer?"
 msgstr "Volètz vertadièrament arrestar l’ordenador ?"
 
 #: src/shutdown-dialog.vala:137
+#, c-format
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
@@ -130,25 +149,26 @@ msgstr ""
 msgid "Restart"
 msgstr "Tornar amodar"
 
-#: src/slick-greeter.vala:749
+#. Translators: %s is a session name like KDE or Ubuntu
+#: src/toggle-box.vala:109
+#, c-format
+msgid "%s (Default)"
+msgstr "%s (Per defaut)"
+
+#: src/slick-greeter.vala:770
 msgid "Show release version"
 msgstr "Aficha la version del logicial"
 
-#: src/slick-greeter.vala:752
+#: src/slick-greeter.vala:773
 msgid "Run in test mode"
 msgstr "Aviar en mòde tèst"
 
-#: src/slick-greeter.vala:768
+#: src/slick-greeter.vala:789
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
 "Aviatz « %s --help » per veire la lista completa de opcions disponiblas en "
 "linha de comanda"
-
-#: src/toggle-box.vala:109
-#, c-format
-msgid "%s (Default)"
-msgstr "%s (Per defaut)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
@@ -200,8 +220,8 @@ msgstr "D'acòrdi"
 
 #: src/user-list.vala:579
 msgid ""
-"You need an Ubuntu Remote Login account to use this service. Visit "
-"uccs.canonical.com to set up an account."
+"You need an Ubuntu Remote Login account to use this service. Visit uccs."
+"canonical.com to set up an account."
 msgstr ""
 "Avètz besonh d'un compte d'accès a distància Ubuntu per utilizar aqueste "
 "servici. Anatz sus uccs.canonical.com per crear un compte."

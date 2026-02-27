@@ -33,6 +33,7 @@ public class MainWindow : Gtk.Window
     private Gtk.Box content_box;
     private Gtk.Button back_button;
     private ShutdownDialog? shutdown_dialog = null;
+    private BannerDialog? banner_dialog = null;
     private bool do_resize;
 
     public ListStack stack;
@@ -352,6 +353,12 @@ public class MainWindow : Gtk.Window
             shutdown_dialog.set_active_monitor (monitor);
             background.move (shutdown_dialog, monitor.x, monitor.y);
         }
+
+        if (banner_dialog != null)
+        {
+            banner_dialog.set_active_monitor (monitor);
+            background.move (banner_dialog, monitor.x, monitor.y);
+        }
     }
 
     private void add_user_list ()
@@ -491,6 +498,39 @@ public class MainWindow : Gtk.Window
 
         shutdown_dialog.destroy ();
         shutdown_dialog = null;
+
+        login_box.sensitive = true;
+    }
+
+    /** Show the /etc/issue acceptance banner; disables the login box until accepted. */
+    public void show_banner_dialog ()
+    {
+        if (banner_dialog != null)
+            return;
+
+        /* Block login input while banner is displayed */
+        login_box.sensitive = false;
+
+        banner_dialog = new BannerDialog (background);
+        banner_dialog.set_active_monitor (active_monitor);
+
+        banner_dialog.accepted.connect (() =>
+        {
+            close_banner_dialog ();
+        });
+
+        background.add (banner_dialog);
+        move_to_monitor (active_monitor);
+        banner_dialog.visible = true;
+    }
+
+    private void close_banner_dialog ()
+    {
+        if (banner_dialog == null)
+            return;
+
+        banner_dialog.destroy ();
+        banner_dialog = null;
 
         login_box.sensitive = true;
     }

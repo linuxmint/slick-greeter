@@ -6,100 +6,117 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: slick-greeter\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2023-06-01 11:07+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-27 10:00-0600\n"
 "PO-Revision-Date: 2023-09-27 13:24+0000\n"
 "Last-Translator: Parham <Unknown>\n"
 "Language-Team: Persian <fa@li.org>\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2026-01-08 15:42+0000\n"
 "X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
-"Language: fa\n"
 
-#: src/greeter-list.vala:303
+#: src/banner-dialog.vala:81
+msgid "System Notice"
+msgstr "ﻢﺘﺴﯿﺳ ﻪﯿﻋﻼ﻿ﻃﺍ"
+
+#: src/banner-dialog.vala:90
+msgid "You must read and accept the following policy before logging in:"
+msgstr ":ﺪﯾﺮﯾﺬﭙﺑ ﻭ ﺪﯿﻧﺍﻮﺨﺑ ﺍﺭ ﺮﯾﺯ ﯽﺸﻣ ﻂﺧ ﺪﯾﺎﺑ ﻢﺘﺴﯿﺳ ﻪﺑ ﺩﻭﺭﻭ ﺯﺍ ﻞﺒﻗ"
+
+#: src/banner-dialog.vala:142
+msgid "I Accept"
+msgstr "ﻢﻨﮑﯿﻣ ﻝﻮﺒﻗ ﻦﻣ"
+
+#. Translators: shown when the banner file cannot be read
+#: src/banner-dialog.vala:175
+msgid "(Could not read the login banner file.)"
+msgstr "(.ﺩﻮﺷ ﻩﺪﻧﺍﻮﺧ ﺪﻧﺍﻮﺗ ﯽﻤﻧ ﻢﺘﺴﯿﺳ ﻪﺑ ﺩﻭﺭﻭ ﺮﻨﺑ ﻞﯾﺎﻓ)"
+
+#: src/greeter-list.vala:307
 #, c-format
 msgid "Enter password for %s"
 msgstr "گذرواژه را برای %s وارد کنید"
 
-#: src/greeter-list.vala:305
+#: src/greeter-list.vala:309
 msgid "Enter your username"
 msgstr "نام کاربری خود را وارد کنید"
 
-#: src/greeter-list.vala:815 src/user-list.vala:720
+#: src/greeter-list.vala:819 src/user-list.vala:720
 msgid "Password:"
 msgstr "گذرواژه:"
 
-#: src/greeter-list.vala:817 src/user-list.vala:714
+#: src/greeter-list.vala:821 src/user-list.vala:714
 msgid "Username:"
 msgstr "نام کاربری:"
 
-#: src/greeter-list.vala:872
+#: src/greeter-list.vala:877
 msgid "Invalid password, please try again"
 msgstr "گذرواژهٔ نامعتبر، لطفاً دوباره تلاش کنید"
 
-#: src/greeter-list.vala:883
+#: src/greeter-list.vala:888
 msgid "Failed to authenticate"
 msgstr "احراز هویت شکست خورد"
 
-#: src/greeter-list.vala:929
+#: src/greeter-list.vala:934
 msgid "Failed to start session"
 msgstr "شروع نشست شکست خورد"
 
-#: src/greeter-list.vala:943
+#: src/greeter-list.vala:948
 msgid "Logging in..."
 msgstr "درحال ورود به‌سیستم..."
 
-#: src/main-window.vala:52
+#: src/main-window.vala:54
 msgid "Login Screen"
 msgstr "صفحه ورود به‌سیستم"
 
-#: src/main-window.vala:113
+#: src/main-window.vala:143
 msgid "Back"
 msgstr "بازگشت"
 
-#: src/menubar.vala:324
+#: src/menubar.vala:372
 msgid "Power:"
 msgstr "انرژی:"
 
-#: src/menubar.vala:374
+#: src/menubar.vala:437
 msgid "Accessibility"
 msgstr "دسترسی"
 
-#: src/menubar.vala:383
+#: src/menubar.vala:446
 msgid "Onscreen keyboard"
 msgstr "صفحه‌کلید روی صفحه"
 
-#: src/menubar.vala:388
+#: src/menubar.vala:451
 msgid "High Contrast"
 msgstr "کنتراست بالا"
 
-#: src/menubar.vala:394
+#: src/menubar.vala:457
 msgid "Screen Reader"
 msgstr "صفحه‌خوان"
 
-#: src/menubar.vala:406 src/menubar.vala:453
+#: src/menubar.vala:469 src/menubar.vala:516
 msgid "Quit..."
 msgstr "خروج ..."
 
-#: src/menubar.vala:419 src/shutdown-dialog.vala:155
+#: src/menubar.vala:482 src/shutdown-dialog.vala:155
 msgid "Suspend"
 msgstr "تعلیق"
 
-#: src/menubar.vala:437 src/shutdown-dialog.vala:172
+#: src/menubar.vala:500 src/shutdown-dialog.vala:172
 msgid "Hibernate"
 msgstr "تعلیق کامل"
 
-#: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
+#: src/menubar.vala:539 src/menubar.vala:583 src/menubar.vala:606
 msgid "Keyboard layout:"
 msgstr "چیدمان صفحه‌کلید:"
 
-#: src/menubar.vala:532
+#: src/menubar.vala:595
 msgid "More layouts..."
 msgstr "چیدمان های بیشتر..."
 
-#: src/prompt-box.vala:215
+#: src/prompt-box.vala:250
 msgid "Session Options"
 msgstr "گزینه‌های نشست"
 
@@ -120,6 +137,7 @@ msgid "Are you sure you want to shut down the computer?"
 msgstr "آیا مطمئن هستید که می‌‌خواهید رایانه را خاموش کنید؟"
 
 #: src/shutdown-dialog.vala:137
+#, c-format
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
@@ -131,23 +149,24 @@ msgstr ""
 msgid "Restart"
 msgstr "راه‌اندازی مجدد"
 
-#: src/slick-greeter.vala:749
-msgid "Show release version"
-msgstr "نمایش نسخه انتشار"
-
-#: src/slick-greeter.vala:752
-msgid "Run in test mode"
-msgstr "اجرا در حالت آزمایشی"
-
-#: src/slick-greeter.vala:768
-#, c-format
-msgid "Run '%s --help' to see a full list of available command line options."
-msgstr "برای نمایش تمام گزینه‌های خط فرمان «%s --help» را اجرا کنید."
-
+#. Translators: %s is a session name like KDE or Ubuntu
 #: src/toggle-box.vala:109
 #, c-format
 msgid "%s (Default)"
 msgstr "%s (پیش‌فرض)"
+
+#: src/slick-greeter.vala:770
+msgid "Show release version"
+msgstr "نمایش نسخه انتشار"
+
+#: src/slick-greeter.vala:773
+msgid "Run in test mode"
+msgstr "اجرا در حالت آزمایشی"
+
+#: src/slick-greeter.vala:789
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr "برای نمایش تمام گزینه‌های خط فرمان «%s --help» را اجرا کنید."
 
 #: src/user-list.vala:45
 msgid "Guest Session"
@@ -190,8 +209,8 @@ msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
 msgstr ""
-"برای استفاده از این سرویس به یک حسابِ ورود از راه دورِ Ubuntu نیاز دارید. "
-"آیا می‌خواهید الان یک حساب کاربری برپا کنید؟"
+"برای استفاده از این سرویس به یک حسابِ ورود از راه دورِ Ubuntu نیاز دارید. آیا "
+"می‌خواهید الان یک حساب کاربری برپا کنید؟"
 
 #: src/user-list.vala:578
 msgid "OK"
@@ -199,11 +218,11 @@ msgstr "تأیید"
 
 #: src/user-list.vala:579
 msgid ""
-"You need an Ubuntu Remote Login account to use this service. Visit "
-"uccs.canonical.com to set up an account."
+"You need an Ubuntu Remote Login account to use this service. Visit uccs."
+"canonical.com to set up an account."
 msgstr ""
-"برای استفاده از این سرویس به یک حسابِ ورود از راه دورِ Ubuntu نیاز دارید. "
-"برای برپایی یک حساب به سایت uccs.canonical.com مراجعه کنید."
+"برای استفاده از این سرویس به یک حسابِ ورود از راه دورِ Ubuntu نیاز دارید. برای "
+"برپایی یک حساب به سایت uccs.canonical.com مراجعه کنید."
 
 #: src/user-list.vala:698
 msgid "Server type not supported."

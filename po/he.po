@@ -6,99 +6,117 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: slick-greeter\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2023-06-01 11:07+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-27 10:00-0600\n"
 "PO-Revision-Date: 2025-11-10 14:14+0000\n"
 "Last-Translator: Avi Markovitz <avi.markovitz@gmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2026-01-08 15:42+0000\n"
 "X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
 
-#: src/greeter-list.vala:303
+#: src/banner-dialog.vala:81
+msgid "System Notice"
+msgstr "תכרעמ תעדוה"
+
+#: src/banner-dialog.vala:90
+msgid "You must read and accept the following policy before logging in:"
+msgstr ":הסינכה ינפל האבה תוינידמה תא לבקלו אורקל ךילע"
+
+#: src/banner-dialog.vala:142
+msgid "I Accept"
+msgstr "לבקמ ינא"
+
+#. Translators: shown when the banner file cannot be read
+#: src/banner-dialog.vala:175
+msgid "(Could not read the login banner file.)"
+msgstr "(.הסינכל רנאבה ץבוק תא אורקל היה ןתינ אל)"
+
+#: src/greeter-list.vala:307
 #, c-format
 msgid "Enter password for %s"
 msgstr "נא להזין סיסמה עבור %s"
 
-#: src/greeter-list.vala:305
+#: src/greeter-list.vala:309
 msgid "Enter your username"
 msgstr "נא להזין שם משתמש"
 
-#: src/greeter-list.vala:815 src/user-list.vala:720
+#: src/greeter-list.vala:819 src/user-list.vala:720
 msgid "Password:"
 msgstr "סיסמה:"
 
-#: src/greeter-list.vala:817 src/user-list.vala:714
+#: src/greeter-list.vala:821 src/user-list.vala:714
 msgid "Username:"
 msgstr "שם משתמש:"
 
-#: src/greeter-list.vala:872
+#: src/greeter-list.vala:877
 msgid "Invalid password, please try again"
 msgstr "סיסמה שגויה, נא לנסות שוב"
 
-#: src/greeter-list.vala:883
+#: src/greeter-list.vala:888
 msgid "Failed to authenticate"
 msgstr "אימות כשל"
 
-#: src/greeter-list.vala:929
+#: src/greeter-list.vala:934
 msgid "Failed to start session"
 msgstr "אירע כשל באתחול שיח"
 
-#: src/greeter-list.vala:943
+#: src/greeter-list.vala:948
 msgid "Logging in..."
 msgstr "מתבצעת התחברות..."
 
-#: src/main-window.vala:52
+#: src/main-window.vala:54
 msgid "Login Screen"
 msgstr "מסך כניסה"
 
-#: src/main-window.vala:113
+#: src/main-window.vala:143
 msgid "Back"
 msgstr "אחורה"
 
-#: src/menubar.vala:324
+#: src/menubar.vala:372
 msgid "Power:"
 msgstr "צריכת חשמל:"
 
-#: src/menubar.vala:374
+#: src/menubar.vala:437
 msgid "Accessibility"
 msgstr "נגישות"
 
-#: src/menubar.vala:383
+#: src/menubar.vala:446
 msgid "Onscreen keyboard"
 msgstr "מקלדת מרקע"
 
-#: src/menubar.vala:388
+#: src/menubar.vala:451
 msgid "High Contrast"
 msgstr "ניגודיות גבוהה"
 
-#: src/menubar.vala:394
+#: src/menubar.vala:457
 msgid "Screen Reader"
 msgstr "קורא מרקע"
 
-#: src/menubar.vala:406 src/menubar.vala:453
+#: src/menubar.vala:469 src/menubar.vala:516
 msgid "Quit..."
 msgstr "יציאה…"
 
-#: src/menubar.vala:419 src/shutdown-dialog.vala:155
+#: src/menubar.vala:482 src/shutdown-dialog.vala:155
 msgid "Suspend"
 msgstr "להשעות"
 
-#: src/menubar.vala:437 src/shutdown-dialog.vala:172
+#: src/menubar.vala:500 src/shutdown-dialog.vala:172
 msgid "Hibernate"
 msgstr "תרדמת"
 
-#: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
+#: src/menubar.vala:539 src/menubar.vala:583 src/menubar.vala:606
 msgid "Keyboard layout:"
 msgstr "מערך מקלדת:"
 
-#: src/menubar.vala:532
+#: src/menubar.vala:595
 msgid "More layouts..."
 msgstr "מערכים נוספים..."
 
-#: src/prompt-box.vala:215
+#: src/prompt-box.vala:250
 msgid "Session Options"
 msgstr "אפשרויות שיח"
 
@@ -119,6 +137,7 @@ msgid "Are you sure you want to shut down the computer?"
 msgstr "האם לכבות את המחשב?"
 
 #: src/shutdown-dialog.vala:137
+#, c-format
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
@@ -128,25 +147,26 @@ msgstr "משתמשים אחרים מחוברים למחשב זה, כיבוי ה�
 msgid "Restart"
 msgstr "שתחול"
 
-#: src/slick-greeter.vala:749
+#. Translators: %s is a session name like KDE or Ubuntu
+#: src/toggle-box.vala:109
+#, c-format
+msgid "%s (Default)"
+msgstr "%s (ברירת מחדל)"
+
+#: src/slick-greeter.vala:770
 msgid "Show release version"
 msgstr "הצגת גרסת שחרור"
 
-#: src/slick-greeter.vala:752
+#: src/slick-greeter.vala:773
 msgid "Run in test mode"
 msgstr "הרצה במצב בדיקה"
 
-#: src/slick-greeter.vala:768
+#: src/slick-greeter.vala:789
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
 "נא להריץ את הפקודה '%s --help' לצפיה ברשימה המלאה של אפשרויות שורת הפקודה "
 "הזמינות."
-
-#: src/toggle-box.vala:109
-#, c-format
-msgid "%s (Default)"
-msgstr "%s (ברירת מחדל)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
@@ -171,8 +191,7 @@ msgstr ""
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
-msgstr ""
-"אם קיים חשבון בשרת RDP, התחברות מרוחק מאפשרת להריץ יישומים על שרת זה."
+msgstr "אם קיים חשבון בשרת RDP, התחברות מרוחק מאפשרת להריץ יישומים על שרת זה."
 
 #: src/user-list.vala:571
 msgid "Cancel"
@@ -196,11 +215,11 @@ msgstr "בסדר"
 
 #: src/user-list.vala:579
 msgid ""
-"You need an Ubuntu Remote Login account to use this service. Visit "
-"uccs.canonical.com to set up an account."
+"You need an Ubuntu Remote Login account to use this service. Visit uccs."
+"canonical.com to set up an account."
 msgstr ""
-"לשימוש בשירות זה נדרש חשבון התחברות מרוחק של אובונטו. נא לבקר "
-"ב־uccs.canonical.com כדי להגדיר חשבון."
+"לשימוש בשירות זה נדרש חשבון התחברות מרוחק של אובונטו. נא לבקר ב־uccs."
+"canonical.com כדי להגדיר חשבון."
 
 #: src/user-list.vala:698
 msgid "Server type not supported."

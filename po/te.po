@@ -6,99 +6,117 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: slick-greeter\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2023-06-01 11:07+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-27 10:00-0600\n"
 "PO-Revision-Date: 2024-09-28 17:37+0000\n"
 "Last-Translator: B.Laxmi koundinya <Unknown>\n"
 "Language-Team: Telugu <te@li.org>\n"
+"Language: te\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2026-01-08 15:42+0000\n"
 "X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
 
-#: src/greeter-list.vala:303
+#: src/banner-dialog.vala:81
+msgid "System Notice"
+msgstr "సిస్టమ్ నోటీసు"
+
+#: src/banner-dialog.vala:90
+msgid "You must read and accept the following policy before logging in:"
+msgstr "లాగిన్ చేయడానికి ముందు మీరు తప్పనిసరిగా కింది విధానాన్ని చదివి అంగీకరించాలి:"
+
+#: src/banner-dialog.vala:142
+msgid "I Accept"
+msgstr "నేను అంగీకరిస్తున్నాను"
+
+#. Translators: shown when the banner file cannot be read
+#: src/banner-dialog.vala:175
+msgid "(Could not read the login banner file.)"
+msgstr "(లాగిన్ బ్యానర్ ఫైల్ చదవలేకపోయింది.)"
+
+#: src/greeter-list.vala:307
 #, c-format
 msgid "Enter password for %s"
 msgstr "%s కోసం పాస్‌వర్డ్‌ను నమోదు చేయండి"
 
-#: src/greeter-list.vala:305
+#: src/greeter-list.vala:309
 msgid "Enter your username"
 msgstr "మీ వినియోగదారు పేరును నమోదు చేయండి"
 
-#: src/greeter-list.vala:815 src/user-list.vala:720
+#: src/greeter-list.vala:819 src/user-list.vala:720
 msgid "Password:"
 msgstr "పాస్వర్డ్:"
 
-#: src/greeter-list.vala:817 src/user-list.vala:714
+#: src/greeter-list.vala:821 src/user-list.vala:714
 msgid "Username:"
 msgstr "వినియోగదారు పేరు:"
 
-#: src/greeter-list.vala:872
+#: src/greeter-list.vala:877
 msgid "Invalid password, please try again"
 msgstr "చెల్లని పాస్‌వర్డ్, దయచేసి మళ్లీ ప్రయత్నించండి"
 
-#: src/greeter-list.vala:883
+#: src/greeter-list.vala:888
 msgid "Failed to authenticate"
 msgstr "ప్రమాణీకరించడంలో విఫలమైంది"
 
-#: src/greeter-list.vala:929
+#: src/greeter-list.vala:934
 msgid "Failed to start session"
 msgstr "సెషన్‌ను ప్రారంభించడంలో విఫలమైంది"
 
-#: src/greeter-list.vala:943
+#: src/greeter-list.vala:948
 msgid "Logging in..."
 msgstr "లాగిన్ అవుతోంది..."
 
-#: src/main-window.vala:52
+#: src/main-window.vala:54
 msgid "Login Screen"
 msgstr "లాగిన్ స్క్రీన్"
 
-#: src/main-window.vala:113
+#: src/main-window.vala:143
 msgid "Back"
 msgstr "వెనుకకు"
 
-#: src/menubar.vala:324
+#: src/menubar.vala:372
 msgid "Power:"
 msgstr "శక్తి:"
 
-#: src/menubar.vala:374
+#: src/menubar.vala:437
 msgid "Accessibility"
 msgstr "యాక్సెసిబిలిటీ"
 
-#: src/menubar.vala:383
+#: src/menubar.vala:446
 msgid "Onscreen keyboard"
 msgstr "ఆన్‌స్క్రీన్ కీబోర్డ్"
 
-#: src/menubar.vala:388
+#: src/menubar.vala:451
 msgid "High Contrast"
 msgstr "అధిక కాంట్రాస్ట్"
 
-#: src/menubar.vala:394
+#: src/menubar.vala:457
 msgid "Screen Reader"
 msgstr "స్క్రీన్ రీడర్"
 
-#: src/menubar.vala:406 src/menubar.vala:453
+#: src/menubar.vala:469 src/menubar.vala:516
 msgid "Quit..."
 msgstr "నిష్క్రమించు..."
 
-#: src/menubar.vala:419 src/shutdown-dialog.vala:155
+#: src/menubar.vala:482 src/shutdown-dialog.vala:155
 msgid "Suspend"
 msgstr "సస్పెండ్ చేయండి"
 
-#: src/menubar.vala:437 src/shutdown-dialog.vala:172
+#: src/menubar.vala:500 src/shutdown-dialog.vala:172
 msgid "Hibernate"
 msgstr "హైబర్నేట్"
 
-#: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
+#: src/menubar.vala:539 src/menubar.vala:583 src/menubar.vala:606
 msgid "Keyboard layout:"
 msgstr "కీబోర్డ్ లేఅవుట్:"
 
-#: src/menubar.vala:532
+#: src/menubar.vala:595
 msgid "More layouts..."
 msgstr "మరిన్ని లేఔట్‌లు..."
 
-#: src/prompt-box.vala:215
+#: src/prompt-box.vala:250
 msgid "Session Options"
 msgstr "సెషన్ ఎంపికలు"
 
@@ -119,36 +137,36 @@ msgid "Are you sure you want to shut down the computer?"
 msgstr "మీరు ఖచ్చితంగా కంప్యూటర్‌ను షట్ డౌన్ చేయాలనుకుంటున్నారా?"
 
 #: src/shutdown-dialog.vala:137
+#, c-format
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
-"ఇతర వినియోగదారులు ప్రస్తుతం ఈ కంప్యూటర్‌కు లాగిన్ చేసారు, ఇప్పుడు షట్ డౌన్ "
-"చేయడం వలన ఈ ఇతర సెషన్‌లు కూడా మూసివేయబడతాయి."
+"ఇతర వినియోగదారులు ప్రస్తుతం ఈ కంప్యూటర్‌కు లాగిన్ చేసారు, ఇప్పుడు షట్ డౌన్ చేయడం వలన ఈ ఇతర "
+"సెషన్‌లు కూడా మూసివేయబడతాయి."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
 msgstr "పునఃప్రారంభించండి"
 
-#: src/slick-greeter.vala:749
-msgid "Show release version"
-msgstr "విడుదల సంస్కరణను చూపు"
-
-#: src/slick-greeter.vala:752
-msgid "Run in test mode"
-msgstr "పరీక్ష మోడ్‌లో అమలు చేయండి"
-
-#: src/slick-greeter.vala:768
-#, c-format
-msgid "Run '%s --help' to see a full list of available command line options."
-msgstr ""
-"అందుబాటులో ఉన్న కమాండ్ లైన్ ఎంపికల పూర్తి జాబితాను చూడటానికి '%s --help'ని "
-"అమలు చేయండి."
-
+#. Translators: %s is a session name like KDE or Ubuntu
 #: src/toggle-box.vala:109
 #, c-format
 msgid "%s (Default)"
 msgstr "%s (డిఫాల్ట్)"
+
+#: src/slick-greeter.vala:770
+msgid "Show release version"
+msgstr "విడుదల సంస్కరణను చూపు"
+
+#: src/slick-greeter.vala:773
+msgid "Run in test mode"
+msgstr "పరీక్ష మోడ్‌లో అమలు చేయండి"
+
+#: src/slick-greeter.vala:789
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr "అందుబాటులో ఉన్న కమాండ్ లైన్ ఎంపికల పూర్తి జాబితాను చూడటానికి '%s --help'ని అమలు చేయండి."
 
 #: src/user-list.vala:45
 msgid "Guest Session"
@@ -167,16 +185,16 @@ msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"మీకు RDP లేదా Citrix సర్వర్‌లో ఖాతా ఉంటే, రిమోట్ లాగిన్ ఆ సర్వర్ నుండి "
-"అప్లికేషన్‌లను అమలు చేయడానికి మిమ్మల్ని అనుమతిస్తుంది."
+"మీకు RDP లేదా Citrix సర్వర్‌లో ఖాతా ఉంటే, రిమోట్ లాగిన్ ఆ సర్వర్ నుండి అప్లికేషన్‌లను అమలు చేయడానికి "
+"మిమ్మల్ని అనుమతిస్తుంది."
 
 #: src/user-list.vala:568
 msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"మీకు RDP సర్వర్‌లో ఖాతా ఉంటే, రిమోట్ లాగిన్ ఆ సర్వర్ నుండి అప్లికేషన్‌లను "
-"అమలు చేయడానికి మిమ్మల్ని అనుమతిస్తుంది."
+"మీకు RDP సర్వర్‌లో ఖాతా ఉంటే, రిమోట్ లాగిన్ ఆ సర్వర్ నుండి అప్లికేషన్‌లను అమలు చేయడానికి మిమ్మల్ని "
+"అనుమతిస్తుంది."
 
 #: src/user-list.vala:571
 msgid "Cancel"
@@ -191,8 +209,8 @@ msgid ""
 "You need an Ubuntu Remote Login account to use this service. Would you like "
 "to set up an account now?"
 msgstr ""
-"ఈ సేవను ఉపయోగించడానికి మీకు ఉబుంటు రిమోట్ లాగిన్ ఖాతా అవసరం. మీరు ఇప్పుడు "
-"ఖాతాను సెటప్ చేయాలనుకుంటున్నారా?"
+"ఈ సేవను ఉపయోగించడానికి మీకు ఉబుంటు రిమోట్ లాగిన్ ఖాతా అవసరం. మీరు ఇప్పుడు ఖాతాను సెటప్ "
+"చేయాలనుకుంటున్నారా?"
 
 #: src/user-list.vala:578
 msgid "OK"
@@ -200,11 +218,11 @@ msgstr "సరే"
 
 #: src/user-list.vala:579
 msgid ""
-"You need an Ubuntu Remote Login account to use this service. Visit "
-"uccs.canonical.com to set up an account."
+"You need an Ubuntu Remote Login account to use this service. Visit uccs."
+"canonical.com to set up an account."
 msgstr ""
-"ఈ సేవను ఉపయోగించడానికి మీకు ఉబుంటు రిమోట్ లాగిన్ ఖాతా అవసరం. ఖాతాను సెటప్ "
-"చేయడానికి uccs.canonical.comని సందర్శించండి."
+"ఈ సేవను ఉపయోగించడానికి మీకు ఉబుంటు రిమోట్ లాగిన్ ఖాతా అవసరం. ఖాతాను సెటప్ చేయడానికి uccs.canonical."
+"comని సందర్శించండి."
 
 #: src/user-list.vala:698
 msgid "Server type not supported."

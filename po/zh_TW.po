@@ -6,99 +6,117 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: slick-greeter\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2023-06-01 11:07+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-27 10:00-0600\n"
 "PO-Revision-Date: 2024-02-13 16:18+0000\n"
 "Last-Translator: 爽自由 <coby2023t@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2026-01-08 15:42+0000\n"
 "X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
 
-#: src/greeter-list.vala:303
+#: src/banner-dialog.vala:81
+msgid "System Notice"
+msgstr "系統通知"
+
+#: src/banner-dialog.vala:90
+msgid "You must read and accept the following policy before logging in:"
+msgstr "登入前您必須閱讀並接受以下政策："
+
+#: src/banner-dialog.vala:142
+msgid "I Accept"
+msgstr "我接受"
+
+#. Translators: shown when the banner file cannot be read
+#: src/banner-dialog.vala:175
+msgid "(Could not read the login banner file.)"
+msgstr "（無法讀取登入橫幅檔案。）"
+
+#: src/greeter-list.vala:307
 #, c-format
 msgid "Enter password for %s"
 msgstr "輸入 %s 的密碼"
 
-#: src/greeter-list.vala:305
+#: src/greeter-list.vala:309
 msgid "Enter your username"
 msgstr "輸入用戶名"
 
-#: src/greeter-list.vala:815 src/user-list.vala:720
+#: src/greeter-list.vala:819 src/user-list.vala:720
 msgid "Password:"
 msgstr "密碼："
 
-#: src/greeter-list.vala:817 src/user-list.vala:714
+#: src/greeter-list.vala:821 src/user-list.vala:714
 msgid "Username:"
 msgstr "使用者名稱："
 
-#: src/greeter-list.vala:872
+#: src/greeter-list.vala:877
 msgid "Invalid password, please try again"
 msgstr "無效的密碼，請重試"
 
-#: src/greeter-list.vala:883
+#: src/greeter-list.vala:888
 msgid "Failed to authenticate"
 msgstr "身分核對失敗"
 
-#: src/greeter-list.vala:929
+#: src/greeter-list.vala:934
 msgid "Failed to start session"
 msgstr "未能啟動作業階段"
 
-#: src/greeter-list.vala:943
+#: src/greeter-list.vala:948
 msgid "Logging in..."
 msgstr "正在登入..."
 
-#: src/main-window.vala:52
+#: src/main-window.vala:54
 msgid "Login Screen"
 msgstr "登入畫面"
 
-#: src/main-window.vala:113
+#: src/main-window.vala:143
 msgid "Back"
 msgstr "返回"
 
-#: src/menubar.vala:324
+#: src/menubar.vala:372
 msgid "Power:"
 msgstr "電源："
 
-#: src/menubar.vala:374
+#: src/menubar.vala:437
 msgid "Accessibility"
 msgstr "無障礙功能"
 
-#: src/menubar.vala:383
+#: src/menubar.vala:446
 msgid "Onscreen keyboard"
 msgstr "螢幕鍵盤"
 
-#: src/menubar.vala:388
+#: src/menubar.vala:451
 msgid "High Contrast"
 msgstr "高反差"
 
-#: src/menubar.vala:394
+#: src/menubar.vala:457
 msgid "Screen Reader"
 msgstr "螢幕閱讀器"
 
-#: src/menubar.vala:406 src/menubar.vala:453
+#: src/menubar.vala:469 src/menubar.vala:516
 msgid "Quit..."
 msgstr "退出..."
 
-#: src/menubar.vala:419 src/shutdown-dialog.vala:155
+#: src/menubar.vala:482 src/shutdown-dialog.vala:155
 msgid "Suspend"
 msgstr "暫停"
 
-#: src/menubar.vala:437 src/shutdown-dialog.vala:172
+#: src/menubar.vala:500 src/shutdown-dialog.vala:172
 msgid "Hibernate"
 msgstr "休眠"
 
-#: src/menubar.vala:476 src/menubar.vala:520 src/menubar.vala:544
+#: src/menubar.vala:539 src/menubar.vala:583 src/menubar.vala:606
 msgid "Keyboard layout:"
 msgstr "鍵盤配置："
 
-#: src/menubar.vala:532
+#: src/menubar.vala:595
 msgid "More layouts..."
 msgstr "更多排版..."
 
-#: src/prompt-box.vala:215
+#: src/prompt-box.vala:250
 msgid "Session Options"
 msgstr "作業階段選項"
 
@@ -119,6 +137,7 @@ msgid "Are you sure you want to shut down the computer?"
 msgstr "是否確定要關掉電腦？"
 
 #: src/shutdown-dialog.vala:137
+#, c-format
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
@@ -128,23 +147,24 @@ msgstr "目前還有其他使用者登入到此電腦，馬上關機會令此等
 msgid "Restart"
 msgstr "重新啟動"
 
-#: src/slick-greeter.vala:749
-msgid "Show release version"
-msgstr "顯示發行版本"
-
-#: src/slick-greeter.vala:752
-msgid "Run in test mode"
-msgstr "以測試模式執行"
-
-#: src/slick-greeter.vala:768
-#, c-format
-msgid "Run '%s --help' to see a full list of available command line options."
-msgstr "執行「%s --help」來查看指令列所有可用選項的完整清單。"
-
+#. Translators: %s is a session name like KDE or Ubuntu
 #: src/toggle-box.vala:109
 #, c-format
 msgid "%s (Default)"
 msgstr "%s (預設)"
+
+#: src/slick-greeter.vala:770
+msgid "Show release version"
+msgstr "顯示發行版本"
+
+#: src/slick-greeter.vala:773
+msgid "Run in test mode"
+msgstr "以測試模式執行"
+
+#: src/slick-greeter.vala:789
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr "執行「%s --help」來查看指令列所有可用選項的完整清單。"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
@@ -162,7 +182,9 @@ msgstr "不正確的電子郵件位址或密碼"
 msgid ""
 "If you have an account on an RDP or Citrix server, Remote Login lets you run "
 "applications from that server."
-msgstr "若您有個 RDP 或 Citrix 伺服器的帳號，「遠端登入」讓您可從該伺服器執行應用程式。"
+msgstr ""
+"若您有個 RDP 或 Citrix 伺服器的帳號，「遠端登入」讓您可從該伺服器執行應用程"
+"式。"
 
 #: src/user-list.vala:568
 msgid ""
@@ -190,9 +212,11 @@ msgstr "確定"
 
 #: src/user-list.vala:579
 msgid ""
-"You need an Ubuntu Remote Login account to use this service. Visit "
-"uccs.canonical.com to set up an account."
-msgstr "您需要有 Ubuntu 遠端登入帳號才能使用此服務。請造訪 uccs.canonical.com 來設置帳號。"
+"You need an Ubuntu Remote Login account to use this service. Visit uccs."
+"canonical.com to set up an account."
+msgstr ""
+"您需要有 Ubuntu 遠端登入帳號才能使用此服務。請造訪 uccs.canonical.com 來設置"
+"帳號。"
 
 #: src/user-list.vala:698
 msgid "Server type not supported."
