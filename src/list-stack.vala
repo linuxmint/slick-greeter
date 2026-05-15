@@ -74,7 +74,11 @@ public class ListStack : Gtk.Fixed
 
         unowned List<weak Gtk.Widget> prev = children.last ().prev;
         if (prev != null)
-            (prev.data as GreeterList).greeter_box.pop ();
+        {
+            var prev_list = prev.data as GreeterList;
+            if (prev_list != null)
+                prev_list.greeter_box.pop ();
+        }
     }
 
     public override void size_allocate (Gtk.Allocation allocation)

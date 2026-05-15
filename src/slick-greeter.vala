@@ -33,7 +33,7 @@ public class SlickGreeter
     private string state_file;
     private KeyFile state;
 
-    private Cairo.XlibSurface background_surface;
+    private Cairo.XlibSurface? background_surface;
 
     public bool orca_needs_kick;
     private MainWindow main_window;
@@ -246,7 +246,7 @@ public class SlickGreeter
         var display = Gdk.Display.get_default();
         var monitor = display.get_primary_monitor();
         var scale = monitor.get_scale_factor ();
-        background_surface.set_device_scale (scale, scale);
+        background_surface?.set_device_scale (scale, scale);
 
         /* Paint our background onto the root window before we close our own window */
         // var c = new Cairo.Context (background_surface);
@@ -490,7 +490,11 @@ public class SlickGreeter
                 /* Check to see if this window is our onboard window, since we don't want to focus it. */
                 X.Window keyboard_xid = 0;
                 if (main_window.menubar.keyboard_window != null)
-                    keyboard_xid = (main_window.menubar.keyboard_window.get_window () as Gdk.X11.Window).get_xid ();
+                {
+                    var x11_kwin = main_window.menubar.keyboard_window.get_window () as Gdk.X11.Window;
+                    if (x11_kwin != null)
+                        keyboard_xid = x11_kwin.get_xid ();
+                }
 
                 if (xwin != keyboard_xid && win.get_type_hint() != Gdk.WindowTypeHint.NOTIFICATION)
                 {
@@ -549,11 +553,18 @@ public class SlickGreeter
     {
         var visual = screen.get_system_visual ();
 
-        unowned X.Display display = (screen.get_display () as Gdk.X11.Display).get_xdisplay ();
-        unowned X.Screen xscreen = (screen as Gdk.X11.Screen).get_xscreen ();
+        var x11_display = screen.get_display () as Gdk.X11.Display;
+        var x11_screen  = screen as Gdk.X11.Screen;
+        var x11_root    = screen.get_root_window () as Gdk.X11.Window;
+        var x11_visual  = visual as Gdk.X11.Visual;
+        if (x11_display == null || x11_screen == null || x11_root == null || x11_visual == null)
+            return null;
+
+        unowned X.Display display = x11_display.get_xdisplay ();
+        unowned X.Screen xscreen  = x11_screen.get_xscreen ();
 
         var pixmap = X.CreatePixmap (display,
-                                     (screen.get_root_window () as Gdk.X11.Window).get_xid (),
+                                     x11_root.get_xid (),
                                      xscreen.width_of_screen (),
                                      xscreen.height_of_screen (),
                                      visual.get_depth ());
@@ -561,7 +572,7 @@ public class SlickGreeter
         /* Convert into a Cairo surface */
         var surface = new Cairo.XlibSurface (display,
                                              pixmap,
-                                             (visual as Gdk.X11.Visual).get_xvisual (),
+                                             x11_visual.get_xvisual (),
                                              xscreen.width_of_screen (), xscreen.height_of_screen ());
 
         return surface;
@@ -845,7 +856,10 @@ public class SlickGreeter
         debug ("Cleaning up");
 
         var screen = Gdk.Screen.get_default ();
-        unowned X.Display xdisplay = (screen.get_display () as Gdk.X11.Display).get_xdisplay ();
+        var x11_dpy = screen.get_display () as Gdk.X11.Display;
+        if (x11_dpy == null)
+            return 0;
+        unowned X.Display xdisplay = x11_dpy.get_xdisplay ();
 
         var window = xdisplay.default_root_window();
         var atom = xdisplay.intern_atom ("AT_SPI_BUS", true);

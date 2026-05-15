@@ -59,7 +59,8 @@ public class IdleMonitor
             warning ("Only support idle monitor under X");
             return;
         }
-        display = (d as Gdk.X11.Display).get_xdisplay ();
+        var x11_display = (Gdk.X11.Display) d;
+        display = x11_display.get_xdisplay ();
 
         int sync_error_base;
         var res = X.Sync.QueryExtension (display, out sync_event_base, out sync_error_base);

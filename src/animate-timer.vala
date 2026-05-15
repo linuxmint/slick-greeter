@@ -30,7 +30,7 @@ private class AnimateTimer : Object
     public const int SLOW =   1000; /* Good for animations that convey information that is only presented in the animation */
 
     /* speed is in milliseconds */
-    public unowned EasingFunc easing_func { get; private set; }
+    private unowned EasingFunc _easing_func;
     public int speed { get; set; }
     public bool is_running { get { return timeout != 0; } }
     public double progress { get; private set; }
@@ -55,7 +55,7 @@ private class AnimateTimer : Object
     public AnimateTimer (EasingFunc func, int speed)
     {
         Object (speed: speed);
-        this.easing_func = func;
+        this._easing_func = func;
     }
 
     ~AnimateTimer ()
@@ -124,7 +124,7 @@ private class AnimateTimer : Object
        time is not normalized yet! */
     private double calculate_progress (double time_progress)
     {
-        var y = easing_func (time_progress);
+        var y = _easing_func (time_progress);
         return y.clamp (0.0, 1.0);
     }
 

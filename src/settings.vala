@@ -65,7 +65,8 @@ public class UGSettings
     public static bool safe_get_boolean (string key, bool default)
     {
         var gsettings = new Settings (SCHEMA);
-        string[] keys = gsettings.list_keys ();
+        SettingsSchema schema = gsettings.settings_schema;
+        string[] keys = schema.list_keys ();
         foreach (var k in keys)
             if (k == key)
                 return gsettings.get_boolean (key);

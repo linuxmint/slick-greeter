@@ -183,6 +183,8 @@ public class DashBox : Gtk.Box
             force_immediate_layout_update ();
             rebuild_background ();
             break;
+        case Mode.NORMAL:
+            break;
         }
     }
 
@@ -270,28 +272,20 @@ public class DashBox : Gtk.Box
         {
             if (width > 0 && height > 0)
             {
-                try
+                bg_surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, width, height);
+                var bg_cr = new Cairo.Context (bg_surface);
+                // Draw background in temporary surface
+                if (background != null)
                 {
-                    bg_surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, width, height);
-                    var bg_cr = new Cairo.Context (bg_surface);
-                    // Draw background in temporary surface
-                    if (background != null)
-                    {
-                        int x, y;
-                        background.translate_coordinates (this, 0, 0, out x, out y);
-                        bg_cr.save ();
-                        bg_cr.translate (x, y);
-                        background.draw_full (bg_cr, Background.DrawFlags.NONE);
-                        bg_cr.restore ();
-                    }
-                    // Apply blur effect
-                    CairoUtils.ExponentialBlur.surface (bg_surface, BLUR_RADIUS);
+                    int x, y;
+                    background.translate_coordinates (this, 0, 0, out x, out y);
+                    bg_cr.save ();
+                    bg_cr.translate (x, y);
+                    background.draw_full (bg_cr, Background.DrawFlags.NONE);
+                    bg_cr.restore ();
                 }
-                catch (Error e)
-                {
-                    warning ("Failed to create background surface: %s", e.message);
-                    bg_surface = null;
-                }
+                // Apply blur effect
+                CairoUtils.ExponentialBlur.surface (bg_surface, BLUR_RADIUS);
             }
         }
 
