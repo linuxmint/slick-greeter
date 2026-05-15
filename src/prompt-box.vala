@@ -90,6 +90,33 @@ public class PromptBox : FadableBox
         Object (id: id);
     }
 
+    private static void apply_label_css (Gtk.Widget w, string family, int pt, bool bold = false)
+    {
+        try
+        {
+            var p = new Gtk.CssProvider ();
+            var weight = bold ? "bold" : "normal";
+            p.load_from_data (
+                "label { font-family: \"%s\"; font-size: %dpt; font-weight: %s; color: white; }".printf (family, pt, weight), -1);
+            w.get_style_context ().add_provider (p, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+        }
+        catch (Error e) { debug ("CSS font error: %s", e.message); }
+    }
+
+    private static void apply_label_css_color (Gtk.Widget w, string family, int pt, Gdk.RGBA color, bool bold = false)
+    {
+        try
+        {
+            var p = new Gtk.CssProvider ();
+            var weight = bold ? "bold" : "normal";
+            p.load_from_data (
+                "label { font-family: \"%s\"; font-size: %dpt; font-weight: %s; color: %s; }".printf (
+                    family, pt, weight, color.to_string ()), -1);
+            w.get_style_context ().add_provider (p, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+        }
+        catch (Error e) { debug ("CSS color error: %s", e.message); }
+    }
+
     construct
     {
         // Hack to avoid gtk 3.20's new allocate logic, which messes us up.
@@ -214,12 +241,11 @@ public class PromptBox : FadableBox
         name_grid.attach (avatar_image, COL_AVATAR, ROW_NAME, 1, 1);
 
         name_label = new FadingLabel ("");
-        name_label.override_font (Pango.FontDescription.from_string ("Ubuntu 13"));
-        name_label.override_color (Gtk.StateFlags.NORMAL, { 1.0f, 1.0f, 1.0f, 1.0f });
+        apply_label_css (name_label, "Ubuntu", 13);
         name_label.halign = Gtk.Align.START;
         name_label.valign = Gtk.Align.START;
         name_label.vexpand = false;
-        name_label.margin_left = 2;
+        name_label.margin_start = 2;
         name_label.margin_top = 4;
         name_label.set_size_request (-1, grid_size);
         name_label.show ();
@@ -230,7 +256,8 @@ public class PromptBox : FadableBox
         message_image.valign = Gtk.Align.CENTER;
         message_image.halign = Gtk.Align.CENTER;
 
-        var align = new Gtk.Alignment (0.5f, 0.5f, 0.0f, 0.0f);
+        var align = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        align.halign = Gtk.Align.CENTER;
         align.valign = Gtk.Align.START;
         align.set_size_request (-1, grid_size);
         align.add (message_image);
@@ -272,12 +299,11 @@ public class PromptBox : FadableBox
         small_name_grid.attach (small_avatar_image, 0, 0, 1, 1);
 
         small_name_label = new FadingLabel ("");
-        small_name_label.override_font (Pango.FontDescription.from_string ("Ubuntu 13"));
-        small_name_label.override_color (Gtk.StateFlags.NORMAL, { 1.0f, 1.0f, 1.0f, 1.0f });
+        apply_label_css (small_name_label, "Ubuntu", 13);
         small_name_label.valign = Gtk.Align.CENTER;
         small_name_label.yalign = 0.5f;
         small_name_label.xalign = 0.0f;
-        small_name_label.margin_left = 2;
+        small_name_label.margin_start = 2;
         small_name_label.set_size_request (-1, grid_size);
         small_name_label.show ();
         small_name_grid.attach (small_name_label, 1, 0, 1, 1);
@@ -285,7 +311,9 @@ public class PromptBox : FadableBox
         small_message_image = new CachedImage (null);
         small_message_image.set_from_icon_name("mail-unread", Gtk.IconSize.BUTTON);
 
-        var align = new Gtk.Alignment (0.5f, 0.5f, 0.0f, 0.0f);
+        var align = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        align.halign = Gtk.Align.CENTER;
+        align.valign = Gtk.Align.CENTER;
         align.set_size_request (-1, grid_size);
         align.add (small_message_image);
         align.show ();
@@ -499,12 +527,10 @@ public class PromptBox : FadableBox
     {
         var label = new FadingLabel (text);
 
-        label.override_font (Pango.FontDescription.from_string ("Ubuntu Bold 10"));
-
         Gdk.RGBA color = { 1.0f, 1.0f, 1.0f, 1.0f };
         if (is_error)
             color.parse ("#ffd64d");
-        label.override_color (Gtk.StateFlags.NORMAL, color);
+        apply_label_css_color (label, "Ubuntu", 10, color, true);
 
         label.xalign = 0.0f;
         label.set_data<bool> ("prompt-box-is-error", is_error);
@@ -616,8 +642,18 @@ public class PromptBox : FadableBox
             combo = new Gtk.ComboBoxText.with_entry ();
 
         combo.get_style_context ().add_class ("lightdm-combo");
-        combo.get_child ().get_style_context ().add_class ("lightdm-combo");
-        combo.get_child ().override_font (Pango.FontDescription.from_string (DashEntry.font));
+        var combo_child = combo.get_child ();
+        if (combo_child != null)
+        {
+            combo_child.get_style_context ().add_class ("lightdm-combo");
+            try
+            {
+                var p = new Gtk.CssProvider ();
+                p.load_from_data ("entry { font-family: \"Ubuntu\"; font-size: 14pt; }", -1);
+                combo_child.get_style_context ().add_provider (p, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+            }
+            catch (Error e) { debug ("CSS combo entry error: %s", e.message); }
+        }
 
         attach_item (combo, false);
 

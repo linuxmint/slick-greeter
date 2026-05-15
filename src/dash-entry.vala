@@ -71,9 +71,18 @@ public class DashEntry : Gtk.Entry, Fadable
             }
         }
 
-        override_font (Pango.FontDescription.from_string (font));
-
         var style_ctx = get_style_context ();
+
+        try
+        {
+            var font_provider = new Gtk.CssProvider ();
+            font_provider.load_from_data ("entry { font-family: Ubuntu; font-size: 14pt; }", -1);
+            style_ctx.add_provider (font_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+        }
+        catch (Error e)
+        {
+            debug ("Internal error loading font style: %s", e.message);
+        }
 
         try
         {

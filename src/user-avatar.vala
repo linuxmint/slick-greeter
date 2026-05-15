@@ -32,7 +32,7 @@ public class UserAvatar : CachedImage
     {
         // Keep a fixed size of 32px for display
         set_size_request(AVATAR_SIZE, AVATAR_SIZE);
-        margin_right = AVATAR_MARGIN;
+        margin_end = AVATAR_MARGIN;
         halign = Gtk.Align.CENTER;
         hexpand = false;
         vexpand = false;

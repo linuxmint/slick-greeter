@@ -48,10 +48,22 @@ public class MainWindow : Gtk.Window
         add_accel_group (accel_group);
 
         var bg_color = Gdk.RGBA ();
+        set_name ("main-window");
         bg_color.parse (UGSettings.get_string (UGSettings.KEY_BACKGROUND_COLOR));
-        override_background_color (Gtk.StateFlags.NORMAL, bg_color);
+        try
+        {
+            var bg_provider = new Gtk.CssProvider ();
+            bg_provider.load_from_data (
+                "#main-window { background-color: %s; }".printf (bg_color.to_string ()), -1);
+            get_style_context ().add_provider (bg_provider,
+                                               Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+        }
+        catch (Error e)
+        {
+            debug ("Internal error setting background color: %s", e.message);
+        }
         get_accessible ().set_name (_("Login Screen"));
-        has_resize_grip = false;
+        /* has_resize_grip = false — removed, deprecated since GTK 3.14 */
         SlickGreeter.add_style_class (this);
 
         background = new Background ();
@@ -64,7 +76,6 @@ public class MainWindow : Gtk.Window
 
         /* Box for menubar shadow */
         var menubox = new Gtk.EventBox ();
-        var menualign = new Gtk.Alignment (0.0f, 0.0f, 1.0f, 0.0f);
         var shadow_path = Path.build_filename (Config.PKGDATADIR,
                                                "shadow.png", null);
         var shadow_style = "";
@@ -86,15 +97,13 @@ public class MainWindow : Gtk.Window
         }
         menubox.set_size_request (-1, MENUBAR_HEIGHT);
         menubox.show ();
-        menualign.show ();
-        menubox.add (menualign);
         login_box.add (menubox);
-        SlickGreeter.add_style_class (menualign);
         SlickGreeter.add_style_class (menubox);
 
         menubar = new MenuBar (background, accel_group, this);
+        menubar.hexpand = true;
         menubar.show ();
-        menualign.add (menubar);
+        menubox.add (menubar);
         SlickGreeter.add_style_class (menubar);
 
         content_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
@@ -103,40 +112,34 @@ public class MainWindow : Gtk.Window
         login_box.add (content_box);
 
         var content_align = UGSettings.get_string(UGSettings.KEY_CONTENT_ALIGN);
-        var x_align = 0.5f;
 
+        hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        hbox.vexpand = true;
         if (content_align == "left")
-        {
-            x_align = 0.0f;
-        }
+            hbox.halign = Gtk.Align.START;
         else if (content_align == "right")
-        {
-            x_align = 1.0f;
-        }
-
-        var align = new Gtk.Alignment (x_align, 0.0f, 0.0f, 1.0f);
+            hbox.halign = Gtk.Align.END;
+        else
+            hbox.halign = Gtk.Align.CENTER;
 
         if (content_align == "center")
         {
             // offset for back button
-            align.margin_right = grid_size;
+            hbox.margin_end = grid_size;
         }
 
-        align.show ();
-        content_box.add (align);
-
-        hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        hbox.expand = true;
         hbox.show ();
-        align.add (hbox);
+        content_box.add (hbox);
 
-        align = new Gtk.Alignment (0.5f, 0.5f, 0.0f, 0.0f);
+        var back_align = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         // Hack to avoid gtk 3.20's new allocate logic, which messes us up.
-        align.resize_mode = Gtk.ResizeMode.QUEUE;
-        align.set_size_request (grid_size, -1);
-        align.margin_bottom = MENUBAR_HEIGHT; /* offset for menubar at top */
-        align.show ();
-        hbox.add (align);
+        back_align.resize_mode = Gtk.ResizeMode.QUEUE;
+        back_align.set_size_request (grid_size, -1);
+        back_align.margin_bottom = MENUBAR_HEIGHT;
+        back_align.halign = Gtk.Align.CENTER;
+        back_align.valign = Gtk.Align.CENTER;
+        back_align.show ();
+        hbox.add (back_align);
 
         back_button = new FlatButton ();
         back_button.get_accessible ().set_name (_("Back"));
@@ -146,15 +149,20 @@ public class MainWindow : Gtk.Window
         back_button.set_size_request (grid_size - GreeterList.BORDER * 2, grid_size - GreeterList.BORDER * 2);
         back_button.add (image);
         back_button.clicked.connect (pop_list);
-        align.add (back_button);
+        back_align.add (back_button);
 
-        align = new Gtk.Alignment (0.0f, 0.5f, 0.0f, 1.0f);
-        align.show ();
-        hbox.add (align);
+        var stack_align = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        stack_align.halign = Gtk.Align.START;
+        stack_align.valign = Gtk.Align.FILL;
+        stack_align.vexpand = true;
+        stack_align.show ();
+        hbox.add (stack_align);
 
         stack = new ListStack ();
+        stack.valign = Gtk.Align.FILL;
+        stack.vexpand = true;
         stack.show ();
-        align.add (stack);
+        stack_align.add (stack);
 
         add_user_list ();
 
@@ -216,8 +224,8 @@ public class MainWindow : Gtk.Window
         if (content_box != null)
         {
             var content_align = UGSettings.get_string(UGSettings.KEY_CONTENT_ALIGN);
-            content_box.margin_left = get_grid_offset (get_allocated_width ()) + (content_align == "left" ? grid_size : 0);
-            content_box.margin_right = get_grid_offset (get_allocated_width ()) + (content_align == "right" ? grid_size : 0);
+            content_box.margin_start  = get_grid_offset (get_allocated_width ()) + (content_align == "left" ? grid_size : 0);
+            content_box.margin_end    = get_grid_offset (get_allocated_width ()) + (content_align == "right" ? grid_size : 0);
             content_box.margin_top = get_grid_offset (get_allocated_height ());
             content_box.margin_bottom = get_grid_offset (get_allocated_height ());
         }
@@ -226,7 +234,7 @@ public class MainWindow : Gtk.Window
     public override void realize ()
     {
         base.realize ();
-        background.set_surface (Gdk.cairo_create (get_window ()).get_target ());
+        background.set_surface (get_window ().create_similar_surface (Cairo.Content.COLOR, 1, 1));
     }
 
     public void before_session_start()

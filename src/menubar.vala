@@ -85,6 +85,18 @@ public class MenuBar : Gtk.MenuBar
 
     private const int HEIGHT = 24;
 
+    private static void force_label_normal_color (Gtk.Label label)
+    {
+        try
+        {
+            var p = new Gtk.CssProvider ();
+             p.load_from_data ("label { color: @theme_fg_color; } " +
+                               "label:disabled { color: @theme_fg_color; }", -1);
+            label.get_style_context ().add_provider (p, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+        }
+        catch (Error e) { debug ("MenuBar label color error: %s", e.message); }
+    }
+
     public MenuBar (Background bg, Gtk.AccelGroup ag, MainWindow mw)
     {
         Object (background: bg, accel_group: ag, main_window: mw);
@@ -100,30 +112,22 @@ public class MenuBar : Gtk.MenuBar
         {
             if (width > 0 && height > 0)
             {
-                try
+                bg_surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, width, height);
+                var bg_cr = new Cairo.Context (bg_surface);
+
+                // Draw background in temporary surface
+                if (background != null)
                 {
-                    bg_surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, width, height);
-                    var bg_cr = new Cairo.Context (bg_surface);
-                    
-                    // Draw background in temporary surface
-            if (background != null)
-            {
-                int x, y;
-                background.translate_coordinates (this, 0, 0, out x, out y);
-                        bg_cr.save ();
-                        bg_cr.translate (x, y);
-                        background.draw_full (bg_cr, Background.DrawFlags.NONE);
-                        bg_cr.restore ();
-                    }
-                    
-                    // Apply blur effect
-                    CairoUtils.ExponentialBlur.surface (bg_surface, BLUR_RADIUS);
+                    int x, y;
+                    background.translate_coordinates (this, 0, 0, out x, out y);
+                    bg_cr.save ();
+                    bg_cr.translate (x, y);
+                    background.draw_full (bg_cr, Background.DrawFlags.NONE);
+                    bg_cr.restore ();
                 }
-                catch (Error e)
-                {
-                    warning ("Failed to create background surface: %s", e.message);
-                    bg_surface = null;
-                }
+
+                // Apply blur effect
+                CairoUtils.ExponentialBlur.surface (bg_surface, BLUR_RADIUS);
             }
         }
 
@@ -198,9 +202,8 @@ public class MenuBar : Gtk.MenuBar
         if (UGSettings.get_boolean (UGSettings.KEY_SHOW_CLOCK))
         {
             clock_label = new Gtk.Label ("");
-            var clock_fg = clock_label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
-            clock_label.override_color (Gtk.StateFlags.INSENSITIVE, clock_fg);
             clock_label.show ();
+            force_label_normal_color (clock_label);
             var item = new Gtk.MenuItem ();
             item.add (clock_label);
             item.sensitive = false;
@@ -222,8 +225,7 @@ public class MenuBar : Gtk.MenuBar
             hbox.set_spacing (6);
             power_label = new Gtk.Label ("");
             power_label.sensitive = false;
-            var power_fg = power_label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
-            power_label.override_color (Gtk.StateFlags.INSENSITIVE, power_fg);
+            force_label_normal_color (power_label);
             power_label.show ();
             hbox.add (power_label);
             power_menu_item.add (hbox);
@@ -262,8 +264,7 @@ public class MenuBar : Gtk.MenuBar
         if (UGSettings.get_boolean (UGSettings.KEY_SHOW_HOSTNAME))
         {
             var label = new Gtk.Label (Posix.utsname ().nodename);
-            var hostname_fg = label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
-            label.override_color (Gtk.StateFlags.INSENSITIVE, hostname_fg);
+            force_label_normal_color (label);
             label.show ();
             var hostname_item = new Gtk.MenuItem ();
             hostname_item.add (label);
@@ -533,13 +534,12 @@ public class MenuBar : Gtk.MenuBar
         hbox.set_spacing (6);
         var label = new Gtk.Label ("");
         label.sensitive = false;
+        force_label_normal_color (label);
         var current_layout = LightDM.get_layout ();
         if (current_layout != null) {
             label.set_label (current_layout.name);
             item.set_tooltip_text(_("Keyboard layout:").concat(" ").concat(current_layout.description));
         }
-        var keyboard_fg = label.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
-        label.override_color (Gtk.StateFlags.INSENSITIVE, keyboard_fg);
         label.show ();
         hbox.add (label);
         item.show ();
@@ -712,7 +712,7 @@ public class MenuBar : Gtk.MenuBar
                                      SpawnFlags.SEARCH_PATH,
                                      null,
                                      out reader_pid);
-                // This is a workaroud for bug https://launchpad.net/bugs/944159
+                // This is a workaround for bug https://launchpad.net/bugs/944159
                 // The problem is that orca seems to not notice that it's in a
                 // password field on startup.  We just need to kick orca in the
                 // pants.  We do this two ways:  a racy way and a non-racy way.
@@ -726,7 +726,12 @@ public class MenuBar : Gtk.MenuBar
                 // why we do both.  Ideally this would be fixed in orca itself.
                 SlickGreeter.singleton.orca_needs_kick = true;
                 Timeout.add_seconds (1, () => {
-                    Signal.emit_by_name ((get_toplevel () as Gtk.Window).get_focus ().get_accessible (), "focus-event", true);
+                    var win = get_toplevel () as Gtk.Window;
+                    if (win != null) {
+                        var focused = win.get_focus ();
+                        if (focused != null)
+                            Signal.emit_by_name (focused.get_accessible (), "focus-event", true);
+                    }
                     return false;
                 });
             }

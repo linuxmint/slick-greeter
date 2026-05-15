@@ -104,8 +104,7 @@ public class ShutdownDialog : Gtk.Fixed
         {
             var title_label = new Gtk.Label (_("Shut Down"));
             title_label.visible = true;
-            title_label.override_font (Pango.FontDescription.from_string ("Ubuntu Light 15"));
-            title_label.override_color (Gtk.StateFlags.NORMAL, { 1.0f, 1.0f, 1.0f, 1.0f });
+            title_label.get_style_context ().add_provider (make_label_style ("Ubuntu Light", 15), Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
             title_label.set_alignment (0.0f, 0.5f);
             vbox.pack_start (title_label, false, false, 0);
 
@@ -138,8 +137,7 @@ public class ShutdownDialog : Gtk.Fixed
 
         var label = new Gtk.Label (text);
         label.set_line_wrap (true);
-        label.override_font (Pango.FontDescription.from_string ("Ubuntu Light 12"));
-        label.override_color (Gtk.StateFlags.NORMAL, { 1.0f, 1.0f, 1.0f, 1.0f });
+        label.get_style_context ().add_provider (make_label_style ("Ubuntu Light", 12), Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
         label.set_alignment (0.0f, 0.5f);
         label.visible = true;
         vbox.pack_start (label, false, false, 0);
@@ -336,19 +334,25 @@ public class ShutdownDialog : Gtk.Fixed
 
     public void focus_next ()
     {
-        (get_toplevel () as Gtk.Window).move_focus (Gtk.DirectionType.TAB_FORWARD);
+        var w = get_toplevel () as Gtk.Window;
+        if (w != null)
+            w.move_focus (Gtk.DirectionType.TAB_FORWARD);
     }
 
     public void focus_prev ()
     {
-        (get_toplevel () as Gtk.Window).move_focus (Gtk.DirectionType.TAB_BACKWARD);
+        var w = get_toplevel () as Gtk.Window;
+        if (w != null)
+            w.move_focus (Gtk.DirectionType.TAB_BACKWARD);
     }
 
     public void cancel ()
     {
-        var widget = (get_toplevel () as Gtk.Window).get_focus ();
+        var w = get_toplevel () as Gtk.Window;
+        if (w == null) { close (); return; }
+        var widget = w.get_focus ();
         if (widget is DialogButton)
-            (get_toplevel () as Gtk.Window).set_focus (null);
+            w.set_focus (null);
         else
             close ();
     }
@@ -534,6 +538,22 @@ public class ShutdownDialog : Gtk.Fixed
     }
 }
 
+private Gtk.CssProvider make_label_style (string font_family, int size_pt)
+{
+    var provider = new Gtk.CssProvider ();
+    try
+    {
+        provider.load_from_data (
+            "label { font-family: \"%s\"; font-size: %dpt; color: white; }"
+            .printf (font_family, size_pt), -1);
+    }
+    catch (Error e)
+    {
+        debug ("CSS label style error: %s", e.message);
+    }
+    return provider;
+}
+
 private class DialogButton : Gtk.Button
 {
     private string inactive_filename;
@@ -558,10 +578,7 @@ private class DialogButton : Gtk.Button
         if (l != null)
         {
             l.visible = true;
-            l.override_font (Pango.FontDescription.from_string ("Ubuntu Light 12"));
-            l.override_color (Gtk.StateFlags.NORMAL, { 1.0f, 1.0f, 1.0f, 0.0f });
-            l.override_color (Gtk.StateFlags.FOCUSED, { 1.0f, 1.0f, 1.0f, 1.0f });
-            l.override_color (Gtk.StateFlags.ACTIVE, { 1.0f, 1.0f, 1.0f, 1.0f });
+            l.get_style_context ().add_provider (make_label_style ("Ubuntu Light", 12), Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
             this.get_accessible ().set_name (l.get_text ());
         }
 
@@ -587,7 +604,9 @@ private class DialogButton : Gtk.Button
 
     public override bool leave_notify_event (Gdk.EventCrossing event)
     {
-        (get_toplevel () as Gtk.Window).set_focus (null);
+        var w = get_toplevel () as Gtk.Window;
+        if (w != null)
+            w.set_focus (null);
         return base.leave_notify_event (event);
     }
 
