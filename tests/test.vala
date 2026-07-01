@@ -662,6 +662,36 @@ public class Test
         mw.hide ();
     }
 
+    public static void no_prompt_authentication_requires_confirmation ()
+    {
+        SlickGreeter.singleton.session_started = false;
+
+        MainWindow mw = setup ();
+        TestList list = mw.stack.top () as TestList;
+
+        list.set_active_entry ("no-password");
+        process_events ();
+
+        GLib.assert (!SlickGreeter.singleton.session_started);
+
+        mw.hide ();
+    }
+
+    public static void message_authentication ()
+    {
+        SlickGreeter.singleton.session_started = false;
+
+        MainWindow mw = setup ();
+        TestList list = mw.stack.top () as TestList;
+
+        list.set_active_entry ("message-auth");
+        process_events ();
+
+        GLib.assert (SlickGreeter.singleton.session_started);
+
+        mw.hide ();
+    }
+
     public static void unsupported_server_type ()
     {
         MainWindow mw = setup ();
@@ -795,6 +825,8 @@ public class Test
         GLib.Test.add_func ("/Remote Login cancel authentication", remote_login_cancel_authentication);
         GLib.Test.add_func ("/Email Autocomplete", email_autocomplete);
         GLib.Test.add_func ("/Greeter Communication", greeter_communcation);
+        GLib.Test.add_func ("/No Prompt Authentication Requires Confirmation", no_prompt_authentication_requires_confirmation);
+        GLib.Test.add_func ("/Message Authentication", message_authentication);
         GLib.Test.add_func ("/Unsupported server type", unsupported_server_type);
         GLib.Test.add_func ("/Remote Login Only", remote_login_only);
         GLib.Test.add_func ("/Manual Login Fallback", manual_login_fallback);

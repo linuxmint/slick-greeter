@@ -668,12 +668,12 @@ public class UserList : GreeterList
         greeter_authenticating_user = "";
         if (selected_entry.id.has_prefix ("*remote_directory"))
         {
-            prompted = true;
+            auth_interaction_seen = true;
             create_remote_fields_for_current_item.begin (remote_directory_server_list);
         }
         else if (selected_entry.id.has_prefix ("*remote_login"))
         {
-            prompted = true;
+            auth_interaction_seen = true;
             create_remote_fields_for_current_item.begin (remote_login_server_list);
         }
         else
@@ -1171,6 +1171,7 @@ public class UserList : GreeterList
         { "has-password",       "Has Password",      "*" },
         { "different-prompt",   "Different Prompt",  "*" },
         { "no-password",        "No Password",       "*" },
+        { "message-auth",       "Message Auth",      "*" },
         { "change-password",    "Change Password",   "*" },
         { "auth-error",         "Auth Error",        "*" },
         { "two-factor",         "Two Factor",        "*" },
@@ -1637,6 +1638,11 @@ public class UserList : GreeterList
             show_prompt_cb ("Secret word", LightDM.PromptType.SECRET);
             break;
         case "no-password":
+            test_is_authenticated = true;
+            authentication_complete_cb ();
+            break;
+        case "message-auth":
+            show_message_cb ("Place your finger on the fingerprint reader", LightDM.MessageType.INFO);
             test_is_authenticated = true;
             authentication_complete_cb ();
             break;
