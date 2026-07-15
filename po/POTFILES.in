@@ -2,6 +2,8 @@
 # Please keep this file sorted alphabetically.
 src/animate-timer.vala
 src/background.vala
+src/banner-dialog.vala
+src/banner-dialog.vala
 src/cached-image.vala
 src/dash-box.vala
 src/dash-button.vala

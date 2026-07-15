@@ -1,1 +1,2 @@
 debian/90-slick-greeter.conf /usr/share/lightdm/lightdm.conf.d/
+debian/slick-greeter.conf /etc/lightdm/
