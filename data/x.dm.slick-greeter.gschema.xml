@@ -160,5 +160,29 @@
       <default>'left'</default>
       <summary>Alignment of the main content</summary>
     </key>
+    <key name="idle-clock-enabled" type="b">
+      <default>true</default>
+      <summary>Whether to use the idle clock presentation</summary>
+    </key>
+    <key name="idle-clock-opacity" type="d">
+      <range min="0.0" max="1.0"/>
+      <default>0.34</default>
+      <summary>Opacity of the large clock while the greeter is idle</summary>
+    </key>
+    <key name="login-clock-opacity" type="d">
+      <range min="0.0" max="1.0"/>
+      <default>0.22</default>
+      <summary>Opacity of the large clock while the login UI is visible</summary>
+    </key>
+    <key name="login-background-dim-opacity" type="d">
+      <range min="0.0" max="1.0"/>
+      <default>0.36</default>
+      <summary>Opacity of the background dimming overlay while the login UI is visible</summary>
+    </key>
+    <key name="login-transition-duration" type="i">
+      <range min="0" max="1000"/>
+      <default>350</default>
+      <summary>Duration of the idle-to-login presentation transition, in milliseconds</summary>
+    </key>
   </schema>
 </schemalist>

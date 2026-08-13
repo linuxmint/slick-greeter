@@ -28,17 +28,27 @@ public class MainWindow : Gtk.Window
     private string only_on_monitor;
     private bool monitor_setting_ok;
     private Background background;
+    private IdleClockOverlay idle_clock_overlay;
     private Gtk.Box login_box;
     private Gtk.Box hbox;
     private Gtk.Box content_box;
     private Gtk.Button back_button;
     private ShutdownDialog? shutdown_dialog = null;
     private bool do_resize;
+    private bool idle_clock_enabled;
+    private bool login_presentation_active;
+    private double login_presentation_progress;
+    private double login_presentation_start;
+    private double login_presentation_target;
+    private AnimateTimer login_presentation_timer;
+    private int login_transition_duration;
+    private string pending_login_text = "";
 
     public ListStack stack;
 
     // Menubar is smaller, but with shadow, we reserve more space
     public const int MENUBAR_HEIGHT = 32;
+    private const int LOGIN_UI_SLIDE_OFFSET = 24;
 
     construct
     {
@@ -57,6 +67,10 @@ public class MainWindow : Gtk.Window
         background = new Background ();
         add (background);
         SlickGreeter.add_style_class (background);
+
+        idle_clock_overlay = new IdleClockOverlay ();
+        idle_clock_overlay.show ();
+        background.add (idle_clock_overlay);
 
         login_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         login_box.show ();
@@ -158,6 +172,24 @@ public class MainWindow : Gtk.Window
 
         add_user_list ();
 
+        idle_clock_enabled = UGSettings.get_boolean (UGSettings.KEY_IDLE_CLOCK_ENABLED);
+        login_presentation_active = !idle_clock_enabled;
+        login_presentation_progress = login_presentation_active ? 1.0 : 0.0;
+        login_presentation_start = login_presentation_progress;
+        login_presentation_target = login_presentation_progress;
+        login_transition_duration = UGSettings.get_integer (UGSettings.KEY_LOGIN_TRANSITION_DURATION).clamp (0, 1000);
+        login_presentation_timer = new AnimateTimer (AnimateTimer.ease_in_out, login_transition_duration);
+        login_presentation_timer.animate.connect (animate_login_presentation);
+        set_login_presentation_progress (login_presentation_progress);
+        SlickGreeter.singleton.show_prompt.connect (() =>
+        {
+            Idle.add (() =>
+            {
+                flush_pending_login_text ();
+                return false;
+            });
+        });
+
         primary_monitor = null;
         do_resize = false;
 
@@ -220,6 +252,7 @@ public class MainWindow : Gtk.Window
             content_box.margin_right = get_grid_offset (get_allocated_width ()) + (content_align == "right" ? grid_size : 0);
             content_box.margin_top = get_grid_offset (get_allocated_height ());
             content_box.margin_bottom = get_grid_offset (get_allocated_height ());
+            apply_login_presentation ();
         }
     }
 
@@ -343,8 +376,10 @@ public class MainWindow : Gtk.Window
     private void move_to_monitor (Monitor monitor)
     {
         active_monitor = monitor;
+        idle_clock_overlay.set_size_request (monitor.width, monitor.height);
         login_box.set_size_request (monitor.width, monitor.height);
         background.set_active_monitor (monitor);
+        background.move (idle_clock_overlay, monitor.x, monitor.y);
         background.move (login_box, monitor.x, monitor.y);
 
         if (shutdown_dialog != null)
@@ -370,6 +405,16 @@ public class MainWindow : Gtk.Window
     public override bool key_press_event (Gdk.EventKey event)
     {
         var top = stack.top ();
+        var activated_login = false;
+
+        if (should_activate_login_presentation (event))
+        {
+            set_login_presentation_active (true);
+            activated_login = true;
+        }
+
+        if ((activated_login || pending_login_text != "") && buffer_login_text_if_needed (event))
+            return true;
 
         if (stack.top () is UserList)
         {
@@ -400,10 +445,13 @@ public class MainWindow : Gtk.Window
         switch (event.keyval)
         {
         case Gdk.Key.Escape:
+            var had_shutdown_dialog = shutdown_dialog != null;
             if (login_box.sensitive)
                 top.cancel_authentication ();
             if (shutdown_dialog != null)
                 shutdown_dialog.cancel ();
+            if (!had_shutdown_dialog)
+                set_login_presentation_active (false);
             return true;
         case Gdk.Key.Page_Up:
         case Gdk.Key.KP_Page_Up:
@@ -462,6 +510,181 @@ public class MainWindow : Gtk.Window
         }
 
         return base.key_press_event (event);
+    }
+
+    private void animate_login_presentation (double progress)
+    {
+        var current = login_presentation_start + (login_presentation_target - login_presentation_start) * progress;
+        set_login_presentation_progress (current);
+    }
+
+    private void set_login_presentation_active (bool active)
+    {
+        if (!idle_clock_enabled)
+            return;
+
+        if (login_presentation_active == active && !login_presentation_timer.is_running)
+            return;
+
+        login_presentation_active = active;
+        login_presentation_start = login_presentation_progress;
+        login_presentation_target = active ? 1.0 : 0.0;
+
+        if (!active)
+            pending_login_text = "";
+
+        if (active && stack != null && stack.top () != null)
+            stack.top ().grab_focus ();
+
+        if (login_transition_duration == 0)
+            set_login_presentation_progress (login_presentation_target);
+        else
+            login_presentation_timer.reset (login_transition_duration);
+    }
+
+    private void set_login_presentation_progress (double progress)
+    {
+        login_presentation_progress = progress.clamp (0.0, 1.0);
+        apply_login_presentation ();
+    }
+
+    private void apply_login_presentation ()
+    {
+        if (idle_clock_overlay != null)
+            idle_clock_overlay.progress = idle_clock_enabled ? login_presentation_progress : 0.0;
+
+        if (content_box != null)
+        {
+            content_box.opacity = idle_clock_enabled ? login_presentation_progress : 1.0;
+            content_box.queue_draw ();
+        }
+
+        if (hbox != null)
+        {
+            hbox.margin_top = idle_clock_enabled ? (int) Math.round ((1.0 - login_presentation_progress) * LOGIN_UI_SLIDE_OFFSET) : 0;
+            hbox.queue_resize ();
+        }
+    }
+
+    private bool should_activate_login_presentation (Gdk.EventKey event)
+    {
+        if (!idle_clock_enabled || login_presentation_active || shutdown_dialog != null || !login_box.sensitive)
+            return false;
+
+        if (is_modifier_only_key (event.keyval) ||
+            event.keyval == Gdk.Key.Escape ||
+            event.keyval == Gdk.Key.Print ||
+            event.keyval == Gdk.Key.PowerOff ||
+            (event.keyval >= Gdk.Key.F1 && event.keyval <= Gdk.Key.F12))
+            return false;
+
+        if (has_command_modifier (event))
+            return false;
+
+        switch (event.keyval)
+        {
+        case Gdk.Key.Return:
+        case Gdk.Key.KP_Enter:
+        case Gdk.Key.Tab:
+        case Gdk.Key.ISO_Left_Tab:
+        case Gdk.Key.BackSpace:
+        case Gdk.Key.Delete:
+        case Gdk.Key.Up:
+        case Gdk.Key.KP_Up:
+        case Gdk.Key.Down:
+        case Gdk.Key.KP_Down:
+        case Gdk.Key.Page_Up:
+        case Gdk.Key.KP_Page_Up:
+        case Gdk.Key.Page_Down:
+        case Gdk.Key.KP_Page_Down:
+            return true;
+        }
+
+        var key_unichar = Gdk.keyval_to_unicode (event.keyval);
+        return key_unichar >= 0x20 && key_unichar != 0x7f;
+    }
+
+    private bool buffer_login_text_if_needed (Gdk.EventKey event)
+    {
+        if (pending_login_text == "" && get_focus () is Gtk.Entry)
+            return false;
+
+        string text;
+        if (!key_event_to_text (event, out text))
+            return false;
+
+        // If PAM has not produced the prompt yet, keep early password text
+        // instead of letting it disappear during the idle-to-login transition.
+        pending_login_text += text;
+        return true;
+    }
+
+    private bool key_event_to_text (Gdk.EventKey event, out string text)
+    {
+        text = "";
+
+        if (has_command_modifier (event))
+            return false;
+
+        var key_unichar = Gdk.keyval_to_unicode (event.keyval);
+        if (key_unichar < 0x20 || key_unichar == 0x7f)
+            return false;
+
+        text = ((unichar) key_unichar).to_string ();
+        return text != "";
+    }
+
+    private void flush_pending_login_text ()
+    {
+        if (pending_login_text == "")
+            return;
+
+        if (!(get_focus () is Gtk.Entry) && stack != null && stack.top () != null)
+            stack.top ().grab_focus ();
+
+        var entry = get_focus () as Gtk.Entry;
+        if (entry == null)
+            return;
+
+        entry.text += pending_login_text;
+        entry.set_position (-1);
+        pending_login_text = "";
+    }
+
+    private bool has_command_modifier (Gdk.EventKey event)
+    {
+        var command_modifiers = Gdk.ModifierType.CONTROL_MASK |
+                                Gdk.ModifierType.MOD1_MASK |
+                                Gdk.ModifierType.SUPER_MASK |
+                                Gdk.ModifierType.HYPER_MASK |
+                                Gdk.ModifierType.META_MASK;
+        return (event.state & command_modifiers) != 0;
+    }
+
+    private bool is_modifier_only_key (uint keyval)
+    {
+        switch (keyval)
+        {
+        case Gdk.Key.Shift_L:
+        case Gdk.Key.Shift_R:
+        case Gdk.Key.Control_L:
+        case Gdk.Key.Control_R:
+        case Gdk.Key.Alt_L:
+        case Gdk.Key.Alt_R:
+        case Gdk.Key.Super_L:
+        case Gdk.Key.Super_R:
+        case Gdk.Key.Hyper_L:
+        case Gdk.Key.Hyper_R:
+        case Gdk.Key.Meta_L:
+        case Gdk.Key.Meta_R:
+        case Gdk.Key.Caps_Lock:
+        case Gdk.Key.Num_Lock:
+        case Gdk.Key.Scroll_Lock:
+        case Gdk.Key.ISO_Level3_Shift:
+            return true;
+        default:
+            return false;
+        }
     }
 
     public void set_keyboard_state ()

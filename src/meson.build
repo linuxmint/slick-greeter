@@ -16,6 +16,7 @@ slick_greeter_sources = files(
     'flat-button.vala',
     'greeter-list.vala',
     'idle-monitor.vala',
+    'idle-clock-overlay.vala',
     'list-stack.vala',
     'main-window.vala',
     'menu.vala',

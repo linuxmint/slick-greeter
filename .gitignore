@@ -5,3 +5,4 @@ debian/*.substvars
 debian/debhelper-build-stamp
 debian/files
 .idea/
+plan.md

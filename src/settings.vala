@@ -54,6 +54,11 @@ public class UGSettings
     public const string KEY_CLOCK_FORMAT = "clock-format";
     public const string KEY_ONSCREEN_KEYBOARD_LAYOUT = "onscreen-keyboard-layout";
     public const string KEY_CONTENT_ALIGN = "content-align";
+    public const string KEY_IDLE_CLOCK_ENABLED = "idle-clock-enabled";
+    public const string KEY_IDLE_CLOCK_OPACITY = "idle-clock-opacity";
+    public const string KEY_LOGIN_CLOCK_OPACITY = "login-clock-opacity";
+    public const string KEY_LOGIN_BACKGROUND_DIM_OPACITY = "login-background-dim-opacity";
+    public const string KEY_LOGIN_TRANSITION_DURATION = "login-transition-duration";
 
     public static bool get_boolean (string key)
     {
@@ -152,10 +157,17 @@ public class UGSettings
             bool_keys.append (KEY_SHOW_QUIT);
             bool_keys.append (KEY_XFT_ANTIALIAS);
             bool_keys.append (KEY_ACTIVATE_NUMLOCK);
+            bool_keys.append (KEY_IDLE_CLOCK_ENABLED);
 
             var int_keys = new List<string> ();
-            int_keys.append (KEY_XFT_DPI);
             int_keys.append (KEY_CURSOR_THEME_SIZE);
+            int_keys.append (KEY_LOGIN_TRANSITION_DURATION);
+
+            var double_keys = new List<string> ();
+            double_keys.append (KEY_XFT_DPI);
+            double_keys.append (KEY_IDLE_CLOCK_OPACITY);
+            double_keys.append (KEY_LOGIN_CLOCK_OPACITY);
+            double_keys.append (KEY_LOGIN_BACKGROUND_DIM_OPACITY);
 
             var strv_keys = new List<string> ();
             strv_keys.append (KEY_HIDDEN_USERS);
@@ -204,6 +216,24 @@ public class UGSettings
                         var value = keyfile.get_integer (GROUP_NAME, key);
                         debug ("Overriding dconf setting for %s with %d", key, value);
                         gsettings.set_int (key, value);
+                    }
+                    catch (Error e) {
+                        warning ("Failed to apply %s from configuration file: %s", key, e.message);
+                    }
+                }
+                else {
+                    gsettings.reset(key);
+                    debug ("Resetting dconf setting for %s to default", key);
+                }
+            }
+
+            foreach (string key in double_keys)
+            {
+                if (keyfile.has_group (GROUP_NAME) && keyfile.has_key (GROUP_NAME, key)) {
+                    try {
+                        var value = keyfile.get_double (GROUP_NAME, key);
+                        debug ("Overriding dconf setting for %s with %f", key, value);
+                        gsettings.set_double (key, value);
                     }
                     catch (Error e) {
                         warning ("Failed to apply %s from configuration file: %s", key, e.message);

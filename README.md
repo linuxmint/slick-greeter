@@ -62,4 +62,9 @@ Configuration file format for /etc/lightdm/slick-greeter.conf
     # only-on-monitor=Sets the monitor on which to show the login window, -1 means "follow the mouse"
     # stretch-background-across-monitors=Whether to stretch the background across multiple monitors (false by default)
     # clock-format=What clock format to use (e.g., %H:%M or %l:%M %p)
+    # idle-clock-enabled=Whether to use the idle clock presentation that hides the login UI until typing (true or false)
+    # idle-clock-opacity=Opacity of the large idle clock, from 0.0 to 1.0
+    # login-clock-opacity=Opacity of the large clock after the login UI appears, from 0.0 to 1.0
+    # login-background-dim-opacity=Opacity of the background dimming overlay after the login UI appears, from 0.0 to 1.0
+    # login-transition-duration=Duration of the idle-to-login transition in milliseconds
     
