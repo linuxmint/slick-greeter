@@ -268,8 +268,8 @@ public class MainWindow : Gtk.Window
         idle_clock_overlay.set_size_request (active_monitor.width, active_monitor.height);
 
         /* Login UI centered on the monitor */
-        var login_width = 400; // Example width
-        var login_height = 300; // Example height
+        var login_width = 360;
+        var login_height = 200;
         var x = active_monitor.x + (active_monitor.width - login_width) / 2;
         var y = active_monitor.y + (active_monitor.height - login_height) / 2;
         background.move (login_box, x, y);

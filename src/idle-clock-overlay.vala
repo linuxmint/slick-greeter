@@ -11,7 +11,7 @@ public class IdleClockOverlay : Gtk.DrawingArea
 {
     private const double IDLE_CLOCK_Y = 0.50;
     private const double LOGIN_CLOCK_Y = 0.28;
-    private const int CLOCK_FONT_SIZE = 96;
+    private const int CLOCK_FONT_SIZE = 150;
 
     private string clock_format;
     private string clock_text = "";
