@@ -254,6 +254,26 @@ public class MainWindow : Gtk.Window
             content_box.margin_bottom = get_grid_offset (get_allocated_height ());
             apply_login_presentation ();
         }
+        
+        position_elements ();
+    }
+
+    private void position_elements ()
+    {
+        if (active_monitor == null)
+            return;
+
+        /* Idle clock centered on the monitor */
+        background.move (idle_clock_overlay, active_monitor.x, active_monitor.y);
+        idle_clock_overlay.set_size_request (active_monitor.width, active_monitor.height);
+
+        /* Login UI centered on the monitor */
+        var login_width = 400; // Example width
+        var login_height = 300; // Example height
+        var x = active_monitor.x + (active_monitor.width - login_width) / 2;
+        var y = active_monitor.y + (active_monitor.height - login_height) / 2;
+        background.move (login_box, x, y);
+        login_box.set_size_request (login_width, login_height);
     }
 
     public override void realize ()
@@ -376,11 +396,8 @@ public class MainWindow : Gtk.Window
     private void move_to_monitor (Monitor monitor)
     {
         active_monitor = monitor;
-        idle_clock_overlay.set_size_request (monitor.width, monitor.height);
-        login_box.set_size_request (monitor.width, monitor.height);
         background.set_active_monitor (monitor);
-        background.move (idle_clock_overlay, monitor.x, monitor.y);
-        background.move (login_box, monitor.x, monitor.y);
+        position_elements ();
 
         if (shutdown_dialog != null)
         {
