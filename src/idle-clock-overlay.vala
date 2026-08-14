@@ -11,28 +11,12 @@ public class IdleClockOverlay : Gtk.DrawingArea
 {
     private const double IDLE_CLOCK_Y = 0.50;
     private const double LOGIN_CLOCK_Y = 0.28;
-    private const int CLOCK_FONT_SIZE = 150;
-
-    private string clock_format;
-    private string clock_text = "";
-    private Pango.FontDescription clock_font;
-
-    private double background_dim_opacity;
-    private double idle_clock_opacity;
-    private double login_clock_opacity;
-
-    private double _progress = 0.0;
-    public double progress
+    private int clock_font_size;
+    
+    public IdleClockOverlay (int font_size = 150)
     {
-        get { return _progress; }
-        set
-        {
-            _progress = value.clamp (0.0, 1.0);
-            queue_draw ();
-        }
+        clock_font_size = font_size;
     }
-
-    public bool show_clock { get; private set; default = true; }
 
     construct
     {
@@ -52,7 +36,7 @@ public class IdleClockOverlay : Gtk.DrawingArea
         clock_font = new Pango.FontDescription ();
         clock_font.set_family (font_family);
         clock_font.set_weight (Pango.Weight.LIGHT);
-        clock_font.set_size (CLOCK_FONT_SIZE * Pango.SCALE);
+        clock_font.set_size (clock_font_size * Pango.SCALE);
 
         update_clock ();
         Timeout.add_seconds (1, update_clock);

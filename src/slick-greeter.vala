@@ -17,7 +17,7 @@
  * Authored by: Robert Ancell <robert.ancell@canonical.com>
  */
 
-public const int grid_size = 40;
+public static int grid_size = 40;
 
 public class SlickGreeter
 {
