@@ -208,7 +208,7 @@ public class MainWindow : Gtk.Window
                fills the actual display (e.g. 1920x1080) instead of a
                hardcoded tiny fake monitor floating in the middle of the
                screen. */
-            var screen = get_screen ();
+            screen = get_screen ();
             screen.monitors_changed.connect (monitors_changed_cb);
             monitors_changed_cb (screen);
 
@@ -218,7 +218,7 @@ public class MainWindow : Gtk.Window
         }
         else
         {
-            var screen = get_screen ();
+            screen = get_screen ();
             screen.monitors_changed.connect (monitors_changed_cb);
             monitors_changed_cb (screen);
         }

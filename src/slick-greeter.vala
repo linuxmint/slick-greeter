@@ -17,10 +17,9 @@
  * Authored by: Robert Ancell <robert.ancell@canonical.com>
  */
 
-public static int grid_size = 40;
-
 public class SlickGreeter
 {
+    public static int grid_size = 40;
     public static SlickGreeter singleton;
 
     public signal void show_message (string text, LightDM.MessageType type);
