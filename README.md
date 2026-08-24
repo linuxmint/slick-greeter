@@ -59,6 +59,7 @@ Configuration file format for /etc/lightdm/slick-greeter.conf
     # hidden-users=List of usernames (separated by semicolons) that are hidden until Ctr+Alt+Shift is pressed
     # group-filter=List of groups that users must be part of to be shown (empty list shows all users)
     # enable-hidpi=Whether to enable HiDPI support (on/off/auto)
+    # hidpi-detection-cutoff=DPI value above which the display is considered HiDPI when enable-hidpi is "auto" (144 by default)
     # only-on-monitor=Sets the monitor on which to show the login window, -1 means "follow the mouse"
     # stretch-background-across-monitors=Whether to stretch the background across multiple monitors (false by default)
     # clock-format=What clock format to use (e.g., %H:%M or %l:%M %p)

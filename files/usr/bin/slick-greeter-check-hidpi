@@ -6,8 +6,22 @@ from gi.repository import Gdk
 import sys
 import os
 import syslog
+import configparser
 
-HIDPI_LIMIT = 192
+HIDPI_LIMIT_DEFAULT = 144
+CONF_PATH = "/etc/lightdm/slick-greeter.conf"
+
+def get_hidpi_limit():
+    limit = HIDPI_LIMIT_DEFAULT
+    config = configparser.ConfigParser()
+    try:
+        if config.read(CONF_PATH) and config.has_option("Greeter", "hidpi-detection-cutoff"):
+            limit = config.getint("Greeter", "hidpi-detection-cutoff")
+    except Exception as detail:
+        syslog.syslog("Error while reading hidpi-detection-cutoff from %s: %s" % (CONF_PATH, detail))
+    return limit
+
+HIDPI_LIMIT = get_hidpi_limit()
 
 def get_window_scale():
     window_scale = 1
