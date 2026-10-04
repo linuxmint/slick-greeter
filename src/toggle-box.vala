@@ -110,7 +110,7 @@ public class ToggleBox : Gtk.Box
         }
 
         var label = new Gtk.Label (null);
-        label.set_markup ("<span font=\"Ubuntu 12.5\">%s</span>".printf (name));
+        label.set_markup ("<span font=\"%s\">%s</span>".printf (UGSettings.get_font (12.5).to_string (), name));
         label.halign = Gtk.Align.START;
         hbox.pack_start (label, true, true, 0);
 

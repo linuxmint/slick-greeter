@@ -214,7 +214,7 @@ public class PromptBox : FadableBox
         name_grid.attach (avatar_image, COL_AVATAR, ROW_NAME, 1, 1);
 
         name_label = new FadingLabel ("");
-        name_label.override_font (Pango.FontDescription.from_string ("Ubuntu 13"));
+        name_label.override_font (UGSettings.get_font (13));
         name_label.override_color (Gtk.StateFlags.NORMAL, { 1.0f, 1.0f, 1.0f, 1.0f });
         name_label.halign = Gtk.Align.START;
         name_label.valign = Gtk.Align.START;
@@ -272,7 +272,7 @@ public class PromptBox : FadableBox
         small_name_grid.attach (small_avatar_image, 0, 0, 1, 1);
 
         small_name_label = new FadingLabel ("");
-        small_name_label.override_font (Pango.FontDescription.from_string ("Ubuntu 13"));
+        small_name_label.override_font (UGSettings.get_font (13));
         small_name_label.override_color (Gtk.StateFlags.NORMAL, { 1.0f, 1.0f, 1.0f, 1.0f });
         small_name_label.valign = Gtk.Align.CENTER;
         small_name_label.yalign = 0.5f;
@@ -499,7 +499,7 @@ public class PromptBox : FadableBox
     {
         var label = new FadingLabel (text);
 
-        label.override_font (Pango.FontDescription.from_string ("Ubuntu Bold 10"));
+        label.override_font (UGSettings.get_font (10, Pango.Weight.BOLD));
 
         Gdk.RGBA color = { 1.0f, 1.0f, 1.0f, 1.0f };
         if (is_error)
@@ -617,7 +617,7 @@ public class PromptBox : FadableBox
 
         combo.get_style_context ().add_class ("lightdm-combo");
         combo.get_child ().get_style_context ().add_class ("lightdm-combo");
-        combo.get_child ().override_font (Pango.FontDescription.from_string (DashEntry.font));
+        combo.get_child ().override_font (DashEntry.get_font ());
 
         attach_item (combo, false);
 

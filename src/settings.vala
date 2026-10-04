@@ -92,6 +92,32 @@ public class UGSettings
         return gsettings.get_string (key);
     }
 
+    /* Size of the default font-name ("Ubuntu 11"). Sizes passed to get_font ()
+     * are the ones used with that default. */
+    private const double DEFAULT_FONT_SIZE = 11.0;
+
+    /* Returns the family of font-name, scaled so that it keeps the same
+     * proportion to font-name that 'size' has to the default font. With the
+     * default font-name this is "Ubuntu <size>", as the greeter always used. */
+    public static Pango.FontDescription get_font (double size, Pango.Weight weight = Pango.Weight.NORMAL)
+    {
+        var base_font = Pango.FontDescription.from_string (get_string (KEY_FONT_NAME));
+
+        var family = base_font.get_family ();
+        if (family == null || family == "")
+            family = "Ubuntu";
+
+        var base_size = DEFAULT_FONT_SIZE;
+        if (base_font.get_size () > 0 && !base_font.get_size_is_absolute ())
+            base_size = (double) base_font.get_size () / Pango.SCALE;
+
+        var font = new Pango.FontDescription ();
+        font.set_family (family);
+        font.set_weight (weight);
+        font.set_size ((int) Math.round (size * base_size / DEFAULT_FONT_SIZE * Pango.SCALE));
+        return font;
+    }
+
     public static bool set_boolean (string key, bool value)
     {
         var gsettings = new Settings (SCHEMA);

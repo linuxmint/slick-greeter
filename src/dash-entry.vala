@@ -23,7 +23,11 @@ extern bool gtk_style_context_lookup_color (Gtk.StyleContext ctx, string color_n
 
 public class DashEntry : Gtk.Entry, Fadable
 {
-    public static string font = "Ubuntu 14";
+    public static Pango.FontDescription get_font ()
+    {
+        return UGSettings.get_font (14);
+    }
+
     public signal void respond ();
 
     public string constant_placeholder_text { get; set; }
@@ -71,7 +75,7 @@ public class DashEntry : Gtk.Entry, Fadable
             }
         }
 
-        override_font (Pango.FontDescription.from_string (font));
+        override_font (get_font ());
 
         var style_ctx = get_style_context ();
 
@@ -153,7 +157,7 @@ public class DashEntry : Gtk.Entry, Fadable
         Gdk.Rectangle rect;
 
         var layout = create_pango_layout (constant_placeholder_text);
-        layout.set_font_description (Pango.FontDescription.from_string ("Ubuntu 13"));
+        layout.set_font_description (UGSettings.get_font (13));
         layout.get_pixel_size (out layout_width, out layout_height);
 
         get_text_area (out rect);

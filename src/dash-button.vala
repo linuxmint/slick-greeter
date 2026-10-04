@@ -29,7 +29,7 @@ public class DashButton : FlatButton, Fadable
         set
         {
             _text = value;
-            text_label.set_markup ("<span font=\"Ubuntu 13\">%s</span>".printf (value));
+            text_label.set_markup ("<span font=\"%s\">%s</span>".printf (UGSettings.get_font (13).to_string (), value));
         }
     }
 
