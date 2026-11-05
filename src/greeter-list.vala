@@ -852,8 +852,11 @@ public abstract class GreeterList : FadableBox
 
         if (is_authenticated)
         {
-            /* Login immediately if PAM interacted with the user and no blocking messages remain */
-            if (auth_interaction_seen && !unacknowledged_messages)
+            /* Successful authentication should not wait for informational messages to be acknowledged. */
+            unacknowledged_messages = false;
+
+            /* Login immediately after successful authentication. */
+            if (!unacknowledged_messages)
             {
                 login_complete ();
                 if (SlickGreeter.singleton.test_mode)
