@@ -90,28 +90,26 @@ public class PromptBox : FadableBox
         Object (id: id);
     }
 
-    private static void apply_label_css (Gtk.Widget w, string family, int pt, bool bold = false)
+    private static void apply_label_css (Gtk.Widget w, double size, Pango.Weight weight = Pango.Weight.NORMAL)
     {
         try
         {
             var p = new Gtk.CssProvider ();
-            var weight = bold ? "bold" : "normal";
             p.load_from_data (
-                "label { font-family: \"%s\"; font-size: %dpt; font-weight: %s; color: white; }".printf (family, pt, weight), -1);
+                "label { %s color: white; }".printf (UGSettings.get_font_css (size, weight)), -1);
             w.get_style_context ().add_provider (p, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
         }
         catch (Error e) { debug ("CSS font error: %s", e.message); }
     }
 
-    private static void apply_label_css_color (Gtk.Widget w, string family, int pt, Gdk.RGBA color, bool bold = false)
+    private static void apply_label_css_color (Gtk.Widget w, double size, Gdk.RGBA color, Pango.Weight weight = Pango.Weight.NORMAL)
     {
         try
         {
             var p = new Gtk.CssProvider ();
-            var weight = bold ? "bold" : "normal";
             p.load_from_data (
-                "label { font-family: \"%s\"; font-size: %dpt; font-weight: %s; color: %s; }".printf (
-                    family, pt, weight, color.to_string ()), -1);
+                "label { %s color: %s; }".printf (
+                    UGSettings.get_font_css (size, weight), color.to_string ()), -1);
             w.get_style_context ().add_provider (p, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
         }
         catch (Error e) { debug ("CSS color error: %s", e.message); }
@@ -241,7 +239,7 @@ public class PromptBox : FadableBox
         name_grid.attach (avatar_image, COL_AVATAR, ROW_NAME, 1, 1);
 
         name_label = new FadingLabel ("");
-        apply_label_css (name_label, "Ubuntu", 13);
+        apply_label_css (name_label, 13);
         name_label.halign = Gtk.Align.START;
         name_label.valign = Gtk.Align.START;
         name_label.vexpand = false;
@@ -299,7 +297,7 @@ public class PromptBox : FadableBox
         small_name_grid.attach (small_avatar_image, 0, 0, 1, 1);
 
         small_name_label = new FadingLabel ("");
-        apply_label_css (small_name_label, "Ubuntu", 13);
+        apply_label_css (small_name_label, 13);
         small_name_label.valign = Gtk.Align.CENTER;
         small_name_label.yalign = 0.5f;
         small_name_label.xalign = 0.0f;
@@ -530,7 +528,7 @@ public class PromptBox : FadableBox
         Gdk.RGBA color = { 1.0f, 1.0f, 1.0f, 1.0f };
         if (is_error)
             color.parse ("#ffd64d");
-        apply_label_css_color (label, "Ubuntu", 10, color, true);
+        apply_label_css_color (label, 10, color, Pango.Weight.BOLD);
 
         label.xalign = 0.0f;
         label.set_data<bool> ("prompt-box-is-error", is_error);
@@ -649,7 +647,7 @@ public class PromptBox : FadableBox
             try
             {
                 var p = new Gtk.CssProvider ();
-                p.load_from_data ("entry { font-family: \"Ubuntu\"; font-size: 14pt; }", -1);
+                p.load_from_data ("entry { %s }".printf (UGSettings.get_font_css (14)), -1);
                 combo_child.get_style_context ().add_provider (p, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
             }
             catch (Error e) { debug ("CSS combo entry error: %s", e.message); }

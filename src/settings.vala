@@ -119,6 +119,13 @@ public class UGSettings
         return font;
     }
 
+    /* CSS declarations for get_font (), for widgets styled through CSS providers. */
+    public static string get_font_css (double size, Pango.Weight weight = Pango.Weight.NORMAL)
+    {
+        var font = get_font (size, weight);
+        return "font-family: \"%s\"; font-size: %spt; font-weight: %d;".printf (font.get_family (), (font.get_size () / (double) Pango.SCALE).to_string (), (int) weight);
+    }
+
     public static bool set_boolean (string key, bool value)
     {
         var gsettings = new Settings (SCHEMA);

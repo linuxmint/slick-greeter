@@ -104,7 +104,7 @@ public class ShutdownDialog : Gtk.Fixed
         {
             var title_label = new Gtk.Label (_("Shut Down"));
             title_label.visible = true;
-            title_label.get_style_context ().add_provider (make_label_style ("Ubuntu Light", 15), Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+            title_label.get_style_context ().add_provider (make_label_style (15), Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
             title_label.set_alignment (0.0f, 0.5f);
             vbox.pack_start (title_label, false, false, 0);
 
@@ -137,7 +137,7 @@ public class ShutdownDialog : Gtk.Fixed
 
         var label = new Gtk.Label (text);
         label.set_line_wrap (true);
-        label.get_style_context ().add_provider (make_label_style ("Ubuntu Light", 12), Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+        label.get_style_context ().add_provider (make_label_style (12), Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
         label.set_alignment (0.0f, 0.5f);
         label.visible = true;
         vbox.pack_start (label, false, false, 0);
@@ -538,14 +538,14 @@ public class ShutdownDialog : Gtk.Fixed
     }
 }
 
-private Gtk.CssProvider make_label_style (string font_family, int size_pt)
+private Gtk.CssProvider make_label_style (double size)
 {
     var provider = new Gtk.CssProvider ();
     try
     {
         provider.load_from_data (
-            "label { font-family: \"%s\"; font-size: %dpt; color: white; }"
-            .printf (font_family, size_pt), -1);
+            "label { %s color: white; }"
+            .printf (UGSettings.get_font_css (size, Pango.Weight.LIGHT)), -1);
     }
     catch (Error e)
     {
@@ -578,7 +578,7 @@ private class DialogButton : Gtk.Button
         if (l != null)
         {
             l.visible = true;
-            l.get_style_context ().add_provider (make_label_style ("Ubuntu Light", 12), Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+            l.get_style_context ().add_provider (make_label_style (12), Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
             this.get_accessible ().set_name (l.get_text ());
         }
 
