@@ -154,8 +154,10 @@ public class UGSettings
             bool_keys.append (KEY_ACTIVATE_NUMLOCK);
 
             var int_keys = new List<string> ();
-            int_keys.append (KEY_XFT_DPI);
             int_keys.append (KEY_CURSOR_THEME_SIZE);
+
+            var double_keys = new List<string> ();
+            double_keys.append (KEY_XFT_DPI);
 
             var strv_keys = new List<string> ();
             strv_keys.append (KEY_HIDDEN_USERS);
@@ -204,6 +206,24 @@ public class UGSettings
                         var value = keyfile.get_integer (GROUP_NAME, key);
                         debug ("Overriding dconf setting for %s with %d", key, value);
                         gsettings.set_int (key, value);
+                    }
+                    catch (Error e) {
+                        warning ("Failed to apply %s from configuration file: %s", key, e.message);
+                    }
+                }
+                else {
+                    gsettings.reset(key);
+                    debug ("Resetting dconf setting for %s to default", key);
+                }
+            }
+
+            foreach (string key in double_keys)
+            {
+                if (keyfile.has_group (GROUP_NAME) && keyfile.has_key (GROUP_NAME, key)) {
+                    try {
+                        var value = keyfile.get_double (GROUP_NAME, key);
+                        debug ("Overriding dconf setting for %s with %f", key, value);
+                        gsettings.set_double (key, value);
                     }
                     catch (Error e) {
                         warning ("Failed to apply %s from configuration file: %s", key, e.message);
