@@ -647,6 +647,29 @@ public class SlickGreeter
         }
     }
 
+    private static void load_locale ()
+    {
+        var file = File.new_for_path ("/etc/default/locale");
+        if (!file.query_exists ())
+            return;
+        try {
+            var dis = new DataInputStream (file.read ());
+            string line;
+            while ((line = dis.read_line (null)) != null) {
+                line = line.strip ();
+                if (line.has_prefix ("#") || !("=" in line))
+                    continue;
+                var parts = line.split ("=", 2);
+                var key = parts[0].strip ();
+                var val = parts[1].strip ().replace ("\"", "").replace ("'", "");
+                if (Environment.get_variable (key) == null)
+                    Environment.set_variable (key, val, true);
+            }
+        } catch (Error e) {
+            warning ("Failed to load locale: %s", e.message);
+        }
+    }
+
     private static void enable_tap_to_click ()
     {
         try {
@@ -698,6 +721,7 @@ public class SlickGreeter
         Environment.unset_variable ("UBUNTU_MENUPROXY");
 
         /* Initialize i18n */
+        load_locale ();
         Intl.setlocale (LocaleCategory.ALL, "");
         Intl.bindtextdomain (Config.GETTEXT_PACKAGE, Config.LOCALEDIR);
         Intl.bind_textdomain_codeset (Config.GETTEXT_PACKAGE, "UTF-8");
