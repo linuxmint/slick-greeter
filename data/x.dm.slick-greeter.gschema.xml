@@ -160,5 +160,14 @@
       <default>'left'</default>
       <summary>Alignment of the main content</summary>
     </key>
+    <key name="show-banner" type="b">
+      <default>false</default>
+      <summary>Whether to show a usage-policy banner from /etc/issue before login</summary>
+      <description>When enabled the greeter reads the file specified by banner-file (default /etc/issue) and displays its contents in a dialog. The user must click "I Accept" before the login UI is enabled.</description>
+    </key>
+    <key name="banner-file" type="s">
+      <default>''</default>
+      <summary>Path to the banner file shown before login (default: /etc/issue)</summary>
+    </key>
   </schema>
 </schemalist>
