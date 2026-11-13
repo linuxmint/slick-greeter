@@ -1,3 +1,18 @@
+slick-greeter (2.2.8) adrien; urgency=medium
+
+  [ Oğuzhan Tutucu ]
+  * settings: Read xft-dpi from slick-greeter.conf as a double (#293)
+  * Use the font-name setting for the greeter's own labels (#294)
+
+  [ Leigh Scott ]
+  * Fix all the vala deprecated and meson warnings (#283)
+
+  [ Clement Lefebvre ]
+  * Keep the font-name setting working after the CSS font changes
+  * hidpi: Lower the automatic detection limit to 144 DPI
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 13 Nov 2026 11:22:53 +0000
+
 slick-greeter (2.2.7) alfa; urgency=medium
 
   [ Michael Webster ]
