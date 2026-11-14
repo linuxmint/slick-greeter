@@ -4,6 +4,7 @@ slick_greeter_sources = files(
     'xsync.vapi',
     'animate-timer.vala',
     'background.vala',
+    'banner-dialog.vala',
     'cached-image.vala',
     'cairo-utils.vala',
     'email-autocompleter.vala',

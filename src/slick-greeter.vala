@@ -317,6 +317,19 @@ public class SlickGreeter
         main_window.show ();
         main_window.get_window ().focus (Gdk.CURRENT_TIME);
         main_window.set_keyboard_state ();
+
+        /* Show the /etc/issue acceptance banner if enabled */
+        if (UGSettings.get_boolean (UGSettings.KEY_SHOW_BANNER))
+        {
+            var banner_file = UGSettings.get_string (UGSettings.KEY_BANNER_FILE);
+            if (banner_file == "")
+                banner_file = "/etc/issue";
+
+            if (FileUtils.test (banner_file, FileTest.EXISTS))
+                main_window.show_banner_dialog ();
+            else
+                debug ("show-banner is enabled but '%s' does not exist; skipping banner", banner_file);
+        }
     }
 
     public bool is_authenticated ()
