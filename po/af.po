@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2023-06-01 11:07+0100\n"
-"PO-Revision-Date: 2019-11-15 11:42+0000\n"
-"Last-Translator: Johannes <Unknown>\n"
+"PO-Revision-Date: 2026-10-07 11:34+0000\n"
+"Last-Translator: Stéfan Driaan Turvey <Unknown>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2026-01-08 15:42+0000\n"
-"X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
+"X-Launchpad-Export-Date: 2026-11-16 11:58+0000\n"
+"X-Generator: Launchpad (build 72ba15af7e009b17d4aa1467977127ac8392a4de)\n"
 
 #: src/greeter-list.vala:303
 #, c-format
@@ -24,7 +24,7 @@ msgstr "Voer wagwoord vir %s in"
 
 #: src/greeter-list.vala:305
 msgid "Enter your username"
-msgstr ""
+msgstr "Voer jou gebruikersnaam in"
 
 #: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
@@ -52,7 +52,7 @@ msgstr "Teken tans in..."
 
 #: src/main-window.vala:52
 msgid "Login Screen"
-msgstr "Intekeningskerm"
+msgstr "Aanmeldskerm"
 
 #: src/main-window.vala:113
 msgid "Back"
@@ -96,7 +96,7 @@ msgstr "Sleutelborduitleg:"
 
 #: src/menubar.vala:532
 msgid "More layouts..."
-msgstr ""
+msgstr "Meer uitlegte..."
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
@@ -151,7 +151,7 @@ msgstr "%s (Verstek)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
-msgstr "Gas-sessie"
+msgstr "Besoekersessie"
 
 #: src/user-list.vala:455
 msgid "Please enter a complete e-mail address"
@@ -195,7 +195,7 @@ msgstr ""
 
 #: src/user-list.vala:578
 msgid "OK"
-msgstr "Goed"
+msgstr "Regso"
 
 #: src/user-list.vala:579
 msgid ""
@@ -219,12 +219,12 @@ msgstr "E-pos adres:"
 
 #: src/user-list.vala:844
 msgid "Log In"
-msgstr "Teken In"
+msgstr "Meld aan"
 
 #: src/user-list.vala:845
 #, c-format
 msgid "Login as %s"
-msgstr "Teken in as %s"
+msgstr "Meld aan as %s"
 
 #: src/user-list.vala:849
 msgid "Retry"

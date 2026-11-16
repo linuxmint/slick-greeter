@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2023-06-01 11:07+0100\n"
-"PO-Revision-Date: 2025-03-05 17:35+0000\n"
-"Last-Translator: Eloi Barcón Piñeiro <Unknown>\n"
+"PO-Revision-Date: 2026-11-01 10:35+0000\n"
+"Last-Translator: Calq Calquera <Unknown>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2026-01-08 15:42+0000\n"
-"X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
+"X-Launchpad-Export-Date: 2026-11-16 11:58+0000\n"
+"X-Generator: Launchpad (build 72ba15af7e009b17d4aa1467977127ac8392a4de)\n"
 
 #: src/greeter-list.vala:303
 #, c-format
@@ -32,19 +32,19 @@ msgstr "Contrasinal:"
 
 #: src/greeter-list.vala:817 src/user-list.vala:714
 msgid "Username:"
-msgstr "Nome do usuario:"
+msgstr "Nome de usuario:"
 
 #: src/greeter-list.vala:872
 msgid "Invalid password, please try again"
-msgstr "Contrasinal incorrecto, ténteo de novo"
+msgstr "Contrasinal incorrecto. Tente de novo."
 
 #: src/greeter-list.vala:883
 msgid "Failed to authenticate"
-msgstr "Produciuse un fallo ao autenticar"
+msgstr "Non se puido completar a autenticación"
 
 #: src/greeter-list.vala:929
 msgid "Failed to start session"
-msgstr "Produciuse un fallo ao iniciar a sesión"
+msgstr "Non se puido iniciar a sesión"
 
 #: src/greeter-list.vala:943
 msgid "Logging in..."
@@ -60,7 +60,7 @@ msgstr "Voltar"
 
 #: src/menubar.vala:324
 msgid "Power:"
-msgstr "Potencia:"
+msgstr "Batería:"
 
 #: src/menubar.vala:374
 msgid "Accessibility"
@@ -96,7 +96,7 @@ msgstr "Disposición do teclado:"
 
 #: src/menubar.vala:532
 msgid "More layouts..."
-msgstr ""
+msgstr "Máis disposicións…"
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
@@ -108,7 +108,7 @@ msgstr "Escolla o ambiente de escritorio"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr "Adeus. Desexaría vostede..."
+msgstr "Adeus. Que desexa facer?"
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
@@ -116,15 +116,15 @@ msgstr "Apagar"
 
 #: src/shutdown-dialog.vala:112
 msgid "Are you sure you want to shut down the computer?"
-msgstr "Confirma o apagado do computador?"
+msgstr "Está seguro de que quere apagar o computador?"
 
 #: src/shutdown-dialog.vala:137
 msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
-"Hai outros usuarios con sesións iniciadas neste computador, apagándoo agora "
-"tamén pechará as outras sesións."
+"Hai outros usuarios con sesións iniciadas neste computador. Se o apaga "
+"agora, tamén se pecharán esas sesións."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
@@ -132,11 +132,11 @@ msgstr "Reiniciar"
 
 #: src/slick-greeter.vala:749
 msgid "Show release version"
-msgstr "Amosar a versión da publicación"
+msgstr "Mostrar a versión do programa"
 
 #: src/slick-greeter.vala:752
 msgid "Run in test mode"
-msgstr "Executar en modo de proba."
+msgstr "Executar en modo de proba"
 
 #: src/slick-greeter.vala:768
 #, c-format
@@ -184,7 +184,7 @@ msgstr "Cancelar"
 
 #: src/user-list.vala:572
 msgid "Set Up..."
-msgstr "Preparar"
+msgstr "Configurar…"
 
 #: src/user-list.vala:574
 msgid ""
@@ -203,7 +203,7 @@ msgid ""
 "You need an Ubuntu Remote Login account to use this service. Visit "
 "uccs.canonical.com to set up an account."
 msgstr ""
-"Precisa unha conta de acceso remoto en Ubuntu para empregar este servizo.  "
+"Precisa unha conta de acceso remoto en Ubuntu para empregar este servizo. "
 "Visite uccs.canonical.com para configurar unha."
 
 #: src/user-list.vala:698
@@ -216,7 +216,7 @@ msgstr "Dominio:"
 
 #: src/user-list.vala:800
 msgid "Email address:"
-msgstr "Enderezo de correo-e:"
+msgstr "Enderezo de correo electrónico:"
 
 #: src/user-list.vala:844
 msgid "Log In"
@@ -234,7 +234,7 @@ msgstr "Reintentar"
 #: src/user-list.vala:850
 #, c-format
 msgid "Retry as %s"
-msgstr "Volvelo tentar como %s"
+msgstr "Reintentar como %s"
 
 #: src/user-list.vala:892
 msgid "Login"

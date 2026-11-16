@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2023-06-01 11:07+0100\n"
-"PO-Revision-Date: 2025-01-08 17:25+0000\n"
+"PO-Revision-Date: 2026-11-13 13:45+0000\n"
 "Last-Translator: AO <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2026-01-08 15:42+0000\n"
-"X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
+"X-Launchpad-Export-Date: 2026-11-16 11:58+0000\n"
+"X-Generator: Launchpad (build 72ba15af7e009b17d4aa1467977127ac8392a4de)\n"
 
 #: src/greeter-list.vala:303
 #, c-format
@@ -24,7 +24,7 @@ msgstr "Saisissez le mot de passe pour %s"
 
 #: src/greeter-list.vala:305
 msgid "Enter your username"
-msgstr "Saisissez votre nom d'utilisateur"
+msgstr "Saisissez votre nom d’utilisateur"
 
 #: src/greeter-list.vala:815 src/user-list.vala:720
 msgid "Password:"
@@ -32,15 +32,15 @@ msgstr "Mot de passe :"
 
 #: src/greeter-list.vala:817 src/user-list.vala:714
 msgid "Username:"
-msgstr "Nom d'utilisateur :"
+msgstr "Nom d’utilisateur :"
 
 #: src/greeter-list.vala:872
 msgid "Invalid password, please try again"
-msgstr "Mot de passe incorrect, veuillez réessayer"
+msgstr "Le mot de passe est erroné. Réessayez."
 
 #: src/greeter-list.vala:883
 msgid "Failed to authenticate"
-msgstr "Échec de l'authentification"
+msgstr "Échec de l’authentification"
 
 #: src/greeter-list.vala:929
 msgid "Failed to start session"
@@ -48,7 +48,7 @@ msgstr "Échec du démarrage de la session"
 
 #: src/greeter-list.vala:943
 msgid "Logging in..."
-msgstr "Connexion..."
+msgstr "Connexion…"
 
 #: src/main-window.vala:52
 msgid "Login Screen"
@@ -108,7 +108,7 @@ msgstr "Choisir l’environnement de bureau"
 
 #: src/shutdown-dialog.vala:101
 msgid "Goodbye. Would you like to..."
-msgstr "Au revoir. Voulez-vous..."
+msgstr "Au revoir. Voulez-vous…"
 
 #: src/shutdown-dialog.vala:105 src/shutdown-dialog.vala:207
 msgid "Shut Down"
@@ -175,7 +175,7 @@ msgid ""
 "If you have an account on an RDP server, Remote Login lets you run "
 "applications from that server."
 msgstr ""
-"Si vous détenez un compte sur un serveur RDP, la  connexion à distance vous "
+"Si vous détenez un compte sur un serveur RDP, la connexion à distance vous "
 "permet d’exécuter des applications de ce serveur."
 
 #: src/user-list.vala:571
@@ -184,7 +184,7 @@ msgstr "Annuler"
 
 #: src/user-list.vala:572
 msgid "Set Up..."
-msgstr "Configurer..."
+msgstr "Configurer…"
 
 #: src/user-list.vala:574
 msgid ""

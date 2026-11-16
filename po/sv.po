@@ -8,14 +8,15 @@ msgstr ""
 "Project-Id-Version: slick-greeter\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2023-06-01 11:07+0100\n"
-"PO-Revision-Date: 2023-06-03 19:35+0000\n"
+"PO-Revision-Date: 2026-09-16 23:09+0000\n"
 "Last-Translator: Jan-Olof Svensson <jan-olof.svensson@abc.se>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2026-01-08 15:42+0000\n"
-"X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
+"X-Launchpad-Export-Date: 2026-11-16 11:58+0000\n"
+"X-Generator: Launchpad (build 72ba15af7e009b17d4aa1467977127ac8392a4de)\n"
+"Language: sv\n"
 
 #: src/greeter-list.vala:303
 #, c-format
@@ -36,7 +37,7 @@ msgstr "Användarnamn:"
 
 #: src/greeter-list.vala:872
 msgid "Invalid password, please try again"
-msgstr "Ogiltigt lösenord. Försök igen"
+msgstr "Ogiltigt lösenord. Försök igen."
 
 #: src/greeter-list.vala:883
 msgid "Failed to authenticate"
@@ -96,7 +97,7 @@ msgstr "Tangentbordsupplägg:"
 
 #: src/menubar.vala:532
 msgid "More layouts..."
-msgstr "Fler varianter..."
+msgstr "Fler tangentbordsupplägg…"
 
 #: src/prompt-box.vala:215
 msgid "Session Options"
@@ -123,8 +124,8 @@ msgid ""
 "Other users are currently logged in to this computer, shutting down now will "
 "also close these other sessions."
 msgstr ""
-"Andra användare är för nuvarande inloggade på den här datorn, att stänga ner "
-"nu kommer också stänga ner de andra sessionerna."
+"Andra användare är för närvarande inloggade på den här datorn. Om du stänger "
+"av datorn nu avslutas även deras sessioner."
 
 #: src/shutdown-dialog.vala:190
 msgid "Restart"
@@ -132,7 +133,7 @@ msgstr "Starta om"
 
 #: src/slick-greeter.vala:749
 msgid "Show release version"
-msgstr "Visa utgåvans version"
+msgstr "Visa versionsnummer"
 
 #: src/slick-greeter.vala:752
 msgid "Run in test mode"
@@ -142,12 +143,13 @@ msgstr "Kör i testläge"
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
-"Kör ”%s --help” för en komplett lista över tillgängliga kommandoradsflaggor."
+"Kör ”%s --help” för en fullständig lista över tillgängliga "
+"kommandoradsalternativ."
 
 #: src/toggle-box.vala:109
 #, c-format
 msgid "%s (Default)"
-msgstr "%s (Förval)"
+msgstr "%s (Standard)"
 
 #: src/user-list.vala:45
 msgid "Guest Session"
@@ -183,7 +185,7 @@ msgstr "Avbryt"
 
 #: src/user-list.vala:572
 msgid "Set Up..."
-msgstr "Ställa In..."
+msgstr "Konfigurera…"
 
 #: src/user-list.vala:574
 msgid ""
@@ -195,7 +197,7 @@ msgstr ""
 
 #: src/user-list.vala:578
 msgid "OK"
-msgstr "Ok"
+msgstr "OK"
 
 #: src/user-list.vala:579
 msgid ""
