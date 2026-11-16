@@ -1,3 +1,9 @@
+slick-greeter (2.2.9) adrien; urgency=medium
+
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 16 Nov 2026 13:46:56 +0000
+
 slick-greeter (2.2.8) adrien; urgency=medium
 
   [ Oğuzhan Tutucu ]
