@@ -90,8 +90,8 @@ public class MenuBar : Gtk.MenuBar
         try
         {
             var p = new Gtk.CssProvider ();
-             p.load_from_data ("label { color: @theme_fg_color; } " +
-                               "label:disabled { color: @theme_fg_color; }", -1);
+            p.load_from_data ("label { color: white; } " +
+                              "label:disabled { color: white; }", -1);
             label.get_style_context ().add_provider (p, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
         }
         catch (Error e) { debug ("MenuBar label color error: %s", e.message); }
