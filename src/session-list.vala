@@ -55,15 +55,15 @@ public class SessionPrompt : PromptBox
             }
         }
 
-        box.notify["selected-key"].connect (selected_cb);
+        box.item_clicked.connect (selected_cb);
         box.show ();
 
         attach_item (box);
     }
 
-    private void selected_cb ()
+    private void selected_cb (string key)
     {
-        respond ({ box.selected_key });
+        respond ({ key });
     }
 }
 

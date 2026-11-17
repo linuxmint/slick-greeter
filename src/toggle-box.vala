@@ -22,6 +22,9 @@ public class ToggleBox : Gtk.Box
     public string default_key {get; construct;}
     public string starting_key {get; construct;}
     public string selected_key {get; protected set;}
+
+    /* Emitted each time an item is clicked, even if it is already the selected one */
+    public signal void item_clicked (string key);
     protected Gtk.Box scrolled_box;
 
     public ToggleBox (string? default_key, string? starting_key)
@@ -137,6 +140,7 @@ public class ToggleBox : Gtk.Box
     private void button_clicked_cb (Gtk.Button button)
     {
         selected_key = button.get_data<string> ("toggle-list-key");
+        item_clicked (selected_key);
     }
 
     public override void grab_focus ()
