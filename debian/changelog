@@ -1,3 +1,10 @@
+slick-greeter (2.2.11) adrien; urgency=medium
+
+  [ Martín Villagra ]
+  * main-window: Set the widget name so the background-color CSS applies (#298)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 20 Nov 2026 17:41:32 +0000
+
 slick-greeter (2.2.10) adrien; urgency=medium
 
   * Fix text color in menubar
