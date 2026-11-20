@@ -48,7 +48,7 @@ public class MainWindow : Gtk.Window
         add_accel_group (accel_group);
 
         var bg_color = Gdk.RGBA ();
-        set_name ("main-window");
+        name = "main-window";
         bg_color.parse (UGSettings.get_string (UGSettings.KEY_BACKGROUND_COLOR));
         try
         {
