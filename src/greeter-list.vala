@@ -401,6 +401,8 @@ public abstract class GreeterList : FadableBox
     {
         entry.expand = true;
         entry.set_size_request (grid_size * BOX_WIDTH - BORDER * 2, -1);
+        /* Set here too, as it can be drawn before the next size_allocate */
+        entry.set_zone (greeter_box);
         add_with_class (entry);
 
         insert_entry (entry);
