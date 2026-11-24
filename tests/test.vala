@@ -6,10 +6,6 @@ public class Test
         GLib.Test.log_set_fatal_handler (ignore_warnings);
 
         TestMainWindow main_window = new TestMainWindow ();
-        // MainWindow already has a user list; replace it with ours
-        main_window.stack.remove (main_window.stack.top ());
-        var list = new TestList (main_window.get_background (), main_window.menubar);
-        main_window.push_list (list);
         main_window.show_all();
         // Make sure we are really shown
         process_events ();

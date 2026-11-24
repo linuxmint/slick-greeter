@@ -362,10 +362,15 @@ public class MainWindow : Gtk.Window
         }
     }
 
+    protected virtual GreeterList create_user_list ()
+    {
+        return new UserList (background, menubar);
+    }
+
     private void add_user_list ()
     {
         GreeterList greeter_list;
-        greeter_list = new UserList (background, menubar);
+        greeter_list = create_user_list ();
         greeter_list.show ();
         SlickGreeter.add_style_class (greeter_list);
         
