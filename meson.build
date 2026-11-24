@@ -2,6 +2,7 @@ project('slick-greeter', 'vala', 'c', version : '2.2.12', meson_version : '>= 1.
 
 cc = meson.get_compiler('c')
 
+fs = import('fs')
 i18n = import('i18n')
 
 gettext_package = meson.project_name()
@@ -41,5 +42,6 @@ subdir('data')
 subdir('files')
 subdir('po')
 subdir('src')
+subdir('tests')
 
 meson.add_install_script('meson/meson-postinstall.sh')

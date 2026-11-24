@@ -6,8 +6,6 @@ public class Test
         GLib.Test.log_set_fatal_handler (ignore_warnings);
 
         TestMainWindow main_window = new TestMainWindow ();
-        var list = new TestList (main_window.get_background (), main_window.menubar);
-        main_window.push_list (list);
         main_window.show_all();
         // Make sure we are really shown
         process_events ();
@@ -806,6 +804,9 @@ public class Test
     public static int main (string[] args)
     {
         Gtk.test_init(ref args);
+        /* Like ignore_warnings(), but also for structured logging, which
+           doesn't go through the fatal handler */
+        GLib.Log.set_always_fatal (GLib.LogLevelFlags.LEVEL_CRITICAL | GLib.LogLevelFlags.LEVEL_ERROR);
 
         setup_gsettings ();
 

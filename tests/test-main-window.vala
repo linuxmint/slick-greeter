@@ -9,4 +9,9 @@ public class TestMainWindow : MainWindow
     {
         return get_child() as Background;
     }
+
+    protected override GreeterList create_user_list ()
+    {
+        return new TestList (get_background (), menubar);
+    }
 }
