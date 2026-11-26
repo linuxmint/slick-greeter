@@ -19,6 +19,7 @@ A configuration tool is available at https://github.com/linuxmint/lightdm-settin
 - This greeter supports HiDPI.
 - Sessions are validated. If a default/chosen session isn't present on the system, the greeter scans for known sessions in /usr/share/xsessions and replaces the invalid session choice with a valid session.
 - You can take a screenshot by pressing PrintScrn. The screenshot is saved in /var/lib/lightdm/Screenshot.png.
+- A **banner/acceptance dialog** can be shown before login. When enabled, the user must read and accept a policy notice before proceeding. The dialog reads its text from `/etc/issue` by default, or from a custom file specified in the configuration.
 
 # Credit
 
@@ -62,4 +63,6 @@ Configuration file format for /etc/lightdm/slick-greeter.conf
     # only-on-monitor=Sets the monitor on which to show the login window, -1 means "follow the mouse"
     # stretch-background-across-monitors=Whether to stretch the background across multiple monitors (false by default)
     # clock-format=What clock format to use (e.g., %H:%M or %l:%M %p)
+    # show-banner=Whether to show a banner/acceptance dialog before login (true or false)
+    # banner-file=Path to the file whose contents are shown in the banner dialog (defaults to /etc/issue)
     
