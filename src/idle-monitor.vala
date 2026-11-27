@@ -29,6 +29,12 @@ public class IdleMonitor
         w.remove_filter (xevent_filter);
     }
 
+    /* False if the X server has no usable IDLETIME counter */
+    public bool is_available ()
+    {
+        return counter != X.None;
+    }
+
     public uint add_idle_watch (uint64 interval_msec, IdleMonitorWatchFunc callback)
     {
         var watch = make_watch (xsync_alarm_set (X.Sync.TestType.PositiveTransition, interval_msec, true), callback);

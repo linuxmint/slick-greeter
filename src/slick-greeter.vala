@@ -46,6 +46,8 @@ public class SlickGreeter
 
     private DialogDBusInterface dbus_object;
 
+    private IdleMonitor? idle_monitor = null;
+
     private SlickGreeter (bool test_mode_)
     {
         singleton = this;
@@ -317,6 +319,79 @@ public class SlickGreeter
         main_window.show ();
         main_window.get_window ().focus (Gdk.CURRENT_TIME);
         main_window.set_keyboard_state ();
+
+        setup_idle_hint ();
+    }
+
+    /* Report the greeter as idle to logind after a while without input. Otherwise
+     * a seat showing the login screen is never idle and logind's IdleAction=
+     * (e.g. suspend) never fires, which breaks suspend on multi-seat machines. */
+    private void setup_idle_hint ()
+    {
+        if (test_mode)
+            return;
+
+        var timeout = UGSettings.get_integer (UGSettings.KEY_IDLE_HINT_TIMEOUT);
+        if (timeout <= 0)
+            return;
+
+        idle_monitor = new IdleMonitor ();
+        if (!idle_monitor.is_available ())
+        {
+            warning ("No X idle time counter, not reporting idle state to logind");
+            idle_monitor = null;
+            return;
+        }
+
+        debug ("Reporting idle state to logind after %d seconds without input", timeout);
+        idle_monitor.add_idle_watch ((uint64) timeout * 1000, idle_cb);
+    }
+
+    private void idle_cb (IdleMonitor monitor, uint id)
+    {
+        set_idle_hint (true);
+        monitor.add_user_active_watch (active_cb);
+    }
+
+    private void active_cb (IdleMonitor monitor, uint id)
+    {
+        set_idle_hint (false);
+    }
+
+    private void set_idle_hint (bool idle)
+    {
+        debug ("Setting logind idle hint to %s", idle.to_string ());
+        Bus.get.begin (BusType.SYSTEM, null, (obj, res) =>
+        {
+            try
+            {
+                var bus = Bus.get.end (res);
+                bus.call.begin ("org.freedesktop.login1",
+                                "/org/freedesktop/login1/session/auto",
+                                "org.freedesktop.login1.Session",
+                                "SetIdleHint",
+                                new Variant ("(b)", idle),
+                                null,
+                                DBusCallFlags.NONE,
+                                -1,
+                                null,
+                                (obj2, res2) =>
+                {
+                    try
+                    {
+                        bus.call.end (res2);
+                    }
+                    catch (Error e)
+                    {
+                        warning ("Failed to set logind idle hint: %s", e.message);
+                    }
+                });
+            }
+            catch (Error e)
+            {
+                warning ("Failed to get system bus: %s", e.message);
+            }
+        });
     }
 
     public bool is_authenticated ()

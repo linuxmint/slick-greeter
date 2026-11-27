@@ -33,6 +33,7 @@ Configuration file format for /etc/lightdm/slick-greeter.conf
     # Available configuration options listed below.
     #
     # activate-numlock=Whether to activate numlock. This features requires the installation of numlockx. (true or false)
+    # idle-hint-timeout=Seconds without input before the greeter reports itself idle to logind, so IdleAction= can suspend (0 disables, default 300)
     # background=Background file to use, either an image path or a color (e.g. #772953)
     # background-color=Background color (e.g. #772953), set before wallpaper is seen
     # draw-user-backgrounds=Whether to draw user backgrounds (true or false)

@@ -151,6 +151,11 @@
       <default>'/usr/share/onboard/layouts/Small.onboard'</default>
       <summary>Path of the onscreen keyboard layout</summary>
     </key>
+    <key name="idle-hint-timeout" type="i">
+      <default>300</default>
+      <summary>Seconds without input before the greeter tells logind it is idle (0 to disable)</summary>
+      <description>Lets logind's IdleAction= (e.g. suspend) work while the login screen is shown. Without it a seat sitting at the greeter never counts as idle, which matters on multi-seat machines.</description>
+    </key>
     <key name="content-align" type="s">
       <choices>
         <choice value='left'/>
